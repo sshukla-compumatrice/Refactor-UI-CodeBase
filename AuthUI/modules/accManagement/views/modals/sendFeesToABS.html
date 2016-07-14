@@ -1,0 +1,114 @@
+<script id="sendFeesToABS.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="closeModal();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Send Fees to ABS</h4>
+    </div>
+
+    <form class="form-horizontal" name="sendFeesToAbsForm" novalidate>
+        <div class="modal-body">
+            <div class="form-group required">
+                <label for="edrAccount" class="col-sm-3 control-label">EDR Account #:</label>
+                <div class="col-sm-6" field-validation="EDR Account #">
+                    <input type="text" id="edrAccount" name="edrAccount" class="form-control" ng-model="sendToAbsFormData.edrAccountNumber" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="edrPassword" class="col-sm-3 control-label">EDR Password:</label>
+                <div class="col-sm-6" field-validation="EDR Password">
+                    <input type="text" id="edrPassword" name="edrPassword" class="form-control" ng-model="sendToAbsFormData.edrAccountPassword" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="contactName" class="col-sm-3 control-label">Contact Name:</label>
+                <div class="col-sm-6" field-validation="Contact Name">
+                    <input type="text" id="contactName" name="contactName" name="contactName" class="form-control" ng-model="sendToAbsFormData.contactName" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="contactPhone" class="col-sm-3 control-label">Contact Phone:</label>
+                <div class="col-sm-6" field-validation="Contact Phone">
+                    <input type="text" id="contactPhone" name="contactPhone" class="form-control" ng-model="sendToAbsFormData.contactPhone" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="contactEmail" class="col-sm-3 control-label">Contact Email:</label>
+                <div class="col-sm-6" field-validation="Contact Email">
+                    <input type="email" id="contactEmail" name="contactEmail" class="form-control" ng-model="sendToAbsFormData.contactEmail" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="projectNumber" class="col-sm-3 control-label">Project Number:</label>
+                <div class="col-sm-6" field-validation="Project Number">
+                    <input type="text" id="projectNumber" name="projectNumber" class="form-control" ng-model="sendToAbsFormData.projectNumber" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="poNumber" class="col-sm-3 control-label">PO Number:</label>
+                <div class="col-sm-6">
+                    <input type="text" id="poNumber" name="poNumber" class="form-control" ng-model="sendToAbsFormData.poNumber">
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="siteName" class="col-sm-3 control-label">Site Name:</label>
+                <div class="col-sm-6" field-validation="Site Name">
+                    <input type="text" id="siteName" name="siteName" class="form-control" ng-model="sendToAbsFormData.officeName" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="address" class="col-sm-3 control-label">Address:</label>
+                <div class="col-sm-6" field-validation="Address">
+                    <input type="text" id="address" name="address" class="form-control" ng-model="sendToAbsFormData.address" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="city" class="col-sm-3 control-label">City:</label>
+                <div class="col-sm-6" field-validation="City">
+                    <input type="text" id="city" name="city" class="form-control" ng-model="sendToAbsFormData.city" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="state" class="col-sm-3 control-label">State:</label>
+                <div class="col-sm-6" field-validation="State">
+                    <input type="text" id="state" name="state" class="form-control" ng-model="sendToAbsFormData.state" required>
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="zip" class="col-sm-3 control-label">Zip:</label>
+                <div class="col-sm-6" field-validation="Zip">
+                    <input type="text" id="zip" name="zip" class="form-control" ng-model="sendToAbsFormData.zipCode" required>
+                </div>
+            </div>
+
+            <h5>Charges:</h5>
+            <div ng-show="showSendToAbsChargesMsg" class="alert" ng-class="sendToAbsChargesClass" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{sendToAbsChargesMessage}}
+                <button type="button" class="close" aria-label="Close" ng-click="showSendToAbsChargesMsg = !showSendToAbsChargesMsg">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div ng-repeat="charge in charges" class="form-group">
+                <div class="col-sm-3">
+                    <div class="checkbox">
+                        <label><input ng-model="charge.isSelected" type="checkbox">{{charge.name}}</label>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <p class="form-control-static">USD$ {{charge.price}}</p>
+                    <!--<ng-form name="urlForm">
+                        <div field-validation="Setup Type cost">
+                            <div class="input-group">
+                                <div class="input-group-addon">USD$</div>
+                                <input type="text" name="cost" custom="numbersOnly" ng-pattern="/^[1-9]\d*(\.\d+)?$/" class="form-control" ng-model="charge.price" ng-required="charge.isSelected">
+                            </div>
+                        </div>
+                    </ng-form>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-default" type="button" ng-click="closeModal();">Cancel</button>
+            <button class="btn btn-primary" type="submit" ng-click="submitFeesToAbs(sendFeesToAbsForm);">Submit</button>
+        </div>
+    </form>
+</script>

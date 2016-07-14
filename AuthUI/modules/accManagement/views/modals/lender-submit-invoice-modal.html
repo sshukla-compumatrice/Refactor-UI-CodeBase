@@ -1,0 +1,245 @@
+<script id="lender-submit-invoice-modal.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="closeModal()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Lender Portal Charges</h4>
+    </div>
+    <div class="modal-body">
+        <div ng-show="toSave.showMsg">
+            <div ng-show="!showInvoicePreview">
+                <h4>Company Information:</h4>
+                
+                <form class="form-horizontal" name="companyInvoiceForm" novalidate>
+
+                    <div class="form-group required">
+                        <label for="edrAccountNumber" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">EDR Account #:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="EDR Account Number">
+                            <input name="edrAccountNumber" type="text" class="form-control" id="edrAccountNumber" ng-model="toSave.edrAccountNumber" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="edrPassword" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">EDR Password:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Edr Account Password">
+                            <input name="edrPassword" type="password" class="form-control" id="edrPassword" ng-model="toSave.edrAccountPassword" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="contactName" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Contact Name:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Contact Name">
+                            <input name="contactName" type="text" class="form-control" ng-model="toSave.contactName" id="contactName" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="contactPhone" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Contact Phone:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Contact Phone">
+                            <input name="contactPhone" type="text" class="form-control" id="contactPhone" ng-model="toSave.contactPhone" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="contactEmail" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Contact Email:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Contact Email">
+                            <input name="contactEmail" type="email" class="form-control" id="contactEmail" ng-model="toSave.contactEmail" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="projectNumber" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Project Number:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Project Number">
+                            <input name="projectNumber" type="text" class="form-control" id="projectNumber" ng-model="toSave.projectNumber" placeholder="EDR Lender Portal Setup" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <label for="poNumber" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">PO Number:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="PO Number">
+                            <input name="poNumber" type="text" class="form-control" id="poNumber" ng-model="toSave.poNumber">
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="officeName" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Office Name:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Office Name">
+                            <input name="officeName" type="text" class="form-control" id="officeName" ng-model="toSave.officeName" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="officeAddress" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Office Address:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Office Address">
+                            <input name="officeAddress" type="text" class="form-control" id="officeAddress" ng-model="toSave.address" required>
+                        </div>
+                     
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="officeCity" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Office City:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Office City">
+                            <input name="officeCity" type="text" class="form-control" id="officeCity" ng-model="toSave.city" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="officeState" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Office State:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Office State">
+                            <input name="officeState" type="text" class="form-control" id="officeState" ng-model="toSave.state" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="officeZip" class="col-sm-3 col-lg-3 col-md-3 col-xs-12 control-label">Office Zip:</label>
+                        <div class="col-sm-6 col-lg-6 col-md-6 col-xs-12" field-validation="Office Zip">
+                            <input name="officeZip" type="text" class="form-control" id="officeZip" ng-model="toSave.zipcode" required>
+                        </div>
+                       
+                    </div>
+
+                </form>
+
+                <h4>Charges:</h4>
+                <p>The fees listed below will be submitted and invoiced to the company. If there are no items below please add the setup fees first.</p>
+
+                <table class="table table-striped table-condensed small">
+                    <tbody>
+                        <tr ng-repeat="setupfee in setupFees">                           
+                            <td class="setupfeeColumn">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-disabled="true" ng-checked="setupfee.isChecked">{{setupfee.name}}
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="setupfeeCharges">
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    <input type="text" class="form-control" ng-disabled="true" value="{{setupfee.isChecked == true ?setupfee.price : ''}}">
+                                </div>
+                            </td>
+                        </tr>                     
+                    </tbody>
+                </table>
+            </div>
+
+            <div ng-show="showInvoicePreview">
+                <h4>Company Information:</h4>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">EDR Account #:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.edrAccountNumber"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">EDR Password:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.edrAccountPassword"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Contact Name:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.contactName"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Contact Phone: </label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.contactPhone"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Contact Email: </label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.contactEmail"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Project Number: </label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.projectNumber"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">PO Number:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" id="certifications" ng-bind="toSave.poNumber"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Office Name:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.officeName"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Office Address:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.address"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Office City:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.city"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Office State: </label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.state"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-xs-12 control-label">Office Zip: </label>
+                        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+                            <p class="form-control-static" ng-bind="toSave.zipCode"></p>
+                        </div>
+                    </div>
+                </form>
+                <h4>Charges:</h4>
+                <table class="table table-striped table-condensed small">
+                    <tbody>
+                        <tr ng-repeat="(index,setupfee) in setupFees | filter: { isChecked : true}">
+                            <td>{{setupfee.name}}</td>
+                            <td>{{setupfee.price | currency}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total:</td>
+                            <td>{{total() | currency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div ng-show="afterSave.showMsg">
+                <p>{{afterSave.msgAfterSave}}</p>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <div ng-show="toSave.showMsg">
+            <div ng-show="!showInvoicePreview">
+                <button type="button" class="btn btn-default" ng-click="closeModal()" data-dismiss="modal">Close</button>
+                <button ng-click="showPreviewInvoice(companyInvoiceForm)" type="submit" class="btn btn-primary">Preview Inovice</button>
+            </div>
+            <div ng-show="showInvoicePreview">
+                <button type="button" ng-click="setshowInvoicePreview()" class="btn btn-default" data-dismiss="modal">Back</button>
+                <button type="button" ng-click="submitFees()" class="btn btn-primary">DO IT NOW!</button>
+            </div>
+        </div>
+        <div ng-show="afterSave.showMsg">
+            <button class="btn btn-default" ng-click="closeModal()">Close</button>
+        </div>
+    </div>
+</script>

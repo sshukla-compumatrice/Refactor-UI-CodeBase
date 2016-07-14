@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles/edr-uxt.min.css" type="text/css" />
+  <link rel="stylesheet" href="styles/Styles.css" />
+
+  <script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="scripts/angular_v1.2.16.min.js"></script>
+
+  <script type="text/javascript" src="scripts/edr-uxt.min.js"></script>
+
+  <script type="text/javascript">
+    /**
+     * @function displayMessage() displays message on the UI
+     *
+     * @param {String} msg Message to display
+     * @param {Boolean} isError True if this is an error message, False otherwise
+     */
+    function displayMessage(msg, isError)
+    {
+      try
+      {
+        if (isError === true)
+        {
+          jQuery('#errMsg').text(msg);
+          jQuery('#errPnl').show();
+          jQuery('#infoPnl').hide();
+        }
+        else
+        {
+          jQuery('#infoMsg').text(msg);
+          jQuery('#infoPnl').show();
+          jQuery('#errPnl').hide();
+        }
+      }
+      catch (e)
+      {
+        alert('Unable to display error message: ' + e.message);
+      }
+    }
+
+    /**
+     * @function splitQueryString() returns query string as key=value array
+     */
+    function splitQueryString()
+    {
+      try
+      {
+        displayMessage('Processing input ...', false);
+
+        var parameterMap = [];
+
+        for (var i = 0; i < window.location.hash.split("#")[1].split("&").length; i++)
+        {
+          parameterMap[window.location.hash.split("#")[1].split("&")[i].split("=")[0]] = window.location.hash.split("#")[1].split("&")[i].split("=")[1];
+        }
+
+        return parameterMap;
+      }
+      catch (e)
+      {
+        throw new Error(e.message);
+      }
+    }
+
+    /**
+     * @function getTokenInfo() Get token info from OpenAM
+     * 
+     * @param {String} accessToken AOuth token
+     * @param {Function} cb Callback to process the successful request result
+     */
+    function getTokenInfo(accessToken, cb)
+    {
+      try
+      {
+        displayMessage('Querying IDP ...', false);
+
+        // determine host
+        var idpHost = '';
+
+        switch (window.location.host.toLowerCase())
+        {
+          case 'www2.parcelplatform.com':
+            idpHost = 'identity.edrcore.com';
+            break;
+
+          case 'demo.parcelplatform.com':
+            idpHost = 'identitydemo.edrcore.com';
+            break;
+
+          case 'wwwstg.parcelplatform.com':
+            idpHost = 'identitystg.edrcore.com';
+            break;
+
+          case 'wwwqa.parcelplatform.com':
+            idpHost = 'identityqa.edrcore.com';
+            break;
+
+          default:
+            idpHost = 'identitydev.edrcore.com';
+            break;
+        }
+
+        // URL
+        var idpURL = window.location.protocol + '//' + idpHost + '/openam/oauth2/tokeninfo'
+
+        jQuery.ajax({
+          url: idpURL,
+          data: { access_token: accessToken },
+          type: 'GET',
+          dataType: 'JSON',
+          async: true
+        })
+        .done(function (json)
+        {
+          cb(json);
+        })
+        .fail(function (xhr, status, errorThrown)
+        {
+          displayMessage(errorThrown + ' (' + status + ')', true);
+        })
+        .always(function (xhr, status)
+        {
+        });
+      }
+      catch (e)
+      {
+        throw e;
+      }
+    }
+
+    /**
+     * @function parseAuthentication() Parsed OpenAM authentication callback
+     */
+    function parseAuthentication()
+    {
+      try
+      {
+        displayMessage('Initializing ...', false);
+
+        // get the querystring
+        var parameterMap = splitQueryString();
+
+        // check for error first
+        parameterMap.error = parameterMap.error || '';
+
+        if (parameterMap.error !== '')
+        {
+          // there was an error
+          throw new Error(decodeURIComponent(parameterMap.error_description) || '--UNKNOWN ERROR--');
+        }
+
+        // check if we have the access tokens
+        parameterMap.access_token = parameterMap.access_token || '';
+
+        if (parameterMap.access_token === '')
+        {
+          throw new Error('Missing access_token from query string');
+        }
+
+        var oAuthData = {
+          access_token: parameterMap.access_token,
+          expires_in: parameterMap.expires_in
+        };
+
+        document.cookie = "oAuthToken=" + parameterMap.access_token;
+        document.cookie = "expiry=" + parameterMap.expires_in;
+
+        // setup callback to handle token info
+        var processToken = function (json)
+        {
+          // get the user GUID
+          var userGUID = json.entryUUID || '';
+
+          if (userGUID === '')
+          {
+            displayMessage('IDP did not return user identifier', true);
+            return;
+          }
+
+          // done
+          displayMessage('Session setup completed', false);
+          window.setTimeout(function ()
+          {
+            document.cookie = "userGuid=" + userGUID;
+            window.location.href = window.location.protocol + "//" + window.location.host + "/#/LandingPage";
+          }, 300);
+        };
+
+        // get token info
+        window.setTimeout(function ()
+        {
+          getTokenInfo(oAuthData.access_token, processToken);
+        }, 300);
+      }
+      catch (e)
+      {
+        displayMessage(e.message, true);
+      }
+    }
+
+    // run it
+    jQuery(document).on("ready", function ()
+    {
+      window.setTimeout(parseAuthentication, 300);
+    });
+  </script>
+</head>
+<body>
+  <div class="bg-image">
+    <div class="container-fluid ">
+      <div class="top-margin-lg">
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <div class="login-inner">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href=""><img class="img-responsive" src="images/logo.png"></a>
+                </div>
+
+                <div class="col-md-8">
+                  <img class="img-responsive" src="images/taglogo.png">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <hr class="border-white">
+                </div>
+              </div>
+
+              <div id="infoPnl" class="alert alert-info">
+                Verifying and setting up your session ...
+                <p>&nbsp;</p>
+                <p style="font-size: 9px !important; font-style: italic; color: gray;">(<span id="infoMsg"></span>)</p>
+              </div>
+
+              <div id="errPnl" class="alert alert-danger" style="display: none;">
+                We are sorry but we were unable to authenticate your session. Click here to login.
+                <p>&nbsp;</p>
+                <p style="font-size: 9px !important; font-style: italic; color: gray;">(<span id="errMsg"></span>)</p>
+              </div>
+            </div>
+            <div id="row" class="footer-container">
+              <div class="col-md-6">
+                <a href="http://edrnet.com/privacy-policy/privacy-policy">Privacy Policy</a> /
+
+                <a href="http://edrnet.com/terms-conditions/">Terms and Conditions</a> / &copy; 2016 Copyright <a href="http://edrnet.com/">EDR</a> / Need Help? Call 1.866.475.1272
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="http://edrnet.com/about-edr/in-the-news?display=rss">RSS</a> /
+                <a href="https://www.facebook.com/edrnet">Facebook</a> /
+                <a href="https://twitter.com/#!/Enviro_Data">Twitter</a> /
+                <a href="http://www.linkedin.com/company/edr">LinkedIn</a> /
+                <a href="http://www.youtube.com/user/EDRincvideo">YouTube</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

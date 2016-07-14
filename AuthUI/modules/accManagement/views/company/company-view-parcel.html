@@ -1,0 +1,513 @@
+<div class="border-top border-bottom">
+    <a class="btn btn-md btn-primary" href="#/accounts/company/edit?companyguid={{parcelCtrl.companyguid}}">Edit</a>
+    <a class="btn btn-md btn-primary pointer" entity-delete data-entityType="{{ (parcelCtrl.parentcompanyguid == 'none') ? 'parent-company' : 'company' }}" data-entityname="{{parcelCtrl.companyData.name}}" data-companyguid="{{parcelCtrl.companyguid}}">Delete</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/new?companyguid={{parcelCtrl.companyguid}}" ng-if="!parcelCtrl.companyData.parentCompanyGUID && !parcelCtrl.companyData.offices.length">Add Company</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/list?companyguid={{parcelCtrl.companyguid}}" ng-if="parcelCtrl.companyData.companies.length">List Companies</a>
+    
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/new?companyguid={{parcelCtrl.companyguid}}" ng-if="!parcelCtrl.companyData.companies.length">Add Office</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/list?companyguid={{parcelCtrl.companyguid}}" ng-if="parcelCtrl.companyData.offices.length">List Offices</a>
+    
+    <a class="btn btn-md btn-primary" href="#/accounts/umbrella?companyguid={{parcelCtrl.companyguid}}">Umbrella</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <form class="form-horizontal" novalidate>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Name:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.name"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Components:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind-html="parcelCtrl.companyData.component"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Website:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.webAddress"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Slogan:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.slogan"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Functions:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.function"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Headquarters:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.companyHeadquartersType"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Certifications:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" id="certifications" ng-bind="parcelCtrl.compCertList"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">EDR Data Vendor ID:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static" ng-bind="parcelCtrl.companyData.edrDataVendorID"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Bill Lender:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <p class="form-control-static">{{parcelCtrl.companyData.billLender== 'true' ? 'YES' : 'NO'}}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Logo:</label>
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                    <img ng-src="{{parcelCtrl.companyData.logoFilePathURL}}">
+                </div>
+            </div>
+        </form>
+
+        <hr>
+        <h5>SETUP ITEMS:</h5>
+        <div ng-show="parcelCtrl.showSetupItemsMsg" class="alert" ng-class="parcelCtrl.setupItemsAlertType" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{parcelCtrl.setupItemsMessage}}
+            <button type="button" class="close" aria-label="Close" ng-click="parcelCtrl.showSetupItemsMsg = !parcelCtrl.showSetupItemsMsg">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="btn-group bottom-margin-sm" ng-hide="parcelCtrl.hideSetupItemsOptions">
+            <button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Add a new Setup Fee" ng-click="parcelCtrl.showAddNewSetupItem = !parcelCtrl.showAddNewSetupItem">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </button>
+            <button ng-show="parcelCtrl.setupItems.length" class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Edit Setup Fees" ng-click="parcelCtrl.editSetupItemsTable();">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button ng-show="parcelCtrl.setupItems.length" class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Send Fees to ABS" ng-click="parcelCtrl.sendFeesToABS()">
+                <span class="glyphicon glyphicon-paste"></span>
+            </button>
+        </div>
+        <form class="form-horizontal" name="addSetupForm" ng-show="parcelCtrl.showAddNewSetupItem" novalidate>
+            <div class="form-group required">
+                <label for="setuptype" class="col-sm-2 control-label">Setup Type:</label>
+                <div class="col-sm-4" field-validation="Setup Type">
+                    <select class="form-control" name="settype" id="setuptype" ng-model="parcelCtrl.setupItemAdd.setupType" required>
+                        <option value="">Select a Setup Type...</option>
+                        <option ng-repeat="item in parcelCtrl.setupTypeList | orderBy:'name'" value="{{item.name}}">{{item.name}}</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="form-group required">
+                <label for="cost" class="col-sm-2 control-label">Cost:</label>
+                <div class="col-sm-4" field-validation="Setup Type cost">
+                    <div class="input-group">
+                        <div class="input-group-addon">USD$</div>
+                        <input type="text" id="cost" name="cost" custom="numbersOnly" ng-pattern="/^[1-9]\d*(\.\d+)?$/" class="form-control" ng-model="parcelCtrl.setupItemAdd.price" required>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="comments1" class="col-sm-2 control-label">Comments:</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" id="comments1" rows="3" ng-model="parcelCtrl.setupItemAdd.comments"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-5">
+                    <button type="reset" ng-click="parcelCtrl.cancelAddNewSetupItem();" class="btn btn-default">Cancel</button>
+                    <button type="submit" ng-click="parcelCtrl.saveNewSetupItem(addSetupForm)" class="btn btn-primary">Add Company Setup Fee</button>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <form name="setupTableForm" novalidate>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-condensed table-striped small">
+                        <thead>
+                            <tr>
+                                <th ng-show="parcelCtrl.editSetupItems">Delete</th>
+                                <th>Setup Type</th>
+                                <th>Price</th>
+                                <th>Comments</th>
+                                <th>Entered</th>
+                                <th>ABS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-show="parcelCtrl.setupItems.length" ng-repeat="info in parcelCtrl.setupItems">
+                                <td ng-show="parcelCtrl.editSetupItems">
+                                    <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete setup item" ng-click="parcelCtrl.deleteSetupItem(info.setupType, info.setupFeeGUID)">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                                <td>
+                                    <div ng-show="!parcelCtrl.editSetupItems" ng-bind="info.setupType"></div>
+                                    <ng-form name="urlForm">
+                                        <div field-validation="Setup Type" ng-show="parcelCtrl.editSetupItems">
+                                            <select class="form-control" id="setuptype" ng-model="info.setupType" name="setup" required>
+                                                <option value="">Select a Setup Type...</option>
+                                                <option ng-repeat="setupType in parcelCtrl.setupTypeList | orderBy:'name'" value="{{setupType.name}}" ng-selected="setupType.name == info.setupType">{{setupType.name}}</option>
+                                            </select>
+                                        </div>
+                                    </ng-form>
+                                </td>
+                                <td class="setuptypeCostColumn">
+                                    <div ng-show="!parcelCtrl.editSetupItems">{{info.price}}</div>
+                                    <ng-form name="urlForm">
+                                        <div field-validation="Setup Type cost" ng-show="parcelCtrl.editSetupItems">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">USD$</div>
+                                                <input type="text" id="cost" name="cost" custom="numbersOnly" ng-pattern="/^[1-9]\d*(\.\d+)?$/" class="form-control" ng-model="info.price" required>
+                                            </div>
+                                        </div>
+                                    </ng-form>
+                                </td>
+                                <td>
+                                    <div ng-show="!parcelCtrl.editSetupItems">{{info.comments}}</div>
+                                    <div ng-show="parcelCtrl.editSetupItems">
+                                        <textarea class="form-control" ng-model="info.comments"></textarea>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>{{info.enteredBy}}</div>
+                                </td>
+                                <td>
+                                    <div>{{info.invoiceDate}}</div>
+                                </td>
+                            </tr>
+                            <tr ng-show="!parcelCtrl.setupItems.length"><td colspan="5" align="center">No setup fees have been entered for this company</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn btn-md btn-default" ng-show="parcelCtrl.editSetupItems" ng-click="parcelCtrl.cancelEditSetupItems();">Cancel/Close</button>
+                <button type="submit" class="btn btn-md btn-primary" ng-show="parcelCtrl.editSetupItems" ng-click="parcelCtrl.updateSetupItems(setupTableForm);">Update Company Setup Fees</button>
+            </form>
+        </div>
+
+
+        <hr>
+        <h5>CURRENT PRICING:</h5>
+        <div ng-show='parcelCtrl.showCurrentPricingMsg' class="alert" ng-class="parcelCtrl.currentPricingAlertType" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{parcelCtrl.currentPricingMessage}}
+            <button type="button" class="close" aria-label="Close" ng-click="parcelCtrl.showCurrentPricingMsg = !parcelCtrl.showCurrentPricingMsg">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    
+        <div class="btn-group bottom-margin-sm" ng-hide="parcelCtrl.hideCurrentPricingOptions">
+            <button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Add a New Rate" ng-click="parcelCtrl.showAddNewRate = !parcelCtrl.showAddNewRate">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </button>
+            <button ng-show="parcelCtrl.currentPricings.length" class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Edit Pricing" ng-click="parcelCtrl.editCurrentPricingTab();">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+        </div>
+
+        <form name="currentPricingForm" ng-show="parcelCtrl.showAddNewRate" class="form-horizontal" novalidate>
+            <div class="form-group required">
+                <label for="reporttype" class="col-sm-2 control-label">Report Type:</label>
+                <div class="col-sm-4" field-validation="Report Type">
+                    <select class="form-control" id="reporttype" ng-model="parcelCtrl.pricingAdd.reportType" name="reporttype" ng-change="parcelCtrl.getReportTemplates(parcelCtrl.pricingAdd.reportType);" required>
+                        <option value="">Select a Report Type...</option>
+                        <option ng-repeat="option in parcelCtrl.reportTypes | orderBy:'reportTypeName'" value="{{option.reportTypeValue}}">{{option.reportTypeName}}</option>
+                    </select>
+                </div>                
+            </div>
+            <div class="form-group required">
+                <label for="template" class="col-sm-2 control-label">Template:</label>
+                <div class="col-sm-4" field-validation="Template">
+                    <select class="form-control" id="template" ng-model="parcelCtrl.pricingAdd.templateGUID" ng-disabled="!parcelCtrl.reportTemplates.length" name="template" required>
+                        <option value="">Select a Report Type...</option>
+                        <option ng-repeat="option in parcelCtrl.reportTemplates | orderBy:'name'" value="{{option.templateGUID}}">{{option.name}}</option>
+                    </select>
+                </div>               
+            </div>
+            <div class="form-group required">
+                <label for="name" class="col-sm-2 control-label">Name:</label>
+                <div class="col-sm-4" field-validation="Name">
+                    <input type="text" id="name" name="name" class="form-control" ng-model="parcelCtrl.pricingAdd.name" required>
+                </div>                
+            </div>
+            <div class="form-group required">
+                <label for="price" class="col-sm-2 control-label">Price:</label>
+                <div class="col-sm-4" field-validation="Price">
+                    <div class="input-group">
+                        <div class="input-group-addon">USD$</div>
+                        <input type="text" id="price" class="form-control" custom="numbersAndDot" ng-pattern="/^[1-9]\d*(\.\d+)?$/" name="amount" ng-model="parcelCtrl.pricingAdd.amount" required />
+                    </div>
+                </div>             
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-5">
+                    <button type="reset" ng-click="parcelCtrl.cancelAddNewRate();" class="btn btn-md btn-default">Cancel</button>
+                    <button type="submit" ng-click="parcelCtrl.saveNewCurrentPricing(currentPricingForm)" class="btn btn-md btn-primary">Add New Rate</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <form name="currentPricingTableForm" novalidate>
+                <table class="table table-bordered table-condensed table-striped small">
+                    <thead>
+                        <tr>
+                            <th ng-show="parcelCtrl.editCurrentPricing">Delete</th>
+                            <th>Report Type</th>
+                            <th>Template</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="parcelCtrl.currentPricings.length" ng-repeat="info in parcelCtrl.currentPricings">
+                            <td ng-show="parcelCtrl.editCurrentPricing">
+                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete Rate" ng-click="parcelCtrl.deletePricing(info.name, info.rateGUID)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <div ng-bind="info.reportType"></div>
+                            </td>
+                            <td>
+                                <div ng-bind="parcelCtrl.filterTemplateName(info.templateGUID);"></div>
+                            </td>
+                            <td>
+                                <div ng-show="!parcelCtrl.editCurrentPricing">{{info.name}}</div>
+                                <ng-form name="urlForm">
+                                    <div field-validation="Name" ng-show="parcelCtrl.editCurrentPricing">
+                                        <input type="text" class="form-control" ng-model="info.name" name="name" required />
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td class="currentPricing">
+                                <div ng-show="!parcelCtrl.editCurrentPricing">${{info.amount}} {{info.currencyType}}</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editCurrentPricing" field-validation="Price">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">USD$</div>
+                                            <input type="text" class="form-control" ng-model="info.amount" custom="numbersAndDot" ng-pattern="/^[1-9]\d*(\.\d+)?$/" name="amount" required />
+                                        </div>
+                                    </div>
+                                </ng-form>
+                            </td>
+                        </tr>
+                        <tr ng-show="!parcelCtrl.currentPricings.length"><td colspan="4" align="center">No current pricing have been entered for this company</td></tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-md btn-default" ng-show="parcelCtrl.editCurrentPricing" ng-click="parcelCtrl.cancelCurrentPricingTab()">Cancel/Close</button>
+                <button type="submit" class="btn btn-md btn-primary" ng-show="parcelCtrl.editCurrentPricing" ng-click="parcelCtrl.updateCurrentPricingTab(currentPricingTableForm)">Update Current Pricing</button>
+            </form>
+        </div>
+
+        <div ng-include src="'modules/accManagement/views/modals/discount-charges-modal.html'"></div>
+        <hr>
+        <h5>DISCOUNTS:</h5>
+        <div ng-show='parcelCtrl.showDiscountsMsg' class="alert" ng-class="parcelCtrl.discountsAlertType" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{parcelCtrl.discountsMessage}}
+            <button type="button" class="close" aria-label="Close" ng-click="parcelCtrl.showDiscountsMsg = !parcelCtrl.showDiscountsMsg">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    
+        <div class="btn-group bottom-margin-sm" ng-hide="parcelCtrl.hideDiscountOptions">
+            <button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Add a New Discount" ng-click="parcelCtrl.showAddNewDiscount = !parcelCtrl.showAddNewDiscount">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </button>
+            <button ng-show="parcelCtrl.discountTableData.length" class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Edit Discount" ng-click="parcelCtrl.editDiscountsTable();">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+        </div>
+    
+        <form ng-show="parcelCtrl.showAddNewDiscount" name="discountForm" class="form-horizontal" novalidate>
+            <div class="form-group required">
+                <label for="discountName" class="col-sm-2 control-label">Name:</label>
+                <div class="col-sm-4" field-validation="Name">
+                    <input type="text" id="discountName" name="name" class="form-control" ng-model="parcelCtrl.discountAdd.name" required>
+                </div>
+              
+            </div>
+            <div class="form-group required">
+                <label for="discount" class="col-sm-2 control-label">Discount %:</label>
+                <div class="col-sm-4" field-validation="Discount %">
+                    <div class="input-group">
+                        <input type="text" id="discount" name="percent" custom="numbersAndDot" ng-pattern="/^[1-9]\d*(\.\d+)?$/" class="form-control" ng-model="parcelCtrl.discountAdd.discountPercent" required>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </div>
+             
+            </div>
+            <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">Type:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="type" ng-model="parcelCtrl.discountAdd.discountType">
+                        <option value="NUMREPORTS"># of Reports</option>
+                        <option value="TIME"># of Days</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group required" ng-show="parcelCtrl.discountAdd.discountType == 'NUMREPORTS'">
+                <label for="reports" class="col-sm-2 control-label"># Reports:</label>
+                <div class="col-sm-4" field-validation="# Reports">
+                    <input type="text" id="reports" name="NoOfReports" custom="numbersOnly" ng-pattern="/^[0-9]*$/" class="form-control" ng-model="parcelCtrl.discountAdd.maxNumberOfReports" ng-required="parcelCtrl.discountAdd.discountType == 'NUMREPORTS'">
+                </div>
+                
+            </div>
+            <div class="form-group required" ng-show="parcelCtrl.discountAdd.discountType == 'TIME'">
+                <label for="effectiveDate" class="col-sm-2 control-label">Start Date:</label>
+                <div class="col-sm-4" field-validation="Start Date">
+                    <div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="yyyy-mm-dd">
+                        <input id="effectiveDate" name="effectiveDate" type="text" class="form-control" ng-model="parcelCtrl.discountAdd.startDate" required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <div class="form-group required" ng-show="parcelCtrl.discountAdd.discountType == 'TIME'">
+                <label for="days" class="col-sm-2 control-label"># Days:</label>
+                <div class="col-sm-4" field-validation="# Days">
+                    <input type="text" id="days" name="NoOfDays" custom="numbersOnly" ng-pattern="/^[0-9]*$/" class="form-control" ng-model="parcelCtrl.discountAdd.maxNumberOfDays" ng-required="parcelCtrl.discountAdd.discountType == 'TIME'">
+                </div>
+               
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-5">
+                    <button type="reset" class="btn btn-md btn-default" ng-click="parcelCtrl.cancelAddNewDiscount();">Cancel</button>
+                    <button type="submit" ng-click="parcelCtrl.saveNewDiscount(discountForm);" class="btn btn-md btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <form name="discountTableForm" novalidate>
+                <table id="reportDetailsTable" class="table table-bordered table-condensed table-striped small">
+                    <thead>
+                        <tr>
+                            <th ng-show="!parcelCtrl.editDiscounts"></th>
+                            <th ng-show="parcelCtrl.editDiscounts">Delete</th>
+                            <th>Report Type</th>
+                            <th>Template</th>
+                            <th>Name</th>
+                            <th>Discount %</th>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th># Reports</th>
+                            <th># Days</th>
+                            <th>Expired?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="parcelCtrl.discountTableData.length" ng-repeat="info in parcelCtrl.discountTableData | orderBy:'-effectiveTS'">
+                            <td ng-show="!parcelCtrl.editDiscounts" class="expandTrue"><a class="pointer" ng-click="parcelCtrl.showCharges(info.name)">Charges</a></td>
+                            <td ng-show="parcelCtrl.editDiscounts">
+                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete Discount" ng-click="parcelCtrl.deleteDiscount(info.name, info.discountGUID)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <div>(any type)</div>
+                            </td>
+                            <td>
+                                <div>(any template)</div>
+                            </td>
+                            <td>
+                                <div ng-show="!parcelCtrl.editDiscounts">{{info.name}}</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editDiscounts" field-validation="Name">
+                                        <input type="text" name="discountName" class="form-control" ng-model="info.name" ng-disabled="info.isExpired" required/>
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td class="setupfeeColumn">
+                                <div ng-show="!parcelCtrl.editDiscounts">{{info.discountPercent}}%</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editDiscounts" field-validation="Discount %">
+                                        <div class="input-group">
+                                            <input type="text" name="discountPercentage" class="form-control" ng-model="info.discountPercent" ng-disabled="info.isExpired" required>
+                                            <div class="input-group-addon">%</div>
+                                        </div>
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td>
+                                <div ng-show="!parcelCtrl.editDiscounts">{{info.discountType}}</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editDiscounts">
+                                        <select class="form-control" class="form-control" ng-model="info.discountType" ng-disabled="info.isExpired">
+                                            <option value="NUMREPORTS"># of Reports</option>
+                                            <option value="TIME"># of Days</option>
+                                        </select>
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td class="setupfeeColumn">
+                                <div ng-show="!parcelCtrl.editDiscounts" ng-bind="info.startDate"></div>
+                                <div ng-show="parcelCtrl.editDiscounts" class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="{{info.startDate}}" data-date-format="yyyy-mm-dd">
+                                    <input name="effectiveDate" type="text" class="form-control" ng-model="info.startDate" ng-disabled="info.isExpired" required>
+                                     <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div ng-show="!parcelCtrl.editDiscounts">{{info.maxNumberOfReports}}</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editDiscounts" field-validation="No. of reports">
+                                        <input type="text" name="discountReports" class="form-control" ng-model="info.maxNumberOfReports" required ng-disabled="info.discountType == 'TIME' || info.isExpired" />
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td>
+                                <div ng-model="info.days" ng-show="!parcelCtrl.editDiscounts">{{info.maxNumberOfDays}}</div>
+                                <ng-form name="urlForm">
+                                    <div ng-show="parcelCtrl.editDiscounts" field-validation="No. of days">
+                                        <input type="text" name="discountDays" class="form-control" ng-model="info.maxNumberOfDays" required ng-disabled="info.discountType == 'NUMREPORTS' || info.isExpired" />
+                                    </div>
+                                </ng-form>
+                            </td>
+                            <td>
+                                <div>{{ (info.isExpired) ? 'YES' : 'NO' }}</div>
+                            </td>
+                        </tr>
+                        <tr ng-show="!parcelCtrl.discountTableData.length"><td colspan="10" align="center">No discounts have been entered for this company</td></tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-md btn-default" ng-show="parcelCtrl.editDiscounts" ng-click="parcelCtrl.cancelEditDiscountsTable()">Cancel/Close</button>
+                <button type="submit" class="btn btn-md btn-primary" ng-show="parcelCtrl.editDiscounts" ng-click="parcelCtrl.updateDiscountsTable(discountTableForm)">Update Current Pricing</button>
+            </form>
+        </div>
+
+<!--Do not remove following comment, its gonna use later-->
+        <!--<hr>
+        <h5>CURRENT YEAR STATUS:</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-striped small">
+                <thead>
+                    <tr>
+                        <th>Report Type</th>
+                        <th>Date Range</th>
+                        <th>12 Month Volume</th>
+                        <th>Total Reports</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="info in parcelCtrl.currentYearStatus">
+                        <td>{{info.reportType}}</td>
+                        <td>{{info.dateRange}}</td>
+                        <td>{{info.monthValue}}</td>
+                        <td>{{info.totalReports}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+    </div>
+</div>

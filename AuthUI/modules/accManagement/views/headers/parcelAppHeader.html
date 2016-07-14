@@ -1,0 +1,71 @@
+<header>
+    <nav id="EDRnav" role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/#/LandingPage" class="navbar-brand" tabindex="-1" target="_self">Parcel Platform</a>
+            </div>
+
+            <div id="navbarCollapse">
+                <ul class="nav navbar-nav navbar-right" class="collapse navbar-collapse">
+                    <li><a href="/#/LandingPage" tabindex="-1" target="_self">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" href="#" tabindex="-1">Projects <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#/QuickProjectSetup" tabindex="-1" target="_self">New Single Site Project</a></li>
+                            <li><a href="/#/ProjectInformation" tabindex="-1" target="_self">New Portfolio</a></li>
+                            <li><a href="/#/OrderPlacedOnEDR" tabindex="-1" target="_self">Order placed on EDR Website? Click here</a></li>
+                            <li><a href="/#/QuickLenderProjectSetup" tabindex="-1" target="_self">New Single Site Lender Project</a></li>
+                            <li><a href="/#/LenderPortfolioCreation/ProjectInformation" tabindex="-1" target="_self">New Lender portfolio</a></li>
+                            <li><a href="/#/projectSearch" tabindex="-1" target="_self">Project Search</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#/DirectAwardsAndBids" tabindex="-1" target="_self">Bids</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-target="#" href="#" tabindex="-1">Company <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#/Templates" target="_self">Templates</a></li>
+                            <li><a href="/#/DefaultLanguage" target="_self">Default Language</a></li>
+                            <li><a href="/#/ReportSetup" target="_self">Report Output Setup</a></li>
+                            <li><a href="/#/TransmittalLetterSetup" target="_self">Transmittal Letter Output Setup</a></li>
+                            <li><a href="/#/TOCSetup" target="_self">Table of Contents Output Setup</a></li>
+                            <li><a href="#/accounts" target="_self">Company Accounts</a></li>
+                            <li><a href="/#/filingCabinet" target="_self">Filing Cabinet</a></li>
+                            <li><a href="#/company/logo" target="_self">Company Logo</a></li>
+                            <li><a href="/#/companyProfile/links" target="_self">Related Links</a></li>
+                            <li class="disabled"><a href="" target="_self">Reports Year-to-Date and Total</a></li>
+                            <li class="disabled"><a href="" target="_self">Total Reports by Client</a></li>
+                            <li class="disabled"><a href="" target="_self">Top States Year-to-Date</a></li>
+                            <li class="disabled"><a href="" target="_self">Most Recent Users</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-target="#" href="#" tabindex="-1">Help <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mailto:support@parcelplatform.com" target="_self">Email Support</a></li>
+                            <li><a href="http://wiki.parcelplatform.com" target="_self">eLearning</a></li>
+                            <li class="disabled"><a href="#">What's new on this page?</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-target="#" href="#" tabindex="-1"><i class="fa fa-user"></i> {{userName}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a ui-sref="accountMgmt.user.view({companyguid:currentUserCompanyGuid, officeguid:currentUserOfficeGuid, userguid:currentUserGuid})"><i class="fa fa-cog"></i> Account Settings</a></li>
+                            <li class="disabled"><a href="#" target="_blank"><i class="fa fa-wrench"></i> Administrative Tools</a></li>
+                            <li class="disabled"><a href="#"><i class="fa fa-toggle-off"></i> Switch Portals</a></li>
+                            <li><a class="pointer" ng-click="logoutUser()"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search" class="navbar-form navbar-right">
+                    <div class="form-group navbar-search ">
+                        <input type="text" id="siteId" class="form-control input-md" placeholder="Enter SiteID" ng-model="siteID" ng-keypress="searchBySiteid(siteID)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>

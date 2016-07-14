@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jon Durante -- UX Designer -- @jdurante
+    Terry Wight -- Leader of UX
+
+# THANKS
+
+    Twitter, Bootstrap, JQuery, HTML5Boilerplate, Modernizr, Respond, Sublime Text
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Bootstrap

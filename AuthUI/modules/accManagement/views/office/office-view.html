@@ -1,0 +1,80 @@
+<div class="border-top border-bottom">
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/edit?companyguid={{officeCtrl.companyguid}}&officeguid={{officeCtrl.officeguid}}">Edit</a>
+    <a class="btn btn-md btn-primary" href="" entity-delete data-entityType="office" data-entityname="{{officeCtrl.officeInfo.officeName}}" data-companyguid="{{officeCtrl.companyguid}}" data-officeguid="{{officeCtrl.officeguid}}">Delete</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/user/new?companyguid={{officeCtrl.companyguid}}&officeguid={{officeCtrl.officeguid}}">Add User</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/user/list?companyguid={{officeCtrl.companyguid}}&officeguid={{officeCtrl.officeguid}}">List Users</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/umbrella?companyguid={{officeCtrl.companyguid}}">Umbrella</a>
+</div>
+<div class="row">
+    <div class="col-md-5 col-lg-5">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Office Name:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.officeName"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Address:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.address"></p>
+                    <span class="form-control-static" ng-bind="officeCtrl.officeInfo.addressLine2"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">City/State/Zip:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.cityStateZip"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Phone:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.phone"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Fax:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.fax"></p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Latitude:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.latitude"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Longitude:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="officeCtrl.officeInfo.longitude"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">EDR Account:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static"><strong ng-bind="officeCtrl.officeInfo.edrAccountNumber"></strong></p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-3 control-label">EDR Password:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static"><strong ng-bind="officeCtrl.officeInfo.edrAccountPassword"></strong></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5 col-lg-5">
+        <div class="google-map top-margin-sm" google-map mapDraggable="false" mapZoom="{{officeCtrl.mapZoom}}" ng-model="officeCtrl.officeLocation"></div>
+    </div>
+</div>

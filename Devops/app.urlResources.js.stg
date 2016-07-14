@@ -1,0 +1,59 @@
+angular.module('AccessManagement').constant('BASEURL',{
+
+    //Logging
+    LOGGING: 'http://wwwstg.parcelplatform.com/logging/logging/logitems',
+
+    //Account Management
+    ACCOUNT_MGMT: 'http://wwwstg.parcelplatform.com/accountmanagementservice/shared/accountmanagement',
+
+    //Core File Management
+    COREFILE_MGMT: 'http://wwwstg.parcelplatform.com/corefilemanagementservice/files',
+
+    //Geocode
+    GEOCODE: 'http://wwwstg.parcelplatform.com/geocodeservice/geocode',
+
+    //Report Templates
+    REPORT_TEMPLATES: 'http://wwwstg.parcelplatform.com/parcelservice/companytemplates',
+    
+    //Report
+    REPORT: 'http://wwwstg.parcelplatform.com/parcelservice/reports',
+    
+    // Const GUIDs
+    COMPANY_GUID: 'cd024ac2-f962-472f-acf1-1dc4238c321e', // Benchmark Environmental Consultants
+    OFFICE_GUID: '5d96e57b-5571-4914-88b3-ce07d0c592bf', //Dallas, TX
+    USER_GUID: 'bbc8bb95-f8d0-42aa-b053-00f187134f16', //devuser@benchmarkenviro.com
+
+    //Core Access Management
+    ACCESS_MGMT_CORE: 'http://wwwstg.parcelplatform.com/coreaccessmgmtservice',
+    
+    //shared Access Management
+    ACCESS_MGMT_SHARED: 'http://wwwstg.parcelplatform.com/sharedaccessmgmtservice',
+    
+    //Messaging Service
+    MESSAGE_SERVICE: 'http://wwwstg.parcelplatform.com/messageservice',
+    
+    //Shared File mgmt
+    SHAREDFILEMGMT_SERVICE: '//wwwstg.parcelplatform.com/sharedfilemanagementservice',
+
+    //Constants
+    ASSETGUID : 'A0F5E294-B497-4C16-8FA4-5dfC9413530F',
+    APPLICATIONGUID : 'A0F5E294-B497-4C16-4EFA-79834FEAF',
+    TEMPLATEGUID : '4b46f6fb-f25b-11e5-9675-0e29c2a821a7',
+    TEMPLATENAME : 'ResetPassword',
+    EMAILLINK : 'http://wwwstg.parcelplatform.com/accountmgmt/#/ResetPassword',
+    PARCELSUPPORTEMAIL : 'parcelsupport@edrnet.com',
+    
+    PARCELSUPPORTPHONE : '866-475-1272',
+    
+    //Auth Urls
+    POSTAPI_GETAUTHTOKEN: '//identitystg.edrcore.com/openam/json/authenticate',
+    POSTAPI_GETAUTHCODE: '//identitystg.edrcore.com/openam/oauth2/authorize',
+    REDIRECT_OAUTHPAGE: '//wwwstg.parcelplatform.com/Oauth.html',
+    REDIRECT_LOGOUT: '//identitystg.edrcore.com/openam/UI/Logout',
+    
+    // temporary flags to disable OATH
+    IS_LOCAL: 0,
+    IS_OTHERENV: 1,
+    DevEnv: false
+
+});

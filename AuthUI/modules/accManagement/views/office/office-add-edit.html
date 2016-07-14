@@ -1,0 +1,129 @@
+<h4 ng-show="!officeCtrl.isEditOffice" class="text-uppercase">ADDING NEW OFFICE TO {{parentEntityName}}</h4>
+<div class="row border-top">
+    <div class="col-md-5 col-lg-5">
+        <form class="form-horizontal" name="officeAddEditForm" novalidate>
+            <div class="form-group required">
+                <label for="office-name" class="col-sm-3 control-label">Office Name:</label>
+                <div class="col-sm-7" field-validation="Office Name">
+                    <input type="text" id="office-name" class="form-control" name="office-name" ng-model="officeCtrl.officeInfo.officeName" required>
+                </div>
+                
+            </div>
+
+            <div class="form-group required">
+                <label for="address" class="col-sm-3 control-label align-left">Address</label>
+                <div class="col-sm-7" field-validation="Address">
+                    <input type="text" class="form-control" id="address" name="address" ng-model="officeCtrl.officeLocation.address" required>
+                </div>
+             
+            </div>
+
+            <div class="form-group">
+                <label for="addressLine2" class="col-sm-3 control-label align-left"></label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="addressLine2" id="addressLine2" ng-model="officeCtrl.officeLocation.addressLine2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country" class="col-sm-3 control-label">Country:</label>
+                <div class="col-sm-7">
+                    <countries required></countries>
+                </div>
+            </div>
+
+
+            <div class="form-group required">
+                <label for="city" class="col-sm-3 control-label">City:</label>
+                <div class="col-sm-7" field-validation="City">
+                    <input type="text" id="city" class="form-control" name="city" ng-model="officeCtrl.officeLocation.city" required>
+                </div>             
+            </div>
+
+            <div class="form-group required">
+                <label for="state" class="col-sm-3 control-label">State/Province</label>
+                <div class="col-sm-7" field-validation="State/Province">
+                    <states required></states>
+                </div>              
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label"></label>
+                <div class="col-sm-7">
+                    <button class="btn btn-primary" ng-disabled="!officeCtrl.officeLocation.address || !selectedState" ng-click="officeCtrl.gecodeOfficeLocation()">MAP IT</button>
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="zip" class="col-sm-3 control-label">Zip/Postal Code:</label>
+                <div class="col-sm-7" field-validation="Zip/Postal Code">
+                    <input type="text" class="form-control" id="zip" name="zip" ng-model="officeCtrl.officeLocation.zipCode" required>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="Latitude" class="col-sm-3 control-label">Latitude:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="Latitude" class="form-control" name="latitude" ng-model="officeCtrl.officeLocation.latitude">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="longitude" class="col-sm-3 control-label">Longitude:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="longitude" class="form-control" name="longitude" ng-model="officeCtrl.officeLocation.longitude">
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="phone" class="col-sm-3 control-label">Phone:</label>
+                <div class="col-sm-7" field-validation="Phone">
+                    <input type="text" id="phone" class="form-control" name="phone" ng-model="officeCtrl.officeInfo.phone" required>
+                </div>
+          
+            </div>
+
+            <div class="form-group">
+                <label for="fax" class="col-sm-3 control-label">Fax:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="fax" class="form-control" name="fax" ng-model="officeCtrl.officeInfo.fax">
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="officeCtrl.isEditOffice">
+                <label for="billingcontact" class="col-sm-3 control-label">Billing Contact:</label>
+                <div class="col-sm-7">
+                    <select id="billingcontact" class="form-control" name="billingcontact" ng-model="officeCtrl.billingContactUser" ng-options="(user.firstName+' '+user.lastName) for user in officeCtrl.officeInfo.users track by user.userGUID"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="edraccount" class="col-sm-3 control-label">EDR Account:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="edraccount" class="form-control" name="edraccount" ng-model="officeCtrl.officeInfo.edrAccountNumber">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="edraccount" class="col-sm-3 control-label">EDR Password:</label>
+                <div class="col-sm-7">
+                    <input type="password" id="edrpassword" class="form-control" name="edrpassword" ng-model="officeCtrl.officeInfo.edrAccountPassword">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <button type="reset" class="btn btn-default" ng-click="officeCtrl.cancelOfficeCreation();">CANCEL</button>
+                    <button type="submit" class="btn btn-primary" ng-click="officeCtrl.submitOfficeData(officeAddEditForm)">{{officeCtrl.submitBtnText}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-5 col-lg-5">
+        <div google-map mapDraggable="true" mapZoom="{{officeCtrl.mapZoom}}" ng-model="officeCtrl.officeLocation" class="google-map"></div>
+        <em>You can drag map marker to locate your office.</em>
+    </div>
+</div>

@@ -1,0 +1,413 @@
+<div class="border-top border-bottom">
+    <a class="btn btn-md btn-primary" href="#/accounts/company/edit?companyguid={{createCompCtrl.companyguid}}">Edit</a>
+    <a class="btn btn-md btn-primary" href="" entity-delete data-entityType="{{ (createCompCtrl.parentcompanyguid == 'none') ? 'parent-company' : 'company' }}" data-entityname="{{createCompCtrl.name}}" data-companyguid="{{createCompCtrl.companyguid}}">Delete</a>
+
+    <a class="btn btn-md btn-primary" href="#/accounts/company/new?companyguid={{createCompCtrl.companyguid}}" ng-if="!createCompCtrl.existingCompanyData.parentCompanyGUID && !createCompCtrl.existingCompanyData.offices.length">Add Company</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/list?companyguid={{createCompCtrl.companyguid}}" ng-if="createCompCtrl.existingCompanyData.companies.length">List Companies</a>
+
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/new?companyguid={{createCompCtrl.companyguid}}" ng-if="!createCompCtrl.existingCompanyData.companies.length">Add Office</a>
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/list?companyguid={{createCompCtrl.companyguid}}" ng-show="createCompCtrl.existingCompanyData.offices.length">List Offices</a>
+
+    <a class="btn btn-md btn-primary" href="#/accounts/umbrella?companyguid={{createCompCtrl.companyguid}}">Umbrella</a>
+</div>
+
+<div class="row">
+    <!-- Left panel Start-->
+    <div class="col-md-3 col-lg-3 col-sm-3 sidebar">
+
+        <div class="top-margin">
+            <ul class="nav nav-pills nav-stacked-lg">
+                <li ng-class="{active: tab==='companyDtls'}"><a href="" class="pointer" ng-class="{selected: tab=='companyDtls'}" ng-click="tab = 'companyDtls'" aria-controls="company" role="tab" data-toggle="tab">Company: <span class="text-11">{{createCompCtrl.existingCompanyData.name}}</span></a></li>
+                <li ng-class="{active: tab==='lenderVendors'}"><a href="" ng-class="{selected: tab=='lenderVendors'}" ng-click="tab = 'lenderVendors'" class="pointer" aria-controls="lenderVendors" role="tab" data-toggle="tab">Lender Vendors </a></li>
+                <li ng-class="{active: tab==='lenderSetupFees'}"><a href="" class="pointer" ng-class="{selected: tab=='lenderSetupFees'}" ng-click="tab = 'lenderSetupFees'" aria-controls="lenderVendors" role="tab" data-toggle="tab">Lender Setup Fees</a></li>
+                <li ng-class="{active: tab==='lenderServiceGroups'}"><a href="" class="pointer" ng-class="{selected: tab=='lenderServiceGroups'}" ng-click="tab = 'lenderServiceGroups'" aria-controls="lenderVendors" role="tab" data-toggle="tab">Lender Service Groups & Reports</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Left panel end-->
+
+    <!-- Right panel Start-->
+    <div class="col-md-9 col-lg-9 col-sm-9">
+        <div class="tab-content">
+
+            <div ng-show="tab == 'companyDtls'" id="company">
+                <h4 class="page-header">Company Information </h4>
+                <form class="form-horizontal" novalidate>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Name:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.name"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Components:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind-html="createCompCtrl.component"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Website:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.webAddress"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Slogan:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.slogan"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Functions:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.function"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Headquarters:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.companyHeadquartersType"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Certifications:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" id="certifications" ng-bind="createCompCtrl.compCertList"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">EDR Data Vendor ID:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static" ng-bind="createCompCtrl.edrDataVendorId"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Bill Lender:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <p class="form-control-static">{{createCompCtrl.billLender== true ? 'YES' : 'NO'}}</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Logo:</label>
+                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                            <img ng-src="{{createCompCtrl.attachmentFile.logoFilePathURL}}">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div ng-show="tab == 'lenderVendors'" id="lenderVendors">
+                <h4 class="page-header">1. Lender Vendors </h4>
+                <p>If the Lender is going to be procuring services, they will need to have their Vendors associated. You can add the Vendor to the Lender's umbrella by clicking Add Company and selecting from the list. Once the Vendor has been associated, you need to add a Vendor Contact. The contact is the user that will receive the communications sent through the Lender Portal.</p>
+                <div class="bottom-margin">
+                    <button class="btn btn-primary" ng-click="showAddCompany=!showAddCompany">Add Company</button>
+                </div>
+                <div ng-show="showAddCompany" id="addCompany">
+                    <div class="well">
+                        <form name="addCompanyAssociationForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="companyName">Company:</label>
+                                        <div field-validation="Company Name">
+                                            <select name="selectCompany" class="form-control" id="companyName" ng-options="comp as comp.name for comp in createCompCtrl.compList | orderBy:'name'" ng-model="createCompCtrl.selectedCompFromList" required>
+                                                <option value="">Select a company...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="function">Function:</label>
+                                        <div field-validation="Function">
+                                            <select name="selectFunction" class="form-control" id="function" ng-options="fun as fun.companyType for fun in createCompCtrl.compFunctions | orderBy:'companyType'" ng-model="createCompCtrl.selectedCompFunction" required>
+                                                <option value="">Select a function...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="effectiveDate" class="control-label">Effective Date:</label>
+                                        <div>
+                                            <div id="effecDate" class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="createCompCtrl.effectiveDateStart">
+                                                <input id="effectiveDate" name="effectiveDate" ng-change="createCompCtrl.disableExpDate()" ng-model="createCompCtrl.effectiveDate" type="text" class="form-control">
+                                                <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="expirationDate" class="control-label">Expiration Date:</label>
+                                        <div>
+                                            <div id="expDate" class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="{{createCompCtrl.effectiveDate}}">
+                                                <input id="expirationDate" name="expirationDate" ng-model="createCompCtrl.expirationDate" type="text" class="form-control">
+                           <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-sm-12">
+                                    <button class="btn btn-primary btn-md" ng-click="createCompCtrl.addCompAssociation(addCompanyAssociationForm)">Add Company</button>
+                                    <button class="btn btn-default btn-md" ng-click="createCompCtrl.resetCompAssociation(addCompanyAssociationForm)">Reset</button>
+                                    <button class="btn btn-default btn-md" ng-click="showAddCompany=!showAddCompany">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert" ng-class="createCompCtrl.alertClassLenderVendors" role="alert" ng-show="createCompCtrl.showLenderVendorMsg">{{createCompCtrl.lenderVendorMsg}}
+                    <button type="button" class="close" aria-label="Close" ng-click="createCompCtrl.showLenderVendorMsg=false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table id="tblLenderVendors" class="table table-bordered table-condensed small">
+                        <thead>
+                            <tr>
+                                <th>Actions</th>
+                                <th>Company Name</th>
+                                <th>Function</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat-start="(parentIndex,vendor) in createCompCtrl.companyAssociations">
+
+                            </tr>
+                            <tr ng-repeat-end ng-repeat-start="(childIndex,user) in vendor.companyAssociationUsers">
+                                <td>
+                                    <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Delete Company" ng-click="createCompCtrl.deleteCompAssocition(vendor.companyGUID,vendor.companyAssociationGUID,vendor.companyName,$event)">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                    <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Add Contact" ng-click="createCompCtrl.getCompAssoUsers(vendor.companyGUID,$index);showAddContactDropdown=!showAddContactDropdown">
+                                        <span class="glyphicon glyphicon-plus-sign"></span>
+                                    </button>
+                                </td>
+                                <td>{{vendor.companyName}}</td>
+                                <td>{{vendor.associationType}}</td>
+                                <td>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4">
+                                                {{user.firstName}} {{user.middleInitial}} {{user.lastName}}
+                                            </div>
+                                            <div ng-if="user.userGUID" class="col-sm-1 col-md-1">
+                                                <button ng-if="user.userGUID" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Delete" ng-click="createCompCtrl.deleteAssoContact($event,user.firstName,user.lastName,vendor.companyGUID,vendor.companyAssociationGUID,user.companyAssociationUserGUID,parentIndex)">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                            </div>
+                                            <div ng-show="showAddContactDropdown" class="col-sm-6 col-md-6">
+                                                <select class="form-control" ng-options="contact as contact.userName for contact in createCompCtrl.compAssoUsers[vendor.companyGUID] | orderBy:'userName'" ng-model="createCompCtrl.selectedAssoContact[parentIndex+'_'+childIndex]" ng-change="createCompCtrl.addAssoContact($event,parentIndex,childIndex,vendor.companyGUID,vendor.companyAssociationGUID)">
+                                                    <option value="">Select a contact...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr ng-repeat-end></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+            </div>
+
+            <div ng-show="tab == 'lenderSetupFees'" id="lenderSetupFees">
+                <h4 class="page-header">Lender Setup Fees</h4>
+                <p>The second step to Lender Setup is to bill the Lender for setting up the Portal for them. Add the fees required, and once complete, click the Send to ABS button to send the charges through.</p>
+                <div class="bottom-margin">
+                    <button class="btn btn-md btn-primary" ng-click="showAddSetupFees=!showAddSetupFees" data-target="#addSetupfee" aria-expanded="false">Add Setup Fee</button>
+                </div>
+                <div ng-show="showAddSetupFees" id="addSetupfee">
+                    <div class="well">
+                        <form name="addSetupFeesForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="setupItem">Setup Item:</label>
+                                        <div field-validation="setup-item">
+                                            <select id="setupItem" name="comp-csSetupType" class="form-control" ng-options="setupItem as setupItem.name for setupItem in createCompCtrl.lenderSetupFeeTypes | orderBy:'name'" ng-model="createCompCtrl.selectedSetupItem" ng-change="createCompCtrl.setSetupType($event)" required>
+                                                <option value="">Select an item...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-4">
+                                    <div class="form-group">
+                                        <label for="setupCost">Cost</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" name="setup-cost" id="setupCost" ng-model="createCompCtrl.setupCost">
+                                            <div class="input-group-addon">($USD)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="comments">Comments:</label>
+                                        <textarea id="comments" class="form-control" rows="3" ng-model="createCompCtrl.setupComment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-sm-12">
+                                    <button class="btn btn-primary btn-md" ng-click="createCompCtrl.addSetupFees(addSetupFeesForm)">Add Setup Fee</button>
+                                    <button class="btn btn-default btn-md" ng-click="createCompCtrl.resetSetupFees(addSetupFeesForm)">Reset</button>
+                                    <button class="btn btn-default btn-md" ng-click="showAddSetupFees=!showAddSetupFees">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert" ng-class="createCompCtrl.alertClassSetupFee" role="alert" ng-show="createCompCtrl.showSetupFeeMsg">{{createCompCtrl.setupFeeMsg}}
+                    <button type="button" class="close" aria-label="Close" ng-click="createCompCtrl.showSetupFeeMsg=false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table id="tblSetupFees" class="table table-bordered table-condensed table-striped small">
+                        <thead>
+                            <tr>
+                                <th>Actions</th>
+                                <th>Setup Type</th>
+                                <th>Price</th>
+                                <th>Comments</th>
+                                <th>Entered</th>
+                                <th>Invoice Date</th>
+                                <th>Order ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="setupfee in createCompCtrl.setupFees">
+                                <td>
+                                    <button ng-if="!setupfee.orderGUID" ng-click="createCompCtrl.lenderDeleteSetupFees(setupfee.companyGUID, setupfee.setupFeeGUID,$event,setupfee.setupType)" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" data-trigger="hover" title='Delete'>
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                                <td>{{setupfee.setupType}}</td>
+                                <td>{{setupfee.price}} USD</td>
+                                <td>{{setupfee.comments}}</td>
+                                <td>{{setupfee.enteredBy}} <span ng-if="setupfee.enteredDate">| {{setupfee.enteredDate}}</span></td>
+                                <td>{{setupfee.invoiceDate}}</td>
+                                <td>{{setupfee.orderGUID}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert alert-info" role="alert" ng-show="createCompCtrl.checkSubmitInvoice">No Invoice to Submit.
+                    <button type="button" class="close" aria-label="Close" ng-click="createCompCtrl.checkSubmitInvoice= !createCompCtrl.checkSubmitInvoice">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <button class="btn btn-md btn-primary" ng-click="createCompCtrl.showSubmitInvoicePopup()">Submit Invoice</button>
+                <hr>
+            </div>
+
+            <div ng-show="tab == 'lenderServiceGroups'" id="lenderServiceGroups">
+                <h4 class="page-header">Lender Service Groups & Reports </h4>
+                <p>The third step to procuring services is to select which services and reports the Lender will be procuring. The reports are organized into different Service categories. For reports that require a template, once must be selected from the dropdown and a fee for that work should be entered. Once this information has been entered, you must select the specific Vendors that will be performing each type of report.</p>
+                <div class="alert" ng-class="createCompCtrl.alertClassReports" role="alert" ng-show="createCompCtrl.showReportMsg">{{createCompCtrl.reportMsg}}
+                    <button type="button" class="close" aria-label="Close" ng-click="createCompCtrl.showReportMsg=false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <ul class="nav nav-tabs" role="tablist">
+                    <li ng-class="{active: lenderServiceTab==='environmental'}" role="presentation"><a href="" aria-controls="home" data-toggle="lenderServiceTab" ng-click="lenderServiceTab = 'environmental';createCompCtrl.getLenderServiceData()">Environmental</a></li>
+                    <li ng-class="{active: lenderServiceTab==='valuation'}" role="presentation"><a href="" aria-controls="valuation" data-toggle="lenderServiceTab" ng-click="lenderServiceTab = 'valuation';createCompCtrl.getLenderServiceData()">Valuation</a></li>
+                    <li ng-class="{active: lenderServiceTab==='additional'}" role="presentation"><a href="" aria-controls="additional" data-toggle="lenderServiceTab" ng-click="lenderServiceTab = 'additional';createCompCtrl.getLenderServiceData()">Additional</a></li>
+                    <li ng-class="{active: lenderServiceTab==='flood'}" role="presentation"><a href="" aria-controls="flood" data-toggle="lenderServiceTab" ng-click="lenderServiceTab = 'flood';createCompCtrl.getLenderServiceData()">Flood</a></li>
+                    <li ng-class="{active: lenderServiceTab==='inspectionServices'}" role="presentation"><a href="" aria-controls="inspectionServices" data-toggle="lenderServiceTab" ng-click="lenderServiceTab = 'inspectionServices';createCompCtrl.getLenderServiceData()">Inspection Services</a></li>
+                </ul>
+
+                <div class="alert" ng-class="createCompCtrl.alertClassReportsVendor" role="alert" ng-show="createCompCtrl.showReportVendorMsg">{{createCompCtrl.reportVendorMsg}}
+                    <button type="button" class="close" aria-label="Close" ng-click="createCompCtrl.showReportVendorMsg=false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="table-responsive table-vertical-scroll">
+                    <form name="reportsForm" novalidate>
+                        <table class="table table-bordered table-condensed table-striped small" ng-if="createCompCtrl.reportCategory">
+                            <thead>
+                                <tr>
+                                    <th>Show in Policy</th>
+                                    <th>Report Type</th>
+                                    <th>Template</th>
+                                    <th>Fee</th>
+                                    <th>Show in Procurement</th>
+                                    <th>Vendors</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="(index,report) in createCompCtrl.reportSettings | filter: {reportCategory : createCompCtrl.reportCategory}">
+                                    <td>
+                                        <input type="checkbox" ng-checked="report.showInPolicy" ng-model="report.showInPolicy">
+                                    </td>
+                                    <td>
+                                        <div class="report-type">{{report.reportType}}</div>
+                                    </td>
+                                    <td>
+                                        <div ng-show="report.hasTemplates" class="report-templates">
+                                            <select class="form-control" ng-options="temp.templateGUID as (temp.name) for temp in createCompCtrl.compTemplates | filter:{reportType : report.reportType}:true | orderBy:'name'" ng-model="report.templateGUID">
+                                                <option value="">Select a template...</option>
+                                            </select>
+                                        </div>
+                                        <div ng-show="report.hasTemplates==false">N/A</div>
+                                    </td>
+                                    <td>
+                                        <div ng-if="report.fee > 0" class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input name="report-fee" id="inputFee" ng-model="report.fee" type="number" min="0" max="99999999" step="1" size="4" class="form-control" value="{{report.fee}}">
+                                        </div>
+                                        <div ng-if="report.fee == 0 || !report.fee ">Not Available</div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-checked=report.showInProcurement ng-model="report.showInProcurement">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div ng-if="report.hasTemplates"><a href="" ng-click="createCompCtrl.showReportVendors(report.reportSettingsGUID,report.templateIndex)">Edit</a>
+                                            <ul ng-repeat="(vIndex,vendor) in report.vendors">
+                                                <li ng-repeat="(vuIndex,vendorUsers) in vendor.reportSettingsVendorUsers">{{vendorUsers.firstName}} {{vendorUsers.lastName}} ({{vendor.vendorName}})</li>
+                                            </ul>
+                                        </div>
+                                        <div ng-if="report.hasTemplates== false">N/A</div>
+                                        <div ng-if="report.vendors.length==0 && report.hasTemplates">(none selected)</div>
+                                        <!--<div ng-if="report.hasTemplates == false">N/A</div>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <hr>
+                <button class="btn btn-primary" ng-disabled="!createCompCtrl.reportSettings.length" ng-click="createCompCtrl.saveServiceGroupReports()">Save Service Groups & Reports</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Right panel end-->
+</div>

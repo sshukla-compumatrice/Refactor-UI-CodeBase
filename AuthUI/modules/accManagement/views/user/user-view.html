@@ -1,0 +1,197 @@
+<div class="border-top border-bottom">
+    <a class="btn btn-md btn-primary" href="#/accounts/company/office/user/edit?companyguid={{userCtrl.companyguid}}&officeguid={{userCtrl.officeguid}}&userguid={{userCtrl.userguid}}">Edit</a>
+    <a class="btn btn-md btn-primary" href="" entity-delete data-entityType="user" data-entityname="{{userCtrl.firstname}} {{userCtrl.lastname}}" data-companyguid="{{userCtrl.companyguid}}" data-officeguid="{{userCtrl.officeguid}}" data-userguid="{{userCtrl.userguid}}">Delete</a>
+    <!--<a class="btn btn-md btn-primary" href="#/accounts/impersonate?userguid={{userCtrl.userguid}}">Impersonate</a>-->
+</div>
+
+<script id="DeleteQualificationTemplate.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelQualificationFileDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Qualification File</h4>
+    </div>
+
+
+    <form name="myFormDeleteQualificationFileTemplate" novalidate>
+        <div class="modal-body">
+            <p>You are about to delete the Qualification file. Are you sure you want to delete it?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" role="button" ng-click="CancelQualificationFileDelete()">Cancel</button>
+            <button class="btn btn-danger" role="button" ng-click="deleteQualificationFile()">Delete</button>
+        </div>
+    </form>
+</script>
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">First Name:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.firstname"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Middle Initial:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.middlename"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Name:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.lastname"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Title:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.title"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Environmental Professional: (as defined by AAI Rule)? <a class="pointer" data-toggle="tooltip" data-placement="top" title="How does AAI define and Environmental Professional? Click to know more." ng-click="userCtrl.openHelpModal('helpEP.html');"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.IsEnvProfessional ? 'Yes' : 'No'"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Allow Administrators to sign for me: <a class="pointer" data-toggle="tooltip" data-placement="top" title="How can others use my signature? Click to know more." ng-click="userCtrl.openHelpModal('helpSignFor.html');"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.IsAllowAdmintoSignIn ? 'Yes' : 'No'"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Email:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.email"></p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Direct or Cell:</label>
+        <div class="col-sm-10">
+            <p class="form-control-static" ng-bind="userCtrl.cell"></p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Qualification File:</label>
+        <div class="col-sm-10">
+            <div ng-if="!userCtrl.qualificationsFileCoreFileUrl">
+                <p class="form-control-static"><em>Not Uploaded</em></p>
+            </div>
+            <div ng-if="userCtrl.qualificationsFileCoreFileUrl" class="form-control-static">Uploaded
+                <a class="btn btn-primary btn-sm" ng-href="{{userCtrl.qualificationsFileCoreFileUrl}}" target="_blank">View File</a>
+                <button class="btn btn-danger btn-sm" ng-click="OpenDeleteQualificationFile(userCtrl.qualificationsFileCoreFileGUID)" ng-if="!userCtrl.editNotAuthorized">Delete File</button>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="userCtrl.signatureFileCoreFileGUID" class="form-group">
+        <label class="col-sm-2 control-label">Signature Image:</label>
+        <div class="col-sm-3">
+            <p ng-if="!userCtrl.signatureFileCoreFileUrl" class="form-control-static"><em>Not Uploaded</em></p>
+            <img ng-if="userCtrl.signatureFileCoreFileUrl" class="img-responsive signature-img" ng-src="{{userCtrl.signatureFileCoreFileUrl}}">
+        </div>
+    </div>
+
+    <hr ng-if="!userCtrl.editNotAuthorized">
+
+    <div class="row" ng-if="!userCtrl.editNotAuthorized">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <h4>ADD QUALIFICATIONS</h4>
+            <div class="alert" ng-class="userCtrl.qualificationAlertClass" role="alert" ng-show="userCtrl.qualificationUserMessage">
+                <button type="button" class="close" aria-label="Close" ng-click="userCtrl.qualificationUserMessage = ''" ng-hide="userCtrl.hideControls.qualificationFileUpload">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span ng-bind-html="userCtrl.qualificationUserMessage"></span>
+            </div>
+            <div class="form-group" ng-if="!userCtrl.hideControls.qualificationFileUpload">
+                <div class="col-md-8 col-lg-8">
+                    <span class="fa fa-lg" ng-class="{'fa-check text-success' : userCtrl.qualificationsFileCoreFileUrl, 'fa-times text-danger' : !userCtrl.qualificationsFileCoreFileUrl}">&nbsp;</span>
+                    <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                        <input id="qualificationsFile" name="qualificationsFile" type="file" data-file-input="files" ng-model="userCtrl.qualificationfile" ngf-select ngf-change="userCtrl.checkFile($file,$invalidFiles,'qualification')" ngf-multiple="false" ngf-pattern="'.pdf'" ngf-max-total-size="'1MB'" ng-disabled="!userCtrl.qualificationFolderGuid">
+                    </span>
+                    <button type="button" class="btn btn-md btn-primary start" ng-click="userCtrl.uploadFile('qualification')" ng-disabled="!userCtrl.qualificationfile || !userCtrl.qualificationFolderGuid">
+                        <span class="glyphicon glyphicon-upload"></span> Upload
+                    </button>
+                    <span class="text-primary" ng-show="userCtrl.qualificationfile.name"><i class="fa fa-file-pdf-o"></i> {{userCtrl.qualificationfile.name}}</span>
+                </div>
+                <div class="col-md-4 col-lg-4" ng-show="userCtrl.qualificationsFileCoreFileUrl">
+                    <h5>Qualifications file has been uploaded. <a ng-href="{{userCtrl.qualificationsFileCoreFileUrl}}" target="_blank">View File.</a></h5>
+                </div>
+            </div>
+
+            <div class="form-group" ng-if="!userCtrl.hideControls.qualificationFileUpload">
+                <div class="col-md-12 col-lg-12">
+                    <div>Qualifications file must be a PDF file of less than 1 MB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-if="!userCtrl.editNotAuthorized">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <h4>ADD SIGNATURE IMAGE</h4>
+            <div class="alert" ng-class="userCtrl.signatureAlertClass" role="alert" ng-show="userCtrl.signatureUserMessage">
+                <button type="button" class="close" aria-label="Close" ng-click="userCtrl.signatureUserMessage = ''" ng-hide="userCtrl.hideControls.signatureFileUpload">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span ng-bind-html="userCtrl.signatureUserMessage"></span>
+            </div>
+            <div class="form-group" ng-if="!userCtrl.hideControls.signatureFileUpload">
+                <div class="col-md-8 col-lg-8">
+                    <span class="fa fa-lg" ng-class="{'fa-check text-success' : userCtrl.signatureFileCoreFileUrl, 'fa-times text-danger' : !userCtrl.signatureFileCoreFileUrl}">&nbsp;</span>
+                    <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                        <input id="signatureFile" name="signatureFile" type="file" data-file-input="files" ng-model="userCtrl.signaturefile" ngf-select ngf-change="userCtrl.checkFile($file,$invalidFiles,'signature')" ngf-multiple="false" accept="image/*" ngf-pattern="'.jpg,.jpeg,.JPG,.JPEG'" ngf-max-total-size="'1MB'" ng-disabled="!userCtrl.signatureFolderGuid">
+                    </span>
+                    <button type="button" class="btn btn-md btn-primary start" ng-click="userCtrl.uploadFile('signature')" ng-disabled="!userCtrl.signaturefile || !userCtrl.signatureFolderGuid">
+                        <span class="glyphicon glyphicon-upload"></span> Upload
+                    </button>
+                    <span class="text-primary" ng-show="userCtrl.signaturefile.name"><i class="fa fa-file-image-o"></i> {{userCtrl.signaturefile.name}}</span>
+                </div>
+                <div class="col-md-4 col-lg-4" ng-show="userCtrl.signatureFileCoreFileUrl">
+                    <h5>Signature image has been uploaded.</h5>
+                </div>
+            </div>
+            <div class="form-group" ng-if="!userCtrl.hideControls.signatureFileUpload">
+                <div class="col-md-12 col-lg-12">
+                    <div class="help-block">Signature image must be a JPEG image of less than 1 MB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <h4>Data Provider Accounts:</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 text-center">
+            <div class="text-center"><img src="images/edrLogo.gif">
+                <br><strong>Environmental Data Resources</strong></div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Account#:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static" ng-bind="userCtrl.edrAccountNumber"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Password:</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static">***********</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</form>

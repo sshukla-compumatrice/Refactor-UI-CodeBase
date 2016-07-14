@@ -1,0 +1,59 @@
+<script type="text/ng-template" id="sign-in-modal.html">
+ 	<form name="signInForm">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="authModalInst.closeModal()"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" ng-show="authModalInst.signIn">Sign In to {{authModalInst.appName}}</h4>
+			<h4 class="modal-title" ng-show="authModalInst.forgotPass || authModalInst.forgotPassSubmit">Reset Password For {{authModalInst.appName}}</h4>
+		</div>
+
+		<div class="modal-body">
+			<div ng-show="authModalInst.signIn">
+				
+				<div class="form-group" field-validation="Your Username">
+					<label class="help-block" for="signin-username">Username</label>
+					<input type="text" class="form-control" name="signin-username" ng-model="authModalInst.username" placeholder="Username" required>
+				</div>
+				<div id="signInPasswordField" class="form-group" field-validation="Your Password">
+					<label class="help-block" for="signin-password">Password</label>
+					<input type="password" class="form-control" name="signin-password" ng-model="authModalInst.password" placeholder="Password" required>
+				</div>
+				
+			</div>
+			<div ng-show="authModalInst.forgotPass">
+				
+				<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 form-group">
+					<p>Enter the email for your {{authModalInst.appName}} account below. Once verified, you will be sent an email with a link that you can use to reset your account password.</p>
+				</div>
+				<div class="form-group" field-validation="Email">
+					<label class="help-block" for="inputEmail1">Email</label>
+					<input type="email" id="inputEmail1" class="form-control validate-email" name="signin-forgotPassEmail" ng-model="authModalInst.passwordRequestEmail" placeholder="Email" required>
+				</div>
+
+
+			</div>
+			<div ng-show="authModalInst.forgotPassSubmit">
+				<div class="bottom-margin">
+					<p>Thanks! We've received your request to reset your password for the {{authModalInst.appName}} platform. Please check your email for a message from us, with a link to reset your password. If you do not receive it in 30 minutes, please contact client care at 1-800-352-0050 or support@edrnet.com.</p>
+				</div>
+
+			</div>
+		</div> 
+		<div class="modal-footer">
+			<div ng-show="authModalInst.signIn">
+
+				<button type="button" class="btn btn-primary pull-left" ng-click="authModalInst.setViewsState($event, true)">Forgot Password?</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="authModalInst.closeModal()">Cancel</button>
+				<button type="submit" class="btn btn-primary" ng-click="authModalInst.submitCredentials(signInForm)">Sign In</button>
+
+			</div>
+			<div ng-show="authModalInst.forgotPass">
+				<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="authModalInst.setViewsState($event, false)">Cancel</button>
+				<button type="button" class="btn btn-primary" ng-click="authModalInst.submitPasswordChange(signInForm)">Submit</button> 
+
+			</div>
+			<div ng-show="authModalInst.forgotPassSubmit">
+				<button type="button" class="btn btn-primary" ng-click="authModalInst.closeModal()">OK</button>
+			</div> 
+		</div> 
+		</form>
+</script>

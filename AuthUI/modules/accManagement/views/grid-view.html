@@ -1,0 +1,11 @@
+<div class="border-top">
+    <a ng-href="{{gridCtrl.linkToAdd}}" class="btn btn-md btn-primary" ng-if="!gridCtrl.isChildCompany">Add {{gridCtrl.entityType}}</a>
+    <span ng-show="gridCtrl.showUserSpreadsheet"> <a class="btn btn-md btn-primary pointer" ng-click="gridCtrl.uploadUsers()">Upload User Spreadsheet</a></span>
+    <span ng-if="gridCtrl.umbrellaCompanyGUID"><a class="btn btn-md btn-primary" href="#/accounts/umbrella?companyguid={{gridCtrl.umbrellaCompanyGUID}}">Umbrella</a></span>
+    <div class="table-responsive">
+        <table id="AccountMgmtDatatable" class="table table-hover table-bordered dt-responsive nowrap small">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>

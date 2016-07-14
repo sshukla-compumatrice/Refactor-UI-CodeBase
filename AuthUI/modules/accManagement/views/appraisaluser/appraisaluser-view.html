@@ -1,0 +1,812 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <div data-example-id="togglable-tabs">
+            <ul id="appraisalTabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active" ng-class="{active: AppraisalUserCtrl.isSelected('PersonalInfo') }"><a class="pointer" id="PersonalInfo-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true" ng-click="AppraisalUserCtrl.selectTab('PersonalInfo')">Personal Info</a></li>
+
+                <li role="presentation" ng-class="{active: AppraisalUserCtrl.isSelected('AppraisalLicenses') }"><a class="pointer" role="tab" id="AppraisalLicenses-tab" ng-click="AppraisalUserCtrl.selectTab('AppraisalLicenses');">Appraisal Licenses</a></li>
+
+                <li role="presentation" ng-class="{active: AppraisalUserCtrl.isSelected('PolicyForms') }"><a class="pointer" role="tab" id="PolicyForms-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" ng-click="AppraisalUserCtrl.selectTab('PolicyForms');AppraisalUserCtrl.getuserInsurance();AppraisalUserCtrl.getUserw9Forms()">Policy / Forms</a></li>
+
+                <li role="presentation" ng-class="{active: AppraisalUserCtrl.isSelected('CoverageArea') }"><a class="pointer" role="tab" id="CoverageArea-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" ng-click="AppraisalUserCtrl.selectTab('CoverageArea');AppraisalUserCtrl.getAllCoverageArea();">Coverage Area</a></li>
+
+                <li role="presentation" ng-class="{active: AppraisalUserCtrl.isSelected('AdditionalDocuments') }"><a class="pointer" role="tab" id="AdditionalDocuments-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false" ng-click="AppraisalUserCtrl.selectTab('AdditionalDocuments');AppraisalUserCtrl.getAllAdditionalDocuments();">Additional Documents</a></li>
+            </ul>
+
+            <div class="tab-content" ng-show="AppraisalUserCtrl.isSelected('PersonalInfo')">
+                <div role="tabpanel" ng-show="!AppraisalUserCtrl.editAppraisalPersonalInfo" id="PersonalInfo" aria-labelledby="home-tab">
+                    <h4>Personal Info</h4>
+                    <div class="bottom-margin">
+                        <a class="pointer btn btn-md btn-primary" ng-click="AppraisalUserCtrl.editAppraisal()"><i class="glyphicon glyphicon-pencil "></i> Edit</a>
+                        <a class="pointer btn btn-md btn-primary" ng-href="#/accounts/company/office/user/passwordchange?companyguid={{AppraisalUserCtrl.companyguid}}&officeguid={{AppraisalUserCtrl.officeguid}}&userguid={{AppraisalUserCtrl.AppraisalId}}"><i class="glyphicon glyphicon-ok"></i> Change password</a>
+                    </div>
+
+                    <div ng-hide="AppraisalUserCtrl.editAppraisalPersonalInfo">
+                        <form class="form-horizontal">
+                            
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">First Name:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Appfirstname}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Middle Initial:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Appmiddlename}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Last Name:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Applastname}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Title:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Apptitle}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Direct Phone:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.AppDirectPhone}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Cell Phone:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.AppCellPhone}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Email:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Appemail}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Office Email:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.AppofficeEmail}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Username:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">{{AppraisalUserCtrl.Appusername}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Signature Image:</label>
+                                <div class="col-sm-4">
+                                    <img class="img-responsive" src="{{AppraisalUserCtrl.AppSignatureImage}}">
+                                    <span class="btn btn-md btn-success fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                                        <input id="AppSignatureFile" name="AppSignatureFile" type="file" data-file-input="files" ng-model="AppraisalUserCtrl.Signaturefile" ngf-select ngf-change="AppraisalUserCtrl.checkFile($file,$invalidFiles,AppUserProfileForm)" ngf-multiple="false" accept="image/*" ngf-pattern="'.jpg,.jpeg,.JPG,.JPEG'" ngf-max-total-size="'1MB'">
+                                    </span>
+
+                                    <button type="button" class="btn btn-md btn-primary start" ng-click="AppraisalUserCtrl.uploadFile('signature')" ng-disabled="AppraisalUserCtrl.isSignatureUpload">
+                                        <span class="glyphicon glyphicon-upload"></span> Upload
+                                    </button>
+                                    <span class="text-success" ng-show="AppraisalUserCtrl.uploadSuccessMsgSignature" ng-init="AppraisalUserCtrl.uploadSuccessMsgSignature=false"><strong>File Uploaded Successfully</strong></span>
+                                    <span class="text-danger" ng-show="AppraisalUserCtrl.IncorrectFormat && !AppraisalUserCtrl.uploadSuccessMsg"><strong>{{AppraisalUserCtrl.IncorrectFormat}}</strong></span>
+                                    <div>Signature image must be a JPEG image of less than 1 MB</div>
+                                    <!--<div class="form-group">-->
+                                        
+                                            
+                                        
+                                    <!--</div>-->
+                                    <span class="text-primary"> {{file.name}}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for fee assignments?:
+                                    <a data-toggle="tooltip" data-placement="top" data-trigger="hover" title="By checking 'Yes', your profile will be shared with the EDR client base when they search for a qualified fee appraiser.">
+                                        <span class="glyphicon glyphicon-question-sign"></span>
+                                    </a>
+                                </label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static" ng-bind="(AppraisalUserCtrl.AppallowFeeAssignments) ? 'Yes' : 'No'"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for appraisal reviews?:
+                                    <a data-toggle="tooltip" data-placement="top" data-trigger="hover" title="By checking 'Yes', your profile will be shared with the EDR client base when they seek to outsource a review assignment.">
+                                        <span class="glyphicon glyphicon-question-sign"></span>
+                                    </a>
+                                </label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static" ng-bind="(AppraisalUserCtrl.AppallowAppraisalReviews) ? 'Yes' : 'No'"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for evaluations?:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static" ng-bind="(AppraisalUserCtrl.AppallowEvaluations) ? 'Yes' : 'No'"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you HUD/FHA Certified?:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static" ng-bind="(AppraisalUserCtrl.AppcertifiedHUDFHA) ? 'Yes' : 'No'"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you VA Certified?:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static" ng-bind="(AppraisalUserCtrl.AppcertifiedVA) ? 'Yes' : 'No'"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Designations:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">
+                                        <span>{{AppraisalUserCtrl.Appdesignations.join(', ')}}</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Expertise:</label>
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                    <p class="form-control-static">
+                                        <span>{{AppraisalUserCtrl.Appexpertise.join(', ')}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div role="tabpanel" ng-show="AppraisalUserCtrl.editAppraisalPersonalInfo" id="dvEditAppraisal" aria-labelledby="dropdown2-tab">
+                    <form class="form-horizontal" novalidate name="formEditAppraiserProfile">
+                        <button class="btn btn-default" ng-click="AppraisalUserCtrl.CancelAppraiserUpdate()">Cancel</button>
+                        <button class="btn btn-primary" ng-click="AppraisalUserCtrl.updateAppraiser()">Save Changes</button>
+
+                        <div class="form-group required" field-validation="First Name">
+                            <label for="firstName" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">First Name:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="firstName" name="AppraiserFirstName" ng-model="AppraisalUserCtrl.AppraiserFirstName" class="form-control" required>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="middleName" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Middle Initial:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="middleName" name="AppraiserMiddleName" ng-model="AppraisalUserCtrl.AppraiserMiddleName" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group required" field-validation="Last Name">
+                            <label for="lastName" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Last Name:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="lastName" ng-model="AppraisalUserCtrl.AppraiserLastName" name="AppraiserLastName" required class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Title:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="title" ng-model="AppraisalUserCtrl.AppraiserTitle" name="AppraiserTitle" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="directPhone" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Direct Phone:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="directPhone" ng-model="AppraisalUserCtrl.AppraiserDirectPhone" name="AppraiserDirectPhone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cellPhone" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Cell Phone:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" id="cellPhone" name="AppraiserCellPhone" ng-model="AppraisalUserCtrl.AppraiserCellPhone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group required" field-validation="Email">
+                            <label for="email" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Email:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="Email" required ng-model="AppraisalUserCtrl.AppraiserEmail" id="email" name="AppraiserEmail" class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="officeEmail" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Office Email:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="Email" ng-model="AppraisalUserCtrl.AppraiserOfficeEmail" id="officeEmail" name="AppraiserOfficeEmail" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group required" field-validation="Username">
+                            <label for="userName" class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Username:</label>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 ">
+                                <input type="text" ng-model="AppraisalUserCtrl.AppraiserUserName" id="userName" name="AppraiserUserName" class="form-control" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for fee assignments?:
+                                <a data-toggle="tooltip" data-placement="top" data-trigger="hover" title="By checking 'Yes', your profile will be shared with the EDR client base when they search for a qualified fee appraiser.">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                </a>
+                            </label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="AppraisalUserCtrl.AppraiserfeeAssignments" ng-value="true" name="AppraiserfeeAssignments">Yes</label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="AppraisalUserCtrl.AppraiserfeeAssignments" ng-value="false" name="AppraiserfeeAssignments">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for appraisal reviews?:
+                                <a data-toggle="tooltip" data-placement="top" data-trigger="hover" title="By checking 'Yes', your profile will be shared with the EDR client base when they seek to outsource a review assignment.">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                </a>
+                            </label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="true" ng-model="AppraisalUserCtrl.isAppraiserReview" name="isAppraiserReview">Yes</label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="false" ng-model="AppraisalUserCtrl.isAppraiserReview" name="isAppraiserReview">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you available for evaluations?</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="true" ng-model="AppraisalUserCtrl.isAppraiserEvaluation" name="isAppraiserEvaluation">Yes</label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="false" ng-model="AppraisalUserCtrl.isAppraiserEvaluation" name="isAppraiserEvaluation">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you HUD/FHA Certified?</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="true" ng-model="AppraisalUserCtrl.isAppraiserHUDFHACertified" name="isAppraiserHUDFHACertified">Yes</label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="false" ng-model="AppraisalUserCtrl.isAppraiserHUDFHACertified" name="isAppraiserHUDFHACertified">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Are you VA Certified?</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="true" ng-model="AppraisalUserCtrl.isAppraiserVACertified" name="isAppraiserVACertified">Yes</label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-value="false" ng-model="AppraisalUserCtrl.isAppraiserVACertified" name="isAppraiserVACertified">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-show="AppraisalUserCtrl.AppraisalDesignation!=null">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Designations:</label>
+                            <div class=" col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <button class="btn btn-xs btn-default" ng-click="AppraisalUserCtrl.selectAll('Designation')">Check All</button>
+                                <div class="row">
+                                    <span ng-repeat="appdesignation in AppraisalUserCtrl.AppraisalDesignation">
+                                        <div class="col-sm-2 col-lg-2">
+                                            <div class="checkbox">
+                                                <label for="{{appdesignation.designation}}">
+                                                    <input type="checkbox" id="{{appdesignation.designation}}" name="{{appdesignation.designation}}" ng-model="AppraisalUserCtrl.designationselected[appdesignation.designation]">{{appdesignation.designation}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="top-margin">
+                                    <div class="form-group">
+                                        <label for="others" class="col-sm-1">Others:</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" ng-model="AppraisalUserCtrl.AlternateDesignations" class="form-control" id="others">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 col-lg-2 col-xs-2 control-label">Expertise:</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
+                                <p><strong>Residential (Check all that apply)</strong></p>
+                                <button class="btn btn-xs btn-default" ng-click="AppraisalUserCtrl.selectAll('Residential')">Check All</button>
+                                <div class="row">
+                                    <span ng-repeat="residential in AppraisalUserCtrl.AppraisalResidential">
+                                        <div class="col-sm-5 col-lg-5">
+                                            <div class="checkbox">
+                                                <label for="{{residential.expertise}}">
+                                                    <input type="checkbox" ng-model="AppraisalUserCtrl.residentialselected[residential.expertise]" id="{{residential.expertise}}" name="{{residential.expertise}}">{{residential.expertise}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+
+                                <p class="top-margin"><strong>Commercial (Check all that apply)</strong></p>
+                                <button ng-click="AppraisalUserCtrl.selectAll('Commercial')" class="btn btn-xs btn-default">Check All</button>
+                                <div class="row">
+                                    <span ng-repeat="commercial in AppraisalUserCtrl.AppraisalCommercial">
+                                        <div class="col-sm-5 col-lg-5">
+                                            <div class="checkbox">
+                                                <label for="{{commercial.expertise}}">
+                                                    <input type="checkbox" ng-model="AppraisalUserCtrl.commericialselected[commercial.expertise]" id="{{commercial.expertise}}" name="{{commercial.expertise}}">{{commercial.expertise}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button ng-click="AppraisalUserCtrl.CancelAppraiserUpdate()" class="btn btn-default">Cancel</button>
+                                <button class="btn btn-primary" ng-click="AppraisalUserCtrl.updateAppraiser()">Save Changes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--<div ng-show="AppraisalUserCtrl.isSelected('AppraisalLicenses')" ng-include src="'modules/accManagement/views/modals/delete-confirmation-modal.html'"></div>-->
+            <div ng-show="AppraisalUserCtrl.isSelected('AppraisalLicenses')">
+                <div ng-show="AppraisalUserCtrl.UpdatelicenseStatus" ng-init="AppraisalUserCtrl.UpdatelicenseStatus=false">
+                    <div class="alert alert-success">{{AppraisalUserCtrl.UpdatelicenseStatusMessage}}</div>
+                </div>
+
+                <div ng-show="AppraisalUserCtrl.DeletelicenseStatus">
+                    <div class="alert alert-success">License has been deleted successfully.</div>
+                </div>
+
+                <div ng-show="AppraisalUserCtrl.uploadLicenseSuccessMsg">
+                    <div class="alert alert-success">License File Uploaded Successfully</div>
+                </div>
+                <div ng-show="AppraisalUserCtrl.IncorrectLicenseFormat && !AppraisalUserCtrl.uploadLicenseSuccessMsg">
+                    <div class="alert alert-danger">{{AppraisalUserCtrl.IncorrectLicenseFormat}}</div>
+                </div>
+
+                <div role="tabpanel" id="AppraisalLicenses" aria-labelledby="profile-tab">
+                    <h4>Appraisal Licenses</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-condensed table-striped">
+                            <thead>
+                                <tr>
+                                    <th>License State </th>
+                                    <th>License Number</th>
+                                    <th>Expiration Date</th>
+                                    <th>License Type</th>
+                                    <th>Status</th>
+                                    <th>Appraisal License </th>
+                                    <th>Verified</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-if="AppraisalUserCtrl.AppraisalLicenseInfo" ng-repeat="AppLicense in AppraisalUserCtrl.AppraisalLicenseInfo" ng-include="AppraisalUserCtrl.getTemplate(AppLicense)">
+                                </tr>
+                                <tr ng-if="!AppraisalUserCtrl.AppraisalLicenseInfo.length">
+                                    <td colspan="8">No license infomation has been added. Please add your license(s) infomation below.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <script type="text/ng-template" id="displayLicense">
+                        <td>
+                            <em ng-if="!AppLicense.isVerified" class="text-danger">{{AppLicense.licenseState}}</em>
+                            <span ng-if="AppLicense.isVerified">{{AppLicense.licenseState}}</span>
+                        </td>
+                        <td>
+                            <em ng-if="!AppLicense.isVerified" class="text-danger">{{AppLicense.licenseNumber}}</em>
+                            <span ng-if="AppLicense.isVerified">{{AppLicense.licenseNumber}}</span>
+                        </td>
+                        <td>
+                            <em ng-if="!AppLicense.isVerified" class="text-danger">{{AppLicense.expirationDate}}</em>
+                            <span ng-if="AppLicense.isVerified">{{AppLicense.expirationDate}}</span>
+                        </td>
+                        <td>
+                            <em ng-if="!AppLicense.isVerified" class="text-danger">{{AppLicense.licenseType}}</em>
+                            <span ng-if="AppLicense.isVerified">{{AppLicense.licenseType}}</span>
+                        </td>
+                        <td>
+                            <em ng-if="!AppLicense.isVerified" class="text-danger">{{AppLicense.status}}</em>
+                            <span ng-if="AppLicense.isVerified">{{AppLicense.status}}</span>
+                        </td>
+                        <td>
+                            <span ng-if="AppLicense.licenseFilePath">
+                                <a href="{{AppLicense.licenseFilePath}}" target="_blank">
+                                    <em ng-if="!AppLicense.isVerified" class="text-danger">Download File</em>
+                                    <span ng-if="AppLicense.isVerified">Download File</span>
+                            </a>
+                            </span>
+                            <span ng-if="!AppLicense.licenseFilePath">
+                                <em ng-if="!AppLicense.isVerified" class="text-danger">(Not uploaded)</em>
+                                <span ng-if="AppLicense.isVerified">(Not uploaded)</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span ng-if="AppLicense.isVerified">
+                                <em ng-if="!AppLicense.isVerified" class="text-danger">Yes</em>
+                                <span ng-if="AppLicense.isVerified">Yes</span>
+                            </span>
+                            <span ng-if="!AppLicense.isVerified && AppLicense.isUsersOwnAccount">
+                                <a class="pointer" ng-click="AppraisalUserCtrl.verifyLicense(AppLicense.userGUID,AppLicense.userLicenseGUID)">
+                                    <em ng-if="!AppLicense.isVerified" class="text-danger">Verify</em>
+                                    <span ng-if="AppLicense.isVerified">Verify</span>
+                            </a>
+                            </span>
+                            <span ng-if="!AppLicense.isVerified">
+                                <em ng-if="!AppLicense.isVerified" class="text-danger">No</em>
+                                <span ng-if="AppLicense.isVerified">No</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="btn btn-primary btn-xs fileinput-button" data-toggle="tooltip" data-placement="top" title="Upload a file for the {{AppLicense.licenseState}} license"><span class="glyphicon glyphicon-upload"></span>
+                                <input id="AppLicenseFile" type="file" data-file-input="files" ng-model="AppraisalUserCtrl.AppLicensefile" ngf-select="AppraisalUserCtrl.uploadFilesOneSelect('license',$file, $invalidFiles);" ngf-multiple="false" accept="'.pdf'" ngf-pattern="'.pdf'">
+                            </span>
+                            <button class="btn btn-primary btn-xs" ng-click="AppraisalUserCtrl.editAppraiserLicense(AppLicense);" data-toggle="tooltip" data-placement="top" title="Edit the {{AppLicense.licenseState}} license"> <i class="glyphicon glyphicon-pencil"></i></button>
+                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete the {{AppLicense.licenseState}} license" ng-click="openDeleteLicense(AppLicense);"><i class="glyphicon glyphicon-trash"></i></button>
+                        </td>
+                    </script>
+
+                    <script type="text/ng-template" id="editLicense">
+                        <td colspan="8">
+                            <form class="form-inline" name="formEditAppraiserLicense" novalidate>
+                                <div class="form-group required" field-validation="License State">
+                                    <label class="control-label" for="editLicenseState">License State:</label>
+                                    <select id="editLicenseState" class="form-control" id="EditApplicenseState" name="EditApplicenseState" ng-model="AppraisalUserCtrl.editAppraiserSelected.licenseState" required>
+                                        <option ng-repeat="option in AppraisalUserCtrl.states | orderBy:['stateName']" ng-value="{{option.stateCode}}">{{option.stateName}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group required">
+                                    <label class="control-label" for="editLicenseNumber">License Number:</label>
+                                    <span field-validation="License Number">
+                                    <input id="editLicenseNumber" type="text" class="form-control" ng-model="AppraisalUserCtrl.editAppraiserSelected.licenseNumber" id="EditApplicenseNumber" name="EditApplicenseNumber" required>
+                                    </span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" ng-click="AppraisalUserCtrl.verifyAndSaveLicense('update', AppraisalUserCtrl.editAppraiserSelected.userLicenseGUID, formEditAppraiserLicense)">Save and Verify</button>
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="AppraisalUserCtrl.editAppraiserLicense({});">Cancel</button>
+                            </form>
+                        </td>
+                    </script>
+
+                    <button type="submit" class="btn btn-primary" ng-show="!AppraisalUserCtrl.DisplayAddLicense" ng-click="AppraisalUserCtrl.DisplayAddLicense=true">Add License</button>
+                    <div ng-init="AppraisalUserCtrl.DisplayAddLicense=false" ng-show="AppraisalUserCtrl.DisplayAddLicense">
+                        <form class="form-horizontal" name="AddLicenseForm" novalidate>
+                            <div class="form-group required">
+                                <label for="licenseState" class="col-sm-2 control-label">License State:</label>
+                                <div class="col-sm-3" field-validation="License State">
+                                    <select class="form-control" id="licenseState" name="licenseState" ng-model="AppraisalUserCtrl.selectStateUpdateLicense" required>
+                                        <option ng-repeat="option in AppraisalUserCtrl.states | orderBy:['stateName']" value="{{option.stateCode}}">{{option.stateName}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="licenseNumber" class="col-sm-2 control-label">License Number:</label>
+                                <div class="col-sm-3" field-validation="License Number">
+                                    <input type="text" class="form-control" ng-model="AppraisalUserCtrl.AddlicenseNumber" id="licenseNumber" name="licenseNumber" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="reset" class="btn btn-md btn-default" ng-click="AppraisalUserCtrl.cancelAddLicense();">Cancel</button>
+                                    <button type="submit" class="btn btn-md btn-primary" ng-click="AppraisalUserCtrl.verifyAndSaveLicense('add','', AddLicenseForm);">Save and Verify</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script id="DeleteLicenseTemplate.html" type="text/ng-template">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-click="CancelLicenseDelete()" aria- label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Delete License </h4>
+                    </div>
+                    <form name="myFormAddTemplate" novalidate>
+                        <div class="modal-body">This will delete the License. Are you sure you want to continue?</div>
+                        <div class="modal-footer">
+                            <a class="btn btn-default" role="button" ng-click="CancelLicenseDelete();">Cancel</a>
+                            <a class="btn btn-danger" role="button" ng-click="deleteLicense();">Delete</a>
+                        </div>
+                    </form>
+                </script>
+            </div>
+
+            <div ng-show="AppraisalUserCtrl.isSelected('PolicyForms')">
+                <div ng-init="AppraisalUserCtrl.InsuranceUpdateSuccessMsg = false" ng-show="AppraisalUserCtrl.InsuranceUpdateSuccessMsg">
+                    <div class="alert alert-success">{{AppraisalUserCtrl.InsuranceUpdateSuccessMsgText}}</div>
+                </div>
+
+                <div ng-init="AppraisalUserCtrl.DeleteInsuranceStatus = false" ng-show="AppraisalUserCtrl.DeleteInsuranceStatus">
+                    <div class="alert alert-success">The E&amp;O insurance file has been deleted from this profile.</div>
+                </div>
+
+                <div ng-init="AppraisalUserCtrl.UploadfileInsuranceStatus = false" ng-show="AppraisalUserCtrl.UploadfileInsuranceStatus">
+                    <div class="alert alert-success">Insurance file uploaded Successfully</div>
+                </div>
+
+                <script id="DeleteInsuranceTemplate.html" type="text/ng-template">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-click="CancelInsuranceDelete()" aria- label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Delete Insurance</h4>
+                    </div>
+                    <form name="myFormAddTemplate" novalidate>
+                        <div class="modal-body">
+                            <p><strong>This will delete the Insurance File. Are you sure you want to continue?</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-default" role="button" ng-click="CancelInsuranceDelete()">No</a>
+                            <a class="btn btn-danger" role="button" ng-click="deleteInsurance()">Yes</a>
+                        </div>
+                    </form>
+                </script>
+
+                <div ng-init="AppraisalUserCtrl.deletew9formStatus = false" ng-show="AppraisalUserCtrl.deletew9formStatus">
+                    <div class="alert alert-success">W9 form deleted Successfully</div>
+                </div>
+
+                <div role="tabpanel" id="PolicyForms" aria-labelledby="profile-tab">
+                    <h4>E&amp;O Insurance Policy</h4>
+                    <form class="form-horizontal" ng-show="AppraisalUserCtrl.viewInsurancePolicy" ng-init="AppraisalUserCtrl.viewInsurancePolicy=true">
+                        <div class="bottom-margin">
+                            <a role="tab" class="pointer" ng-click="AppraisalUserCtrl.viewInsurancePolicy=false;AppraisalUserCtrl.editInsurance()" data-toggle="tab" aria-controls="home" aria-expanded="true"><i class="glyphicon glyphicon-pencil "></i> Edit</a>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Carrier:</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static"> {{AppraisalUserCtrl.InsuranceDetail.carrier}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Amount:</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static"> {{AppraisalUserCtrl.InsuranceDetail.amount}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Expiration Date:</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static"> {{AppraisalUserCtrl.InsuranceDetail.expirationDate }}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Insurance Certificate:</label>
+                            <div class="col-sm-10">
+                                <span ng-show="AppraisalUserCtrl.InsuranceDetail.IsInsuranceFile">
+                                    <a target="_blank" href="{{AppraisalUserCtrl.InsuranceDetail.insuranceDocumentFilePath}}" class="btn btn-md btn-primary">Download E&amp;O </a>
+                                </span>
+                                <span ng-show="!AppraisalUserCtrl.InsuranceDetail.IsInsuranceFile" ng-bind=" AppraisalUserCtrl.InsuranceDetail.insuranceDocumentFilePath"> </span>
+                                <button type="button" ng-click="openDeleteInsurance();" class="btn btn-md btn-danger">Delete E&amp;O Insurance</button>
+                                <span class="btn btn-md btn-primary fileinput-button">
+                                    Upload E&amp;O Insurance
+                                    <input id="AppInsuranceFile" type="file" data-file-input="files" ng-model="AppraisalUserCtrl.AppInsuranceFile" ngf-select="AppraisalUserCtrl.uploadFilesOneSelect('insurance',$file, $invalidFiles)" ngf-multiple="false">
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Forms</h4>
+                        <div class="alert alert-info" role="alert">Please upload your W9 Form. You may retrieve a copy from <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf"><strong>IRS.gov</strong></a></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">W9 Form:</label>
+                            <div class="col-sm-10">
+                                <span ng-show="!AppraisalUserCtrl.ShowW9Download">Not Uploaded</span>
+                                <a class="btn btn-md btn-default" ng-show="AppraisalUserCtrl.ShowW9Download" href="{{AppraisalUserCtrl.W9DownloadUrl}}" target="_blank">Download File</a>
+                                <button ng-show="AppraisalUserCtrl.ShowW9Download" class="btn btn-md btn-danger fileinput-button" ng-click="AppraisalUserCtrl.DeleteFile('w9')">Delete W-9 File</button>
+                                <span class="btn btn-md btn-primary fileinput-button">
+                                    Upload W-9 File
+                                    <input id="AppWFile" type="file" data-file-input="files" ng-model="AppraisalUserCtrl.AppWFile" ngf-select="AppraisalUserCtrl.uploadFilesOneSelect('w-9',$file, $invalidFiles)" ngf-multiple="false">
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div ng-show="!AppraisalUserCtrl.viewInsurancePolicy">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="appraisaleditcarrier" class="col-sm-2 control-label">Carrier:</label>
+                                <div class="col-sm-3">
+                                    <input id="appraisaleditcarrier" ng-model="AppraisalUserCtrl.InsuranceDetailUpdate.carrier" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="appraisaleditamount" class="col-sm-2 control-label">Amount:</label>
+                                <div class="col-sm-3">
+                                    <input id="appraisaleditamount" ng-model="AppraisalUserCtrl.InsuranceDetailUpdate.amount" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="appraisaleditexpirationdate" class="col-sm-2 control-label">Expiration Date:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <!--<input type="text" name="appraisaleditexpirationdate" id="appraisaleditexpirationdate" class="form-control" datepicker-popup="{{AppraisalUserCtrl.format}}" ng-model="AppraisalUserCtrl.InsuranceDetail.expirationDate" is-open="AppraisalUserCtrl.datePicker.opened" datepicker-options="AppraisalUserCtrl.dateOptions" ng-required="true" close-text="Close" />
+                                        <span class="input-group-addon pointer" ng-click="AppraisalUserCtrl.open($event)"><i class="glyphicon glyphicon-calendar"></i></span>-->
+                                        <div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="new Date();" data-date-format="D M d yyyy">
+                                            <input id="effectiveDate" name="effectiveDate" type="text" class="form-control" ng-model="AppraisalUserCtrl.InsuranceDetailUpdate.expirationDate" required>
+                                            <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-md btn-default" ng-click="AppraisalUserCtrl.viewInsurancePolicy=true;AppraisalUserCtrl.resetInsurance();">Cancel</button>
+                                    <button type="submit" class="btn btn-md btn-primary" ng-click="AppraisalUserCtrl.updateInsurance()">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="AppraisalUserCtrl.isSelected('CoverageArea')">
+                <script id="DeleteCoverageAreaTemplate.html" type="text/ng-template">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-click="CancelCoverageAreaDelete()" aria- label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Coverage Area</h4>
+                    </div>
+                    <div class="modal-body ">Are you sure you want to remove this coverage listing?</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" ng-click="CancelCoverageAreaDelete();">Cancel</button>
+                        <button class="btn btn-danger" ng-click="deleteCoverageArea();">Delete</button>
+                    </div>
+                </script>
+
+                <div role="tabpanel" id="CoverageArea" aria-labelledby="dropdown1-tab">
+                    <h4>Coverage Area</h4>
+                    <p>Please indicate your coverage area by state and county.</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>State</th>
+                                            <th>County</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-if="AppraisalUserCtrl.AllCoverageArea.length" ng-repeat="CoverageArea in AppraisalUserCtrl.AllCoverageArea | orderBy:['stateCode', 'countyCode']">
+                                            <td>{{CoverageArea.state}}</td>
+                                            <td>{{CoverageArea.county}}</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-danger" ng-click="openDeleteCoverageArea(CoverageArea.userCoverageAreaGUID, CoverageArea.stateCode)" data-toggle="tooltip" data-placement="top" title="Delete this coverage listing"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr ng-if="!AppraisalUserCtrl.AllCoverageArea.length">
+                                            <td colspan="3" class="text-center">No coverage has been added. Please add your coverage area.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <button ng-init="AppraisalUserCtrl.AddToCoverageArea = false" ng-show="!AppraisalUserCtrl.AddToCoverageArea" class="btn btn-md btn-primary" type="button" ng-click="AppraisalUserCtrl.AddToCoverageArea = true">Add to Coverage</button>
+
+                            <div ng-show="AppraisalUserCtrl.AddToCoverageArea">
+                                <form class="form-horizontal" novalidate Name="formAppraiserAddCoverageArea">
+                                    <div class="form-group">
+                                        <label for="state" class="col-sm-2 control-label">State:</label>
+                                        <div class="col-sm-6" field-validation="State">
+                                            <select class="form-control" ng-change="AppraisalUserCtrl.getCountiesByState();" id="state" name="EditApplicenseState" ng-model="AppraisalUserCtrl.coverageAreaState" required>
+                                                <option value="">Select a state...</option>
+                                                <option value="ALL" ng-disabled="AppraisalUserCtrl.isNationwide">All States - Nationwide Coverage</option>
+                                                <option ng-repeat="option in AppraisalUserCtrl.states | orderBy:['stateName']" value="{{option.stateCode}}">{{option.stateName}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="coverageAreaCounties" class="col-sm-2 control-label">County:</label>
+                                        <div class="col-sm-6">
+                                            <div class="selectCounty">
+                                                <select class="form-control" id="coverageAreaCounties" chosen="AppraisalUserCtrl.CountiesByState" ng-model="AppraisalUserCtrl.coverageAreaCountiesSelected" multiple name="coverageAreaCounties" ng-options="county.countyName for county in AppraisalUserCtrl.CountiesByState | orderBy:['countyName'] track by county.countyName" data-placeholder="Select counties..." disabled="disabled" ng-required="AppraisalUserCtrl.coverageAreaState != '' && AppraisalUserCtrl.coverageAreaState != 'ALL'" ng-change="AppraisalUserCtrl.countyOnSelect();">
+                                                </select>
+                                                <div class="text-danger" ng-show="AppraisalUserCtrl.invalidCounty">Please pick a county to add in coverage area.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="reset" class="btn btn-md btn-default" ng-click="AppraisalUserCtrl.cancelAddCoverageArea();">Cancel</button>
+                                            <button type="submit" class="btn btn-md btn-primary" ng-click="AppraisalUserCtrl.AddCoverageArea();">ADD</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="AppraisalUserCtrl.isSelected('AdditionalDocuments')">
+                <div ng-show="AppraisalUserCtrl.DeleteAddDocStatus">
+                    <div class="alert alert-success">Additional document has been deleted successfully.</div>
+                </div>
+
+                <div ng-show="AppraisalUserCtrl.UpdateAddDocStatus">
+                    <div class="alert alert-success">Additional document has been updated successfully.</div>
+                </div>
+
+                <script id="DeleteAddDocTemplate.html" type="text/ng-template">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-click="CancelAdditionalDocumentDelete()" aria- label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Additional Document </h4>
+                    </div>
+
+                    <form name="myFormAddTemplate" novalidate>
+                        <div class="modal-body">This will delete the Document {{userFormAddDocDeleteFileName}}. Are you sure you want to continue?
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-default" role="button" ng-click="CancelAdditionalDocumentDelete()">Cancel</a>
+                            <a class="btn btn-danger" role="button" ng-click="deleteAdditionalDocument()">Delete</a>
+                        </div>
+                    </form>
+                </script>
+
+                <div role="tabpanel" id="AdditionalDocuments" aria-labelledby="dropdown2-tab">
+                    <form>
+                        <h4>Additional Documents</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="AddDoc in AppraisalUserCtrl.AdditionDocuments" ng-include="AppraisalUserCtrl.getAddDocTemplate(AddDoc)">
+                                        <script type="text/ng-template" id="display">
+                                            <td><a ng-href="{{AddDoc.filePath}}" class="text-danger" target="_blank">{{AddDoc.AddDocFileName}}</a>
+                                            </td>
+                                            <td>{{AddDoc.AddDocFileDescription}}</td>
+                                            <td>
+                                                <button class="btn btn-primary btn-xs" ng-click="AppraisalUserCtrl.editAditionalDocument(AddDoc)" data-toggle="tooltip" data-placement="top" title="Edit the document description"> <i class="glyphicon glyphicon-pencil"></i></button>
+
+                                                <button class="btn btn-danger btn-xs" ng-click="openDeleteAddDoc(AddDoc.userFormGUID,AddDoc.AddDocFileName)" data-toggle="tooltip" data-placement="top" title="Delete this document"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </td>
+                                        </script>
+
+                                        <script type="text/ng-template" id="edit">
+                                            <td><a ng-href="{{AddDoc.filePath}}" class="text-danger" target="_blank">{{AddDoc.AddDocFileName}}</a>
+                                            </td>
+                                            <td>
+                                                <textarea type="text" class="form-control" ng-model="AppraisalUserCtrl.SelectedAdditionDoc.AddDocFileDescription"></textarea>
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-primary" ng-click="AppraisalUserCtrl.UpdateAdditionalDocument();">Save</button>
+                                                <button type="submit" class="btn btn-default" ng-click="AppraisalUserCtrl.editAditionalDocument({});">Cancel</button>
+                                            </td>
+                                        </script>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <span class="btn btn-md btn-primary fileinput-button">
+                                Upload Additional Document
+                                <input id="AppAdditionalDocuemntFile" type="file" data-file-input="files" ng-model="AppraisalUserCtrl.AppAdditionalDocuemntFile" ngf-select="AppraisalUserCtrl.uploadFilesOneSelect('AdditionalDocument',$file, $invalidFiles)" ngf-multiple="false">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

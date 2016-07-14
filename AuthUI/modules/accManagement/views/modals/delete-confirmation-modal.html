@@ -1,0 +1,15 @@
+<script id="delete-confirmation-modal.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="deleteModalInst.closeModal()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete {{deleteModalInst.enityType}}</h4>
+    </div>
+
+    <form name="myFormDeleteTemplate" novalidate>
+        <div class="modal-body ">You are about to delete the <strong>{{deleteModalInst.enityName}}</strong> {{deleteModalInst.enityType}}. Are you sure you want to delete it?</div>
+
+        <div class="modal-footer">
+            <button class="btn btn-md btn-default" role="button" ng-click="deleteModalInst.closeModal()">Cancel</button>
+            <button class="btn btn-md btn-danger" role="button" ng-click="deleteModalInst.deleteEntityConfirm()">Delete</button>
+        </div>
+    </form>
+</script>

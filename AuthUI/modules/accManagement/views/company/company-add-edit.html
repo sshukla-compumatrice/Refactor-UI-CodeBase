@@ -1,0 +1,125 @@
+<h4 ng-show="!createCompCtrl.isEdit" class="text-uppercase">ADDING NEW COMPANY <span ng-show="parentEntityName.length">TO {{parentEntityName}}</span></h4>
+<form class="form-horizontal border-top" name="companyForm" novalidate>
+    <div class="form-group required">
+        <label for="companyName" class="col-sm-2 control-label">Company Name:</label>
+        <div class="col-sm-3" field-validation="Company Name">
+            <input type="text" class="form-control" name="company-name" id="companyName" ng-model="createCompCtrl.name" required>
+        </div>
+
+    </div>
+
+    <div class="form-group required">
+        <label for="companytype" class="col-sm-2 control-label">Company Type:</label>
+        <div class="col-sm-3" field-validation="Company Type">
+            <select id="companytype" name="company-type" multiple class="form-control" chosen="createCompCtrl.companyTypes" ng-options="companyType as companyType.companyType for companyType in createCompCtrl.companyTypes" ng-model="createCompCtrl.compType" required>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="form-group required">
+        <label for="officename" class="col-sm-2 control-label">Company Components:</label>
+        <div class="col-sm-3" field-validation="Company Component">
+            <select id="officename" name="comp-components" class="form-control" ng-options="componentType as componentType.name for componentType in createCompCtrl.appComponentTypes | orderBy:'name' track by componentType.name" ng-model="createCompCtrl.applicationComponentType" ng-change="createCompCtrl.setApplicationComponentType($event)" required>
+                <option value="">Select company component...</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="createCompCtrl.showAvailableComponents">
+        <label class="col-sm-2 control-label">Available Components:</label>
+        <div class="col-sm-7">
+            <div class="checkbox col-sm-4" ng-if="createCompCtrl.applicationComponentType != undefined" ng-repeat="availComponents in createCompCtrl.appComponentItems">
+                <label>
+                    <input type="checkbox" ng-click="createCompCtrl.checkedAvailApplicationComponentTypeItem($event,availComponents)" ng-checked=availComponents.isChecked><span ng-bind-html="availComponents.name"></span>
+                </label>
+            </div>
+            <span ng-if="!createCompCtrl.appComponentItems.length" class="col-sm-10 form-control-static">No specific components available for this.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="webaddress" class="col-sm-2 control-label">Web Address:</label>
+        <div class="col-sm-3">
+            <input id="webaddress" type="text" class="form-control" ng-model="createCompCtrl.webAddress">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="slogan" class="col-sm-2 control-label">Slogan:</label>
+        <div class="col-sm-3">
+            <textarea rows="4" id="slogan" class="form-control" ng-model="createCompCtrl.slogan"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="createCompCtrl.showCompanyHeadqrts">
+        <label for="companyHeadquarters" class="col-sm-2 control-label">Company Headquarters:</label>
+        <div class="col-sm-2">
+            <select id="companyHeadquarters" class="form-control" ng-model="createCompCtrl.compHeadqtr" ng-options="office as office.officeName for office in createCompCtrl.compOffices">
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Company Certifications:</label>
+        <div class="col-sm-4">
+            <div class="checkbox" ng-repeat="cert in createCompCtrl.certTypes">
+                <label>
+                    <input value="{{cert.guid}}" ng-model="createCompCtrl.selectedCompCertificates[cert.guid]" ng-click="createCompCtrl.checkedcert($event,cert.guid)" type="checkbox">{{cert.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="edrdatavendorid" class="col-sm-2 control-label">EDR Data Vendor ID:</label>
+        <div class="col-sm-3">
+            <input id="edrdatavendorid" type="text" class="form-control" ng-model="createCompCtrl.edrDataVendorId">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Bill Lender:</label>
+        <div class="col-sm-3">
+            <label class="radio-inline">
+                <input type="radio" ng-model="createCompCtrl.billLender" ng-value="true" name="AppraiserfeeAssignments">Yes</label>
+
+            <label class="radio-inline">
+                <input type="radio" ng-model="createCompCtrl.billLender" ng-value="false" name="AppraiserfeeAssignments">No</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="edrdatavendorid" class="col-sm-2 control-label">Logo:</label>
+        <div class="col-sm-3 form-control-static">
+            <img ng-if="createCompCtrl.existingCompanyData.logoFilePathURL" ng-src="{{createCompCtrl.existingCompanyData.logoFilePathURL}}">
+            <em ng-if="!createCompCtrl.existingCompanyData.logoFilePathURL">Logo is not uploaded for this company.</em>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+            <h5 class="border-bottom">UPLOAD LOGO</h5>
+            <div class="alert alert-info" role="alert">Your logo must be less than 60KB and it can be any image type (JPG, PNG, etc). Note that large sized images will increase the size of your deliverables. <a href="http://wiki.parcelplatform.com/Home/esa/module-2---administration-set-up/07---update-a-company-logo" target="_blank">Need more help?</a></div>
+            <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                <input id="companyLogoUpload" type="file" ngf-select ng-click="createCompCtrl.files = null" ngf-change="createCompCtrl.checkFile($file,$invalidFiles,companyForm, $event)" ng-model="createCompCtrl.logoFile" name="file" accept="image/*" ngf-multiple="false" ngf-pattern="'image/*'" ngf-max-total-size="'60KB'">
+            </span>
+            <span class="text-primary" ng-show="createCompCtrl.logoFile.name"><i class="fa fa-file-image-o"> {{createCompCtrl.logoFile.name}}</i></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12 col-lg-12">
+            <div ng-show="createCompCtrl.UploadErrorMsg">
+                <div class="alert alert-danger" ng-bind-html="createCompCtrl.UploadErrorMsg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-12 text-center">
+            <button type="submit" class="btn btn-default" ng-click="createCompCtrl.cancelCompCreate()">CANCEL</button>
+            <button type="submit" class="btn btn-primary" ng-click="createCompCtrl.saveCompanyData(companyForm)">{{createCompCtrl.submitButtonText}}</button>
+        </div>
+    </div>
+</form>

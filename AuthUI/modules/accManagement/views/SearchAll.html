@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div class="bottom-margin-sm">
+            <a class="pointer" ng-click="SearchCtrl.orderSearchResultsDt(SearchCtrl.sortOrder)">{{SearchCtrl.searchType}}</a>
+        </div>
+
+        <form class="form-inline bottom-margin" novalidate>
+            <div class="form-group">
+                <input id="searchStringInp" type="text" name="search" ng-model="SearchCtrl.searchString" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="searchType" ng-change="SearchCtrl.clearSearch()" ng-model="SearchCtrl.searchType">
+                    <option value="Users">Users</option>
+                    <option value="Offices">Offices</option>
+                    <option value="Companies">Companies</option>
+                </select>
+            </div>
+            <button type="submit" ng-click="SearchCtrl.SearchAll()" class="btn btn-primary">Search</button>
+        </form>
+        <span ng-hide="SearchCtrl.isSearchStringSet" class="text-danger">Search string for {{SearchCtrl.searchType}} search cannot be blank.</span>
+
+        <div class="border-top table-responsive">
+            <table id="SearchResultsDt" class="table table-bordered table-condensed table-hover small">
+                <thead>
+                    <tr>
+                        <th>Search Results</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

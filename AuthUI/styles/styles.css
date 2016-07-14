@@ -1,0 +1,673 @@
+.AccountMgmtContainer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+
+/* Parcel landing page CSS */
+
+.bg-image {
+    background: transparent url('../images/background_sky.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.sidebar {
+    max-height: 100% !important;
+    bottom: 0px;
+    overflow-y: auto;
+    background-color: #eeeeee;
+    padding: 0px !important;
+}
+
+.login-inner {
+    background-color: #eee;
+    border: 4px solid #aaa;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.border-white {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #ddd;
+}
+
+.left-side {
+    border-right: 1px solid #ddd;
+}
+
+#parcelForgotPassPanel {
+    display: none;
+}
+
+.footer-container {
+    padding: 10px;
+    font-size: 10px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.reqText {
+    color: red;
+}
+
+.border-top {
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+}
+
+
+/*
+.border-bottom {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+*/
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.custom-breadcrumb>LI+LI:before {
+    content: "\\";
+}
+
+.custom-breadcrumb {
+    margin-bottom: 0px;
+}
+
+
+/* Parcel landing page CSS end */
+
+
+/* C360 Langin page CSS */
+
+.headerLP {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.decoration-n {
+    text-decoration: none !important;
+}
+
+.navLP > li > a {
+    padding-top: 4px !important;
+    padding-bottom: 0 !important;
+    height: 33px;
+}
+
+.headerLP > .navbar {
+    min-height: 33px !important;
+    margin-bottom: 0px;
+    border-radius: 0px !important;
+}
+
+.collateraltopbg {
+    background: url(../images/header-wide1.png) no-repeat;
+    height: 493px;
+    background-position: center;
+    background-size: cover;
+}
+
+.Gradientdiv {
+    background: url(../images/bottom-pattern.png);
+    background-repeat: repeat-x;
+    background-color: #5f7a9d;
+    height: 100%;
+}
+
+.logo {
+    position: relative;
+    width: 355px;
+    height: 47px;
+    float: right;
+    top: 35%;
+    right: 5%;
+}
+
+.tagline {
+    position: relative;
+    margin-top: 40px;
+    color: #ef7f56;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.imgheadingtop {
+    position: relative;
+    color: #ffffff;
+    line-height: 62px;
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    top: 20%;
+    left: 10%;
+}
+
+
+/* 4 Columns design effect */
+
+.Compliance,
+.Workflow,
+.Risk-Management,
+.Smart-Data,
+.modal-dialog .modal-content {
+    margin-top: 0% !important;
+}
+
+
+/*four columns popup start */
+
+.LP-popup-text h4 {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    font-size: 16px;
+}
+
+.LP-popup-text p {
+    font-size: 13.5px;
+    text-align: left;
+    line-height: 1.8em;
+}
+
+.popup-footer {
+    height: 22px;
+    margin-bottom: -1px;
+}
+
+.popup-header {
+    border-bottom: 0px !important;
+}
+
+
+/*four columns popup end */
+
+.bg-ORANGE {
+    background: #ef7f56;
+}
+
+.bg-BLUE {
+    background: #3575a5;
+}
+
+.bg-GREEN {
+    background: #c7d597;
+}
+
+.bg-GRAY {
+    background: #a0a1a1;
+}
+
+.btn-gray {
+    background-color: #a0a1a1;
+    color: #ffffff;
+}
+
+.btn-gray:hover {
+    background-color: #B4B4B4;
+    color: #ffffff;
+}
+
+.btn-orange {
+    background-color: #ef7f56;
+    color: #ffffff;
+}
+
+.btn-orange:hover {
+    background-color: #FF8255;
+    color: #ffffff;
+}
+
+.white {
+    color: white;
+}
+
+.divider-NAV {
+    color: #ffffff;
+    padding-top: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.box .icon .info {
+    background: #FFFFFF;
+    padding-top: 100px;
+    margin-top: -90px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0 8px 18px -9px black;
+    -moz-box-shadow: 0 8px 18px -9px black;
+    box-shadow: 0 8px 18px -9px black;
+}
+
+.box .icon .info p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 10px;
+    min-height: 165px;
+}
+
+#Fourcolumns {
+    margin-top: -60px;
+}
+
+.box > .icon {
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.box > .icon > a {
+    text-decoration: none !important;
+}
+
+.box > .icon > a > .image img {
+    margin-top: -15px;
+    width: 50px;
+}
+
+.box > .icon > a > .image {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    width: 198px;
+    height: 198px;
+    /*   border: 7px solid white;*/
+    line-height: 98px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    color: #FFFFFF;
+    vertical-align: middle;
+    behavior: url(styles/PIE.htc);
+    zoom: 1;
+}
+
+.box > .icon:hover > a > .image {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    color: #FFFFFF;
+    behavior: url(styles/PIE.htc);
+    position: relative;
+    zoom: 1;
+}
+
+.iconheading {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 1.0em;
+    vertical-align: middle;
+    top: -10px !important;
+    position: relative;
+    text-decoration: none !important;
+}
+
+
+/* 4 Columns design effect*/
+
+
+/*new landing page css end */
+
+
+/* footer */
+
+#footerLP {
+    /*    display: none;*/
+}
+
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #5F7A9D;
+}
+
+.Footermenu1-LP {
+    position: relative;
+    margin-top: -10px;
+    text-align: center;
+    clear: both;
+}
+
+.Footermenu1-LP a {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.Footermenu1-LP li {
+    list-style: none;
+    float: left;
+    color: #FFFFFF;
+    padding: 0px 8px;
+    border-right: 1px solid #FFFFFF;
+    margin: 3px 1px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 20px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+
+/* footer style end */
+
+@media only screen and (max-width: 75em) {
+    /*1120px*/
+    .box .icon .info p {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.8em;
+        padding: 10px;
+        min-height: 190px;
+    }
+}
+
+@media only screen and (min-width:93em) {
+    /*1440px*/
+    .container {
+        width: 80%;
+    }
+    .headerLP {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        height: 5vh;
+    }
+    .box .icon .info p {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 21px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.8em;
+        padding: 10px;
+        min-height: 250px;
+    }
+    .collateraltopbg {
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        /* position: relative; */
+        /* max-height: 65%; */
+        /* min-height: 50%; */
+    }
+    .Gradientdiv {
+        background-repeat: repeat-x;
+        background-color: #5f7a9d;
+        /*height: 47vh;*/
+        position: relative;
+        /* min-height: 493px; */
+        /* max-height: 50%; */
+        background-position: cover !important;
+    }
+    #footerLP {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 3vh;
+        z-index: 1000000;
+        background: #5F7A9D;
+    }
+}
+
+@media only screen and (max-width: 70em) {
+    /*1120px*/
+}
+
+@media only screen and (max-width: 64em) {
+    /*1024px*/
+    .collateraltopbg {
+        background: url(../images/header.png) no-repeat;
+        max-height: 100%;
+        background-position: right;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 54.7em) {
+    /*876px*/
+    .box .icon .info p {
+        font-family: "Open Sans Light", "Open Sans", Arial, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.8em;
+        padding: 10px;
+        min-height: 100%;
+    }
+    .divider-NAV {
+        display: none !important;
+    }
+    .collateraltopbg {
+        background: url(../images/header-mid.png) no-repeat;
+        max-height: 100%;
+        background-position: right;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 51.25em) {
+    /*820px*/
+}
+
+@media only screen and (max-width: 48em) {
+    /*768px*/
+    .collateraltopbg {
+        background: url(../images/header-small.png) no-repeat;
+        max-height: 100%;
+        background-position: right;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-height: 40em) {
+    /*656px*/
+}
+
+@media only screen and (max-width: 36.625em) {}
+
+@media only screen and (max-width: 30em) {}
+
+.cursorDefault {
+    cursor: default;
+}
+
+
+/* C360 Langin page CSS end */
+
+.sortorder:after {
+    content: '\25b2';
+}
+
+.sortorder.reverse:after {
+    content: '\25bc';
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*tab structure for company view page*/
+
+.margin-padding-0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar {
+    max-height: 100% !important;
+    bottom: 0px;
+    overflow-y: auto;
+    background-color: #eeeeee;
+    padding: 0px !important;
+}
+
+.panel-left {
+    /*    position: fixed;*/
+    max-height: 100% !important;
+    max-width: 20% !important;
+    background-color: #eeeeee !important;
+    /*    top: 50px;*/
+    bottom: 0px;
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+.panel-right {
+    min-width: 80% !important;
+    position: absolute;
+    right: 0px;
+}
+
+.text-11 {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 1em;
+    opacity: 1;
+}
+
+.top-margin {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 79em) {
+    /*1120px*/
+}
+
+@media only screen and (max-width: 64em) {
+    /*1024px*/
+}
+
+@media only screen and (max-width: 54.7em) {
+    /*876px*/
+}
+
+
+/*end of tab structure for company view page*/
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.table-vertical-scroll {
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.google-map {
+    display: block;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* lender setup fee invoice popup*/
+
+.setupfeeColumn {
+    max-width: 150px;
+}
+
+.setupfeeCharges {
+    max-width: 80px;
+}
+
+
+/* lender setup fee invoice popup end*/
+
+.expandTrue:hover {
+    color: red !important;
+}
+
+.setuptypeCostColumn {
+    max-width: 110px;
+}
+
+.currentPricing {
+    max-width: 100px;
+}
+/* PARCEL company view styling end */
+
+
+/*Upload User SpreadSheet start */
+
+.userActionColumn {
+    min-width: 60px;
+}
+/*Upload User SpreadSheet end */
+
+
+/* Appraisal user profile styling */
+.selectCounty .select2-container {
+    width: 100% !important;
+}
+/* Appraisal user profile styling end */
+
+
+/*multiselect css*/
+
+am-multiselect .dropdown-menu {
+    padding-left: 5px;
+    margin-left: 15px;
+    padding-right: 5px;
+}
+
+am-multiselect .dropdown-menu > li > a {
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+am-multiselect .dropdown-menu > li.selected {
+    background-color: #ADD8E6;
+}
+/*multiselect css end*/
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    top: 3px;
+}
+
+.signature-img {
+    max-height: 50px;
+}

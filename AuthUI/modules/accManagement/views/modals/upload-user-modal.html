@@ -1,0 +1,91 @@
+<script id="upload-user-modal.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="userUploadCtrl.closeModal()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Upload Users Spreadsheet</h4>
+    </div>
+
+    <div class="modal-body ">
+        <div class="bottom-margin">
+            <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                <input id="userExcelUpload" type="file" ngf-select ngf-change="userUploadCtrl.checkFile($file,$invalidFiles)" ng-model="userUploadCtrl.files" name="file" ngf-pattern="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel, *.xlsx,*.xls" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel, *.xlsx,*.xls" ngf-multiple="false">
+            </span>
+            <button ng-disabled="userUploadCtrl.isUpload" type="button" class="btn btn-md btn-primary start" ng-click="userUploadCtrl.uploadFile()">
+                <span class="glyphicon glyphicon-list-alt"></span> Preview
+            </button>
+            <span class="text-primary">{{userUploadCtrl.files.name}} {{userUploadCtrl.errFile.$error}}</span>
+        </div>
+        <div ng-show="userUploadCtrl.IncorrectFormat">
+            <div class="alert alert-danger">{{userUploadCtrl.IncorrectFormat}}</div>
+        </div>
+
+        <div class="table-responsive" ng-show="userUploadCtrl.showUserTbl">
+            <table name="tblUserList" class="table table-bordered table-hover table-condensed small">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Title</th>
+                        <th>Default Access Level</th>
+                        <th>Email</th>
+                        <th>Direct Phone</th>
+                        <th>Edit</th>
+                        <!--<th ng-show="userUploadCtrl.showHeaderAfterSave"></th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat-start="(pIndex,user) in userUploadCtrl.userSheetData"></tr>
+                    <tr>
+                        <td>
+                            <span editable-text="user['First Name']" onbeforesave="userUploadCtrl.checkInvalid($data,'First Name')" e-name="firstName" e-form="rowform" required>{{ user['First Name'] || 'empty' }}</span>
+                                    </td>
+                                    <td>
+                                        <span editable-text="user['Last Name']" onbeforesave="userUploadCtrl.checkInvalid($data,'Last Name')" e-name="lastName" e-form="rowform" e-required>{{ user['Last Name'] || 'empty' }}</span>
+                                    </td>
+                                    <td>
+                                        <span editable-text="user['Title']" e-name="title" e-form="rowform" e-required>{{ user['Title'] || 'empty' }}</span>
+                                    </td>
+                                    <td>
+                                        <span editable-select="user['Default Access Level']" onbeforesave="userUploadCtrl.checkInvalid($data,'Default Access Level')" e-name="defaultAccessLevel" e-ng-options="a.text as a.text for a in userUploadCtrl.defaultAccessLevels" e-form="rowform" e-required>{{ user['Default Access Level'] || 'none selected' }}</span>
+                                    </td>
+                                    <td>
+                                        <span editable-email="user['Email']" onbeforesave="userUploadCtrl.checkInvalid($data,'Email',$index,$valid)" e-name="email" e-form="rowform" e-required>{{ user['Email'] || 'empty' }}</span>
+                                    </td>
+                                    <td>
+                                        <span editable-text="user['Direct Phone']" onbeforesave="userUploadCtrl.checkInvalid($data,'Phone')" e-name="phone" e-form="rowform" e-required>{{ user['Direct Phone'] || empty }}</span>
+                        </td>
+                        <td class="userActionColumn">
+                            <form editable-form name="rowform" ng-show="rowform.$visible" onbeforesave="userUploadCtrl.saveUser($data,$index)" shown="inserted == user">
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-primary" data-toggle="tooltip" data-placement="bottom" title="Save User" ng-disabled="rowform.$waiting"><i class="fa fa-floppy-o"></i></button>
+                                    <button class="btn btn-xs btn-default" type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" data-toggle="tooltip" data-placement="bottom" title="Cancel"><i class="fa fa-times"></i></button>
+                                </div>
+                            </form>
+                            <div class="btn-group" ng-show="!rowform.$visible">
+                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit User" ng-click="rowform.$show();userUploadCtrl.setSubmitFlag(true)" ng-hide="rowform.$visible"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete User" ng-click="userUploadCtrl.removeUser($index,$data)"><i class="glyphicon glyphicon-trash"></i></button>
+                            </div>
+                        </td>
+                        <!--
+                                    <td ng-if="user.messageAfterSave">
+                                            <span ng-if="user.isSuccess"><i class="fa fa-check text-success"></i></span>
+                                            <span ng-if="!user.isSuccess"><i class="fa fa-exclamation-circle text-danger"></i></span>
+                                    </td>
+    -->
+                    </tr>
+                    <tr ng-repeat-end ng-show="user.messageAfterSave">
+                        <td colspan="7">
+                            <span ng-if="user.isSuccess"><i tootip="." class="fa fa-check text-success"></i> {{user.messageAfterSave}}</span>
+                            <span ng-if="!user.isSuccess"><i tootip="user.messageAfterSave"class="fa fa-exclamation-circle text-danger"></i> {{user.messageAfterSave}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </div>        
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-md btn-default" ng-click="userUploadCtrl.closeModal()">Close</button>
+        <button class="btn btn-md btn-primary" ng-disabled="userUploadCtrl.isSubmit" ng-click="userUploadCtrl.UploadUsers(rowform)">Create Users</button>
+    </div>
+</script>

@@ -1,0 +1,54 @@
+<div ng-if="logoCtrl.hideScreenContents">
+    <div class="alert alert-info" role="alert">Your logo must be less than 60KB and it can be any image type (JPG, PNG, etc). Note that large sized images will increase the size of your deliverables. <a href="http://wiki.parcelplatform.com/Home/esa/module-2---administration-set-up/07---update-a-company-logo" target="_blank">Need more help?</a></div>
+
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Current Logo:</label>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12" ng-show="logoCtrl.logoFilePathURL">
+                        <img class="img-responsive" ng-src="{{logoCtrl.logoFilePathURL}}">                        
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xs-12" ng-show="logoCtrl.logoFilePathURL">
+                        <button class="btn btn-danger btn-sm" ng-click="logoCtrl.OpenDeleteLogoModal();">Delete</button>
+                    </div>
+                    <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12" ng-show="!logoCtrl.logoFilePathURL">
+                        <p class="form-control-static"><em>No logo exists.</em></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Upload New Logo:</label>
+                    <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                        <input id="companyLogo" type="file" ngf-select ngf-change="logoCtrl.checkFile($file, $invalidFiles, $event);" ng-model="logoCtrl.logoImg" name="file" accept="image/*" ngf-multiple="false" ngf-pattern="'image/*'" ngf-max-total-size="'60KB'" ng-disabled="!logoCtrl.companyRootFolderGuid">
+                    </span>
+                    <span class="text-primary" ng-show="logoCtrl.logoImg.name"><i class="fa fa-file-image-o"> {{logoCtrl.logoImg.name}}</i></span>
+                    <button type="button" class="btn btn-md btn-primary start" ng-click="logoCtrl.uploadCompanyLogo();" ng-disabled="!logoCtrl.logoImg || !logoCtrl.companyRootFolderGuid">
+                        <span class="glyphicon glyphicon-upload"></span> Upload
+                    </button>
+                </div>
+
+
+                <div class="margin-top" ng-show="logoCtrl.UploadErrorMsg">
+                    <div class="alert alert-danger" ng-bind-html="logoCtrl.UploadErrorMsg"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script id="deleteCompanyLogo.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelQualificationFileDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Company logo</h4>
+    </div>
+
+    <div class="modal-body">
+        <p>You are about to delete the company logo. Are you sure you want to delete it?</p>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-md btn-default" role="button" ng-click="closeModal();">Cancel</button>
+        <button class="btn btn-md btn-danger" role="button" ng-click="deleteCompanyLogo();">Delete</button>
+    </div>
+</script>

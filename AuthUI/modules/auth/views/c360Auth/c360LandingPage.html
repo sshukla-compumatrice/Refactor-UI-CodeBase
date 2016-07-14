@@ -1,0 +1,318 @@
+<div ng-include src="'modules/auth/views/sharedModals/sign-in-modal.html'"></div>
+
+<div ng-include src="'modules/auth/views/sharedModals/reset-password-modal.html'"></div>
+
+<header class="headerLP">
+	<nav class="navbar navbar-default navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navLP navbar-nav navbar-right ">
+					<li><a id="signInBtn" class="btn" ng-click="authCtrl.openSignInModal()">SIGN IN</a></li>
+					<li class="divider-NAV"> |</li>
+					<li><a href="http://www.edrnet.com/offerings" class="btn">SIGN UP</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<div class="collateraltopbg"></div>
+<div class="Gradientdiv">
+	<div class="container">
+		<div id="Fourcolumns" class="row">
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-ORANGE"> <span><img src="images/Workflow-icon.png" class="bottom-margin" alt="Schedule task" /></span>
+								 
+								<div class="iconheading"> Workflow </div>
+							</div>
+						</a>
+						<div class="info">
+							<p>Realize operational efficiencies by connecting the core systems, processes and people associated with your property due diligence.</p>
+							<div class="more"> <a class="btn btn-md btn-orange" data-toggle="modal" data-target="#workflowmodal">Learn more > </a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-primary"> <span><img src="images/compliance-icon.png" class="bottom-margin" alt="Task Template" /></span>
+							 
+								<div class="iconheading"> Compliance </div>
+							</div>
+						</a>
+						<div class="info">
+							<p>Simplify compliance with regulators and bank policy through Collateral360's <i>Policy Infused Technology<sup>SM</sup></i>.</p>
+							<div class="more"> <a class="btn btn-md btn-primary" data-toggle="modal" data-target="#compliancemodal">Learn more > </a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-GREEN"> <span><img src="images/RiskManagment-icon.png" class="bottom-margin" alt="Form Template" /></span>
+								 
+								<div class="iconheading"> Risk Management </div>
+							</div>
+						</a>
+						<div class="info">
+							<p>Access property centric information to better manage your collateral risk during origination and monitor over the life-of-loan.</p>
+							<div class="more"> <a class="btn btn-md btn-success" data-toggle="modal" data-target="#riskmanagementmodal">Learn more > </a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-GRAY"> <span><img src="images/SmartData.png" class="bottom-margin" alt="Form Template" /></span>
+								 
+								<div class="iconheading"> Smart Data </div>
+							</div>
+						</a>
+						<div class="info">
+							<p> Expand your business intelligence by unlocking the power of your data to support sound lending and business decisions. </p>
+							<div class="more"> <a class="btn btn-md btn-gray" data-toggle="modal" data-target="#smartdatamodal">Learn more > </a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+</div>
+<!-- WorkFlow Modal -->
+<div class="modal fade" id="workflowmodal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content popup-header">
+			<div class="modal-header popup-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-ORANGE"> <span><img src="images/Workflow-icon.png" class="bottom-margin" alt="Schedule task"></span>
+								<div class="iconheading"> Workflow </div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br>
+				<div id="workflowdata">
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>One Platform, Multiple Tasks</h4>
+							<p>With Collateral360, lenders can significantly improve their workflow, consolidating several disparate processes into one collaborative workspace. Through a single dashboard lending staff can perform multiple tasks, from ordering flood certificates, environmental reports, and appraisals to monitoring properties over life-of-loan.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Connectivity/Integration</h4>
+							<p>Collateral360’s friendly Application Programming Interface (API) makes it easy to connect with the people and information key to your property due diligence efforts. The API allows you to connect to internal systems such as loan origination systems or external third party information providers.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Vendor Management</h4>
+							<p>Efficiently managing vendors is not only critical to maintaining a competitive advantage, it is a regulatory requirement. Collateral360 makes it easy to select and manage vendors such as appraisers, environmental consultants, and others. You can easily track engagement history, recent performance, coverage area, and areas of expertise. With the platform’s vendor profile you can easily retain contact information, credentials, experience, insurance, taxes, licenses, and product types.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Procure Services</h4>
+							<p>Easily engage vendors and issue requests for bids, directly task assignments or projects, and manage those projects to completion. Standard templates such as engagement letters, review memos and others simplify the process of issuing scope of work and related project details.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-ORANGE  popup-footer"> </div>
+		</div>
+	</div>
+</div>
+<!-- workflow Modal end-->
+<!-- Compliance Modal -->
+<div class="modal fade" id="compliancemodal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content popup-header">
+			<div class="modal-header popup-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-BLUE"> <span><img src="images/compliance-icon.png" alt="Task Template"></span>
+								<br>
+								<div class="iconheading"> Compliance </div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br>
+				<div id="compliancedata">
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Policy Infused Technology<sup>SM</sup></h4>
+							<p>Collateral360 gives you the ability to infuse your lending policies into the platform, ensuring each transaction is managed to credit and risk standards. It is what we call <i>"Policy Infused Technology<sup>SM</sup>"</i>. When loan parameters are entered, the platform dictates the level of due diligence needed to satisfy policy. You can easily demonstrate to regulatory examiners that your organization has sound risk management policies in place.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Vendor Management Compliance</h4>
+							<p>The platform makes it easy to comply with vendor management regulations, and allows you to monitor your vendors, score and rate performance, and record and document all communications for compliances purposes.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Monitoring</h4>
+							<p>Both the FDIC and OCC guidelines recommend that banks have effective risk management policies that address the need for monitoring potential concerns for loans held in a bank’s loan portfolio. However, monitoring hundreds of properties systematically is no small task. Collateral360 provides a systematic, automated approach to monitoring, alerting you when issues arise on an ongoing basis.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Audit Trails</h4>
+							<p>Unlimited storage capacity helps you capture, organize and archive all loan specific documentation in one place, and provides a complete audit trail that can be easily accessed. All communications between your institution and any third party providers are capture and time stamped, including engagements letters, changes in scope of work, third party reports like appraisals, as well as all correspondents for each assignment or project. Policy exceptions and supporting notes are also documented.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Permission-Based Workflow</h4>
+							<p>The system restricts bank staff to performing only the tasks and activities that they are authorized to perform. For example, only management can grant policy exceptions, and loan officers are not authorized to directly engage appraisers on assignments.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-BLUE  popup-footer"> </div>
+		</div>
+
+	</div>
+</div>
+<!-- Compliance Modal end -->
+<!-- Risk Management Modal -->
+<div class="modal fade" id="riskmanagementmodal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content popup-header">
+			<div class="modal-header popup-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-GREEN"> <span><img src="images/RiskManagment-icon.png" alt="Form Template"></span>
+								<br>
+								<div class="iconheading"> Risk Management </div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br>
+				<div id="riskmgmtdata">
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Financial Decisions</h4>
+							<p>Collateral360 is designed to help protect the financial safety and soundness of your institution by giving you access to information to support critical lending and business decisions. Collateral360 also helps you manage risk related to non-compliance with regulatory requirements. The platform is designed to enforce bank policy, provide an audit trail on all transactions, and demonstrate compliance to examiners.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Environmental Risk</h4>
+							<p>Collateral360 provides access to the largest database of environmental records in the country and allows you to instantly search for known environmental concerns associated with a property. Further investigate the property with the Environmental Risk Rating, an algorithm-based calculation that classifies the property as being at low or elevated risk based on current mapped government records and EDR proprietary records. The platform also makes it easy to monitor environmental conditions over the life of the loan, as well as procure environmental due diligence services from your institution's panel of environmental providers.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Flood Status</h4>
+							<p>Determining a property's flood status and securing necessary insurance when needed is imperative. Collateral360 makes it easy to order flood certificates from reliable data providers. And with FEMA's ongoing flood rezoning program, Collateral360 provides for the monitoring of your collaterals' flood status over life-of-loan.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Property Value</h4>
+							<p>Accurately valuing your collateral is not only critical during loan origination, but can also help you manage risk during the life of a loan, especially in default and workout situations. With Collateral360 you can easily order appraisals, evaluations and broker price opinions, giving you access to a variety of tools to determine value.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Property Condition</h4>
+							<p>Inspect the physical condition of collateral at any time during the life of the loan by accessing the platform's site inspection reports. These comprehensive reports include interior and exterior inspections, interview with the site contact, observations of the property and surrounding neighborhood.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-GREEN  popup-footer"> </div>
+		</div>
+	</div>
+</div>
+<!-- Risk Management Modal end -->
+<!-- Smart Data Modal -->
+<div class="modal fade" id="smartdatamodal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content popup-header">
+			<div class="modal-header popup-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="box">
+					<div class="icon">
+						<a class="cursorDefault">
+							<div class="image bg-GRAY"> <span><img src="images/SmartData.png" alt="Form Template"></span>
+								<br>
+								<div class="iconheading"> Smart Data </div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br>
+				<div id="smartdata">
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Business Intelligence</h4>
+							<p>Collateral360 unlocks the power of your data, allowing you to access your information to build powerful and meaningful reports. In the end, you’ll have the information you need to make sound lending decisions, and higher level strategic business decisions.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Collateral Data</h4>
+							<p>Easily access property specific data from a variety of sources to assist in decision making. This includes information on collateral value, property conditions, environmental issues, flood zone status, and a host of other information.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 LP-popup-text">
+							<h4>Data Warehouse</h4>
+							<p>Leveraging the latest Cloud technology, the platform provides unlimited storage capacity that allows you to retain information that you can cull at a later date for detailed reporting.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-GRAY  popup-footer"> </div>
+		</div>
+	</div>
+</div>
+<!-- Smart Data Modal end -->
+
+<footer id="footerLP" class="row footer-bar">
+	<div class=" col-lg-offset-4 col-sm-offset-3 col-md-offset-4 Footermenu1-LP" align="center">
+		<ul class=" list-unstyled ">
+			<li><a href="http://edrnet.com/" target="_blank"><i class="fa fa-copyright"></i> 2015 EDR, Inc.</a></li>
+			<li> | </li>
+			<li><a href="#" target="_blank">Terms of Service</a></li>
+			<li> | </li>
+			<li><a href="http://edrnet.com/contact-us/" target="_blank">Contact Us</a></li>
+			<li> | </li>
+			<li><a id="currentserver" class="decoration-n">Current Server: </a></li>
+		</ul>
+	</div>
+</footer>

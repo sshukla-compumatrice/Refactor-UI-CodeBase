@@ -1,0 +1,42 @@
+<div class="AccountMgmtContainer">
+    <div cg-busy="promise">
+        <header app-header="PARCEL"></header>
+        <!--<ol class="breadcrumb breadcrumb-inverse custom-breadcrumb">
+            <li breadcrumb-directive></li>
+        </ol>-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h2 class="page-header">ACCOUNT MANAGEMENT</h2>
+                    <div ui-view="navigation"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/delete-confirmation-modal.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/delete-confirmation-action-modal.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/company-reports-save-confirmation-modal.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/update-report-vendors-confirmation-modal.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/lender-submit-invoice-modal.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/helpEP.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/helpSignFor.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/sendFeesToABS.html'"></div>
+                    <div ng-include src="'modules/accManagement/views/modals/upload-user-modal.html'"></div>
+                    <div id="alertMessage" class="alert" ng-class="alertClass" role="alert" ng-show="userMessage">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span ng-bind-html="userMessage"></span>
+                        <button type="button" class="close" aria-label="Close" ng-click="dismissUserMessage()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div ui-view="container"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-bar">
+            <div class=" col-lg-offset-4 col-sm-offset-3  col-md-offset-4 Footermenu1-LP">
+                <ul class=" list-unstyled ">
+                    <li><a href="http://edrnet.com/" target="_blank"><i class="fa fa-copyright"></i> 2015 EDR, Inc.</a></li>
+                    <li><a href="#" target="_blank">Terms of Service</a></li>
+                    <li><a href="http://edrnet.com/contact-us/" target="_blank">Contact Us</a></li>
+                    <li class="border-none"><a id="currentserver" class="decoration-n">Current Server: </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>

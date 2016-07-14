@@ -1,0 +1,20 @@
+<a href="#/accounts/search">Search</a>
+<!--<div cg-busy="promise"></div>-->
+<div class="row">
+    <div class="col-md-1 col-lg-1 text-right top-margin-lg" ng-show="showNav">
+        <a ng-show="backArrowState" ng-href="{{backArrowState}}" class="pointer">
+            <span class="glyphicon glyphicon-arrow-up fa-lg top-margin-sm"></span>
+        </a>
+    </div>
+    <div class="col-md-2 col-lg-2" ng-repeat="nav in navigations" ng-show="showNav">        
+        <div ng-if="nav.options" class="form-group">
+            <label class="control-label">{{nav.title == "ParentCompany" ? "Parent Company" : nav.title}}</label>
+            <select class="form-control" chosen="nav.options" ng-model="nav.model" ng-change="navCtrl.transitionOnSelect(nav.model.guid, nav.title, $index)" ng-options="option.name for option in nav.options | orderBy:['name'] track by option.guid" data-transitionToState="{{nav.transitionToState}}" data-attachedParam="{{nav.attachedParam}}" data-placeholder="{{nav.model.name}}"></select>
+        </div>
+        <div ng-if="!nav.options" class="form-group">
+            <label class="control-label">{{nav.title == "ParentCompany" ? "Parent Company" : nav.title}}</label>
+            <p>{{nav.blankContainerMsg}}</p>
+        </div>
+    </div>
+</div>
+<h4 class="text-uppercase">{{navCtrl.subHeaderTitle}}</h4>

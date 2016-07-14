@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="AccessManagement">
+
+<head>
+    <title ng-bind="title"></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Account Management">
+    <meta name="author" content="EDR PARCEL/C360">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="application-name" content="EDR UX Toolkit">
+    <meta name="msapplication-TileColor" content="#3074a6">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="theme-color" content="#3074a6">
+
+    <!-- styling -->
+
+    <link rel="stylesheet" href="styles/edr-uxt.min.css" type="text/css" />
+
+    <link rel="stylesheet" href="styles/select2.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/select2-bootstrap.css" type="text/css" />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' type='text/css' />
+
+
+    <link rel="stylesheet" href="styles/xeditable.css" type="text/css" />
+    <link rel="stylesheet" href="styles/chosen/chosen.css" type="text/css" />
+    <link rel="stylesheet" href="styles/chosen/chosen-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap-datepicker.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/datatable/dataTables.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/datatable/responsive.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/angular-busy.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/styles.css" type="text/css" />
+</head>
+
+<body ng-controller="indexController">
+
+    <div ui-view></div>
+
+    <!-- js frameworks -->
+    <script type="text/javascript" src="scripts/vendor/jquery-1.12.0.min.js"></script> 
+    <script type="text/javascript" src="scripts/vendor/angular_v1.2.16.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/app.urlResources.js"></script>
+
+    <script type="text/javascript" src="indexController.js"></script>
+    
+    <!--Reset Password-->
+    <script type="text/javascript" src="modules/resetPassword/resetPasswordRouter.js"></script>
+    <script type="text/javascript" src="modules/resetPassword/resetPasswordMessages.js"></script>
+    <script type="text/javascript" src="modules/resetPassword/controllers/forgotPasswordController.js"></script>
+    <script type="text/javascript" src="modules/resetPassword/controllers/resetPasswordController.js"></script>
+    <script type="text/javascript" src="modules/resetPassword/services/resetPasswordFactory.js"></script>
+
+
+    <!--Reset Password ends-->
+
+    <!-- Authentication -->
+    <script type="text/javascript" src="modules/auth/authRouter.js"></script>
+    <!--Controllers-->
+    <script type="text/javascript" src="modules/auth/controllers/C360AuthController.js"></script>
+    <script type="text/javascript" src="modules/auth/controllers/ParcelAuthController.js"></script>
+    <!--Services-->
+    <script type="text/javascript" src="modules/auth/services/AuthFactory.js"></script>
+    <!--Others-->
+    <script type="text/javascript" src="modules/auth/utilities/AuthUrls.js"></script>
+    <!-- Authentication end-->
+
+    <!-- Account Management -->
+    <script type="text/javascript" src="modules/accManagement/accountMgmtRouter.js"></script>
+    <!--Controllers-->
+    <script type="text/javascript" src="modules/accManagement/controllers/CreateCompanyController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/ParcelViewController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/OfficeController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/GridController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/NavigationController.js"></script>
+
+    <script type="text/javascript" src="modules/accManagement/controllers/EntityDeleteController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/SearchController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/UserController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/UmbrellaController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/UserUploadController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/AppraisalUserController.js"></script>
+    <script type="text/javascript" src="modules/accManagement/controllers/LogoController.js"></script>
+
+    <!--Services-->
+    <script type="text/javascript" src="modules/accManagement/services/CompanyServiceAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/OfficeServiceAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/searchAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/UserServiceAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/UserLicenseAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/UserInsuranceAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/UserCoverageAreaAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/AppraiserUserFormsAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/ListingServiceAPI.js"></script>
+    <script type="text/javascript" src="modules/accManagement/services/FileMgmtAPI.js"></script>
+
+    <!--Others-->
+    <script type="text/javascript" src="modules/accManagement/utilities/urlCollection.js"></script>
+    <script type="text/javascript" src="modules/accManagement/directives/EntityDeleteDirective.js"></script>
+    <script type="text/javascript" src="modules/accManagement/directives/appHeaderDirective.js"></script>
+    <!-- Account Management end -->
+
+    <!-- Shared JS files -->
+    <script type="text/javascript" src="modules/sharedModules/services/applicationInfoSession.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/environmentInfoSession.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/generateGUIDFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/encodingFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/countrySelect/countrySelectDirective.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/validation/fieldValidationDirective.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/breadcrumb/breadCrumbProvider.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/breadcrumb/breadCrumbDirective.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/accessManagementFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/geocode/directives/mapDirective.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/geocode/services/geocodeService.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/geocode/utilities/urlCollection.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/chosen/chosenDirective.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/multiselectdropdown/multiselect.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/commonFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/utilities/commonUrlCollection.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/commonServices.js"></script>    
+    <script type="text/javascript" src="modules/sharedModules/utilities/rolesUrlCollection.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/rolesServiceAPI.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/services/authFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/interceptors/ajaxResponseInterceptorFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/interceptors/ajaxTimeInterceptorFactory.js"></script>
+    <script type="text/javascript" src="modules/sharedModules/directive.js"></script>
+    <!-- Shared JS files end -->
+
+    <!-- supporting JS -->
+    <!--<script type="text/javascript" src="http://parredatapoc2:8080/common-logger/logger.js"></script>-->
+    <script type="text/javascript" src="scripts/vendor/logger.js"></script>
+    <!-- Replace this with server's one -->
+    <script type="text/javascript" src="scripts/vendor/sprintf.js"></script>
+    <script type="text/javascript" src="scripts/vendor/moment.js"></script>
+    <script type="text/javascript" src="scripts/vendor/modernizr.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/HTML5-Shiv.js"></script>
+    <script type="text/javascript" src="scripts/vendor/respond.js"></script>
+    <script type="text/javascript" src="scripts/vendor/plugins.js"></script>
+    <script type="text/javascript" src="scripts/vendor/edr-uxt.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/ng-file-upload-shim.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/select2.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js'></script>
+    <script type="text/javascript" src="scripts/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/xeditable.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-js-xlsx/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/chosen.jquery.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-busy.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-sanitize.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-cookies.min.js"></script>
+    <!-- supporting JS end -->
+
+    <!--DataTable JS files-->
+    <script type="text/javascript" src="scripts/vendor/datatable/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="scripts/vendor/datatable/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/datatable/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/datatable/responsive.bootstrap.min.js"></script>
+</body>
+
+</html>
