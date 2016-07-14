@@ -1,0 +1,28 @@
+<div class="col-md-7 form-group" show-errors
+	ng-show={{field.viewStatus}}>
+	<label for="{{field.fieldLabel}}"
+		class="control-label col-md-4 col-lg-4 col-xs-12">{{field.fieldLabel}}:</label>
+	<div class="col-xs-8 col-lg-8 col-md-8">
+		<input type="text" class="form-control" dynamic-name="field.fieldName"
+			ng-model="field.fieldValue" value="{{field.fieldValue}}"
+			ng-required="field.required">
+
+		<!-- <span class="required-error" ng-show="field.required && !field.fieldValue">*</span> -->
+	</div>
+
+</div>
+
+
+
+<div class="form-group col-md-5">
+	<label class="control-label col-md-2 col-lg-2 col-xs-12">Units:</label>
+	<div class="col-xs-6 col-lg-6 col-md-6">
+		<select ng-model="sizeobj.sizeunit" id="{{field.fieldName}}"
+			class="form-control"
+			data-ng-options="size.name for size in sizeobj.options">
+			<option value="">Select Units</option>
+		</select>
+	</div>
+
+</div>
+

@@ -1,0 +1,14 @@
+<div class="form-group">
+	<label class="control-label col-md-2 col-xs-2">Units:</label>
+	<div class="col-xs-2 col-md-2">
+		<select ng-model="sizeobj.sizeunit" class="form-control"
+			data-ng-options="size.name for size in sizeobj.options">
+			<option value="">Select Units</option>
+		</select>
+	</div>
+	<div class="col-xs-2 col-md-2 nopadding"
+		ng-show="field.required && !field.fieldValue">
+		<span class="reqText">*</span>
+	</div>
+</div>
+<br>

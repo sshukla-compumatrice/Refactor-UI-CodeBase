@@ -1,0 +1,19 @@
+<div class="form-group" show-errors
+	ng-show={{field.isVisible}} id="{{field.fieldID}}">
+	<label for="{{field.fieldName}}">{{field.fieldLabel}}:<span
+		ng-show="field.isRequired && !field.fieldValue" class="reqText">*</span></label>
+	<div class="calendar-margin">
+
+
+		<input type="text" dynamic-name="field.fieldName" class="form-control"
+			id="{{field.fieldName}}" datepicker-popup="MM-dd-yyyy"
+			show-weeks="false" ng-model="field.fieldValue" is-open="opened"
+			close-text="Close" ng-required="field.isRequired" ng-readonly="true" />
+	</div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,11 @@
+<div class=" form-group dynamicdiv" show-errors
+	ng-show={{field.isVisible}} id={{field.fieldName}}>
+
+	<label for={{field.fieldName}}>{{field.fieldLabel}}: <span
+		ng-show="field.isRequired && !field.fieldValue" class="reqText">*</span></label>
+	<input type="text" class="form-control" dynamic-name="field.fieldName" id = {{field.fieldID}}
+		ng-model="field.fieldValue" ng-disabled="!field.isEditable"
+		custom-validation="field.fieldValidator" value={{field.fieldValue}}
+		ng-required="field.isRequired" />
+</div>
+

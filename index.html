@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="LenderPortal">
+<title>Service Request Form Test</title>
+
+<head>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css" />   
+    <link rel="stylesheet" href="styles/datatable/datatables.min.css" type="text/css" />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' type='text/css' />
+    <link rel="stylesheet" href="styles/styles1.css" type="text/css" />
+    <link rel="stylesheet" href="styles/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="styles/custom-select2.css" type="text/css" />
+    <link rel="stylesheet" href="styles/select2.css" type="text/css" />
+</head>
+
+<body>
+    <div ng-include="'modules/HeaderAndFooter/views/header.html'"></div>
+    <div ui-view=""></div>
+    <div ng-include="'modules/HeaderAndFooter/views/footer.html'"></div>
+    <script type="text/javascript" src="scripts/vendor/jquery-1.11.2.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="scripts/vendor/angular_v1.2.16.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-resource.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-ui-bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-ui-router.min.js"></script>
+    
+    <script type="text/javascript" src="scripts/vendor/angular-file-upload.js"></script>
+    <script type="text/javascript" src="scripts/vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/es5-shim.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/select2.js"></script>
+    <script type="text/javascript" src="scripts/vendor/custom-select2.js"></script>
+    
+    <!--DataTable files-->   
+    <script type="text/javascript" src="scripts/vendor/datatable/datatables.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="scripts/vendor/datatable/dataTables.bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/policyRouter.js"></script>
+    
+    <script type="text/javascript" src="modules/Property/propertyRouter.js"></script>
+    <script type="text/javascript" src="modules/SRF/srfRouter.js"></script>
+    <script type="text/javascript" src="modules/SRF/services/storedataFactory.js"></script>
+    <script type="text/javascript" src="modules/SRF/controllers/SRFCabinetController.js"></script>
+    <script type="text/javascript" src="modules/SRF/controllers/SRFManageCabinetController.js"></script>
+    <script type="text/javascript" src="modules/SRF/controllers/SRFNavigationController.js"></script>
+    <script type="text/javascript" src="modules/SRF/controllers/SRFSectionalFormController.js"></script>
+    <script type="text/javascript" src="modules/SRF/services/cabinetsFactory.js"></script>
+    <script type="text/javascript" src="modules/SRF/services/formFieldsFactory.js"></script>
+    <script type="text/javascript" src="modules/SRF/services/postFormFields.js"></script>
+    <script type="text/javascript" src="modules/SRF/services/mapService.js"></script>
+    <script type="text/javascript" src="modules/SRF/directives/sectionalform-directive.js"></script>
+    <script type="text/javascript" src="modules/SRF/directives/sectionalform-field-directive.js"></script>
+    <script type="text/javascript" src="modules/SRF/directives/directives.js"></script>
+    <script type="text/javascript" src="modules/SRF/utilities/urls.js"></script>
+    <script type="text/javascript" src="modules/SRF/utilities/srfResources.js"></script>
+    <script type="text/javascript" src="modules/SharedModules/services/applicationInfoSession.js"></script>
+    <script type="text/javascript" src="modules/SharedModules/services/environmentInfoSession.js"></script>
+    <script type="text/javascript" src="modules/SharedModules/services/generateGUIDFactory.js"></script>
+    <script type="text/javascript" src="modules/SharedModules/services/encodingFactory.js"></script>
+    <script type="text/javascript" src="modules/HeaderAndFooter/controllers/HeaderController.js"></script>
+    <script type="text/javascript" src="modules/HeaderAndFooter/directives/directives.js"></script>
+    <script type="text/javascript" src="modules/HeaderAndFooter/services/headerCabinetsFactory.js"></script>
+    <script type="text/javascript" src="modules/HeaderAndFooter/utilities/urls.js"></script>
+    <script type="text/javascript" src="modules/HeaderAndFooter/services/rtService.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/PolicyNavigationController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/services/policyShareDataService.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/services/policyManagerFactory.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/PolicyInformationController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/PolicyValuesController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/PolicyMatrixController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/PolicyTestController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/controllers/ViewPolicyController.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/utilities/resourcefile.js"></script>
+    <script type="text/javascript" src="modules/PolicyManager/directives/directives.js"></script>
+    <script type="text/javascript" src="modules/Property/services/PropertyDetailsfactory.js"></script>
+    <script type="text/javascript" src="modules/Property/controllers/PropertyNavigationController.js"></script>
+    <script type="text/javascript" src="modules/Property/controllers/PropertyOverviewController.js"></script>
+    <script type="text/javascript" src="modules/Property/controllers/PropertyEnvironmentalController.js"></script>
+    <script type="text/javascript" src="modules/Property/utilities/propresources.js"></script>
+    <script type="text/javascript" src="modules/Property/utilities/urls.js"></script>
+    <script type="text/javascript" src="modules/DashBoard/controllers/DashBoardController.js"></script>
+    <script type="text/javascript" src="modules/DashBoard/services/dashboardFactory.js"></script>
+    <script type="text/javascript" src="modules/DashBoard/utilities/dashboardResources.js"></script>
+    <script type="text/javascript" src="modules/DashBoard/utilities/dashboardUrls.js"></script>
+    <script type="text/javascript" src="modules/DashBoard/directives/directives.js"></script>
+
+    <!--<script type="text/javascript" src="dist/app.js"></script>-->
+    <!--<script type="text/javascript" src="scripts/vendor/logger.js"></script>-->
+    <script type="text/javascript" src="http://parredatapoc2:8080/common-logger/logger.js"></script>
+    <script type="text/javascript" src="scripts/vendor/log4javascript.js"></script>
+    <script type="text/javascript" src="scripts/vendor/sprintf.js"></script>
+    <script type="text/javascript" src="scripts/vendor/moment.js"></script>
+    <script type="text/javascript" src="scripts/vendor/modernizr.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/HTML5-Shiv.js"></script>
+    <script type="text/javascript" src="scripts/vendor/respond.js"></script>
+    <script type="text/javascript" src="scripts/vendor/plugins.js"></script>
+    <script type="text/javascript" src="scripts/vendor/bootstrap.min.js"></script>
+</body>
+
+</html>

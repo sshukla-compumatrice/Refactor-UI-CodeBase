@@ -1,0 +1,16 @@
+<div id="{{subtype.fieldName}}" show-errors
+	class="form-group col-xs-12 col-lg-7 col-md-7"
+	ng-show={{subtype.viewStatus}}>
+
+	<div class="col-xs-offset-2 col-md-offset-2 col-xs-4 col-md-4">
+		<select ng-model="subtype.fieldValue" id="{{subtype.name}}"
+			dynamic-name="field.fieldName" ng-change="showpropertytsubtype()"
+			class="form-control"
+			data-ng-options="option.name for option in options">
+			<option value="">Select {{subtype.fieldLabel}}</option>
+		</select>
+
+	</div>
+</div>
+
+

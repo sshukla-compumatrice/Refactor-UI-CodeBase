@@ -1,0 +1,35 @@
+<ul id="srfTabNavigation" class="nav nav-tabs">
+
+    <li class="{{($index == 0)?  'active' :''}}" id="tab{{tab.tabTitle}}" ng-repeat="tab in form.tabsArray"><a showtab="" title="{{tab.tabTitle}}" href="#{{tab.tabTitle}}" ng-click="tabClicked(tab.tabTitle);">{{tab.tabTitle}}</a></li>
+
+
+</ul>
+
+
+<div id="{{tab.tabTitle}}" ng-repeat="(parenttabindex,tab) in form.tabsArray">
+    <form dynamic-tab-visibility tabtitle="tab.tabTitle" tabindex="$index">
+
+        <div class="row" ng-repeat="(parentrowindex,rows) in form.tabsArray[$index].rows">
+
+            <div dynamic-grid-columns columnarr='form.tabsArray[parenttabindex].rows[parentrowindex].columns' ng-repeat="(parentcolumnindex,columns) in form.tabsArray[parenttabindex].rows[$index].columns">
+
+                <div add-Map section="sections.sectionTitle" ng-repeat="(parentsectionindex,sections) in form.tabsArray[parenttabindex].rows[parentrowindex].columns[$index].sections">
+                    <h4 class="heading-border">{{sections.sectionTitle}}</h4>
+
+
+                    <div ng-repeat="field in form.tabsArray[parenttabindex].rows[parentrowindex].columns[parentcolumnindex].sections[parentsectionindex].
+                                      fields">
+
+                        <div sectionalfield-directive field="field" 
+                             parenttabindex = "parenttabindex" parentrowindex = "parentrowindex" parentcolumnindex = "parentcolumnindex" parentsectionindex = "parentsectionindex"></div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+
+    </form>
+
+
+</div>

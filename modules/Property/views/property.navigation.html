@@ -1,0 +1,46 @@
+<div class="container-fluid ">
+ <div class="row ">
+<div class="col-md-3 col-lg-3 col-sm-3 margin-padding-0 bg-gray panel-left">
+    <div class="box-dark-gray">
+
+    <span class="text-24"> {{propertynav.propertyAddress}} </span>
+
+<div class="btn-group  pull-right">
+<span class="fa fa-bars icon-20 text-gray pointer dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+
+  <ul class="dropdown-menu pull-right">
+    <li><a href="#">Copy to new SRF</a></li>
+    <li><a href="#">View Others</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Delete</a></li>
+  </ul>
+</div>
+    <p class="text-14">{{propertynav.propertyCity}} , {{propertynav.propertyState}} : {{propertynav.propertyZip}}</p>
+    </div>
+    <div class="top-margin">
+      <ul id="propertyulNavigation" class="nav nav-pills nav-stacked-lg" >
+        <li  ng-repeat="link in propertynav.links"><a class="pointer"  ng-click = "propertynav.ChangePropView(link)">{{link.featureName}}</a></li>
+
+
+      </ul>
+      <hr class="border-gray">
+      <div class="col-md-12 col-sm-12">
+        <button class="btn btn-md btn-primary pull-left" type="button"> Previous </button>
+        <button class="btn btn-md btn-primary pull-right" type="button"> Next </button>
+      </div>
+      <div class="clearfix"></div>
+     <hr class="border-gray">
+      <div class="col-md-12 col-sm-12 form-group text-center " >
+        <button class="btn btn-md btn-danger" type="button"> CANCEL POLICY CREATION </button>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+
+ <div class="col-md-9 col-lg-9 col-sm-9 panel-right ">
+            <h2 class="page-header"> Heading</h2>
+            <div ui-view=""></div>
+    </div>
+</div>
+</div>

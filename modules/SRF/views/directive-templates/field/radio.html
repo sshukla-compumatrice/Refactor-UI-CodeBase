@@ -1,0 +1,14 @@
+<div class=" " ng-show={{field.isVisible}} id={{field.fieldName}}>
+    <label for="{{field.fieldID}}">{{field.fieldLabel}}:<span
+        ng-show="field.isRequired && !field.fieldValue" class="reqText">*</span></label>
+    <div class="radio" ng-repeat="option in field.fieldOption">
+        <label for="{{option.option_name}}"> <input type="radio"
+            value="{{option.optionValue}}" dynamic-name="field.fieldName" id = {{field.fieldID}}
+            ng-model="field.fieldValue"
+            ng-checked="{{field.fieldValue.option_value == option.option_value}}"
+            ng-disabled="!field.isEditable" ng-required="field.isRequired"
+            ng-change="radiobtnClicked(value)" /> <span ng-bind="option.option_name"></span>
+        </label>
+    </div>
+</div>
+

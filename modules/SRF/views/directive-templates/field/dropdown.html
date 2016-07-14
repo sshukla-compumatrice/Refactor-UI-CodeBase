@@ -1,0 +1,13 @@
+<div class="form-group" ng-show={{field.isVisible}} show-errors>
+    <label for="{{field.fieldName}}" tooltip-placement="bottom"
+        tooltip={{field.tooltip[0].body}}>{{field.fieldLabel}}:<span
+        ng-show="field.isRequired && !field.fieldValue" class="reqText">*</span></label>
+    <select ng-model="field.fieldValue" isRequired={{field.isRequired}}
+        ng-disabled="!field.isEditable" ng-change="showHideOptions(field.fieldID,option)"
+        class="form-control" custom-validation="field.fieldValidator"
+        ng-required="field.required" dynamic-name="field.fieldName"
+        data-ng-options="option.option_name for option in field.fieldOption">
+        <option value="">Select {{field.fieldLabel}}</option>
+    </select>
+
+</div>

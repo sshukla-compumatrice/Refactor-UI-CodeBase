@@ -1,0 +1,178 @@
+<style type="text/css">
+
+.select2-container {
+  width: 300px;  
+}
+
+</style>
+<div ng-include src="'modules/HeaderAndFooter/views/policycreation_popup.html'">
+</div>
+
+<header ng-controller="HeaderController as header">
+    <div ng-include src="'modules/HeaderAndFooter/views/header.alert.html'"></div>
+    <nav id="EDRnav" role="navigation" class="navbar navbar-lg navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Collateral360</a>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">POLICIES <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a ng-repeat = "policy in  header.policiesType" redirect-to-specific-policy = {{policy}}> {{policy}} </a></li>
+                            
+                            
+                            <li>
+                                <button ng-click="header.redirectToCreatePolicy()" class="btn btn-default">CREATE NEW POLICY</button>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">REPORTS</a></li>
+                    <li><a href="#">VENDORS</a></li>
+                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">COMPANY <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Company Accounts</a></li>
+                            <li><a href="#">Supporting Documentation</a></li>
+                            <li><a href="#">Platform Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search" class="navbar-form ">
+
+                      <div class="pull-left"  rt-select2="select2Options" provider="loanListProvider"></div>
+                    <!--<div class="form-group lp-search navbar-search dropdown" >
+                        <div class="input-group input-group-bordered" id="loanSearchDiv">
+                        <input data-toggle="dropdown" type="text" class="form-control form-control-bordered input-md" placeholder="Search for Collateral"  ng-change="header.searchLoanRecords()" ng-model="header.loanToSearch" ng-click="header.recentSearchedLoans()" aria-describedby="loanSearchInstructions"></input>
+                        
+                        <span tabindex="0" role="button" data-trigger="focus"  data-toggle="popover" data-placement="bottom"
+       data-content="Click on the search box to see your recently viewed properties or start typing to search by borrower name, address, city, state, zip, county, application number or loan number." data-container="body"  class="input-group-addon addon-primary pointer" id="loanSearchInstructions"><i class="fa fa-info-circle fa-lg"></i></span>
+                        
+                        
+                       
+                        <ul id="dropdown-deafultloan" class="dropdown-menu dropdown-menu-bordered loanSearch" ng-show="header.defaultLoanView && header.recentLoanRecords.length > 0">
+                            
+
+                            <li  data-ng-repeat="record in header.recentLoanRecords">
+                                <a data-toggle="tab" ng-click="header.redirectToPropertyOverview(record)" class="pointer dropdownli">{{record.address}} - {{record.city}},  {{record.state}} {{record.zip}} : {{record.loanBorrower}}</a>
+                            </li>
+                            
+                        </ul>
+						
+						<ul infinite-scroll-loan="header.loadNextLoanRecords()" id="dropdown-loansearch" class="dropdown-menu dropdown-menu-bordered loanSearch"  infinite-scroll-distance='0' ng-show="header.searchLoanView && header.searchedLoanRecords.length > 0">
+						
+                                <li style="overflow: auto;"  ng-repeat="record in header.searchedLoanRecords">
+                                    <a data-toggle="tab" ng-click="header.redirectToPropertyOverview(record)" class="pointer dropdownli">{{record.address}} - {{record.city}},  {{record.state}} {{record.zip}} : {{record.loanBorrower}}</a>
+                                </li>
+                                <div ng-show='header.busy'>Loading data...</div>
+
+                            
+                            <div class="clearfix"></div>
+						</ul>
+                        
+                    <ul id="dropdown-loansearch" class="dropdown-menu dropdown-menu-bordered loanSearch" ng-show="header.noRecords">
+						
+                                <div>{{header.usermessage}}</div>
+
+                            
+						</ul>
+                    <ul id="dropdown-loansearch" class="dropdown-menu dropdown-menu-bordered loanSearch" ng-show="header.recordsLoader">
+						
+                                <div>Loading Data...</div>
+
+                            
+						</ul>
+                    </div>
+                    </div>-->
+
+                    
+                    <div class="form-group pull-right">
+                        <div class="dropdown userinfo ">
+                            <button class="btn btn-default dropdown-toggle " type="button" id="userDetails" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                user nameDropdown <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right " aria-labelledby="dropdownMenu1">
+                                <div class="signoutdiv">
+                                    <button type="button" class="btn btn-md btn-primary pull-right">
+                                        <i class="fa fa-sign-out icon-16 "></i>
+                                    </button>
+                                    <span>Lender Portal Training Company
+                                        <p>
+                                            <b> Office:</b> Headquarters
+                                        </p>
+                                    </span>
+                                </div>
+
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="fa fa-user icon-16"></i>
+                                        &nbsp; My account settings</a></li>
+                                <li><a href="#"><i class="fa fa-wrench icon-16"></i>&nbsp;Admin
+                                        tools</a></li>
+                                <li><a href="#"><i class="fa fa-exchange icon-16"></i>&nbsp;Portal
+                                        select</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+        <!----------------------------------------- breadcrumb -------------------------------------------------------->
+        <div class="container-fluid">
+            <div class="row">
+
+                <ul class="breadcrumb breadcrumb-inverse Margin-bottom-0 clearfix">
+                    <li><a>Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" id="branches" ng-click="header.searchCabinets()" role="button" data-toggle="dropdown">{{header.cabinetHeader}}<b
+                            class="caret"></b></a>
+
+                        <ul id="branches-dropdown" class="dropdown-menu">
+                            <li stop-propagation>
+                                <input class="form-control" ng-change="header.loadCabinetsToDropDown()" ng-model="header.cabinetName" type="text" />
+                            </li>
+
+                            <!--div to show items on first load and on scroll-->
+                            <div infinite-scroll='header.nextPage()'>
+                                <li data-ng-show="header.hideOnFilter" data-ng-repeat="item in header.items"><a data-toggle="tab" ng-click="header.loadCabinet(item)" class="pointer dropdownli">{{item.cabinetName}}</a>
+                                </li>
+                                <div ng-show='busy'>Loading data...</div>
+                            </div>
+                            <li stop-propagation>
+
+                                <div ng-show="(cabinets | filter:header.cabinetName).length == 0 && header.cabinetcount">No cabinets found</div>
+                            </li>
+
+                            <!--This li comes up after searching in dropdown-->
+                            <li data-ng-show="header.showOnFilter" data-ng-repeat="item in header.cabinets | filter:header.cabinetName">
+                                <a data-toggle="tab" href="" ng-click="header.loadCabinet(item)" class="pointer">{{item.cabinetName}}</a>
+                            </li>
+
+                        </ul> &nbsp;&nbsp; <span ng-show="header.cabinetSelected" id="clearCabinetSelection" class="glyphicon glyphicon-remove pointer" ng-click="header.clearCabinetFilter(); header.cabinetSelected = !header.cabinetSelected" title="Clear the cabinet selection"></span> <span class="divider">/</span>
+                    </li>
+                    <span class=" ">
+                        <button type="button" class="btn btn-xs btn-default"
+                            ng-click="header.manageCabinet()" ng-show="header.showManageBtn">MANAGE</button>
+                    </span>
+                    <!--<div breadcrumb ng-show="header.isHome"></div>-->
+                    
+                    
+                    <span class=" pull-right ">
+
+                        <button type="button" ng-click="header.createLoan()"
+                            class="btn btn-xm btn-success">CREATE LOAN</button>
+                    </span>
+
+                </ul>
+    </nav>
+    </div>
+    </div>
+
+
+
+</header>

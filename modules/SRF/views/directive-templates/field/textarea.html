@@ -1,0 +1,13 @@
+<div class="col-xs-12 col-lg-7 col-md-7 form-group dynamicdiv"
+	show-errors ng-show={{field.viewStatus}}>
+	<label for="{{field.fieldLabel}}"
+		class="control-label col-md-4  col-md-4 col-xs-12">{{field.fieldLabel}}:</label>
+	<div class="col-xs-12  col-sm-8 col-md-8">
+		<textarea class="form-control" type="text" ng-model="field.fieldValue"
+			id="{{field.fieldName}}" value="{{field.fieldValue}}"
+			dynamic-name="field.fieldName" ng-required="field.required"></textarea>
+
+	</div>
+</div>
+<span class="reqText" ng-show="field.required && !field.fieldValue">*</span>
+

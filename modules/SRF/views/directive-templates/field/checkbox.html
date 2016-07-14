@@ -1,0 +1,19 @@
+
+<div class="col-xs-12 col-lg-12 col-md-12  form-group">
+	<label for="{{field.fieldName}}"
+		class="control-label col-md-12 col-xs-12">{{field.fieldLabel}}:</label>
+
+	<div class="col-xs-12 col-lg-12 col-md-12" show-errors
+		ng-show={{field.viewStatus}}>
+
+		<div class="col-xs-12 col-md-3 col-sm-3"
+			ng-repeat="item in field.options">
+
+			<input ng-model="item.value"
+				ng-change="selectProperty(field,item,$index)" type="checkbox"
+				ng-true-value="1" ng-false-value="0" dynamic-name="field.fieldName"
+				ng-required="field.required" /> <span>{{item.name}}</span>
+		</div>
+
+	</div>
+</div>

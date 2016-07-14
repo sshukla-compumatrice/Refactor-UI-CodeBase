@@ -1,0 +1,60 @@
+<div ng-repeat="selectedPolicyParam in policyvalues.selectedParamFieldsDetails">
+    <h3 class="text-size-24">{{selectedPolicyParam.fieldLabel}}</h3>
+    
+    <div class="row" ng-if="selectedPolicyParam.fieldType == 'select'">
+        <div class="form-group">
+            <div class="col-md-6">
+                <div class="col-md-6" ng-repeat="fieldOption in selectedPolicyParam.fieldOptions">  
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="fieldOption">
+                        {{fieldOption}}
+                      </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="selectedPolicyParam.fieldType == 'Currency' || selectedPolicyParam.fieldType == 'Number'">
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+                <label for="startingrangevalue">Starting range value</label>
+            </div> 
+
+            <div class="col-md-4 col-lg-4">
+                <label for="endingrangevalue">Ending range value</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <form class="form-inline">
+                <div class="col-md-4 col-lg-4">
+                     <div class="form-group txt-width">
+                        <label class="sr-only" for="startingrangevalue">Starting range value</label>
+                        <input type="text" class="form-control txt-width" id="startingrangevalue">
+                     </div>
+                </div>
+                <span class="pull-left">-</span>
+                <div class="col-md-4 col-lg-4">
+                    <div class="form-group txt-width">
+                        <label class="sr-only" for="endingrangevalue">Ending range value</label>
+                        <input type="text" class="form-control txt-width" id="endingrangevalue">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="top-margin">
+            <button type="button" add-range-textbox class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Add additional range</button>
+        </div>
+    </div>
+    
+    <div class="row" ng-if="selectedPolicyParam.fieldType == 'String'">
+        <div class="col-md-4 col-lg-4">
+            <div class="form-group txt-width">
+                <label class="sr-only" for="endingrangevalue">Ending range value</label>
+                <input type="text" class="form-control txt-width">
+            </div>
+        </div>   
+    </div>
+</div>

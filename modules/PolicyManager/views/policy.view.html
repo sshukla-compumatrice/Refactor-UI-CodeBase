@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-3 margin-padding-0 bg-gray panel-left">
+
+            <div class="top-margin">
+                <ul id="ulnavigation" class="nav nav-pills nav-stacked-lg matrix-nav">
+                    <li view-policy-active-class="{{policy.policyType}}" ng-class="" ng-repeat="policy in policyNamesType">
+                        <a href="" ng-click="redirectToPolicy(policy.policyType);">{{policy.policyName}}
+               <span class="text-small text-capitalize">Type: {{policy.policyType}}</span>
+               
+                                          
+                            
+            </a>
+                    </li>
+
+
+
+                </ul>
+
+                <div class="clearfix"></div>
+                <hr class="border-gray">
+                <div class="col-md-12 col-sm-12 text-center ">
+                    <button ng-click="policyview.redirectToCreatePolicy()" class="btn btn-md btn-success" type="button"> CREATE NEW POLICY</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-9 col-sm-9 panel-right">
+            <h2 class="page-header">POLICY MATRIX</h2>
+            <!--          <pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>-->
+            <table id="tblPolicyView" class="table table-striped vert-align">
+                <thead>
+                    <tr>
+                        <th ng-repeat="rows in policyMatrixData[0]">{{rows.fieldName}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ng-repeat="rows in policyMatrixData">
+                        <td ng-repeat="columns in rows | orderBy:orderByField : reverseSort">
+                            {{columns.fieldValue}}
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+
+            <br/>
+            <br/>
+
+            <div class="page-footer clearfix">
+
+
+                <div class="pull-right">
+                    <button class="btn btn-primary" role="button">edit policy</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

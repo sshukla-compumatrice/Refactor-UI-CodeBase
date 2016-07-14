@@ -1,0 +1,83 @@
+<script type="text/ng-template" id="alertpopup.html">
+
+    <div class="modal-body">
+
+        <div class="alert alert-danger"  role="alert">
+            <span class="alert-link">Are you sure you want to delete this cabinet?</span>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="deletealert.cancelDeletion()">No</button>
+        <button type="submit" class="btn btn-primary" ng-click="deletealert.deleteCabinet()">Yes</button>
+    </div>
+</script>
+
+<div class="container-fluid">
+
+    <h2 class="page-header">MANAGE CABINET</h2>
+    <div class="alert alert-dismissible" role="alert" id="serviceResponseDiv"
+        ng-show="managecabinet.serviceResponseAlert">
+        <button type="button" class="close"
+            ng-click="managecabinet.closeWarning()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{managecabinet.serviceResponseText}}
+    </div>
+    <div class="alert alert-info" ng-show = "managecabinet.cabinetDeleted">Cabinet Deleted</div>
+    <div class="row " ng-show = "!managecabinet.cabinetDeleted">
+        <div class="col-md-6 col-sm-6 col-lg-6 ">
+            <form name="managecabinet.managecabinetform" role="form" novalidate>
+                <div class="form-group" ng-show="managecabinet.default">
+                    <button class="btn btn-md btn-danger" type="button"
+                        ng-click=" managecabinet.cancelEdit();">
+                        <i class="fa fa-times"></i> Cancel
+                    </button>
+                    <button class="btn btn-md btn-default" type="button"
+                        ng-click="managecabinet.saveEdit();">
+                        <i class="fa fa-floppy-o"></i> Save
+                    </button>
+                </div>
+                <div class="form-group" ng-show="!managecabinet.default">
+                    <button class="btn btn-md btn-default" type="button" ng-disabled = "managecabinet.emptyModal()"
+                        ng-click="managecabinet.editCabinetDetails();">
+                        <i class="fa fa-pencil"></i> Edit
+                    </button>
+                    <button class="btn btn-md btn-danger" type="button" ng-disabled = "managecabinet.emptyModal()"
+                        ng-click="managecabinet.deletePopUp()">
+                        <i class="fa fa-times"></i> Delete
+                    </button>
+                </div>
+                <div class="row form-group" show-errors>
+                    <label for="txtcabinetname" class="col-md-4 col-sm-4 col-xs-12  ">Cabinet
+                        Name:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" class="form-control"
+                            ng-disabled="!managecabinet.edit"
+                            ng-model="managecabinet.cabinetName" name="txtcabinetName"
+                            required />
+                    </div>
+                </div>
+                <div class="row form-group" show-errors>
+                    <label for="txtcabinetemail" class="col-md-4  col-sm-4 col-xs-12 ">Monitoring
+                        Alert Emails:</label>
+                    <div class="col-md-8 col-sm-8 col-xs-12" id="cabinetemail">
+                        <textarea rows="5" class="form-control"
+                            ng-disabled="!managecabinet.edit" ng-show="!managecabinet.edit"
+                            ng-model="managecabinet.prefilledEmails"></textarea>
+                        <input id="emailTypeahead" placeholder="Select Email"
+                            ng-show="managecabinet.edit" custom-action diremail="{{email}}"
+                            type="email" class="form-control" ng-model="email"
+                            name="txtcabinetemail"
+                            typeahead="email for email in emails | filter:$viewValue"
+                            typeahead-on-select="managecabinet.selectEmail()"
+                            ng-disabled="!managecabinet.edit" />
+                    </div>
+                </div>
+                <div class="cabinetemaildiv top-margin"></div>
+        </form>
+                
+                </div>
+    </div>
+    
+
+</div>

@@ -1,0 +1,25 @@
+
+<div action-events class="modal modal-priority-alert fade in"
+	id="createPolicyCancel">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon">
+					<i class="fa fa-exclamation-triangle"></i>
+				</div>
+				<!--<h4 class="modal-title">Oh No.</h4>-->
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					<p class="lead">Canceling creation of your policy will permanently remove it from platform and cannot be undone.</b></p>
+					<p class="lead">Would you like to cancel policy creation?</p>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+                <a class="pull-right btn btn-default" data-dismiss="modal">No</a>
+				<a class="pull-right btn btn-default" data-dismiss="modal" ng-click="policynav.acceptCancelPolicyCreation()">Yes</a>  
+			</div>
+		</div>
+	</div>
+</div>

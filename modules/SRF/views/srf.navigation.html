@@ -1,0 +1,49 @@
+
+
+<div ng-include src="'modules/SRF/views/srf.alert.html'"></div>
+<div class="container-fluid">
+	<div class="row ">
+		<div
+			class="col-md-3 col-lg-3 col-sm-3 margin-padding-0 bg-gray panel-left">
+			<div class="box-dark-gray">
+				<span class="text-24"> CREATING NEW LOAN </span>
+			</div>
+			<div class="top-margin">
+				<ul id="srfulSectionNavigation" class="nav nav-pills nav-stacked-lg">
+
+
+					<li id="leftnavChooseCabinet" role="presentation"
+						ng-click="srfnav.chooseCabinet()" active-class-sectional-view
+						title="" class="active"><a> STEP 1: CHOOSE CABINET </a></li>
+
+					<li id="leftnav{{tab.tabTitle}}" class="disabled"
+						active-class-sectional-view title="{{tab.tabTitle}}"
+						ng-click="srfnav.navLinkClicked(tab.tabTitle)"
+						ng-repeat="tab in srfnav.form.tabsArray" role="presentation"><a>STEP
+							{{$index+2}}: {{tab.tabTitle}} </a></li>
+				</ul>
+				<hr>
+				<div class="col-md-12 col-sm-12">
+					<button shift-previous id="srfPreviousBtn"
+						class="btn btn-md btn-primary pull-left"
+						ng-click="srfnav.srfPreviousBtn()" type="button">
+						Previous</button>
+					<button shift-next id="srfNextBtn" ng-click="srfnav.srfNextBtn()"
+						class="btn btn-md btn-primary pull-right" type="button">
+						{{srfnav.srfNextBtnText}}</button>
+				</div>
+				<div class="clearfix"></div>
+				<hr class="border-gray">
+				<div class="col-md-12 col-sm-12 form-group text-center">
+					<button class="btn btn-md btn-danger" type="button">
+						CANCEL LOAN CREATION</button>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="col-md-9 col-lg-9 col-sm-9 panel-right ">
+			<h2 class="page-header">Create Loan</h2>
+			<div ui-view=""></div>
+		</div>
+	</div>
+</div>

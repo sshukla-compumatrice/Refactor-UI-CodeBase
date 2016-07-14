@@ -1,0 +1,81 @@
+
+    
+<div class="container-fluid">
+    <div class="row padding-5">
+        <br>
+    <div class="alert alert-info" ng-show = "dashboard.alert">{{dashboard.message}}</div>
+    
+    <br>
+    <ul class="nav nav-tabs dashboard-tab">
+        <li class="active"><a href="#openOrders" data-name="openOrders" data-toggle="tab">Open (119)</a></li>
+        <li><a href="#closedTab" data-name="closedTab" data-toggle="tab">Closed (4)</a></li>
+        <li><a href="#dueDates" data-name="dueDates" data-toggle="tab">Upcoming Due Dates (6)</a></li>
+        <li><a href="#openBids" data-name="openBids" data-toggle="tab">Open Bids (1)</a></li>
+        <li><a href="#awardedBids" data-name="awardedBids" data-toggle="tab">Awarded Bids (0)</a></li>
+        <li><a href="#acceptedAwards" data-name="acceptedAwards" data-toggle="tab">Accepted Awards (18)</a></li>
+        <li><a href="#serviceRequest" data-name="serviceRequest" data-toggle="tab">Draft Service Request (0)</a></li>
+    </ul>
+
+    <div id="openOrders" class="tab-pane active">
+        <div class="tab-header">
+            
+                <div class="btn-group">
+                    <button class="btn btn-default btn-mini btn-xs dropdown-toggle settings-button" 
+                            aria-haspopup="true" aria-expanded="false" 
+                            id="openOrdersSettingsButton" ng-click="dashboard.settings()"
+                            data-toggle="dropdown"><i class="fa fa-cog"></i> 
+                        Settings <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a items="dashboard.columns" href="#"
+                               
+                               class="column-settings cursor-pointer">
+                            <i class="icon-eye-close"></i> Show / hide columns</a></li>
+                        <li><a href="#openOrders" class="save-columns" ng-click="dashboard.saveTableState();"
+><i class="icon-save"></i> Save table state</a></li>
+                        <li><a href="#openOrders" class="clear-column-settings" ng-click="dashboard.clearTableState();"><i class="icon-ban-circle"></i> Clear saved settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-mini btn-xs btn-default" id="expandAll" expand-currentview type="button">
+                        <i class="fa fa-plus-square-o fa-lg"></i> Expand all groups </button>
+                </div>
+                <nbsp></nbsp>
+                <div class="btn-group collapseBtnDiv">
+                    <button class="btn btn-mini btn-xs btn-default" id="collapseAll" href="#" collapse-currentview><i class="fa fa-minus-square-o fa-lg"></i> Collapse all groups </button>
+                </div>
+                <div class="btn-group" id="openOrders-actions">
+                    <button class="btn btn-mini btn-xs dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="icon-signin"></i> Actions <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li> Move loan files</li>
+                        <li>Delete selected locations</li> </ul>
+                </div>
+            
+        </div>
+        <table id="table_id" class="table table-bordered table-condensend table-hover table-header-shaded table-striped small" width="100%">
+            <thead>
+                <tr class="dataTableRow">
+                    <th></th>
+                    <th  ng-repeat="header in dashboard.headers">{{header.name}}</th>
+                                      
+                </tr>
+                
+                <tr class="filterrow" role="row">
+                    <th class="bg-white"></th>
+                    <th on-finish-render-row = "{{header.name}}" ng-repeat="header in dashboard.headers" class="font-normal bg-white" >{{header.name}}</th>
+                    
+            </tr>
+            </thead>
+
+           
+           
+
+            
+           
+            
+        </table>
+    </div>
+    <br>
+    <br>
+</div>
+</div>    

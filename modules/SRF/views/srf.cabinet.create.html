@@ -1,0 +1,102 @@
+<!-- STEP 1: CHOOSE CABINET start -->
+
+<h6 class="table-H-label">Please select the cabinet that you would
+    like to add the loan to, or create a new cabinet.</h6>
+<div class="alert alert-danger alert-dismissible" role="alert" id="srfCabinetInfo"
+    ng-show="srfcabinet.createCabinetFailed">
+    <button type="button" class="close"
+        ng-click="srfcabinet.closeWarning()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Warning!</strong> {{srfcabinet.serviceErrorMsg}}
+</div>
+<div class="row">
+
+    <div class="col-md-6 col-sm-6 col-lg-6 border-right text-center">
+        <img class="creatloan-icon " src="images/newloan.png" alt="newloan">
+        <p class="text-30">
+            <a class="decoration-n  text-green pointer"
+                ng-click="srfcabinet.showExistingCabinet()"> Add a new Loan to
+                an Existing Cabinet</a>
+        </p>
+        <div class="newloanresults" ng-show="srfcabinet.existingCabinet">
+            <p>You can search for an existing cabinet by typing it's name in
+                the box below. Matching results will be shown. When you find the
+                cabinet you want to modify select it and click continue.</p>
+            <form role="form" name="srfcabinet.existingCabinetForm" class=""
+                novalidate>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <div class="input-group stylish-input-group  dropup " show-errors>
+                                <div class="dropdown">
+                                    <button id="srfExistingCabinet" type="button"
+                                        placeholder="Choose cabinet"
+                                        class="form-control dropdown-toggle btn btn-md btn-default"
+                                        ng-bind="srfcabinet.selectedCabinet" role="button"
+                                        data-toggle="dropdown" required name="existingCabinet">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li stop-propagation>
+                                            <div class="right-inner-addon ">
+                                                <i class="fa fa-search"></i> <input type="search"
+                                                    ng-model="CabinetName" class="form-control"
+                                                    placeholder="Search" />
+                                            </div>
+                                        </li>
+
+                                        <li stop-propagation>
+                                            <div ng-show="(cabinets | filter:cabinetName).length == 0">No
+                                                cabinets found</div>
+                                        </li>
+                                        <li data-ng-repeat="item in cabinets | filter:cabinetName">
+                                            <a data-toggle="tab"
+                                            ng-click="srfcabinet.filterCabinet(item)"
+                                            class="pointer dropdownli">{{item.cabinetName}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <span class="input-group-btn ">
+                                    <button type="submit" class="btn btn-md btn-primary"
+                                        ng-click="srfcabinet.selectExistingCabinet(srfcabinet.existingCabinetForm)">
+                                        Continue</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 text-center">
+        <img class="creatloan-icon " src="images/newcabinet.png"
+            alt="newcabinet">
+        <p class="text-30">
+            <a class="decoration-n text-green pointer"
+                ng-click="srfcabinet.showNewCabinet()">Create a new Cabinet</a>
+        </p>
+        <div class="newcabinetresults" ng-show="srfcabinet.newCabinet">
+            <p>Your new cabinet needs a name, so that you can easily
+                distinguish it later. Enter one now.</p>
+            <form name="srfcabinet.newCabinetForm" role="form" class=""
+                novalidate>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <div class="input-group" show-errors>
+                                <input type="text" class="form-control" name="createCabinet"
+                                    ng-model="srfcabinet.newCabinetName" required /> <span
+                                    class="input-group-btn">
+                                    <button type="submit" class="btn btn-md btn-primary"
+                                        ng-click="srfcabinet.createNewCabinet(srfcabinet.newCabinetForm)">
+                                        Continue</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>
