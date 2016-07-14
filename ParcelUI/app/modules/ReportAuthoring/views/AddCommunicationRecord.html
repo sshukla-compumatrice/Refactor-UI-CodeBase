@@ -1,0 +1,64 @@
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="appendixTool.cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Add Communication Record</h4>
+</div>
+
+<div class="modal-body">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="name" ng-model="appendixTool.data.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="affiliation" class="col-sm-2 control-label">Affiliation:</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="affiliation" ng-model="appendixTool.data.affiliation">
+                    <option></option>
+                    <option>Owner</option>
+                    <option>Site Manager</option>
+                    <option>Client</option>
+                    <option>Occupant</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="telephone" class="col-sm-2 control-label">Telephone#:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="telephone" ng-model="appendixTool.data.telephone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="conversationdate" class="col-sm-2 control-label">Conversation Date:</label>
+            <div class="col-sm-4">
+              
+				<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="conversationdate" name="conversationdate"  type="text" class="form-control"  ng-model="appendixTool.data.conversationDate"required >
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="re" class="col-sm-2 control-label">RE:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="re" ng-model="appendixTool.data.re">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comments" class="col-sm-2 control-label">Comments:</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="4" id="comments" ng-model="appendixTool.data.comments"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="submit" class="btn btn-md btn-default" ng-click="appendixTool.cancel()">Cancel</button>
+    <button type="submit" class="btn btn-md btn-primary">Save Record</button>
+</div>

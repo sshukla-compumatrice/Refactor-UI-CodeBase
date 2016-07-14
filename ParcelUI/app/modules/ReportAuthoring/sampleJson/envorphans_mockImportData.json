@@ -1,0 +1,95 @@
+{
+	"Structure":[		
+		{
+			"label": "Database(s)",
+			"columnIndex": 1
+		},{
+			"label": "Facility Name",
+			"columnIndex": 2
+		},{
+			"label": "Address",
+			"columnIndex": 3
+		},{
+			"label": "City",
+			"columnIndex": 4
+		},{
+			"label": "State",
+			"columnIndex": 5
+		},{
+			"label": "ZIPCODE",
+			"columnIndex": 6
+		}
+	],
+	"data" : [{
+			"Database(s)" : "SHWS",
+			"Facility Name" : "FRENCH, LTD.",
+			"Address" : "SAN JACINTO RIVER CROSSING",
+			"City" : "CROSBY",
+			"State" : "",
+			"ZIPCODE" : "77532"
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "EXXON 64745",
+			"Address" : "2203 HWY 90 & FM 2100",
+			"City" : "CROSBYTON",
+			"State" : "",
+			"ZIPCODE" : "77532"
+		}, {
+			"Database(s)" : "CLI",
+			"Facility Name" : "CITY OF SOUTH HOUSTON",
+			"Address" : "913 AMARILLO SOUTH HOUSTON",
+			"City" : "HARRIS COUNTY",
+			"State" : "",
+			"ZIPCODE" : "77049"
+		}, {
+			"Database(s)" : "SHWS",
+			"Facility Name" : "HIGHLANDS ACID PIT",
+			"Address" : "611 BATTLEBELL - CLEAR LAKE RO",
+			"City" : "HIGHLANDS",
+			"State" : "",
+			"ZIPCODE" : "77562"
+		}, {
+			"Database(s)" : "SEMS",
+			"Facility Name" : "NORTH HIGHLANDS GROUNDWATER",
+			"Address" : "N. MAIN ST. & HIGHLAND SHORES",
+			"City" : "HIGHLANDS",
+			"State" : "",
+			"ZIPCODE" : "77562"
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "DIAMOND SHAMROCK",
+			"Address" : "HWY 290 CYPRESS",
+			"City" : "HOUSTON",
+			"State" : "",
+			"ZIPCODE" : ""
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "ENVIRONMENTAL IMPACT",
+			"Address" : "CLAY BARKER CYPRESS RD",
+			"City" : "HOUSTON",
+			"State" : "",
+			"ZIPCODE" : ""
+		}, {
+			"Database(s)" : "SWF/LF",
+			"Facility Name" : "URS GREINER WOODWARD ENCLOSED STRU",
+			"Address" : "CLOSED HOLMES ROAD LANDFILL IN",
+			"City" : "HOUSTON",
+			"State" : "",
+			"ZIPCODE" : ""
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "HOUSTON FIRE MUSEUM",
+			"Address" : "W CORNER MAIN HADLY",
+			"City" : "HOUSTON",
+			"State" : "",
+			"ZIPCODE" : ""
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "WINGATE PROPERTY",
+			"Address" : "7200 WINGATE ST ,HOUSTON, TX",
+			"City" : "HOUSTON",
+			"State" : "",
+			"ZIPCODE" : ""
+		}
+	]
+}

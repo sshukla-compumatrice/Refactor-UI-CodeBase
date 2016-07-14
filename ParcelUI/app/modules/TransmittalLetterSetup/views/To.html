@@ -1,0 +1,142 @@
+ 
+<div class="checkbox">
+    <label>
+     <h4> <input type="checkbox" name="toIncluded" value="1" checked=""> To</h4>
+    </label>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 ">
+        <div class="form-group">
+            <label for="toFont" class="control-label">Font:</label>
+            <select id="toFont" class="form-control" ng-model="transSetup.cssData['to']['font-family']">
+                <option>Arial</option>
+                <option>Helvetica</option>
+                <option>Times</option>
+                <option>Times New Roman</option>
+                <option>Book Antiqua</option>
+                <option>Arial Narrow</option>
+                <option>Verdana</option>
+                <option>Calibri</option>
+                <option>Cambria</option>
+                <option>Century Gothic</option>
+                <option>Garamond</option>
+                <option>Tahoma</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 ">
+        <div class="form-group">
+            <label for="toFontSize" class="control-label">Font Size:</label>
+            <select id="toFontSize" class="form-control" ng-model="transSetup.cssData['to']['font-size']">
+                <option value="8px">8</option>
+                <option value="9px">9</option>
+                <option value="10px">10</option>
+                <option value="11px">11</option>
+                <option value="12px">12</option>
+                <option value="13px">13</option>
+                <option value="14px">14</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 ">
+        <div class="form-group">
+            <label for="toFontStyle" class="control-label">Font Style:</label>
+            <select id="toFontStyle" class="form-control" ng-model="transSetup.cssData['to'].style">
+                <option value="B" selected="">Bold</option>
+                <option value="I">Italic</option>
+                <option value="U">Underline</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="prependData" class="control-label">
+            Prepend Data:
+        </label>
+        <select id="prependData" name="prependData" class="form-control" ng-model="transSetup.jsonData.to.prependData">
+            <option value="">Add Prepend Data...</option>
+            <option value="{projname}">Project Name from General Information</option>
+            <option value="{projnumber}">Project Number from General Information</option>
+            <option value="{propnumber}">Property Number</option>
+            <option value="{siteName}">Site Name from General Information</option>
+            <option value="{siteAddress}">Site Address from General Information</option>
+            <option value="{siteCity}">Site City from General Information</option>
+            <option value="{siteCounty}">Site County from General Information</option>
+            <option value="{siteState}">Site State from General Information</option>
+            <option value="{clientName}">Client Name from General Information</option>
+            <option value="{clientContact}">Client Contact from General Information</option>
+            <option value="{clientAddress}">Client Address from General Information</option>
+            <option value="{clientCity}">Client City from General Information</option>
+            <option value="{clientState}">Client State from General Information</option>
+            <option value="{clientZip}">Client Zip from General Information</option>
+            <option value="{generationdate}">Date of Report Generation</option>
+            <option value="{longgenerationdate}">Long Date of Report Generation</option>
+            <option value="{reportdate}">Report Date from General Information</option>
+            <option value="{longreportdate}">Long Report Date from General Information</option>
+        </select>
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+    <div class="form-group">        
+        <textarea name="toPrependData" rows="10" cols="80" class="form-control" ng-model="transSetup.jsonData.to.prependDataVal">
+            {clientContact} {clientName} {clientAddress} {clientCity}, {clientState} {clientZip} Re: Environmental Site Assessment, Phase I {projname} {siteAddress} {siteCity}, {siteState}
+        </textarea>
+    </div>
+    </div>
+</div>    
+
+<div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+        <div class="form-group">
+            <label for="appendData" class="control-label">
+                Append Data:
+            </label>
+            <select id="appendData" name="appendData" class="form-control" ng-model="transSetup.jsonData.to.appendData">
+                <option value="">Add Append Data...</option>
+                <option value="{projname}">Project Name from General Information</option>
+                <option value="{projnumber}">Project Number from General Information</option>
+                <option value="{propnumber}">Property Number</option>
+                <option value="{siteName}">Site Name from General Information</option>
+                <option value="{siteAddress}">Site Address from General Information</option>
+                <option value="{siteCity}">Site City from General Information</option>
+                <option value="{siteCounty}">Site County from General Information</option>
+                <option value="{siteState}">Site State from General Information</option>
+                <option value="{clientName}">Client Name from General Information</option>
+                <option value="{clientContact}">Client Contact from General Information</option>
+                <option value="{clientAddress}">Client Address from General Information</option>
+                <option value="{clientCity}">Client City from General Information</option>
+                <option value="{clientState}">Client State from General Information</option>
+                <option value="{clientZip}">Client Zip from General Information</option>
+                <option value="{generationdate}">Date of Report Generation</option>
+                <option value="{longgenerationdate}">Long Date of Report Generation</option>
+                <option value="{reportdate}">Report Date from General Information</option>
+                <option value="{longreportdate}">Long Report Date from General Information</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+        <div class="form-group">
+            <label for="linesAfterTo" class="control-label">
+                Lines after to:
+            </label>
+            <select id="linesAfterTo" name="linesAfterTo" class="form-control" ng-model="transSetup.jsonData.to.linesAfterTo">
+                <option>0</option>
+                <option>1</option>
+                <option selected="">2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+    </div>
+</div>
+</div>

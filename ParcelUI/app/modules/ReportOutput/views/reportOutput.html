@@ -1,0 +1,17 @@
+ 
+<!-- controller: reportOutputController as reportOutput -->
+<div>
+    <div ng-repeat="section in reportOutput.sections">
+    </div>
+    <div class="">
+        <div ng-repeat="sec in reportOutput.sections" replace-data="sec">
+            <div class='boxCK'>
+                <span class='editCK'>edit</span>
+                <div ck-editor remove-ck-plugin="saveReportWritingCkData" class='textCK' editor-height="700" editor-full-page="true">
+                    <div add-html id="section_{{sec.sectionID}}" resp="sec" obj="ck.obj">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

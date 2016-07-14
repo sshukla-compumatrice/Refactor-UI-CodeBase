@@ -1,0 +1,50 @@
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+	<div class="panel-body">
+    <a href="" ui-sref="biddersArea" class="pointer btn btn-primary">Bidders Area</a>
+ 
+  <h2 class="page-header">Direct Awards and Bids</h2>
+    
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
+                
+                    <ul class="nav nav-tabs" ng-init="biddingSelected = 'NewRequests';">
+                        <li role="presentation" class="active"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'NewRequests';NewRequestTabClicked()" aria-controls="newRequests" role="tab" data-toggle="tab">New Requests</a></li>
+                        <li role="presentation"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'Submitted';" aria-controls="submitted" role="tab" data-toggle="tab">Submitted</a></li>
+                        <li role="presentation"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'RejectedAndLost';" aria-controls="rejectedAndLost" role="tab" data-toggle="tab">Rejected And Lost</a></li>
+                        <li role="presentation"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'AwaitingAcceptance';" aria-controls="awaitingAcceptance" role="tab" data-toggle="tab">Awaiting Acceptance</a></li>
+                        <li role="presentation"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'AllProjects';" aria-controls="allProjects" role="tab" data-toggle="tab">All Projects</a></li>
+                        <li role="presentation"><a data-trigger="focus" class="pointer" ng-click="biddingSelected = 'AllFinalProjects';" aria-controls="allFinalProjects" role="tab" data-toggle="tab">All Final Projects</a></li>
+                    </ul>
+                
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <div ng-switch on="biddingSelected">
+                <div ng-switch-when="NewRequests" id="newRequests">
+                    <div ng-include src="'app/modules/Bidding/views/NewRequest.html'"></div>
+                </div>
+                <div ng-switch-when="Submitted" id="submitted">
+                    <div ng-include src="'app/modules/Bidding/views/Submitted.html'"></div>
+                </div>
+                <div ng-switch-when="RejectedAndLost" id="rejectedAndLost">
+                    <div ng-include src="'app/modules/Bidding/views/RejectedAndLost.html'"></div>
+                </div>
+                <div ng-switch-when="AwaitingAcceptance" id="awaitingAcceptance">
+                    <div ng-include src="'app/modules/Bidding/views/AwaitingAcceptance.html'"></div>
+                </div>
+                <div ng-switch-when="AllProjects" id="allProjects">
+                    <div ng-include src="'app/modules/Bidding/views/AllProjects.html'"></div>
+                </div>
+                <div ng-switch-when="AllFinalProjects" id="allFinalProjects">
+                    <div ng-include src="'app/modules/Bidding/views/AllFinalProjects.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>	
+	</div>
+</div>

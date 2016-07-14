@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+
+    <div ng-controller="LenderUploadedSitesReportSelectionCtrl as reportSelection">
+        <h4 class="headingmain"> Upload Spreadsheet Option - Template Selection</h4>
+
+        <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="reportSelection.serviceResponseAlert">
+            <button type="button" class="close" ng-click="reportSelection.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{reportSelection.serviceResponseText}}
+        </div>
+
+        <div class="">
+            <form name="feeInformationForm" class="form-horizontal">
+
+
+
+                <table class="table table-condensed  table-bordered table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>Address</th>
+                            <th>Transaction Type</th>
+                            <th>Report Requested</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="location in reportSelection.data.locations">
+                            <td>
+                                {{location.address1}}
+                            </td>
+                            <td>
+                                <select class="form-control " data-ng-options="transactionType.transactionTypeGUID as transactionType.transactionTypeName for transactionType in lenderPortfolio.loadData.transactionTypes" ng-model="location.transactionTypeGUID">
+                                    <option value="">*** Select one from the list ***</option>
+                                </select>
+                            </td>
+                            <td>
+                                <multiselect class="input-xlarge" multiple="true" ng-model="location.reports" options="template as template.name for template in lenderPortfolio.loadData.templates"></multiselect>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+ 
+<div class="checkbox">
+    <label>
+     <h4><input type="checkbox" name="signatureIncluded" value="1" checked="">Signature</h4>
+    </label>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="signatureFont" class="control-label">Font:</label>
+        <select id="signatureFont" class="form-control">
+            <option>Arial</option>
+            <option>Helvetica</option>
+            <option>Times</option>
+            <option>Times New Roman</option>
+            <option>Book Antiqua</option>
+            <option>Arial Narrow</option>
+            <option>Verdana</option>
+            <option>Calibri</option>
+            <option>Cambria</option>
+            <option>Century Gothic</option>
+            <option>Garamond</option>
+            <option>Tahoma</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="signatureFontSize" class="control-label">Font Size:</label>
+        <select id="signatureFontSize" class="form-control">
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option selected="">12</option>
+            <option>13</option>
+            <option>14</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="signatureFontStyle" class="control-label">Font Style:</label>
+        <select id="signatureFontStyle" class="form-control">
+            <option value="B" selected="">Bold</option>
+            <option value="I">Italic</option>
+            <option value="U">Underline</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="signatureAlign" class="control-label">
+            Align:
+        </label>
+        <select id="signatureAlign" name="align" class="form-control">
+            <option value="L" selected="">Left</option>
+            <option value="C">Center</option>
+            <option value="R">Right</option>
+        </select>
+    </div>
+    </div> 
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="signatureOptions" class="control-label">
+            Options:
+        </label>
+        <select id="signatureOptions" name="option" class="form-control">
+            <option value="">Add Signature...</option>
+            <option value="{compname}">Your Company's Name</option>
+            <option value="{credo}">Your Company's Credo</option>
+            <option value="{image}">Upload an Image</option>
+            <option value="{consultAddress}">Consultant Address from General Information</option>
+            <option value="{consultCity}">Consultant City from General Information</option>
+            <option value="{consultState}">Consultant State from General Information</option>
+            <option value="{consultZip}">Consultant Zip from General Information</option>
+            <option value="{consultPhone}">Consultant Phone # from General Information</option>
+            <option value="{consultFax}">Consultant Fax # from General Information</option>
+            <option value="{digitally_signed}">Signature Image</option>
+        </select>
+    </div>
+    </div>
+</div>  
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <textarea name="signature" rows="5" cols="30" class="form-control"></textarea>
+    </div>
+    </div>
+</div>
+
+        <p>The transmittal letter can have up to 2 signatures. Each signature will use the settings from the left, but these are additional per signature settings. Note that these settings are in hierarchical order. (I.E. If "Use Reviewer Signature" is set to "Signature #1", then Signature #1 will ignore the settings for "Use Assessor Signature" and "Use Signer".</p>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="useReviewerSignature" class="control-label">
+            Use Reviewer Signature:
+        </label>
+        <select id="useReviewerSignature" class="form-control">
+            <option value="0" selected="">None</option>
+            <option value="1">Signature #1</option>
+            <option value="2">Signature #2</option>
+        </select>
+    </div>
+    </div>
+    
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="useAssessorSignature" class="control-label">
+            Use Assessor Signature:
+        </label>
+        <select id="useAssessorSignature" class="form-control">
+            <option value="0" selected="">None</option>
+            <option value="1">Signature #1</option>
+            <option value="2">Signature #2</option>
+        </select>
+    </div>
+    </div>
+    
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="useSigner" class="control-label">
+            Use Signer:
+        </label>
+        <select id="useSigner" class="form-control">
+            <option value="0" selected="">None</option>
+            <option value="1">Signature #1</option>
+            <option value="2">Signature #2</option>
+            <option value="2">Both</option>
+        </select>
+    </div>
+    </div> 
+</div>
+        <p>To use the exact signatures from the General Information section, select an option from the dropdown below. This will override all existing signature settings on the transmittal letter.</p>
+    
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="useGeneralInformationSignatures" class="control-label">
+            Use General Information Signatures:
+        </label>
+        <select id="useGeneralInformationSignatures" class="form-control">
+            <option value="">None</option>
+            <option value="print_CoalescePMSigs">print_CoalescePMSigs</option>
+            <option value="print_FirstSigOnly">print_FirstSigOnly</option>
+            <option value="print_FirstSigOnlyNoCompany">print_FirstSigOnlyNoCompany</option>
+            <option value="print_FirstSignOnlyNoTitle">print_FirstSignOnlyNoTitle</option>
+            <option value="print_PMSigsOnly">print_PMSigsOnly</option>
+            <option value="print_PMSigsOnlyNoTitle">print_PMSigsOnlyNoTitle</option>
+            <option value="printTLDynamicSigsHorizontal">printTLDynamicSigsHorizontal</option>
+            <option value="printTLDynamicSigsVertical">printTLDynamicSigsVertical</option>
+        </select>
+    </div>
+    </div> 
+</div>

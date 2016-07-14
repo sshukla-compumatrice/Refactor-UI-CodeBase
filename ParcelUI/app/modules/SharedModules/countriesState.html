@@ -1,0 +1,24 @@
+<div class="form-group required" show-errors>
+    <label ng-class="addCountryLabelClass()" for="country">
+        Country:
+    </label>
+    <div ng-class="addCountryDivClass()">
+        <select class="form-control" id="country" type="select" ng-options="countryObj.name for countryObj in ngModel" name="country" ng-model="country" ng-change="getCountryStates()" required>
+            <option value="">Select Country</option>
+        </select>
+    </div>
+    
+</div>
+<div class="form-group required" show-errors>
+    <label ng-class="addStateLabelClass()" for="state">
+        State:
+    </label>
+    <div ng-class="addStateDivClass()">
+        <select class="form-control" id="stateDropDown" type="select" ng-options="stateObj.name for stateObj in states" ng-disabled="setDisabled()" required ng-change="getStateCities()" ng-model="state" name="propertyState">
+            <option value="">Select State</option>
+        </select>
+        
+
+    </div>
+    
+</div>

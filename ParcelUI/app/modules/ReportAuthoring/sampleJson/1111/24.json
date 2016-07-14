@@ -1,0 +1,2428 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.3.6 Patio, Terrace, and Balcony",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 33,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Concrete patios",
+                "value": "227"
+            }, {
+                "name": "Patio fence",
+                "value": "228"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "229"
+            }, {
+                "name": "Wood guardrails",
+                "value": "230"
+            }, {
+                "name": "Metal guardrails",
+                "value": "231"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "232"
+            }, {
+                "name": "Install deck surface waterproofing",
+                "value": "1864"
+            }, {
+                "name": "Replace patio fence",
+                "value": "1865"
+            }, {
+                "name": "Replace wood guardrails",
+                "value": "1866"
+            }, {
+                "name": "Replace metal guardrails",
+                "value": "1867"
+            }, {
+                "name": "Replace concrete patios",
+                "value": "1868"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "1869"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "2053"
+            }, {
+                "name": "Decks",
+                "value": "2054"
+            }, {
+                "name": "Patio Slabs",
+                "value": "2055"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "2056"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "2158"
+            }, {
+                "name": "Decks",
+                "value": "2159"
+            }, {
+                "name": "Patio Slabs",
+                "value": "2160"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "2161"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "2418"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "2419"
+            }, {
+                "name": "Concrete patios ",
+                "value": "2420"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "2421"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "2422"
+            }, {
+                "name": "Patio fence ",
+                "value": "2423"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "2618"
+            }, {
+                "name": "Decks",
+                "value": "2619"
+            }, {
+                "name": "Patio Slabs",
+                "value": "2620"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "2621"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "3168"
+            }, {
+                "name": "Patio fence ",
+                "value": "3169"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "3170"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "3171"
+            }, {
+                "name": "Concrete patios ",
+                "value": "3172"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "3173"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "3379"
+            }, {
+                "name": "Decks",
+                "value": "3380"
+            }, {
+                "name": "Patio Slabs",
+                "value": "3381"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "3382"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "3856"
+            }, {
+                "name": "Decks",
+                "value": "3857"
+            }, {
+                "name": "Patio Slabs",
+                "value": "3858"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "3859"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "4047"
+            }, {
+                "name": "Decks",
+                "value": "4048"
+            }, {
+                "name": "Patio Slabs",
+                "value": "4049"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "4050"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "4186"
+            }, {
+                "name": "Decks",
+                "value": "4187"
+            }, {
+                "name": "Patio Slabs",
+                "value": "4188"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "4189"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "4953"
+            }, {
+                "name": "Decks",
+                "value": "4954"
+            }, {
+                "name": "Patio Slabs",
+                "value": "4955"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "4956"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "5133"
+            }, {
+                "name": "Decks",
+                "value": "5134"
+            }, {
+                "name": "Patio Slabs",
+                "value": "5135"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "5136"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "5663"
+            }, {
+                "name": "Fire Escapes",
+                "value": "5664"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "5665"
+            }, {
+                "name": "Decks",
+                "value": "5666"
+            }, {
+                "name": "Patio Slabs",
+                "value": "5667"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "5668"
+            }, {
+                "name": "Steel stairs. Replace",
+                "value": "11047"
+            }, {
+                "name": "Wood stairs. Replace ",
+                "value": "11048"
+            }, {
+                "name": "Balcony deck. Waterproof  ",
+                "value": "11049"
+            }, {
+                "name": "Balcony guardrails. Replace  ",
+                "value": "11050"
+            }, {
+                "name": "Wood framed balcony. Repair  ",
+                "value": "11051"
+            }, {
+                "name": "Steel stairs. Replace",
+                "value": "11312"
+            }, {
+                "name": "Wood stairs. Replace ",
+                "value": "11313"
+            }, {
+                "name": "Balcony deck. Waterproof  ",
+                "value": "11314"
+            }, {
+                "name": "Balcony guardrails. Replace  ",
+                "value": "11315"
+            }, {
+                "name": "Wood framed balcony. Repair  ",
+                "value": "11316"
+            }, {
+                "name": "Steel stairs. Replace",
+                "value": "11577"
+            }, {
+                "name": "Wood stairs. Replace ",
+                "value": "11578"
+            }, {
+                "name": "Balcony deck. Waterproof  ",
+                "value": "11579"
+            }, {
+                "name": "Balcony guardrails. Replace  ",
+                "value": "11580"
+            }, {
+                "name": "Wood framed balcony. Repair  ",
+                "value": "11581"
+            }, {
+                "name": "Steel stairs. Replace",
+                "value": "11842"
+            }, {
+                "name": "Wood stairs. Replace ",
+                "value": "11843"
+            }, {
+                "name": "Balcony deck. Waterproof  ",
+                "value": "11844"
+            }, {
+                "name": "Balcony guardrails. Replace  ",
+                "value": "11845"
+            }, {
+                "name": "Wood framed balcony. Repair  ",
+                "value": "11846"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "12214"
+            }, {
+                "name": "Patio fence ",
+                "value": "12215"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "12216"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "12217"
+            }, {
+                "name": "Concrete patios ",
+                "value": "12218"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "12219"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "12457"
+            }, {
+                "name": "Patio fence ",
+                "value": "12458"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "12459"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "12460"
+            }, {
+                "name": "Concrete patios ",
+                "value": "12461"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "12462"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "12700"
+            }, {
+                "name": "Patio fence ",
+                "value": "12701"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "12702"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "12703"
+            }, {
+                "name": "Concrete patios ",
+                "value": "12704"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "12705"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "12943"
+            }, {
+                "name": "Patio fence ",
+                "value": "12944"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "12945"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "12946"
+            }, {
+                "name": "Concrete patios ",
+                "value": "12947"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "12948"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "13072"
+            }, {
+                "name": "Decks",
+                "value": "13073"
+            }, {
+                "name": "Patio Slabs",
+                "value": "13074"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "13075"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "15739"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "15740"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "15741"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "15742"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "15743"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "15744"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "15745"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "15746"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "15747"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "15748"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "15749"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "15750"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "16590"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "16591"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "16592"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "16593"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "16594"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "16595"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "16596"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "16597"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "16598"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "16599"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "16600"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "16601"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "16853"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "16854"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "16855"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "16856"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "16857"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "16858"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "16859"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "16860"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "16861"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "16862"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "16863"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "16864"
+            }, {
+                "name": "Concrete patios",
+                "value": "17906"
+            }, {
+                "name": "Patio fence",
+                "value": "17907"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "17908"
+            }, {
+                "name": "Wood guardrails",
+                "value": "17909"
+            }, {
+                "name": "Metal guardrails",
+                "value": "17910"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "17911"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "18121"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "18122"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "18123"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "18124"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "18125"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "18126"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "18127"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "18128"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "18129"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "18130"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "18131"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "18132"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "18384"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "18385"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "18386"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "18387"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "18388"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "18389"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "18390"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "18391"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "18392"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "18393"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "18394"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "18395"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "18576"
+            }, {
+                "name": "Decks",
+                "value": "18577"
+            }, {
+                "name": "Patio Slabs",
+                "value": "18578"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "18579"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "18677"
+            }, {
+                "name": "Decks",
+                "value": "18678"
+            }, {
+                "name": "Patio Slabs",
+                "value": "18679"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "18680"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "18778"
+            }, {
+                "name": "Decks",
+                "value": "18779"
+            }, {
+                "name": "Patio Slabs",
+                "value": "18780"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "18781"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "18879"
+            }, {
+                "name": "Decks",
+                "value": "18880"
+            }, {
+                "name": "Patio Slabs",
+                "value": "18881"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "18882"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "19162"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "19163"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "19164"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "19165"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "19166"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "19167"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "19168"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "19169"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "19170"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "19171"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "19172"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "19173"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "20294"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "20295"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "20296"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "20297"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "20298"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "20299"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "20300"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "20301"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "20302"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "20303"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "20304"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "20305"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "21653"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "21654"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "21655"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "21656"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "21657"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "21658"
+            }, {
+                "name": "Concrete patios. Replace ",
+                "value": "21971"
+            }, {
+                "name": "Patio fence. Replace (Wood) ",
+                "value": "21972"
+            }, {
+                "name": "Balcony guardrails. Replace (Metal pipe) ",
+                "value": "21973"
+            }, {
+                "name": "Balcony guardrails. Replace (Wood) ",
+                "value": "21974"
+            }, {
+                "name": "Wood balcony. Replace (Decking) ",
+                "value": "21975"
+            }, {
+                "name": "Wood balcony. Replace (Framing) ",
+                "value": "21976"
+            }, {
+                "name": "",
+                "value": "21977"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "22501"
+            }, {
+                "name": "Decks",
+                "value": "22502"
+            }, {
+                "name": "Patio Slabs",
+                "value": "22503"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "22504"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "22651"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "22652"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "22653"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "22654"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "22655"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "22656"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "22657"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "22658"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "22659"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "22660"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "22661"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "22662"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "23147"
+            }, {
+                "name": "Patio fence ",
+                "value": "23148"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "23149"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "23150"
+            }, {
+                "name": "Concrete patios ",
+                "value": "23151"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "23152"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90002235"
+            }, {
+                "name": "Decks",
+                "value": "90002236"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90002237"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90002238"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90002416"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90002417"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90002418"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90002419"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90002420"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90002421"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90002422"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90002423"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90002424"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90002425"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90002426"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90002427"
+            }, {
+                "name": "",
+                "value": "90002709"
+            }, {
+                "name": "Balcony. Replace wood framing",
+                "value": "90002710"
+            }, {
+                "name": "Metal stairs.  Replace (per flight)",
+                "value": "90002760"
+            }, {
+                "name": "Concrete patios. Replace",
+                "value": "90002779"
+            }, {
+                "name": "Wood patio fence. Replace",
+                "value": "90002780"
+            }, {
+                "name": "Balcony. Replace metal guardrails",
+                "value": "90002781"
+            }, {
+                "name": "Balcony. Replace wood guardrails",
+                "value": "90002782"
+            }, {
+                "name": "Balcony.  Apply elastomeric coating to concrete",
+                "value": "90002783"
+            }, {
+                "name": "Balcony. Replace composite decking",
+                "value": "90002784"
+            }, {
+                "name": "Balcony. Replace wood decking",
+                "value": "90002785"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90003292"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90003293"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90003294"
+            }, {
+                "name": "Decks",
+                "value": "90003295"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90003296"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90003297"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90003781"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90003782"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90003783"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90003784"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90003785"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90003786"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90003787"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90003788"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90003789"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90003790"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90003791"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90003792"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90004093"
+            }, {
+                "name": "Patio fence ",
+                "value": "90004094"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90004095"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90004096"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90004097"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90004098"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90005312"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90005313"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90005314"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90005315"
+            }, {
+                "name": "Patio fence ",
+                "value": "90005316"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90005317"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "90005318"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "90005319"
+            }, {
+                "name": "Wood stairs ",
+                "value": "90005320"
+            }, {
+                "name": "Steel stairs ",
+                "value": "90005321"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "90005322"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "90005323"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90005627"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90005628"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90005629"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90005630"
+            }, {
+                "name": "Patio fence ",
+                "value": "90005631"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90005632"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "90005633"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "90005634"
+            }, {
+                "name": "Wood stairs ",
+                "value": "90005635"
+            }, {
+                "name": "Steel stairs ",
+                "value": "90005636"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "90005637"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "90005638"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90006589"
+            }, {
+                "name": "Patio fence ",
+                "value": "90006590"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90006591"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90006592"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90006593"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90006594"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "90006874"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "90006875"
+            }, {
+                "name": "Steel stairs ",
+                "value": "90006876"
+            }, {
+                "name": "Wood stairs ",
+                "value": "90006877"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "90006878"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "90006879"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90006880"
+            }, {
+                "name": "Patio fence ",
+                "value": "90006881"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90006882"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90006883"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90006884"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90006885"
+            }, {
+                "name": "",
+                "value": "90007233"
+            }, {
+                "name": "Balcony. Replace wood framing",
+                "value": "90007234"
+            }, {
+                "name": "Metal stairs.  Replace (per flight)",
+                "value": "90007235"
+            }, {
+                "name": "Concrete patios. Replace",
+                "value": "90007236"
+            }, {
+                "name": "Wood patio fence. Replace",
+                "value": "90007237"
+            }, {
+                "name": "Balcony. Replace metal guardrails",
+                "value": "90007238"
+            }, {
+                "name": "Balcony. Replace wood guardrails",
+                "value": "90007239"
+            }, {
+                "name": "Balcony.  Apply elastomeric coating to concrete",
+                "value": "90007240"
+            }, {
+                "name": "Balcony. Replace composite decking",
+                "value": "90007241"
+            }, {
+                "name": "Balcony. Replace wood decking",
+                "value": "90007242"
+            }, {
+                "name": "",
+                "value": "90007813"
+            }, {
+                "name": "Balcony. Replace wood framing",
+                "value": "90007814"
+            }, {
+                "name": "Metal stairs.  Replace (per flight)",
+                "value": "90007815"
+            }, {
+                "name": "Concrete patios. Replace",
+                "value": "90007816"
+            }, {
+                "name": "Wood patio fence. Replace",
+                "value": "90007817"
+            }, {
+                "name": "Balcony. Replace metal guardrails",
+                "value": "90007818"
+            }, {
+                "name": "Balcony. Replace wood guardrails",
+                "value": "90007819"
+            }, {
+                "name": "Balcony.  Apply elastomeric coating to concrete",
+                "value": "90007820"
+            }, {
+                "name": "Balcony. Replace composite decking",
+                "value": "90007821"
+            }, {
+                "name": "Balcony. Replace wood decking",
+                "value": "90007822"
+            }, {
+                "name": "Balcony deck, Waterproof  ",
+                "value": "90008925"
+            }, {
+                "name": "Balcony guardrails, Replace  ",
+                "value": "90008926"
+            }, {
+                "name": "Wood framed balcony, Repair  ",
+                "value": "90008927"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90008928"
+            }, {
+                "name": "Damaged Patio fence, Replace ",
+                "value": "90008929"
+            }, {
+                "name": "Damaged Concrete patios, Replace ",
+                "value": "90008930"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90009162"
+            }, {
+                "name": "Decks",
+                "value": "90009163"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90009164"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90009165"
+            }, {
+                "name": "Steel stairs, Repair",
+                "value": "90011776"
+            }, {
+                "name": "Wooden stairs, Replace",
+                "value": "90011777"
+            }, {
+                "name": "Concrete stairs, Repair",
+                "value": "90011778"
+            }, {
+                "name": "Wooden stairs, Repair",
+                "value": "90011779"
+            }, {
+                "name": "Wooden balustrade, Repair",
+                "value": "90011780"
+            }, {
+                "name": "Metal balustrade, Repair",
+                "value": "90011781"
+            }, {
+                "name": "Guardrail, Re-paint",
+                "value": "90011782"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs",
+                "value": "90011783"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90011784"
+            }, {
+                "name": "Wood guardrails, Sectional replacement",
+                "value": "90011785"
+            }, {
+                "name": "Metal guardrails, Repair",
+                "value": "90011786"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing",
+                "value": "90011787"
+            }, {
+                "name": "Steel stairs, Repair",
+                "value": "90012134"
+            }, {
+                "name": "Wooden stairs, Replace",
+                "value": "90012135"
+            }, {
+                "name": "Concrete stairs, Repair",
+                "value": "90012136"
+            }, {
+                "name": "Wooden stairs, Repair",
+                "value": "90012137"
+            }, {
+                "name": "Wooden balustrade, Repair",
+                "value": "90012138"
+            }, {
+                "name": "Metal balustrade, Repair",
+                "value": "90012139"
+            }, {
+                "name": "Guardrail, Re-paint",
+                "value": "90012140"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs",
+                "value": "90012141"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90012142"
+            }, {
+                "name": "Wood guardrails, Sectional replacement",
+                "value": "90012143"
+            }, {
+                "name": "Metal guardrails, Repair",
+                "value": "90012144"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing",
+                "value": "90012145"
+            }, {
+                "name": "Steel stairs, Repair",
+                "value": "90012492"
+            }, {
+                "name": "Wooden stairs, Replace",
+                "value": "90012493"
+            }, {
+                "name": "Concrete stairs, Repair",
+                "value": "90012494"
+            }, {
+                "name": "Wooden stairs, Repair",
+                "value": "90012495"
+            }, {
+                "name": "Wooden balustrade, Repair",
+                "value": "90012496"
+            }, {
+                "name": "Metal balustrade, Repair",
+                "value": "90012497"
+            }, {
+                "name": "Guardrail, Re-paint",
+                "value": "90012498"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs",
+                "value": "90012499"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90012500"
+            }, {
+                "name": "Wood guardrails, Sectional replacement",
+                "value": "90012501"
+            }, {
+                "name": "Metal guardrails, Repair",
+                "value": "90012502"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing",
+                "value": "90012503"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90012764"
+            }, {
+                "name": "Decks",
+                "value": "90012765"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90012766"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90012767"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90013213"
+            }, {
+                "name": "Decks",
+                "value": "90013214"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90013215"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90013216"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90013438"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90013439"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90013440"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90013441"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90013442"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90013443"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90013444"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90013445"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90013446"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90013447"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90013448"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90013449"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90013776"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90013777"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90013778"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90013779"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90013780"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90013781"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90013782"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90013783"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90013784"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90013785"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90013786"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90013787"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90014116"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90014117"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90014118"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90014119"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90014120"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90014121"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90014122"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90014123"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90014124"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90014125"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90014126"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90014127"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90014454"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90014455"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90014456"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90014457"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90014458"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90014459"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90014460"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90014461"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90014462"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90014463"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90014464"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90014465"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90014729"
+            }, {
+                "name": "Decks",
+                "value": "90014730"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90014731"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90014732"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90014901"
+            }, {
+                "name": "Leave PARCEL descriptions and costs",
+                "value": "90015227"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90015416"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90015417"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90015418"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90015419"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90015420"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90015421"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90015422"
+            }, {
+                "name": "",
+                "value": "90015423"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90015424"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90015425"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90015426"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90015427"
+            }, {
+                "name": "",
+                "value": "90015428"
+            }, {
+                "name": "Leave PARCEL descriptions and costs",
+                "value": "90015781"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90016025"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90016209"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90016210"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90016211"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90016212"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90016213"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90016214"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90016215"
+            }, {
+                "name": "",
+                "value": "90016216"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90016217"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90016218"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90016219"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90016220"
+            }, {
+                "name": "",
+                "value": "90016221"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90016547"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90016731"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90016732"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90016733"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90016734"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90016735"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90016736"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90016737"
+            }, {
+                "name": "",
+                "value": "90016738"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90016739"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90016740"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90016741"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90016742"
+            }, {
+                "name": "",
+                "value": "90016743"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90017073"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90017074"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90017075"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90017076"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90017077"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90017078"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90017079"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90017080"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90017081"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90017082"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90017083"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90017085"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90017382"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90017566"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90017567"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90017568"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90017569"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90017570"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90017571"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90017572"
+            }, {
+                "name": "",
+                "value": "90017573"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90017574"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90017575"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90017576"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90017577"
+            }, {
+                "name": "",
+                "value": "90017578"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90017904"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90018088"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90018089"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90018090"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90018091"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90018092"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90018093"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90018094"
+            }, {
+                "name": "",
+                "value": "90018095"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90018096"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90018097"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90018098"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90018099"
+            }, {
+                "name": "",
+                "value": "90018100"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90018927"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90019111"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90019112"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90019113"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90019114"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90019115"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90019116"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90019117"
+            }, {
+                "name": "",
+                "value": "90019118"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90019119"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90019120"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90019121"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90019122"
+            }, {
+                "name": "",
+                "value": "90019123"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90019414"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90019415"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90019416"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90019417"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90019418"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90019419"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90019420"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90019421"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90019422"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90019423"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90019424"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90019425"
+            }, {
+                "name": "Steel stairs, Replace ",
+                "value": "90019925"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90019926"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90019927"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90019928"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90019929"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90019930"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90019931"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90019932"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90019933"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90019934"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90019935"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90019936"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90020343"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90020344"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90020345"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90020346"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90020347"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90020348"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90020349"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90020350"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90020351"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90020352"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90020353"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90020354"
+            }, {
+                "name": "Concrete patios",
+                "value": "90020858"
+            }, {
+                "name": "Patio fence",
+                "value": "90020859"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90020860"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90020861"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90020862"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90020863"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90021069"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90021070"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90021071"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90021072"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90021073"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90021074"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90021075"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90021076"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90021077"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90021078"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90021079"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90021080"
+            }, {
+                "name": "Concrete patios",
+                "value": "90021321"
+            }, {
+                "name": "Patio fence",
+                "value": "90021322"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90021323"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90021324"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90021325"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90021326"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90021589"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90021773"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90021774"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90021775"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90021776"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90021777"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90021778"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90021779"
+            }, {
+                "name": "",
+                "value": "90021780"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90021781"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90021782"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90021783"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90021784"
+            }, {
+                "name": "",
+                "value": "90021785"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90022496"
+            }, {
+                "name": "Decks",
+                "value": "90022497"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90022498"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90022499"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90022626"
+            }, {
+                "name": "Decks",
+                "value": "90022627"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90022628"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90022629"
+            }, {
+                "name": "Concrete patios",
+                "value": "90022831"
+            }, {
+                "name": "Patio fence",
+                "value": "90022832"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90022833"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90022834"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90022835"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90022836"
+            }, {
+                "name": "Concrete patios",
+                "value": "90023063"
+            }, {
+                "name": "Patio fence",
+                "value": "90023064"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90023065"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90023066"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90023067"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90023068"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90023280"
+            }, {
+                "name": "Patio fence ",
+                "value": "90023281"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90023282"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90023283"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90023284"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90023285"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90023523"
+            }, {
+                "name": "Patio fence ",
+                "value": "90023524"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90023525"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90023526"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90023527"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90023528"
+            }, {
+                "name": "Concrete patios",
+                "value": "90023709"
+            }, {
+                "name": "Patio fence",
+                "value": "90023710"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90023711"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90023712"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90023713"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90023714"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90023922"
+            }, {
+                "name": "Patio fence ",
+                "value": "90023923"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90023924"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90023925"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90023926"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90023927"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90024165"
+            }, {
+                "name": "Patio fence ",
+                "value": "90024166"
+            }, {
+                "name": "Wood guardrails ",
+                "value": "90024167"
+            }, {
+                "name": "Metal guardrails ",
+                "value": "90024168"
+            }, {
+                "name": "Concrete patios ",
+                "value": "90024169"
+            }, {
+                "name": "Wood framed balconies ",
+                "value": "90024170"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90024778"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90024962"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90024963"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90024964"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90024965"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90024966"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90024967"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90024968"
+            }, {
+                "name": "",
+                "value": "90024969"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90024970"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90024971"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90024972"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90024973"
+            }, {
+                "name": "",
+                "value": "90024974"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90025936"
+            }, {
+                "name": "Decks",
+                "value": "90025937"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90025938"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90025939"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90026531"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90026715"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90026716"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90026717"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90026718"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90026719"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90026720"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90026721"
+            }, {
+                "name": "",
+                "value": "90026722"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90026723"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90026724"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90026725"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90026726"
+            }, {
+                "name": "",
+                "value": "90026727"
+            }, {
+                "name": "Concrete patios",
+                "value": "90027403"
+            }, {
+                "name": "Patio fence",
+                "value": "90027404"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90027405"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90027406"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90027407"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90027408"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90028161"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90028162"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90028163"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90028164"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90028165"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90028166"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90028167"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90028168"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90028169"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90028170"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90028171"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90028172"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "90028672"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "90028673"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "90028674"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "90028675"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "90028676"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "90028677"
+            }, {
+                "name": "Guardrail, Re-paint ",
+                "value": "90028678"
+            }, {
+                "name": "Wood framed balconies, Spot Repairs ",
+                "value": "90028679"
+            }, {
+                "name": "Wood framed balconies, Refurbish",
+                "value": "90028680"
+            }, {
+                "name": "Wood guardrails, Sectional replacement ",
+                "value": "90028681"
+            }, {
+                "name": "Metal guardrails, Repair ",
+                "value": "90028682"
+            }, {
+                "name": "Balcony concrete deck surface waterproofing ",
+                "value": "90028683"
+            }, {
+                "name": "Handrails - replace",
+                "value": "90029240"
+            }, {
+                "name": "Patios, concrete. Replace",
+                "value": "90029424"
+            }, {
+                "name": "Balcony decks, wood.  Replace",
+                "value": "90029425"
+            }, {
+                "name": "Balcony decks, composite.  Replace",
+                "value": "90029426"
+            }, {
+                "name": "Balcony decks, coating.  Apply",
+                "value": "90029427"
+            }, {
+                "name": "Balcony framing, wood. Replace",
+                "value": "90029428"
+            }, {
+                "name": "Balcony guardrails, metal. Replace",
+                "value": "90029429"
+            }, {
+                "name": "Balcony guardrails, wood. Replace",
+                "value": "90029430"
+            }, {
+                "name": "",
+                "value": "90029431"
+            }, {
+                "name": "Stairs, steel.  Replace flight",
+                "value": "90029432"
+            }, {
+                "name": "Stairs, wood.  Replace flight",
+                "value": "90029433"
+            }, {
+                "name": "Stairs, steel.  Scrape and paint flight",
+                "value": "90029434"
+            }, {
+                "name": "Stairs, concrete stair tread.  Replace",
+                "value": "90029435"
+            }, {
+                "name": "",
+                "value": "90029436"
+            }, {
+                "name": "Concrete patios",
+                "value": "90030186"
+            }, {
+                "name": "Patio fence",
+                "value": "90030187"
+            }, {
+                "name": "Wood framed balconies",
+                "value": "90030188"
+            }, {
+                "name": "Wood guardrails",
+                "value": "90030189"
+            }, {
+                "name": "Metal guardrails",
+                "value": "90030190"
+            }, {
+                "name": "Deck surface waterproofing",
+                "value": "90030191"
+            }, {
+                "name": "Balcony deck, Waterproof  ",
+                "value": "90030761"
+            }, {
+                "name": "Wood framed balcony. Repair  ",
+                "value": "90030762"
+            }, {
+                "name": "Balcony guardrails. Replace (Metal pipe) ",
+                "value": "90030763"
+            }, {
+                "name": "Balcony guardrails. Replace (Wood) ",
+                "value": "90030764"
+            }, {
+                "name": "Wood balcony. Replace (Decking) ",
+                "value": "90030765"
+            }, {
+                "name": "Wood balcony. Replace (Framing) ",
+                "value": "90030766"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

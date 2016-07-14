@@ -1,0 +1,131 @@
+
+<div class="modal-header">
+    <button type="button" class="close" ng-click="siteDetails.closeSiteDetails()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Site Information</h4>
+</div>
+
+<form name="siteDetailsForm" class="form-horizontal" novalidate>
+    <div class="modal-body">
+        <div class="text-right bottom-margin-sm">
+            <button class="btn btn-primary" ng-show="siteDetails.defaultView" ng-click="siteDetails.defaultView = !siteDetails.defaultView ; siteDetails.editSiteDetails()">Edit</button>
+        </div>
+        <div id="alertSiteDetailsMsgDiv" ng-show="siteDetails.showAlert" class="alert alert-dismissible"  role="alert">
+                <button type="button" class="close" ng-click="siteDetails.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{siteDetails.serviceMessage}}
+            </div>
+        <div ng-hide="viewField">
+            <div class="form-group">
+                <label for="clientPropertynumber" class="col-sm-4 control-label">Client Property Number:</label>
+                <div class="col-sm-6">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.propertyNumber}}</p>
+                    <input id="clientPropertynumber" ng-show="!siteDetails.defaultView" type="text" class="form-control" ng-model="siteDetails.propertyNumber">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="propertyName" class="col-sm-4 control-label">Property Name:</label>
+                <div class="col-sm-6">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.propertyName}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="propertyName" ng-model="siteDetails.propertyName">
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="siteAddress" class="col-sm-4 control-label">Address:</label>
+                <div class="col-sm-6" field-validation="Address">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.address}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteAddress" ng-model="siteDetails.address" name="Address" required>
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="siteCountry" class="col-sm-4 control-label">Country:</label>
+                <div class="col-sm-6" field-validation="Country">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.country}}</p>
+                    <!--<input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteCountry" ng-model="siteDetails.country">-->
+                    <select ng-show="!siteDetails.defaultView"
+                            ng-model="siteDetails.selectedCountry" ng-change = "siteDetails.editCountry()"
+                            ng-options="country as country.name for country in siteDetails.countries
+                            track by country.code" name="Country" required
+                            class="form-control"><option value="">Select Country</option></select>
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="siteState" class="col-sm-4 control-label">State:</label>
+                <div class="col-sm-6" field-validation="State" id="divState">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.state}}</p>
+                    <!--<input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteState" ng-model="siteDetails.state">-->
+                    <select ng-show="!siteDetails.defaultView && siteDetails.selectedCountry.isStateProvDataAvailable" ng-model = "siteDetails.selectedState" ng-required="!(siteDetails.selectedStateText || siteDetails.selectedState)" name="siteState"
+                           ng-options="state as state.name for state in siteDetails.states" class="form-control">
+                        <option value="">Select a state...</option>
+                    </select>
+                    <input ng-show="!siteDetails.defaultView && !siteDetails.selectedCountry.isStateProvDataAvailable" type="text" ng-model = "siteDetails.selectedStateText" class="form-control" ng-required="!(siteDetails.selectedStateText || siteDetails.selectedState)" name="siteState">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="siteCity" class="col-sm-4 control-label">County:</label>
+                <div class="col-sm-6">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.county}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteCounty" ng-model="siteDetails.county">
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="siteCity" class="col-sm-4 control-label">City:</label>
+                <div class="col-sm-6" field-validation="City">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.city}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteCity" ng-model="siteDetails.city" name="City" required>
+                </div>
+            </div>
+            
+            <div class="form-group required">
+                <label for="siteZipcode" class="col-sm-4 control-label">Zip:</label>
+                <div class="col-sm-6" field-validation="Zip">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.zipCode}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteZipcode" ng-model="siteDetails.zipCode" name="Zip" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="siteContactname" class="col-sm-4 control-label">Contact Name:</label>
+                <div class="col-sm-6">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.contactName}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteContactname" ng-model="siteDetails.contactName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sitePhone" class="col-sm-4 control-label">Phone:</label>
+                <div class="col-sm-6" field-validation="Phone Number">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.phone}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" name = "phone" ng-change="siteDetails.formatPhone()" ng-pattern="/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" class="form-control" ng-model="siteDetails.phone" id="phone" custom="phoneNumber">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="siteFax" class="col-sm-4 control-label">Fax:</label>
+                <div class="col-sm-6">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.fax}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="text" class="form-control" id="siteFax" ng-model="siteDetails.fax">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="siteEmail" class="col-sm-4 control-label">Email:</label>
+                <div class="col-sm-6" field-validation="Email">
+                    <p ng-show="siteDetails.defaultView" class="form-control-static">{{siteDetails.email}}</p>
+                    <input ng-show="!siteDetails.defaultView" type="email" class="form-control" id="siteEmail" ng-model="siteDetails.email" name="Email">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button ng-show="siteDetails.defaultView" class="btn btn-default" ng-click="siteDetails.closeSiteDetails()">Close</button>
+        <button ng-show="!siteDetails.defaultView" class="btn btn-default" ng-mousedown="siteDetails.cancelChanges()">Cancel</button>
+        <button ng-show="!siteDetails.defaultView" class="btn btn-primary" ng-click="siteDetails.submitChanges(siteDetailsForm)">Submit Changes</button>
+    </div>
+</form>

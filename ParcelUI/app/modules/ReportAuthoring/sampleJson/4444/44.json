@@ -1,0 +1,91 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.11 Asbestos-Containing Materials (ACM)",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Building Built Before 1980?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Evidence?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "General Condition",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Approximate Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Units",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Friable Materials?",
+                "id": "",
+                "type": "text",
+                "colspan": 5,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 5,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Building Built Before 1980?": "YesNoUnk",
+                "Evidence?": "YesNoUnk",
+                "General Condition": "GoodFairPoor",
+                "Approximate Quantity": "",
+                "Units": "Square FeetLinear FeetCubic Feet",
+                "Friable Materials?": "Pipe InsulationFitting InsulationBoiler InsulationDuct InsulationBreaching InsulationBlow-on InsulationCeiling TilesVinyl Floor TileVinyl FlooringTile MasticMasticTextured CeilingDrywallJoint CompoundWall System MaterialsAcoustical Ceiling TexturingOther",
+                "Specific Location": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\">Suspect friable ACM in the form of <font color=\\\"#ff0000\\\">\\/\\/textured ceiling material, \\/\\/insulation, \\/\\/ceiling tile, \\/\\/fireproofing, \\/\\/thermal system insulation, and&#160;\\/\\/XXXX <\\/font>was identified.&#160; These materials were observed to be in <font color=\\\"#ff0000\\\">good <\\/font>condition.&#160; <font color=\\\"#ff0000\\\">\\/\\/<\\/font>The <font color=\\\"#ff0000\\\">XXXX <\\/font>was observed to be damaged.<\\/p><p align=\\\"justify\\\">&#160;<\\/p><p align=\\\"justify\\\">Suspect non-friable ACM in the form of <font color=\\\"#ff0000\\\">\\/\\/vinyl floor tile, \\/\\/wallboard\\/joint compound, \\/\\/sheet vinyl flooring, \\/\\/stucco, \\/\\/plaster,&#160;\\/\\/transite pipe, \\/\\/various mastics, \\/\\/wall texture,&#160;and&#160;\\/\\/roofing materials&#160;<\\/font><font color=\\\"#000000\\\">were identified<\\/font>. &#160;These materials were observed to be in<font color=\\\"#ff0000\\\"> good <\\/font>condition.&#160; <font color=\\\"#ff0000\\\">\\/\\/<\\/font>The <font color=\\\"#ff0000\\\">XXXX <\\/font>was observed to be damaged.<\\/p><p align=\\\"justify\\\">&#160;<\\/p><p align=\\\"justify\\\">Based on the Scope of Work, asbestos sampling was not performed.<\\/p>"
+        }
+    }
+}

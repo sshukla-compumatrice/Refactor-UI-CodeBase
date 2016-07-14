@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "1.3 Project-Specific Limitations and Exceptions",
+        "ckEditData": {
+            "div01": "<p>This report is exclusively for the use and benefit of the Clientidentified on the first page of this report.&#160; The purpose for whichthis report shall be used shall be limited to the use as stated in thecontract between the client and EMG. <\\/p><p align=\\\"justify\\\"><br \\/>This report is not for the use or benefit of,nor may it be relied upon by any other person or entity, for anypurpose without the advance written consent of EMG.<\\/p>"
+        }
+    }
+}

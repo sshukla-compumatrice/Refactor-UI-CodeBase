@@ -1,0 +1,3 @@
+ <span class="control-label" ng-show="!editmode">{{data}}</span>
+    <input class="form-control" type="text" ng-show="editmode" ng-init="data = data || field.defaultValue"  ng-model="data">
+

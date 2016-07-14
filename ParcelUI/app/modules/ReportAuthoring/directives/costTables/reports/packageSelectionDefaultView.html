@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-10 col-lg-10 col-sm-10">
+        <div class="form-group">
+            <label class="col-lg-4 col-md-4" for="grouping">Select Cost Table Package:</label>
+            <div class="col-lg-6 col-md-6">
+                <select class="form-control" ng-model="package" ng-options="package.name for package in packages">
+                    <option value="">-- Select a package--</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-lg-2 col-sm-2">
+        <button type="button" class="btn btn-primary btn-sm" ng-click="changeReportsWithPackages()">Save Changes</button>
+
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div ng-show="packageSelected" class="col-md-12">
+        <label>{{costTable}}</label>
+    </div>
+</div>
+
+<div ng-show="packageSelected" ng-repeat="costTable in  cosTables">
+    <div class="row">
+        <div class="col-md-7"><a ng-click="openWindowWithRecommendations(costTable)" class="pointer">{{costTable.name}}</a></div>
+        <div class="col-md-2">
+            <button type="button" ng-click="generatePdf(costTable);" class="btn btn-primary btn-sm">View PDF</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary btn-sm">Export to Excel</button>
+        </div>
+    </div>
+    <hr>
+</div>

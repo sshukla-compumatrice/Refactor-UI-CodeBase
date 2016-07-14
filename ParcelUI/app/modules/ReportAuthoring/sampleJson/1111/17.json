@@ -1,0 +1,775 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.8 Utilities",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 26,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Site Utilities",
+                "value": "2027"
+            }, {
+                "name": "Site Water Lines",
+                "value": "2028"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "2029"
+            }, {
+                "name": "Site Utilities",
+                "value": "2133"
+            }, {
+                "name": "Site Water Lines",
+                "value": "2134"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "2135"
+            }, {
+                "name": "Water distribution system",
+                "value": "2325"
+            }, {
+                "name": "Water treatment plant",
+                "value": "2326"
+            }, {
+                "name": "Sanitary sewer collection system",
+                "value": "2327"
+            }, {
+                "name": "Sewage treatment plant (up to 15,000 GPD)",
+                "value": "2328"
+            }, {
+                "name": "Pumping station (up to 1,000 GPM)",
+                "value": "2329"
+            }, {
+                "name": "Lift station",
+                "value": "2330"
+            }, {
+                "name": "Electrical service lines",
+                "value": "2331"
+            }, {
+                "name": "Gas supply lines",
+                "value": "2332"
+            }, {
+                "name": "Site Utilities",
+                "value": "2593"
+            }, {
+                "name": "Site Water Lines",
+                "value": "2594"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "2595"
+            }, {
+                "name": "Site Utilities",
+                "value": "3354"
+            }, {
+                "name": "Site Water Lines",
+                "value": "3355"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "3356"
+            }, {
+                "name": "Site Utilities",
+                "value": "3831"
+            }, {
+                "name": "Site Water Lines",
+                "value": "3832"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "3833"
+            }, {
+                "name": "Site Utilities",
+                "value": "4022"
+            }, {
+                "name": "Site Water Lines",
+                "value": "4023"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "4024"
+            }, {
+                "name": "Site Utilities",
+                "value": "4161"
+            }, {
+                "name": "Site Water Lines",
+                "value": "4162"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "4163"
+            }, {
+                "name": "Site Utilities",
+                "value": "4928"
+            }, {
+                "name": "Site Water Lines",
+                "value": "4929"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "4930"
+            }, {
+                "name": "Site Utilities",
+                "value": "5108"
+            }, {
+                "name": "Site Water Lines",
+                "value": "5109"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "5110"
+            }, {
+                "name": "Site Utilities",
+                "value": "5640"
+            }, {
+                "name": "Site Water Lines",
+                "value": "5641"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "5642"
+            }, {
+                "name": "Pumping/Lift station. Replace ",
+                "value": "11032"
+            }, {
+                "name": "Sanitary sewer system. Replace ",
+                "value": "11033"
+            }, {
+                "name": "Water distribution system. Replace ",
+                "value": "11034"
+            }, {
+                "name": "Pumping/Lift station. Replace ",
+                "value": "11297"
+            }, {
+                "name": "Sanitary sewer system. Replace ",
+                "value": "11298"
+            }, {
+                "name": "Water distribution system. Replace ",
+                "value": "11299"
+            }, {
+                "name": "Pumping/Lift station. Replace ",
+                "value": "11562"
+            }, {
+                "name": "Sanitary sewer system. Replace ",
+                "value": "11563"
+            }, {
+                "name": "Water distribution system. Replace ",
+                "value": "11564"
+            }, {
+                "name": "Pumping/Lift station. Replace ",
+                "value": "11827"
+            }, {
+                "name": "Sanitary sewer system. Replace ",
+                "value": "11828"
+            }, {
+                "name": "Water distribution system. Replace ",
+                "value": "11829"
+            }, {
+                "name": "Site Utilities",
+                "value": "13047"
+            }, {
+                "name": "Site Water Lines",
+                "value": "13048"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "13049"
+            }, {
+                "name": "Site Utilities",
+                "value": "13401"
+            }, {
+                "name": "Site Water Lines",
+                "value": "13402"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "13403"
+            }, {
+                "name": "Site Utilities",
+                "value": "13499"
+            }, {
+                "name": "Site Water Lines",
+                "value": "13500"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "13501"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "15678"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "15679"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "15680"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "16529"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "16530"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "16531"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "16792"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "16793"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "16794"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "18191"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "18192"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "18194"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "18454"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "18455"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "18457"
+            }, {
+                "name": "Site Utilities",
+                "value": "18551"
+            }, {
+                "name": "Site Water Lines",
+                "value": "18552"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "18553"
+            }, {
+                "name": "Site Utilities",
+                "value": "18652"
+            }, {
+                "name": "Site Water Lines",
+                "value": "18653"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "18654"
+            }, {
+                "name": "Site Utilities",
+                "value": "18753"
+            }, {
+                "name": "Site Water Lines",
+                "value": "18754"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "18755"
+            }, {
+                "name": "Site Utilities",
+                "value": "18854"
+            }, {
+                "name": "Site Water Lines",
+                "value": "18855"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "18856"
+            }, {
+                "name": "Site Utilities",
+                "value": "18991"
+            }, {
+                "name": "Site Water Lines",
+                "value": "18992"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "18993"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "19232"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "19233"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "19235"
+            }, {
+                "name": "Site Utilities",
+                "value": "20076"
+            }, {
+                "name": "Site Water Lines",
+                "value": "20077"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "20078"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "20364"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "20365"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "20367"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "21723"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "21724"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "21725"
+            }, {
+                "name": "Main domestic water supply piping. Replace (2\"PVC) ",
+                "value": "21840"
+            }, {
+                "name": "Main domestic water supply piping. Replace (4\"PVC) ",
+                "value": "21841"
+            }, {
+                "name": "Sanitary sewer collection system. Replace (4\" PVC) ",
+                "value": "21842"
+            }, {
+                "name": "Sanitary sewer collection system. Replace (8\" PVC) ",
+                "value": "21843"
+            }, {
+                "name": "Sewage treatment plant. Replace (1,000 GPD) ",
+                "value": "21844"
+            }, {
+                "name": "Sewage treatment plant. Replace (5,000 GPD) ",
+                "value": "21845"
+            }, {
+                "name": "Sewage treatment plant. Replace (15,000 GPD) ",
+                "value": "21846"
+            }, {
+                "name": "Sewage Pumping/Lift station. Replace (500,000 GPD) ",
+                "value": "21847"
+            }, {
+                "name": "",
+                "value": "21848"
+            }, {
+                "name": "Site Utilities",
+                "value": "22476"
+            }, {
+                "name": "Site Water Lines",
+                "value": "22477"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "22478"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "22721"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "22722"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "22724"
+            }, {
+                "name": "Perform IR survey",
+                "value": "22894"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "22895"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "22896"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "22897"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "22898"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "22899"
+            }, {
+                "name": "Site Utilities",
+                "value": "90002210"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90002211"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90002212"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90002486"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90002487"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90002489"
+            }, {
+                "name": "",
+                "value": "90002797"
+            }, {
+                "name": "Sewage pumping/lift station. Replace",
+                "value": "90002799"
+            }, {
+                "name": "Sewage treatment plant. Replace",
+                "value": "90002800"
+            }, {
+                "name": "Sanitary sewer collection system. Replace",
+                "value": "90002801"
+            }, {
+                "name": "Domestic water supply piping. Replace",
+                "value": "90002803"
+            }, {
+                "name": "Site Utilities",
+                "value": "90003269"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90003270"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90003271"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90003851"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90003852"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90003854"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90005394"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90005709"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90006781"
+            }, {
+                "name": "",
+                "value": "90007109"
+            }, {
+                "name": "Sewage pumping/lift station. Replace",
+                "value": "90007110"
+            }, {
+                "name": "Sewage treatment plant. Replace",
+                "value": "90007111"
+            }, {
+                "name": "Sanitary sewer collection system. Replace",
+                "value": "90007112"
+            }, {
+                "name": "Domestic water supply piping. Replace",
+                "value": "90007113"
+            }, {
+                "name": "",
+                "value": "90007689"
+            }, {
+                "name": "Sewage pumping/lift station. Replace",
+                "value": "90007690"
+            }, {
+                "name": "Sewage treatment plant. Replace",
+                "value": "90007691"
+            }, {
+                "name": "Sanitary sewer collection system. Replace",
+                "value": "90007692"
+            }, {
+                "name": "Domestic water supply piping. Replace",
+                "value": "90007693"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90008839"
+            }, {
+                "name": "Sanitary sewer system, Replace ",
+                "value": "90008840"
+            }, {
+                "name": "Water distribution system, Replace ",
+                "value": "90008841"
+            }, {
+                "name": "Site Utilities",
+                "value": "90009137"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90009138"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90009139"
+            }, {
+                "name": "Pumping/Lift station, Replace",
+                "value": "90011697"
+            }, {
+                "name": "Sanitary Sewer System, Replace",
+                "value": "90011698"
+            }, {
+                "name": "Water Distribution System, Replace",
+                "value": "90011699"
+            }, {
+                "name": "Pumping/Lift station, Replace",
+                "value": "90012055"
+            }, {
+                "name": "Sanitary Sewer System, Replace",
+                "value": "90012056"
+            }, {
+                "name": "Water Distribution System, Replace",
+                "value": "90012057"
+            }, {
+                "name": "Pumping/Lift station, Replace",
+                "value": "90012413"
+            }, {
+                "name": "Sanitary Sewer System, Replace",
+                "value": "90012414"
+            }, {
+                "name": "Water Distribution System, Replace",
+                "value": "90012415"
+            }, {
+                "name": "Site Utilities",
+                "value": "90012739"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90012740"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90012741"
+            }, {
+                "name": "Site Utilities",
+                "value": "90013188"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90013189"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90013190"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90013360"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90013361"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90013362"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90013698"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90013699"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90013700"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90014038"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90014039"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90014040"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90014376"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90014377"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90014378"
+            }, {
+                "name": "Site Utilities",
+                "value": "90014704"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90014705"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90014706"
+            }, {
+                "name": "Other",
+                "value": "90015182"
+            }, {
+                "name": "Site Utilities",
+                "value": "90015646"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90015647"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90015648"
+            }, {
+                "name": "Other",
+                "value": "90015736"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90017161"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90017162"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90017163"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90019336"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90019337"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90019338"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90019847"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90019848"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90019849"
+            }, {
+                "name": "Site Utilities",
+                "value": "90020164"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90020165"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90020166"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90020282"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90020283"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90020284"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90021008"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90021009"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90021010"
+            }, {
+                "name": "",
+                "value": "90021283"
+            }, {
+                "name": "Site Utilities",
+                "value": "90022479"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90022480"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90022481"
+            }, {
+                "name": "Site Utilities",
+                "value": "90022602"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90022603"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90022604"
+            }, {
+                "name": "Site Utilities",
+                "value": "90025911"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90025912"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90025913"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90028100"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90028101"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90028102"
+            }, {
+                "name": "Pumping/Lift station, Replace ",
+                "value": "90028611"
+            }, {
+                "name": "Sanitary Sewer System, Replace ",
+                "value": "90028612"
+            }, {
+                "name": "Water Distribution System, Replace ",
+                "value": "90028613"
+            }, {
+                "name": "Main domestic water supply piping. Replace (2\"PVC) ",
+                "value": "90030686"
+            }, {
+                "name": "Main domestic water supply piping. Replace (4\"PVC) ",
+                "value": "90030687"
+            }, {
+                "name": "Site Utilities",
+                "value": "90030975"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90030976"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90030977"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

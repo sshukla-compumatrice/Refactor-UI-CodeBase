@@ -1,0 +1,19 @@
+
+<div class="modal-header">
+    <button type="button" class="close" ng-click="deleteReport.cancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Delete Report</h4>
+</div>
+
+
+    <div class="modal-body">
+
+        <p ng-show="deleteReport.exception" class= "text-danger">{{deleteReport.serviceMessage}}</p>
+       Deleting a report will remove the report and the property information from the project. Do you want to delete this report?
+    </div>
+
+    <div class="modal-footer">
+        <button  class="btn btn-default" ng-click="deleteReport.cancelDelete()">Cancel</button>
+        <button  class="btn btn-danger" ng-click="deleteReport.confirmDelete()">Delete Report</button>
+
+        
+    </div>

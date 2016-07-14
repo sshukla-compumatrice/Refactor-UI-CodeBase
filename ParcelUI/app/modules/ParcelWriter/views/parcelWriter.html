@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body{overflow:hidden!important;}
+	</style>
+	</head>
+ <body class="overflow-hide">
+
+<nav id="parcelWriterNav" class=" navbar-fixed-top navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#">Brand</a> </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right ">
+
+                <button type="button" class="btn btn-md btn-default navbar-btn reportwriteclose" ng-click="parcelWriter.backToReport()">BACK TO REPORT</button>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+  
+
+<div class="container-fluid">
+	<div class="parcelWriterHeader margin-bottom">
+    <h2 class="page-header">PARCEL Writer</h2>
+    <div class="alert alert-info" ng-show="parcelWriter.errorMsg == ''">
+        <p>PARCEL Writer helps you to quickly insert the relevant default language entries into your report. Your report sections are listed below with checkboxes for each language entry in the library. Select the language you'd like to insert and update your report to give yourself a head start! </p>
+    </div>
+    <div ng-show="parcelWriter.errorMsg" class="alert alert-danger" role="alert">
+        <span>{{parcelWriter.errorMsg}}</span>
+    </div>
+    
+    <div ng-show="parcelWriter.putErrorMsg != ''" class="alert alert-danger" role="alert">
+        <button type="button" class="close" ng-click="parcelWriter.putErrorMsg = '';" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <span>{{parcelWriter.putErrorMsg}}</span>
+    </div>
+    <div class="row" ng-show="parcelWriter.errorMsg == ''">
+        <div class="col-md-6">
+			<div class="LanguageBtn">
+			<div><p class="nopadding"><strong>Language Insert Style</strong></p>
+            <em class="text-muted">Overwrite what's there or add to it?</em>
+			</div> 
+			 <div class="btn-group">
+				  <label class="btn btn-primary " btn-radio="'APPEND'" ng-change="parcelWriter.appendOrOverwrite = 'APPEND'" ng-model="parcelWriter.appendOrOverwrite">ADD TO EXISTING
+				  </label>
+				  <label class="btn btn-primary" btn-radio="'OVERWRITE'" ng-change="parcelWriter.appendOrOverwrite = 'OVERWRITE'" ng-model="parcelWriter.appendOrOverwrite">Overwrite
+				  </label>				   
+				</div>
+			 </div>
+        </div>
+       
+        <div class="col-md-6">
+            <button type="Button" class="btn btn-md btn-primary pull-right" ng-click="parcelWriter.selectKeywords('')">SELECT KEYWORDS BY GROUP</button>
+        </div>
+    </div>
+		</div>
+    <div class="panel panel-default" ng-show="parcelWriter.errorMsg == ''">
+        <div class="panel-body reportWriteScroll">
+            <div class="container-fluid">
+
+                <include-sections parcel-writer="parcelWriter" ng-repeat="(parentsectionindex,parentsection) in parcelWriter.parentSections" ng-if="parentsection.sectionName && parentsection.sectionName != 'General Information'" parentsection='parentsection'>
+ 					 
+                    <h3 class="instructionPopover mainSection-RW">{{parentsection.sectionNumber +  ' ' + parentsection.sectionName}}&nbsp;<a ng-if="parcelWriter.checkInstruction(parentsection)" auto-close='1' role="button" data-toggle="popover" title="Instructions" data-placement="right"  data-template="displaySectionInstrs.html" bs-popover><i class="pointer fa fa-info-circle text-warning"></i></a></h3>
+                    <p class="message-RW"><em ng-if="parcelWriter.checkOptions(parentsection)" class="text-muted">No default language available for this report section.</em></p>
+ 
+
+                    <div class="row" ng-if="parentsection.languages && parentsection.languages.length">
+
+
+                        <div ng-repeat="language in parentsection.languages" class="col-md-4" ng-if="language.category && language.category !='Instructions'">
+							<div class="subsection-details">
+                            <div class="checkbox">
+                                <label ng-class="{'default-pointer text-muted nopadding': language.isAddedOnProjectStartup}">
+
+                                    <input ng-if="!language.isAddedOnProjectStartup" type="checkbox" value="" ng-model="language.isChecked" ng-change="parcelWriter.checkIsSectionChecked(language)">
+
+                                    <span ng-class="{'pull-left' : language.isAddedOnProjectStartup}" ng-bind-html="parcelWriter.bindLanguage(language)"></span>&nbsp;
+
+
+                                </label>
+								<a auto-close='1' role="button" data-toggle="popover" title="Language Text" data-placement="bottom"  data-content="{{language.text}}" data-template="displaySectionOptions.html" bs-popover> show more </a>
+                                
+                            </div>
+								</div>
+                        </div>
+
+                    </div>
+ 
+                </include-sections>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="pull-right bottom-margin" ng-show="parcelWriter.errorMsg == ''">
+        <button type="button" class="btn btn-md btn-default" ng-click="parcelWriter.backToReport()">BACK TO REPORT</button>
+        <button type="button" class="btn btn-md btn-primary" ng-click="parcelWriter.updateReportWithSelectedLanguages()"> UPDATE REPORT WITH SELECTED LANGUAGE</button>
+    </div>
+</div>
+
+
+
+<script type="text/ng-template" id="displaySectionOptions.html">
+    <div class="popover" id="displaySectionsOptions">
+        <div class="arrow"></div>
+        <h3 class="popover-title"><span ng-bind="title" ng-show="title"></span>
+            <button ng-click="$hide()" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </h3>
+
+        <div class="popover-content reportWriteContent">
+
+            <p  ng-bind-html="content"></p>
+            
+            
+        </div>
+		<div class="popover-footer" ng-if="!language.isAddedOnProjectStartup">
+			<hr>
+                <button ng-click="$hide()" type="button" class="btn btn-md btn-default">Cancel</button>
+                <button ng-if="!language.isChecked" ng-click="popover.selectOption($hide,language)" type="button" class="btn btn-md btn-primary closebtn">Select</button>
+                <button ng-if="language.isChecked" ng-click="popover.deSelectOption($hide,language)" type="button" class="btn btn-md btn-primary closebtn">Deselect</button>
+            </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="displaySectionInstrs.html">
+    <div class="popover" id="displaySectionInstrs">
+        <div class="arrow"></div>
+        <h3 class="popover-title"><span ng-bind="title" ng-show="title"></span> <button ng-click ="$hide()" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3>
+
+        <div class="popover-content reportWriteContent" ng-model="content">
+            <p ng-bind-html="popover.getInstrContent(parentsection)"></p>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="notification.html">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click = "closeNotification()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+Go back to report?</h4>
+            </div>
+            <div class="modal-body">
+                <div> You have language options selected that have not be inserted into your report. If you go back to your report, these selections will be lost and the language will not be inserted.<br/><br/>Do you want to go back to your report? </div>
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" ng-click = "closeNotification()"  class="btn btn-default" id="delete">No</button>
+                <button type="button" class="btn btn-primary" ng-click="redirectToReport()">Yes, Go back to report</button>
+            </div>
+</script>
+
+<script type="text/ng-template" id="languageSelectionAlert.html">
+    <div class="modal-header">
+                <button type="button" class="close" ng-click = "closeAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+Update Report</h4>
+            </div>
+            <div class="modal-body">
+                <p> You have not selected any language to add to your report, so no changes have been made.</p>Select some language and try again.
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" ng-click = "closeAlert()"  class="btn btn-primary" id="delete">OK</button>
+                
+            </div>
+</script>
+</body>
+</html>

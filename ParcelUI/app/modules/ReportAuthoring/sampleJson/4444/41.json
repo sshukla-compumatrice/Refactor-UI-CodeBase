@@ -1,0 +1,91 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.8 Ponds, Pits, And Lagoons",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Feature Identified",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "17%",
+                "textWidth": "17%"
+            }, {
+                "label": "Size (sq. ft)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "17%",
+                "textWidth": "17%"
+            }, {
+                "label": "Used for Water Disposal?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "17%",
+                "textWidth": "17%"
+            }, {
+                "label": "Sheen?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "17%",
+                "textWidth": "17%"
+            }, {
+                "label": "Odor?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "17%",
+                "textWidth": "17%"
+            }, {
+                "label": "Staining?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 6,
+                "width": "15%",
+                "textWidth": "15%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 6,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Feature Identified": "Pit(s)Pond(s)Lagoon(s)Other",
+                "Size (sq. ft)": "",
+                "Used for Water Disposal?": "YesNo",
+                "Sheen?": "YesNo",
+                "Odor?": "YesNo",
+                "Staining?": "YesNo",
+                "Specific Location": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

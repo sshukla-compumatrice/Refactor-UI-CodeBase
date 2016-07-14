@@ -1,0 +1,59 @@
+{
+                "data" : [{
+                                                "YEAR" : "1887",
+                                                "QUAD" : "Harrisonville",
+                                                "SUBJECT PROPERTY" : "Test data",
+                                                "SURROUNDING AREA" : "Test Data"
+                                }, {
+                                                "YEAR" : "1892",
+                                                "QUAD" : "Harrisonville",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1894,1894",
+                                                "QUAD" : "Independence,Harrisonville",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1933,1934,1934,1934",
+                                                "QUAD" : "Blue Springs,Lees Summit,Independence,Woods Chapel",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1955,,-1957,1957,1957",
+                                                "QUAD" : "Lees Summit,Independence,Woods Chapel",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1955,,1962,1963-1963,1964,1964,1965",
+                                                "QUAD" : "Lake Jacomo,Independence,Lees Summit,Blue Springs",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1970,1970,1970,1970",
+                                                "QUAD" : "Lake Jacomo,Lees Summit,Independence,Blue Springs",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1963-1975,1975,1975,1975",
+                                                "QUAD" : "Lake Jacomo,Lees Summit,Independence,Blue Springs",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1995,1995,1995,1995",
+                                                "QUAD" : "Blue Springs,Lake Jacomo,Lees Summit,Independence",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "1996,1996,1996",
+                                                "QUAD" : "Lees Summit,Independence,Lake Jacomo",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }, {
+                                                "YEAR" : "2015,2015,2015,2015",
+                                                "QUAD" : "Independence,Blue Springs,Lake Jacomo,Lees Summit",
+                                                "SUBJECT PROPERTY" : "",
+                                                "SURROUNDING AREA" : ""
+                                }
+                ]
+}

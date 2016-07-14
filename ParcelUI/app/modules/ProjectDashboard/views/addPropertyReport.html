@@ -1,0 +1,251 @@
+ 
+<div class="container-fluid" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+<div class="panel panel-default">
+	<div class="panel-body">	
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="top-margin">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <h4>Adding report to the "{{addReport.projectName}}" portfolio.</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 text-right">
+                        <button ng-if="addReport.ifIsFromReportWriting" ng-click="addReport.gotoReportWriting()" class="btn btn-md btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Return to Site </button>
+                        <button ng-click="addReport.gotoProjectDashboard()" class="btn btn-md btn-default"><i class="glyphicon glyphicon-arrow-up"></i> Return to Project </button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            
+            
+
+
+            <form class="form-horizontal" name="addReportsForm" novalidate>
+                <div id="alertAddReportsMsgDiv" ng-show="addReport.showAlert" class="alert alert-dismissible"  role="alert">
+                <button type="button" class="close" ng-click="addReport.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{addReport.serviceMessage}}
+            </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="property">
+                       Client Property Number #:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" id="property" ng-model = "addReport.propertyNumber" class="form-control" focus-if>
+                    </div>
+                </div>
+                <div class="form-group required" field-validation="Site Name">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="siteName">
+                        Property Name:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" class="form-control" ng-model="addReport.siteName" id="siteName" name="siteName" required>
+                    </div>
+                   
+                </div>
+                <div class="form-group required" field-validation="Address">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="address">
+                        Address:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" class="form-control" ng-model="addReport.address" id="address" name="address" required>
+                    </div>
+                     
+                </div>
+<div class="form-group required" field-validation="City">
+
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="city">
+                        City:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" class="form-control" ng-model="addReport.city" name="city" id="city" required>
+                    </div>
+                  
+                </div>
+
+                <!--<country-state ng-model = "addReport.countries" countrylabelcss = "control-label col-md-2 col-sm-3 col-xs-12" statelabelcss = "control-label col-md-2 col-sm-3 col-xs-12" countrydivcss = "col-xs-11 col-sm-4 col-md-3" statedivcss = "col-xs-11 col-sm-4 col-md-3" controllerobject = 'addReport'></country-state>-->
+                
+                
+               <div class="form-group required">
+                    <label for="state" class="control-label col-md-2 col-sm-3 col-xs-12">State:</label>
+                    <div ng-if="!addReport.ifIsFromReportWriting"  class="col-xs-11 col-sm-4 col-md-3" field-validation="State">
+                        <select class="form-control" id="state" type="select" state-model="addReport.state" state-select country-model="addReport.country" name="propertyState" required>
+                            <option value="">Select State</option>
+                        </select>
+                        <input type="text" class="form-control" id="state" ng-model="addReport.state" required name="propertyStateIp" state-input>
+                    </div>
+                    <div ng-if="addReport.ifIsFromReportWriting"  class="col-xs-11 col-sm-4 col-md-3" field-validation="State" id="divState">
+                        <select ng-show="addReport.selectedCountry.isStateProvDataAvailable" ng-model = "addReport.selectedState" ng-required="!(addReport.selectedStateText || addReport.selectedState)" name="siteState"
+                           ng-options="state as state.name for state in addReport.states" class="form-control">
+                        <option value="">Select a state...</option>
+                    </select>
+                    <input ng-show="!addReport.selectedCountry.isStateProvDataAvailable" type="text" ng-model = "addReport.selectedStateText" class="form-control" ng-required="!(addReport.selectedStateText || addReport.selectedState)" name="siteState">
+                    </div>
+                   
+                   
+                    
+                </div>
+               <div class="form-group required" field-validation="Country">
+
+                    <label for="country" class="control-label col-md-2 col-sm-3 col-xs-12">Country:</label>
+                    <div ng-if="!addReport.ifIsFromReportWriting" class="col-xs-11 col-sm-4 col-md-3" field-validation="Country">
+                        
+                        <select  class="form-control" id="country" type="select" country-model="addReport.country" country-select name="propertyInfoCountry" required>
+                            <option value="">Select Country</option>
+                        </select>
+                        
+                       
+                    </div>
+                    
+                    <div  ng-if="addReport.ifIsFromReportWriting" class="col-xs-11 col-sm-4 col-md-3" field-validation="Country">
+                        
+                        
+                        
+                        <select
+                            ng-model="addReport.selectedCountry" ng-change = "addReport.editCountry()"
+                            ng-options="country as country.name for country in addReport.countries
+                            track by country.code" name="Country" required
+                            class="form-control"><option value="">Select Country</option></select>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="form-group required" field-validation="ZIP">
+
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="zip">
+                        Zip:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" class="form-control" ng-model="addReport.zip" name="zip" id="zip" required>
+                    </div>
+                    
+                </div>
+              <!-- <div class="form-group">
+
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="county">
+                        County:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" class="form-control" ng-model="addReport.county" name="county" id="county">
+                    </div>
+
+                    
+                </div>-->
+                
+                <div class="form-group">                                                             
+                <div class="col-md-offset-2 col-sm-offset-3 col-xs-12 col-sm-5 col-md-5">
+                <button class="btn btn-primary" ng-click = "addReport.mapAddress()">Map It</button>
+                    <!--<span ng-if="addReport.invalidAddress" class="text-danger"> {{addReport.googleErrorMessage}}</span>-->
+                </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="latitude">
+                        Latitude:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input ng-disabled="true"  type="text" class="form-control" ng-model="addReport.latitude" name = "latitude" id="latitude">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="longitude">
+                        Longitude:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input ng-disabled="true"  type="text" class="form-control" id="longitude" name= "longitude" ng-model="addReport.longitude">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="contact">
+                        Contact:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input  type="text" class="form-control" ng-model="addReport.contact" id="contact">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="phone">
+                        Phone:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        
+                        <!--<div class="input-group">
+                        <div class="input-group-addon">{{addReport.phoneCode}}</div>
+                            <input type="text" class="form-control" ng-model="addReport.phone" id="phone">
+                        </div>-->
+                        
+                        <input type="text" name = "phone" ng-change="addReport.formatPhone()" ng-pattern="/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" class="form-control" ng-model="addReport.phone" id="phone">
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12"  for="fax">
+                        Fax:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="text" ng-model="addReport.fax" class="form-control" id="fax">
+                    </div>
+                </div>
+              
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="email">
+                        Email:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <input type="email" name = "email" class="form-control" ng-model="addReport.email" id="email">
+                    </div>
+                </div>
+
+                <div class="form-group required">
+
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12">
+                        Report Type:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3" field-validation="Report Requested">
+                        <multiselect class="input-xlarge" multiple="true" ng-model="addReport.reportType" options="reportType.templateName for reportType in addReport.reportTypes" header="Select Report Type" name="multipleReportsType" required></multiselect>
+                    </div>
+                     
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="propertyType">
+                        Property Type:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <select class="form-control" id="propertyType" ng-model = "addReport.propType" ng-options = "propertyType.propertyTypeName for propertyType in addReport.propertyTypes">
+                           <option value="">-- Select one from list--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="transactionType">
+                        Transaction Type:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <select class="form-control" id="transactionType" ng-model = "addReport.transType" ng-options = "transactionType.transactionTypeName for transactionType in addReport.transactionTypes">
+                            <option value="">-- Select one from list--</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-3 col-xs-12" for="grantAccess">
+                        Grant Access to:
+                    </label>
+                    <div class="col-xs-11 col-sm-4 col-md-3">
+                        <select class="form-control" id="grantAccess" ng-init = "addReport.selectCompany()"  ng-model = "addReport.grantAccess" ng-options = "grantAccess.name for grantAccess in addReport.grantAccesses">
+                            <option value="">-- Select one from list--</option>
+                        </select>
+                       
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" ng-click="addReport.clearDetails()" class="btn btn-md btn-default"> Cancel</button>
+                        <button type="submit" class="btn btn-md btn-primary" ng-click="addReport.saveReport(addReportsForm)"> Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+	</div>	
+</div>
+</div>

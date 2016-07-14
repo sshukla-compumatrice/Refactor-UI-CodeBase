@@ -1,0 +1,126 @@
+<div class="container-fluid" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+<div class="panel panel-default">
+	<div class="panel-body">
+    <h4>Portfolio Signature Tool</h4>
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div id="alertMessageDiv" ng-show="portfolioSignatureTool.showAlert" class="alert alert-dismissible" role="alert">
+                <button type="button" class="close" ng-click="portfolioSignatureTool.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{portfolioSignatureTool.serviceMessage}}
+            </div>
+            <button ng-click="portfolioSignatureTool.gotoProject()" class="btn btn-default pull-right"><span class="glyphicon glyphicon-arrow-up"></span> Return to Project</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-lg-3" ng-if="portfolioSignatureTool.reportTypes.length>1">
+            <div class="form-group">
+                <label>Report Type: </label>
+                <select class="form-control" id="selectReportType" ng-options="reportType as reportType.reportType for reportType in  portfolioSignatureTool.reportTypes" ng-model="portfolioSignatureTool.selectedReportType" ng-change="portfolioSignatureTool.setReportType()">
+                    <option value="">Select report types</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-condensed" ng-if="portfolioSignatureTool.selectedReportType.reportTypeGuid">
+                    <thead>
+                        <tr>
+                            <th class="site-number">Site Number</th>
+                            <th>Address</th>
+                            <th class="site-signatues">Signatures</th>
+                            <th class="site-certifications">Certifications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="(parentIndex,info) in portfolioSignatureTool.portfolioSignatureDetails | filter: {reportTypeGuid : portfolioSignatureTool.selectedReportType.reportTypeGuid}">
+                            <td><a class="pointer">{{info.propertyNumber}}</a></td>
+                            <td><a class="pointer">{{info.propertyName}} {{info.address}}, {{info.state}}, {{info.city}} {{info.zipCode}}</a></td>
+                            <td>
+                                <div ng-repeat="(signIndex,sign) in info.signatures | filter: {signatureType : '!Certification' }">
+                                    <strong>{{sign.signOffType}}</strong>
+                                    <!--statusID == 6--report is Finalize-->
+                                    <form ng-if="!info.final" class="form-inline">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input ng-model="sign.isChecked" type="checkbox" ng-click="portfolioSignatureTool.updateSignedSignature($event,sign.signOffUser)">
+                                            </label>
+                                        </div>
+                                        <div class="form-group" ng-init="name=sign.signOffUser.userName">
+                                            <input type="text" class="form-control" ng-model="sign.signOffUser.userName" ng-value="sign.signOffUser.userName">
+                                        </div>
+                                        <div class="form-group">
+                                            -
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" ng-model="sign.signOffUser.title">
+                                        </div>
+                                        <div class="form-group">
+                                            <a class="pointer" ng-show="portfolioSignatureTool.portfolioSignatureDetails.length > 1" ng-click="portfolioSignatureTool.copyToAllSignatures(parentIndex,$index,sign)"><span class="glyphicon glyphicon-arrow-down"></span></a>
+                                        </div>
+                                    </form>
+                                    <div ng-if="info.final">
+                                        {{sign.signOffUser.userName}} - {{sign.signOffUser.title}}
+                                    </div>
+                                    <form class="form-horizontal" ng-if="sign.signOffType =='SEC Name'">
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"> Email:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" ng-model="sign.signOffUser.email" ng-value="sign.signOffUser.email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"> Phone:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" ng-model="sign.signOffUser.cellPhone" ng-value="sign.signOffUser.cellPhone">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <hr>
+                                </div>
+                            </td>
+                            <td>
+                                <div ng-repeat="(certIndex,cert) in filtered = (info.signatures | filter: portfolioSignatureTool.getCurrentCertificate)">
+                                    <strong>{{cert.signOffType}}</strong>
+                                    <ul>
+                                        <li ng-repeat="signedCertificates in info.signatures | filter: {signOffType: cert.signOffType}" ng-if="signedCertificates.signatureGuid && signedCertificates.signOffUser.userGUID &&  signedCertificates.signOffUser.userGUID!=portfolioSignatureTool.currentUserGUID">
+                                            Signed by: {{signedCertificates.signOffUser.userName}} - {{signedCertificates.signOffUser.title}}
+                                        </li>
+                                    </ul>
+                                    <form class="form-inline">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input ng-disabled="!cert.eponly" ng-model="cert.isChecked" type="checkbox" ng-click="portfolioSignatureTool.updateSignedCertificate($event,cert.signOffUser)">
+                                            </label>
+                                        </div>
+                                        <div class="form-group" ng-init="name = cert.signOffUser.userName">
+                                            <input ng-disabled="!cert.eponly" type="text" class="form-control" ng-model="cert.signOffUser.userName" ng-value="cert.signOffUser.userName">
+                                        </div>
+                                        <div class="form-group">
+                                            -
+                                        </div>
+                                        <div class="form-group">
+                                            <input ng-disabled="!cert.eponly" type="text" class="form-control" ng-model="cert.signOffUser.title">
+                                        </div>
+                                        <div class="form-group">
+                                            <a ng-disabled="!cert.eponly" class="pointer" ng-show="portfolioSignatureTool.portfolioSignatureDetails.length > 1"><span ng-disabled="!cert.eponly" class="glyphicon glyphicon-arrow-down" ng-click="portfolioSignatureTool.copyToAllCertificates(parentIndex, cert)" ></span></a>
+                                        </div>
+                                    </form>
+                                    <p>{{cert.certificationText}}</p>
+                                </div>
+                                <div ng-show="filtered.length==0" class="alert alert-warning">No certifications present</div>
+                               
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center">
+                <button ng-show="portfolioSignatureTool.isSubmitSignoff" class="btn btn-md btn-primary" ng-click="portfolioSignatureTool.submitSignatures()">Submit Changes</button>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>	
+</div>

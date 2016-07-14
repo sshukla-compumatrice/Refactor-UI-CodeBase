@@ -1,0 +1,369 @@
+{
+    "Section": {
+        "html": "<div><h2><strong><span>{{section1Title}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><button  id='submitData' class='btn btn-mini btn-success' data-ng-click='submit();'><b>Submit Data</b></button><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div3'></div></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK'><p ng-bind-html='contentValues.ckEditData.div2'></p></div></div><hr><div><button  id='createHost' class='btn btn-mini btn-success' data-ng-click='val();createTable()'><b>Create Table</b></button></div><br> <dynamic-table ng-show='show==true'></dynamic-table><hr><horizontal-table table='contentValues.horizontalTable'></horizontal-table><div associate-photos ap-data='contentValues.associatPhotos' /><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat = 'costTable in contentValues.costTable'><div add-recommendation  cost-table = 'costTable'/><div freddie-mac-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+
+        "contentValues": {
+            "section1Title": "1.0 EDR Order Status",
+            "choice": {
+                "Y": "Consulting",
+                "N": "Application Development and Support",
+                "NS": "Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "ckEditData": {
+                "div1": "<p>The purpose of the Phase I Environmental Site Assessment (ESA) was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property. </p>",
+
+                "div2": "<p><strong>test data for ck editor</strong></p>",
+                "div3": "<ul><li>Coffee</li><li>Tea</li><li>Milk</li></ul>"
+            },
+            "tagData": "Please refer to Default Language for EDR Order Status.",
+            "horizontalTable": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 2
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            },
+            "associatPhotos": {
+                "enabled": true,
+                "associated": [{
+                    "url": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+                    "name": "renamed for section 1"
+                }]
+            },
+
+            "costTable": [
+                {
+                    "recommendationHeader": "Paving",
+
+                    "type": "displayFreddie2015",
+                    "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                    "groupTypes": [
+						{
+                            "value": "1",
+                            "name": "Site Components"
+                            },
+                        {
+                            "value": "2",
+                            "name": "Architectural Components"
+                            },
+                        {
+                            "value": "3",
+                            "name": "Building Interior Components"
+                            },
+                        {
+                            "value": "4",
+                            "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                        {
+                            "value": "5",
+                            "name": "Dwelling Unit Components"
+                            }],
+                    "recommendationTypes": [{
+                            "value": "1",
+                            "name": "Roof Coverings - Repairs / Flood"
+                    },
+                        {
+                            "value": "2",
+                            "name": "Roof Drainage (Gutters/Down spouts)"
+                    },
+                        {
+                            "value": "3",
+                            "name": "Building Mounted Lighting"
+                    },
+                        {
+                            "value": "other_",
+                            "name": "Other"
+                    }],
+                    "years": 10,
+
+
+                    "data": [{
+                        "group": 1,
+                        "sectionID": 23,
+                        "recommendation": [{
+                            "name": "Roof Coverings - Repairs / Flood",
+                            "package": ["EMG Replacement and Immediate (No Short Term)", "EMG Default Cost Tables"],
+                            "tables": ["Immediate and Short Term Repair Costs Tables"],
+                            "eul": 200,
+                            "eff": 100,
+                            "rul": 100,
+                            "quantity": 150,
+                            "unit": "LS",
+                            "unitCost": 100,
+                            "cycleReplacement": 15000,
+                            "replacePercent": 2,
+                            "totalCost": 300,
+                            "unallocatedCost": 700,
+                            "critical": {
+                                "name": "critical",
+                                "include": true,
+                                "val": 150
+                            },
+                            "priority90Days": {
+                                "name": "priority90Days",
+                                "include": true,
+                                "val": 150
+                            },
+                            "priority": {
+                                "name": "priority",
+                                "include": false,
+                                "val": 150
+                            },
+                            "yearlyCostSpread": [{
+                                "label": "1",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "2",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "3",
+                                "include": true,
+                                "val": 150
+                        }],
+                            "condition": ["E", "P"],
+                            "action": ["CR", "PR"],
+                            "criticalComments": "this is a critical comment",
+                            "conditionComments": "this is condition comments"
+                    }, {
+                            "name": "Building Mounted Lighting 123",
+                            "eul": 200,
+                            "eff": 100,
+                            "rul": 100,
+                            "quantity": 150,
+                            "unit": "LS",
+                            "unitCost": 100,
+                            "cycleReplacement": 15000,
+                            "replacePercent": 2,
+                            "totalCost": 300,
+                            "unallocatedCost": 700,
+                            "critical": {
+                                "name": "critical",
+                                "include": false,
+                                "val": 150
+                            },
+                            "priority90Days": {
+                                "name": "priority90Days",
+                                "include": true,
+                                "val": "150"
+                            },
+                            "priority": {
+                                "name": "priority",
+                                "include": false,
+                                "val": ""
+                            },
+                            "yearlyCostSpread": [{
+                                "label": "1",
+
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "2",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "5",
+                                "include": true,
+                                "val": 150
+                        }],
+                            "condition": ["E", "P"],
+                            "action": ["CR", "PR"],
+                            "criticalComments": "this is a critical comment",
+                            "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }, {
+                    "recommendationHeader": "Sidewalks",
+                    "type": "displayFreddie2015",
+                    "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                    "groupTypes": [{
+                            "value": "1",
+                            "name": "Site Components"
+                            },
+                        {
+                            "value": "2",
+                            "name": "Architectural Components"
+                            },
+                        {
+                            "value": "3",
+                            "name": "Building Interior Components"
+                            },
+                        {
+                            "value": "4",
+                            "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                        {
+                            "value": "5",
+                            "name": "Dwelling Unit Components"
+                            }],
+                    "recommendationTypes": [{
+                            "value": "1",
+                            "name": "Sidewalk_1"
+                    },
+                        {
+                            "value": "2",
+                            "name": "Sidewalk_2"
+                    },
+                        {
+                            "value": "3",
+                            "name": "Sidewalk_3"
+                    },
+                        {
+                            "value": "other_",
+                            "name": "Other"
+                    }],
+                    "years": 10,
+
+
+                    "data": [{
+                        "group": 1,
+                        "sectionID": 23,
+                        "recommendation": [{
+                            "name": "Sidewalk_1",
+                            "eul": 200,
+                            "eff": 100,
+                            "rul": 100,
+                            "quantity": 150,
+                            "unit": "LS",
+                            "unitCost": 100,
+                            "cycleReplacement": 15000,
+                            "replacePercent": 2,
+                            "totalCost": 300,
+                            "unallocatedCost": 700,
+                            "critical": {
+                                "name": "critical",
+                                "include": true,
+                                "val": 150
+                            },
+                            "priority90Days": {
+                                "name": "priority90Days",
+                                "include": true,
+                                "val": 150
+                            },
+                            "priority": {
+                                "name": "priority",
+                                "include": false,
+                                "val": 150
+                            },
+                            "yearlyCostSpread": [{
+                                "label": "1",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "2",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "3",
+                                "include": true,
+                                "val": 150
+                        }],
+                            "condition": ["E", "P"],
+                            "action": ["CR", "PR"],
+                            "criticalComments": "this is a critical comment",
+                            "conditionComments": "this is condition comments"
+                    }, {
+                            "name": "Sidewalk_2",
+                            "eul": 200,
+                            "eff": 100,
+                            "rul": 100,
+                            "quantity": 150,
+                            "unit": "LS",
+                            "unitCost": 100,
+                            "cycleReplacement": 15000,
+                            "replacePercent": 2,
+                            "totalCost": 300,
+                            "unallocatedCost": 700,
+                            "critical": {
+                                "name": "critical",
+                                "include": false,
+                                "val": 150
+                            },
+                            "priority90Days": {
+                                "name": "priority90Days",
+                                "include": true,
+                                "val": "150"
+                            },
+                            "priority": {
+                                "name": "priority",
+                                "include": false,
+                                "val": ""
+                            },
+                            "yearlyCostSpread": [{
+                                "label": "1",
+
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "2",
+                                "include": true,
+                                "val": 150
+                        }, {
+                                "label": "5",
+                                "include": true,
+                                "val": 150
+                        }],
+                            "condition": ["E", "P"],
+                            "action": ["CR", "PR"],
+                            "criticalComments": "this is a critical comment",
+                            "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }]
+
+        },
+
+        "sectionID": 1,
+        "name": "EDR Order Status",
+        "number": "1.0"
+
+    }
+}

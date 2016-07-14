@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+ 
+</head>
+
+<body>
+    <script id="DeleteTemplate.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Delete Template </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate" novalidate>
+
+            <div class="modal-body ">
+                <strong> This will delete the Template. Are you sure you want to continue ?</strong>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" role="button" ng-click="deleteTemplate()">Yes</a>
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">No</a>
+            </div>
+        </form>
+
+    </script>
+    <div class="container-fluid">
+		<div class="panel panel-default">
+		<div class="panel-body">
+        <h2>Templates</h2>
+
+        <form name="editTemplateForm" class="form-horizontal" ng-controller="EditTemplatesController">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12">
+                    <div class="form-group">
+                        <label for="companyType" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Company:
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <select class="form-control" id="companyType" type="select" name="companyTypes" ng-model="selectedCompany" ng-change="companySelectionChanged()" ng-options="company as company.name for company in companyList" focus-if>
+                                <option value="">Select Company</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectTemplate" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Select a template:
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <select id="selectTemplate" class="form-control" type="select" ng-model="selectedTemplate" ng-options="template.name for template in templates" ng-change="templateChange();">
+                                <option value="" ng-if="!selectedTemplate">Select Template</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="action" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            I want to:
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <select class="form-control" id="action" name="action" ng-model="action" ng-change="actionSelected()">
+                                <option value="">Select Action</option>
+                                <option value="showRename">Rename this Template</option>
+                                <option value="showCopy">Copy this Template into a new Template with a different name</option>
+                                <option value="showStructure">View report section structure for this template</option>
+                                <option value="showRules">Define rules for when this template is used</option>
+                                <option value="showMove">Move this template to another company</option>
+                                <option value="showDelete">Delete this Template</option>
+                                <option value="showShortName">Define a short name for this template</option>
+                                <option value="showDashboard">Define the dashboard that should be used with this template</option>
+                                <option value="showDefault" ng-if="!selectedTemplate.companyDefaultTemplate">Make this my default template for {{selectedTemplate.reportType}} reports</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <hr>
+
+                    <div class="">
+                        <p>This template<b> IS <span ng-show="!selectedTemplate.companyDefaultTemplate">NOT</span></b> your default template for {{selectedTemplate.reportType}} reports.</p>
+                    </div>
+
+                    <div class="alert" ng-class="msgType" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlert">
+                        <button type="button" class="close" ng-click="serviceResponseAlert = false;" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{serviceResponseText}}
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12" ng-show="action != undefined && action != null && action != ''">
+                    <hr>
+                    <div class="form-group required" ng-show="action == 'showDashboard'" show-errors>
+                        <label id="dashboard" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Dashboard
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <select id="dashboard" class="form-control" name="dashboard" type="select" ng-model="dashboardVal" ng-options="dash.dashboardOptionShortName as dash.dashboardOptionName for dash in Dashboards" data-ng-required="action == 'showDashboard'">
+                                <option value="">Select Dashboard</option>
+                            </select>
+
+                        </div>
+                        
+
+                    </div>
+                    <div class="form-group required" ng-show="action == 'showRename'" show-errors>
+                        <label id="name" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Name
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <input id="name" type="text" name="rename" class="form-control" placeholder="Rename template" ng-model="renameVal" data-ng-required="action == 'showRename'">
+
+                        </div>
+                        
+                    </div>
+                    <div class="form-group required" ng-show="action == 'showCopy'" show-errors>
+                        <label for="copy" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            New Template Name
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <input id="copy" type="text" class="form-control" name="copy" placeholder="Enter new name" ng-model="copyVal" data-ng-required="action == 'showCopy'">
+
+                        </div>
+                       
+                    </div>
+                    <div class="form-group" ng-show="action == 'showStructure'">
+                        <label class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Report Structure
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div section-structure-display sections="sections" root-section-level="true"></div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="action == 'showDelete'">
+                        <div>
+                            Are you sure you want to delete the " {{template.name}} " Template? You will no longer be have access to the default language, report styles, and other configurations that it contains.
+                        </div>
+
+                    </div>
+                    <div class="form-group required" ng-show="action == 'showShortName'" show-errors>
+                        <label for="shortName" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Short Name
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <input id="shortName" type="text" name="shortName" class="form-control" placeholder="Enter short name" ng-model="shortNameVal" data-ng-required="action == 'showShortName'">
+
+                        </div>
+                        
+                    </div>
+                    <div class="form-group required" ng-show="action == 'showMove'" show-errors>
+                        <label for="company_move" class="control-label col-md-2 col-sm-3 col-xs-12">
+                            Select Company
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <select class="form-control" name="companyMove" id="company_move" type="select" name="company_move" ng-model="company_move" data-ng-required="action == 'showMove'" ng-options="other as other.name for other in companyList">
+                                <option value="">Select Company</option>
+                                <!--<option value="602AE305-1B48-49B2-BC86-ABB0FA530C03"> Land Environmental Group</option>
+                                <option value="A744B47F-529A-40FF-B6C1-33C504A1AAAE"> Lauenstein &amp; Associates</option>
+                                <option value="12180000-0000-0000-0000-000000000000">172d Airlift Wing MS ANG</option>-->
+                            </select>
+                        </div>
+                         
+
+                    </div>
+                    <div class="row" ng-hide="action == 'showDefault'">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-md btn-danger" ng-click="openDelete()" ng-show="action == 'showDelete'"> Delete</button>
+                            <button class="btn btn-md btn-default" ng-click="Cancel()"> Cancel</button>
+                            <button type="submit" class="btn btn-md btn-primary" ng-click="Save(editTemplateForm)" ng-hide="action == 'showStructure' || action == 'showDelete'"> Save</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+		</div>	
+		</div>
+    </div>
+
+
+</body>
+
+</html>

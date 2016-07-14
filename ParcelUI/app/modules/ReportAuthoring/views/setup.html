@@ -1,0 +1,338 @@
+<div ng-controller="SetupController">
+    <div class="bottom-margin-sm text-right">
+        <span ng-if="isDbOrder" class="dropdown">
+            <button id="orderdatabase" class="btn btn-primary btn-sm" ng-click="openEdrCredentialsModal();">Order Database Reports</button>
+        </span>
+        <a id="btnViewEditGeneralInfo" class="btn btn-sm btn-primary" href="{{GI_href}}" title="View General Info" user-action="general Information" target="_blank">View / Edit General Information</a>
+    </div>
+    
+    <div class="panel panel-default" ng-show="isOrderAvailable">
+        <div class="panel-heading">
+            <h3 class="panel-title">Order Summary</h3>
+        </div>
+        
+        <div ng-include src="'app/modules/ProjectDashboard/views/orderStatus.html'"></div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Report Output Settings</h3>
+        </div>
+        <div class="panel-body">
+            <div id="alertMessageDiv">
+                <div ng-show="showMessageSetup || setupItemUpdateStatus" class="alert" ng-class="setupItemUpdateClass" role="alert">
+                    <button type="button" class="close" ng-click="showMessageSetup = false;setupItemUpdateStatus=false;" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    {{setupItemUpdateText}}
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered">
+               <!-- <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Edit</th>
+                        <th>View / Edit Details</th>
+                    </tr>
+                </thead>-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong><span>Transmittal Letter Output Setup</span></strong>
+                        </td>
+                        <td>
+                            <a class="btn btn-default" ng-show="setupBoard.selTransmittalLetter" ui-sref="transmittalLetterSetup" target="_blank"> <i class="fa fa-eye fa-lg"></i>
+                                 <!--{{ showTransmittalLetter() }}--></a>
+                            
+                            <span ng-hide="setupBoard.selTransmittalLetter != null && setupBoard.selTransmittalLetter != '' && setupBoard.selTransmittalLetter != undefined">Not Set</span>
+                           
+                            <a href="#" ng-click="standardItemDanger='';standardItemSuccess='';clearMessages_Setup();" editable-select="setupBoard.selTransmittalLetter" e-ng-options="trans.value as trans.text for trans in transmittalArr" onbeforesave="saveDefaultItem($data,'setupBoard.selTransmittalLetter')" data-toggle="tooltip" data-placement="top" title="Click to edit Transmittal Letter">{{showTransmittalLetter()}}</a>
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong><span>Report Cover</span></strong>
+                        </td>                        
+                        <td>
+                            <!--<a class="btn btn-default"> <i class="fa fa-eye fa-lg"></i>-->
+                            <!--{{showReportCover()}}-->
+                            </a>
+                            <a href="#" ng-click="standardItemDanger='';standardItemSuccess='';clearMessages_Setup();" editable-select="setupBoard.selReportCover" e-ng-options="report.value as report.text for report in reportCoverArr" onbeforesave="saveDefaultItem($data,'setupBoard.selReportCover')" data-toggle="tooltip" data-placement="top" title="Click to edit Report Cover">{{showReportCover()}}</a>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong><span>Table of Contents Output Setup</span></strong>
+                        </td>
+                        <td>
+                            <a class="btn btn-default" ng-show="setupBoard.selTOC" ui-sref="tocSetup" target="_blank" class="pointer"> <i class="fa fa-eye fa-lg"></i>    <!--{{ showTOC() }}--></a>
+                               <span ng-hide="setupBoard.selTOC != null && setupBoard.selTOC != '' && setupBoard.selTOC != undefined">Not Set</span>
+                            
+                            <a href="#" ng-click="standardItemDanger='';standardItemSuccess='';clearMessages_Setup();" editable-select="setupBoard.selTOC" e-ng-options="toc.value as toc.text for toc in tocArr" onbeforesave="saveDefaultItem($data,'setupBoard.selTOC')" data-toggle="tooltip" data-placement="top" title="Click to edit Table of Contents">{{ showTOC() }}</a>
+                        </td>                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong><span>Report Output Setup</span></strong>
+                        </td>
+                        <td>
+                            <a class="btn btn-default" ng-show="setupBoard.selReportOutputSetup" ui-sref="reportSetup" target="_blank" class="pointer"><i class="fa fa-eye fa-lg"></i><!--{{showReportStructure()}}--></a>
+                            
+                             <span ng-hide="setupBoard.selReportOutputSetup != null && setupBoard.selReportOutputSetup != '' && setupBoard.selReportOutputSetup != undefined">Not Set</span>
+                            
+                            <a href="#" ng-click="standardItemDanger='';standardItemSuccess='';clearMessages_Setup();" editable-select="setupBoard.selReportOutputSetup" e-ng-options="report.value as report.text for report in reportOutputSetupArr" onbeforesave="saveDefaultItem($data,'setupBoard.selReportOutputSetup')" data-toggle="tooltip" data-placement="top" title="Click to edit Report Output Setup">{{showReportStructure()}}</a>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Start -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Report Items</h3></div>
+        <div class="panel-body">
+            <div id="alertMessageDiv">
+                <div ng-show="showMessage && standardItemSuccess != ''">
+                    <span><strong>{{standardItemName}}</strong></span>
+                </div>
+                <div ng-show="showMessage && standardItemSuccess != ''" class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" ng-click="showMessage = false;" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    {{standardItemSuccess}}
+                </div>
+
+                <div ng-show="showMessage && standardItemDanger != ''" class="alert alert-danger">
+                    {{standardItemDanger}}
+                </div>
+
+                <div ng-show="showMessageStandard || standardItemUpdateStatus" class="alert" ng-class="standardItemUpdateClass" role="alert">
+                    <button type="button" class="close" ng-click="showMessageStandard = false;standardItemUpdateStatus=false;" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    {{standardItemUpdateText}}
+                </div>
+
+            </div>
+        </div>
+        <div class="table-responsive" ng-show="!isEditStandardItem" ng-init="isEditStandardItem=false">
+            <table id="standardItem" class="table table-condensed table-bordered">
+                <!--<thead>
+                    <tr>
+                        <th>
+                            Items
+                        </th>
+                        <th>
+                            Edit
+                        </th>
+                        <th>
+                            Update With Latest Version
+                        </th>
+                        <th>
+                            View / Edit Details
+                        </th>
+                    </tr>
+                </thead>-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong><span>Tasked Company</span></strong>
+                        </td>
+                        <!--<td>
+                            <a ng-click="standardItemClick('taskedCompany');clearMessages_Standard();" href="#" editable-select="standardBoard.selTaskedCompany" e-ng-options="taskedCompany.value as taskedCompany.text for taskedCompany in taskedCompanyArr" onbeforesave="saveDefaultItem($data,'standardBoard.selTaskedCompany')" data-toggle="tooltip" data-placement="top" title="Click to edit Tasked Company">{{showTaskedCompany()}}</a>
+                        </td>
+                        <td class="text-center">Updated with latest version</td>-->
+                        <td>
+                           <a ng-show="standardBoard.selTaskedCompany" ng-href="#/TemplateDefaults?companyGuid={{currentUserCompanyGuid}}" target="_blank" class="pointer"> {{ showTaskedCompany() }}</a>
+                          
+                           <span ng-hide="standardBoard.selTaskedCompany != null && standardBoard.selTaskedCompany != '' && standardBoard.selTaskedCompany != undefined">Not Set</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong><span>Report Template</span></strong>
+                        </td>
+                        <!--<td>
+                            <a ng-click="standardItemClick('reportTemplate');clearMessages_Standard();" href="#" editable-select="standardBoard.selReportTemplate" e-ng-options="reportTemplate.value as reportTemplate.text for reportTemplate in reportTemplateArr" onbeforesave="saveDefaultItem($data,'standardBoard.selReportTemplate')" data-toggle="tooltip" data-placement="top" title="Click to edit Report Template">{{showReportTemplate()}}</a>
+                        </td>
+                        <td class="text-center">
+                            <button id="btnStandardItem_ReportTemplate_Update" user-action="Report Template update with latest version" class="btn btn-success" ng-click="updateVersion(standardBoard.selReportTemplate,0)">Update</button>
+                        </td>-->
+                        <td>
+                            <a ng-show="standardBoard.selReportTemplate" ng-href="#/Templates/Edit?templateGuid={{standardBoard.selReportTemplate}}&companyGuid={{currentUserCompanyGuid}}" target="_blank" class="pointer"> {{ showReportTemplate() }}</a>
+                            
+                            <span ng-hide="standardBoard.selReportTemplate != null && standardBoard.selReportTemplate != '' && standardBoard.selReportTemplate != undefined">Not Set</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong><span>Default Language Library</span></strong>
+                        </td>
+                        <!--<td>
+                            <a ng-click="standardItemClick('defaultLanguageLibrary');clearMessages_Standard();" href="#" editable-select="standardBoard.selDLL" e-ng-options="dll.value as dll.text for dll in dllArr" onbeforesave="saveDefaultItem($data,'standardBoard.selDLL')" data-toggle="tooltip" data-placement="top" title="Click to edit Default Language Library">{{showDLL()}}</a>
+                        </td>
+                        <td class="text-center">
+                            <button id="btnStandardItem_DLL_Update" user-action="Default Language Library update with latest version" class="btn btn-success" ng-click="updateVersion(standardBoard.selDLL,1)">Update</button>
+                        </td>-->
+                        <td>
+                            <a ng-show="standardBoard.selDLL" ng-href="#/DefaultLanguage?languageLibraryGUID={{standardBoard.selDLL}}" target="_blank" class="pointer"> {{ showDLL() }}</a>
+                            
+                            <span ng-hide="standardBoard.selDLL != null && standardBoard.selDLL != '' && standardBoard.selDLL != undefined">Not Set</span>
+                        </td>
+                    </tr>
+                    <tr ng-click="standardItemClick('prepolulatedTableData');">
+                        <td>
+                            <strong><span>Prepopulated Table Data</span></strong>
+                        </td>
+                        
+                        <!--<td>  {{prePopulatedDataText}}</td>
+                        <td class="text-center">
+                            <button id="btnStandardItem_PrepopulatedTableData_Update" user-action="Prepopulated Table Data update with latest version" class="btn btn-success" ng-click="updateVersion($data,2)">Update</button>
+                        </td>-->
+                        <td>Utilities, General Description Table, </td>
+                    </tr>
+                </tbody>
+            </table>
+<div class="margin-bottom text-left">
+        <button type="reset" class="btn btn-md btn-primary" ng-show="!isEditStandardItem" ng-click="editStandardItems()">Edit</button>
+        
+    </div>            
+        </div>
+       
+<div class="container-fluid" ng-show="isEditStandardItem">  
+  <div>
+    <div class="alert alert-info nomargin">
+      <p><strong>Tasked Company</strong><br>
+        The company tasked with this project.</p>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-condensed  table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="col-md-4">Current Setting</th>
+            <th  class="col-md-7">New Setting</th>
+            <th class="col-md-1">Update?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span ng-show="standardBoard.selTaskedCompany"> {{ showTaskedCompany() }}</span>
+            <span ng-hide="standardBoard.selTaskedCompany != null && standardBoard.selTaskedCompany != '' && standardBoard.selTaskedCompany != undefined">Not Set</span> </td>
+            <td><select class="form-control" ng-model="standardBoard.selTaskedCompany" 
+            ng-options="taskedCompany.value as taskedCompany.text for taskedCompany in taskedCompanyArr">               
+              </select>                              
+              </td>
+            <td><div class="checkbox">
+                <label>
+                  <input type="checkbox" ng-disabled="true" id="blankCheckbox" ng-model="standardItemsEdit.taskedompany">
+                </label>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div class="alert alert-info nomargin">
+      <p><strong>Report Template</strong><br>
+        The template is the structure of the report. It includes the report sections and tables. If you choose to update, all report sections and tables will be deleted and then replaced with the structure from the selected template. </p>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-condensed  table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="col-md-4">Current Setting</th>
+            <th class="col-md-7">New Setting</th>
+            <th class="col-md-1">Update?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span ng-show="standardBoard.selReportTemplate"> {{ showReportTemplate() }}</span>
+            <span ng-hide="standardBoard.selReportTemplate != null && standardBoard.selReportTemplate != '' && standardBoard.selReportTemplate != undefined">Not Set</span></td>
+            <td><select class="form-control" ng-model="standardBoard.selReportTemplate" 
+            ng-options="reportTemplate.value as reportTemplate.text for reportTemplate in reportTemplateArr" ng-change="standardItemsEdit.reportTemplate=true">               
+              </select></td>
+            <td><div class="checkbox">
+                <label>
+                  <input type="checkbox" id="blankCheckbox" ng-model="standardItemsEdit.reportTemplate">
+                </label>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div class="alert alert-info nomargin">
+      <p><strong>Default Language Library</strong><br>
+        Default Language Library contains text to be inserted into report upon project setup and optional text for report writers. If you choose to update, text already written in sections will be overwritten by any default lang selected to populate upon project setup. (i.e. If the author has entered text in the Scope section and there is an auto-populate entry in the library for Scope, the text the author entered will be replaced if Default Language Library is updated.) </p>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-condensed  table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="col-md-4">Current Setting</th>
+            <th class="col-md-7">New Setting</th>
+            <th class="col-md-1">Update?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> <span ng-show="standardBoard.selDLL"> {{ showDLL() }}</span>
+                <span ng-hide="standardBoard.selDLL != null && standardBoard.selDLL != '' && standardBoard.selDLL != undefined">Not Set</span></td>
+            <td><select class="form-control" ng-model="standardBoard.selDLL" 
+            ng-options="dll.value as dll.text for dll in dllArr" ng-change="standardItemsEdit.defaultLanguageLibrary=true">               
+              </select></td>
+            <td><div class="checkbox">
+                <label>
+                  <input type="checkbox" id="blankCheckbox" ng-model="standardItemsEdit.defaultLanguageLibrary">
+                </label>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div class="alert alert-info nomargin">
+      <p><strong>Prepopulated Table Data</strong><br>
+        Default Table Data is information that gets pre-populated into specific tables in the report upon project setup. Typical examples are the Adjoining Properties and Map Findings tables. If you choose to update, tables in the report that have Default Table Data will have all data overwritten by the template defaults. (i.e. If you have N,S,E,W rows in the Adjoining Properties table and the author has entered comments about the property and you choose to update this, the author's comments will be overwritten by blank N,S,E,W rows) </p>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-condensed  table-bordered table-hover">
+        <tbody>
+          <tr>
+            <td class="col-md-11">Utilities, General Description Table, </td>
+            <td class="col-md-1"><div class="checkbox">
+                <label>
+                  <input type="checkbox" id="blankCheckbox" ng-model="standardItemsEdit.prepopulatedTableData">
+                </label>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>     
+    <div class="margin-bottom text-left">
+        <button type="reset" class="btn btn-md btn-default" ng-click="cancelEditStandardItems()">Cancel</button>
+        <button type="submit" class="btn btn-md btn-primary" ng-click="updateStandardItems();">Save</button>
+      </div>
+</div>                
+      
+    </div>
+    
+    
+    
+    <!-- End -->
+    
+</div>
+<div ng-include src="'app/modules/ReportAuthoring/views/orderDBReport.html'"></div>

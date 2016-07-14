@@ -1,0 +1,133 @@
+<div ng-show="section.images.length > 0">
+    <div class="bottom-margin-sm">
+						  <a class="toc-section pointer"  ng-click="viewPDF('PHOTOPDFLANDSCAPE')">View Photograph Appendix as Landscape PDF </a>|<a class="toc-section pointer"  ng-click="viewPDF('PHOTOPDFPORTRAIT')"> View Photograph Appendix as Portrait PDF</a>
+    </div>
+
+    <div class="bottom-margin-sm" >
+    <div class="form-group">
+        <button class="btn btn-md btn-default" ng-disabled="isEditImage" title="Edit All" ng-click="editAllPhoto()">Edit All</button>		
+		<button class="btn btn-md btn-primary"  title="Include All" ng-click="includeAll()">Include All</button>
+		<button class="btn btn-md btn-primary"  title="Exclude All" ng-click="excludeAll()">Exclude All</button>
+		<button  class="btn btn-md btn-danger"  title="Delete All" ng-click="confirmDelete()">Delete All</button>
+		<button class="btn btn-md btn-primary" ng-show="zoomInAllFlag" title="Zoom In All" ng-click="zoomInAll()">Zoom In All</button>
+		<button class="btn btn-md btn-primary" ng-show="!zoomInAllFlag"  title="Zoom Out" ng-click="zoomInAll()">Zoom Out</button>
+		
+		
+    </div>
+    
+    <div class="bottom-margin-sm btn-group" ng-show="isEditImage">
+        <button class="btn btn-md btn-default"  ng-click="updateAllPhotos()">Save Changes</button>
+        <button class="btn btn-md btn-default" ng-init="btnSpellcheckorEdit='Check Spelling'" ng-model="btnSpellcheckorEdit"  ng-click="spellCheckPhotoCaption($event.target);">{{ btnSpellcheckorEdit }}</button>
+        <button class="btn btn-md btn-default"  ng-click="cancelEditPhoto()">Cancel</button>
+    </div>
+	</div>
+	<!-- included images -->
+	<div class="panel panel-default">        
+        
+		<div class="panel-heading">
+			<h3 class="panel-title">  Included Photos:</h3>
+		</div>
+		<div class="panel-body">
+			<span ng-hide="section.includedImages.length > 0">No photos have been included</span>
+			<div id="includedImages" ui-sortable="sortableOptions" ng-model="section.includedImages">
+				
+				<div class="col-md-3 text-center appendix-photos" ng-repeat="img in section.includedImages" ng-class="img.zoomIn ? 'col-md-12' : 'col-md-3'">
+					<!-- photo options -->
+					<div class="form-group appendixPhotoLog">
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Rotate Counterclockwise" ng-click="rotateCounterClockwise(img)"><i class="fa fa-undo"></i></a>
+
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Exclude Photo" ng-click="excludePhoto(img)"><i class="fa fa-minus-square"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Delete Photo" ng-click="confirmFileDelete(img)"><span class="glyphicon glyphicon-trash"> </span></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Zoom in" ng-show="!img.zoomIn" ng-click="zoomPhoto(img)"><i class="fa fa-search-plus"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Zoom out" ng-show="img.zoomIn" ng-click="zoomPhoto(img)"><i class="fa fa-search-minus"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Rotate Clockwise" ng-click="rotateClockwise(img)"><i class="fa fa-repeat"></i></a>
+					</div>
+					<!-- photo options ends -->
+
+					<!-- img -->
+					<div>
+                        
+						<img id="img{{$index}}" class="img-thumbnail" ng-src="{{img.thumbnailURL || '//:0'}}" ng-show="img.thumbnailURL.length > 1">
+						
+					</div>
+					<!-- img ends -->
+
+					<!-- caption -->
+					<div class="form-inline">
+						<div ng-show="!img.renameAction">
+							<label for="img-caption" class="control-label site-details">{{img.caption}}</label>
+						</div>
+						<div ng-show="img.renameAction" class="table-responsive">
+							<div class="form-group">								                                
+                                    <input id="imgCaptionId_{{img.fileGuid}}" name="imgCaptionId_{{img.fileGuid}}" type="text" ng-value="img.caption" class="form-control"  ng-model="img.caption" ng-blur="enableRename(img)">                                    
+								
+							</div>
+							<!--<button class="btn btn-md btn-default" ng-click='updateSinglePhoto(img)' data-toggle="tooltip" data-placement="right" title="Save changes"><span class="glyphicon glyphicon-duplicate"> </span></button>
+							<button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="right" title="Cancel" ng-click="cancelRename(img)"><i class="fa fa-times text-danger "></i></button>-->
+						</div>
+					</div>
+					<!-- caption ends -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- included images ends -->
+
+	<!-- excluded images -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Excluded Photos:</h3>
+		</div>
+		<div class="panel-body">
+			<span ng-hide="section.excludedImages.length > 0">No photos have been excluded</span>
+			<div id="includedImages" ui-sortable="sortableOptions" ng-model="section.excludedImages">
+				
+				<div class="text-center" ng-repeat="img in section.excludedImages" ng-class="img.zoomIn ? 'col-md-6' : 'col-md-3'">
+
+					<!-- photo options -->
+					<div class="form-group appendixPhotoLog">
+
+						<a class="btn btn-default btn-xs" tooltip="Rotate Counterclockwise" data-placement="right" ng-click="rotateCounterClockwise(img)"><i class="fa fa-undo"></i></a>
+
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Include Photo" ng-click="includePhoto(img)"><i class="fa fa-plus-square"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Delete Photo" ng-click="deletePhoto(img)"><span class="glyphicon glyphicon-trash"> </span></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Zoom in" ng-show="!img.zoomIn" ng-click="zoomPhoto(img)"><i class="fa fa-search-plus"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Zoom out" ng-show="img.zoomIn" ng-click="zoomPhoto(img)"><i class="fa fa-search-minus"></i></a>
+						<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Rotate Clockwise" ng-click="rotateClockwise(img)"><i class="fa fa-repeat"></i></a>
+
+					</div>
+					<!-- photo options ends -->
+
+					<!-- img -->
+					<div>
+						<!--img class="img-thumbnail" src="http://wwwdev.edrcore.com:8080/corefilemanagementservice/files/b7f0838c-03cf-4260-8c3e-a1366a56d0f9/stream"/ -->
+						<img class="img-thumbnail" src="{{img.thumbnailURL}}">
+					</div>
+					<!-- img ends -->
+
+					<!-- caption -->
+					<div class="form-inline">
+						<div ng-show="!img.renameAction">
+							<label id="lblCaption_{{img.fileGuid}}" class="control-label site-details">{{img.caption}}</label>
+						</div>
+						<div ng-show="img.renameAction" class="table-responsive">
+							<div class="form-group">
+								<input id="imgCaptionId_{{img.fileGuid}}" name="imgCaptionId_{{img.fileGuid}}" type="text" ng-value="img.caption" type="text" class="form-control" ng-model="img.caption" ng-blur="enableRename(img)">
+							</div>
+							<!--<button class="btn" data-toggle="tooltip" data-placement="right" title="Save changes" ng-click="renameImg(img)"><span class="glyphicon glyphicon-duplicate"> </span></button>
+							<button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="right" title="Cancel" ng-click="cancelRename(img)"><i class="fa fa-times text-danger"></i></button>-->
+						</div>
+					</div>
+					<!-- caption ends -->
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- excluded images ends -->
+
+    
+</div>
+

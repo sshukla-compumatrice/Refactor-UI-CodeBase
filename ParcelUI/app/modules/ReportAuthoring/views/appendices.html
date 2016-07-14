@@ -1,0 +1,606 @@
+<div ng-controller="AppendicesController as appendices" cg-busy="appendices.waitingProcessResources">
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 nopadding">
+				<ul class=" nav nav-tabs nav-tabs-sm report-write-tab" >
+        <li id="li_toc_appendices" role="presentation" class="active" ng-click="ck.openLeftPanel();ck.closeAlertHeight();"><a class="pointer" ng-click="appendices.reportAuthoringWriteSelected = 'Appendices';appendices.removeLocalStorage();appendices.appendicesTabClicked();" aria-controls="toc" role="tab" data-toggle="tab" aria-expanded="true">Appendices</a></li>
+        <li id="li_comments_appendices" role="presentation" ng-click="ck.openLeftPanel();ck.closeAlertHeight();"><a class="pointer" ng-click="appendices.reportAuthoringWriteSelected = 'Comments';appendices.getReportComments();appendices.removeLocalStorage();" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
+    </ul>
+			</div>
+		</div>
+        <div class="row">
+            <div id="leftContent" ng-switch on="appendices.reportAuthoringWriteSelected">
+                <!-- appendices div -->
+                <div ng-switch-when="Appendices" id="toc" class="col-md-4 leftContent nopadding">
+
+                    <div role="tabpanel" class="tab-pane fade active in">
+                        <!-- legends div -->
+						<div class="topHeaderHeight">
+                        <div class="alert alert-info nomargin ">
+                            <div class="table-responsive">
+                                <table class="table table-condensed small nomargin">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Legend:</strong></td>
+                                            <td><span class="lpdf"><i class="fa fa-file-pdf-o fa-lg icon-pdf"></i> PDF</span></td>
+                                            <td><span class="ldoc"><i class="fa fa-file-word-o fa-lg icon-word"></i> Word</span></td>
+                                            <td><span class="lhtm"><i class="fa fa-file-code-o fa-lg icon-html"></i> HTML</span></td>
+                                            <td><span class="lppt"><i class="fa fa-file-powerpoint-o fa-lg icon-pp"></i> Powerpoint</span></td>
+                                            <!-- <td><span class="ldbf"><span class="full">DBF&nbsp;File</span></span></td>  -->
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td><span class="lunk"><i class="fa fa-file-o fa-lg"></i> Unknown</span></td>
+                                            <td><span class="ltxt"><i class="fa fa-file-text-o fa-lg"></i> Text</span></td>
+                                            <td><span class="lxls"><i class="fa fa-file-excel-o fa-lg icon-excel"></i> Excel</span></td>
+                                            <td><span class="ljpg"><i class="fa fa-file-image-o fa-lg icon-image"></i> Image</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+							</div>
+                        <!-- legends div ends -->
+                        <!-- appendices section -->
+                        <div class="contentbodyHeight scrollDiv">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li ng-repeat="section in appendices.reportAppendices.sections" ng-class="{'active': appendices.reportAppendices.selectedSection.sectionID == section.sectionID}">
+                                    <a class="toc-section pointer" ng-class="{'current-section': appendices.reportAppendices.selectedSection.sectionID == section.sectionID}" ng-click="appendices.sectionClick(section)">{{section.sectionName}}</a>
+                                </li>
+                                <li ng-class="{'active': appendices.reportAppendices.allSectionView}"><a class="toc-section pointer" ng-class="{'current-section': appendices.reportAppendices.allSectionView}" ng-click="appendices.allSectionViewClick()">All Appendices</a></li>
+								
+								<li ><a class="toc-section pointer"  ng-click="appendices.openEDRDrawingTool()"> Launch EDR Drawing Tools</a></li>
+                            </ul>
+                        </div>
+                        <!-- appendices section ends -->
+                    </div>
+
+                </div>
+                <!-- appendices div ends-->
+
+        <!-- comments div -->
+        <div ng-switch-when="Comments" id="comments" class="col-md-4 leftContent nopadding" cg-busy="appendices.waitingCommentsResources" >
+           <div ng-if="ck.reportStatusAbbreviation!='FIN'">
+              <div class="topHeaderHeight">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="appendices.selSection_Comments" ng-change="appendices.newComm = false;appendices.commentsErrorStatus=false;appendices.sectionChanged();">
+
+                                <option value="0">Current Section</option>
+                                <option value="1">Current Section Unaddressed Comments</option>
+                                <option value="2">All Sections</option>
+                                <option value="3">All Sections Unaddressed Comments</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <span class="section-no pull-right" ng-show="appendices.currentSection.sectionNumber">{{appendices.currentSection.sectionNumber}}</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group bottom-margin comments-section-btn">
+
+                            <div ng-show="appendices.checkComments" id="divSelAll_write" class="btn-group" data-toggle="buttons" ng-click="appendices.selectedAll = !appendices.selectedAll; appendices.checkAll();">
+
+                                <label id="lblSelAll" class="btn btn-default btn-sm">
+                                    <input id="selAll" class="btn" type="checkbox" ng-model="appendices.selectedAll" />{{appendices.selectAllText}}
+                                </label>
+                            </div>
+
+
+                            <button ng-show="appendices.checkComments" class="btn btn-sm btn-default" ng-click="appendices.openDeletePopup();" ng-disabled="!appendices.selectedAll;!appendices.IsCommentChecked"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-sm btn-default" ng-show="appendices.checkComments" title="Open all addressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="appendices.OpenAll()"><i class="fa fa-lg fa-plus"></i> </button>
+                            <button class="btn btn-sm btn-default" ng-show="appendices.checkComments" title="Close all addressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="appendices.CloseAll()"><i class="fa fa-lg fa-minus"></i> </button>
+
+                            <button class="btn btn-sm btn-default" ng-click="appendices.newComm = true;appendices.newCommentVal='';appendices.commentsErrorStatus=false;appendices.saveNewCommBtn=false; ck.closeAlertHeight();appendices.addFocus();">Add New</button>
+
+                            <button class="btn btn-sm btn-default" title="Refresh Comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="appendices.refreshComments();appendices.newComm = false;appendices.commentsErrorStatus=false;"><i class="glyphicon glyphicon-refresh"></i> </button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="alert alert-info nomargin" role="alert" id="serviceResponseDiv" ng-show="appendices.serviceResponseAlert && appendices.checkComments">
+
+                    <button type="button" class="close" ng-click="appendices.serviceResponseAlert = false;ck.closeAlertHeight();" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Use the select to toggle comment visibility. Click on user names to view comments or use the buttons to show/hide all. Green comments have not been addressed.
+                </div>
+                <div ng-show="appendices.newComm" class="top-margin-sm form-horizontal">
+
+                    <div class="form-group " ng-hide="true">
+                        <label class="control-label col-md-4 col-sm-4 col-xs-12 label-left">Type of Comment: </label>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <select class="form-control" ng-model="appendices.commentType" ng-init="appendices.commentType = 0">
+
+                                <option value="0">General Comment</option>
+                                <option value="1">Report Writer</option>
+                                <option value="2">Senior Reviewer</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <textarea id="addComments" class="form-control resize-vertical focusif" rows="6" placeholder="Enter New Comments for {{appendices.currentSection.sectionName}}" ng-model="appendices.newCommentVal"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button class="btn btn-default btn-sm" ng-click="appendices.newComm = false;appendices.commentsErrorStatus=false;ck.closeAlertHeight();">Cancel</button>
+                            <button class="btn btn-primary btn-sm" ng-click="appendices.saveNewComments();ck.closeAlertHeight();" ng-disabled="appendices.saveNewCommBtn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentbodyHeight scrollDiv">
+
+                <div ng-show="appendices.commentsErrorStatus" class="alert alert-danger top-margin-xs" role="alert" ng-class="danger">
+                    {{appendices.commentsErrorText}}
+                </div>
+                <div ng-repeat="secVal in commentsArr track by $index">
+
+                    <div>
+
+                        <div class="bottom-margin-xs" ng-class="secVal.sectionName ? 'border-bottom-xs' : ''">
+                            <strong>{{secVal.sectionNumber}}  {{secVal.sectionName}}</strong>
+                        </div>
+
+                        <div class="alert alert-danger top-margin-xs" role="alert" ng-class="danger" ng-show="secVal.noCommentsErrVal">
+                            {{secVal.noCommentsErrVal}}
+                        </div>
+
+                        <div ng-show="(secVal.comments.length > 0)?true:false" ng-class="{'false': 'bg-green-comments','true': 'bg-gray-comments'}[comm.addressed]" ng-repeat="comm in secVal.comments">
+                            <div class="bottom-margin-xs">
+                                <input type="checkbox" ng-model="comm.Selected" ng-change="appendices.commentCheck()">
+                                <a class="pointer decoration-n">
+                                    <span id="{{comm.Id}}-plus-comment-span" ng-click="appendices.setIconComment('collapse in',comm.Id)" class="ng-hide">
+                                          <i id="{{comm.Id}}-plus-comment"  class="fa fa-lg fa-plus-square-o ng-hide"> </i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>
+                                    <span id="{{comm.Id}}-minus-comment-span" ng-click="appendices.setIconComment('collapse',comm.Id)">
+                                         <i id="{{comm.Id}}-minus-comment"  class="fa fa-lg fa-minus-square-o"></i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>
+
+
+                                </a>
+
+
+                                <span class="pull-right">{{comm.date}} </span>
+
+                                <div id="{{comm.Id}}-comment">
+                                    <span class="comment-text" ng-hide="comm.commentEditState" ng-bind-html="comm.commentVal"></span>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="editComments" class="form-control resize-vertical focusif" rows="6" placeholder="Enter Comments for {{appendices.currentSection.sectionName}}" ng-show="comm.commentEditState" ng-model="comm.EditCommentVal"></textarea>
+                                    <textarea id="editComments" class="form-control resize-vertical focusif" rows="6" placeholder="Address the comment for {{appendices.currentSection.sectionName}}" ng-show="comm.addressState" ng-model="comm.addressComment"></textarea>
+                                </div>
+
+                                <div >
+                                    <button ng-hide="comm.addressed || comm.addressState || comm.commentEditState" class="btn btn-primary btn-sm" ng-click="comm.addressState = true;comm.addressComment='';appendices.addFocus();">Address</button>
+                                    <button class="btn btn-primary btn-sm" ng-hide="comm.addressed || comm.addressState || comm.commentEditState || !comm.canEdit" ng-click="comm.commentEditState = true;appendices.editComment(comm);appendices.addFocus();">Edit</button>
+
+                                    <button class="btn btn-default btn-sm" ng-show="comm.commentEditState || comm.addressState" ng-click="comm.commentEditState = false;comm.addressState = false;appendices.Cancel(comm.commentVal);">Cancel</button>
+                                    <button class="btn btn-primary btn-sm" ng-show="comm.commentEditState || comm.addressState" ng-click="appendices.editAddressComment(comm)">Save</button>
+
+                                </div>
+                            </div>
+                            <div ng-show="comm.addressed">
+
+                                <a class="pointer decoration-n addressed-by">
+                                    <span id="{{comm.Id}}-plus-address-span" ng-click="appendices.setIconAddress('collapse in',comm.Id)" class="ng-hide">
+                                               <i id="{{comm.Id}}-plus-address"  class="fa fa-lg fa-plus-square-o ng-hide"></i> ADDRESSED BY {{comm.addressedBy.toUpperCase()}}
+                                        </span>
+                                    <span id="{{comm.Id}}-minus-address-span" ng-click="appendices.setIconAddress('collapse',comm.Id)">
+                                               <i id="{{comm.Id}}-minus-address"  class="fa fa-lg fa-minus-square-o"></i> ADDRESSED BY {{comm.addressedBy.toUpperCase()}}
+                                        </span>
+
+                                </a>
+                                <span class="pull-right">{{comm.addressedDate}}</span>
+                                <div id="{{comm.Id}}-address">
+                                    <span class="comment-text" ng-bind-html="comm.addressedVal"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr ng-show="(secVal.comments.length > 0)?true:false">
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+          
+        </div>
+        <!-- comments div ends -->
+  <left-panel-slide-toggle></left-panel-slide-toggle>
+            </div>
+          
+            <div id="rightContent" class="col-md-8">
+				<div class="alert alert-info">
+					Note: Files must be less than 25MB per upload. Only PDF files will be included in the final deliverable. Files highlighted in green are included in the final deliverable.
+					</div> 				
+                <div cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}" ng-repeat="section in appendices.reportAppendices.sections" ng-show="appendices.reportAppendices.allSectionView || appendices.reportAppendices.selectedSection.sectionID == section.sectionID">
+                    <!-- header -->										
+					
+                    <h3 class="border-bottom">{{section.sectionName}}</h3>
+                    <!-- header ends -->
+					<!-- Instruction -->
+					<!--div add-html id="section_{{section.sectionID}}" parent-sectionid='0' resp="section" obj="appendices.obj">
+						
+					</div-->
+					
+					<tag-with-dashes ng-show="section.sectionData.contentValues.tagData"></tag-with-dashes>
+					<!-- Instruction ends -->
+                    <!-- appendix tools -->
+                    <div>
+                        <div ng-repeat="tool in section.appendixTools">
+                            <a class="pointer" ng-click="appendices.toolClicked(tool, section)">{{tool.label}}</a>
+                        </div>
+                    </div>
+                    <!-- appendix tools ends -->
+
+                    <!-- upload section -->
+
+                    <div class="table-responsive">
+                        <table class="table" nv-file-drop="" uploader="section.uploader">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th ng-show="section.uploader.isHTML5">Size</th>
+                                    <th ng-show="section.uploader.isHTML5">Progress</th>
+                                    <th>Status</th>
+                                    <!--<th>Actions</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in section.uploader.queue" class="ng-scope">
+                                    <td><strong class="ng-binding">{{ item.file.name }}</strong></td>
+                                    <td ng-show="section.uploader.isHTML5" nowrap="" class="ng-binding">{{ item.file.size/1024/1024|number:2 }} MB</td>
+                                    <td ng-show="section.uploader.isHTML5">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <span ng-show="item.isSuccess" style="display: none;"><i class="glyphicon glyphicon-ok"></i></span>
+                                        <span ng-show="item.isCancel" style="display: none;"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                        <span ng-show="item.isError" style="display: none;"><i class="glyphicon glyphicon-remove"></i></span>
+                                    </td>
+                                    <!--<td nowrap="">
+                                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                            <span class="glyphicon glyphicon-upload"></span> Upload
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading" disabled="disabled">
+                                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                            <span class="glyphicon glyphicon-trash"></span> Remove
+                                        </button>
+                                    </td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div ng-if="!section.uploader.queue || !section.uploader.queue.length" nv-file-drop=""  uploader="section.uploader" class="col-md-12 upload-file-container panel panel-default label-center">
+                            <span>Drag files here.</span>
+                        </div>
+                    </div>
+                    <div class="bottom-margin-sm">
+                        <!--	<input type="file" nv-file-select uploader="section.uploader" multiple/>
+							-->
+                        <span ng-click="appendices.responseAlert = false" class="btn btn-md btn-success fileinput-button" ng-class="{disabled: disabled}"><i class="fa fa-file-text-o"></i> ADD FILES
+                            <input type="file" multiple="multiple" id="file-3" data-file-input="files" ngf-select="" nv-file-select uploader="section.uploader">
+                        </span>
+                    </div>
+					
+					 <div class="alert" ng-class="appendices.statusClass" role="alert" id="ResponseAlertDiv" ng-show="appendices.responseAlert">
+            <button type="button" class="close" ng-click="appendices.responseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+						 <div ng-bind-html="appendices.statusText"></div>
+            <!--{{appendices.statusText}}-->
+        </div>
+										 <div class="alert alert-danger" ng-class="alert-danger" role="alert" id="ResponseErrorAlertDiv" ng-show="appendices.responseErrorAlert">
+            <button type="button" class="close" ng-click="appendices.responseErrorAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+											 <div ng-bind-html="appendices.statusErrorText"></div>
+            <!--{{appendices.statusErrorText}}-->
+        </div>
+			
+					
+                    <!--<div ng-show="section.uploader.queue.length > 0">
+
+                        Queue progress:
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': section.uploader.progress + '%' }"></div>
+                        </div>
+                        <div class="bottom-margin">
+                            <button type="button" class="btn btn-primary btn-md" ng-click="section.uploader.uploadAll()" ng-disabled="!section.uploader.getNotUploadedItems().length">
+                                <span class="glyphicon glyphicon-upload"></span> Upload all
+                            </button>
+                            <button type="button" class="btn btn-default btn-md" ng-click="section.uploader.cancelAll()" ng-disabled="!section.uploader.isUploading" disabled="disabled">
+                                <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
+                            </button>
+                            <button type="button" class="btn btn-danger btn-md" ng-click="section.uploader.clearQueue()" ng-disabled="!section.uploader.queue.length">
+                                <span class="glyphicon glyphicon-trash"></span> Remove all
+                            </button>
+                        </div>
+                    </div>-->
+
+                    <!-- upload section ends -->
+
+                    <!-- photos -->
+                    <div ng-if="section.hasPhotos">
+          <!--          <div ng-if="section.hasPhotos && section.photosUploaded">-->
+<!--
+                        <div class="bottom-margin-sm">
+						  <a class="toc-section pointer"  ng-click="appendices.viewPDF('PHOTOPDFLANDSCAPE')">View Photograph Appendix as Landscape PDF </a>|<a class="toc-section pointer"  ng-click="appendices.viewPDF('PHOTOPDFPORTRAIT')"> View Photograph Appendix as Portrait PDF</a>
+						</div>
+-->
+                        <div photo-log section="section" report-id="appendices.reportID"></div>
+                    </div>
+                   
+                    <!-- photos ends -->
+                     <div ng-if="section.files" >
+                    <div >
+					<h4 class="border-bottom">Other Uploaded Files</h4>
+					</div>
+                    <!-- files div -->
+                    <div ng-show="section.files.length > 0" class="table-responsive">
+                      
+                        <table  class="table table-condensed table-bordered table-hover ">
+                            <thead>
+                                <tr>
+									
+                                    <th>Filename</th>
+                                    <th>Pages</th>
+                                    <th>Size</th>
+                                    <th>Upload Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody ui-sortable="appendices.sortableOptions" ng-model="section.files">
+                                <tr ng-repeat="file in section.files" class="{{file.fileType == 'pdf' && 'success' || ''}}">
+									
+                                    <td>
+                                       <span ng-if="file.fileType == 'pdf'"><i class="fa fa-file-pdf-o fa-lg icon-pdf"></i></span>
+									<span ng-if="file.fileType == 'docx'"><i class="fa fa-file-word-o fa-lg icon-word"></i></span>
+									<span ng-if="file.fileType == 'html'"><i class="fa fa-file-code-o fa-lg icon-html"></i></span>
+									<span ng-if="file.fileType == 'pptx'"><i class="fa fa-file-powerpoint-o fa-lg icon-pp"></i></span>
+									<span ng-if="file.fileType == 'undefined'"><i class="fa fa-file-o fa-lg"></i></span>
+									<span ng-if="file.fileType == 'txt'"><i class="fa fa-file-text-o fa-lg"></i></span>
+									<span ng-if="file.fileType == 'xlsx'"><i class="fa fa-file-excel-o fa-lg icon-excel"></i></span>
+									<span ng-if="file.fileType == 'img'"><i class="fa fa-file-image-o fa-lg icon-image"></i></span> 
+										<a href="{{file.downloadURL}}">{{file.fileName}}</a>
+                                    </td>
+                                    <td>{{file.pages}}</td>
+                                    <!--<td>{{!file.fileSize ? '' : file.fileSize > (1024 * 1024) ? (file.fileSize/1024/1024|number:2) + ' MB' : file.fileSize > 1024 ? (file.fileSize/1024|number:2) + ' KB' : file.fileSize + ' Bytes'}}</td>-->
+                                    <td>{{!file.fileSize ? '' : file.fileSize | formatBytes:2}}</td>
+                                    <!-- {{file.uploadDateTime | date : "dd-mm-yyyy H:mm:ss" : 'UTC'}} -->
+                                    <td>{{file.uploadDateTime}}</td>
+                                    <td>
+
+                                        <div class="text-center appendixPhotoLogTableActions">
+                                            <a class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" ng-click="appendices.deleteFile(file, section)"><span class="glyphicon glyphicon-trash"> </span></a>
+                                            <a class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" title="Move Up" ng-click="appendices.moveUpFile($index, section)"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+                                            <a class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" title="Move Down" ng-click="appendices.moveDownFile($index, section)"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+                                            <a class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" title="Edit" ng-click="appendices.editFileDetails(file, section)"><span class="glyphicon glyphicon-pencil"> </span></a>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                <!-- files aggregation -->
+                                <tr class="unsortable">
+									
+                                    <td>
+                                        Total of {{section.files && section.files.length ? section.files.length > 1 ? section.files.length + ' documents' : section.files.length + ' document' : 0 + ' documents'}}
+                                    </td>
+                                    <td>
+                                        {{section.files.sum('pages')}}
+                                    </td>
+<!--                                    <td>{{!section.totalFileSize ? '' : section.totalFileSize > (1024 * 1024) ? (section.totalFileSize/1024/1024|number:2) + ' MB' : section.totalFileSize > 1024 ? (section.totalFileSize/1024|number:2) + ' KB' : section.totalFileSize + ' Bytes'}}</td>-->
+                                    <td>{{!section.totalFileSize ? '' : section.totalFileSize | formatBytes:2}}</td>
+                                </tr>
+                                <!-- files aggregation ends -->
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<div ng-show="section.files.length == 0">
+						<span>No Files have been uploaded to this appendix</span>
+					</div>
+                    <!-- files div ends -->
+                    </div>
+					
+                </div>				
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script id="DeleteAppendixFile.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="cancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete Appendix File </h4>
+    </div>
+
+    <form name="myFormAddTemplate" novalidate>
+
+        <div class="modal-body ">
+            <p><strong> You are about to delete "{{toDelete.file.fileName}}" Appendix File from Section: {{toDelete.section.sectionName}}. Are you sure you want to delete it?</strong></p>
+
+        </div>
+
+        <div class="modal-footer">
+            <a class="btn btn-primary" role="button" ng-click="deleteAppendixFile()">Yes, Delete it </a>
+            <a class="btn btn-default" role="button" ng-click="cancelDelete()">No</a>
+        </div>
+    </form>
+</script>
+
+<script id="UpdateAppendixFile.html" type="text/ng-template">
+    <div class="modal-header ">
+        <button type="button" class="close" data-dismiss="modal" ng-click="cancelUpdate()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Update Appendix File </h4>
+    </div>
+    <form name="myFormAddTemplate" novalidate cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="filename">Name:</label>
+                    <div class="input-group col-md-6 col-lg-6 col-xs-12">
+                        <input id="filename" class="form-control" type="text" placeholder="Enter a new name" ng-model="toUpdate.file.fileName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <div class="input-group col-md-6 col-lg-6 col-xs-12">
+                        <select class="form-control" id="Section" ng-options="section.sectionGUID as section.sectionName for section in toUpdate.sections" ng-model="toUpdate.file.sectionGUID"></select>
+                    </div>
+                </div>
+				
+				
+
+                <div class="form-group">
+                    <label for="Included">Included:</label>
+                    <div class="input-group col-md-6 col-lg-6 col-xs-12">
+                        <input type="checkbox" id="Included" ng-model="toUpdate.file.isIncluded">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelUpdate()">Cancel</button>
+            <button type="button" class="btn btn-primary" ng-click="updateAppendixFile()">Continue</button>
+        </div>
+    </form>
+</script>
+
+<script id="appendixTool.html" type="text/ng-template">
+
+    <div class="modal-header">
+        <h3>{{appendixTool.tool.label}}</h3>
+    </div>
+    <div class="modal-body">
+        <div id="appendixToolDiv" ng-include="appendixTool.getTrustedUrl(appendixTool.tool.url)" insert-submit-success-callback></div>
+    </div>
+
+</script>
+<script id="dllDeleteAll.html" type="text/ng-template">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete Comments</h4>
+    </div>
+
+
+    <form name="myFormAddTemplate1" novalidate>
+
+        <div class="modal-body ">
+
+            <strong>This will delete the selected comments. Are you sure you want to continue?</strong>
+
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+            <a class="btn btn-primary" role="button" ng-click="deleteComments()">Continue</a>
+        </div>
+    </form>
+
+</script>
+
+<script id="SelectDrawingToolOrders.html" type="text/ng-template">
+  <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" ng-click="cancelToDrawingTool()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Select Drawing Tools Order:</h4>
+							</div>
+    <form name="myFormAddTemplate" novalidate>
+
+       <div class="modal-body" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+								<div class="table-responsive">
+									<table class="table table-striped table-condensed">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Order</th>
+												<th>Date</th>
+												<th>Status</th>
+												<th>Desciption</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="order in drawingToolOrders">
+											<td>
+											<div class="radio">
+											<label>
+												<input type="radio" name="optionsRadios" ng-model="drawingToolOrders.selectedEdrPropertyGuid" value="{{order.edrPropertyGuid}}">
+											</label>
+											</div>
+												</td>
+												<td>{{order.orderNumber}}</td>
+												<!--td>{{order.creationDate | date: 'yyyy-MM-dd'}}</td-->
+												<td class="site-number">{{order.creationDate | date: 'MMM dd yyyy'}}</td>
+												<td>{{order.status}}</td>
+												<td>{{order.description}}</td>
+											</tr>
+											
+											
+										</tbody>
+									</table>
+								</div>
+		   <div>
+            <!--div ng-class="drawingToolOrders.StatusClass">{{drawingToolOrders.StatusText}}</div-->
+			   
+			   <div class="alert" ng-class="drawingToolOrders.StatusClass" role="alert" id="ResponseAlertDiv" ng-show="drawingToolOrders.ResponseAlert">
+            <button type="button" class="close" ng-click="drawingToolOrders.ResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{drawingToolOrders.StatusText}}
+        </div>
+			   
+        </div>
+							</div>
+	
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelToDrawingTool()">Cancel</button>
+            <button type="button" class="btn btn-primary" ng-click="continueToDrawingTool()">Continue</button>
+        </div>
+    </form>
+</script>
+
+<script id="errorMessageDrawingTool.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="closeMessagePopup()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">EDR Lightbox Drawing Tools</h4>
+    </div>
+    <div class="modal-body">
+<!--        <h4 class="bottom-padding">Error</h4>-->
+        <div class="alert alert-danger">{{errorMsg}}</div>
+        <p ng-show="orderDetails">For error reporting:</p>
+        <p ng-show="orderDetails.edrOrderGuid">OrderGUID: {{orderDetails.edrOrderGuid}}</p>
+        <p ng-show="orderDetails.edrPropertyGuid">PropertyGUID: {{orderDetails.edrPropertyGuid}}</p>
+        <p ng-show="orderDetails.accountNumber">Account #: {{orderDetails.accountNumber}}</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-md btn-primary" role="button" ng-click="closeMessagePopup()">Close</button>
+    </div>
+</script>
+
+

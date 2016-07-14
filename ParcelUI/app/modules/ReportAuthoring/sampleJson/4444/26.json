@@ -1,0 +1,10 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "6.7 Previous Environmental Reports",
+        "tagData": "\\u00A0 Only write up prior reports if the CAR indicates we have reliance or if we obtain the report from government agency.\\u00A0 You must still review prior reports whether we have reliance or not.\\u00A0 If we do not have reliance and there is a significant issue in the prior report, contact SEC immediately so that we can try to get reliance. \\u00A0 Templates are currently provided in the Language Library for Prior ESA done by another firm Prior ESA done by EMG Prior UST removal report",
+        "ckEditData": {
+            "div02": "<p>EMG was not provided with any previously conducted environmental assessment reports for the Project. <\\/p>"
+        }
+    }
+}

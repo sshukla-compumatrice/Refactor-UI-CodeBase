@@ -1,0 +1,6 @@
+<ul class="nav nav-pills nav-stacked">
+    <li ng-repeat="section in sections">
+        <span ng-class="{true: 'toc-section current-section'}[rootSectionLevel]">{{section.number + ' ' + section.name}}</span>
+        <div nested-section-display nested-sections="section.sections"></div>
+    </li>
+</ul>

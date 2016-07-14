@@ -1,0 +1,880 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br> <div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.6.1 Sprinklers and Standpipes",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 230,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Fire Suppression",
+                "value": "5695"
+            }, {
+                "name": "Fire pump. Replace  ",
+                "value": "11064"
+            }, {
+                "name": "Fire pump. Replace  ",
+                "value": "11329"
+            }, {
+                "name": "Fire pump. Replace  ",
+                "value": "11594"
+            }, {
+                "name": "Fire pump. Replace  ",
+                "value": "11859"
+            }, {
+                "name": "Fire Suppression",
+                "value": "13384"
+            }, {
+                "name": "Fire Suppression",
+                "value": "13482"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "15831"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "15832"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "15833"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "15834"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "16682"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "16683"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "16684"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "16685"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "16945"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "16946"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "16947"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "16948"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "18037"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "18038"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "18039"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "18040"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "18300"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "18301"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "18302"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "18303"
+            }, {
+                "name": "Fire Suppression",
+                "value": "18974"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "19078"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "19079"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "19080"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "19081"
+            }, {
+                "name": "Fire Suppression",
+                "value": "20059"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "20210"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "20211"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "20212"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "20213"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "21576"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "21577"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "21578"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "21579"
+            }, {
+                "name": "Central fire alarm panel. Replace (4 zone) ",
+                "value": "22298"
+            }, {
+                "name": "Central fire alarm panel. Replace (8 zone) ",
+                "value": "22299"
+            }, {
+                "name": "Central fire alarm panel. Replace (12 zone) ",
+                "value": "22300"
+            }, {
+                "name": "Central fire alarm panel. Replace (50 point addressable) ",
+                "value": "22301"
+            }, {
+                "name": "Central fire alarm panel. Replace (100 point addressable) ",
+                "value": "22302"
+            }, {
+                "name": "Central fire alarm panel. Replace (200 point addressable) ",
+                "value": "22303"
+            }, {
+                "name": "Central fire alarm panel. Replace (400 point addressable) ",
+                "value": "22304"
+            }, {
+                "name": "Smoke detector. Replace (Commercial) ",
+                "value": "22305"
+            }, {
+                "name": "Smoke detector. Replace (Residential) ",
+                "value": "22306"
+            }, {
+                "name": "Strobe/horn. Replace ",
+                "value": "22307"
+            }, {
+                "name": "Fire alarm system (Zoned). Modernize entire system ",
+                "value": "22308"
+            }, {
+                "name": "Fire alarm system (Addressable). Modernize entire system ",
+                "value": "22309"
+            }, {
+                "name": "Fire pump. Replace (500 GPM) ",
+                "value": "22310"
+            }, {
+                "name": "Fire pump. Replace (750 GPM) ",
+                "value": "22311"
+            }, {
+                "name": "Fire pump. Replace (1,000 GPM) ",
+                "value": "22312"
+            }, {
+                "name": "",
+                "value": "22313"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "22567"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "22568"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "22569"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "22570"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90002332"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90002333"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90002334"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90002335"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90003697"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90003698"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90003699"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90003700"
+            }, {
+                "name": "Fire pump ",
+                "value": "90005204"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90005205"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90005206"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90005207"
+            }, {
+                "name": "Fire pump ",
+                "value": "90005519"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90005520"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90005521"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90005522"
+            }, {
+                "name": "Fire Suppression System",
+                "value": "90011887"
+            }, {
+                "name": "Fire Pump, Refurbish",
+                "value": "90011888"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90011889"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90011890"
+            }, {
+                "name": "Fire Suppression System",
+                "value": "90012245"
+            }, {
+                "name": "Fire Pump, Refurbish",
+                "value": "90012246"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90012247"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90012248"
+            }, {
+                "name": "Fire Suppression System",
+                "value": "90012603"
+            }, {
+                "name": "Fire Pump, Refurbish",
+                "value": "90012604"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90012605"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90012606"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90013556"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90013557"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90013558"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90013559"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90013894"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90013895"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90013896"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90013897"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90014234"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90014235"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90014236"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90014237"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90014572"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90014573"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90014574"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90014575"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90014957"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90014958"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90014959"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90015517"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90015518"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90015519"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90015520"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90015521"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90015522"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90015523"
+            }, {
+                "name": "",
+                "value": "90015524"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90015629"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90016081"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90016082"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90016083"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90016310"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90016311"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90016312"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90016313"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90016314"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90016315"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90016316"
+            }, {
+                "name": "",
+                "value": "90016317"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90016603"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90016604"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90016605"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90016832"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90016833"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90016834"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90016835"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90016836"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90016837"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90016838"
+            }, {
+                "name": "",
+                "value": "90016839"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90016963"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90016964"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90016965"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90016966"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90017438"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90017439"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90017440"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90017667"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90017668"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90017669"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90017670"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90017671"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90017672"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90017673"
+            }, {
+                "name": "",
+                "value": "90017674"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90017960"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90017961"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90017962"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90018189"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90018190"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90018191"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90018192"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90018193"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90018194"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90018195"
+            }, {
+                "name": "",
+                "value": "90018196"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90018983"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90018984"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90018985"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90019212"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90019213"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90019214"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90019215"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90019216"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90019217"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90019218"
+            }, {
+                "name": "",
+                "value": "90019219"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90019532"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90019533"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90019534"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90019535"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90020043"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90020044"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90020045"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90020046"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90020147"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90020437"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90020438"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90020439"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90020440"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90021161"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90021162"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90021163"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90021164"
+            }, {
+                "name": "",
+                "value": "90021378"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90021645"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90021646"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90021647"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90021874"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90021875"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90021876"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90021877"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90021878"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90021879"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90021880"
+            }, {
+                "name": "",
+                "value": "90021881"
+            }, {
+                "name": "",
+                "value": "90024437"
+            }, {
+                "name": "",
+                "value": "90024611"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90024834"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90024835"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90024836"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90025063"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90025064"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90025065"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90025066"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90025067"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90025068"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90025069"
+            }, {
+                "name": "",
+                "value": "90025070"
+            }, {
+                "name": "",
+                "value": "90026281"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90026587"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90026588"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90026589"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90026816"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90026817"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90026818"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90026819"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90026820"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90026821"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90026822"
+            }, {
+                "name": "",
+                "value": "90026823"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90027515"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90027516"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90027517"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90027518"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90027519"
+            }, {
+                "name": "Security",
+                "value": "90027520"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90027521"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90028253"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90028254"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90028255"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90028256"
+            }, {
+                "name": "Fire Suppression System ",
+                "value": "90028766"
+            }, {
+                "name": "Fire Pump, Refurbish ",
+                "value": "90028767"
+            }, {
+                "name": "Fire Pump, Replace",
+                "value": "90028768"
+            }, {
+                "name": "Fire Sprinkler System, Inspect",
+                "value": "90028769"
+            }, {
+                "name": "Fire suppression / life safety systems",
+                "value": "90029296"
+            }, {
+                "name": "Fire Detection / Monitoring",
+                "value": "90029297"
+            }, {
+                "name": "Refurbish emergency call system",
+                "value": "90029298"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90029525"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90029526"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90029527"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90029528"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90029529"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90029530"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90029531"
+            }, {
+                "name": "",
+                "value": "90029532"
+            }, {
+                "name": "",
+                "value": "90030485"
+            }, {
+                "name": "Fire Extinguisher Inspection - provide current inspection",
+                "value": "90030903"
+            }, {
+                "name": "Fire Sprinkler System Inspection - provide current inspection",
+                "value": "90030904"
+            }, {
+                "name": "Emergency lighting and exit signs . Replace",
+                "value": "90030905"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90030906"
+            }, {
+                "name": "Fire extinguishers. Replace ",
+                "value": "90030907"
+            }, {
+                "name": "Smoke detector. Replace ",
+                "value": "90030908"
+            }, {
+                "name": "Smoke detector. Replace (Commercial) ",
+                "value": "90030909"
+            }, {
+                "name": "Fire pump. Replace (per GPM) ",
+                "value": "90030910"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90030958"
+            }, {
+                "name": "",
+                "value": "90031200"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

@@ -1,0 +1,1849 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.5 Flatwork",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 23,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Re-set interlocking paving",
+                "value": "13"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "14"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "15"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "16"
+            }, {
+                "name": "Concrete walkway replacement",
+                "value": "1769"
+            }, {
+                "name": "Sidewalks asphalt",
+                "value": "1770"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "1771"
+            }, {
+                "name": "Perform repairs to concrete walkways",
+                "value": "1772"
+            }, {
+                "name": "Sidewalks concrete",
+                "value": "1773"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "1774"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "3030"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "3031"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "3032"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "3033"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "3034"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "3035"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "4045"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "4184"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "5106"
+            }, {
+                "name": "Concrete patios. Replace  ",
+                "value": "11020"
+            }, {
+                "name": "Concrete patios. Replace  ",
+                "value": "11285"
+            }, {
+                "name": "Concrete patios. Replace  ",
+                "value": "11550"
+            }, {
+                "name": "Concrete patios. Replace  ",
+                "value": "11815"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "12094"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "12095"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "12096"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "12097"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "12098"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "12099"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "12337"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "12338"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "12339"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "12340"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "12341"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "12342"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "12580"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "12581"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "12582"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "12583"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "12584"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "12585"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "12823"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "12824"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "12825"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "12826"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "12827"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "12828"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "13399"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "13497"
+            }, {
+                "name": "Concrete sidewalk replacement",
+                "value": "13748"
+            }, {
+                "name": "Asphalt sidewalk replacement",
+                "value": "13749"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "15656"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "15657"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "15658"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "15659"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "15660"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "15661"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "15662"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "16507"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "16508"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "16509"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "16510"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "16511"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "16512"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "16513"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "16770"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "16771"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "16772"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "16773"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "16774"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "16775"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "16776"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "17852"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "17853"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "17854"
+            }, {
+                "name": "Replace Sidewalk Sections",
+                "value": "17855"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "18209"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "18210"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "18211"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "18212"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "18213"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "18214"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "18216"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "18472"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "18473"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "18474"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "18475"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "18476"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "18477"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "18479"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "18549"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "18650"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "18751"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "18852"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "18989"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "19250"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "19251"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "19252"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "19253"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "19254"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "19255"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "19257"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "19663"
+            }, {
+                "name": "Repair exterior stairs",
+                "value": "19664"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "19665"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "20074"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "20382"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "20383"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "20384"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "20385"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "20386"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "20387"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "20389"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "21741"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "21742"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "21743"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "21744"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "21745"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "21746"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "21748"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "22499"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "22739"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "22740"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "22741"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "22742"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "22743"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "22744"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "22746"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "22879"
+            }, {
+                "name": "Repair exterior stairs",
+                "value": "22880"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "22881"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "23021"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "23022"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "23023"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "23024"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "23025"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "23026"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90002504"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90002505"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90002506"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90002507"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90002508"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90002509"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90002511"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90003267"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90003869"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90003870"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90003871"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90003872"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90003873"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90003874"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90003876"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90005402"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90005403"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90005404"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90005405"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90005406"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90005717"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90005718"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90005719"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90005720"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90005721"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90009160"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90011683"
+            }, {
+                "name": "Concrete Flatwork, Repair",
+                "value": "90011684"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90011685"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90011686"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90011687"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90011688"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90011689"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90012041"
+            }, {
+                "name": "Concrete Flatwork, Repair",
+                "value": "90012042"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90012043"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90012044"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90012045"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90012046"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90012047"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90012399"
+            }, {
+                "name": "Concrete Flatwork, Repair",
+                "value": "90012400"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90012401"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90012402"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90012403"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90012404"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90012405"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90012737"
+            }, {
+                "name": "Concrete sidewalk replacement",
+                "value": "90012855"
+            }, {
+                "name": "Asphalt sidewalk replacement",
+                "value": "90012856"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90013186"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90013346"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90013347"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90013348"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90013349"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90013350"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90013351"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90013352"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90013684"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90013685"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90013686"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90013687"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90013688"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90013689"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90013690"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90014024"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90014025"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90014026"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90014027"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90014028"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90014029"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90014030"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90014362"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90014363"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90014364"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90014365"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90014366"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90014367"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90014368"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90014727"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90014744"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90014745"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90014746"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90014747"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90014748"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90014749"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90014750"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "90015002"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "90015003"
+            }, {
+                "name": "Repair exterior stairs",
+                "value": "90015004"
+            }, {
+                "name": "Other",
+                "value": "90015005"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "90015169"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "90015170"
+            }, {
+                "name": "Other",
+                "value": "90015171"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90015328"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90015329"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90015330"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90015331"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90015332"
+            }, {
+                "name": "",
+                "value": "90015333"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90015334"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90015335"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90015336"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90015337"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90015338"
+            }, {
+                "name": "",
+                "value": "90015339"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90015340"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90015341"
+            }, {
+                "name": "",
+                "value": "90015342"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90015343"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90015344"
+            }, {
+                "name": "",
+                "value": "90015345"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90015644"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "90015723"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "90015724"
+            }, {
+                "name": "Other",
+                "value": "90015725"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90015868"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90015869"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90015870"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90015871"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90015872"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90015873"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90015874"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90016121"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90016122"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90016123"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90016124"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90016125"
+            }, {
+                "name": "",
+                "value": "90016126"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90016127"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90016128"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90016129"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90016130"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90016131"
+            }, {
+                "name": "",
+                "value": "90016132"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90016133"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90016134"
+            }, {
+                "name": "",
+                "value": "90016135"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90016136"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90016137"
+            }, {
+                "name": "",
+                "value": "90016138"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90016390"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90016391"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90016392"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90016393"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90016394"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90016395"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90016396"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90016643"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90016644"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90016645"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90016646"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90016647"
+            }, {
+                "name": "",
+                "value": "90016648"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90016649"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90016650"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90016651"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90016652"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90016653"
+            }, {
+                "name": "",
+                "value": "90016654"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90016655"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90016656"
+            }, {
+                "name": "",
+                "value": "90016657"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90016658"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90016659"
+            }, {
+                "name": "",
+                "value": "90016660"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90017171"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90017172"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90017173"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90017174"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90017175"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90017176"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90017177"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90017225"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90017226"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90017227"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90017228"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90017229"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90017230"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90017231"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90017478"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90017479"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90017480"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90017481"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90017482"
+            }, {
+                "name": "",
+                "value": "90017483"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90017484"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90017485"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90017486"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90017487"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90017488"
+            }, {
+                "name": "",
+                "value": "90017489"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90017490"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90017491"
+            }, {
+                "name": "",
+                "value": "90017492"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90017493"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90017494"
+            }, {
+                "name": "",
+                "value": "90017495"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90017747"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90017748"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90017749"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90017750"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90017751"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90017752"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90017753"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90018000"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90018001"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90018002"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90018003"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90018004"
+            }, {
+                "name": "",
+                "value": "90018005"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90018006"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90018007"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90018008"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90018009"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90018010"
+            }, {
+                "name": "",
+                "value": "90018011"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90018012"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90018013"
+            }, {
+                "name": "",
+                "value": "90018014"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90018015"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90018016"
+            }, {
+                "name": "",
+                "value": "90018017"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90018770"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90018771"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90018772"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90018773"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90018774"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90018775"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90018776"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90019023"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90019024"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90019025"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90019026"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90019027"
+            }, {
+                "name": "",
+                "value": "90019028"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90019029"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90019030"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90019031"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90019032"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90019033"
+            }, {
+                "name": "",
+                "value": "90019034"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90019035"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90019036"
+            }, {
+                "name": "",
+                "value": "90019037"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90019038"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90019039"
+            }, {
+                "name": "",
+                "value": "90019040"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90019322"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90019323"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90019324"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90019325"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90019326"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90019327"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90019328"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90019833"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90019834"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90019835"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90019836"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90019837"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90019838"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90019839"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90020162"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90020260"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90020261"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90020262"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90020263"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90020264"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90020265"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90020266"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90020807"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90020808"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90020809"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90020810"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90020986"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90020987"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90020988"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90020989"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90020990"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90020991"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90020992"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90021269"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90021270"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90021271"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90021272"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90021432"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90021433"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90021434"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90021435"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90021436"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90021437"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90021438"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90021685"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90021686"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90021687"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90021688"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90021689"
+            }, {
+                "name": "",
+                "value": "90021690"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90021691"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90021692"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90021693"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90021694"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90021695"
+            }, {
+                "name": "",
+                "value": "90021696"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90021697"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90021698"
+            }, {
+                "name": "",
+                "value": "90021699"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90021700"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90021701"
+            }, {
+                "name": "",
+                "value": "90021702"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90022463"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90022464"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90022597"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90022770"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90022771"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90022772"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90022773"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90022997"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90022998"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90022999"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90023000"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90023207"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90023208"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90023209"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90023210"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90023211"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90023212"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90023450"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90023451"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90023452"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90023453"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90023454"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90023455"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90023679"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90023680"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90023681"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90023682"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90023849"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90023850"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90023851"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90023852"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90023853"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90023854"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90024092"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90024093"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90024094"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90024095"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90024096"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90024097"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90024621"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90024622"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90024623"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90024624"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90024625"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90024626"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90024627"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90024874"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90024875"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90024876"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90024877"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90024878"
+            }, {
+                "name": "",
+                "value": "90024879"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90024880"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90024881"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90024882"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90024883"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90024884"
+            }, {
+                "name": "",
+                "value": "90024885"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90024886"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90024887"
+            }, {
+                "name": "",
+                "value": "90024888"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90024889"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90024890"
+            }, {
+                "name": "",
+                "value": "90024891"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90026374"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90026375"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90026376"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90026377"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90026378"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90026379"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90026380"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90026627"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90026628"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90026629"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90026630"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90026631"
+            }, {
+                "name": "",
+                "value": "90026632"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90026633"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90026634"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90026635"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90026636"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90026637"
+            }, {
+                "name": "",
+                "value": "90026638"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90026639"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90026640"
+            }, {
+                "name": "",
+                "value": "90026641"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90026642"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90026643"
+            }, {
+                "name": "",
+                "value": "90026644"
+            }, {
+                "name": "Concrete sidewalk replacement",
+                "value": "90027577"
+            }, {
+                "name": "Asphalt sidewalk replacement",
+                "value": "90027578"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90028078"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90028079"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90028080"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90028081"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90028082"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90028083"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90028084"
+            }, {
+                "name": "Asphalt Flatwork, Repair",
+                "value": "90028589"
+            }, {
+                "name": "Concrete Flatwork, Repair ",
+                "value": "90028590"
+            }, {
+                "name": "Concrete Flatwork, Replace",
+                "value": "90028591"
+            }, {
+                "name": "Damaged Concrete Flatwork, Sectional Replace",
+                "value": "90028592"
+            }, {
+                "name": "Interlocking Pavers, Re-set",
+                "value": "90028593"
+            }, {
+                "name": "Interlocking Pavers, Replace",
+                "value": "90028594"
+            }, {
+                "name": "Concrete Patios, Sectional Replace",
+                "value": "90028595"
+            }, {
+                "name": "Seal coat asphalt",
+                "value": "90029083"
+            }, {
+                "name": "Parking stall, paint, white",
+                "value": "90029084"
+            }, {
+                "name": "Repair and overlay asphalt",
+                "value": "90029085"
+            }, {
+                "name": "Repair concrete parking areas",
+                "value": "90029086"
+            }, {
+                "name": "Repair/refurbish concrete pads",
+                "value": "90029087"
+            }, {
+                "name": "Repair/refurbish sidewalks (asphalt, concrete or brick)",
+                "value": "90029088"
+            }, {
+                "name": "Repair/refurbish patios (asphalt, concrete or brick)",
+                "value": "90029089"
+            }, {
+                "name": "Asphalt pavement.  Overlay",
+                "value": "90029336"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "90029337"
+            }, {
+                "name": "Asphalt.  Seal coat and stripe",
+                "value": "90029338"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "90029339"
+            }, {
+                "name": "Parking, gravel surfaced.  Replace",
+                "value": "90029340"
+            }, {
+                "name": "",
+                "value": "90029341"
+            }, {
+                "name": "Sidewalk, asphalt.  Replace",
+                "value": "90029342"
+            }, {
+                "name": "Sidewalk, brick paver.  Replace",
+                "value": "90029343"
+            }, {
+                "name": "Sidewalk, concrete.  Replace",
+                "value": "90029344"
+            }, {
+                "name": "Pool deck, concrete.  Replace",
+                "value": "90029345"
+            }, {
+                "name": "Pool deck, concrete.  Resurface",
+                "value": "90029346"
+            }, {
+                "name": "",
+                "value": "90029347"
+            }, {
+                "name": "Curbing, asphalt.  Replace",
+                "value": "90029348"
+            }, {
+                "name": "Curbing, concrete. Replace",
+                "value": "90029349"
+            }, {
+                "name": "",
+                "value": "90029350"
+            }, {
+                "name": "Security gate-rolling gate.  Replace",
+                "value": "90029351"
+            }, {
+                "name": "Security gate-lift arm.  Replace",
+                "value": "90029352"
+            }, {
+                "name": "",
+                "value": "90029353"
+            }, {
+                "name": "Re-set interlocking paving",
+                "value": "90030125"
+            }, {
+                "name": "Replace interlocking paving",
+                "value": "90030126"
+            }, {
+                "name": "Locally repair concrete Sidewalk",
+                "value": "90030127"
+            }, {
+                "name": "Replace Concrete Sidewalk",
+                "value": "90030128"
+            }, {
+                "name": "Concrete flatwork. Replace",
+                "value": "90030641"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90030642"
+            }, {
+                "name": "Asphalt Sidewalks. Replace",
+                "value": "90030643"
+            }, {
+                "name": "Grind tripping hazard",
+                "value": "90030644"
+            }, {
+                "name": "Interlocking paving. Replace ",
+                "value": "90030645"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90030973"
+            }, {
+                "name": "Repair trip hazards",
+                "value": "90031300"
+            }, {
+                "name": "Repair exterior stairs",
+                "value": "90031301"
+            }, {
+                "name": "Repair concrete sidewalks",
+                "value": "90031302"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+    <style type="text/css"></style>
+</head>
+
+<body>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="findContact.CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Find Contacts</h4>
+    </div>
+    <div class="modal-body contact-modal">
+        <div class="tabbable tabs-below" ng-show="!findContact.editSelected">
+            <ul class=" nav nav-tabs">
+                <li ng-class="{active: selectedTab == 1}"> <a class="pointer" ng-click="findContact.FindContactClick()">Find Contact</a> </li>
+                <li ng-class="{active: selectedTab == 2}"> <a class="pointer" ng-click="findContact.AddContactClick()">Add Contact</a> </li>
+            </ul>
+            <div role="tabpanel" class="tab-content " ng-show="selectedTab == 1">
+                <div id="divFindContact">
+                    <div class="row">
+						<fotm>
+                        <div class="col-md-6 col-sm-6 form-group ">
+                            <input type="text" class="form-control" ng-model="findContact.searchterm" ng-change="findContact.filter()" focus-if>
+                        </div>
+							</fotm>
+                        <div class="col-md-12 bottom-margin"> Enter text to search for contacts,last name,first name,company and email address.</div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-condensed  table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Company</th>
+                                    <th>Email Address</th>
+                                    <th>Phone #</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="contact in findContact.filtered = (findContact.CompanyContactsArr | filter: findContact.searchterm) | filter : findContact.paginate">
+                                    <td><a class="pointer" ng-click="findContact.EditContact(contact)">Edit</a></td>
+                                    <td><a class="pointer" ng-click="findContact.ContactSelected(contact)">{{contact.firstName}}</a></td>
+                                    <td><a class="pointer" ng-click="findContact.ContactSelected(contact)"> {{contact.lastName}}</a></td>
+                                    <td><a class="pointer" ng-click="findContact.ContactSelected(contact)"> {{contact.companyName}}</a></td>
+                                    <td><a class="pointer" ng-click="findContact.ContactSelected(contact)"> {{contact.email}}</a></td>
+                                    <td><a class="pointer" ng-click="findContact.ContactSelected(contact)"> {{contact.phone}}</a> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <pagination total-items="findContact.totalItems" ng-model="findContact.currentPage" max-size="5" boundary-links="true" items-per-page="findContact.numPerPage" class="pagination-sm"> </pagination>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-content" ng-show="selectedTab == 2">
+                <div id="divAddContact">
+                    <form name="addContactForm" novalidate>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group required" field-validation="First Name">
+                                        <label class="control-label" for="exampleInputFirstName">First Name </label>
+                                        <input type="text" class="form-control" id="firstName" ng-model="findContact.newContact.firstName" name="firstName" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-group required" field-validation="Last Name">
+                                        <label class="control-label" for="exampleInputLastName">Last Name </label>
+                                        </label>
+                                        <input type="text" class="form-control" id="lastName" ng-model="findContact.newContact.lastName" name="lastName" placeholder="Last Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputCompanyName">Company Name</label>
+                                        <input type="text" class="form-control" name="CompanyName" placeholder="Company Name" ng-model="findContact.newContact.companyName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputAddress">Address</label>
+                                        <input type="text" class="form-control" name="Address" placeholder="Address" ng-model="findContact.newContact.address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputCity">City</label>
+                                        <input type="text" class="form-control" name="City" placeholder="City" ng-model="findContact.newContact.city">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputState">State</label>
+                                        <input type="text" class="form-control" name="State" placeholder="State" ng-model="findContact.newContact.state">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputZipCode">Zip Code</label>
+                                        <input type="text" class="form-control" name="ZipCode" placeholder="Zip Code" ng-model="findContact.newContact.zipCode">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputPhone">Phone</label>
+                                        <input type="text" class="form-control" name="Phone" placeholder="Phone" ng-model="findContact.newContact.phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputFax">Fax</label>
+                                        <input type="text" class="form-control" name="Fax" placeholder="Fax" ng-model="findContact.newContact.fax">
+                                    </div>
+                                    <div class="form-group" field-validation="Email">
+                                        <label class="control-label" for="exampleInputEmail">Email</label>
+                                        <input type="email" class="form-control" name="Email" placeholder="Email" ng-model="findContact.newContact.email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert" ng-class="findContact.isAddContactOpSuccess ? 'alert-success' : 'alert-danger'" ng-show="findContact.showAddContactOpMsg">
+                                <button type="button" class="close" ng-click="findContact.showAddContactOpMsg = false;" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{findContact.addContactOpMsg}}
+                            </div>
+                            <!-- <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <button type="submit" class="btn btn-primary" ng-click="findContact.SubmitContact(addContactForm)">Submit Changes </button>
+                                    <button type="reset" class="btn btn-default" ng-click="findContact.Reset(addContactForm)">Reset </button>
+                                </div>
+                            </div>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- edit contact -->
+        <div ng-show="findContact.editSelected">
+
+            <!-- tab layout -->
+            <div>
+                <ul class=" nav nav-tabs">
+                    <li ng-class="{active: true}"> <a class="pointer">Edit Contact</a> </li>
+                </ul>
+            </div>
+            <!-- tab layout end -->
+            <!-- tab content -->
+            <div role="tabpanel" class="tab-content">
+                <div id="divEditContact">
+                    <form name="editContactForm" novalidate>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group required" show-errors field-validation="First Name">
+                                        <label for="exampleInputFirstName">First Name </label>
+                                        <input type="text" class="form-control" id="editfirstName" ng-model="findContact.editedContact.firstName" name="editfirstName" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-group required" show-errors field-validation="Last Name">
+                                        <label for="exampleInputLastName">Last Name </label>
+                                        <input type="text" class="form-control" id="editlastName" ng-model="findContact.editedContact.lastName" name="editlastName" placeholder="Last Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCompanyName">Company Name</label>
+                                        <input type="text" class="form-control" name="editCompanyName" placeholder="Company Name" ng-model="findContact.editedContact.companyName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAddress">Address</label>
+                                        <input type="text" class="form-control" name="Address" placeholder="Address" ng-model="findContact.editedContact.address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCity">City</label>
+                                        <input type="text" class="form-control" name="editCity" placeholder="City" ng-model="findContact.editedContact.city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputState">State</label>
+                                        <input type="text" class="form-control" name="editState" placeholder="State" ng-model="findContact.editedContact.state">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputZipCode">Zip Code</label>
+                                        <input type="text" class="form-control" name="editZipCode" placeholder="Zip Code" ng-model="findContact.editedContact.zipCode">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPhone">Phone</label>
+                                        <input type="text" class="form-control" name="editPhone" placeholder="Phone" ng-model="findContact.editedContact.phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFax">Fax</label>
+                                        <input type="text" class="form-control" name="editFax" placeholder="Fax" ng-model="findContact.editedContact.fax">
+                                    </div>
+                                    <div class="form-group" field-validation="Email">
+                                        <label for="exampleInputEmail">Email</label>
+                                        <input type="email" class="form-control" name="editEmail" placeholder="Email" ng-model="findContact.editedContact.email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert" ng-class="findContact.isEditContactOpSuccess ? 'alert-success' : 'alert-danger'" ng-show="findContact.showEditContactOpMsg">
+                                <button type="button" class="close" ng-click="findContact.showEditContactOpMsg = false;" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{findContact.editContactOpMsg}}
+                            </div>
+
+                            <!--   <div class="row">
+                                <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                                    <button type="submit" class="btn btn-primary" ng-click="findContact.SubmitEdit(editContactForm)">Submit Changes </button>
+                                    <button type="button" class="btn btn-default" ng-click="findContact.ResetEditChanges(editContactForm)">Reset </button>
+                                    <button type="button" class="btn btn-default" ng-click="findContact.CancelEdit(editContactForm)">Cancel Edit </button>
+                                </div>
+                            </div>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- tab content end -->
+
+        </div>
+        <!-- edit contact end -->
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="findContact.CancelDelete()">Close</button>
+        <span ng-show="selectedTab == 2">			
+			<button type="reset" class="btn btn-default" ng-click="findContact.Reset(addContactForm)">Reset</button>
+            <button type="submit" class="btn btn-primary" ng-click="findContact.SubmitContact(addContactForm)">Submit Changes</button>
+		</span>
+        <span ng-show="findContact.editSelected">						
+			<button type="button" class="btn btn-default" ng-click="findContact.CancelEdit(editContactForm)">Cancel Edit</button>
+            <button type="button" class="btn btn-default" ng-click="findContact.ResetEditChanges(editContactForm)">Reset</button>
+            <button type="submit" class="btn btn-primary" ng-click="findContact.SubmitEdit(editContactForm)">Submit Changes</button>
+		</span>
+    </div>
+</body>
+
+</html>

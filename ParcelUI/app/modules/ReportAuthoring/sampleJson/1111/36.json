@@ -1,0 +1,3028 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.7.1 Common Areas",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 36,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Vinyl tile",
+                "value": "164"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "165"
+            }, {
+                "name": "Carpet",
+                "value": "166"
+            }, {
+                "name": "Floor tile",
+                "value": "167"
+            }, {
+                "name": "Wall covering",
+                "value": "168"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "169"
+            }, {
+                "name": "Walls - paint",
+                "value": "170"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "171"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "172"
+            }, {
+                "name": "Laundry room sink",
+                "value": "173"
+            }, {
+                "name": "Laundry room washers",
+                "value": "174"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "175"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "176"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "884"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "885"
+            }, {
+                "name": "Commercial laundary room dryers",
+                "value": "1870"
+            }, {
+                "name": "Floor tile",
+                "value": "1871"
+            }, {
+                "name": "Paint interior walls and ceiling",
+                "value": "1872"
+            }, {
+                "name": "Replace vinyl floor tile",
+                "value": "1873"
+            }, {
+                "name": "Commercial laundary room washers",
+                "value": "1874"
+            }, {
+                "name": "Replace office area carpeting",
+                "value": "1875"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "1876"
+            }, {
+                "name": "Wall covering",
+                "value": "1877"
+            }, {
+                "name": "Interior wall paint",
+                "value": "1878"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "2060"
+            }, {
+                "name": "Common Area Floors",
+                "value": "2061"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "2062"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "2063"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "2064"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "2065"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "2165"
+            }, {
+                "name": "Common Area Floors",
+                "value": "2166"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "2167"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "2168"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "2169"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "2170"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "2424"
+            }, {
+                "name": "Ceilings.  Paint ",
+                "value": "2425"
+            }, {
+                "name": "Floor tile ",
+                "value": "2426"
+            }, {
+                "name": "Laundry room sink ",
+                "value": "2427"
+            }, {
+                "name": "Walls and ceilings.  Paint ",
+                "value": "2428"
+            }, {
+                "name": "Laundry room dryers ",
+                "value": "2429"
+            }, {
+                "name": "Commerical laundry dryers ",
+                "value": "2430"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "2431"
+            }, {
+                "name": "Carpet ",
+                "value": "2432"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "2433"
+            }, {
+                "name": "Wall covering ",
+                "value": "2434"
+            }, {
+                "name": "Laundry room washers ",
+                "value": "2435"
+            }, {
+                "name": "Walls.  Paint ",
+                "value": "2436"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "2437"
+            }, {
+                "name": "Commerical laundry washers ",
+                "value": "2438"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "2625"
+            }, {
+                "name": "Common Area Floors",
+                "value": "2626"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "2627"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "2628"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "2629"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "2630"
+            }, {
+                "name": "Carpet ",
+                "value": "3174"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "3175"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "3176"
+            }, {
+                "name": "Floor tile ",
+                "value": "3177"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "3178"
+            }, {
+                "name": "Laundry room dryers ",
+                "value": "3179"
+            }, {
+                "name": "Laundry room sink ",
+                "value": "3180"
+            }, {
+                "name": "Laundry room washers ",
+                "value": "3181"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "3182"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "3183"
+            }, {
+                "name": "Wall covering ",
+                "value": "3184"
+            }, {
+                "name": "Walls - paint ",
+                "value": "3185"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "3186"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "3386"
+            }, {
+                "name": "Common Area Floors",
+                "value": "3387"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "3388"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "3389"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "3390"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "3391"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "3863"
+            }, {
+                "name": "Common Area Floors",
+                "value": "3864"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "3865"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "3866"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "3867"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "3868"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "4054"
+            }, {
+                "name": "Common Area Floors",
+                "value": "4055"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "4056"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "4057"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "4058"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "4059"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "4193"
+            }, {
+                "name": "Common Area Floors",
+                "value": "4194"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "4195"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "4196"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "4197"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "4198"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "4960"
+            }, {
+                "name": "Common Area Floors",
+                "value": "4961"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "4962"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "4963"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "4964"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "4965"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "5140"
+            }, {
+                "name": "Common Area Floors",
+                "value": "5141"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "5142"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "5143"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "5144"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "5145"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "12220"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "12221"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "12222"
+            }, {
+                "name": "Floor tile ",
+                "value": "12223"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "12224"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "12225"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "12226"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "12227"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "12228"
+            }, {
+                "name": "Carpet ",
+                "value": "12229"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "12230"
+            }, {
+                "name": "Wall covering ",
+                "value": "12231"
+            }, {
+                "name": "Walls - paint ",
+                "value": "12232"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "12463"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "12464"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "12465"
+            }, {
+                "name": "Floor tile ",
+                "value": "12466"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "12467"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "12468"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "12469"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "12470"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "12471"
+            }, {
+                "name": "Carpet ",
+                "value": "12472"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "12473"
+            }, {
+                "name": "Wall covering ",
+                "value": "12474"
+            }, {
+                "name": "Walls - paint ",
+                "value": "12475"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "12706"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "12707"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "12708"
+            }, {
+                "name": "Floor tile ",
+                "value": "12709"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "12710"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "12711"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "12712"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "12713"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "12714"
+            }, {
+                "name": "Carpet ",
+                "value": "12715"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "12716"
+            }, {
+                "name": "Wall covering ",
+                "value": "12717"
+            }, {
+                "name": "Walls - paint ",
+                "value": "12718"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "12949"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "12950"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "12951"
+            }, {
+                "name": "Floor tile ",
+                "value": "12952"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "12953"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "12954"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "12955"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "12956"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "12957"
+            }, {
+                "name": "Carpet ",
+                "value": "12958"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "12959"
+            }, {
+                "name": "Wall covering ",
+                "value": "12960"
+            }, {
+                "name": "Walls - paint ",
+                "value": "12961"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "13079"
+            }, {
+                "name": "Common Area Floors",
+                "value": "13080"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "13081"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "13082"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "13083"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "13084"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "15841"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "15842"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "15843"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "15844"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "15845"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "15846"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "15847"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "15848"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "15849"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "15850"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "15851"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "15852"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "15853"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "15854"
+            }, {
+                "name": "Mold Assessment",
+                "value": "15855"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "16692"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "16693"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "16694"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "16695"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "16696"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "16697"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "16698"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "16699"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "16700"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "16701"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "16702"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "16703"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "16704"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "16705"
+            }, {
+                "name": "Mold Assessment",
+                "value": "16706"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "16955"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "16956"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "16957"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "16958"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "16959"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "16960"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "16961"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "16962"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "16963"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "16964"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "16965"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "16966"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "16967"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "16968"
+            }, {
+                "name": "Mold Assessment",
+                "value": "16969"
+            }, {
+                "name": "Guestroom Hard Goods",
+                "value": "17918"
+            }, {
+                "name": "Guestroom Soft Goods",
+                "value": "17919"
+            }, {
+                "name": "Renovate public areas",
+                "value": "17920"
+            }, {
+                "name": "Repaint back of house areas",
+                "value": "17921"
+            }, {
+                "name": "Repaint public areas",
+                "value": "17922"
+            }, {
+                "name": "Replace commercial dishwasher",
+                "value": "17923"
+            }, {
+                "name": "Replace commercial dryers",
+                "value": "17924"
+            }, {
+                "name": "Replace commercial freezer",
+                "value": "17925"
+            }, {
+                "name": "Replace commercial ice machine",
+                "value": "17926"
+            }, {
+                "name": "Replace commercial oven",
+                "value": "17927"
+            }, {
+                "name": "Replace commercial refrigerator",
+                "value": "17928"
+            }, {
+                "name": "Replace commercial washing machines",
+                "value": "17929"
+            }, {
+                "name": "Vinyl tile",
+                "value": "17930"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "17931"
+            }, {
+                "name": "Carpet",
+                "value": "17932"
+            }, {
+                "name": "Floor tile",
+                "value": "17933"
+            }, {
+                "name": "Wall covering",
+                "value": "17934"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "17935"
+            }, {
+                "name": "Walls - paint",
+                "value": "17936"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "17937"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "17938"
+            }, {
+                "name": "Laundry room sink",
+                "value": "17939"
+            }, {
+                "name": "Laundry room washers",
+                "value": "17940"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "17941"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "17942"
+            }, {
+                "name": "Mold Assessment",
+                "value": "18016"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "18017"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "18018"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "18019"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "18020"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "18021"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "18022"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "18023"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "18024"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "18025"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "18026"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "18027"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "18028"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "18029"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "18030"
+            }, {
+                "name": "Mold Assessment",
+                "value": "18279"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "18280"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "18281"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "18282"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "18283"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "18284"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "18285"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "18286"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "18287"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "18288"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "18289"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "18290"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "18291"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "18292"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "18293"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "18583"
+            }, {
+                "name": "Common Area Floors",
+                "value": "18584"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "18585"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "18586"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "18587"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "18588"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "18684"
+            }, {
+                "name": "Common Area Floors",
+                "value": "18685"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "18686"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "18687"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "18688"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "18689"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "18785"
+            }, {
+                "name": "Common Area Floors",
+                "value": "18786"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "18787"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "18788"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "18789"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "18790"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "18886"
+            }, {
+                "name": "Common Area Floors",
+                "value": "18887"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "18888"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "18889"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "18890"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "18891"
+            }, {
+                "name": "Mold Assessment",
+                "value": "19057"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "19058"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "19059"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "19060"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "19061"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "19062"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "19063"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "19064"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "19065"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "19066"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "19067"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "19068"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "19069"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "19070"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "19071"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "19671"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "19672"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "19673"
+            }, {
+                "name": "Common area refurbishment - lump sum",
+                "value": "19674"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "19675"
+            }, {
+                "name": "Common area painting",
+                "value": "19676"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "19678"
+            }, {
+                "name": "Mold Assessment",
+                "value": "20188"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "20190"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "20191"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "20192"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "20193"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "20194"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "20195"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "20196"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "20197"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "20198"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "20199"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "20200"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "20201"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "20202"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "20206"
+            }, {
+                "name": "Mold Assessment",
+                "value": "21555"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "21556"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "21557"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "21558"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "21559"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "21560"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "21561"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "21562"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "21563"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "21564"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "21565"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "21566"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "21567"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "21568"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "21569"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "22508"
+            }, {
+                "name": "Common Area Floors",
+                "value": "22509"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "22510"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "22511"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "22512"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "22513"
+            }, {
+                "name": "Mold Assessment",
+                "value": "22546"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "22547"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "22548"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "22549"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "22550"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "22551"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "22552"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "22553"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "22554"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "22555"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "22556"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "22557"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "22558"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "22559"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "22560"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "22909"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "22910"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "22911"
+            }, {
+                "name": "Common area refurbishment - lump sum",
+                "value": "22912"
+            }, {
+                "name": "Common area painting",
+                "value": "22913"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "22914"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "22915"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "23153"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "23154"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "23155"
+            }, {
+                "name": "Floor tile ",
+                "value": "23156"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "23157"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "23158"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "23159"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "23160"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "23161"
+            }, {
+                "name": "Carpet ",
+                "value": "23162"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "23163"
+            }, {
+                "name": "Wall covering ",
+                "value": "23164"
+            }, {
+                "name": "Walls - paint ",
+                "value": "23165"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90002242"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90002243"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90002244"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90002245"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90002246"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90002247"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90002311"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90002312"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90002313"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90002314"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90002315"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90002316"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90002317"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90002318"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90002319"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90002320"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90002321"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90002322"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90002323"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "90002324"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "90002325"
+            }, {
+                "name": "Ceiling tiles. Replace",
+                "value": "90002607"
+            }, {
+                "name": "Vinyl wall covering. Replace",
+                "value": "90002608"
+            }, {
+                "name": "",
+                "value": "90002609"
+            }, {
+                "name": "Walls/ceilings. Paint",
+                "value": "90002640"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "90002641"
+            }, {
+                "name": "Vinyl flooring. Replace",
+                "value": "90002642"
+            }, {
+                "name": "Residential carpet. Replace",
+                "value": "90002643"
+            }, {
+                "name": "Commercial carpet. Replace",
+                "value": "90002644"
+            }, {
+                "name": "",
+                "value": "90002763"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90003301"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90003302"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90003303"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90003304"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90003305"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90003306"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90003676"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90003677"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90003678"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90003679"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90003680"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90003681"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90003682"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90003683"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90003684"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90003685"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90003686"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90003687"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90003688"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "90003689"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "90003690"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90004099"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90004100"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90004101"
+            }, {
+                "name": "Floor tile ",
+                "value": "90004102"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90004103"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90004104"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90004105"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90004106"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90004107"
+            }, {
+                "name": "Carpet ",
+                "value": "90004108"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90004109"
+            }, {
+                "name": "Wall covering ",
+                "value": "90004110"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90004111"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90004231"
+            }, {
+                "name": "Floor tile ",
+                "value": "90004233"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90005479"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90005480"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90005481"
+            }, {
+                "name": "Floor tile ",
+                "value": "90005482"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90005483"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90005484"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90005485"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90005486"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90005487"
+            }, {
+                "name": "Carpet ",
+                "value": "90005488"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90005489"
+            }, {
+                "name": "Wall covering ",
+                "value": "90005490"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90005491"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90005794"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90005795"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90005796"
+            }, {
+                "name": "Floor tile ",
+                "value": "90005797"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90005798"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90005799"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90005800"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90005801"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90005802"
+            }, {
+                "name": "Carpet ",
+                "value": "90005803"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90005804"
+            }, {
+                "name": "Wall covering ",
+                "value": "90005805"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90005806"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90006595"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90006596"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90006597"
+            }, {
+                "name": "Floor tile ",
+                "value": "90006598"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90006599"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90006600"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90006601"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90006602"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90006603"
+            }, {
+                "name": "Carpet ",
+                "value": "90006604"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90006605"
+            }, {
+                "name": "Wall covering ",
+                "value": "90006606"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90006607"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90006727"
+            }, {
+                "name": "Floor tile ",
+                "value": "90006729"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90007041"
+            }, {
+                "name": "Floor tile ",
+                "value": "90007042"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90007043"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90007044"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90007045"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90007046"
+            }, {
+                "name": "Carpet ",
+                "value": "90007047"
+            }, {
+                "name": "Wall covering ",
+                "value": "90007048"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90007049"
+            }, {
+                "name": "Ceiling tiles. Replace",
+                "value": "90007308"
+            }, {
+                "name": "Vinyl wall covering. Replace",
+                "value": "90007309"
+            }, {
+                "name": "",
+                "value": "90007310"
+            }, {
+                "name": "Walls/ceilings. Paint",
+                "value": "90007311"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "90007312"
+            }, {
+                "name": "Vinyl flooring. Replace",
+                "value": "90007313"
+            }, {
+                "name": "Residential carpet. Replace",
+                "value": "90007314"
+            }, {
+                "name": "Commercial carpet. Replace",
+                "value": "90007315"
+            }, {
+                "name": "",
+                "value": "90007316"
+            }, {
+                "name": "Metal stairs.  Scrape and paint (per flight)",
+                "value": "90007877"
+            }, {
+                "name": "Ceiling tiles. Replace",
+                "value": "90007888"
+            }, {
+                "name": "Vinyl wall covering. Replace",
+                "value": "90007889"
+            }, {
+                "name": "",
+                "value": "90007890"
+            }, {
+                "name": "Walls/ceilings. Paint",
+                "value": "90007891"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "90007892"
+            }, {
+                "name": "Vinyl flooring. Replace",
+                "value": "90007893"
+            }, {
+                "name": "Residential carpet. Replace",
+                "value": "90007894"
+            }, {
+                "name": "Commercial carpet. Replace",
+                "value": "90007895"
+            }, {
+                "name": "",
+                "value": "90007896"
+            }, {
+                "name": "Common area Carpet, Replace  ",
+                "value": "90009064"
+            }, {
+                "name": "Common area Ceramic/Stone floor tile, Replace  ",
+                "value": "90009065"
+            }, {
+                "name": "Common area Vinyl floor tile, Replace  ",
+                "value": "90009066"
+            }, {
+                "name": "Common area Sheet vinyl, Replace  ",
+                "value": "90009067"
+            }, {
+                "name": "Common area Wall/Ceiling, Paint  ",
+                "value": "90009068"
+            }, {
+                "name": "Common area Vinyl wall covering, Replace  ",
+                "value": "90009069"
+            }, {
+                "name": "Common area Wall/Ceiling, Paint  ",
+                "value": "90009070"
+            }, {
+                "name": "Common area Vinyl wall covering, Replace  ",
+                "value": "90009071"
+            }, {
+                "name": "Mold Assessment ",
+                "value": "90009072"
+            }, {
+                "name": "Ceiling tiles, Replace ",
+                "value": "90009073"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90009169"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90009170"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90009171"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90009172"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90009173"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90009174"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90011914"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90012272"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90012630"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90012771"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90012772"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90012773"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90012774"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90012775"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90012776"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90013220"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90013221"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90013222"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90013223"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90013224"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90013225"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90013583"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90013921"
+            }, {
+                "name": "Function area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90014261"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90014736"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90014737"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90014738"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90014739"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90014740"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90014741"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "90015105"
+            }, {
+                "name": "Common area refurbishment - LS",
+                "value": "90015106"
+            }, {
+                "name": "Common area painting",
+                "value": "90015107"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "90015108"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "90015109"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "90015110"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "90015111"
+            }, {
+                "name": "Conference facility refurbishment, seat",
+                "value": "90015112"
+            }, {
+                "name": "Conference facility refurbishment, psf",
+                "value": "90015113"
+            }, {
+                "name": "Conference facility FF&E, seat",
+                "value": "90015114"
+            }, {
+                "name": "Restaurant refurbishment",
+                "value": "90015115"
+            }, {
+                "name": "Continental restaurant refurbishment",
+                "value": "90015116"
+            }, {
+                "name": "Kitchen equipment replacement allow",
+                "value": "90015117"
+            }, {
+                "name": "Central washer replacement",
+                "value": "90015118"
+            }, {
+                "name": "Central dryer replacement",
+                "value": "90015119"
+            }, {
+                "name": "Ice machine replacement",
+                "value": "90015120"
+            }, {
+                "name": "Flooring replacement",
+                "value": "90015121"
+            }, {
+                "name": "Other",
+                "value": "90015122"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "90015245"
+            }, {
+                "name": "Common area refurbishment - LS",
+                "value": "90015246"
+            }, {
+                "name": "Common area painting",
+                "value": "90015247"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "90015248"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "90015249"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "90015250"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "90015251"
+            }, {
+                "name": "Conference facility refurbishment, seat",
+                "value": "90015252"
+            }, {
+                "name": "Conference facility refurbishment, psf",
+                "value": "90015253"
+            }, {
+                "name": "Conference facility FF&E, seat",
+                "value": "90015254"
+            }, {
+                "name": "Restaurant refurbishment",
+                "value": "90015255"
+            }, {
+                "name": "Continental restaurant refurbishment",
+                "value": "90015256"
+            }, {
+                "name": "Kitchen equipment replacement allow",
+                "value": "90015257"
+            }, {
+                "name": "Central washer replacement",
+                "value": "90015258"
+            }, {
+                "name": "Central dryer replacement",
+                "value": "90015259"
+            }, {
+                "name": "Ice machine replacement",
+                "value": "90015260"
+            }, {
+                "name": "Flooring replacement",
+                "value": "90015261"
+            }, {
+                "name": "Other",
+                "value": "90015262"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "90015799"
+            }, {
+                "name": "Common area refurbishment - LS",
+                "value": "90015800"
+            }, {
+                "name": "Common area painting",
+                "value": "90015801"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "90015802"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "90015803"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "90015804"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "90015805"
+            }, {
+                "name": "Conference facility refurbishment, seat",
+                "value": "90015806"
+            }, {
+                "name": "Conference facility refurbishment, psf",
+                "value": "90015807"
+            }, {
+                "name": "Conference facility FF&E, seat",
+                "value": "90015808"
+            }, {
+                "name": "Restaurant refurbishment",
+                "value": "90015809"
+            }, {
+                "name": "Continental restaurant refurbishment",
+                "value": "90015810"
+            }, {
+                "name": "Kitchen equipment replacement allow",
+                "value": "90015811"
+            }, {
+                "name": "Central washer replacement",
+                "value": "90015812"
+            }, {
+                "name": "Central dryer replacement",
+                "value": "90015813"
+            }, {
+                "name": "Ice machine replacement",
+                "value": "90015814"
+            }, {
+                "name": "Flooring replacement",
+                "value": "90015815"
+            }, {
+                "name": "Other",
+                "value": "90015816"
+            }, {
+                "name": "Common Area Finishes, Replace",
+                "value": "90020447"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "90020448"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "90020449"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90020450"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90020451"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90020452"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90020453"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90020454"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90020455"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90020456"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90020457"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90020458"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90020459"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90020460"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90020461"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90020462"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90020891"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90020892"
+            }, {
+                "name": "Carpet",
+                "value": "90020893"
+            }, {
+                "name": "Floor tile",
+                "value": "90020894"
+            }, {
+                "name": "Wall covering",
+                "value": "90020895"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90020896"
+            }, {
+                "name": "Walls - paint",
+                "value": "90020897"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90020898"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90020899"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90020900"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90020901"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90020902"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90020903"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90020904"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90020905"
+            }, {
+                "name": "Vinyl Flooring, Replace ",
+                "value": "90021171"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90021172"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90021173"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90021174"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90021175"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90021176"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90021177"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90021178"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90021179"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90021180"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90021181"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90021182"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90021183"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90021184"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90021388"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90021389"
+            }, {
+                "name": "Carpet",
+                "value": "90021390"
+            }, {
+                "name": "Floor tile",
+                "value": "90021391"
+            }, {
+                "name": "Wall covering",
+                "value": "90021392"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90021393"
+            }, {
+                "name": "Walls - paint",
+                "value": "90021394"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90021395"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90021396"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90021397"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90021398"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90021399"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90021400"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90021401"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90021402"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90022500"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90022501"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90022502"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90022503"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90022504"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90022505"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90022656"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90022657"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90022658"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90022659"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90022660"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90022661"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90022842"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90022843"
+            }, {
+                "name": "Carpet",
+                "value": "90022844"
+            }, {
+                "name": "Floor tile",
+                "value": "90022845"
+            }, {
+                "name": "Wall covering",
+                "value": "90022846"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90022847"
+            }, {
+                "name": "Walls - paint",
+                "value": "90022848"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90022849"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90022850"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90022851"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90022852"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90022853"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90022854"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90022855"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90022856"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90023069"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90023070"
+            }, {
+                "name": "Carpet",
+                "value": "90023071"
+            }, {
+                "name": "Floor tile",
+                "value": "90023072"
+            }, {
+                "name": "Wall covering",
+                "value": "90023073"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90023074"
+            }, {
+                "name": "Walls - paint",
+                "value": "90023075"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90023076"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90023077"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90023078"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90023079"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90023080"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90023081"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90023082"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90023083"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90023366"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90023367"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90023368"
+            }, {
+                "name": "Floor tile ",
+                "value": "90023369"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90023370"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90023371"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90023372"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90023373"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90023374"
+            }, {
+                "name": "Carpet ",
+                "value": "90023375"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90023376"
+            }, {
+                "name": "Wall covering ",
+                "value": "90023377"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90023378"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90023609"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90023610"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90023611"
+            }, {
+                "name": "Floor tile ",
+                "value": "90023612"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90023613"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90023614"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90023615"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90023616"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90023617"
+            }, {
+                "name": "Carpet ",
+                "value": "90023618"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90023619"
+            }, {
+                "name": "Wall covering ",
+                "value": "90023620"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90023621"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90023762"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90023763"
+            }, {
+                "name": "Carpet",
+                "value": "90023764"
+            }, {
+                "name": "Floor tile",
+                "value": "90023765"
+            }, {
+                "name": "Wall covering",
+                "value": "90023766"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90023767"
+            }, {
+                "name": "Walls - paint",
+                "value": "90023768"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90023769"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90023770"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90023771"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90023772"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90023773"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90023774"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90023775"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90023776"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90024008"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90024009"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90024010"
+            }, {
+                "name": "Floor tile ",
+                "value": "90024011"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90024012"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90024013"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90024014"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90024015"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90024016"
+            }, {
+                "name": "Carpet ",
+                "value": "90024017"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90024018"
+            }, {
+                "name": "Wall covering ",
+                "value": "90024019"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90024020"
+            }, {
+                "name": "Laundary room sink ",
+                "value": "90024251"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90024252"
+            }, {
+                "name": "Laundary room dryers ",
+                "value": "90024253"
+            }, {
+                "name": "Floor tile ",
+                "value": "90024254"
+            }, {
+                "name": "Walls and ceilings - paint ",
+                "value": "90024255"
+            }, {
+                "name": "Ceilings - paint ",
+                "value": "90024256"
+            }, {
+                "name": "Ceiling tiles ",
+                "value": "90024257"
+            }, {
+                "name": "Vinyl tile ",
+                "value": "90024258"
+            }, {
+                "name": "Laundary room washers ",
+                "value": "90024259"
+            }, {
+                "name": "Carpet ",
+                "value": "90024260"
+            }, {
+                "name": "Kitchen appliances ",
+                "value": "90024261"
+            }, {
+                "name": "Wall covering ",
+                "value": "90024262"
+            }, {
+                "name": "Walls - paint ",
+                "value": "90024263"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90024377"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90024378"
+            }, {
+                "name": "Carpet",
+                "value": "90024379"
+            }, {
+                "name": "Floor tile",
+                "value": "90024380"
+            }, {
+                "name": "Wall covering",
+                "value": "90024381"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90024382"
+            }, {
+                "name": "Walls - paint",
+                "value": "90024383"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90024384"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90024385"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90024386"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90024387"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90024388"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90024389"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90024390"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90024391"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90024526"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90024527"
+            }, {
+                "name": "Carpet",
+                "value": "90024528"
+            }, {
+                "name": "Floor tile",
+                "value": "90024529"
+            }, {
+                "name": "Wall covering",
+                "value": "90024530"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90024531"
+            }, {
+                "name": "Walls - paint",
+                "value": "90024532"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90024533"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90024534"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90024535"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90024536"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90024537"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90024538"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90024539"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90024540"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90025943"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90025944"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90025945"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90025946"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90025947"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90025948"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90026196"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90026197"
+            }, {
+                "name": "Carpet",
+                "value": "90026198"
+            }, {
+                "name": "Floor tile",
+                "value": "90026199"
+            }, {
+                "name": "Wall covering",
+                "value": "90026200"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90026201"
+            }, {
+                "name": "Walls - paint",
+                "value": "90026202"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90026203"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90026204"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90026205"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90026206"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90026207"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90026208"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90026209"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90026210"
+            }, {
+                "name": "Common Area Improvements",
+                "value": "90027522"
+            }, {
+                "name": "Common Area Floors",
+                "value": "90027523"
+            }, {
+                "name": "Community Facilities Kitchen",
+                "value": "90027524"
+            }, {
+                "name": "Community Facilities Appliances",
+                "value": "90027525"
+            }, {
+                "name": "Community Washing Machines",
+                "value": "90027526"
+            }, {
+                "name": "Community Clothes Dryers",
+                "value": "90027527"
+            }, {
+                "name": "Carpet",
+                "value": "90027528"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "90027529"
+            }, {
+                "name": "Other",
+                "value": "90027530"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "90028263"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "90028264"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90028265"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90028266"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90028267"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90028268"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90028269"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90028270"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90028271"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90028272"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90028273"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90028274"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90028275"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90028276"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90028277"
+            }, {
+                "name": "Common Area Finishes, Replace",
+                "value": "90028776"
+            }, {
+                "name": "Vinyl Tile, Replace ",
+                "value": "90028777"
+            }, {
+                "name": "Sheet Vinyl, Replace ",
+                "value": "90028778"
+            }, {
+                "name": "Carpet, Replace ",
+                "value": "90028779"
+            }, {
+                "name": "Ceramic Floor Tile, Replace ",
+                "value": "90028780"
+            }, {
+                "name": "Laminate Flooring, Replace ",
+                "value": "90028781"
+            }, {
+                "name": "Vinyl Wall Covering, Replace ",
+                "value": "90028782"
+            }, {
+                "name": "Walls and Ceilings, Repaint ",
+                "value": "90028783"
+            }, {
+                "name": "Walls, Repaint ",
+                "value": "90028784"
+            }, {
+                "name": "Ceilings, Repaint ",
+                "value": "90028785"
+            }, {
+                "name": "Ceiling Tiles, Replace ",
+                "value": "90028786"
+            }, {
+                "name": "Laundry Room Sink, Replace ",
+                "value": "90028787"
+            }, {
+                "name": "Laundry Room Washers, Replace ",
+                "value": "90028788"
+            }, {
+                "name": "Laundry Room Dryers, Replace ",
+                "value": "90028789"
+            }, {
+                "name": "Common area FF&E, Replace/ Refurbish (Allowance)",
+                "value": "90028790"
+            }, {
+                "name": "Mold Assessment",
+                "value": "90028791"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90030197"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90030198"
+            }, {
+                "name": "Carpet",
+                "value": "90030199"
+            }, {
+                "name": "Floor tile",
+                "value": "90030200"
+            }, {
+                "name": "Wall covering",
+                "value": "90030201"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90030202"
+            }, {
+                "name": "Walls - paint",
+                "value": "90030203"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90030204"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90030205"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90030206"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90030207"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90030208"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90030209"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90030210"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90030211"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90030400"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90030401"
+            }, {
+                "name": "Carpet",
+                "value": "90030402"
+            }, {
+                "name": "Floor tile",
+                "value": "90030403"
+            }, {
+                "name": "Wall covering",
+                "value": "90030404"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90030405"
+            }, {
+                "name": "Walls - paint",
+                "value": "90030406"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90030407"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90030408"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90030409"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90030410"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90030411"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90030412"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90030413"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90030414"
+            }, {
+                "name": "Common area FF&E. Replace/ Refurbish (Allowance)",
+                "value": "90030811"
+            }, {
+                "name": "Carpet. Replace (Commercial) ",
+                "value": "90030812"
+            }, {
+                "name": "Carpet. Replace (High Traffic Commercial) ",
+                "value": "90030813"
+            }, {
+                "name": "Carpet. Replace (Residential) ",
+                "value": "90030814"
+            }, {
+                "name": "Ceiling tiles. Replace ",
+                "value": "90030815"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "90030816"
+            }, {
+                "name": "Sheet vinyl. Replace (Commercial) ",
+                "value": "90030817"
+            }, {
+                "name": "Stone floor tile. Replace (Marble) ",
+                "value": "90030818"
+            }, {
+                "name": "Stone floor tile. Replace (Slate) ",
+                "value": "90030819"
+            }, {
+                "name": "Vinyl floor tile. Replace ",
+                "value": "90030820"
+            }, {
+                "name": "Vinyl wall covering. Replace ",
+                "value": "90030821"
+            }, {
+                "name": "Walls/ceilings. Paint ",
+                "value": "90030822"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Full Service Hotel) ",
+                "value": "90030823"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Hotel) ",
+                "value": "90030824"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Large Clubhouse) ",
+                "value": "90030825"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Leasing Office) ",
+                "value": "90030826"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Motel) ",
+                "value": "90030827"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Nursing Home) ",
+                "value": "90030828"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Small Clubhouse) ",
+                "value": "90030829"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Student Housing) ",
+                "value": "90030830"
+            }, {
+                "name": "Resident Laundry Room Coin-op Dryers. Replace",
+                "value": "90030831"
+            }, {
+                "name": "Resident Laundry Room Coin-op Washers. Replace",
+                "value": "90030832"
+            }, {
+                "name": "Laundry room sink ",
+                "value": "90030833"
+            }, {
+                "name": "Commercial kitchen appliances, Allowance. Replace/ Refurbish ",
+                "value": "90030834"
+            }, {
+                "name": "Commercial ice cube maker. Replace",
+                "value": "90030835"
+            }, {
+                "name": "Commercial laundry dryer. Replace (30 lb.) ",
+                "value": "90030836"
+            }, {
+                "name": "Commercial laundry dryer. Replace (50 lb.) ",
+                "value": "90030837"
+            }, {
+                "name": "Commercial laundry dryer. Replace (75 lb.) ",
+                "value": "90030838"
+            }, {
+                "name": "Commercial laundry washer. Replace (20 lb.) ",
+                "value": "90030839"
+            }, {
+                "name": "Commercial laundry washer. Replace (30 lb.) ",
+                "value": "90030840"
+            }, {
+                "name": "Commercial laundry washer. Replace (50 lb.) ",
+                "value": "90030841"
+            }, {
+                "name": "Commercial laundry washer. Replace (75 lb.) ",
+                "value": "90030842"
+            }, {
+                "name": "Commercial laundry washer. Replace (125 lb.) ",
+                "value": "90030843"
+            }, {
+                "name": "Commercial oven. Replace",
+                "value": "90030844"
+            }, {
+                "name": "Commercial range. Replace ",
+                "value": "90030845"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90031115"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90031116"
+            }, {
+                "name": "Carpet",
+                "value": "90031117"
+            }, {
+                "name": "Floor tile",
+                "value": "90031118"
+            }, {
+                "name": "Wall covering",
+                "value": "90031119"
+            }, {
+                "name": "Walls and ceilings - paint",
+                "value": "90031120"
+            }, {
+                "name": "Walls - paint",
+                "value": "90031121"
+            }, {
+                "name": "Ceilings - paint",
+                "value": "90031122"
+            }, {
+                "name": "Ceiling tiles",
+                "value": "90031123"
+            }, {
+                "name": "Laundry room sink",
+                "value": "90031124"
+            }, {
+                "name": "Laundry room washers",
+                "value": "90031125"
+            }, {
+                "name": "Laundry room dryers",
+                "value": "90031126"
+            }, {
+                "name": "Kitchen appliances",
+                "value": "90031127"
+            }, {
+                "name": "Commerical laundry dryers",
+                "value": "90031128"
+            }, {
+                "name": "Commerical laundry washers",
+                "value": "90031129"
+            }, {
+                "name": "Cabinet and counter replacement",
+                "value": "90031395"
+            }, {
+                "name": "Cabinet replacement",
+                "value": "90031396"
+            }, {
+                "name": "Carpet replacement",
+                "value": "90031397"
+            }, {
+                "name": "Central dryer replacement",
+                "value": "90031398"
+            }, {
+                "name": "Central washer replacement",
+                "value": "90031399"
+            }, {
+                "name": "Clubhouse building refurbishment",
+                "value": "90031400"
+            }, {
+                "name": "Common area FF&E replacement",
+                "value": "90031401"
+            }, {
+                "name": "Common area painting",
+                "value": "90031402"
+            }, {
+                "name": "Common area refurbishment - lump sum",
+                "value": "90031403"
+            }, {
+                "name": "Common area refurbishment - psf",
+                "value": "90031404"
+            }, {
+                "name": "Common area wallpaper & carpet replacement",
+                "value": "90031405"
+            }, {
+                "name": "Conference facility FF&E, per seat",
+                "value": "90031406"
+            }, {
+                "name": "Conference facility refurbishment, per seat",
+                "value": "90031407"
+            }, {
+                "name": "Conference facility refurbishment, psf",
+                "value": "90031408"
+            }, {
+                "name": "Continental restaurant refurbishment",
+                "value": "90031409"
+            }, {
+                "name": "Counter replacement",
+                "value": "90031410"
+            }, {
+                "name": "Dishwasher replacement",
+                "value": "90031411"
+            }, {
+                "name": "Flooring replacement",
+                "value": "90031412"
+            }, {
+                "name": "Furniture replacement",
+                "value": "90031413"
+            }, {
+                "name": "Guestroom FF&E replacement",
+                "value": "90031414"
+            }, {
+                "name": "Guestroom soft goods replacement",
+                "value": "90031415"
+            }, {
+                "name": "Guestroom wallpaper & carpet replacement",
+                "value": "90031416"
+            }, {
+                "name": "Ice machine replacement",
+                "value": "90031417"
+            }, {
+                "name": "Kitchen equipment replacement allowance",
+                "value": "90031418"
+            }, {
+                "name": "Lobby refurbishment",
+                "value": "90031419"
+            }, {
+                "name": "Microwave replacement",
+                "value": "90031420"
+            }, {
+                "name": "Refrigerator replacement",
+                "value": "90031421"
+            }, {
+                "name": "Renovate Down units",
+                "value": "90031422"
+            }, {
+                "name": "Restaurant refurbishment",
+                "value": "90031423"
+            }, {
+                "name": "Stove replacement",
+                "value": "90031424"
+            }, {
+                "name": "Trash compactor replacement",
+                "value": "90031425"
+            }, {
+                "name": "Vinyl replacement",
+                "value": "90031426"
+            }, {
+                "name": "Washer/dryer replacement",
+                "value": "90031427"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

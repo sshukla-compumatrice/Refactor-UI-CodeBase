@@ -1,0 +1,166 @@
+{
+    "html": "<div><h3 class='border-bottom'>{{contentValues.sectionTitle00}}</h3></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><horizontal-table table='contentValues.horizontalTable02'></horizontal-table>",
+    "contentValues": {
+        "sectionTitle00": "3.1.1 Building Summary",
+        "horizontalTable02": {
+            "structure": [{
+                "label": "Building Name:",
+                "type": "dropdown",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "10%",
+                "textWidth": "90%",
+                "options": [{
+                        "name": "Test Building 1 ",
+                        "value": "1",
+                        "orderIndex": 1
+              },
+                    {
+                        "name": "Test Building 2",
+                        "value": "2",
+                        "orderIndex": 2
+               },
+                    {
+                        "name": "Test Building 3",
+                        "value": "3",
+                        "orderIndex": 3
+               }]
+            }, {
+                "label": "Number of Floors:",
+                "type": "radio",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "0%",
+                "textWidth": "100%",
+                "options": [{
+                        "name": "5",
+                        "value": "5",
+                        "orderIndex": 1
+              },
+                    {
+                        "name": "10",
+                        "value": "10",
+                        "orderIndex": 2
+               },
+                    {
+                        "name": "15",
+                        "value": "15",
+                        "orderIndex": 3
+               }]
+            }, {
+                "label": "Number of Rooms:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Number of Basement Levels:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Total Leasable Area:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 5,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Structure:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 6,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Exterior Walls:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 7,
+                "columnIndex": 7,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Roof:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 8,
+                "columnIndex": 8,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Foundation:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 9,
+                "columnIndex": 9,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "HVAC:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 10,
+                "columnIndex": 10,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Electrical:",
+                "type": "checkbox",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 11,
+                "columnIndex": 11,
+                "width": "0%",
+                "textWidth": "100%",
+                "options": [{
+                        "name": "CheckBoxTest1",
+                        "value": "test1",
+                        "orderIndex": 1
+              },
+                    {
+                        "name": "CheckBoxTest2",
+                        "value": "test2",
+                        "orderIndex": 2
+               },
+                    {
+                        "name": "CheckBoxTest3",
+                        "value": "test3",
+                        "orderIndex": 3
+               }]
+            }, {
+                "label": "Vertical Transportation:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 12,
+                "columnIndex": 12,
+                "width": "0%",
+                "textWidth": "100%"
+            }],
+            "data": []
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

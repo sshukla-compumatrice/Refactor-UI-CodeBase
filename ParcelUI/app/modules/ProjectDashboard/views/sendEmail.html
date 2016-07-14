@@ -1,0 +1,92 @@
+<div class="container-fluid">
+<div class="panel panel-default">
+	<div class="panel-body">
+    <div class="row">
+
+        <div class="col-lg-12 col-md-12" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+            <h2 class="page-header">Send Email</h2>
+            <div id="alertEmailMsgDiv" ng-show="sendEmail.showAlert" class="alert alert-dismissible"  role="alert">
+                <button type="button" class="close" ng-click="sendEmail.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{sendEmail.serviceMessage}}
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <p>To field must contain at least one email address.</p>                   
+
+                    <p>To send to multiple addresses separate the addresses with a comma ","</p>
+
+                </div>
+            </div>
+            <form name="sendEmailForm" class="form-horizontal" novalidate>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">From:</label>
+                    <div class="col-sm-4">
+                        <p class="form-control-static" ng-bind="sendEmail.fromUserEmail"></p>
+                    </div>
+                </div>
+                <div class="form-group required toEmailDiv">
+                    <label class="col-sm-2 control-label" for="to">To:</label>
+                    <div class="col-sm-4">                      
+                        <input type="text" class="form-control" name="mailTo" value="" data-role="tagsinput" id="to">
+                    </div>
+                    <span class="requiredToField text-danger">The message must have at least one recipient.</span>
+                </div>
+                <div class="form-group">
+					<div class="col-sm-4 col-sm-offset-2">
+						 <a class="pointer" ng-click = "sendEmail.findContact()">Find Contact</a>
+					</div>
+				</div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="cc">CC:</label>
+                    <div class="col-sm-4">
+                        
+                        <input type="text" class="form-control" name="mailCC" value="" data-role="tagsinput">
+
+
+                    </div>
+                </div>
+                
+
+                <div class="form-group required" field-validation="Subject">
+
+                    <label class="col-sm-2 control-label" for="subject">Subject:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" name="subject" id="subject" type="text" ng-model="sendEmail.subject" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        Select items to attach to this email.
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="sendEmail.executiveSummary">Executive Summary
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="email.detailReport">Detail Report
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="comments">Comments:</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" id="comments" ng-model="sendEmail.comments"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div  class="col-sm-offset-2 col-sm-10">
+
+                        <button type="button"  class="btn btn-primary" ng-click="sendEmail.submit(sendEmailForm)">Send Email</button>
+                        <button type="button" class="btn btn-default" ng-click="sendEmail.cancelDelete()">Cancel</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+	</div>
+</div>
+</div>

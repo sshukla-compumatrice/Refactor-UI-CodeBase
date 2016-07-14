@@ -1,0 +1,13 @@
+{
+ 
+    "html": "<h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h3><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div><div associate-photos ap-data='contentValues.associatPhotos' ap-sectionGUID='contentValues.sectionGUID' /></div>",
+ 
+    "contentValues": {
+
+        "sectionTitle00": "BUILDING SUMMARY",
+        "ckEditData": {
+            "div01": "Tables indicating cost estimates for immediate repairs, <font color=\\\"#3333ff\\\">[short term repairs]<\\/font> and replacement reserve costs are included in this report."
+        }
+
+    }
+}

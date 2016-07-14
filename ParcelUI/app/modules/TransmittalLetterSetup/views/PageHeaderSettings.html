@@ -1,0 +1,230 @@
+ 
+<h4>Page Header Settings:</h4>
+<div class="row">
+    <!-- Left -->
+    <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Left</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.jsonData.pageHeaderSettings.left.dynamicContent">
+                                <option value="">Add Dynamic Content...</option>
+                                <option value="{compname}">Your Company's Name</option>
+                                <option value="{credo}">Your Company's Credo</option>
+                                <option value="{logo}">Your Company's Logo</option>
+                                <option value="{cAddress}">Your Company's Address</option>
+                                <option value="{cCity}">Your Company's City</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="leftHeader" rows="3" cols="36" ng-model="transSetup.jsonData.pageHeaderSettings.left.content">Phase I Report {siteAddress} {siteCity}, {siteState} {siteZip}
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-left']['font-family']">
+                                <option>Arial</option>
+                                <option selected="">Helvetica</option>
+                                <option>Times</option>
+                                <option>Americana</option>
+                                <option>Times New Roman</option>
+                                <option>Book Antiqua</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-left']['font-size']">
+                                <option value="8px">8</option>
+                                <option value="9px">9</option>
+                                <option value="10px">10</option>
+                                <option value="11px">11</option>
+                                <option value="12px">12</option>
+                                <optionv value="13px">13</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" multiple="" ng-model="transSetup.cssData['page-header-settings-left'].style">
+                                <option value="B" selected="">Bold</option>
+                                <option value="I">Italic</option>
+                                <option value="U">Underline</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Left end -->
+
+    <!-- Center -->
+    <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 text-center">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Center</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-sm-6 col-md-push-3 col-sm-push-3">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-center']['dynamicContent']">
+                                <option value="">Add Dynamic Content...</option>
+                                <option value="{compname}">Your Company's Name</option>
+                                <option value="{credo}">Your Company's Credo</option>
+                                <option value="{logo}">Your Company's Logo</option>
+                                <option value="{cAddress}">Your Company's Address</option>
+                                <option value="{cCity}">Your Company's City</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="leftHeader" rows="3" cols="36"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-center']['font-family']">
+                                <option>Arial</option>
+                                <option selected="">Helvetica</option>
+                                <option>Times</option>
+                                <option>Americana</option>
+                                <option>Times New Roman</option>
+                                <option>Book Antiqua</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-center']['font-size']">
+                                <option value="8px">8</option>
+                                <option value="9px">9</option>
+                                <option value="10px">10</option>
+                                <option value="11px">11</option>
+                                <option value="12px">12</option>
+                                <optionv value="13px">13</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" multiple="" ng-model="transSetup.cssData['page-header-settings-center'].style">
+                                <option value="B" selected="">Bold</option>
+                                <option value="I">Italic</option>
+                                <option value="U">Underline</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Center end -->
+
+    <!-- Right -->
+    <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 text-right">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Right</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-md-offset-6">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-right']['dynamicContent']">
+                                <option value="">Add Dynamic Content...</option>
+                                <option value="{compname}">Your Company's Name</option>
+                                <option value="{credo}">Your Company's Credo</option>
+                                <option value="{logo}">Your Company's Logo</option>
+                                <option value="{cAddress}">Your Company's Address</option>
+                                <option value="{cCity}">Your Company's City</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="leftHeader" rows="3" cols="36"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-right']['font-family']">
+                                <option>Arial</option>
+                                <option selected="">Helvetica</option>
+                                <option>Times</option>
+                                <option>Americana</option>
+                                <option>Times New Roman</option>
+                                <option>Book Antiqua</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" ng-model="transSetup.cssData['page-header-settings-right']['font-size']">
+                                <option value="8px">8</option>
+                                <option value="9px">9</option>
+                                <option value="10px">10</option>
+                                <option value="11px">11</option>
+                                <option value="12px">12</option>
+                                <optionv value="13px">13</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <select class="form-control" multiple="" ng-model="transSetup.cssData['page-header-settings-right'].style">
+                                <option value="B" selected="">Bold</option>
+                                <option value="I">Italic</option>
+                                <option value="U">Underline</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right End -->
+</div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="repeatHeader" class="control-label col-md-3 col-lg-3 col-sm-3 col-xs-12">
+            Repeat Header:
+        </label>
+        <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4">
+            <select id="repeatHeader" name="repeatHeader" class="form-control" ng-model="transSetup.jsonData.pageHeaderSettings.repeatHeader">
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="numberofLinesBelowHeader" class="control-label col-md-3 col-lg-3 col-sm-3 col-xs-12">Number of Lines Below Header:</label>
+        <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4">
+            <select id="numberofLinesBelowHeader" name="NumberofLinesBelowHeader" class="form-control" ng-model="transSetup.jsonData.pageHeaderSettings.linesBelowHeader">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="linesAfterHeader" class="control-label col-md-3 col-lg-3 col-sm-3 col-xs-12">Lines After Header:</label>
+        <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4">
+            <select id="linesAfterHeader" name="LinesAfterHeader" class="form-control" ng-model="transSetup.jsonData.pageHeaderSettings.linesAfterHeader">
+                <option value="0">0</option>
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+</div>

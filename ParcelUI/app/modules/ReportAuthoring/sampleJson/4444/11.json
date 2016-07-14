@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "2.4 Value Reduction for Environmental Issues",
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

@@ -1,0 +1,2494 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.5 Vertical Transportation",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 151,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Elevator machinery",
+                "value": "251"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "252"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "253"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "254"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "255"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "256"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "257"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "1957"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "1958"
+            }, {
+                "name": "Elevator machinery",
+                "value": "1959"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "1960"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "1961"
+            }, {
+                "name": "Elevator cab interiors. refinish",
+                "value": "1962"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "1963"
+            }, {
+                "name": "Elevators",
+                "value": "2085"
+            }, {
+                "name": "Elevators",
+                "value": "2189"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "2482"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "2483"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "2484"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "2485"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "2486"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "2487"
+            }, {
+                "name": "Elevator machinery (per story)",
+                "value": "2488"
+            }, {
+                "name": "Elevators",
+                "value": "2649"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "3279"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "3280"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "3281"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "3282"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "3283"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "3284"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "3285"
+            }, {
+                "name": "Elevators",
+                "value": "3410"
+            }, {
+                "name": "Elevators",
+                "value": "3887"
+            }, {
+                "name": "Elevators",
+                "value": "4006"
+            }, {
+                "name": "Elevators",
+                "value": "4145"
+            }, {
+                "name": "Elevators",
+                "value": "4984"
+            }, {
+                "name": "Elevators",
+                "value": "5164"
+            }, {
+                "name": "Elevators",
+                "value": "5696"
+            }, {
+                "name": "Elevator hydraulic piston. Replace",
+                "value": "11052"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace  ",
+                "value": "11053"
+            }, {
+                "name": "Elevator machinery. Modernize",
+                "value": "11054"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "11055"
+            }, {
+                "name": "Elevator hydraulic piston. Replace",
+                "value": "11317"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace  ",
+                "value": "11318"
+            }, {
+                "name": "Elevator machinery. Modernize",
+                "value": "11319"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "11320"
+            }, {
+                "name": "Elevator hydraulic piston. Replace",
+                "value": "11582"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace  ",
+                "value": "11583"
+            }, {
+                "name": "Elevator machinery. Modernize",
+                "value": "11584"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "11585"
+            }, {
+                "name": "Elevator hydraulic piston. Replace",
+                "value": "11847"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace  ",
+                "value": "11848"
+            }, {
+                "name": "Elevator machinery. Modernize",
+                "value": "11849"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "11850"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "12252"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "12253"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "12254"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "12255"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "12256"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "12257"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "12258"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "12495"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "12496"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "12497"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "12498"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "12499"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "12500"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "12501"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "12738"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "12739"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "12740"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "12741"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "12742"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "12743"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "12744"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "12981"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "12982"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "12983"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "12984"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "12985"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "12986"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "12987"
+            }, {
+                "name": "Elevators",
+                "value": "13103"
+            }, {
+                "name": "Elevators",
+                "value": "13385"
+            }, {
+                "name": "Elevators",
+                "value": "13483"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "15818"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "15819"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "15820"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "15821"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "15822"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "15823"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "15824"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "15825"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "15826"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "15827"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "15828"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "15829"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "15830"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "16669"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "16670"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "16671"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "16672"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "16673"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "16674"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "16675"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "16676"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "16677"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "16678"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "16679"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "16680"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "16681"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "16932"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "16933"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "16934"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "16935"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "16936"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "16937"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "16938"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "16939"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "16940"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "16941"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "16942"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "16943"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "16944"
+            }, {
+                "name": "Elevator machinery",
+                "value": "17992"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "17993"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "17994"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "17995"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "17996"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "17997"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "17998"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "18041"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "18042"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "18043"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "18044"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "18045"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "18046"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "18047"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "18048"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "18049"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "18050"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "18051"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "18052"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "18053"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "18304"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "18305"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "18306"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "18307"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "18308"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "18309"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "18310"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "18311"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "18312"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "18313"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "18314"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "18315"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "18316"
+            }, {
+                "name": "Elevators",
+                "value": "18606"
+            }, {
+                "name": "Elevators",
+                "value": "18707"
+            }, {
+                "name": "Elevators",
+                "value": "18808"
+            }, {
+                "name": "Elevators",
+                "value": "18909"
+            }, {
+                "name": "Elevators",
+                "value": "18975"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "19082"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "19083"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "19084"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "19085"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "19086"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "19087"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "19088"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "19089"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "19090"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "19091"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "19092"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "19093"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "19094"
+            }, {
+                "name": "Replacement of elevator machinery and controls",
+                "value": "19608"
+            }, {
+                "name": "Renovations to elevator cab",
+                "value": "19609"
+            }, {
+                "name": "Elevators",
+                "value": "20060"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "20214"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "20215"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "20216"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "20217"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "20218"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "20219"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "20220"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "20221"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "20222"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "20223"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "20224"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "20225"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "20227"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "21580"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "21581"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "21582"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "21583"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "21584"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "21585"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "21586"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "21587"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "21588"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "21589"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "21590"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "21591"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "21592"
+            }, {
+                "name": "Elevator cab doors. Replace ",
+                "value": "22288"
+            }, {
+                "name": "Elevator cab interior. Refinish",
+                "value": "22289"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (2 cabs) ",
+                "value": "22290"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (3 cabs) ",
+                "value": "22291"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (4 cabs) ",
+                "value": "22292"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (5 cabs) ",
+                "value": "22293"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (6 cabs) ",
+                "value": "22294"
+            }, {
+                "name": "Elevator machinery. Replace (Traction) ",
+                "value": "22295"
+            }, {
+                "name": "Elevator machinery. Replace (Hydraulic) ",
+                "value": "22296"
+            }, {
+                "name": "",
+                "value": "22297"
+            }, {
+                "name": "Elevators",
+                "value": "22460"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "22571"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "22572"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "22573"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "22574"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "22575"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "22576"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "22577"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "22578"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "22579"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "22580"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "22581"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "22582"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "22583"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "23244"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "23245"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "23246"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "23247"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "23248"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "23249"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "23250"
+            }, {
+                "name": "Elevators",
+                "value": "90002265"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90002336"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90002337"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90002338"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90002339"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90002340"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90002341"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90002342"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90002343"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90002344"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90002345"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90002346"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90002347"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90002348"
+            }, {
+                "name": "Elevator cab doors. Replace",
+                "value": "90002683"
+            }, {
+                "name": "Elevator cab interior. Refinish",
+                "value": "90002684"
+            }, {
+                "name": "Elevator cab controls (per cab)",
+                "value": "90002685"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90002686"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90002687"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90002688"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90002689"
+            }, {
+                "name": "Escalator modernization",
+                "value": "90002690"
+            }, {
+                "name": "",
+                "value": "90002691"
+            }, {
+                "name": "Elevators",
+                "value": "90003324"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90003701"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90003702"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90003703"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90003704"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90003705"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90003706"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90003707"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90003708"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90003709"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90003710"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90003711"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90003712"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90003713"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90004190"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90004191"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90004192"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90004193"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90004194"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90004195"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90004196"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90005208"
+            }, {
+                "name": "Elevator - Traction. controller/dispatcher ",
+                "value": "90005209"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90005210"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90005211"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90005212"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90005213"
+            }, {
+                "name": "Elevator hydraulic piston  - controls",
+                "value": "90005214"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90005523"
+            }, {
+                "name": "Elevator - Traction. controller/dispatcher ",
+                "value": "90005524"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90005525"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90005526"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90005527"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90005528"
+            }, {
+                "name": "Elevator hydraulic piston  - controls",
+                "value": "90005529"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90006686"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90006687"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90006688"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90006689"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90006690"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90006691"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90006692"
+            }, {
+                "name": "Elevator hydraulic piston  - controls",
+                "value": "90007012"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90007013"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90007014"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90007015"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90007016"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90007017"
+            }, {
+                "name": "Elevator - Traction. controller/dispatcher ",
+                "value": "90007018"
+            }, {
+                "name": "Elevator cab doors. Replace",
+                "value": "90007279"
+            }, {
+                "name": "Elevator cab interior. Refinish",
+                "value": "90007280"
+            }, {
+                "name": "Elevator cab controls (per cab)",
+                "value": "90007281"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90007282"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90007283"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90007284"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90007285"
+            }, {
+                "name": "Escalator modernization",
+                "value": "90007286"
+            }, {
+                "name": "",
+                "value": "90007287"
+            }, {
+                "name": "Elevator cab doors. Replace",
+                "value": "90007859"
+            }, {
+                "name": "Elevator cab interior. Refinish",
+                "value": "90007860"
+            }, {
+                "name": "Elevator cab controls (per cab)",
+                "value": "90007861"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90007862"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90007863"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90007864"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90007865"
+            }, {
+                "name": "Escalator modernization",
+                "value": "90007866"
+            }, {
+                "name": "",
+                "value": "90007867"
+            }, {
+                "name": "Elevator cab interior, Refinish  ",
+                "value": "90008976"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90008977"
+            }, {
+                "name": "Elevator hydraulic piston, Replace",
+                "value": "90008978"
+            }, {
+                "name": "Elevator controller/dispatcher, Replace  ",
+                "value": "90008979"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90008980"
+            }, {
+                "name": "Elevator, Modernize machinery controllers, & finishes",
+                "value": "90008981"
+            }, {
+                "name": "Elevator hydraulic piston  - controls, Replace",
+                "value": "90008982"
+            }, {
+                "name": "Elevator call and annunciation devices, Replace ",
+                "value": "90008983"
+            }, {
+                "name": "Elevators",
+                "value": "90009121"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90011872"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90011873"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90011874"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90011875"
+            }, {
+                "name": "Elevator Machinery, Refurbish",
+                "value": "90011876"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace",
+                "value": "90011877"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish",
+                "value": "90011878"
+            }, {
+                "name": "Elevator hydraulic piston, Replace",
+                "value": "90011879"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade",
+                "value": "90011880"
+            }, {
+                "name": "Elevator cab doors, Refurbish",
+                "value": "90011881"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90011882"
+            }, {
+                "name": "Elevator cab interiors, Refinish",
+                "value": "90011883"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90011884"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90011885"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90011886"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90012230"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90012231"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90012232"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90012233"
+            }, {
+                "name": "Elevator Machinery, Refurbish",
+                "value": "90012234"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace",
+                "value": "90012235"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish",
+                "value": "90012236"
+            }, {
+                "name": "Elevator hydraulic piston, Replace",
+                "value": "90012237"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade",
+                "value": "90012238"
+            }, {
+                "name": "Elevator cab doors, Refurbish",
+                "value": "90012239"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90012240"
+            }, {
+                "name": "Elevator cab interiors, Refinish",
+                "value": "90012241"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90012242"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90012243"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90012244"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90012588"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90012589"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90012590"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90012591"
+            }, {
+                "name": "Elevator Machinery, Refurbish",
+                "value": "90012592"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace",
+                "value": "90012593"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish",
+                "value": "90012594"
+            }, {
+                "name": "Elevator hydraulic piston, Replace",
+                "value": "90012595"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade",
+                "value": "90012596"
+            }, {
+                "name": "Elevator cab doors, Refurbish",
+                "value": "90012597"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90012598"
+            }, {
+                "name": "Elevator cab interiors, Refinish",
+                "value": "90012599"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90012600"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90012601"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90012602"
+            }, {
+                "name": "Elevators",
+                "value": "90012794"
+            }, {
+                "name": "Elevators",
+                "value": "90013243"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90013538"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90013539"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90013540"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90013541"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90013542"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90013543"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90013544"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90013545"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90013546"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90013547"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90013548"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90013549"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90013550"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90013551"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90013552"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90013553"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90013554"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90013555"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90013876"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90013877"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90013878"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90013879"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90013880"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90013881"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90013882"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90013883"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90013884"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90013885"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90013886"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90013887"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90013888"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90013889"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90013890"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90013891"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90013892"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90013893"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90014216"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90014217"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90014218"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90014219"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90014220"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90014221"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90014222"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90014223"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90014224"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90014225"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90014226"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90014227"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90014228"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90014229"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90014230"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90014231"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90014232"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90014233"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90014554"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90014555"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90014556"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90014557"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90014558"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90014559"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90014560"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90014561"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90014562"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90014563"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90014564"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90014565"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90014566"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90014567"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90014568"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90014569"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90014570"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90014571"
+            }, {
+                "name": "Elevators",
+                "value": "90014688"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90014952"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90014953"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90014954"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90014955"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90014956"
+            }, {
+                "name": "Renovations to elevator cab",
+                "value": "90015099"
+            }, {
+                "name": "Replacement of elevator machinery and controls",
+                "value": "90015100"
+            }, {
+                "name": "Other",
+                "value": "90015101"
+            }, {
+                "name": "Renovations to elevator cab",
+                "value": "90015306"
+            }, {
+                "name": "Replacement of elevator machinery and controls",
+                "value": "90015307"
+            }, {
+                "name": "None",
+                "value": "90015308"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90015525"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90015526"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90015527"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90015528"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90015529"
+            }, {
+                "name": "",
+                "value": "90015530"
+            }, {
+                "name": "Elevators",
+                "value": "90015630"
+            }, {
+                "name": "Renovations to elevator cab",
+                "value": "90015860"
+            }, {
+                "name": "Replacement of elevator machinery and controls",
+                "value": "90015861"
+            }, {
+                "name": "None",
+                "value": "90015862"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90016076"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90016077"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90016078"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90016079"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90016080"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90016318"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90016319"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90016320"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90016321"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90016322"
+            }, {
+                "name": "",
+                "value": "90016323"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90016598"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90016599"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90016600"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90016601"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90016602"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90016840"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90016841"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90016842"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90016843"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90016844"
+            }, {
+                "name": "",
+                "value": "90016845"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90016967"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90016968"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90016969"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90016970"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90016971"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90016972"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90016973"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90016974"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90016975"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90016976"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90016977"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90016978"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90016979"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90016980"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90016981"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90016982"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90016983"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90016984"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90017433"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90017434"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90017435"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90017436"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90017437"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90017675"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90017676"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90017677"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90017678"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90017679"
+            }, {
+                "name": "",
+                "value": "90017680"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90017955"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90017956"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90017957"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90017958"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90017959"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90018197"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90018198"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90018199"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90018200"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90018201"
+            }, {
+                "name": "",
+                "value": "90018202"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90018978"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90018979"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90018980"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90018981"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90018982"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90019220"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90019221"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90019222"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90019223"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90019224"
+            }, {
+                "name": "",
+                "value": "90019225"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90019514"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90019515"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90019516"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90019517"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90019518"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90019519"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90019520"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90019521"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90019522"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90019523"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90019524"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90019525"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90019526"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90019527"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90019528"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90019529"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90019530"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90019531"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90020025"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, and finishes",
+                "value": "90020026"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90020027"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90020028"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90020029"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90020030"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90020031"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90020032"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90020033"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90020034"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90020035"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90020036"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90020037"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90020038"
+            }, {
+                "name": "Residential 2 story elevator",
+                "value": "90020039"
+            }, {
+                "name": "Commercial 2 story elevator",
+                "value": "90020040"
+            }, {
+                "name": "Chair stair lift",
+                "value": "90020041"
+            }, {
+                "name": "Step-chain replacement",
+                "value": "90020042"
+            }, {
+                "name": "Elevators",
+                "value": "90020148"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90020424"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90020425"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90020426"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90020427"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90020428"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90020429"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90020430"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90020431"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90020432"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90020433"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90020434"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90020435"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90020436"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90020953"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90020954"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90020955"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90020956"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90020957"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90020958"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90020959"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes",
+                "value": "90021148"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes",
+                "value": "90021149"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90021150"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90021151"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90021152"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90021153"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90021154"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90021155"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90021156"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90021157"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90021158"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90021159"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90021160"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90021371"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90021372"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90021373"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90021374"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90021375"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90021376"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90021377"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90021640"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90021641"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90021642"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90021643"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90021644"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90021882"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90021883"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90021884"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90021885"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90021886"
+            }, {
+                "name": "",
+                "value": "90021887"
+            }, {
+                "name": "Elevators",
+                "value": "90022544"
+            }, {
+                "name": "Elevators",
+                "value": "90022648"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90022928"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90022929"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90022930"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90022931"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90022932"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90022933"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90022934"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90023155"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90023156"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90023157"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90023158"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90023159"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90023160"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90023161"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90023352"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90023353"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90023354"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90023355"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90023356"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90023357"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90023358"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90023595"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90023596"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90023597"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90023598"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90023599"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90023600"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90023601"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90023748"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90023749"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90023750"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90023751"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90023752"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90023753"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90023754"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90023994"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90023995"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90023996"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90023997"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90023998"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90023999"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90024000"
+            }, {
+                "name": "Elevator hydraulic piston ",
+                "value": "90024237"
+            }, {
+                "name": "Elevator cab doors ",
+                "value": "90024238"
+            }, {
+                "name": "Elevator machinery ",
+                "value": "90024239"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment ",
+                "value": "90024240"
+            }, {
+                "name": "Elevator call and annunciation devices ",
+                "value": "90024241"
+            }, {
+                "name": "Elevator cab interiors. refinish ",
+                "value": "90024242"
+            }, {
+                "name": "Elevator. controller/dispatcher ",
+                "value": "90024243"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90024438"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90024439"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90024440"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90024441"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90024442"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90024443"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90024444"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90024612"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90024613"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90024614"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90024615"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90024616"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90024617"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90024618"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90024829"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90024830"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90024831"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90024832"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90024833"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90025071"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90025072"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90025073"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90025074"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90025075"
+            }, {
+                "name": "",
+                "value": "90025076"
+            }, {
+                "name": "Elevators",
+                "value": "90025966"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90026282"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90026283"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90026284"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90026285"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90026286"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90026287"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90026288"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90026582"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90026583"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90026584"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90026585"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90026586"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90026824"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90026825"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90026826"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90026827"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90026828"
+            }, {
+                "name": "",
+                "value": "90026829"
+            }, {
+                "name": "Elevators",
+                "value": "90027514"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90028240"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90028241"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90028242"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90028243"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90028244"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90028245"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90028246"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90028247"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90028248"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90028249"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90028250"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90028251"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90028252"
+            }, {
+                "name": "Hydraulic Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90028753"
+            }, {
+                "name": "Traction Elevator, Modernize machinery controllers, finishes & ADA",
+                "value": "90028754"
+            }, {
+                "name": "Elevator Machinery,  Refurbish",
+                "value": "90028755"
+            }, {
+                "name": "Elevator Controller/dispatcher, Replace ",
+                "value": "90028756"
+            }, {
+                "name": "Elevator Shaft rails, cables, and equipment, Refurbish ",
+                "value": "90028757"
+            }, {
+                "name": "Elevator hydraulic piston, Replace ",
+                "value": "90028758"
+            }, {
+                "name": "Elevator call and annunciation devices, Upgrade ",
+                "value": "90028759"
+            }, {
+                "name": "Elevator cab doors, Refurbish ",
+                "value": "90028760"
+            }, {
+                "name": "Elevator cab doors, Replace",
+                "value": "90028761"
+            }, {
+                "name": "Elevator cab interiors, Refinish ",
+                "value": "90028762"
+            }, {
+                "name": "Elevator Assessment",
+                "value": "90028763"
+            }, {
+                "name": "Elevators, Inspect",
+                "value": "90028764"
+            }, {
+                "name": "Escalator Step-chain replacement",
+                "value": "90028765"
+            }, {
+                "name": "Hoist/Cable Electric Traction freight elevator (4000, 5000, 6000 LB)",
+                "value": "90029291"
+            }, {
+                "name": "Hoist/Cable Electric Traction passenger elevator (2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90029292"
+            }, {
+                "name": "Hydraulic freight elevators (2000, 2500, 3000, 3500, 4000, 4500, 5000, 6000 LB)",
+                "value": "90029293"
+            }, {
+                "name": "Hydraulic passenger elevators (1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000 LB)",
+                "value": "90029294"
+            }, {
+                "name": "Refurbish interior elevator cab",
+                "value": "90029295"
+            }, {
+                "name": "Elevator cab. Replace",
+                "value": "90029533"
+            }, {
+                "name": "Hydraulic elevator.  Modernization",
+                "value": "90029534"
+            }, {
+                "name": "Hydraulic elevator.  Partial modernization",
+                "value": "90029535"
+            }, {
+                "name": "Traction elevator.  Modernization (per stop)",
+                "value": "90029536"
+            }, {
+                "name": "Traction elevator.  Partial modernization (per stop)",
+                "value": "90029537"
+            }, {
+                "name": "",
+                "value": "90029538"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90030284"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90030285"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90030286"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90030287"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90030288"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90030289"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90030290"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90030486"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90030487"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90030488"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90030489"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90030490"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90030491"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90030492"
+            }, {
+                "name": "Elevator Consultant. Review and report   ",
+                "value": "90030891"
+            }, {
+                "name": "Elevator Load Test - Provide current testing",
+                "value": "90030892"
+            }, {
+                "name": "Elevator Permit - Provide current permit",
+                "value": "90030893"
+            }, {
+                "name": "Elevator cab interior, Refinish  ",
+                "value": "90030894"
+            }, {
+                "name": "Elevator cab doors. Replace ",
+                "value": "90030895"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (2 cabs) ",
+                "value": "90030896"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (3 cabs) ",
+                "value": "90030897"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (4 cabs) ",
+                "value": "90030898"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (5 cabs) ",
+                "value": "90030899"
+            }, {
+                "name": "Elevator controller/dispatcher. Replace (6 cabs) ",
+                "value": "90030900"
+            }, {
+                "name": "Elevator machinery. Replace (Hydraulic) ",
+                "value": "90030901"
+            }, {
+                "name": "Elevator machinery. Replace (Traction), per floor",
+                "value": "90030902"
+            }, {
+                "name": "Elevators",
+                "value": "90030959"
+            }, {
+                "name": "Elevator machinery",
+                "value": "90031201"
+            }, {
+                "name": "Elevator. controller/dispatcher",
+                "value": "90031202"
+            }, {
+                "name": "Elevator shaft rails, cables, and equipment",
+                "value": "90031203"
+            }, {
+                "name": "Elevator hydraulic piston",
+                "value": "90031204"
+            }, {
+                "name": "Elevator call and annunciation devices",
+                "value": "90031205"
+            }, {
+                "name": "Elevator cab doors",
+                "value": "90031206"
+            }, {
+                "name": "Elevator cab interiors.  refinish",
+                "value": "90031207"
+            }, {
+                "name": "Replacement of elevator machinery and controls",
+                "value": "90031391"
+            }, {
+                "name": "Renovations to elevator cab",
+                "value": "90031392"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

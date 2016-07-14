@@ -1,0 +1,245 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.3 Aboveground Storage Tanks (ASTS)",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Tank No.",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Specific Tank Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "AST Construction",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Walls",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Product",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Installation Year",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Volume (Gals.)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Secondary Containment?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Active?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Leaking?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Leak Detection System?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Staining?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Condition",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Rust?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Dents?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Holes?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Unstable?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Other Damage",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Location",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Construction",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Walls",
+                "id": "",
+                "type": "select",
+                "colspan": 4,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Tank No.": "",
+                "Specific Tank Location": "",
+                "AST Construction": "SteelFiberglassPlastic",
+                "Walls": "Single walledDouble walled",
+                "Product": "GasolineDieselKeroseneNo. 2 fuel oilNo. 4 fuel oilNo. 6 fuel oilHydraulic OilWaste OilHazardous substanceOther",
+                "Installation Year": "",
+                "Volume (Gals.)": "",
+                "Secondary Containment?": "YesNo",
+                "Active?": "YesNoUnk",
+                "Leaking?": "YesNoUnk",
+                "Leak Detection System?": "YesNoUnk",
+                "Staining?": "YesNoUnk",
+                "Condition": "",
+                "Rust?": "YesNo",
+                "Dents?": "YesNo",
+                "Holes?": "YesNo",
+                "Unstable?": "YesNo",
+                "Other Damage": "",
+                "Piping Location": "Above groundUndergroundBothNA",
+                "Piping Construction": "SteelFiberglassNA",
+                "Piping Walls": "Single walledDouble walledNA"
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

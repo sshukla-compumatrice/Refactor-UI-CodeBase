@@ -1,0 +1,148 @@
+ 
+<h4 class="border-bottom">
+        Global Page Settings:
+    </h4>
+
+
+<div class="row ">
+
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+		<div class="form-group">
+			<label for="leftMargin" class="control-label">Left Margin (in inches):</label>
+			<select class="form-control" ng-model="reportSetup.cssData['global']['margin-left']" id="leftMargin">
+				<option value="0.25in">0.25</option>
+				<option value="0.5in">0.5</option>
+				<option value="0.75in">0.75</option>
+				<option value="1in">1</option>
+				<option value="1.25in">1.25</option>
+				<option value="1.5in">1.5</option>
+				<option value="1.75in">1.75</option>
+				<option value="2in">2</option>
+
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="rightMargin" class="control-label">Right Margin (in inches):</label>
+			<select id="rightMargin" class="form-control" ng-model="reportSetup.cssData['global']['margin-right']">
+				<option value="0.25in">0.25</option>
+				<option value="0.5in">0.5</option>
+				<option value="0.75in">0.75</option>
+				<option value="1in">1</option>
+				<option value="1.25in">1.25</option>
+				<option value="1.5in">1.5</option>
+				<option value="1.75in">1.75</option>
+				<option value="2in">2</option>
+			</select>
+		</div>
+
+		<div class="form-group ">
+			<label for="pageBreak" class="control-label">Page Break b/w sections:</label>
+			<select id="pageBreak" class="form-control" ng-model="reportSetup.jsonData['global']['pageBreakBtwSections']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="draftLocation" class="control-label">Draft Location:</label>
+			<select id="draftLocation" class="form-control" ng-model="reportSetup.jsonData['global']['draftLocation']">
+				<option value="NONE">None</option>
+				<option value="TOPLEFT">Top Left</option>
+				<option value="TOPCENTER">Top Center</option>
+				<option value="TOPRIGHT" selected="">Top Right</option>
+				<option value="BOTTOMLEFT">Bottom Left</option>
+				<option value="BOTTOMCENTER">Bottom Center</option>
+				<option value="BOTTOMRIGHT">Bottom Right</option>
+				<option value="MIDDLEOFPAGE">Middle of Page</option>
+				<option value="CUSTOM">Custom-Defined</option>
+			</select>
+		</div>
+
+		<div class="form-group ">
+			<label for="draftType" class="control-label">Draft Type:</label>
+			<select id="draftType" class="form-control" ng-model="reportSetup.jsonData['global']['draftType']">
+				<option value="1">Grey Block</option>
+				<option value="2" selected="">Red Text</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+		<div class="form-group">
+			<label for="repeatParentHeaders" class="control-label"> Repeat Parent Headers:</label>
+			<select id="repeatParentHeaders" class="form-control" ng-model="reportSetup.jsonData['global']['repeatParentHeaders']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="repeatHeaders" class="control-label"> Repeat Headers:</label>
+			<select id="repeatHeaders" class="form-control" ng-model="reportSetup.jsonData['global']['repeatHeaders']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="sectionNumberTabSpace" class="control-label"> Section Number Tab Space:</label>
+			<select id="sectionNumberTabSpace" class="form-control" ng-model="reportSetup.jsonData['global']['sectionNoTabSpace']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+		<div class="form-group ">
+			<label for="sectionNumberTabSpaceDistance" class="control-label">Section Number Tab Space Distance:</label>
+			<select id="sectionNumberTabSpaceDistance" class="form-control" ng-model="reportSetup.jsonData['global']['sectionNoTabSpaceDistance']">
+				<option>Default</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="indentSectionHeader" class="control-label"> Indent Section Header:</label>
+			<select id="indentSectionHeader" class="form-control" ng-model="reportSetup.jsonData['global']['indentSectionHeader']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+	</div>
+
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 Global-Page-t-m">
+
+		<div class="form-group">
+			<label for="photosPerPage" class="control-label"> Photos Per Page:</label>
+			<select id="photosPerPage" class="form-control" ng-model="reportSetup.jsonData['global']['photosPerPage']">
+				<option>2</option>
+				<option>4</option>
+				<option>6</option>
+			</select>
+		</div>
+
+		<div class="form-group ">
+			<label for="photoCaptionAlign" class="control-label"> Photo Caption Align:</label>
+			<select id="photoCaptionAlign" class="form-control" ng-model="reportSetup.cssData['global-img-caption']['text-align']">
+				<option value="left">Left</option>
+				<option value="center" selected="">Center</option>
+				<option value="right">Right</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="autonumberCaptions" class="control-label"> Autonumber Captions:</label>
+			<select id="autonumberCaptions" class="form-control" ng-model="reportSetup.jsonData['global']['autoNoCaptions']">
+				<option>Yes</option>
+				<option>No</option>
+			</select>
+		</div>
+
+	</div>
+
+</div>

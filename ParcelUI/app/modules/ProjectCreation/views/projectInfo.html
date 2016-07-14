@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+
+
+    </style>
+
+</head>
+
+<body>
+    <script id="ProjectTips.html" type="text/ng-template">
+
+        <div class="modal-header ">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Tips for Naming Your Project: </h4>
+        </div>
+
+        <div class="modal-body ">
+            <ul>
+                <li>
+                    <P>Choose a name that will help you identify this project from the rest of your projects on PARCEL. If your company already has a project-numbering system, you should include that number in your PARCEL project name.
+                    </P>
+                </li>
+                <li>
+                    <p>Keep in mind that your list of projects will be sorted alphabetically. Beginning project names with a standard format will make them easier to find in a long list.
+                    </p>
+                </li>
+                <li>
+                    <p>In most cases, it is best to omit phrases like &quot;Phase I&quot; that will be common to a number of projects.
+                    </p>
+                </li>
+                <li>
+                    <p>Your decision here need not be final. You will be able to change the name of the project, and the project name you enter here can be different from the one you include in your report.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-default" ng-click="CancelDelete()">OK</button>
+
+        </div>
+
+    </script>
+
+
+    <div class="panel-heading">
+        <h3 class="panel-title">
+          
+            <span>Project Information</span>
+        </h3>
+    </div>
+    <div id="collapseProjInfo" class="panel-collapse collapse in">
+        <div class="panel-body" ng-controller="ProjectInfoCtrl as projectInfo">
+
+
+            <div class="form-horizontal">
+                <div class="form-group required">
+                    <label for="projectName" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Project Name:
+                        <a class="pointer" ng-click="ShowProjectTips()" title="Tips for naming projects"><i class="fa fa-question-circle"></i></a>
+                    </label>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Project Name">
+                        <input type="text" class="form-control" id="projectName" ng-model="main.submitData.name" name="projectName" focus-if required tabindex="1">
+                    </div>
+
+                </div>
+
+
+                <div ng-if="displayAsPerCompany(main)">
+
+
+                    <div class="form-group">
+                        <label for="userQuestionnaire" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            User Questionnaire:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="userQuestionnaire" id="radioadministeredByPM1" value="Administered by PM"> Administered by PM </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="userQuestionnaire" id="radioadministeredByPM2" value="Administered by User"> Administered by User </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="userQuestionnaire" id="radioadministeredByPM3" value="NA"> NA </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lienSearch" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Lien Search:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="lienSearch" id="radiolienSearch1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="lienSearch" id="radiolienSearch2" value="Yes"> Yes </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chainofTitle" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            50-year chain-of-title:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="chainofTitle" id="radiolienSearch1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="chainofTitle" id="radiolienSearch2" value="Yes"> Yes </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="acm" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            ACM:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="acm" id="acm1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="acm" id="acm2" value="Language Only"> Language Only </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="acm" id="acm3" value="Sampling"> Sampling </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lbp" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            LBP:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="lbp" id="lbp1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="lbp" id="lbp2" value="Language Only"> Language Only </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="lbp" id="lbp3" value="Sampling"> Sampling </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mold" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Mold:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="mold" id="mold1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="mold" id="mold2" value="Language Only"> Language Only </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="mold" id="mold3" value="Sampling"> Sampling </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="radon" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Radon:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="radon" id="radon1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="radon" id="radon2" value="Language Only"> Language Only </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="radon" id="radon3" value="Sampling"> Sampling </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lead" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Lead in Drinking Water:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="lead" id="lead1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="lead" id="lead2" value="Language Only"> Language Only </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="lead" id="lead3" value="Sampling"> Sampling </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Other:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <textarea class="form-control" id="other" ng-model="main.submitData.name" name="other"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previousReports" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Previous Reports:
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="previousReports" id="previousReports1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="previousReports" id="previousReports2" value="Yes"> Yes </label>
+                        </div>
+                    </div>
+
+                    <!-- due dates -->
+                    <h5>Due Dates:</h5>
+
+                    <div class="form-group">
+                        <label for="technicalReview" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Technical Review:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                           
+							<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="technicalReview" name="technicalReview"  type="text" class="form-control" ng-model="main.submitData.technicalReview">
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualityControlReview" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Quality Control Review (if required):
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                           
+							<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="qualityControlReview" name="qualityControlReview"  type="text" class="form-control" ng-model="main.submitData.qualityControlReview">
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="verbal" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Verbal (if required):
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                           
+							<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="verbal" name="verbal"  type="text" class="form-control"  ng-model="main.submitData.verbal">
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="draft" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Draft (if required):
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                             
+								<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="draft" name="draft"  type="text" class="form-control" ng-model="main.submitData.draft">
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+							
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="final" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Final:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                           
+							<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="final" name="final"  type="text" class="form-control" ng-model="main.submitData.final">
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+                    </div>
+
+                    <!-- due dates ends -->
+
+                    <!-- deliverables -->
+                    <h5>Deliverables:</h5>
+
+                    <div class="form-group">
+                        <label for="noOfCDs" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            # of CDs:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <input type="text" class="form-control" id="noOfCDs" ng-model="main.submitData.noOfCDs" name="noOfCDs">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="boundHardcopies" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            # of Hardcopies (bound):
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <input type="text" class="form-control" id="boundHardcopies" ng-model="main.submitData.boundHardcopies" name="boundHardcopies">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="unboundHardcopies" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            # of Hardcopies (unbound):
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <input type="text" class="form-control" id="unboundHardcopies" ng-model="main.submitData.unboundHardcopies" name="unboundHardcopies">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Email ?
+                        </label>
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="email" id="email1" value="No"> No </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="email" id="email2" value="Yes"> Yes </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialInstructions" class="control-label col-md-3 col-sm-3 col-xs-12">
+                            Special Instructions:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <textarea class="form-control" id="specialInstructions" ng-model="main.submitData.specialInstructions" name="specialInstructions"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- deliverables ends -->
+                    <h5>Note to Project Manager:</h5>
+                    <p>Provide (if available):</p>
+                    <p>Maps</p>
+                    <p>Property Description</p>
+                    <p>Scope of Work</p>
+
+                </div>
+
+
+
+                <div ng-if="displayAsPerOtherCompany(main)">
+
+                    <div class="form-group required">
+                        <label for="dateDraftDue" class="control-label col-md-3 col-sm-3 col-xs-12">
+
+                            Date Draft Due:
+                        </label>
+
+                        <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Date Draft Due">
+                        
+							<div class="input-group date"data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="draftDueDate" name="draftDate" type="text" class="form-control" ng-model="main.submitData.draftDueDate" required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="dateFinalDue" class="control-label col-md-3 col-sm-3 col-xs-12">
+
+                            Date Final Due:
+                        </label>
+                        <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Final Due Date">
+                        
+							<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="dateFinalDue" name="finalDueDate" type="text" class="form-control" ng-model="main.submitData.finalDueDate"  required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

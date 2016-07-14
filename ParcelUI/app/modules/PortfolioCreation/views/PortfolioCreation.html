@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .body-bg-gray {
+            background-color: #ffffff !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--Policy Create start  -->
+    <form name="portfolio.submitForm" class="rightside-section" novalidate>
+        <div class="container-fluid" cg-busy="portfolio.waitingProcessResources">
+
+            <div class="row ">
+                <!-- Left panel Start-->
+                <div class="col-md-3 col-lg-3 col-sm-3 bg-gray sidebar">
+
+                    <div class="top-margin">
+                        <ul id="ulnavigation" class="nav nav-pills nav-stacked-lg">
+
+                            <li id="projectInformationId" active-class urlparams="/PortfolioCreation/ProjectInformation" class="active"><a> Step 1: <p class="text-11">Enter Project Information </p> </a></li>
+                            <li id="ReportInformation" active-class urlparams="/PortfolioCreation/ReportInformation"><a> Step 2:<p class="text-11"> Enter Report Information</p> </a></li>
+                            <li id="FeeInformation" active-class urlparams="/PortfolioCreation/FeeInformation"><a> Step 3:<p class="text-11"> Enter Fee Information </p> </a></li>
+                            <li id="Attachments" active-class urlparams="/PortfolioCreation/Attachments"><a>Step 4:<p class="text-11"> Attach Documents </p> </a></li>
+                            <li id="grantAccessId" active-class urlparams="/PortfolioCreation/GrantAccess"><a> Step 5:<p class="text-11"> Grant Access</p> </a></li>
+                            <li id="ConfirmProjectInformation" active-class urlparams="/PortfolioCreation/ConfirmProjectInformation"><a> Step 6:<p class="text-11"> Confirm Project Information</p> </a></li>
+                            <li id="Email" active-class urlparams="/PortfolioCreation/Email"><a> Step 7:<p class="text-11"> Email Project Information</p> </a></li>
+
+                        </ul>
+                        <hr class="border-gray top-margin-xs">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 bottom-margin">
+
+                                    <button id="previousStep" shift-previous class="btn btn-md btn-primary pull-left" type="button"> Previous </button>
+                                    <a id="cancelThisProject_topbtn" cancel-project href="#/" class="btn btn-md btn-primary pull-left">Cancel</a>
+                                    <!--<button id="nextButton" shift-next class="btn btn-md btn-primary pull-right" type="button" ng-click="portfolio.submitData(portfolio.submitForm)"> {{nextButtonText}} </button>-->
+                                    <div next-step get-submit-project-data="portfolio.getProjectData()" form="portfolio.submitForm" response-receiver="portfolio.setResponseProjectData(projectData)" error-handler="portfolio.showServiceError(errorMsg)" current-project-data="portfolio.project" button-text="nextButtonText" state-navigation="portfolio.stateNavigation" disable-step-wise="portfolio.disableStepWise"></div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a id="cancelThisProject_bottombtn" href="#/" class="btn btn-md btn-danger full-width">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border-gray">
+
+
+                    </div>
+                </div>
+                <!-- Left panel end-->
+
+
+                <div class="col-md-9 col-lg-9 col-sm-9 col-sm-offset-3">
+                    <h2 class="page-header"> New Portfolio</h2>
+                    <div ui-view=""></div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </form>
+    <!-- Policy Create  end  -->
+</body>
+
+</html>

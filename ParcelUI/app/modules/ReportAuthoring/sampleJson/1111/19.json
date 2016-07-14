@@ -1,0 +1,1948 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.3.1 Foundation",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 28,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Foundation.  Waterproof",
+                "value": "205"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "206"
+            }, {
+                "name": "Foundation settlement",
+                "value": "207"
+            }, {
+                "name": "Walkways",
+                "value": "1034"
+            }, {
+                "name": "TPO/PVC",
+                "value": "1035"
+            }, {
+                "name": "Tile roof",
+                "value": "1036"
+            }, {
+                "name": "Skylights, prefab",
+                "value": "1037"
+            }, {
+                "name": "Shingles, wood shake",
+                "value": "1038"
+            }, {
+                "name": "Shingles, slate",
+                "value": "1039"
+            }, {
+                "name": "Shingles, asphalt",
+                "value": "1040"
+            }, {
+                "name": "Scuppers",
+                "value": "1041"
+            }, {
+                "name": "Pitch pan",
+                "value": "1042"
+            }, {
+                "name": "Parapet coping sealant",
+                "value": "1043"
+            }, {
+                "name": "Parapet coping",
+                "value": "1044"
+            }, {
+                "name": "Modified Bitumen roof",
+                "value": "1045"
+            }, {
+                "name": "Metal Roof \"O\" rings",
+                "value": "1046"
+            }, {
+                "name": "Metal roof",
+                "value": "1047"
+            }, {
+                "name": "IRMA-built up",
+                "value": "1048"
+            }, {
+                "name": "IRMA-single ply",
+                "value": "1049"
+            }, {
+                "name": "Hatch",
+                "value": "1050"
+            }, {
+                "name": "Gutters",
+                "value": "1051"
+            }, {
+                "name": "Flashing, pipes",
+                "value": "1052"
+            }, {
+                "name": "Flashing, curb",
+                "value": "1053"
+            }, {
+                "name": "Flashing, counter",
+                "value": "1054"
+            }, {
+                "name": "Flashing, base",
+                "value": "1055"
+            }, {
+                "name": "EPDM / FA-MA",
+                "value": "1056"
+            }, {
+                "name": "EPDM / ballasted",
+                "value": "1057"
+            }, {
+                "name": "Expansion joint",
+                "value": "1058"
+            }, {
+                "name": "Drip edge",
+                "value": "1059"
+            }, {
+                "name": "Drains",
+                "value": "1060"
+            }, {
+                "name": "Downspouts",
+                "value": "1061"
+            }, {
+                "name": "Condensate overflow piping",
+                "value": "1062"
+            }, {
+                "name": "Coal tar pitch roof",
+                "value": "1063"
+            }, {
+                "name": "Built-up roof 4 ply",
+                "value": "1064"
+            }, {
+                "name": "Built-up roof 3 ply",
+                "value": "1065"
+            }, {
+                "name": "Window Wall, Aluminum, including glazing",
+                "value": "1066"
+            }, {
+                "name": "Window, Transom, wood frame, up to 6 SF",
+                "value": "1067"
+            }, {
+                "name": "Window, Transom, wood frame, up to 12 SF",
+                "value": "1068"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 9 SF",
+                "value": "1069"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 20 SF",
+                "value": "1070"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 12 SF",
+                "value": "1071"
+            }, {
+                "name": "Window, Storm",
+                "value": "1072"
+            }, {
+                "name": "Window, Sliding, wood frame, up to 9 SF",
+                "value": "1073"
+            }, {
+                "name": "Window, Sliding, wood frame, up to 30 SF",
+                "value": "1074"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 6 SF",
+                "value": "1075"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 32 SF",
+                "value": "1076"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 15 SF",
+                "value": "1077"
+            }, {
+                "name": "Window screens",
+                "value": "1078"
+            }, {
+                "name": "Window, Jalousie, Alum Frame, up to 8 SF",
+                "value": "1079"
+            }, {
+                "name": "Window, Jalousie, Alum Frame, up to 15 SF",
+                "value": "1080"
+            }, {
+                "name": "Window, Fixed, Wood frame, up to 27 SF opening",
+                "value": "1081"
+            }, {
+                "name": "Window, Fixed, Wood frame, up to 20 SF opening",
+                "value": "1082"
+            }, {
+                "name": "Window, Fixed, Alum Frame",
+                "value": "1083"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 6 SF",
+                "value": "1084"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 18 SF",
+                "value": "1085"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 12 SF",
+                "value": "1086"
+            }, {
+                "name": "Window, Double hung, Alum. Frame",
+                "value": "1087"
+            }, {
+                "name": "Window, Demolition for replacement",
+                "value": "1088"
+            }, {
+                "name": "Window, casement, wood frame, up to 9 SF",
+                "value": "1089"
+            }, {
+                "name": "Window, casement, wood frame, up to 6 SF",
+                "value": "1090"
+            }, {
+                "name": "Window, casement, wood frame, up to 12 SF",
+                "value": "1091"
+            }, {
+                "name": "Window, Casement, Alum. Frame, up to 9 SF",
+                "value": "1092"
+            }, {
+                "name": "Window, Casement, Alum. Frame, up to 23 SF",
+                "value": "1093"
+            }, {
+                "name": "Window, Add for Vinyl Cladding",
+                "value": "1094"
+            }, {
+                "name": "Window, Add for Tinted Glass",
+                "value": "1095"
+            }, {
+                "name": "Window, Add for Metal Cladding",
+                "value": "1096"
+            }, {
+                "name": "Window, Add for insulated glass",
+                "value": "1097"
+            }, {
+                "name": "Garage door, fiberglass: single, double",
+                "value": "1098"
+            }, {
+                "name": "Garage door Alum. clad: single, double",
+                "value": "1099"
+            }, {
+                "name": "Door wood, vision lites or louvers, Add",
+                "value": "1100"
+            }, {
+                "name": "Door wood, solid core, 3w X 7h",
+                "value": "1101"
+            }, {
+                "name": "Door steel, vision lites, Add",
+                "value": "1102"
+            }, {
+                "name": "Door steel, Louver, Add",
+                "value": "1103"
+            }, {
+                "name": "Door steel, hollow core, Half Glass, 3w X 7h",
+                "value": "1104"
+            }, {
+                "name": "Door steel, hollow core, 3w X 7h",
+                "value": "1105"
+            }, {
+                "name": "Door sectional, For insulation add",
+                "value": "1106"
+            }, {
+                "name": "Door sectional, Rollup, 12w X 12h",
+                "value": "1107"
+            }, {
+                "name": "Door sectional, Rollup, 10w X 10h",
+                "value": "1108"
+            }, {
+                "name": "Door sectional, Rollup, 8w X 8h",
+                "value": "1109"
+            }, {
+                "name": "Door sectional, Overhead, Steel,12w X 12h",
+                "value": "1110"
+            }, {
+                "name": "Door sectional, Overhead, Steel, 10w X 10h",
+                "value": "1111"
+            }, {
+                "name": "Door, Screen",
+                "value": "1112"
+            }, {
+                "name": "Door, Revolving, up to 7 ft diameter",
+                "value": "1113"
+            }, {
+                "name": "Door Frame, Wood, including trim",
+                "value": "1114"
+            }, {
+                "name": "Door Frame, Steel, Welded, 6w X 7h opening",
+                "value": "1115"
+            }, {
+                "name": "Door Frame, Steel, Welded, 3w X 7h opening",
+                "value": "1116"
+            }, {
+                "name": "Door Frame, Steel, Knock Down, 6w X 7h opening",
+                "value": "1117"
+            }, {
+                "name": "Door Frame, Steel, Knock Down, 3w X 7h opening",
+                "value": "1118"
+            }, {
+                "name": "Doors and frames, Alum., insulated glass, Pair, 6w X 7h opening",
+                "value": "1119"
+            }, {
+                "name": "Doors and frames, Alum., insulated glass, 3w X 7h opening",
+                "value": "1120"
+            }, {
+                "name": "Stone Façade, waterproof and caulk",
+                "value": "1121"
+            }, {
+                "name": "Stone façade",
+                "value": "1122"
+            }, {
+                "name": "Soffit, Wood",
+                "value": "1123"
+            }, {
+                "name": "Soffit, Gypsum Board",
+                "value": "1124"
+            }, {
+                "name": "Soffit, Aluminum",
+                "value": "1125"
+            }, {
+                "name": "Siding, wood",
+                "value": "1126"
+            }, {
+                "name": "Siding, vinyl",
+                "value": "1127"
+            }, {
+                "name": "Siding, stucco/plaster",
+                "value": "1128"
+            }, {
+                "name": "Siding, metal",
+                "value": "1129"
+            }, {
+                "name": "Hardboard siding",
+                "value": "1130"
+            }, {
+                "name": "Sealants",
+                "value": "1131"
+            }, {
+                "name": "Patio fence replacement",
+                "value": "1132"
+            }, {
+                "name": "Paint exterior",
+                "value": "1133"
+            }, {
+                "name": "Paint EIFS",
+                "value": "1134"
+            }, {
+                "name": "Fascia, Wood",
+                "value": "1135"
+            }, {
+                "name": "Fascia, Aluminum",
+                "value": "1136"
+            }, {
+                "name": "Expansion joint replacement",
+                "value": "1137"
+            }, {
+                "name": "EIFS replacement",
+                "value": "1138"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "1139"
+            }, {
+                "name": "Caulk precast concrete panel joints",
+                "value": "1140"
+            }, {
+                "name": "Caulk metal/glass curtain wall",
+                "value": "1141"
+            }, {
+                "name": "Brick façade tuckpointing",
+                "value": "1142"
+            }, {
+                "name": "Aluminum Siding, paint",
+                "value": "1143"
+            }, {
+                "name": "Aluminum Siding",
+                "value": "1144"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "1145"
+            }, {
+                "name": "Underpinning",
+                "value": "1146"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "1147"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "1799"
+            }, {
+                "name": "Underpinning",
+                "value": "1800"
+            }, {
+                "name": "Foundation settlementÂ repair",
+                "value": "1801"
+            }, {
+                "name": "Repair foundation",
+                "value": "1802"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "2044"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "2045"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "2046"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "2149"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "2150"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "2151"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "2369"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "2370"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "2371"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "2609"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "2610"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "2611"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "3068"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "3069"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "3070"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "3071"
+            }, {
+                "name": "Underpinning ",
+                "value": "3072"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "3370"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "3371"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "3372"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "3847"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "3848"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "3849"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "4038"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "4039"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "4040"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "4177"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "4178"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "4179"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "4944"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "4945"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "4946"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "5124"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "5125"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "5126"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "5656"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "5657"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "5658"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "11035"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "11036"
+            }, {
+                "name": "Underpinning ",
+                "value": "11037"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "11038"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "11039"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "11300"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "11301"
+            }, {
+                "name": "Underpinning ",
+                "value": "11302"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "11303"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "11304"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "11565"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "11566"
+            }, {
+                "name": "Underpinning ",
+                "value": "11567"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "11568"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "11569"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "11830"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "11831"
+            }, {
+                "name": "Underpinning ",
+                "value": "11832"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "11833"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "11834"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12124"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "12125"
+            }, {
+                "name": "Underpinning ",
+                "value": "12126"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "12127"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "12128"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12367"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "12368"
+            }, {
+                "name": "Underpinning ",
+                "value": "12369"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "12370"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "12371"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12610"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "12611"
+            }, {
+                "name": "Underpinning ",
+                "value": "12612"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "12613"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "12614"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12853"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "12854"
+            }, {
+                "name": "Underpinning ",
+                "value": "12855"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "12856"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "12857"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "13063"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "13064"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "13065"
+            }, {
+                "name": "test recommendation",
+                "value": "13236"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "13417"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "13418"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "13419"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "13515"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "13516"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "13517"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "13765"
+            }, {
+                "name": "Foundation underpinning",
+                "value": "13766"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "15702"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "15703"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "15704"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "16553"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "16554"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "16555"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "16816"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "16817"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "16818"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "17871"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "17872"
+            }, {
+                "name": "Foundation settlement",
+                "value": "17873"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "18167"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "18168"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "18169"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "18430"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "18431"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "18432"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "18567"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "18568"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "18569"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "18668"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "18669"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "18670"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "18769"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "18770"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "18771"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "18870"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "18871"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "18872"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "19007"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "19008"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "19009"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "19208"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "19209"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "19210"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "19707"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "19708"
+            }, {
+                "name": "Repair basement leaks",
+                "value": "19709"
+            }, {
+                "name": "Walkways",
+                "value": "19882"
+            }, {
+                "name": "TPO/PVC",
+                "value": "19883"
+            }, {
+                "name": "Tile roof",
+                "value": "19884"
+            }, {
+                "name": "Skylights, prefab",
+                "value": "19885"
+            }, {
+                "name": "Shingles, wood shake",
+                "value": "19886"
+            }, {
+                "name": "Shingles, slate",
+                "value": "19887"
+            }, {
+                "name": "Shingles, asphalt",
+                "value": "19888"
+            }, {
+                "name": "Scuppers",
+                "value": "19889"
+            }, {
+                "name": "Pitch pan",
+                "value": "19890"
+            }, {
+                "name": "Parapet coping sealant",
+                "value": "19891"
+            }, {
+                "name": "Parapet coping",
+                "value": "19892"
+            }, {
+                "name": "Modified Bitumen roof",
+                "value": "19893"
+            }, {
+                "name": "Metal Roof \"O\" rings",
+                "value": "19894"
+            }, {
+                "name": "Metal roof",
+                "value": "19895"
+            }, {
+                "name": "IRMA-built up",
+                "value": "19896"
+            }, {
+                "name": "IRMA-single ply",
+                "value": "19897"
+            }, {
+                "name": "Hatch",
+                "value": "19898"
+            }, {
+                "name": "Gutters",
+                "value": "19899"
+            }, {
+                "name": "Flashing, pipes",
+                "value": "19900"
+            }, {
+                "name": "Flashing, curb",
+                "value": "19901"
+            }, {
+                "name": "Flashing, counter",
+                "value": "19902"
+            }, {
+                "name": "Flashing, base",
+                "value": "19903"
+            }, {
+                "name": "EPDM / FA-MA",
+                "value": "19904"
+            }, {
+                "name": "EPDM / ballasted",
+                "value": "19905"
+            }, {
+                "name": "Expansion joint",
+                "value": "19906"
+            }, {
+                "name": "Drip edge",
+                "value": "19907"
+            }, {
+                "name": "Drains",
+                "value": "19908"
+            }, {
+                "name": "Downspouts",
+                "value": "19909"
+            }, {
+                "name": "Condensate overflow piping",
+                "value": "19910"
+            }, {
+                "name": "Coal tar pitch roof",
+                "value": "19911"
+            }, {
+                "name": "Built-up roof 4 ply",
+                "value": "19912"
+            }, {
+                "name": "Built-up roof 3 ply",
+                "value": "19913"
+            }, {
+                "name": "Window Wall, Aluminum, including glazing",
+                "value": "19914"
+            }, {
+                "name": "Window, Transom, wood frame, up to 6 SF",
+                "value": "19915"
+            }, {
+                "name": "Window, Transom, wood frame, up to 12 SF",
+                "value": "19916"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 9 SF",
+                "value": "19917"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 20 SF",
+                "value": "19918"
+            }, {
+                "name": "Window, Transom, Alum. Frame, up to 12 SF",
+                "value": "19919"
+            }, {
+                "name": "Window, Storm",
+                "value": "19920"
+            }, {
+                "name": "Window, Sliding, wood frame, up to 9 SF",
+                "value": "19921"
+            }, {
+                "name": "Window, Sliding, wood frame, up to 30 SF",
+                "value": "19922"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 6 SF",
+                "value": "19923"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 32 SF",
+                "value": "19924"
+            }, {
+                "name": "Window, Sliding, Alum. Frame, up to 15 SF",
+                "value": "19925"
+            }, {
+                "name": "Window screens",
+                "value": "19926"
+            }, {
+                "name": "Window, Jalousie, Alum Frame, up to 8 SF",
+                "value": "19927"
+            }, {
+                "name": "Window, Jalousie, Alum Frame, up to 15 SF",
+                "value": "19928"
+            }, {
+                "name": "Window, Fixed, Wood frame, up to 27 SF opening",
+                "value": "19929"
+            }, {
+                "name": "Window, Fixed, Wood frame, up to 20 SF opening",
+                "value": "19930"
+            }, {
+                "name": "Window, Fixed, Alum Frame",
+                "value": "19931"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 6 SF",
+                "value": "19932"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 18 SF",
+                "value": "19933"
+            }, {
+                "name": "Window, Double hung, wood framed, up to 12 SF",
+                "value": "19934"
+            }, {
+                "name": "Window, Double hung, Alum. Frame",
+                "value": "19935"
+            }, {
+                "name": "Window, Demolition for replacement",
+                "value": "19936"
+            }, {
+                "name": "Window, casement, wood frame, up to 9 SF",
+                "value": "19937"
+            }, {
+                "name": "Window, casement, wood frame, up to 6 SF",
+                "value": "19938"
+            }, {
+                "name": "Window, casement, wood frame, up to 12 SF",
+                "value": "19939"
+            }, {
+                "name": "Window, Casement, Alum. Frame, up to 9 SF",
+                "value": "19940"
+            }, {
+                "name": "Window, Casement, Alum. Frame, up to 23 SF",
+                "value": "19941"
+            }, {
+                "name": "Window, Add for Vinyl Cladding",
+                "value": "19942"
+            }, {
+                "name": "Window, Add for Tinted Glass",
+                "value": "19943"
+            }, {
+                "name": "Window, Add for Metal Cladding",
+                "value": "19944"
+            }, {
+                "name": "Window, Add for insulated glass",
+                "value": "19945"
+            }, {
+                "name": "Garage door, fiberglass: single, double",
+                "value": "19946"
+            }, {
+                "name": "Garage door Alum. clad: single, double",
+                "value": "19947"
+            }, {
+                "name": "Door wood, vision lites or louvers, Add",
+                "value": "19948"
+            }, {
+                "name": "Door wood, solid core, 3w X 7h",
+                "value": "19949"
+            }, {
+                "name": "Door steel, vision lites, Add",
+                "value": "19950"
+            }, {
+                "name": "Door steel, Louver, Add",
+                "value": "19951"
+            }, {
+                "name": "Door steel, hollow core, Half Glass, 3w X 7h",
+                "value": "19952"
+            }, {
+                "name": "Door steel, hollow core, 3w X 7h",
+                "value": "19953"
+            }, {
+                "name": "Door sectional, For insulation add",
+                "value": "19954"
+            }, {
+                "name": "Door sectional, Rollup, 12w X 12h",
+                "value": "19955"
+            }, {
+                "name": "Door sectional, Rollup, 10w X 10h",
+                "value": "19956"
+            }, {
+                "name": "Door sectional, Rollup, 8w X 8h",
+                "value": "19957"
+            }, {
+                "name": "Door sectional, Overhead, Steel,12w X 12h",
+                "value": "19958"
+            }, {
+                "name": "Door sectional, Overhead, Steel, 10w X 10h",
+                "value": "19959"
+            }, {
+                "name": "Door, Screen",
+                "value": "19960"
+            }, {
+                "name": "Door, Revolving, up to 7 ft diameter",
+                "value": "19961"
+            }, {
+                "name": "Door Frame, Wood, including trim",
+                "value": "19962"
+            }, {
+                "name": "Door Frame, Steel, Welded, 6w X 7h opening",
+                "value": "19963"
+            }, {
+                "name": "Door Frame, Steel, Welded, 3w X 7h opening",
+                "value": "19964"
+            }, {
+                "name": "Door Frame, Steel, Knock Down, 6w X 7h opening",
+                "value": "19965"
+            }, {
+                "name": "Door Frame, Steel, Knock Down, 3w X 7h opening",
+                "value": "19966"
+            }, {
+                "name": "Doors and frames, Alum., insulated glass, Pair, 6w X 7h opening",
+                "value": "19967"
+            }, {
+                "name": "Doors and frames, Alum., insulated glass, 3w X 7h opening",
+                "value": "19968"
+            }, {
+                "name": "Stone Façade, waterproof and caulk",
+                "value": "19969"
+            }, {
+                "name": "Stone façade",
+                "value": "19970"
+            }, {
+                "name": "Soffit, Wood",
+                "value": "19971"
+            }, {
+                "name": "Soffit, Gypsum Board",
+                "value": "19972"
+            }, {
+                "name": "Soffit, Aluminum",
+                "value": "19973"
+            }, {
+                "name": "Siding, wood",
+                "value": "19974"
+            }, {
+                "name": "Siding, vinyl",
+                "value": "19975"
+            }, {
+                "name": "Siding, stucco/plaster",
+                "value": "19976"
+            }, {
+                "name": "Siding, metal",
+                "value": "19977"
+            }, {
+                "name": "Hardboard siding",
+                "value": "19978"
+            }, {
+                "name": "Sealants",
+                "value": "19979"
+            }, {
+                "name": "Patio fence replacement",
+                "value": "19980"
+            }, {
+                "name": "Paint exterior",
+                "value": "19981"
+            }, {
+                "name": "Paint EIFS",
+                "value": "19982"
+            }, {
+                "name": "Fascia, Wood",
+                "value": "19983"
+            }, {
+                "name": "Fascia, Aluminum",
+                "value": "19984"
+            }, {
+                "name": "Expansion joint replacement",
+                "value": "19985"
+            }, {
+                "name": "EIFS replacement",
+                "value": "19986"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "19987"
+            }, {
+                "name": "Caulk precast concrete panel joints",
+                "value": "19988"
+            }, {
+                "name": "Caulk metal/glass curtain wall",
+                "value": "19989"
+            }, {
+                "name": "Brick façade tuckpointing",
+                "value": "19990"
+            }, {
+                "name": "Aluminum Siding, paint",
+                "value": "19991"
+            }, {
+                "name": "Aluminum Siding",
+                "value": "19992"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "19993"
+            }, {
+                "name": "Underpinning",
+                "value": "19994"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "19995"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "20092"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "20093"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "20094"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "20340"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "20341"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "20342"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "21699"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "21700"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "21701"
+            }, {
+                "name": "",
+                "value": "21916"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "22492"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "22493"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "22494"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "22697"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "22698"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "22699"
+            }, {
+                "name": "Repair basement leaks",
+                "value": "22811"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "22812"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "22813"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "23051"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "23052"
+            }, {
+                "name": "Underpinning ",
+                "value": "23053"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "23054"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "23055"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90002226"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90002227"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90002228"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90002462"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90002463"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90002464"
+            }, {
+                "name": "",
+                "value": "90002718"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90003285"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90003286"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90003287"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90003827"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90003828"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90003829"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90003997"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90003998"
+            }, {
+                "name": "Underpinning ",
+                "value": "90003999"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90004000"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90004001"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90005373"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90005374"
+            }, {
+                "name": "Piers",
+                "value": "90005375"
+            }, {
+                "name": "Underpinning ",
+                "value": "90005376"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90005377"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90005378"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90005688"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90005689"
+            }, {
+                "name": "Piers",
+                "value": "90005690"
+            }, {
+                "name": "Underpinning ",
+                "value": "90005691"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90005692"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90005693"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90006493"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90006494"
+            }, {
+                "name": "Underpinning ",
+                "value": "90006495"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90006496"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90006497"
+            }, {
+                "name": "Piers",
+                "value": "90006782"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90006783"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90006784"
+            }, {
+                "name": "Underpinning ",
+                "value": "90006785"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90006786"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90006787"
+            }, {
+                "name": "",
+                "value": "90007176"
+            }, {
+                "name": "",
+                "value": "90007756"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90008842"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90008843"
+            }, {
+                "name": "Underpinning ",
+                "value": "90008844"
+            }, {
+                "name": "Foundation settlement, Assess ",
+                "value": "90008845"
+            }, {
+                "name": "Foundation Waterproofing, Apply ",
+                "value": "90008846"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90009153"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90009154"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90009155"
+            }, {
+                "name": "Foundation, Waterproof",
+                "value": "90011727"
+            }, {
+                "name": "Slab-on-grade, Repair",
+                "value": "90011728"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90011729"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90011730"
+            }, {
+                "name": "Piers",
+                "value": "90011731"
+            }, {
+                "name": "Foundation, Waterproof",
+                "value": "90012085"
+            }, {
+                "name": "Slab-on-grade, Repair",
+                "value": "90012086"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90012087"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90012088"
+            }, {
+                "name": "Piers",
+                "value": "90012089"
+            }, {
+                "name": "Foundation, Waterproof",
+                "value": "90012443"
+            }, {
+                "name": "Slab-on-grade, Repair",
+                "value": "90012444"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90012445"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90012446"
+            }, {
+                "name": "Piers",
+                "value": "90012447"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90012755"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90012756"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90012757"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90012873"
+            }, {
+                "name": "Foundation underpinning",
+                "value": "90012874"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90013204"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90013205"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90013206"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90013390"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90013391"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90013392"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90013393"
+            }, {
+                "name": "Piers",
+                "value": "90013394"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90013728"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90013729"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90013730"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90013731"
+            }, {
+                "name": "Piers",
+                "value": "90013732"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90014068"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90014069"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90014070"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90014071"
+            }, {
+                "name": "Piers",
+                "value": "90014072"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90014406"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90014407"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90014408"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90014409"
+            }, {
+                "name": "Piers",
+                "value": "90014410"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90014720"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90014721"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90014722"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90014882"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015018"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015019"
+            }, {
+                "name": "Other",
+                "value": "90015020"
+            }, {
+                "name": "Other",
+                "value": "90015183"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015184"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015185"
+            }, {
+                "name": "Other",
+                "value": "90015186"
+            }, {
+                "name": "",
+                "value": "90015370"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90015662"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90015663"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90015664"
+            }, {
+                "name": "Other",
+                "value": "90015737"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015738"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015739"
+            }, {
+                "name": "Other",
+                "value": "90015740"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90016006"
+            }, {
+                "name": "",
+                "value": "90016163"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90016528"
+            }, {
+                "name": "",
+                "value": "90016685"
+            }, {
+                "name": "Piers",
+                "value": "90017129"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90017130"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90017131"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90017132"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90017133"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90017363"
+            }, {
+                "name": "",
+                "value": "90017520"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90017885"
+            }, {
+                "name": "",
+                "value": "90018042"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90018908"
+            }, {
+                "name": "",
+                "value": "90019065"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90019366"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90019367"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90019368"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90019369"
+            }, {
+                "name": "Piers",
+                "value": "90019370"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90019877"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90019878"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90019879"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90019880"
+            }, {
+                "name": "Piers",
+                "value": "90019881"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90020180"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90020181"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90020182"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90020306"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90020307"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90020308"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90020821"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90020822"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90020823"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90021032"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90021033"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90021034"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90021284"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90021285"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90021286"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90021570"
+            }, {
+                "name": "",
+                "value": "90021727"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90022482"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90022483"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90022484"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90022616"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90022617"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90022618"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90022784"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90022785"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90022786"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90023016"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90023017"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90023018"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023237"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90023238"
+            }, {
+                "name": "Underpinning ",
+                "value": "90023239"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90023240"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90023241"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023480"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90023481"
+            }, {
+                "name": "Underpinning ",
+                "value": "90023482"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90023483"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90023484"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90023693"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90023694"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90023695"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023879"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90023880"
+            }, {
+                "name": "Underpinning ",
+                "value": "90023881"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90023882"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90023883"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90024122"
+            }, {
+                "name": "Slab-on-grade ",
+                "value": "90024123"
+            }, {
+                "name": "Underpinning ",
+                "value": "90024124"
+            }, {
+                "name": "Foundation settlement ",
+                "value": "90024125"
+            }, {
+                "name": "Foundation. Waterproof ",
+                "value": "90024126"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90024321"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90024322"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90024323"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90024476"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90024477"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90024478"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90024759"
+            }, {
+                "name": "",
+                "value": "90024916"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90025927"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90025928"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90025929"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90026146"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90026147"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90026148"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90026512"
+            }, {
+                "name": "",
+                "value": "90026669"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90027482"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90027483"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90027484"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90027595"
+            }, {
+                "name": "Foundation underpinning",
+                "value": "90027596"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90028124"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90028125"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90028126"
+            }, {
+                "name": "Foundation, Waterproof ",
+                "value": "90028635"
+            }, {
+                "name": "Slab-on-grade, Repair ",
+                "value": "90028636"
+            }, {
+                "name": "Foundation settlement, Investigate and Repair",
+                "value": "90028637"
+            }, {
+                "name": "Slab / Foundation",
+                "value": "90029221"
+            }, {
+                "name": "",
+                "value": "90029378"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90030139"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90030140"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90030141"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90030350"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90030351"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90030352"
+            }, {
+                "name": "Structural Engineer - review and report  ",
+                "value": "90030688"
+            }, {
+                "name": "Foundation (structural)",
+                "value": "90030991"
+            }, {
+                "name": "Foundation Waterproofing",
+                "value": "90030992"
+            }, {
+                "name": "Building Slab (structural)",
+                "value": "90030993"
+            }, {
+                "name": "Foundation.  Waterproof",
+                "value": "90031065"
+            }, {
+                "name": "Slab-on-grade",
+                "value": "90031066"
+            }, {
+                "name": "Foundation settlement",
+                "value": "90031067"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90031316"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90031317"
+            }, {
+                "name": "Repair basement leaks",
+                "value": "90031318"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

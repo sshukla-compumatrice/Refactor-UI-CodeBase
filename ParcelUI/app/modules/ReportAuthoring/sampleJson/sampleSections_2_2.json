@@ -1,0 +1,70 @@
+{
+    "Sections": [{
+        "html": "<div><h2><strong><span>{{section1Title}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><div ng-controller='CKEditorCtrl'><div ng-controller='CKEditorCtrl' ng-repeat='editor in ckEditors'><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' ng-controller='CKEditorCtrl' data-ng-model='editor.value1' contenteditable='true' data-ck-editor></div></div><br><p>Please refer to Default Language for narrative options for this section.</p><br><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' ng-controller='CKEditorCtrl' data-ng-model='editor.value2' contenteditable='true' data-ck-editor ></div></div></div></div><br><vertical-table table='contentValues.verticalTable'/>",
+        "contentValues": {
+            "section1Title": "3.0 Reason For Performing Phase I ESA",
+            "choice": {
+                "Y": "EDR Environmental Consulting",
+                "N": "EDR Environmental Application Development and Support",
+                "NS": "EDR Environmental Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "tagData": "Please refer to Default Language for Reason For Performing Phase I ESA.",
+            "verticalTable": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 1
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            }
+
+        },
+        "SectionID": 3
+    }]
+}

@@ -1,0 +1,234 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-lg-6">
+						<h4 class="panel-title">{{generalInfoDataField.dataField.name}}</h4>
+					</div>
+					<div class="col-lg-6">
+						<div class="text-right">
+							<a class="pointer" data-toggle="tooltip" data-placement="top" title="Edit" ng-hide="generalInfoDataField.editMode || generalInfoDataField.isReportFinalize" ng-click="generalInfoDataField.enableEdit(0)"><span class="glyphicon glyphicon-pencil"> </span></a>
+							<div ng-show="generalInfoDataField.editMode">
+								<input class="btn btn-primary btn-xs" type="button" value="Save" ng-click="generalInfoDataField.saveGI()" user-action="{{generalInfoDataField.dataField.name}} updated ">
+								<input class="btn btn-default btn-xs" type="button" value="Cancel" ng-click="generalInfoDataField.cancelEdit()">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<div class="alert" role="alert" ng-class="generalInfoDataField.userMsgAlertClass" ng-show="generalInfoDataField.userMsg">
+					<button type="button" class="close" ng-click="generalInfoDataField.userMsg = false;" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<span ng-bind-html="generalInfoDataField.userMsg"></span>
+				</div>
+
+				<div ng-show="generalInfoDataField.dataField.name == 'Site'" class="row">
+					<div class="col-md-12">
+						<a class="pointer" ng-click="generalInfoDataField.viewSiteMap()">View Map</a>
+					</div>
+				</div>
+
+				<div ng-show="generalInfoDataField.editMode && generalInfoDataField.dataField.name == 'Client'">
+					<a class="pointer" ng-click="generalInfoDataField.openFindContact()">Find Contact</a><span> | </span><a class="pointer" ng-click="generalInfoDataField.openManageCoverContacts()">Manage Cover Contacts</a>
+				</div>
+
+				<!--<br ng-if="generalInfoDataField.dataField.name == 'Client'">-->
+				<form name="editDataFieldGI_{{generalInfoDataField.giFormId}}_form">
+					<div ng-repeat="field in generalInfoDataField.dataField.fields | orderBy: 'orderIndex'" ng-if="$even" class="row">
+						<div ng-class="{'col-md-12 col-xs-12': field.fieldType == 'ckEditor', 'col-md-6': field.fieldType != 'ckEditor'}">
+							<div class="form-group" ng-show="field.isVisible">
+								<label ng-if="field.fieldType != 'ckEditor'" for="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" class="control-label">{{field.fieldLabel}} : </label>
+								<!-- control by field type here -->
+								<div ng-switch="field.fieldType">
+									<!-- input control -->
+									<div ng-switch-when="text">
+
+										<span class="form-control-static site-details" ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue}}</span>
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static site-details pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index)" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="text" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" class="form-control" ng-model="field.fieldValue" ng-show="generalInfoDataField.editMode" ng-required={{generalInfoDataField.isRequired}}>
+
+									</div>
+									<!-- input control ends -->
+
+									<!-- checkbox control -->
+
+									<div ng-switch-when="checkbox" class="form-control-static">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="checkbox" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-readonly="true" ng-hide="generalInfoDataField.editMode" ng-model="field.fieldValue" ng-click="generalInfoDataField.enableEdit($index);" ng-checked="field.fieldValue">
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="checkbox" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-readonly="false" ng-show="generalInfoDataField.editMode" ng-model="field.fieldValue" ng-checked="field.fieldValue">
+									</div>
+									<!-- checkbox control ends -->
+
+									<!-- radio control -->
+									<div ng-switch-when="radio" class="form-control-static">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue==0?'No':'Yes'}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="radio" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-model="field.fieldValue" ng-readonly="true" ng-hide="generalInfoDataField.editMode" ng-change="generalInfoDataField.enableEdit($index)" value="field.fieldValue">
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="radio" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-model="field.fieldValue" ng-readonly="false" ng-show="generalInfoDataField.editMode" value="field.fieldValue">
+									</div>
+									<!-- radio control ends -->
+
+									<!-- email control -->
+									<div ng-switch-when="email">
+										<span ng-if="generalInfoDataField.isReportFinalize" class="form-control-static site-details" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static site-details pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index)" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="email" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" class="form-control" ng-show="generalInfoDataField.editMode" ng-model="field.fieldValue">
+
+									</div>
+									<!-- email control ends -->
+
+									<!-- date control -->
+
+
+									<div ng-switch-when="date">
+										<span ng-if="generalInfoDataField.isReportFinalize" class="form-control-static" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index); generalInfoDataField.openCalendar($event, field.fieldGUID);" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<div ng-show="generalInfoDataField.editMode" class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+											<input id="generalInfodatefield" name="generalInfodatefield" type="text" class="form-control" ng-model="field.fieldValue">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+											</div>
+										</div>
+									</div>
+									<!-- date control ends -->
+
+									<!-- dropdown control -->
+									<div ng-switch-when="dropdown">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldLabel}}</span>
+										<select ng-if="!generalInfoDataField.isReportFinalize" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-model="field.fieldValue" ng-click="generalInfoDataField.enableEdit($index)" isRequired={{field.isRequired}} ng-disabled="!field.isEditable" class="form-control" dynamic-name="field.fieldName" data-ng-options="option.option_name as option.option_name for option in field.fieldOption" data-ng-change="generalInfoDataField.dropdownChange(field.mappedField,field.fieldValue)" ng-show="field.isVisible">
+											<option value="">Select {{field.fieldLabel}}...</option>
+										</select>
+									</div>
+									<!-- dropdown ends -->
+
+									<!-- radio option starts -->
+									<div id="radioDivOption" ng-switch-when="radiooption">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue==0?'No':'Yes'}}</span>
+										<label ng-if="!generalInfoDataField.isReportFinalize" class="radio-inline">
+											<input type="radio" name="{{field.mappedField}}" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" value="1" ng-click="generalInfoDataField.enableEdit($index);generalInfoDataField.radioOption_yes(field.mappedField,$index)" ng-model="field.fieldValue" ng-init="field.fieldValue = 0;">Yes</label>
+
+										<label ng-if="!generalInfoDataField.isReportFinalize" class="radio-inline">
+											<input type="radio" name="{{field.mappedField}}" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index}}" ng-click="generalInfoDataField.radioOption_no(generalInfoDataField.dataField.name,$index)" value="0" checked ng-model="field.fieldValue">No</label>
+									</div>
+									<!-- radio option ends -->
+
+									<!-- ckEditor starts -->
+									<div ng-switch-when="ckEditor">
+										<div class='boxCK nomargin row'>
+											<span class='editCK'>edit</span>
+											<div>
+												<div name="ck" class="textCK form-control" type="text" ng-model="generalInfoDataField.ckVal" data-ck-editor remove-ck-plugin="saveReportWritingCkData" ng-change="generalInfoDataField.enableEdit($index)">
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ckEditor ends -->
+								</div>
+							</div>
+						</div>
+
+						<div ng-class="{'col-md-12 col-xs-12': field.fieldType == 'ckEditor', 'col-md-6': field.fieldType != 'ckEditor'}" ng-if="generalInfoDataField.dataField.fields.length > ($index + 1)" ng-init="field = generalInfoDataField.dataField.fields[$index + 1]">
+							<div class="form-group" ng-show="field.isVisible">
+								<label ng-if="field.fieldType != 'ckEditor'" for="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" class="control-label">{{field.fieldLabel}} : </label>
+								<!-- control by field type here -->
+								<div ng-switch="field.fieldType">
+									<!-- input control -->
+									<div ng-switch-when="text">
+
+										<span class="form-control-static site-details" ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue}}</span>
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static site-details pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index+1)" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="text" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" class="form-control" ng-model="field.fieldValue" ng-show="generalInfoDataField.editMode" ng-required={{generalInfoDataField.isRequired}}>
+
+									</div>
+									<!-- input control ends -->
+
+									<!-- checkbox control -->
+									<div ng-switch-when="checkbox" class="form-control-static">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="checkbox" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-readonly="true" ng-hide="generalInfoDataField.editMode" ng-model="field.fieldValue" ng-click="generalInfoDataField.enableEdit($index + 1);" ng-checked="field.fieldValue">
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="checkbox" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-readonly="false" ng-show="generalInfoDataField.editMode" ng-model="field.fieldValue" ng-checked="field.fieldValue">
+									</div>
+									<!-- checkbox control ends -->
+
+									<!-- radio control -->
+									<div ng-switch-when="radio" class="form-control-static">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue==0?'No':'Yes'}}</span>
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="radio" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-model="field.fieldValue" ng-readonly="true" ng-hide="generalInfoDataField.editMode" ng-change="generalInfoDataField.enableEdit($index + 1)" value="field.fieldValue">
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="radio" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-model="field.fieldValue" ng-readonly="false" ng-show="generalInfoDataField.editMode" value="field.fieldValue">
+									</div>
+									<!-- radio control ends -->
+
+									<!-- email control -->
+									<div ng-switch-when="email">
+
+										<span ng-if="generalInfoDataField.isReportFinalize" class="form-control-static site-details" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static site-details pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index + 1)" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+
+										<input ng-if="!generalInfoDataField.isReportFinalize" type="email" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" class="form-control" ng-show="generalInfoDataField.editMode" ng-model="field.fieldValue">
+
+									</div>
+									<!-- email control ends -->
+
+									<!-- date control -->
+									<div ng-switch-when="date">
+										<span ng-if="generalInfoDataField.isReportFinalize" class="form-control-static" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<span ng-if="!generalInfoDataField.isReportFinalize" class="form-control-static pointer" data-toggle="tooltip" data-placement="top" data-container="body" title="Click to edit" ng-click="generalInfoDataField.enableEdit($index + 1); generalInfoDataField.openCalendar($event, field.fieldGUID);" ng-hide="generalInfoDataField.editMode">{{field.fieldValue}}</span>
+										<div ng-if="!generalInfoDataField.isReportFinalize" ng-show="generalInfoDataField.editMode" class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+											<input id="generalInfodatefield2" name="generalInfodatefield2" type="text" class="form-control" ng-model="field.fieldValue">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+											</div>
+										</div>
+									</div>
+									<!-- date control ends -->
+
+									<!-- dropdown control -->
+									<div ng-switch-when="dropdown">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldLabel}}</span>
+										<select ng-if="!generalInfoDataField.isReportFinalize" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-model="field.fieldValue" ng-click="generalInfoDataField.enableEdit($index + 1)" isRequired={{field.isRequired}} ng-disabled="!field.isEditable" class="form-control" dynamic-name="field.fieldName" data-ng-options="option.option_name as option.option_name for option in field.fieldOption" data-ng-change="generalInfoDataField.dropdownChange(field.mappedField,field.fieldValue)" ng-show="field.isVisible">
+											<option value="">Select {{field.fieldLabel}}...</option>
+										</select>
+									</div>
+									<!-- dropdown ends -->
+
+									<!-- radio option starts -->
+									<div id="radioDivOption" class="radio bottom-margin-xs" ng-switch-when="radiooption">
+										<span ng-if="generalInfoDataField.isReportFinalize">{{field.fieldValue==0?'No':'Yes'}}</span>
+										<label ng-if="!generalInfoDataField.isReportFinalize">
+											<input type="radio" name="{{field.mappedField}}" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" value="1" ng-click="generalInfoDataField.enableEdit($index + 1);generalInfoDataField.radioOption_yes(field.mappedField,$index + 1)" ng-model="field.fieldValue" ng-init="field.fieldValue = 0;">Yes</label>
+
+										<label ng-if="!generalInfoDataField.isReportFinalize">
+											<input type="radio" name="{{field.mappedField}}" id="editDataFieldGI_{{generalInfoDataField.giFormId}}_{{$index + 1}}" ng-click="generalInfoDataField.radioOption_no(generalInfoDataField.dataField.name,$index + 1)" value="0" checked ng-model="field.fieldValue">No</label>
+									</div>
+									<!-- radio option ends -->
+
+									<!-- ckEditor starts -->
+									<div ng-switch-when="ckEditor">
+										<div class='boxCK nomargin row'>
+											<span class='editCK'>edit</span>
+											<div>
+												<div name="ck" class="textCK form-control" type="text" ng-model="generalInfoDataField.ckVal" data-ck-editor remove-ck-plugin="saveReportWritingCkData" ng-change="generalInfoDataField.enableEdit($index + 1)">
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ckEditor ends -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<div ng-repeat="field in generalInfoDataField.dataField.fields | orderBy: 'orderIndex'">-->
+					<!--<div ng-class="{'row':$even}">-->
+
+					<!--</div>-->
+					<!--</div>-->
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

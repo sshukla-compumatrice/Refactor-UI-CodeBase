@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="createTeam.cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Create Team</h4>
+</div>
+
+
+<div class="modal-body">
+    <form class="form-horizontal"> 
+        <p ng-show="createTeam.exception" class="text-danger">{{createTeam.serviceMessage}}</p>
+      
+            <div class="form-group required " field-validation="Team">
+                <div class="col-md-6">
+                <input name = "team" placeholder = "Create Team" class="form-control" required type="text" ng-model="createTeam.teamName">
+            </div>
+       
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type = "submit" class="btn btn-primary" ng-click="createTeam.confirm()">Create</button>
+    <button type = "reset" class="btn btn-default" ng-click="createTeam.cancel()">Cancel</button>
+</div>

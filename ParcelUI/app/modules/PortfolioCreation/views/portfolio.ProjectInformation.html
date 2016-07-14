@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="alert alert-info">
+            <b>You have chosen to create a New Portfolio. A Portfolio is a project containing two or more sites. If you have a single site, you can click <a ui-sref="quickCreateProj" tabindex="-1">"New Single Site Project"</a> to use a simpler process. Portfolio creation is a multi-step process. After you complete each section, click the "NEXT" button in the left column to continue.                                        
+            </b>
+        </p>
+        <hr>
+
+        <form name="propertyInfoForm" class="form-horizontal" ng-controller="PortfolioProjectInfoController as projectInfo" confirm-on-exit>
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="projectInfo.serviceResponseAlert">
+                <button type="button" class="close" ng-click="projectInfo.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{projectInfo.serviceResponseText}}
+            </div>
+
+            <div class="form-group required">
+                <label for="projectName" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Name:
+                </label>
+
+
+                <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Project Name">
+                    <input id="projectName" type="text" class="form-control" name="projectName" ng-model="projectInfo.data.name" required focus-if tabindex="1">
+                </div>
+
+
+            </div>
+            <div class="form-group required">
+                <label for="clientrequestingwork" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Client Requesting Work:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Client">
+                    <select id="clientrequestingwork" name="requestingClient" class="form-control" ng-model="projectInfo.data.client.companyName" data-ng-options="client.name as client.name for client in portfolio.filteredClients = (portfolio.loadData.relatedCompanies | filter: portfolio.filterByContains('functions', 'Client'))" ng-required="portfolio.filteredClients && portfolio.filteredClients.length" tabindex="2">
+                        <option value="">Select a Client</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group required">
+                <label for="datedraft" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date draft report:
+                </label>
+
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Draft Due Date">
+                  
+                    <div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+
+                        <input id="datedraft" name="draftDate" type="text" class="form-control" ng-model="projectInfo.data.draftDueDate" tabindex="3" required>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dateCalendar" tabindex="4"><i class="fa fa-calendar"></i></button>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+            <div class="form-group required">
+                <label for="dateFinal" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date final report:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Date Final Due">
+ 
+                    <div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy" tabindex="5">
+ 
+                        <input id="dateFinal" name="finalDate" type="text" class="form-control" ng-model="projectInfo.data.finalDueDate" required>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dateCalendar" tabindex="6"><i class="fa fa-calendar"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="projectcomments" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Comments:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <textarea id="projectcomments" name="projectcomments" rows="5" class="form-control" placeholder="Project Comments" ng-model="projectInfo.data.comments" tabindex="7"></textarea>
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12 ">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-model="projectInfo.data.addSiteMethod" value="{{portfolio.addSiteMethodTypes.manual}}"> Manually Enter Site(s)
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-model="projectInfo.data.addSiteMethod" value="{{portfolio.addSiteMethodTypes.upload}}"> Upload Site Spreadsheet
+                    </label>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

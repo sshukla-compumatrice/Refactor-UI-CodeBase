@@ -1,0 +1,86 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary btn-sm" onclick="window.close();">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close Window
+    </button>
+</div>
+<h2 class="page-header">Replacement of Capital Items Schedule</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-condensend table-hover">
+        <thead>
+            <tr>
+                <th>Sec.</th>
+                <th>Component or System </th>
+                <th>EUL (Yr) </th>
+                <th>EFF AGE (Yr)</th>
+                <th>RUL (Yr) </th>
+                <th>Quantity </th>
+                <th>Unit </th>
+                <th>Unit Cost </th>
+                <th>Cycle Replacement Cos.</th>
+                <th ng-repeat="year in recommendationSummary.years">{{"Year " + year}}
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="groupType in recommendationSummary.groupTypes">
+            <tr>
+
+                <td colspan="18"><strong>{{groupType.name}}</strong>
+                </td>
+            </tr>
+            <tr ng-repeat="recommendation in recommendationSummary.recommendations | filter:{ group: groupType.value }">
+                <td><a class="pointer " ng-click="recommendationSummary.editRecommendation(recommendation) ">{{recommendation.section}}</a></td>
+                <td><a class="pointer " ng-click="recommendationSummary.editRecommendation(recommendation) ">{{recommendation.componentDescription}}</a></td>
+                <td>{{recommendation.eul}}</td>
+                <td>{{recommendation.eff}}</td>
+                <td>{{recommendation.rul}}</td>
+                <td>{{recommendation.quantity}}</td>
+                <td>{{recommendation.unit}}</td>
+                <td>{{recommendation.unitCost}}</td>
+                <td>{{recommendation.cycleReplacement}}</td>
+
+                <td ng-repeat="year in recommendationSummary.years "><a class="pointer " ng-click="recommendationSummary.editRecommendation(recommendation) ">                    
+                    {{recommendation.yearlyCostSpread[$index].val == undefined ? " " : recommendation.yearlyCostSpread[$index].val}}</a></td>
+            </tr>
+
+        </tbody>
+        <tbody>
+            <tr>
+                <td colspan="21 "></td>
+            </tr>
+            <tr>
+                <td colspan="8 ">Total(Uninflated)</td>
+                <td ng-repeat="year in recommendationSummary.years ">{{recommendationSummary.totalUninflatedYearWise[$index].val == " " ? "- " : recommendationSummary.totalUninflatedYearWise[$index].val}}</td>
+                <td>{{recommendationSummary.totalUninflated == " " ? " " : recommendationSummary.totalUninflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="8 ">Inflation Factor</td>
+                <td ng-repeat="year in recommendationSummary.years ">{{recommendationSummary.inflationFactorYearWise[$index].val == " " ? "- " : recommendationSummary.inflationFactorYearWise[$index].val}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="8 ">Total Inflated</td>
+                <td ng-repeat="year in recommendationSummary.years ">{{recommendationSummary.inflationFactorYearWise[$index].val == " " ? "- " : recommendationSummary.inflationFactorYearWise[$index].val}}</td>
+                <td>{{recommendationSummary.totalInflated == " " ? " " : recommendationSummary.totalInflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="21 "></td>
+            </tr>
+
+            <tr>
+                <td colspan="3 ">Reserve per SF per year (Uninflated)</td>
+
+                <td>{{recommendationSummary.unInflated}}</td>
+
+            </tr>
+            <tr>
+                <td colspan="3 ">Reserve per SF per year (Inflated)</td>
+
+                <td>{{recommendationSummary.inflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="21 "></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

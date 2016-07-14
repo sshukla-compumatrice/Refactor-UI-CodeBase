@@ -1,0 +1,50 @@
+<div id="horizontalTable">
+    <div class="bottom-margin-sm top-margin-sm">
+        <div class="form-inline">
+            <button ng-show="!editmode && table.data.length>0" class="btn btn-md btn-primary" ng-click="editTable()">Edit Table</button>
+            <button type="button" ng-click="addRow()" class="btn btn-md btn-primary" ng-show="table.data.length<=0">Create table with</button>
+            <button type="button" ng-click="addRow()" class="btn btn-md btn-primary" ng-show="!editmode && table.data.length>0">Add</button>
+            <div class="form-group" ng-show="!editmode || table.data.length<=0">
+                <input type="text" class="form-control" ng-model="numberOfRowsAdd"> Row(s) to table
+            </div>
+            <button ng-click="deleteTable()" type="button" ng-click="deleteTable()" class="btn btn-md btn-danger" ng-show="!editmode && table.data.length>0">Delete Table</button>
+            <button ng-click="showHistory(editmode)" type="button" class="btn btn-md btn-primary" ng-show="!editmode && table.data.length>0" data-toggle="tooltip" data-placement="top" title="Undo/View History"><i class="fa fa-history"></i></button>
+        </div>
+        <div ng-show="editmode && table.data.length>0">
+            <button type="button" class="btn btn-md btn-primary" ng-click="saveChanges(tabularDataForm)">Save Changes</button>
+            <button type="button" class="btn btn-md btn-primary" ng-click="spellCheckTable($event.target)">Check Spelling</button>
+
+            <button type="button" class="btn btn-md btn-default" ng-click="cancelChanges()">Cancel</button>
+            <button ng-click="showHistory(editmode)" type="button" class="btn btn-md btn-primary" data-toggle="tooltip" data-placement="top" title="Undo/View History"><i class="fa fa-history"></i></button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" ng-class="{'table-striped':!editmode}" ng-repeat="data in table.data">
+            <thead>
+                <th ng-show="!editmode" colspan="{{table.structure.length}}">
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Duplicate Row" ng-click="duplicateRow(data)"><span class="glyphicon glyphicon-duplicate"></span></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Delete Row" ng-click="deleteRow($index)"><span class="glyphicon glyphicon-trash"></span></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move to top" ng-click="moveToEnd($index, 0, 'UP')"><span class="glyphicon glyphicon-step-backward fa-rotate-90"></span></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move Up" ng-click="moveUp($index)"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move to bottom" ng-click="moveToEnd($index, table.data.length-1, 'DOWN')"><span class="glyphicon glyphicon-step-backward fa-rotate-270"></span></a>
+                    <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move Down" ng-click="moveDown($index)"><span class="glyphicon glyphicon-chevron-down"></span></a>
+                </th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rowIndexVal in rowIndexColl | orderBy: identity " ng-click="rowEditClick()">
+                    <td ng-repeat="col in table.structure |  filter: filterbyRowIndex(rowIndexVal) | orderBy: 'columnIndex' " colspan="{{col.colspan}} ">
+                        <div class="form-horizontal">
+                            <div class="form-group bottom-margin-xs">
+                                <label class="col-md-3 control-label ">{{col.label}}</label>
+                                <div class="col-md-9 ">
+                                    <div tablefield-directive field="col" parentindex="$parent.$parent.$index+'_'+$parent.$index" index="$index" data="data[col.label]" editmode="editmode" sectionguid="sectionGuid" tablescope="horizontalTableScope"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

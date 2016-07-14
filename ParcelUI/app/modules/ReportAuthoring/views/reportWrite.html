@@ -1,0 +1,555 @@
+<div cg-busy="ck.waitingProcessResources" ng-controller="ReportWriteController as reportWrite" ng-init="reportWrite.callCommentsThroughSign()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 nopadding">
+                <ul class=" nav nav-tabs nav-tabs-sm report-write-tab">
+                    <li id="li_toc" class="active" ng-click="reportWrite.openLeftPanel('ToC')"><a class="pointer" ng-click="reportWrite.tocTabClicked();reportWrite.removeLocalStorage();ck.closeAlertHeight();" aria-controls="toc" role="tab" data-toggle="tab" aria-expanded="true">ToC</a></li>
+                    <li ng-click="reportWrite.openLeftPanel('Library')"><a class="pointer" ng-click="ck.selectedLibraryChanged();reportWrite.removeLocalStorage(); ck.closeAlertHeight();" aria-controls="library" role="tab" data-toggle="tab">Library</a></li>
+                    <li id="li_comments" ng-click="reportWrite.openLeftPanel('Comments')"><a class="pointer" ng-click="ck.getReportComments();reportWrite.removeLocalStorage(); ck.closeAlertHeight();" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
+                    <li ng-click="reportWrite.openLeftPanel('History')"><a class="pointer" ng-click="ck.getHistoryForSections();reportWrite.removeLocalStorage();ck.closeAlertHeight(); " aria-controls="history" role="tab" data-toggle="tab">History</a></li>
+                    <li ng-click="reportWrite.openLeftPanel('Spellcheck')"><a class="pointer" ng-click="reportWrite.removeLocalStorage();ck.closeAlertHeight();" aria-controls="spellcheck" role="tab" data-toggle="tab">Spellcheck</a></li>
+                    <li ng-click="reportWrite.openLeftPanel('Find/Replace');"><a class="pointer" ng-click="reportWrite.removeLocalStorage(); ck.closeAlertHeight(); " aria-controls="findreplace" role="tab" data-toggle="tab">Find / Replace</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+
+                <span class="pull-left">
+                    <div id="topSectionNameId" class="top-margin-xs text-primary"  title="{{ck.currentSection.sectionName}}"><span ng-if="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}} -</span> {{ ck.currentSection.sectionName | limitTo:50 }} <span ng-if="ck.currentSection.sectionName.length>50">...</span></div>
+            </span>
+
+            <span class="pull-right toolsButton">
+                <div class="btn-group">
+                    <button id="btntextblackId" type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change text to black&nbsp;<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right" aria-labelledby="blackAll" id="blackAllDrop-contents">
+                <li><a id="dropdown1-blackall" class="pointer" ng-click="reportWrite.blackAllCurrentSummary()" aria-controls="dropdown1">This section</a></li>
+                <li><a ng-click="reportWrite.blackAllSummaries();ck.closeAlertHeight();" class="pointer" id="dropdown2-blackall" aria-controls="dropdown2">All sections</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button id="btntextsaveId" type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-floppy-o fa-lg"></i>&nbsp;Save All&nbsp;<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right" aria-labelledby="blackAll" id="saveAllDrop-contents">
+                <li><a id="dropdown1-saveall" class="pointer" ng-click="reportWrite.saveAllTable('CURRENT_SECTION');" aria-controls="dropdown1">Tables in this section</a></li>
+                <li><a id="dropdown2-saveall" class="pointer" ng-click="reportWrite.saveAllTable('ALL_SECTIONS');" aria-controls="dropdown2">Tables in all sections</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" ng-click="reportWrite.gotoNextSection()" ng-disabled="reportWrite.nextDisabled" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down"></span></button>
+            <button type="button" ng-click="reportWrite.gotoPrevSection()" ng-disabled="reportWrite.prevDisabled" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></button>
+        </div>
+        </span>
+    </div>
+</div>
+
+<div class="row">
+
+    <div id="leftContent" ng-switch on="reportWrite.reportAuthoringWriteSelected">
+
+        <div ng-switch-when="ToC" id="toc" class="col-md-4 leftContent nopadding">
+
+            <div role="tabpanel" class="tab-pane left-panel-btn fade active in topHeaderHeight">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-sm" ng-click="reportWrite.switchViewMode()">{{ck.otherViewModeMsg}}</button>
+                    <button type="button" class="btn btn-default btn-sm" ng-click="reportWrite.editAllTables(true)">Edit All Tables</button>
+
+                </div>
+
+                <span class="section-no pull-right" ng-show="ck.currentSection.sectionNumber && !ck.currentSection.isGeneralInfo">{{ck.currentSection.sectionNumber}}</span>
+                <span class="section-no pull-right" ng-show="!ck.currentSection.sectionNumber && !ck.currentSection.isGeneralInfo">{{ck.selectedSection.sectionNumber}}</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="scrollDiv contentbodyHeight">
+                <toc-display sections="ck.toc.sections" selected-section="ck.selectedSection" section-click="reportWrite.sectionClicked(section);" is-show-comment-address="ck.isShowCommentAddress(section)" flag-click="reportWrite.flagClicked(section)">
+
+                </toc-display>
+            </div>
+
+        </div>
+        <!-- toc div ends-->
+
+        <!-- library div -->
+        <div ng-switch-when="Library" id="library" class="col-md-4 leftContent nopadding" cg-busy="ck.waitingLibraryResources">
+            <div class="left-panel-btn topHeaderHeight">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="form-group">
+                            <select class="form-control ng-pristine ng-valid" ng-options="library.libraryGUID as library.name for library in ck.libraries" ng-model="ck.selectedLibraryID" ng-change="ck.selectedLibraryChanged()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="ck.getLibraries()"><span class="glyphicon glyphicon-refresh"></span></button>
+                        <span class="section-no pull-right" ng-show="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}}</span>
+                    </div>
+                </div>
+                <div ng-if="ck.reportStatusAbbreviation!='FIN'" ng-hide="ck.getLibraryInstructionFlag();" class="alert alert-info top-margin">
+                    <a class="close" ng-click="ck.closeAlertHeight();ck.setLibraryInstructionFlag();" data-dismiss="alert" ng-init="ck.languageHelp = true;" ng-show="ck.languageHelp" ng-click="ck.languageHelp = false;">×</a> To add language to your report, click on the option. To multi-select, hold the CTRL key. After making a selection, click into the narrative area where you would like the language placed.
+
+                </div>
+                <div ng-init="ck.showLanguageMsg=false" ng-show="ck.showLanguageMsg" class="alert alert-info top-margin">
+                    No languages recorded for this section.
+                </div>
+                <!--          <div class='text_here'>
+    <span class='ellipsis_text'>
+        TEXT djfkjdsjfd  dskfjklsdfj  jkdjlskd f dklfjsdlkfj kljflksd flsd kjflksdf klsjf lsdf sdjfskdjfsd fsdf sdlkjfsdlkfj s flksdjflsd fs fjlksdfldsk fsdjflkds fldskj
+    </span>
+</div>-->
+            </div>
+            <div class="contentbodyHeight scrollDiv">
+                <div ng-repeat="language in ck.languages" ng-class="{'instructions-language': language.category == 'Instructions', 'sample-language': language.category == 'Sample' && !language.isAddedOnProjectStartup, 'language-included-in-project-setup': (language.category == 'Options' || language.category == 'Sample') && language.isAddedOnProjectStartup, 'language-option-to-insert': language.category == 'Options' && !language.isAddedOnProjectStartup}" class="panel panel-default">
+
+                    <!--  <div ng-repeat="language in ck.languages" ng-class="{'instructions-language': language.category == 'Instructions', 'sample-language': language.category == 'Sample', 'language-included-in-project-setup': language.category == 'Options' && language.isAddedOnProjectStartup, 'language-option-to-insert': language.category == 'Options' && !language.isAddedOnProjectStartup}" class="panel panel-default">-->
+
+                    <div class="panel-heading">
+                        <strong>{{language.keyword}}</strong>
+
+                        <button class="btn btn-default btn-xs pull-right" ng-disabled="!reportWrite.getFlag($index)" ng-click="language.isFullView = !language.isFullView;"><i class="fa" ng-class="language.isFullView ? 'fa-chevron-up' : 'fa-chevron-down'"></i></button>
+
+                    </div>
+
+
+                    <div mouse-click-copy="toCopyLibrary" one-click-copy-condition="{{language.category != 'Instructions'}}" class="default-pointer">
+                        <div id="toCopyLibrary" class="panel-body" ng-class="{'language-area-maximized':language.isFullView,'language-area-default':!language.isFullView,'cursor-alias':language.category != 'Instructions'}" ng-bind-html="ck.renderHtml(language.text)" ng-class="language.isFullView ? 'language-area-maximized' : 'language-area-default'"></div>
+                        <div id="divHeightChild{{$index}}" ng-show="ck.showDots(language.isFullView) && reportWrite.getFlag($index)" class="ellipses text-right">...</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- library div ends -->
+        <!-- comments div -->
+        <div ng-switch-when="Comments" id="comments" class="col-md-4 leftContent nopadding" cg-busy="ck.waitingCommentsResources" >
+           <div ng-if="ck.reportStatusAbbreviation!='FIN'">
+              <div class="topHeaderHeight">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="ck.selSection_Comments" ng-change="ck.newComm = false;ck.commentsErrorStatus=false;ck.sectionChanged();">
+
+                                <option value="0">Current Section</option>
+                                <option value="1">Current Section Unaddressed Comments</option>
+                                <option value="2">All Sections</option>
+                                <option value="3">All Sections Unaddressed Comments</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <span class="section-no pull-right" ng-show="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}}</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group bottom-margin comments-section-btn">
+
+                            <div ng-show="ck.checkComments" id="divSelAll_write" class="btn-group" data-toggle="buttons" ng-click="ck.selectedAll = !ck.selectedAll; ck.checkAll();">
+
+                                <label id="lblSelAll" class="btn btn-default btn-sm">
+                                    <input id="selAll" class="btn" type="checkbox" ng-model="ck.selectedAll" />{{ck.selectAllText}}
+                                </label>
+                            </div>
+
+
+                            <button ng-show="ck.checkComments" class="btn btn-sm btn-default" ng-click="ck.openDeletePopup();" ng-disabled="!ck.selectedAll;!ck.IsCommentChecked"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-sm btn-default" ng-show="ck.checkComments" title="Open all addressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="ck.OpenAll()"><i class="fa fa-lg fa-plus"></i> </button>
+                            <button class="btn btn-sm btn-default" ng-show="ck.checkComments" title="Close all addressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="ck.CloseAll()"><i class="fa fa-lg fa-minus"></i> </button>
+
+                            <button class="btn btn-sm btn-default" ng-click="ck.newComm = true;ck.newCommentVal='';ck.commentsErrorStatus=false;ck.saveNewCommBtn=false; ck.closeAlertHeight();ck.addFocus();">Add New</button>
+
+                            <button class="btn btn-sm btn-default" title="Refresh Comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="ck.refreshComments();ck.newComm = false;ck.commentsErrorStatus=false;"><i class="glyphicon glyphicon-refresh"></i> </button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="alert alert-info nomargin" role="alert" id="serviceResponseDiv" ng-show="ck.serviceResponseAlert && ck.checkComments">
+
+                    <button type="button" class="close" ng-click="ck.serviceResponseAlert = false;ck.closeAlertHeight();" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Use the select to toggle comment visibility. Click on user names to view comments or use the buttons to show/hide all. Green comments have not been addressed.
+                </div>
+                <div ng-show="ck.newComm" class="top-margin-sm form-horizontal">
+
+                    <div class="form-group " ng-hide="true">
+                        <label class="control-label col-md-4 col-sm-4 col-xs-12 label-left">Type of Comment: </label>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <select class="form-control" ng-model="ck.commentType" ng-init="ck.commentType = 0">
+
+                                <option value="0">General Comment</option>
+                                <option value="1">Report Writer</option>
+                                <option value="2">Senior Reviewer</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <textarea id="addComments" class="form-control resize-vertical focusif" rows="6" placeholder="Enter New Comments for {{ck.currentSection.sectionName}}" ng-model="ck.newCommentVal"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button class="btn btn-default btn-sm" ng-click="ck.newComm = false;ck.commentsErrorStatus=false;ck.closeAlertHeight();">Cancel</button>
+                            <button class="btn btn-primary btn-sm" ng-click="ck.saveNewComments();ck.closeAlertHeight();" ng-disabled="ck.saveNewCommBtn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="contentbodyHeight scrollDiv">
+
+                <div ng-show="ck.commentsErrorStatus" class="alert alert-danger top-margin-xs" role="alert" ng-class="danger">
+                    {{ck.commentsErrorText}}
+                </div>
+                <div ng-repeat="secVal in commentsArr track by $index">
+
+                    <div>
+
+                        <div class="bottom-margin-xs" ng-class="secVal.sectionName ? 'border-bottom-xs' : ''">
+                            <strong>{{secVal.sectionNumber}}  {{secVal.sectionName}}</strong>
+                        </div>
+
+                        <div class="alert alert-danger top-margin-xs" role="alert" ng-class="danger" ng-show="secVal.noCommentsErrVal">
+                            {{secVal.noCommentsErrVal}}
+                        </div>
+
+                        <div ng-show="(secVal.comments.length > 0)?true:false" ng-class="{'false': 'bg-green-comments','true': 'bg-gray-comments'}[comm.addressed]" ng-repeat="comm in secVal.comments">
+                            <div class="bottom-margin-xs">
+                                <input type="checkbox" ng-model="comm.Selected" ng-change="ck.commentCheck()">
+                                <a class="pointer decoration-n">
+                                    <span id="{{comm.Id}}-plus-comment-span" ng-click="ck.setIconComment('collapse in',comm.Id)" class="ng-hide">
+                                          <i id="{{comm.Id}}-plus-comment"  class="fa fa-lg fa-plus-square-o ng-hide"> </i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>
+                                    <span id="{{comm.Id}}-minus-comment-span" ng-click="ck.setIconComment('collapse',comm.Id)">
+                                         <i id="{{comm.Id}}-minus-comment"  class="fa fa-lg fa-minus-square-o"></i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>
+
+
+                                </a>
+
+
+                                <span class="pull-right">{{comm.date}} </span>
+
+                                <div id="{{comm.Id}}-comment">
+                                    <span class="comment-text" ng-hide="comm.commentEditState" ng-bind-html="comm.commentVal"></span>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="editComments" class="form-control resize-vertical focusif" rows="6" placeholder="Enter Comments for {{ck.currentSection.sectionName}}" ng-show="comm.commentEditState" ng-model="comm.EditCommentVal"></textarea>
+                                    <textarea id="editComments" class="form-control resize-vertical focusif" rows="6" placeholder="Address the comment for {{ck.currentSection.sectionName}}" ng-show="comm.addressState" ng-model="comm.addressComment"></textarea>
+                                </div>
+
+                                <div >
+                                    <button ng-hide="comm.addressed || comm.addressState || comm.commentEditState" class="btn btn-primary btn-sm" ng-click="comm.addressState = true;comm.addressComment='';ck.addFocus();">Address</button>
+                                    <button class="btn btn-primary btn-sm" ng-hide="comm.addressed || comm.addressState || comm.commentEditState || !comm.canEdit" ng-click="comm.commentEditState = true;ck.editComment(comm);ck.addFocus();">Edit</button>
+
+                                    <button class="btn btn-default btn-sm" ng-show="comm.commentEditState || comm.addressState" ng-click="comm.commentEditState = false;comm.addressState = false;ck.Cancel(comm.commentVal);">Cancel</button>
+                                    <button class="btn btn-primary btn-sm" ng-show="comm.commentEditState || comm.addressState" ng-click="ck.editAddressComment(comm)">Save</button>
+
+                                </div>
+                            </div>
+                            <div ng-show="comm.addressed">
+
+                                <a class="pointer decoration-n addressed-by">
+                                    <span id="{{comm.Id}}-plus-address-span" ng-click="ck.setIconAddress('collapse in',comm.Id)" class="ng-hide">
+                                               <i id="{{comm.Id}}-plus-address"  class="fa fa-lg fa-plus-square-o ng-hide"></i> ADDRESSED BY {{comm.addressedBy.toUpperCase()}}
+                                        </span>
+                                    <span id="{{comm.Id}}-minus-address-span" ng-click="ck.setIconAddress('collapse',comm.Id)">
+                                               <i id="{{comm.Id}}-minus-address"  class="fa fa-lg fa-minus-square-o"></i> ADDRESSED BY {{comm.addressedBy.toUpperCase()}}
+                                        </span>
+
+                                </a>
+                                <span class="pull-right">{{comm.addressedDate}}</span>
+                                <div id="{{comm.Id}}-address">
+                                    <span class="comment-text" ng-bind-html="comm.addressedVal"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr ng-show="(secVal.comments.length > 0)?true:false">
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+          
+        </div>
+        <!-- comments div ends -->
+
+        <!-- history div -->
+
+        <div ng-switch-when="History" id="history" class="col-md-4 leftContent nopadding" cg-busy="ck.waitingHistoryResources">
+            <div class="topHeaderHeight">
+
+                <button class="btn btn-sm btn-default" ng-click="ck.getHistoryForSections()"><span class="glyphicon glyphicon-refresh"></span></button>
+                <span class="section-no pull-right" ng-show="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}}</span>
+                <div class="clearfix"></div>
+                <div ng-if="ck.reportStatusAbbreviation!='FIN'" ng-hide="ck.getHistoryInstructionFlag();" class="alert alert-info top-margin-xs">
+                    <a class="close" ng-click="ck.closeAlertHeight();ck.setHistoryInstructionFlag();" data-dismiss="alert">×</a> To replace the text in your report with a history entry, click on the entry. After making a selection, click into the narrative area where you would like the entry placed.
+                </div>
+                <div ng-init="ck.showHistoryMsg=false" ng-show="ck.showHistoryMsg" class="alert alert-info">
+                    No history recorded for this section.
+                </div>
+
+
+            </div>
+
+            <div class="contentbodyHeight scrollDiv">
+
+
+                <!-- <div  add-html id="sectionTest" resp="testMerge" obj="ck.obj" >
+                                
+                                </div>-->
+
+                <div ng-repeat="historyObj in historyArr">
+                    <div class="panel-group" ng-repeat="(key,value) in historyObj.section.sectionData.contentValues.ckEditData">
+                        <div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">
+                                    <label>{{historyObj.createdBy.firstName}} {{historyObj.createdBy.lastName}}</label>
+
+                                    <button class="btn btn-default btn-xs pull-right" ng-disabled="!reportWrite.getFlag($parent.$index)" ng-click="language.isFullView = !language.isFullView;"><i class="fa" ng-class="language.isFullView ? 'fa-chevron-up' : 'fa-chevron-down'"></i></button>
+                                    <label class="pull-right">{{historyObj.createDate}}&nbsp;</label>
+                                </div>
+
+
+                                <div mouse-click-copy="toCopyHistory" one-click-copy-condition="true">
+                                    <div id="toCopyHistory" class="panel-body cursor-alias" id="sectionTest_{{$index}}" ng-bind-html="ck.renderHtml(value)" ng-class="language.isFullView ? 'language-area-maximized' : 'language-area-default'">
+                                    </div>
+                                    <div id="divHeightChild{{$parent.$index}}" ng-show="ck.showDots(language.isFullView) && reportWrite.getFlag($parent.$index)" class="ellipses text-right">...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- history div ends -->
+
+
+
+        <!-- Spellcheck div -->
+        <div ng-switch-when="Spellcheck" id="spellcheck" style="display:none;" class="col-md-4 leftContent nopadding" ng-controller="spellCheckController">
+            <div id="spellcheckStartupBtn" ng-if="ck.reportStatusAbbreviation!='FIN'">
+
+                <div class="btn-group">
+
+                    <button id="spellcheckinsection" type="button" class="btn btn-default btn-sm spellcheck-in-section" ng-click="spellcheckinsectionclick()" title="Spellcheck in section">In Section</button>
+                    <button type="button" class="btn btn-default btn-sm spellcheck-in-full-report" ng-click="spellcheckinAllSectionclick()" title="Spellcheck in full section">In Full Report</button>
+                </div>
+
+                <span class="section-no pull-right" ng-show="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}}</span>
+                <div class="checkbox">
+                    <label>
+                        <input id="chkNarrativeOnly" type="checkbox" /> Narratives Only (skip tables)</label>
+                </div>
+
+                <div class="alert alert-info alert-dismissible top-margin-xs" role="alert">
+                    <button type="button" class="close" title="Close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    To run spellcheck on your report, select one of the options above. If checking the full report, you will be prompted to go into All Sections Mode. To do this manually, the button is on the ToC tab.
+                </div>
+
+            </div>
+
+
+            <div class="spellcheckButton" ng-if="ck.reportStatusAbbreviation!='FIN'">
+                <button id="spellcheck-save" type="button" title="Save" class="btn btn-primary btn-sm" ng-click="spellcheckSave()">Save</button>
+                <button id="spellcheck-close" type="button" title="Close" class="btn btn-default btn-sm" ng-click="spellcheckClose()">close</button>
+
+            </div>
+
+            <div class="spellcheck-paused" style="display:none;" ng-if="ck.reportStatusAbbreviation!='FIN'">
+                <button type="button" class="btn btn-primary" ng-click="spellResume()">Spellcheck paused, click to resume</button>
+            </div>
+
+            <div class="spellcheckbody" style="display:none;" ng-if="ck.reportStatusAbbreviation!='FIN'" id="spellcheckCont">
+
+                <div class="top-margin">
+                    <div id="spellcheckSectionInfo" class="full-width" title="{{ck.currentSection.sectionName}}"><span ng-if="ck.currentSection.sectionNumber">{{ck.currentSection.sectionNumber}} -</span> {{ ck.currentSection.sectionName | limitTo:50 }} <span ng-if="ck.currentSection.sectionName.length>50">...</span></div>
+                </div>
+                <div class="top-margin-sm">
+
+                    <div class="form-group">
+                        <label for="spellcheckTypo">Error Found</label>
+                        <input id="spellcheckTypo" name="spellcheckTypo" disabled="true" type="text" class="form-control">
+                    </div>
+
+                    <div class="bottom-margin-lg">
+                        <button id="btn_ignore" ng-click="ignorClick()" title="Ignore" class="btn btn-primary btn-xs">Ignore</button>
+                        <button id="btn_ignore_all" class="btn btn-primary btn-xs" title="Ignore All" ng-click="spellIgnoreAll()">Ignore All</button>
+                        <button id="btn_addToDictionary" class="btn btn-primary btn-xs" title="Add to My Dictionary" ng-click="addToDictionary()">Add to My Dictionary</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="spellcheckReplaceWith">Replace With</label>
+                        <input type="text" ng-model="spellcheckReplaceWith" class="form-control" id="spellcheckReplaceWith" name="spellcheckReplaceWith">
+                    </div>
+                    <div class="form-group">
+                        <label for="spellcheckSuggestions">Suggestions</label>
+
+                        <select class="form-control" multiple="" onclick="setSpellcheckSuggestions()" id="spellcheckSuggestions" class="form-control"></select>
+                    </div>
+
+                    <button id="btn_replace_sp" class="btn btn-primary btn-xs" ng-click="replaceWordClick()" title="Replace">Replace </button>
+                    <button id="btn_replace_sp_all" class="btn btn-primary btn-xs" ng-click="spellReplaceAll()" title="Replace All">Replace All</button>
+
+                </div>
+                <div class="spellcheckoverlay"> </div>
+                <div class="spellcheckstatuscont">
+                    <span class="label label-important  label-info">Initializing</span>
+                </div>
+
+
+
+            </div>
+            <div ng-if="ck.reportStatusAbbreviation=='FIN'" class="alert alert-info nonEditable">
+                Spellcheck is only available on reports that are editable.
+            </div>
+
+        </div>
+        <!-- Spellcheck div ends -->
+
+        <!-- find/replace div -->
+        <div ng-switch-when="Find/Replace" id="findreplace" class="col-md-4 leftContent nopadding">
+            <div ng-if="ck.reportStatusAbbreviation!='FIN'">
+                <div ng-include="'app/modules/ReportAuthoring/views/FindReplace.html'"></div>
+            </div>
+            <div class="alert alert-info top-margin-xs" ng-if="ck.reportStatusAbbreviation=='FIN'">
+                Find/Replace is only available on reports that are editable.
+            </div>
+
+        </div>
+        <!-- find/replace div ends -->
+        <left-panel-slide-toggle></left-panel-slide-toggle>
+    </div>
+
+    <!--<span id="section-toggle" ng-click="ck.toggleLeftPanel()" class="hidden-sm hidden-xs fa fa-step-backward btn btn-sm btn-primary"></span>-->
+
+    <div id="ckeditorTopToolbar"></div>
+    <div id="tableCkEditorTopToolbar"></div>
+
+    <div id="rightContent" class="col-md-8" scrollable-top-container handle-when-scroll-at-top="" scroll-top-offset="300" skip-handle-scroll-top-condition="!ck.showAllSections">
+        <form id="rigthSectionForm" name="rigthSectionForm">
+            <div ng-repeat="sec in ck.resp.sections" id="divsection_{{sec.sectionID}}" class="divsection" ng-switch on="sec.isGeneralInfo">
+                <div ng-switch-when="false" add-html id="section_{{sec.sectionID}}" class="section sectionBorder" ng-mouseover="reportWrite.setSection_click(sec)" parent-sectionid='0' resp="sec" flag="ck.reportAuthoringWriteSelected" all-section-mode="ck.showAllSections" is-ck-dirty="reportWrite.isCkDirty" obj="ck.obj" ng-show="reportWrite.sectionVisible(sec)" get-section-history="ck.getHistoryForSections()">
+                    <!--                    <div last-updated-by sec-data="sec"></div>-->
+
+                </div>
+                <div ng-switch-when="true" ng-controller='generalInformationFormController as generalInformationForm' ng-mouseover="reportWrite.setSection_click(sec)" ng-show="reportWrite.sectionVisible(sec)" id="section_{{sec.sectionID}}" class="sectionBorder" render-generalinformation></div>
+
+
+                <div ng-repeat="childsec in sec.sections" id="divsection_{{childsec.sectionID}}" class="divsection" ng-switch on="sec.isGeneralInfo">
+
+                    <div ng-switch-when="false" add-html id="section_{{childsec.sectionID}}" ng-mouseover="reportWrite.setSection_click(childsec)" class="section sectionBorder" parent-sectionid='sec.sectionID' resp="childsec" flag="ck.reportAuthoringWriteSelected" all-section-mode="ck.showAllSections" is-ck-dirty="reportWrite.isCkDirty" obj="ck.obj" ng-show="reportWrite.sectionVisible(childsec)" get-section-history="ck.getHistoryForSections()">
+                        <!--<div last-updated-by sec-data="childsec"></div>-->
+
+                    </div>
+
+                    <div ng-repeat="subchildsec in childsec.sections" id="divsection_{{subchildsec.sectionID}}" class="divsection">
+                        <div add-html id="section_{{subchildsec.sectionID}}" class="section sectionBorder" ng-mouseover="reportWrite.setSection_click(subchildsec)" parent-sectionid='childsec.sectionID' resp="subchildsec" flag="ck.reportAuthoringWriteSelected" all-section-mode="ck.showAllSections" is-ck-dirty="reportWrite.isCkDirty" obj="ck.obj" ng-show="reportWrite.sectionVisible(subchildsec)" get-section-history="ck.getHistoryForSections()">
+
+                            <!--<div last-updated-by sec-data="subchildsec"></div>-->
+                        </div>
+
+                        <div ng-repeat="subchildsec4 in subchildsec.sections" id="divsection_{{subchildsec4.sectionID}}" class="divsection">
+                            <div add-html id="section_{{subchildsec4.sectionID}}" class="section sectionBorder" ng-mouseover="reportWrite.setSection_click(subchildsec4)" parent-sectionid='subchildsec4.sectionID' resp="subchildsec4" flag="ck.reportAuthoringWriteSelected" all-section-mode="ck.showAllSections" is-ck-dirty="reportWrite.isCkDirty" obj="ck.obj" ng-show="reportWrite.sectionVisible(subchildsec4)" get-section-history="ck.getHistoryForSections()">
+
+                                <!--<div last-updated-by sec-data="subchildsec4"></div>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<script>
+    CKEDITOR.disableAutoInline = true;
+
+</script>
+
+</div>
+</div>
+<script id="dllDeleteAll.html" type="text/ng-template">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete Comments</h4>
+    </div>
+
+
+    <form name="myFormAddTemplate1" novalidate>
+
+        <div class="modal-body ">
+
+            <strong>This will delete the selected comments. Are you sure you want to continue?</strong>
+
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+            <a class="btn btn-primary" role="button" ng-click="deleteComments()">Continue</a>
+        </div>
+    </form>
+
+</script>
+
+
+<script id="swithToAllSections.html" type="text/ng-template">
+
+    <div class="modal-header">
+
+        <h4 class="modal-title">Confirmation</h4>
+    </div>
+
+
+
+    <div class="modal-body ">
+
+        Your report will need to be in 'All Sections Mode' with all tables in edit mode to run spellcheck on your full report
+        <br/>
+        <br/>Would you like to switch to these modes now?
+
+    </div>
+    <div class="modal-footer">
+        <button type='button' class='btn btn-default' ng-click='cancel_click()'>Cancel</button>
+        <button type='button' ng-click='continue_click()' class='btn btn-primary'>Continue</button>
+    </div>
+
+
+</script>
+<div class="modal fade" id="spellCheck_InvalidWordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Invalid word</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="InvalidWordCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" id="InvalidWordReplace" class="btn btn-primary">Replace</button>
+            </div>
+        </div>
+    </div>
+</div>

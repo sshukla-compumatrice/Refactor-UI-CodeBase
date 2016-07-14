@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+
+    <div>
+        <h4 class="headingmain"> Upload Spreadsheet Option - Template Selection</h4>
+
+        <div ng-controller="LenderPortfolioSelectConsultantWithFeeCtrl as selectConsultant">
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="selectConsultant.serviceResponseAlert">
+                <button type="button" class="close" ng-click="selectConsultant.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{selectConsultant.serviceResponseText}}
+            </div>
+
+            <form name="feeInformationForm" class="form-horizontal">
+
+
+
+                <table class="table table-condensed  table-bordered table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>Property #</th>
+                            <th>Address</th>
+                            <th>Report</th>
+                            <th>Consultant</th>
+                            <th>Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="report in selectConsultant.reportArr">
+                            <td>
+                                {{report.name}}
+                            </td>
+                            <td>
+                                {{report.address}}
+                            </td>
+                            <td>
+                                {{report.reportType}}
+                            </td>
+                            <td>
+                                <select class="form-control" ng-model="report.companyID" style="float:left; width: 95%;" ng-options="client.companyID as client.name for client in lenderPortfolio.loadData.relatedCompanies | filter:lenderPortfolio.filterByContains('functions', 'Consultant')"></select>
+                                <span class="text-danger" style="float:right;"> * </span>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" name="feeAmnt" placeholder="N/A" ng-model="report.fee">
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

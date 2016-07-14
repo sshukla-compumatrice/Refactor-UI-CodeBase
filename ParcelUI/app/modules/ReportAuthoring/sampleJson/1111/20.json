@@ -1,0 +1,1084 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.3.2 Building Frame",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 29,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Wood framing",
+                "value": "217"
+            }, {
+                "name": "Concrete framing",
+                "value": "218"
+            }, {
+                "name": "Steel framing",
+                "value": "219"
+            }, {
+                "name": "Insect extermination service",
+                "value": "220"
+            }, {
+                "name": "Repair steel framing",
+                "value": "1803"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "1804"
+            }, {
+                "name": "Repair concrete framing",
+                "value": "1805"
+            }, {
+                "name": "Insect extermination service",
+                "value": "1806"
+            }, {
+                "name": "Repair wood framing",
+                "value": "1807"
+            }, {
+                "name": "Concrete framing ",
+                "value": "2372"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "2373"
+            }, {
+                "name": "Wood framing ",
+                "value": "2374"
+            }, {
+                "name": "Steel framing ",
+                "value": "2375"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "3073"
+            }, {
+                "name": "Concrete framing ",
+                "value": "3074"
+            }, {
+                "name": "Engineer - evaluation",
+                "value": "3075"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "3076"
+            }, {
+                "name": "Steel framing ",
+                "value": "3077"
+            }, {
+                "name": "Wood framing ",
+                "value": "3078"
+            }, {
+                "name": "Laundry building  ",
+                "value": "11040"
+            }, {
+                "name": "Laundry building  ",
+                "value": "11305"
+            }, {
+                "name": "Laundry building  ",
+                "value": "11570"
+            }, {
+                "name": "Laundry building  ",
+                "value": "11835"
+            }, {
+                "name": "Steel framing ",
+                "value": "12129"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12130"
+            }, {
+                "name": "Concrete framing ",
+                "value": "12131"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "12132"
+            }, {
+                "name": "Wood framing ",
+                "value": "12133"
+            }, {
+                "name": "Steel framing ",
+                "value": "12372"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12373"
+            }, {
+                "name": "Concrete framing ",
+                "value": "12374"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "12375"
+            }, {
+                "name": "Wood framing ",
+                "value": "12376"
+            }, {
+                "name": "Steel framing ",
+                "value": "12615"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12616"
+            }, {
+                "name": "Concrete framing ",
+                "value": "12617"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "12618"
+            }, {
+                "name": "Wood framing ",
+                "value": "12619"
+            }, {
+                "name": "Steel framing ",
+                "value": "12858"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "12859"
+            }, {
+                "name": "Concrete framing ",
+                "value": "12860"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "12861"
+            }, {
+                "name": "Wood framing ",
+                "value": "12862"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "13420"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "13426"
+            }, {
+                "name": "Decks",
+                "value": "13427"
+            }, {
+                "name": "Patio Slabs",
+                "value": "13428"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "13429"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "13518"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "13524"
+            }, {
+                "name": "Decks",
+                "value": "13525"
+            }, {
+                "name": "Patio Slabs",
+                "value": "13526"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "13527"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "13767"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "15705"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "15706"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "15707"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "15708"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "16556"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "16557"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "16558"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "16559"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "16819"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "16820"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "16821"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "16822"
+            }, {
+                "name": "Wood framing",
+                "value": "17874"
+            }, {
+                "name": "Concrete framing",
+                "value": "17875"
+            }, {
+                "name": "Steel framing",
+                "value": "17876"
+            }, {
+                "name": "Insect extermination service",
+                "value": "17877"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "18163"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "18164"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "18165"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "18166"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "18426"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "18427"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "18428"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "18429"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "19010"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "19016"
+            }, {
+                "name": "Decks",
+                "value": "19017"
+            }, {
+                "name": "Patio Slabs",
+                "value": "19018"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "19019"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "19204"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "19205"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "19206"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "19207"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "19710"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "19711"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "20095"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "20101"
+            }, {
+                "name": "Decks",
+                "value": "20102"
+            }, {
+                "name": "Patio Slabs",
+                "value": "20103"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "20104"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "20336"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "20337"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "20338"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "20339"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "21695"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "21696"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "21697"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "21698"
+            }, {
+                "name": "",
+                "value": "21917"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "22693"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "22694"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "22695"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "22696"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "22809"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "22810"
+            }, {
+                "name": "Sliding door replacement",
+                "value": "22900"
+            }, {
+                "name": "Door replacement",
+                "value": "22901"
+            }, {
+                "name": "Steel framing ",
+                "value": "23056"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "23057"
+            }, {
+                "name": "Concrete framing ",
+                "value": "23058"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "23059"
+            }, {
+                "name": "Wood framing ",
+                "value": "23060"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90002458"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90002459"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90002460"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90002461"
+            }, {
+                "name": "",
+                "value": "90002719"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90003823"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90003824"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90003825"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90003826"
+            }, {
+                "name": "Steel framing ",
+                "value": "90004002"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90004003"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90004004"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90004005"
+            }, {
+                "name": "Wood framing ",
+                "value": "90004006"
+            }, {
+                "name": "Steel framing ",
+                "value": "90005368"
+            }, {
+                "name": "Wood framing ",
+                "value": "90005369"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90005370"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90005371"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90005372"
+            }, {
+                "name": "Steel framing ",
+                "value": "90005683"
+            }, {
+                "name": "Wood framing ",
+                "value": "90005684"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90005685"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90005686"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90005687"
+            }, {
+                "name": "Steel framing ",
+                "value": "90006498"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90006499"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90006500"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90006501"
+            }, {
+                "name": "Wood framing ",
+                "value": "90006502"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90007036"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90007037"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90007038"
+            }, {
+                "name": "Wood framing ",
+                "value": "90007039"
+            }, {
+                "name": "Steel framing ",
+                "value": "90007040"
+            }, {
+                "name": "",
+                "value": "90007177"
+            }, {
+                "name": "",
+                "value": "90007757"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90008847"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90008848"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90008849"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90008850"
+            }, {
+                "name": "Wood framing, Repair",
+                "value": "90011732"
+            }, {
+                "name": "Concrete framing, Repair",
+                "value": "90011733"
+            }, {
+                "name": "Steel framing, Repair",
+                "value": "90011734"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90011735"
+            }, {
+                "name": "Wood framing, Repair",
+                "value": "90012090"
+            }, {
+                "name": "Concrete framing, Repair",
+                "value": "90012091"
+            }, {
+                "name": "Steel framing, Repair",
+                "value": "90012092"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90012093"
+            }, {
+                "name": "Wood framing, Repair",
+                "value": "90012448"
+            }, {
+                "name": "Concrete framing, Repair",
+                "value": "90012449"
+            }, {
+                "name": "Steel framing, Repair",
+                "value": "90012450"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90012451"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90012875"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90013395"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90013396"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90013397"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90013398"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90013733"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90013734"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90013735"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90013736"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90014073"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90014074"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90014075"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90014076"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90014411"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90014412"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90014413"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90014414"
+            }, {
+                "name": "Framing",
+                "value": "90014883"
+            }, {
+                "name": "Insulation",
+                "value": "90014884"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015021"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015022"
+            }, {
+                "name": "Other",
+                "value": "90015023"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015187"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015188"
+            }, {
+                "name": "Other",
+                "value": "90015189"
+            }, {
+                "name": "",
+                "value": "90015371"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "90015665"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90015671"
+            }, {
+                "name": "Decks",
+                "value": "90015672"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90015673"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90015674"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90015741"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90015742"
+            }, {
+                "name": "Other",
+                "value": "90015743"
+            }, {
+                "name": "Framing",
+                "value": "90016007"
+            }, {
+                "name": "Insulation",
+                "value": "90016008"
+            }, {
+                "name": "",
+                "value": "90016164"
+            }, {
+                "name": "Framing",
+                "value": "90016529"
+            }, {
+                "name": "Insulation",
+                "value": "90016530"
+            }, {
+                "name": "",
+                "value": "90016686"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90017125"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90017126"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90017127"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90017128"
+            }, {
+                "name": "Framing",
+                "value": "90017364"
+            }, {
+                "name": "Insulation",
+                "value": "90017365"
+            }, {
+                "name": "",
+                "value": "90017521"
+            }, {
+                "name": "Framing",
+                "value": "90017886"
+            }, {
+                "name": "Insulation",
+                "value": "90017887"
+            }, {
+                "name": "",
+                "value": "90018043"
+            }, {
+                "name": "Framing",
+                "value": "90018909"
+            }, {
+                "name": "Insulation",
+                "value": "90018910"
+            }, {
+                "name": "",
+                "value": "90019066"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90019371"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90019372"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90019373"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90019374"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90019882"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90019883"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90019884"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90019885"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "90020183"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90020189"
+            }, {
+                "name": "Decks",
+                "value": "90020190"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90020191"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90020192"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90020309"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90020310"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90020311"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90020312"
+            }, {
+                "name": "Wood framing",
+                "value": "90020824"
+            }, {
+                "name": "Concrete framing",
+                "value": "90020825"
+            }, {
+                "name": "Steel framing",
+                "value": "90020826"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90020827"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90021035"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90021036"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90021037"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90021038"
+            }, {
+                "name": "Wood framing",
+                "value": "90021287"
+            }, {
+                "name": "Concrete framing",
+                "value": "90021288"
+            }, {
+                "name": "Steel framing",
+                "value": "90021289"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90021290"
+            }, {
+                "name": "Framing",
+                "value": "90021571"
+            }, {
+                "name": "Insulation",
+                "value": "90021572"
+            }, {
+                "name": "",
+                "value": "90021728"
+            }, {
+                "name": "Wood framing",
+                "value": "90022787"
+            }, {
+                "name": "Concrete framing",
+                "value": "90022788"
+            }, {
+                "name": "Steel framing",
+                "value": "90022789"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90022790"
+            }, {
+                "name": "Wood framing",
+                "value": "90023019"
+            }, {
+                "name": "Concrete framing",
+                "value": "90023020"
+            }, {
+                "name": "Steel framing",
+                "value": "90023021"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90023022"
+            }, {
+                "name": "Steel framing ",
+                "value": "90023242"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023243"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90023244"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90023245"
+            }, {
+                "name": "Wood framing ",
+                "value": "90023246"
+            }, {
+                "name": "Steel framing ",
+                "value": "90023485"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023486"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90023487"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90023488"
+            }, {
+                "name": "Wood framing ",
+                "value": "90023489"
+            }, {
+                "name": "Wood framing",
+                "value": "90023696"
+            }, {
+                "name": "Concrete framing",
+                "value": "90023697"
+            }, {
+                "name": "Steel framing",
+                "value": "90023698"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90023699"
+            }, {
+                "name": "Steel framing ",
+                "value": "90023884"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90023885"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90023886"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90023887"
+            }, {
+                "name": "Wood framing ",
+                "value": "90023888"
+            }, {
+                "name": "Steel framing ",
+                "value": "90024127"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90024128"
+            }, {
+                "name": "Concrete framing ",
+                "value": "90024129"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90024130"
+            }, {
+                "name": "Wood framing ",
+                "value": "90024131"
+            }, {
+                "name": "Wood framing",
+                "value": "90024324"
+            }, {
+                "name": "Concrete framing",
+                "value": "90024325"
+            }, {
+                "name": "Steel framing",
+                "value": "90024326"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90024327"
+            }, {
+                "name": "Wood framing",
+                "value": "90024479"
+            }, {
+                "name": "Concrete framing",
+                "value": "90024480"
+            }, {
+                "name": "Steel framing",
+                "value": "90024481"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90024482"
+            }, {
+                "name": "Framing",
+                "value": "90024760"
+            }, {
+                "name": "Insulation",
+                "value": "90024761"
+            }, {
+                "name": "",
+                "value": "90024917"
+            }, {
+                "name": "Wood framing",
+                "value": "90026149"
+            }, {
+                "name": "Concrete framing",
+                "value": "90026150"
+            }, {
+                "name": "Steel framing",
+                "value": "90026151"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90026152"
+            }, {
+                "name": "Framing",
+                "value": "90026513"
+            }, {
+                "name": "Insulation",
+                "value": "90026514"
+            }, {
+                "name": "",
+                "value": "90026670"
+            }, {
+                "name": "Concrete epoxy injection",
+                "value": "90027597"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90028127"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90028128"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90028129"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90028130"
+            }, {
+                "name": "Wood framing, Repair ",
+                "value": "90028638"
+            }, {
+                "name": "Concrete framing, Repair ",
+                "value": "90028639"
+            }, {
+                "name": "Steel framing, Repair ",
+                "value": "90028640"
+            }, {
+                "name": "Insect extermination service ",
+                "value": "90028641"
+            }, {
+                "name": "Framing",
+                "value": "90029222"
+            }, {
+                "name": "Insulation",
+                "value": "90029223"
+            }, {
+                "name": "",
+                "value": "90029379"
+            }, {
+                "name": "Wood framing",
+                "value": "90030142"
+            }, {
+                "name": "Concrete framing",
+                "value": "90030143"
+            }, {
+                "name": "Steel framing",
+                "value": "90030144"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90030145"
+            }, {
+                "name": "Wood framing",
+                "value": "90030353"
+            }, {
+                "name": "Concrete framing",
+                "value": "90030354"
+            }, {
+                "name": "Steel framing",
+                "value": "90030355"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90030356"
+            }, {
+                "name": "Structural Engineer - review and report  ",
+                "value": "90030689"
+            }, {
+                "name": "Exterior Walls/Roof (structural)",
+                "value": "90030994"
+            }, {
+                "name": "Balconies/Handrails/Guardrails",
+                "value": "90031000"
+            }, {
+                "name": "Decks",
+                "value": "90031001"
+            }, {
+                "name": "Patio Slabs",
+                "value": "90031002"
+            }, {
+                "name": "Unit Fencing (Patio Fencing)",
+                "value": "90031003"
+            }, {
+                "name": "Wood framing",
+                "value": "90031068"
+            }, {
+                "name": "Concrete framing",
+                "value": "90031069"
+            }, {
+                "name": "Steel framing",
+                "value": "90031070"
+            }, {
+                "name": "Insect extermination service",
+                "value": "90031071"
+            }, {
+                "name": "Completion of structural engineer recommended repairs (Cost TBD)",
+                "value": "90031319"
+            }, {
+                "name": "Inspection and report by structural engineer",
+                "value": "90031320"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

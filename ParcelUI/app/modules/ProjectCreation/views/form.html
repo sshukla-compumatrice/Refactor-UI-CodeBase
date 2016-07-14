@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid" id="singleSiteProjectDiv" cg-busy="main.waitingProcessResources">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2 class="page-header">New Single Site Project</h2>
+                <div class="alert alert-info"><strong>Use this page to create a new single-site project.<br>If your project contains multiple sites, you can set them up under a single portfolio using the <a href="#" ui-sref="PortfolioCreation.ProjectInformation" tabindex="-1">New Portfolio</a>.</strong>
+                </div>
+
+                <div class="alert" ng-class="main.msgType" role="alert" id="serviceResponseDiv" ng-show="main.serviceResponseAlert">
+                    <button type="button" class="close" ng-click="main.serviceResponseAlert = false;" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{main.serviceResponseText}}
+                </div>
+
+                <form name="singleSiteProjectCreationForm" confirm-on-exit ng-attr-propertyInfoCountry="US" ng-attr-Roles="US" novalidate>
+                    <div class="panel-group" id="accordion">
+
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/projectInfo.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/clientInfo.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/propertyInfo.html'"></div>
+                        <div id="reportSelectionDiv" class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/reportSelection.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/additionalPropertyInfo.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/siteContactInfo.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/grantAccessToUsers.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/attachments.html'"></div>
+                        <div class="panel panel-default" ng-include src="'app/modules/ProjectCreation/views/emailNotification.html'"></div>
+
+                    </div>
+                    <div class="text-center form-group" ng-show="main.lastDivLoaded">
+                        <a class="btn btn-md btn-default" href="#" novalidate>Cancel and Return Home
+                        </a>
+                        <button type="submit" class="btn btn-md btn-primary" ng-click="main.createProject(singleSiteProjectCreationForm)">Create Project</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

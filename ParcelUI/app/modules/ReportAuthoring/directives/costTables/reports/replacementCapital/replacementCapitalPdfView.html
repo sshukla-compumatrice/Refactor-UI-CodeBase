@@ -1,0 +1,107 @@
+<div costtable-pdf>
+
+    <table style="border: 1px solid #000;  width: 100%; max-width: 100%; margin-bottom: 19px; background-color: transparent;  border-spacing: 0; border-collapse: collapse;">
+        <thead style="background-color:#9696FF;">
+            <tr>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Sec.</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Item</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">EUL
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">EFF AGE
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">RUL
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Quantity</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit Cost
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Cycle Replacement </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Replace Percent
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;" ng-repeat="year in years">{{"Year " + year}}
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Total Cost
+                </th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="groupType in groupTypes" generate-html>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000; " colspan="22"><strong>{{groupType.name}}</strong></td>
+
+            </tr>
+            <tr ng-repeat="recommendation in recommendations | filter:{ group: groupType.value }">
+                <td></td>
+
+                <!--<td style = "line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" >{{recommendation.section}}</td>-->
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.componentDescription}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.eul}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.eff}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.rul}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.quantity}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.unit}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.unitCost}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.cycleReplacement}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.replacePercent}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" ng-repeat="year in years">
+                    {{recommendation.yearlyCostSpread[$index].val == undefined ? "" : recommendation.yearlyCostSpread[$index].val}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{recommendation.totalCost}}</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="mystyle1">
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="23"></td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="23"></td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="10">Total(Uninflated)</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" ng-repeat="year in years">{{totalUninflatedYearWise[$index].val == "" ? "-" : totalUninflatedYearWise[$index].val}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{totalUninflated == "" ? "" : totalUninflated}}</td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="10">Inflation Factor</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" ng-repeat="year in years">{{inflationFactorYearWise[$index].val == "" ? "-" : inflationFactorYearWise[$index].val}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;"></td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="10">Total Inflated</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" ng-repeat="year in years">{{inflationFactorYearWise[$index].val == "" ? "-" : inflationFactorYearWise[$index].val}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{totalInflated == "" ? "" : totalInflated}}</td>
+            </tr>
+            <tr class="mystyle1">
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="23"></td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="3">Evaluation Period</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{evalPeriod}}</td>
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="3">Total Square Footage</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{squareFootage}}</td>
+            </tr>
+            <tr class="mystyle1">
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="23"></td>
+            </tr>
+
+
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="3">Reserve per SF per year (Uninflated)</td>
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{unInflated}}</td>
+
+            </tr>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="3">Reserve per SF per year (Inflated)</td>
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{inflated}}</td>
+            </tr>
+            <tr class="mystyle1">
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="23"></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

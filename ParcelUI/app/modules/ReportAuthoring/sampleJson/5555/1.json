@@ -1,0 +1,359 @@
+{
+    "html": "<action model='contentValues.action'></action><condition model='contentValues.condition'></condition><h3 class='border-bottom'>Cost Summary</h3></div><div ng-repeat = 'costTable in contentValues.costTable'><div add-recommendation cost-table = 'costTable'/><div freddie-mac-recommendation-list cost-table='costTable'/></div>",
+    "contentValues": {
+        "ckEditData": {},
+        "action": {
+            "type": "multi",
+            "data": {
+                "selectedOptions": ["na"]
+            }
+        },
+        "condition": {
+            "type": "single",
+            "data": {
+                "selectedOptions": "replace",
+                "otherText": "text test"
+            }
+        },
+        "costTable": [
+            {
+                "recommendationHeader": "Paving",
+
+                "type": "displayFreddie2015",
+                "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                "groupTypes": [{
+                        "value": "1",
+                        "name": "Site Components"
+                            },
+                    {
+                        "value": "2",
+                        "name": "Architectural Components"
+                            },
+                    {
+                        "value": "3",
+                        "name": "Building Interior Components"
+                            },
+                    {
+                        "value": "4",
+                        "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                    {
+                        "value": "5",
+                        "name": "Dwelling Unit Components"
+                            }],
+                "recommendationTypes": [{
+                        "value": "1",
+                        "name": "Roof Coverings - Repairs / Flood"
+                    },
+                    {
+                        "value": "2",
+                        "name": "Roof Drainage (Gutters/Down spouts)"
+                    },
+                    {
+                        "value": "3",
+                        "name": "Building Mounted Lighting"
+                    },
+                    {
+                        "value": "other_",
+                        "name": "Other"
+                    }],
+				"unit": [
+				{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+                "years": 10,
+
+
+                "data": [{
+                    "group": 1,
+                    "sectionID": 23,
+                    "recommendation": [{
+                        "name": "Roof Coverings - Repairs / Flood",
+                        "package": ["EMG Replacement and Immediate (No Short Term)", "EMG Default Cost Tables"],
+                        "tables": ["Immediate and Short Term Repair Costs Tables"],
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "SQ",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": 150
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "3",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }, {
+                        "name": "Building Mounted Lighting 123",
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": false,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": "150"
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": ""
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "5",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }, {
+                "recommendationHeader": "Sidewalks",
+                "type": "displayFreddie2015",
+                "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                "groupTypes": [{
+                        "value": "1",
+                        "name": "Site Components"
+                            },
+                    {
+                        "value": "2",
+                        "name": "Architectural Components"
+                            },
+                    {
+                        "value": "3",
+                        "name": "Building Interior Components"
+                            },
+                    {
+                        "value": "4",
+                        "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                    {
+                        "value": "5",
+                        "name": "Dwelling Unit Components"
+                            }],
+                "recommendationTypes": [{
+                        "value": "1",
+                        "name": "Sidewalk_1"
+                    },
+                    {
+                        "value": "2",
+                        "name": "Sidewalk_2"
+                    },
+                    {
+                        "value": "3",
+                        "name": "Sidewalk_3"
+                    },
+                    {
+                        "value": "other_",
+                        "name": "Other"
+                    }],
+                "years": 10,
+
+
+                "data": [{
+                    "group": 1,
+                    "sectionID": 23,
+                    "recommendation": [{
+                        "name": "Sidewalk_1",
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": 150
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "3",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }, {
+                        "name": "Sidewalk_2",
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": false,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": "150"
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": ""
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "5",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }]
+
+
+    }
+}

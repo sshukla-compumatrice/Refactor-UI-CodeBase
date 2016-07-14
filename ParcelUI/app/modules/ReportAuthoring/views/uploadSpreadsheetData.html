@@ -1,0 +1,40 @@
+<div class="modal-header">
+
+    <button type="button" class="close" data-dismiss="modal" ng-click="uploadSpreadsheetCtrl.closeUploadSpreadheetData()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">PARCEL - Spreadsheet Upload</h4>
+</div>
+<div class="modal-body">
+    <div cg-busy="uploadSpreadsheetCtrl.waitingProcessResources">
+
+        <h4 class="bottom-padding">Excel Spreadsheet Upload for&nbsp;{{uploadSpreadsheetCtrl.fullSectionName}}</h4>
+        <p><a class="pointer" ng-click="uploadSpreadsheetCtrl.dowloadExcelFile()">Download Excel Template for this Table</a></p>
+        <div ng-show="uploadSpreadsheetCtrl.isDownloadErrorMsg">
+            <div class="alert alert-danger">{{uploadSpreadsheetCtrl.DownloadErrorMsg}}</div>
+        </div>
+        <div class="bottom-margin-sm">
+            <span class="btn btn-md btn-default fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                <input id="spreadsheetFileUpload" type="file" ngf-select ngf-change="uploadSpreadsheetCtrl.checkFile($file,$invalidFiles)" ng-model="uploadSpreadsheetCtrl.files" name="file" ngf-pattern="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel, *.xlsx,*.xls"  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel, *.xlsx,*.xls" ngf-multiple="false">
+            </span>
+            <button ng-disabled="uploadSpreadsheetCtrl.isUpload" type="button" class="btn btn-md btn-primary start" ng-click="uploadSpreadsheetCtrl.uploadSpreadsheetFile()">
+                <span class="glyphicon glyphicon-list-alt"></span> Upload
+            </button>
+            <span class="text-primary">{{uploadSpreadsheetCtrl.files.name}} {{uploadSpreadsheetCtrl.errFile.$error}}</span>
+        </div>
+        <div ng-show="uploadSpreadsheetCtrl.isUploadErrorMsg">
+            <div class="alert alert-danger">{{uploadSpreadsheetCtrl.UploadErrorMsg}}</div>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="operationradio" ng-model="uploadSpreadsheetCtrl.tableOperation" value="1">Append this data to the bottom of the existing table.
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="operationradio" ng-model="uploadSpreadsheetCtrl.tableOperation" value="2">Replace the existing table data with this uploaded data.
+            </label>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-md btn-primary" role="button" ng-click="uploadSpreadsheetCtrl.closeUploadSpreadheetData()">Close</button>
+</div>

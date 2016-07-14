@@ -1,0 +1,26 @@
+<div>
+    <hr>
+    <div class="table-responsive">
+		        <div ng-show="!(tableRows| filter:{ sectionId: sectionId }).length">No recommendations have been added to this section</div>
+        <table ng-show="(tableRows| filter:{ sectionId: sectionId }).length" class="freddielistTable table">
+            <thead>
+                <tr>
+                    <th ng-repeat="header in atcHeaders">{{header}}</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-class="putBgColor(item,$index,$odd,$even)" ng-repeat="item in tableRows | filter:{ sectionId: sectionId }">
+                    <td><a class="pointer" ng-click="editRecommendation(item,$index,1,$event)">{{item.name}}</a>
+                        <a class="pointer" ng-click="deleteRecommendation(item)" ng-hide="item.name == ''"><strong>Delete</strong></a>
+                    </td>
+                    <td>{{item.eul}}</td>
+                    <td>{{item.eff}}</td>
+                    <td>{{item.rul}}</td>
+                    <td><a class="pointer" ng-click="editRecommendation(item,$index,1,$event)">{{item.year}}</a></td>
+                    <td><a class="pointer" ng-click="editRecommendation(item,$index,1,$event)">{{item.cost}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+{
+    "Section": {
+        "html": "<div><h2><strong><span>{{section1Title}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><ul> <li>{{Y}}</li> <li>{{N}}</li> <li>{{NS}}</li></ul><br><div><button id='createHost' class='btn btn-mini btn-success' data-ng-click='uploadSpreadsheet()'><b>Upload Spreadsheet</b></button></div><br><div class='boxCK'><span class='editCK'>edit</span> <div id='ckEdit' class='textCK'><p>The purpose of the Phase I Environmental Site Assessment (ESA) was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property. </p></div></div><br><h3>Attached Files:</h3>     <div><table class='table table-condensed  table-bordered table-hover top-margin'><thead><tr><th>Action</th><th>File Name</th><th>File Size</th></tr></thead><tbody><tr ><td><a style='cursor: pointer;' >Remove</a></td><td>file 1</td><td>10 Bytes</td></tr></tbody></table></div><hr><executive-summary-table table='contentValues.executiveSummaryTable'></executive-summary-table><div freddie-mac-all-recommendation cost-table='contentValues.costTable' />",
+        "contentValues": {
+            "section1Title": "2.0 Environmental Report Summary",
+            "choice": {
+                "Y": "EDR Environmental Consulting",
+                "N": "EDR Environmental Application Development and Support",
+                "NS": "EDR Environmental Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "tagData": "Please refer to Default Language for Environmental Report Summary.",
+            "executiveSummaryTable": {
+                "structure": [{
+                    "label": "Results",
+                    "style": "CHECKBOX",
+                    "options": [{
+
+                        "label": "No Further Action",
+                        "orderIndex": "1"
+                    }, {
+                        "label": "REC",
+                        "orderIndex": "3"
+                    }, {
+                        "label": "HREC",
+                        "orderIndex": "4"
+                    }, {
+                        "label": "Issue/Further Investigation",
+                        "orderIndex": "5"
+                    }],
+                    "orderIndex": 1
+                }, {
+                    "label": "Comments",
+                    "style": "MEMO",
+                    "orderIndex": 2
+                }],
+                "sections": [{
+                    "sectionId": 1,
+                    "sectionTitle": "section 1 title"
+
+                }, {
+                    "sectionId": 2,
+                    "sectionTitle": "section 2 title"
+                }],
+                "data": [{
+
+                    "Results": {
+                        "No Further Action": false,
+                        "REC": true,
+                        "HREC": true,
+                        "Issue/Further Investigation": true
+                    },
+                    "Comments": "comments for section 1",
+                    "sectionId": 1
+
+                }, {
+
+                    "Results": {
+                        "No Further Action": true,
+                        "REC": true,
+                        "HREC": true,
+                        "Issue/Further Investigation": true
+                    },
+                    "Comments": "comments for section 2",
+                    "sectionId": 2
+
+                }]
+            },
+
+            "costTable": {
+                "type": "freddie mac",
+                "data": [{
+                    "group": "SITE",
+                    "sectionID": 26,
+                    "recommendation": {
+                        "name": "Foundation",
+                        "eul": 12,
+                        "eff": 1,
+                        "rul": 11,
+                        "quantity": 12,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 1200,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 0,                       
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }
+                }]
+            }
+
+        },
+
+        "sectionID": 2,
+        "name": "Environmental Report Summary",
+        "number": "2.0"
+    }
+}

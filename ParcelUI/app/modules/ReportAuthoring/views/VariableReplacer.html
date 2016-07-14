@@ -1,0 +1,72 @@
+ 
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="VR.CancelVariableReplacer()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Variable Replacer</h4>        
+    </div>
+    <div class="modal-body contact-modal">
+        <strong><p>Providing that the following variables are in any section of this report, you can replace them all throughout your report using this simple form.</p>
+<p>The Sections column tells you if and where the variables currently are. You are free to modify the information that gets inserted, but know that the information is coming directly from other parts of the report.</p>
+If you forget to uncheck a variable that does not have any data, the variable will not be overwritten.</strong>
+<hr>
+        <div class="table-responsive">                 
+            <table class="table table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>Include?</th>
+                        <th>Variable</th>
+                        <th>Replace With</th>
+                        <th>Sections</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="input in VR.VRContents">
+
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="input.isKeywordExist">
+                                </label>
+                            </div>
+                        </td>
+                        <td>{<span ng-bind="input.VariableName"></span>}</td>
+                        <td>
+                            <input type="text" ng-model="input.keywordvalue" class="form-control">
+                        </td>
+
+                        <td>
+                            <table>                                
+                                <tr ng-repeat="sectionItem in input.sectionColData">
+                                    <td class="pop-div">   
+                             
+										<a auto-close='1' role="button" data-toggle="popover" data-placement="left"  data-content="{{ sectionItem.sectionData }}" data-template="displaySectiondescription.html" bs-popover> {{ sectionItem.sectionTitle }}</a>                                       
+                                       
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-model="selectedAll" ng-click="VR.selectAll()">Check All</button>
+        <button type="button" class="btn btn-primary" ng-click="VR.clearAll()">Uncheck All</button>
+        <button type="button" class="btn btn-primary" ng-click="VR.ReplaceVariables();">Submit Changes</button>
+    </div>
+   
+ 
+
+<script type="text/ng-template" id="displaySectiondescription.html">
+    <div class="popover" id="displaySectiondescription">
+        <div class="arrow"></div>        
+
+        <div class="popover-content">
+
+            <p  ng-bind-html="content"></p>
+            
+            
+        </div>
+		 
+    </div>
+</script>

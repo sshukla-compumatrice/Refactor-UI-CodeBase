@@ -1,0 +1,121 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary btn-sm" onclick="window.close();">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close Window
+    </button>
+</div>
+<h2 class="page-header">Immediate and ShortTerm Repair Table</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-condensend table-hover">
+        <thead>
+            <tr>
+                <th>Sec.</th>
+                <th>Component or System</th>
+                <th>EUL (Yr)</th>
+                <th>EFF AGE (Yr)</th>
+                <th>RUL (Yr)</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Unit Cost</th>
+                <th>Immediate Need</th>
+                <th ng-repeat="year in recommendationSummary.years">{{"Year " + year}}
+                </th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="section in recommendationSummary.sections">
+            <tr>
+                <td>
+                    <strong>{{section.section}}</strong>
+                </td>
+                <td colspan="19">
+                    <strong>{{section.sectionName}}</strong>
+                </td>
+
+            </tr>
+            <tr ng-repeat="item in section.sectionscomponents">
+                <td></td>
+                <td>
+                    <a class="pointer" ng-click="recommendationSummary.editRecommendation(item)">{{item.name}}</a>
+                </td>
+                <td>{{item.eul}}</td>
+                <td>{{item.eff}}</td>
+                <td>{{item.rul}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.unit}}</td>
+                <td>{{item.unitCost}}</td>
+                <td>{{item.immed.val}}</td>
+                <td ng-repeat="year in recommendationSummary.years"><a class="pointer" ng-click="recommendationSummary.editRecommendation(item)">                    
+                    {{item.yearlyCostSpread[$index].val == undefined ? "" : item.yearlyCostSpread[$index].val}}</a></td>
+                <td>{{item.totalCost}}</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td colspan="20"></td>
+            </tr>
+            <tr>
+                <td colspan="20"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    Total Immediate Repair Need
+                </td>
+                <td colspan="12">
+                    {{recommendationSummary.totalImmediateRepairNeeds}}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="20"></td>
+            </tr>
+            <tr>
+                <td colspan="8">Total(Uninflated)</td>
+                <td>-</td>
+                <td ng-repeat="year in recommendationSummary.years">{{recommendationSummary.totalUninflatedYearWise[$index].val == "" ? "-" : recommendationSummary.totalUninflatedYearWise[$index].val}}</td>
+                <td>{{recommendationSummary.totalUninflated == "" ? "" : recommendationSummary.totalUninflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="8">Inflation Factor</td>
+                <td>-</td>
+                <td ng-repeat="year in recommendationSummary.years">{{recommendationSummary.inflationFactorYearWise[$index].val == "" ? "-" : recommendationSummary.inflationFactorYearWise[$index].val}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="8">Total Inflated</td>
+                <td>-</td>
+                <td ng-repeat="year in recommendationSummary.years">{{recommendationSummary.inflationFactorYearWise[$index].val == "" ? "-" : recommendationSummary.inflationFactorYearWise[$index].val}}</td>
+                <td>{{recommendationSummary.totalInflated == "" ? "" : recommendationSummary.totalInflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="21"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Evaluation Period</td>
+                <td>{{recommendationSummary.evalPeriod}}</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Square Footage</td>
+                <td>{{recommendationSummary.squareFootage}}</td>
+            </tr>
+            <tr>
+                <td colspan="21"></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="3">Reserve per SF per year (Uninflated)</td>
+
+                <td>{{recommendationSummary.unInflated}}</td>
+
+            </tr>
+            <tr>
+                <td colspan="3">Reserve per SF per year (Inflated)</td>
+
+                <td>{{recommendationSummary.inflated}}</td>
+            </tr>
+            <tr>
+                <td colspan="21"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

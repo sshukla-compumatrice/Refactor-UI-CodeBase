@@ -1,0 +1,3 @@
+    <p class="form-control-static" ng-show="!editmode">{{data}}</p>
+
+    <textarea class="form-control" ng-show="editmode" type="text" ng-init="data = data || field.defaultValue" ng-model="data" value="{{data}}"></textarea>

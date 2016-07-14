@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class="collapsed pointer" data-toggle="collapse" data-target="#collapseAddPropertyInformation">Additional Property Information </a>
+        </h5>
+    </div>
+    <div id="collapseAddPropertyInformation" class="panel-collapse collapse ">
+        <div class="panel-body" ng-controller="AddPropertyInfoCtrl as additionalPropertyInformation">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="propType" class="control-label col-md-3 col-sm-3 col-xs-12">Property Type:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="propType" type="select" name="propTypes" ng-model="main.submitData.property.propertyTypeGUID" data-ng-options="propertyType.propertyTypeGUID as propertyType.propertyTypeName for propertyType in main.loadData.propertyTypes">
+                            <option value="">Select a Property Type</option>
+                            <option value="Other...">Other...</option>
+                        </select>
+
+
+                    </div>
+                </div>
+                <div class="form-group" ng-show="additionalPropertyInformation.property.propertyType == 'Other...'">
+
+                    <div class="col-md-offset-3 col-xs-12 col-md-4">
+                        <input type="text" class="form-control" id="otherPropType" ng-model="main.submitData.property.propertyType">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="county" class="control-label col-md-3 col-sm-3 col-xs-12">County:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="county" ng-model="main.submitData.property.county" name="County">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="latitude" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Latitude:
+                        <a ng-click="additionalPropertyInformation.showLatLonHelp()" class="pointer" title="When to enter the latitude and longitude of your site."> <i class=" text-blue fa fa-question-circle"></i></a>
+                    </label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="latitude" ng-model="main.submitData.property.latitude">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="longitude" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Longitude:
+                        <a ng-click="additionalPropertyInformation.showLatLonHelp()" title="When to enter the latitude and longitude of your site." class="pointer"> <i class=" text-blue fa fa-question-circle"></i></a>
+                    </label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="longitude" ng-model="main.submitData.property.longitude">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="acerage" class="control-label col-md-3 col-sm-3 col-xs-12">Acreage:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="acerage" ng-model="main.submitData.property.acreage">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="buildings" class="control-label col-md-3 col-sm-3 col-xs-12">Number of Buildings:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="buildings" ng-model="main.submitData.property.numBuildings">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="transactionType" class="control-label col-md-3 col-sm-3 col-xs-12">Transaction Type:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="transactionType" type="select" name="transactionTypes" ng-model="main.submitData.property.transactionTypeGUID" data-ng-options="transactionType.transactionTypeGUID as transactionType.transactionTypeName for transactionType in main.loadData.transactionTypes">
+                            <option value="">Select Transaction Type</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

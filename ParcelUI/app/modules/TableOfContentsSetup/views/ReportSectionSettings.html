@@ -1,0 +1,229 @@
+<h4>Report Section Settings:</h4>
+    
+    <div class="form-horizontal">
+    <div class="form-group">
+            <label for="tabLeader" class="control-label col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                Tab Leader:
+            </label>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <select id="tabLeader" class="form-control" ng-model="tocSetup.jsonData.reportSectionSettings.tabLeader">
+                    <option value=" ">(none)</option>
+                    <option value="." selected="">...</option>
+                    <option value="-">---</option>
+                    <option value="_">___</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <input class="form-control" ng-disabled="true" value="Section{{tocSetup.jsonData.reportSectionSettings.tabLeader}}1">
+            </div>
+    </div>
+    </div>
+    
+    <hr>
+
+    <!-- Section Header (1.0 - Top Level Sections) -->
+    <div class="row">
+        <label class="control-label col-xs-12 col-md-12">
+            Section Header (1.0 - Top Level Sections):
+        </label>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-md-4">                               
+                <div class="form-group">
+                <label for="font" class="control-label">Font:</label>
+                <select id="font" class="form-control" ng-model="tocSetup.cssData['report-section-settings-section-header']['font-family']">
+                    <option>Arial</option>
+                    <option selected="">Helvetica</option>
+                    <option>Times</option>
+                    <option>Americana</option>
+                    <option>Times New Roman</option>
+                    <option>Book Antiqua</option>
+                </select>
+                </div>
+                 <div class="form-group">
+                    <select class="form-control" ng-model="tocSetup.cssData['report-section-settings-section-header']['font-size']">
+                        <option>8</option>
+                        <option>9</option>
+                        <option selected="">10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <select class="form-control" multiple="" ng-model="tocSetup.cssData['report-section-settings-section-header'].style">
+                    <option value="B" selected="">Bold</option>
+                    <option value="I">Italic</option>
+                    <option value="U">Underline</option>
+                </select>
+                </div>
+    </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label for="leftIndent" class="control-label">Left Indent (inches):</label>
+                <select id="leftIndent" class="form-control" ng-model="tocSetup.cssData['report-section-settings-section-header']['margin-left']">
+                    <option value="0in">0</option>
+                    <option value="0.125in">0.125</option>
+                    <option value="0.166in">0.166</option>
+                    <option value="0.25in">0.25</option>
+                </select>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <div class="form-group">
+                <label for="textCapitalized" class="control-label">Text Capitalized:</label>
+                <select id="textCapitalized" class="form-control" ng-model="tocSetup.cssData['report-section-settings-section-header']['text-transform']">
+                    <option value="none">No</option>
+                    <option value="capitalize">Yes</option>
+                </select>
+            </div>
+            </div>
+     
+   
+    </div>
+    <!-- end: Section Header (1.0 - Top Level Sections) -->
+
+    <hr>
+
+    <!-- Sub-Section Header (1.1 - First child level sections) -->
+    <div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="checkbox">
+        <label>
+        <input type="checkbox"></input><strong>Sub-Section Header (1.1 - First child level sections):</strong>
+        </label>
+        </div>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-xs-12 col-md-4">                                                     
+                <div class="form-group">
+                <label for="fontSubsection" class="control-label">Font:</label> 
+                <select id="fontSubsection" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-section-header']['font-family']">
+                    <option>Arial</option>
+                    <option selected="">Helvetica</option>
+                    <option>Times</option>
+                    <option>Americana</option>
+                    <option>Times New Roman</option>
+                    <option>Book Antiqua</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-section-header']['font-size']">
+                        <option>8</option>
+                        <option>9</option>
+                        <option selected="">10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <select class="form-control" multiple="" ng-model="tocSetup.cssData['report-section-settings-sub-section-header'].style">
+                    <option value="B" selected="">Bold</option>
+                    <option value="I">Italic</option>
+                    <option value="U">Underline</option>
+                </select>
+                </div>                          
+    </div>
+      
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">                
+                <label for="leftIndentSubsection" class="control-label">Left Indent (inches):</label>
+                <select id="leftIndentSubsection" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-section-header']['margin-left']">
+                    <option value="0in">0</option>
+                    <option value="0.125in">0.125</option>
+                    <option value="0.166in">0.166</option>
+                    <option value="0.25in">0.25</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                <label for="textCapitalizedSubsection" class="control-label">Text Capitalized:</label>            
+                <select id="textCapitalizedSubsection" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-section-header']['text-transform']">
+                    <option value="none">No</option>
+                    <option value="capitalize">Yes</option>
+                </select>
+                </div>
+            </div>
+    </div>
+    <!-- end: Sub-Section Header (1.1 - First child level sections) -->
+
+    <hr>
+
+
+    <!-- Sub-Sub-Section Header (1.1.1 - Second Child level sections and anything deeper) -->
+    <div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="checkbox">
+        <label>
+        <input type="checkbox"></input><strong>Sub-Sub-Section Header (1.1.1 - Second Child level sections and anything deeper):</strong>
+        </label>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-md-4">                                                         
+                <div class="form-group">
+                <label for="fontSubsection1" class="control-label">Font:</label>                  
+                <select id="fontSubsection1" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-sub-section-header']['font-family']">
+                    <option>Arial</option>
+                    <option selected="">Helvetica</option>
+                    <option>Times</option>
+                    <option>Americana</option>
+                    <option>Times New Roman</option>
+                    <option>Book Antiqua</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-sub-section-header']['font-size']">
+                        <option>8</option>
+                        <option>9</option>
+                        <option selected="">10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <select class="form-control" multiple="" ng-model="tocSetup.cssData['report-section-settings-sub-sub-section-header'].style">
+                    <option value="B" selected="">Bold</option>
+                    <option value="I">Italic</option>
+                    <option value="U">Underline</option>
+                </select>
+                </div>    
+        
+    </div>
+    
+     
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                <label for="leftIndentSubsection1" class="control-label">Left Indent (inches):</label>            
+                <select id="leftIndentSubsection1" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-sub-section-header']['margin-left']">
+                    <option value="0in">0</option>
+                    <option value="0.125in">0.125</option>
+                    <option value="0.166in">0.166</option>
+                    <option value="0.25in">0.25</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="form-group">                
+                <label for="textCapitalizedSubsection1" class="control-label">Text Capitalized:</label> 
+                <select id="textCapitalizedSubsection1" class="form-control" ng-model="tocSetup.cssData['report-section-settings-sub-sub-section-header']['text-transform']">
+                    <option value="none">No</option>
+                    <option value="capitalize">Yes</option>
+                </select>
+                </div>
+            </div>
+
+    
+    </div>
+    <!-- end: Sub-Sub-Section Header (1.1.1 - Second Child level sections and anything deeper) -->
+

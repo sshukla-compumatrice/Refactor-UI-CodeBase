@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+  
+    </style>
+
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class="collapsed pointer" data-toggle="collapse" data-target="#collapseEmailNotification">Email Notification</a>
+        </h5>
+    </div>
+    <div id="collapseEmailNotification" class="panel-collapse collapse ">
+
+<div class="panel-body form-horizontal"  ng-controller="LenderEmailNotificationCtrl as emailNotification">
+       
+            
+                <div class="form-group">
+                    <div class="checkbox col-md-12 col-sm-12 col-xs-12">
+                        <label>
+                            <input type="checkbox" id="sendEmail" name="mail" ng-change="emailNotification.sendNotification()" ng-model="main.submitData.notification.sendEmailNotification" /><span>
+                                Send Email Notification to Other Users
+                            <a ng-click="emailNotification.ShowEmailHelp()" title="The basics of email notification" class="pointer">
+                                    <i class=" text-blue fa fa-question-circle"></i>
+                                </a>
+                            </span>
+                        </label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="from" class="control-label col-md-2 col-sm-3 col-xs-12">From:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <p>{{emailNotification.emailNotificationObj.from.name}}</p>
+
+                    </div>
+                </div>
+                <div id="divEmailTo" class="form-group" show-errors>
+                    <label for="to" class="control-label col-md-2 col-sm-3 col-xs-12">To:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="to" ng-disabled="!main.submitData.notification.sendEmailNotification" ng-model="emailNotification.emailNotificationObj.to.display" ng-bind="main.submitData.notification.emailTo = emailNotification.emailNotificationObj.to.display;" name="To" email-validator />
+                        <a class="pointer" ng-click="!main.submitData.notification.sendEmailNotification || emailNotification.ShowFindContact()"
+                           ng-class="{disabled: !main.submitData.notification.sendEmailNotification, enabled: main.submitData.notification.sendEmailNotification}">Find Contact</a>
+                    </div>
+                    <p ng-if="emailNotificationForm.To.$error.pattern">The email address is invalid</p>
+                </div>
+                <div id="divEmailCC" class="form-group" show-errors>
+                    <label for="cc" class="control-label col-md-2 col-sm-3 col-xs-12">CC:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="cc" ng-disabled="!main.submitData.notification.sendEmailNotification" ng-model="emailNotification.emailNotificationObj.cc.display" ng-bind="main.submitData.notification.emailCC = emailNotification.emailNotificationObj.cc.display;" name="CC" email-validator/>
+                    </div>
+                    <p ng-if="emailNotificationForm.CC.$error.pattern">The email address is invalid</p>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="control-label col-md-2 col-sm-3 col-xs-12">Message:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <textarea class="form-control" id="message" ng-disabled="!main.submitData.notification.sendEmailNotification"
+                                  ng-model="main.submitData.notification.emailBody"></textarea>
+                    </div>
+
+                </div>
+             
+    </div> 
+</body>
+
+</html>

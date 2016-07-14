@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style type="text/css">
+        /* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ng-controller="EmailContactsCtrl as emailContacts" -->
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="emailContacts.Cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" ng-show="!emailContacts.editSelected">Select Contacts</h4>
+        <h4 class="modal-title" ng-show="emailContacts.editSelected">Edit Contacts</h4>
+
+    </div>
+    <div class="modal-body contact-modal">
+
+        <div ng-show="!emailContacts.editSelected">
+            <div class="bottom-margin-sm">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <input type="text" class="form-control" placeholder="" ng-model="emailContacts.searchtext" change="emailContacts.filter()">
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">Enter text to search for contacts,first name,last name,company,email address. </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-condensed  table-bordered table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>To</th>
+                            <th>CC</th>
+                            <th>Action</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Company</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="contact in emailContacts.filtered = (emailContacts.ContactArr | selectColumnFilter: emailContacts.searchtext) | filter : emailContacts.paginate">
+                            <td>
+                                <input type="checkbox" id="toContact" name="toContact" ng-model="contact.toSelected" ng-change="contact.getCheckedToContact(contact.toSelected)" ng-show="contact.email" class="ng-pristine ng-valid">
+                            </td>
+                            <td>
+                                <input type="checkbox" id="ccContact" ng-show="contact.email" name="ccContact" ng-change="contact.getCheckedCCContact(contact.ccSelected)" ng-model="contact.ccSelected" class="ng-pristine ng-valid">
+                            </td>
+                            <td><a class="pointer" ng-click="emailContacts.EditContact(contact)">Edit</a></td>
+                            <td>
+                                {{contact.firstName}} {{contact.lastName}}
+                            </td>
+                            <td>
+                                {{contact.email}}
+                            </td>
+                            <td>
+                                {{contact.companyName}}
+                            </td>
+                        </tr>
+                        <tr ng-if="!emailContacts.filtered.length">
+                            <td colspan="6">
+                                <div class="alert alert-info">No contacts matched your search text.</div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <pagination ng-if="emailContacts.filtered.length" total-items="emailContacts.totalItems" ng-model="emailContacts.currentPage" max-size="5" boundary-links="true" items-per-page="emailContacts.numPerPage" class="pagination-sm">
+
+            </pagination>
+
+
+        </div>
+
+        <!-- tab content -->
+        <div ng-show="emailContacts.editSelected">
+
+            <form name="editContactForm" novalidate>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group required" show-errors field-validation="First Name">
+                            <label for="exampleInputFirstName">First Name </label>
+                            <input type="text" class="form-control" id="editfirstName" ng-model="emailContacts.editedContact.firstName" name="editfirstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group required" show-errors field-validation="Last Name">
+                            <label for="exampleInputLastName">Last Name </label>
+                            <input type="text" class="form-control" id="editlastName" ng-model="emailContacts.editedContact.lastName" name="editlastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputCompanyName">Company Name</label>
+                            <input type="text" class="form-control" name="editCompanyName" placeholder="Company Name" ng-model="emailContacts.editedContact.companyName">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputAddress">Address</label>
+                            <input type="text" class="form-control" name="Address" placeholder="Address" ng-model="emailContacts.editedContact.address">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputCity">City</label>
+                            <input type="text" class="form-control" name="editCity" placeholder="City" ng-model="emailContacts.editedContact.city">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="exampleInputState">State</label>
+                            <input type="text" class="form-control" name="editState" placeholder="State" ng-model="emailContacts.editedContact.state">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputZipCode">Zip Code</label>
+                            <input type="text" class="form-control" name="editZipCode" placeholder="Zip Code" ng-model="emailContacts.editedContact.zipCode">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPhone">Phone</label>
+                            <input type="text" class="form-control" name="editPhone" placeholder="Phone" ng-model="emailContacts.editedContact.phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFax">Fax</label>
+                            <input type="text" class="form-control" name="editFax" placeholder="Fax" ng-model="emailContacts.editedContact.fax">
+                        </div>
+                        <div class="form-group" field-validation="Email">
+                            <label for="exampleInputEmail">Email</label>
+                            <input type="email" class="form-control" name="editEmail" placeholder="Email" ng-model="emailContacts.editedContact.email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert" ng-class="findContact.isEditContactOpSuccess ? 'alert-success' : 'alert-danger'" ng-show="findContact.showEditContactOpMsg">
+                    <button type="button" class="close" ng-click="findContact.showEditContactOpMsg = false;" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{findContact.editContactOpMsg}}
+                </div>
+
+                <!--   <div class="row">
+                                <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                                    <button type="submit" class="btn btn-primary" ng-click="findContact.SubmitEdit(editContactForm)">Submit Changes </button>
+                                    <button type="button" class="btn btn-default" ng-click="findContact.ResetEditChanges(editContactForm)">Reset </button>
+                                    <button type="button" class="btn btn-default" ng-click="findContact.CancelEdit(editContactForm)">Cancel Edit </button>
+                                </div>
+                            </div>-->
+
+            </form>
+
+        </div>
+        <!-- tab content end -->
+
+
+    </div>
+    <div class="modal-footer">
+        <span ng-show="!emailContacts.editSelected">	
+        <button class="btn btn-primary" ng-click="emailContacts.DoneSelection()">Done</button>
+        <button class="btn btn-default" ng-click="emailContacts.Cancel()">Cancel</button>
+        </span>
+        <span ng-show="emailContacts.editSelected">						
+			<button type="button" class="btn btn-default" ng-click="emailContacts.CancelEdit(editContactForm)">Cancel Edit</button>
+            <button type="button" class="btn btn-default" ng-click="emailContacts.ResetEditChanges(editContactForm)">Reset</button>
+            <button type="submit" class="btn btn-primary" ng-click="emailContacts.SubmitEdit(editContactForm)">Submit Changes</button>
+		</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<div class="container-fluid">
+	<div class="panel panel-default">
+	<div class="panel-body">	
+    <div class="row" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+        <div class="col-lg-12 col-md-12">
+
+
+            <h2 class="page-header">Project Dashboard</h2>
+
+            <div id="alertMsgDiv" ng-show="projectDashboard.showAlert" class="alert alert-dismissible" ng-class="projectDashboard.alertClass" role="alert">
+                <button type="button" class="close" ng-click="projectDashboard.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{projectDashboard.serviceMessage}}
+            </div>
+            <form class="form-horizontal" name="projectDashboardForm" novalidate>
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label">Project:</label>
+                    <!--<div ng-hide="projectDashboard.selectProjectMode" class="col-sm-4 col-md-4 col-lg-4 col-xs-12">
+                        <p class="form-control-static">{{projectDashboard.projectName}} </p><a class="pointer"><span class="glyphicon glyphicon-pencil" ng-click="projectDashboard.selectProject()"></span></a>
+                    </div>-->
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
+                        <div rt-select2="select2Options" provider="projectListProvider" template="generateMarkUp" afterevent="displayProject" minimuminput=0 total="{{projectDashboard.totalProjectCount}}" tabindex="1"></div>
+                    </div>
+                    <div ng-show="projectDashboard.selectProjectMode">
+                        <button class="btn btn-default" ng-click="projectDashboard.cancelProjectSelection()"> <span class="glyphicon glyphicon-remove text-danger"></span></button>
+                    </div>
+                </div>
+
+                <h4>Edit Project Information <a ng-if = "projectDashboard.displayIfRecords == true" class="pointer" ng-click="projectDashboard.editProject(selectedProject);"> <span class="glyphicon glyphicon-pencil"></span></a></h4>
+                <div class="form-group required">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label" for="projectName">Project Name:</label>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12" field-validation="Project Name">
+                        <p class="form-control-static" ng-hide="projectDashboard.editMode">{{projectDashboard.projectName}}</p>
+                        <input class="form-control" name="projectName" id="projectName" type="text" ng-show="projectDashboard.editMode" ng-model="projectDashboard.projectName" required tabindex="2">
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label" for="draftDueDate">Draft Report Due:</label>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12" field-validation="Date Draft Due">
+                        <p class="form-control-static" ng-hide="projectDashboard.editMode">{{projectDashboard.draftReportDue}}</p>
+                       
+						<div ng-show="projectDashboard.editMode" class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="draftDueDate" name="draftDueDate" type="text" class="form-control" ng-model="projectDashboard.draftReportDue" required tabindex="3">
+                        <div class="input-group-btn">
+                             <button tabindex="4" type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label" for="finalDueDate">Project Report Due:</label>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12" field-validation="Date Final Due">
+                        <p class="form-control-static" ng-hide="projectDashboard.editMode">{{projectDashboard.projectReportDue}}</p>
+                      
+						<div ng-show="projectDashboard.editMode" class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="finalDueDate" name="finalDueDate"  type="text" class="form-control" ng-model="projectDashboard.projectReportDue" required tabindex="5" >
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar" tabindex="6"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xs-12 control-label"># Reports Final/Total : </label>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12">
+                        <p class="form-control-static" ng-model="projectDashboard.reports">{{projectDashboard.reportsFinalTotal}}</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-show="projectDashboard.editMode">
+                    <div class="col-md-10 col-lg-10 col-sm-offset-2">
+                        <button tabindex="8" class="btn btn-default" ng-click="projectDashboard.cancelProjectEdit()">Cancel</button>
+                        <button tabindex="7" class="btn btn-primary" ng-click="projectDashboard.saveProjectDetails(projectDashboardForm)">Submit Changes</button>
+                    </div>
+                </div>
+            </form>
+            <div ng-if="projectDashboard.displayIfRecords == true">
+                <p><a class="dashBoardLinks pointer" ng-href= "#/addProjectReport?projectGuid={{projectDashboard.projectGuid}}&prevState=Dashboard" >Add Report(s) to this Project</a></p>
+
+                <p><a class="dashBoardLinks pointer" ng-click="projectDashboard.generateProjectDashboardPdf()">Generate Project Dashboard as PDF</a></p>
+
+                <p><a class="dashBoardLinks pointer" target="_blank" ng-click="projectDashboard.showProjectMap()" href="{{projectDashboard.projectMapUrl}}">View Project Map<span class="glyphicon glyphicon-map-marker" data-toggle="tooltip" data-placement="right" title="View a map of all the sites in the project"></span></a></p>
+
+                <p><a class="dashBoardLinks pointer" target="_blank" href="{{projectDashboard.orderStatusUrl}}" ng-click="projectDashboard.orderStatus()">View Database Order Status</a></p>
+                
+                
+
+                <p><a class="dashBoardLinks pointer" ng-href="#/grantAccess?projectGuid={{projectDashboard.projectGuid}}&prevState=ProjectDashboard" >Grant Access</a></p>
+
+
+                <p><a class="dashBoardLinks pointer" href="{{projectDashboard.portfolioDownloadUrl}}" ng-click="projectDashboard.portfolioDownload()">Download Portfolio Deliverable</a></p>
+
+                <p><a target="_blank" ng-click="projectDashboard.portfolioSignTool()" href="{{projectDashboard.portfolioSignToolUrl}}" class="dashBoardLinks pointer" ng-click="showPortfolioTool()">Portfolio Signoff Tool</a></p>
+            </div>
+
+
+            <div  id="reportsDiv" ng-repeat="(tableIndex,reportType) in projectDashboard.reportTypes">
+                <hr>
+                <h3>{{reportType.reportType}}</h3>
+                <div id="alertReportOperationsMsgDiv" ng-show="projectDashboard.showReportsAlert" class="alert alert-dismissible alert-danger" role="alert">
+                    <button type="button" class="close" ng-click="projectDashboard.dismissReportsAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{projectDashboard.serviceReportsMessage}}
+                </div>
+                <span ng-repeat="link in reportType.additionalLinks"> <button type="button" class="btn btn-link">{{link.linkLabel}} </button> </span>
+
+                <div class="table-responsive">
+                    <table id="{{ 'dataTable-' + $index }}" class="table table-bordered table-condensed table-hover table-striped small projectdashboard-table">
+                        <thead>
+                            <tr>
+                                <th class="rotate-90 reportRedirection no-wrap">
+                                    <div><span>Go To Report</span></div>
+                                </th>
+                                <th class="rotate-90 email">
+                                    <div><span>Email Notice</span></div>
+                                </th>
+                                <th class="rotate-90 reportDeletion no-wrap">
+                                    <div><span>Delete Report</span></div>
+                                </th>
+                                <th>
+                                    <a class="pointer">Client Prop.#</a>
+                                </th>
+                                <th>
+                                    <a class="pointer">Site Information</a>
+                                </th>
+                                <th>
+                                    <a class="pointer">Site Assessor</a>
+                                </th>
+                                <th class="rotate-90 bg-gray reportType" ng-repeat="appendice in reportType.columns | filter : {type : 'APPENDIX'}">
+                                    <div><span class="pointer">{{appendice.label}} </span></div>
+                                </th>
+
+                                <th>
+                                    % complete
+                                </th>
+
+                                <th id="reviewComments" class="rotate-90 bg-gray reviewComments comments">
+                                    <div><span>Senior Review Comments</span></div>
+                                </th>
+                                <th class="rotate-90 bg-gray reportStatus">
+                                    <div><span>Report Status</span></div>
+                                </th>
+                                <th id="signature" class="rotate-90 bg-gray signature" ng-repeat="signature in reportType.columns | filter : {type : 'SIGNATURE'}">
+                                    <div><span>Signed By {{" " + signature.label}}</span></div>
+                                </th>
+                                <th id="taskStatus" class="rotate-90 taskStatus " ng-repeat="task in reportType.columns | filter : {type : 'MANUAL STATUS TRACKING'}">
+                                    <div>
+                                        <div class="head-checkbox">
+
+                                            <input type="checkbox" ng-model="projectDashboard.taskStatus[tableIndex + '' +  $index]" ng-change="projectDashboard.checkUncheckAllTasks(projectDashboard.taskStatus[tableIndex + '' +  $index],tableIndex,$index,reportType.reportTypeGuid)">
+                                        </div><span class="checkbox-txt"> {{task.label}}</span></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="(reportIndex,data) in projectDashboard.reportTypeData  | filter :
+                                   {reportTypeGuid : reportType.reportTypeGuid}">
+                                <td>
+                                    <a  data-toggle="tooltip" data-placement = "right" title = "Go To Report" ng-click="projectDashboard.redirectToReports(data.reportGuid)" class="pointer"><span class="glyphicon glyphicon-search"></span></a>
+                                </td>
+                                <td>
+                                    <a data-toggle="tooltip" data-placement = "right" data-trigger="hover" title = "Email Notice" class="sendEmail" target="_blank" href="{{projectDashboard.sendEmailUrl}}" ng-click="projectDashboard.sendEmail()"><span class="glyphicon glyphicon-envelope"></span></a>
+                                </td>
+                                <td>
+                                    <a data-toggle="tooltip" data-placement = "right" title = "Delete Report" ng-click="projectDashboard.deleteReport(data.reportGuid)" class="pointer"><span class="glyphicon glyphicon-trash text-danger"></span></a>
+
+
+
+                                </td>
+                                <td>{{data.propertyNumber}}</td>
+                                <td class="no-wrap"><a data-toggle="tooltip" data-placement = "right" title = "View Site/Contact Info" class="pointer" ng-click="projectDashboard.showSiteDetails(data)">{{data.address}}, {{data.city}} {{data.state}}</a></td>
+                                <td>{{data.siteAssessor}}</td>
+
+
+
+                                <td ng-repeat="(appendiceIndexCount,appendice) in data.appendixFileCounts"><a ng-click="projectDashboard.getAppendix(data.reportGuid,appendice.sectionGuid,appendice.count)" data-toggle="tooltip" tooltip-placement="right"  set-appendix-tooltip="{{appendiceIndexCount}}" appendixcount = "{{appendice.count}}" ng-class="projectDashboard.addPointerClass(appendice)">{{appendice.count}}</a></td>
+
+                                <td>
+                                    <div class="progress nomargin">
+                                        <div class="progress-bar min-width-progressbar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ng-style="{width: {{data.completion}} + '%'}">
+                                            {{data.completion}}%
+                                        </div>
+                                    </div>
+                                </td>
+
+
+
+                                <td><span ng-click="projectDashboard.showCommentsInTOC(data)" id="reportComment" ng-hide="data.commentStatus === 'NONE'" data-toggle="tooltip" tooltip-placement="right" data="data" set-flag class="
+glyphicon glyphicon-flag fa-lg  pointer"></span></td>
+
+                                <td><a class="pointer" ng-click="projectDashboard.changeReportStatus(data.reportGuid,data.reportTypeGuid,data.reportStatus,data.reportStatusGuid)">{{data.reportStatus}}</a></td>
+
+                                <td ng-repeat="signature in data.signatures">
+                                    <input ng-if="projectDashboard.showCheckBox(signature,reportType)" ng-model="projectDashboard.isSigned[tableIndex + '' +  $index + '' + reportIndex]" type="checkbox" ng-init="projectDashboard.initSignature(signature,tableIndex,$index,reportIndex)" ng-change="projectDashboard.updateSignature(data.reportGuid,signature,tableIndex,$index)" data-toggle="tooltip" tooltip-placement="right"   set-signature-tooltip="{{signature}}">
+                                </td>
+
+                                <td ng-repeat="task in data.tasks">
+                                    <input type="checkbox" ng-model="task.status" ng-init="task.status" ng-change="projectDashboard.updateTaskStatus($event,data.reportGuid,data.projectGuid,task.taskGuid,task.status,task.labelMappingGuid)">
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+	</div>	
+	</div>
+</div>

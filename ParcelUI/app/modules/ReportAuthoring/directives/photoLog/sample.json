@@ -1,0 +1,39 @@
+{
+    "photos": [{
+        "sectionID": 101,
+        "fileGuid": "00000000-0000-0000-0000-000000000001",
+        "caption": "abstract",
+        "uploadedByAccountID": 1,
+        "uploadDateTime": "",
+        "downloadURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+        "thumbnailURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+        "isIncluded": 1
+    }, {
+        "sectionID": 102,
+        "fileGuid": "00000000-0000-0000-0000-000000000002",
+        "caption": "sky",
+        "uploadedByAccountID": 1,
+        "uploadDateTime": "",
+        "downloadURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-38_1920x1200_71439.jpg",
+        "thumbnailURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-38_1920x1200_71439.jpg",
+        "isIncluded": 1
+    }, {
+        "sectionID": 103,
+        "fileGuid": "00000000-0000-0000-0000-000000000003",
+        "caption": "glow",
+        "uploadedByAccountID": 1,
+        "uploadDateTime": "",
+        "downloadURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-light-trail-inspiring-wallpapers-abstract-photo-glow-wallpapers.jpg",
+        "thumbnailURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-light-trail-inspiring-wallpapers-abstract-photo-glow-wallpapers.jpg",
+        "isIncluded": 1
+    }, {
+        "sectionID": 104,
+        "fileGuid": "00000000-0000-0000-0000-000000000004",
+        "caption": "neon",
+        "uploadedByAccountID": 1,
+        "uploadDateTime": "",
+        "downloadURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/Abstract-Blue-Neon-Wallpaper-HD.jpg",
+        "thumbnailURL": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/Abstract-Blue-Neon-Wallpaper-HD.jpg",
+        "isIncluded": 0
+    }]
+}

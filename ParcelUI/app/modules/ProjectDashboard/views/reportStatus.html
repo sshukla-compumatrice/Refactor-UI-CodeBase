@@ -1,0 +1,25 @@
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" ng-click="reportStatus.close()()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Report Status</h4>
+</div>
+
+<div class="modal-body ">
+
+    <p ng-show="reportStatus.exception" class= "text-danger">{{reportStatus.serviceMessage}}</p>
+    <label class="control-label">{{reportStatus.statusInLongForm}}</label>
+
+    <button class="btn btn-default btn-sm" ng-hide="reportStatus.onFirstStep" ng-click="reportStatus.previousStep()">
+        <span class="glyphicon glyphicon-minus-sign"></span>
+    </button>
+    <button class="btn btn-default btn-sm" ng-hide="reportStatus.onLastStep" ng-click="reportStatus.nextStep()">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+    </button>
+    <a class="pointer" ng-click = "reportStatus.finalizeUnfinalizeStatus()">{{reportStatus.finalizeOrUnfinalize}}</a>
+
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default btn-sm" ng-click="reportStatus.closeAndUpdate()">Close And Update Dashboard</button>
+    <button class="btn btn-default btn-sm" ng-click="reportStatus.close()">Close Window</button>
+</div>

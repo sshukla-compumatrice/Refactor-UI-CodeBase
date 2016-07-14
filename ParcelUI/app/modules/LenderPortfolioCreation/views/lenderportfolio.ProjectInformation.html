@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <div>
+        <p class="alert alert-info">
+            <b>
+                Use this page to create a new multi-site project.<br>
+                If your project contains a single site, you can set the project up using the<a href="#" ui-sref="quickCreateProj"> New Single Site Project.</a><br>
+
+                This is a multi-step process. You must complete all steps in order to setup a project.
+            </b>
+        </p>
+
+
+        <form name="propertyInfoForm" class="form-horizontal" ng-controller="LenderPortfolioProjectInformationCtrl as lenderProjectInfo">
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="lenderProjectInfo.serviceResponseAlert">
+                <button type="button" class="close" ng-click="lenderProjectInfo.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{lenderProjectInfo.serviceResponseText}}
+            </div>
+
+            <div class="form-group required" show-errors>
+                <label for="projectName" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Name:
+                </label>
+
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input id="projectName" type="text" class="form-control" name="projectName" ng-model="lenderProjectInfo.data.name" required focus-if tabindex="1">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="customername" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Customer Name:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input id="customername" type="text" class="form-control" ng-model="lenderProjectInfo.data.client.companyName" name="customerName" tabindex="2">
+                </div>
+            </div>
+
+
+
+            <div class="form-group required" show-errors>
+                <label for="draftDate" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date draft report:
+                </label>
+
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Draft Due Date">
+                   
+					<div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="draftDate" name="draftDate" type="text" class="form-control" ng-model="lenderProjectInfo.data.draftDueDate" required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-group required" show-errors>
+                <label for="finalDate" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date final report:
+                </label>
+
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Date Final Due">
+                  
+					<div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="finalDate" name="finalDate" type="text" class="form-control" ng-model="lenderProjectInfo.data.finalDueDate" required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="projectcomment" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Comments:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <textarea id="projectcomment" rows="5" class="form-control" placeholder="Project Comments" ng-model="lenderProjectInfo.data.comments" tabindex="7"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12 ">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-model="lenderProjectInfo.data.addSiteMethod" value="{{lenderPortfolio.addSiteMethodTypes.manual}}"> Manually Enter Site(s)
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-model="lenderProjectInfo.data.addSiteMethod" value="{{lenderPortfolio.addSiteMethodTypes.upload}}"> Upload Site Spreadsheet
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12 ">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="chkProjBid" ng-model="lenderProjectInfo.data.outToBid" tabindex="9">Put project out to bid.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group" ng-show="lenderProjectInfo.data.outToBid">
+
+                <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12 ">
+                    <b>Bid Deadline:</b>
+                    <div class="col-xs-12 col-sm-5 col-md-4 ">
+                        <div class="input-group">
+                            <input type="text" class="form-control" datetime-picker="dd MMM yyyy" ng-model="lenderProjectInfo.data.bidDeadline" is-open="lenderProjectInfo.open.bidDeadline" enable-time="true" datepicker-options="lenderProjectInfo.dateOptions" date-disabled="lenderProjectInfo.disabled(date, mode)" close-on-date-selection="true" datepicker-append-to-body="true" show-button-bar="false" ng-click="lenderProjectInfo.openCalendar($event, 'bidDeadline')" ng-focus="lenderProjectInfo.openCalendar($event, 'bidDeadline')">
+                            <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="lenderProjectInfo.openCalendar($event, 'bidDeadline')"><i class="fa fa-calendar"></i></button>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>

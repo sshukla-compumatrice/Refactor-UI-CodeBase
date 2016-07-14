@@ -1,0 +1,14 @@
+.form-group {
+    margin-bottom: 4px !important;
+}
+.form-inline .form-group{ margin-bottom: 0px !important;}
+.text-warning {
+    color: #faaf3f;
+}
+.nav-pills-sm li a {
+    padding: 2px;
+    text-transform: capitalize;
+}
+.panel-body-sm {
+    padding: 5px 15px 5px 15px;
+}

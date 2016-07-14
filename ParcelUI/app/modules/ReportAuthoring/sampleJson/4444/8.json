@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "2.1 Reason For Performing the Phase I",
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\">The user informed EMG that the reason for the assessment is <font color=\\\"#ff0000\\\">for financing purposes.<\\/font><\\/p>"
+        }
+    }
+}

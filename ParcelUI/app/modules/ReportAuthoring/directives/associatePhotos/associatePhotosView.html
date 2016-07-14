@@ -1,0 +1,58 @@
+<div ng-show="associatePhotosEnabled">
+
+	<button type="button" class="btn btn-md btn-primary" ng-click="selectImages()" value="">Associate Photos</button>
+
+	<div class="panel panel-body">
+		<div class="row" id="associatedImgs">
+			<div class="col-md-6 text-center" ng-repeat="associated in associatedImages">
+				<div>
+					
+					<img class="img-short-view" src="{{associated.url}}">
+				</div>
+				<div class="form-inline top-margin bottom-margin">
+					<!--<div cl-inline-edit cl-model-data="associated.name" cl-exp-style="text-decoration: underline;" />-->
+					<div ng-show="!associated.renameAction" ng-click="enableRename(associated)">
+						<label>{{associated.name}}</label>
+					</div>
+					<div ng-show="associated.renameAction" ng-blur="cancelRename(associated)">
+						<div class="form-group">
+							<input type="text" class="form-control" ng-model="associated.renamed">
+						</div>
+						<button class="btn btn-md btn-default" data-toggle="tooltip" data-placement="top" title="Save changes" ng-click="renameImg(associated, $index)"><span class="glyphicon glyphicon-duplicate"> </span></button>
+						<button data-toggle="tooltip" data-placement="top" title="Cancel" class="btn btn-md btn-default" ng-click="cancelRename(associated)"><i class="fa fa-times text-danger icon-16"></i></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--<div id="imgCollection" ng-show="selectImgAction">
+
+        </div>-->
+	</div>
+	<script id="associateImageAction.html" type="text/ng-template">
+
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"  ng-click="close()"><span aria-hidden="true">&times;</span></button>
+
+			<h4 class="modal-title">Associate Photos</h4>
+
+		</div>
+
+		<div class="modal-body">
+			<button type="button" class="btn btn-md btn-primary" ng-click="saveAssociations()">Save Associations</button>
+			<button type="button" class="btn btn-md btn-primary" ng-click="refreshPhotos()">Refresh Photos</button>
+
+
+			<div class="row top-margin">
+				<div ng-repeat="img in imageColl" class="col-md-6 text-center">
+					<div>						
+						<img class="img-short-view" src="{{img.url}}" ng-click="img.selected = !img.selected" ng-class="{'selected': img.selected}">
+					</div>
+					<label>{{img.name}}</label>
+				</div>
+			</div>
+
+		</div>
+
+	</script>
+</div>

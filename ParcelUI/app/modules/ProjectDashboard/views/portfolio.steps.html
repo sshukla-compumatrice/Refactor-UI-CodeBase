@@ -1,0 +1,71 @@
+
+<form class="form-horizontal" name="portfolio.portfolioForm">
+    <div cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+        <button ng-click="portfolio.gotoProjectDashboard()" class="btn btn-md btn-default pull-right"><i class="glyphicon glyphicon-arrow-up"></i> Return to Project </button>
+        <h2 class="page-header">Portfolio Download</h2>
+        
+    <div ng-if = "portfolio.showError" id="alertRequiredMessage"  class="alert alert-dismissible alert-danger"  role="alert">
+                <button type="button" class="close" ng-click="portfolio.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{portfolio.errorMessage}}
+    </div>
+    <div ng-if="portfolio.select">
+        
+        
+        <h4>Select the portfolio that you want to Download</h4>
+        <div class="form-group">
+            <label for="filter" class="col-sm-1 control-label">Filter</label>
+            <div class="col-sm-5">
+                <select id="filter" ng-init="portfolio.setInitialCriteria()" ng-change="portfolio.projectFilter(portfolio.searchCriteria)" class="form-control" ng-model="portfolio.searchCriteria" ng-options="searchCriteria.value as searchCriteria.criteria for searchCriteria in portfolio.projectSearchCriteria">
+                    <option value="">-- All Projects--</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group select2-project">
+            <label for="projectList" class="col-sm-1 control-label">Project</label>
+            <div class="col-sm-5">
+                
+                
+            
+                        <div rt-select2="select2Options" provider="projectListProvider" template="generateMarkUp" afterevent="displayProject" setvalue = "setInitialSelectedProject" total = "{{projectDashboard.totalProjectCount}}"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="portfolio.selectReports">
+        <h4>Select the reports that you want to include:</h4>
+        <button ng-click="portfolio.checkReportsOnCondition('check-all')" class="btn btn-default" type="submit">Check All</button>
+        <button ng-repeat = "status in portfolio.distinctReportStatus"  ng-click = "portfolio.checkReportsOnCondition(status)" class="btn btn-default" type="submit">Check All {{status + " "}} Reports</button>
+        <button  ng-click="portfolio.checkReportsOnCondition('check-final')" class="btn btn-default" type="submit">Check All Final Reports</button>
+        <button ng-click="portfolio.checkReportsOnCondition('check-nonfinal')" class="btn btn-default" type="submit">Check All Non-Final Reports</button>
+        <button ng-click="portfolio.checkReportsOnCondition('uncheck-all')" class="btn btn-default" type="submit">Uncheck All</button>
+
+        <h4>Portfolio: Operation Calumet</h4>
+       
+        <div class="checkbox" ng-repeat="report in portfolio.reports">
+            <label>
+                <input type="checkbox" ng-init="portfolio.checkPreSelectedReport()" ng-change="portfolio.selectReport($index)" ng-model="portfolio.sampleTemplateCheckbox[$index]" id={{$index}}> {{report.propertyNumber + report.propertyName + '-' + report.address + ' :' + report.reportType}}
+            </label>
+        </div>
+    </div>
+
+    <div ng-if="portfolio.selectReportsParts">
+        <h4>For each type of report, select the parts you want to include:</h4>
+
+        <button ng-click="checkall1()" class="btn btn-default" type="submit">Check All</button>
+        <button ng-click="uncheckall1()" class="btn btn-default" type="submit">Uncheck All</button>
+
+        <div ng-repeat="(parentIndex,template) in portfolio.sampleReportsParts">
+            <h4>Template: {{template.templateName}}</h4>
+            <div class="checkbox" ng-repeat="(childIndex,reportsPart) in template.reportsParts">
+
+                <label>
+                    <input type="checkbox" ng-disabled="portfolio.disableCheckbox" ng-init="portfolio.checkPreSelectedReportParts(parentIndex,childIndex)" ng-change="portfolio.selectReportParts(parentIndex,childIndex)" ng-model="portfolio.reportPartsModel[parentIndex + '' + childIndex]"> {{reportsPart.name}}
+                </label>
+            </div>
+        </div>
+
+    </div>
+    </div>
+        
+</form>

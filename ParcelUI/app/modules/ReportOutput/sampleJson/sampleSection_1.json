@@ -1,0 +1,130 @@
+{
+    "Section": {
+        "html": "<div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' editor-height='700' class='textCK'><div><h2><strong><span>{{section1Title}}</span></strong></h2></div><div ng-bind-html='contentValues.ckEditData.div3'/><p ng-bind-html='contentValues.ckEditData.div2'/><table class='table table-bordered'><tbody><tr><td><table><tbody><tr><th><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableHeader, \"Provider\", contentValues.styling.table.endStyling_tableHeader)'/></th><td><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableData, \"Provider 1\", contentValues.styling.table.endStyling_tableData)'/></td></tr></tbody></table></td><td><table><tbody><tr><th><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableHeader, \"Comments\", contentValues.styling.table.endStyling_tableHeader)'/></th><td><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableData, \"Comments 1\", contentValues.styling.table.endStyling_tableData)'/></td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><th><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableHeader, \"Utility\", contentValues.styling.table.endStyling_tableHeader)'/></th><td><div ng-bind-html='renderLayoutHtml(contentValues.styling.table.startStyling_tableData, \"Utility 1\", contentValues.styling.table.endStyling_tableData)'/></td></tr></tbody></table></td></tr></tbody></table><div><div id='associatedImgs'><div><div><img src='app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg' width='304' height='236'/></div><div><div><span>renamed for section 1</span></div></div></div></div></div></div></div>",
+
+        "contentValues": {
+            "section1Title": "1.0 EDR Order Status",
+            "styling": {
+                "table": {
+                    "startStyling_tableHeader": "<span style='color:#FF0000;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><s><u><em><strong><span style='background-color:#AFEEEE;'>",
+                    "endStyling_tableHeader": "</span></strong></em></u></s></span></span>",
+                    "startStyling_tableData": "<span style='font-family:comic sans ms,cursive;'>",
+                    "endStyling_tableData": "</span>"
+                }
+            },
+            "choice": {
+                "Y": "Consulting",
+                "N": "Application Development and Support",
+                "NS": "Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "ckEditData": {
+                "div1": "<p>The purpose of the Phase I Environmental Site Assessment (ESA) was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property. </p>",
+
+                "div2": "<p><strong>test data for ck editor</strong></p>",
+                "div3": "<ul><li>Coffee</li><li>Tea</li><li>Milk</li></ul>"
+            },
+            "horizontalTable": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 2
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            },
+            "associatPhotos": {
+                "enabled": true,
+                "associated": [{
+                    "url": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+                    "name": "renamed for section 1"
+                }]
+            },
+
+            "costTable": {
+                "type": "freddie mac",
+                "data": [{
+                    "group": "SITE",
+                    "sectionID": 23,
+                    "recommendation": {
+                        "name": "Foundation",
+                        "eul": 50,
+                        "eff": null,
+                        "rul": null,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 0,
+                        "costSpread": [{
+                            "label": "Critical",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "1",
+                            "isYearly": true,
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }
+                }]
+            }
+
+        },
+
+        "sectionID": 1,
+        "name": "EDR Order Status",
+        "number": "1.0"
+
+    }
+}

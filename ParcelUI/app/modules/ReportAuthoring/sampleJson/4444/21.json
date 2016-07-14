@@ -1,0 +1,54 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><horizontal-table table='contentValues.horizontalTable02'></horizontal-table>",
+    "contentValues": {
+        "sectionTitle00": "6.2 Aerial Photographs",
+        "horizontalTable02": {
+            "structure": [{
+                "label": "Information Source:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "0%",
+                "textWidth": "50%"
+            }, {
+                "label": "Date(s):",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "0%",
+                "textWidth": "50%"
+            }, {
+                "label": "Site:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Adjoining:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "0%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Information Source:": "",
+                "Date(s):": "",
+                "Site:": "",
+                "Adjoining:": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

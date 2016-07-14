@@ -1,0 +1,28 @@
+<div>
+    <hr>
+
+    <!--    <h3>{{recommendationHeader}}</h3>-->
+
+    <div class="table-responsive" cg-busy="waitingProcessResources">
+        <div ng-show="!tableRows.length">No recommendations have been added to this section</div>
+        <table ng-show="tableRows.length" class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th ng-repeat="header in freddieMacHeaders">{{header}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-class="putBgColor(item,$index,$odd,$even)" ng-repeat="item in tableRows">
+                    <td><a class="pointer" ng-click="editRecommendation(item,$index,1,$event)">{{item.name}}</a></td>
+                    <td>{{item.eul}}</td>
+                    <td>{{item.eff}}</td>
+                    <td>{{item.rul}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td><a class="pointer" ng-click="editRecommendation(item,$index,1,$event)">{{item.year}}</a></td>
+                    <td>{{item.cost}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

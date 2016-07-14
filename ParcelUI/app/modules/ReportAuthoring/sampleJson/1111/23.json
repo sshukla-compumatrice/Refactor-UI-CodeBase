@@ -1,0 +1,682 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.3.5 Exterior and Interior Stairs",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 32,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Steel stairs",
+                "value": "221"
+            }, {
+                "name": "Concrete stairs",
+                "value": "222"
+            }, {
+                "name": "Wood stairs",
+                "value": "223"
+            }, {
+                "name": "Wood balustrade",
+                "value": "224"
+            }, {
+                "name": "Metal balustrade",
+                "value": "225"
+            }, {
+                "name": "Paint guardrail",
+                "value": "226"
+            }, {
+                "name": "Replace steel stairs",
+                "value": "1860"
+            }, {
+                "name": "Replace wood stairs",
+                "value": "1861"
+            }, {
+                "name": "Replace balustrades",
+                "value": "1862"
+            }, {
+                "name": "Miscellaneous concrete stair repairs",
+                "value": "1863"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "2051"
+            }, {
+                "name": "Fire Escapes",
+                "value": "2052"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "2156"
+            }, {
+                "name": "Fire Escapes",
+                "value": "2157"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "2402"
+            }, {
+                "name": "Metal balustrade",
+                "value": "2403"
+            }, {
+                "name": "Steel stairs ",
+                "value": "2404"
+            }, {
+                "name": "Wood balustrade",
+                "value": "2405"
+            }, {
+                "name": "Wood stairs ",
+                "value": "2406"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "2407"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "2616"
+            }, {
+                "name": "Fire Escapes",
+                "value": "2617"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "3162"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "3163"
+            }, {
+                "name": "Steel stairs ",
+                "value": "3164"
+            }, {
+                "name": "Wood stairs ",
+                "value": "3165"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "3166"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "3167"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "3377"
+            }, {
+                "name": "Fire Escapes",
+                "value": "3378"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "3854"
+            }, {
+                "name": "Fire Escapes",
+                "value": "3855"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "4951"
+            }, {
+                "name": "Fire Escapes",
+                "value": "4952"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "5131"
+            }, {
+                "name": "Fire Escapes",
+                "value": "5132"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "11041"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "11042"
+            }, {
+                "name": "Steel stairs ",
+                "value": "11043"
+            }, {
+                "name": "Wood stairs ",
+                "value": "11044"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "11045"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "11046"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "11306"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "11307"
+            }, {
+                "name": "Steel stairs ",
+                "value": "11308"
+            }, {
+                "name": "Wood stairs ",
+                "value": "11309"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "11310"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "11311"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "11571"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "11572"
+            }, {
+                "name": "Steel stairs ",
+                "value": "11573"
+            }, {
+                "name": "Wood stairs ",
+                "value": "11574"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "11575"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "11576"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "11836"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "11837"
+            }, {
+                "name": "Steel stairs ",
+                "value": "11838"
+            }, {
+                "name": "Wood stairs ",
+                "value": "11839"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "11840"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "11841"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "13070"
+            }, {
+                "name": "Fire Escapes",
+                "value": "13071"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "13424"
+            }, {
+                "name": "Fire Escapes",
+                "value": "13425"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "13522"
+            }, {
+                "name": "Fire Escapes",
+                "value": "13523"
+            }, {
+                "name": "Steel stairs",
+                "value": "17912"
+            }, {
+                "name": "Concrete stairs",
+                "value": "17913"
+            }, {
+                "name": "Wood stairs",
+                "value": "17914"
+            }, {
+                "name": "Wood balustrade",
+                "value": "17915"
+            }, {
+                "name": "Metal balustrade",
+                "value": "17916"
+            }, {
+                "name": "Paint guardrail",
+                "value": "17917"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "18574"
+            }, {
+                "name": "Fire Escapes",
+                "value": "18575"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "18675"
+            }, {
+                "name": "Fire Escapes",
+                "value": "18676"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "18776"
+            }, {
+                "name": "Fire Escapes",
+                "value": "18777"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "18877"
+            }, {
+                "name": "Fire Escapes",
+                "value": "18878"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "19014"
+            }, {
+                "name": "Fire Escapes",
+                "value": "19015"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "20099"
+            }, {
+                "name": "Fire Escapes",
+                "value": "20100"
+            }, {
+                "name": "Metal balustrade, Repair ",
+                "value": "21659"
+            }, {
+                "name": "Wooden balustrade, Repair ",
+                "value": "21660"
+            }, {
+                "name": "Wooden stairs, Repair ",
+                "value": "21661"
+            }, {
+                "name": "Concrete stairs, Repair ",
+                "value": "21662"
+            }, {
+                "name": "Wooden stairs, Replace ",
+                "value": "21663"
+            }, {
+                "name": "Steel stairs, Repair ",
+                "value": "21664"
+            }, {
+                "name": "",
+                "value": "21951"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "23141"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "23142"
+            }, {
+                "name": "Steel stairs ",
+                "value": "23143"
+            }, {
+                "name": "Wood stairs ",
+                "value": "23144"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "23145"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "23146"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90002233"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90002234"
+            }, {
+                "name": "Wood stairs.  Replace (per flight)",
+                "value": "90002759"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "90004087"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "90004088"
+            }, {
+                "name": "Steel stairs ",
+                "value": "90004089"
+            }, {
+                "name": "Wood stairs ",
+                "value": "90004090"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "90004091"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "90004092"
+            }, {
+                "name": "Wood balustrade ",
+                "value": "90006583"
+            }, {
+                "name": "Paint guardrail ",
+                "value": "90006584"
+            }, {
+                "name": "Steel stairs ",
+                "value": "90006585"
+            }, {
+                "name": "Wood stairs ",
+                "value": "90006586"
+            }, {
+                "name": "Metal balustrade ",
+                "value": "90006587"
+            }, {
+                "name": "Concrete stairs ",
+                "value": "90006588"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90006869"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90006870"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90006871"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90006872"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90006873"
+            }, {
+                "name": "Wood stairs.  Replace (per flight)",
+                "value": "90007217"
+            }, {
+                "name": "Wood stairs.  Replace (per flight)",
+                "value": "90007797"
+            }, {
+                "name": "Exterior Steel stairs, Replace",
+                "value": "90008912"
+            }, {
+                "name": "Exterior Wooden stairs, Replace ",
+                "value": "90008913"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90012762"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90012763"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90013211"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90013212"
+            }, {
+                "name": "Add -- Repair exterior stairs",
+                "value": "90015225"
+            }, {
+                "name": "Leave PARCEL descriptions and costs",
+                "value": "90015226"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90015669"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90015670"
+            }, {
+                "name": "Add -- Repair exterior stairs",
+                "value": "90015779"
+            }, {
+                "name": "Leave PARCEL descriptions and costs",
+                "value": "90015780"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90020187"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90020188"
+            }, {
+                "name": "Steel stairs",
+                "value": "90020852"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90020853"
+            }, {
+                "name": "Wood stairs",
+                "value": "90020854"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90020855"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90020856"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90020857"
+            }, {
+                "name": "Steel stairs",
+                "value": "90021315"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90021316"
+            }, {
+                "name": "Wood stairs",
+                "value": "90021317"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90021318"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90021319"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90021320"
+            }, {
+                "name": "Steel stairs",
+                "value": "90022825"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90022826"
+            }, {
+                "name": "Wood stairs",
+                "value": "90022827"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90022828"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90022829"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90022830"
+            }, {
+                "name": "Steel stairs",
+                "value": "90023057"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90023058"
+            }, {
+                "name": "Wood stairs",
+                "value": "90023059"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90023060"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90023061"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90023062"
+            }, {
+                "name": "Steel stairs",
+                "value": "90024361"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90024362"
+            }, {
+                "name": "Wood stairs",
+                "value": "90024363"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90024364"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90024365"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90024366"
+            }, {
+                "name": "Steel stairs",
+                "value": "90024510"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90024511"
+            }, {
+                "name": "Wood stairs",
+                "value": "90024512"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90024513"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90024514"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90024515"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90025934"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90025935"
+            }, {
+                "name": "Steel stairs",
+                "value": "90026180"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90026181"
+            }, {
+                "name": "Wood stairs",
+                "value": "90026182"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90026183"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90026184"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90026185"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90027463"
+            }, {
+                "name": "Steel stairs",
+                "value": "90030180"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90030181"
+            }, {
+                "name": "Wood stairs",
+                "value": "90030182"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90030183"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90030184"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90030185"
+            }, {
+                "name": "Steel stairs",
+                "value": "90030384"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90030385"
+            }, {
+                "name": "Wood stairs",
+                "value": "90030386"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90030387"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90030388"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90030389"
+            }, {
+                "name": "Exterior Steel stairs. Replace",
+                "value": "90030758"
+            }, {
+                "name": "Exterior Wooden stairs. Replace ",
+                "value": "90030759"
+            }, {
+                "name": "Repaint fire escape stairs",
+                "value": "90030760"
+            }, {
+                "name": "Stairs (structural/finish)",
+                "value": "90030998"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90030999"
+            }, {
+                "name": "Steel stairs",
+                "value": "90031099"
+            }, {
+                "name": "Concrete stairs",
+                "value": "90031100"
+            }, {
+                "name": "Wood stairs",
+                "value": "90031101"
+            }, {
+                "name": "Wood balustrade",
+                "value": "90031102"
+            }, {
+                "name": "Metal balustrade",
+                "value": "90031103"
+            }, {
+                "name": "Paint guardrail",
+                "value": "90031104"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

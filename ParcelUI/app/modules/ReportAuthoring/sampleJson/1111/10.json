@@ -1,0 +1,1547 @@
+{
+ 
+    "html": "<div><h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h3></div><div><h4>{{contentValues.sectionTitle01}}</h2></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><div><h2>{{contentValues.sectionTitle03}}</h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h3 class='border-bottom  text-capitalize'>Cost Summary</h3></div><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'/></div>",
+ 
+    "contentValues": {
+        "sectionTitle00": "3.2.1 Topography",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 19,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [
+				{
+                "name": "Landscape material.  Plant.",
+                "value": "1"
+            }, {
+                "name": "Irrigation system.",
+                "value": "146"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "147"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "148"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block",
+                "value": "1157"
+            }, {
+                "name": "Retaining walls, wood",
+                "value": "1158"
+            }, {
+                "name": "Lighting - HID",
+                "value": "1159"
+            }, {
+                "name": "Fence, wood post and rail",
+                "value": "1160"
+            }, {
+                "name": "Fence, chain link",
+                "value": "1161"
+            }, {
+                "name": "Sidewalks asphalt",
+                "value": "1162"
+            }, {
+                "name": "Sidewalks concrete",
+                "value": "1163"
+            }, {
+                "name": "Concrete sealant",
+                "value": "1164"
+            }, {
+                "name": "Concrete repair",
+                "value": "1165"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "1166"
+            }, {
+                "name": "Concrete curbs machine formed",
+                "value": "1167"
+            }, {
+                "name": "Concrete precast parking bumpers",
+                "value": "1168"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "1169"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "1170"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "1171"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "1172"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "1173"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "1174"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "1175"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "1176"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "1177"
+            }, {
+                "name": "Repair irrigation system",
+                "value": "1736"
+            }, {
+                "name": "Regrade areas to create positive drainage",
+                "value": "1737"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "1738"
+            }, {
+                "name": "Plant/install new landscaping",
+                "value": "1739"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "1740"
+            }, {
+                "name": "Retaining wall.  Repair ",
+                "value": "2348"
+            }, {
+                "name": "Retaining wall.  Replace ",
+                "value": "2349"
+            }, {
+                "name": "Landscape material. Plant",
+                "value": "2350"
+            }, {
+                "name": "Irrigation system.   Repair",
+                "value": "2351"
+            }, {
+                "name": "Earthwork grade/recontour (minor) ",
+                "value": "2996"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "2997"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "2998"
+            }, {
+                "name": "Landscape material. Plant",
+                "value": "2999"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "11001"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "11002"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "11003"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "11004"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "11005"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "11266"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "11267"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "11268"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "11269"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "11270"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "11531"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "11532"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "11533"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "11534"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "11535"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "11796"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "11797"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "11798"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "11799"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "11800"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "12061"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "12062"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "12063"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "12064"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "12065"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "12304"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "12305"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "12306"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "12307"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "12308"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "12547"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "12548"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "12549"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "12550"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "12551"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "12790"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "12791"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "12792"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "12793"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "12794"
+            }, {
+                "name": "Topography",
+                "value": "13439"
+            }, {
+                "name": "Topography",
+                "value": "13453"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "13719"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "17836"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "17837"
+            }, {
+                "name": "Irrigation system.",
+                "value": "17838"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "17839"
+            }, {
+                "name": "Topography",
+                "value": "18945"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "19716"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block",
+                "value": "20005"
+            }, {
+                "name": "Retaining walls, wood",
+                "value": "20006"
+            }, {
+                "name": "Lighting - HID",
+                "value": "20007"
+            }, {
+                "name": "Fence, wood post and rail",
+                "value": "20008"
+            }, {
+                "name": "Fence, chain link",
+                "value": "20009"
+            }, {
+                "name": "Sidewalks asphalt",
+                "value": "20010"
+            }, {
+                "name": "Sidewalks concrete",
+                "value": "20011"
+            }, {
+                "name": "Concrete sealant",
+                "value": "20012"
+            }, {
+                "name": "Concrete repair",
+                "value": "20013"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "20014"
+            }, {
+                "name": "Concrete curbs machine formed",
+                "value": "20015"
+            }, {
+                "name": "Concrete precast parking bumpers",
+                "value": "20016"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "20017"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "20018"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "20019"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "20020"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "20021"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "20022"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "20023"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "20024"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "20025"
+            }, {
+                "name": "Topography",
+                "value": "20030"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "21726"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "21727"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "21728"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "21729"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "21730"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "21731"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "21732"
+            }, {
+                "name": "Retaining Wall, Repair  ",
+                "value": "21733"
+            }, {
+                "name": "Dry-stacked Retaining Wall, Locally Repair  ",
+                "value": "21734"
+            }, {
+                "name": "Retaining Wall, Replace  ",
+                "value": "21736"
+            }, {
+                "name": "Earthwork. Regrade ",
+                "value": "21869"
+            }, {
+                "name": "Retaining wall. Replace (Concrete, 6' high) ",
+                "value": "21870"
+            }, {
+                "name": "Retaining wall. Replace (Concrete, 8' high) ",
+                "value": "21871"
+            }, {
+                "name": "Retaining wall. Replace (Concrete, 10' high) ",
+                "value": "21872"
+            }, {
+                "name": "Retaining wall. Replace (Masonry) ",
+                "value": "21873"
+            }, {
+                "name": "Retaining wall. Replace (Railroad tie) ",
+                "value": "21874"
+            }, {
+                "name": "Retaining wall. Replace (Stone) ",
+                "value": "21875"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "21876"
+            }, {
+                "name": "",
+                "value": "21877"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "22804"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "22988"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "22989"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "22990"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "22991"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "22992"
+            }, {
+                "name": "",
+                "value": "90002851"
+            }, {
+                "name": "Stone retaining wall. Replace",
+                "value": "90002853"
+            }, {
+                "name": "Railroad tie retaining wall. Replace",
+                "value": "90002854"
+            }, {
+                "name": "CMU retaining wall. Replace",
+                "value": "90002855"
+            }, {
+                "name": "Concrete retaining wall. Replace",
+                "value": "90002856"
+            }, {
+                "name": "Landscaping.  Add groundcover",
+                "value": "90002857"
+            }, {
+                "name": "Landscaping.  Replant grass",
+                "value": "90002858"
+            }, {
+                "name": "Irrigation system. Repair",
+                "value": "90002859"
+            }, {
+                "name": "Earthwork. Regrade",
+                "value": "90002860"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90003934"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90003935"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90003936"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90003937"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "90003938"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90003973"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90003974"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90003975"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90003976"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90003977"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90003978"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90003979"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90003980"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90003981"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90003982"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90003983"
+            }, {
+                "name": "Retaining wall - Better (key stone)",
+                "value": "90005445"
+            }, {
+                "name": "Retaining wall - Best (poured concrete)",
+                "value": "90005446"
+            }, {
+                "name": "Retaining wall - stone",
+                "value": "90005447"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90005448"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90005449"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90005450"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90005451"
+            }, {
+                "name": "Retaining wall - Better (key stone)",
+                "value": "90005760"
+            }, {
+                "name": "Retaining wall - Best (poured concrete)",
+                "value": "90005761"
+            }, {
+                "name": "Retaining wall - stone",
+                "value": "90005762"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90005763"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90005764"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90005765"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90005766"
+            }, {
+                "name": "Replace retaining wall ",
+                "value": "90006438"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90006439"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90006440"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90006441"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90006442"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90006469"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90006470"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90006471"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90006472"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90006473"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90006474"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90006475"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90006476"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90006477"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90006478"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90006479"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90006743"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90006744"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90006745"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90006746"
+            }, {
+                "name": "Retaining wall - stone",
+                "value": "90006747"
+            }, {
+                "name": "Retaining wall - Better (key stone)",
+                "value": "90006748"
+            }, {
+                "name": "Retaining wall - Best (poured concrete)",
+                "value": "90006749"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90006750"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90006751"
+            }, {
+                "name": "Wood - 4' tall fence",
+                "value": "90006752"
+            }, {
+                "name": "Wood - 6' tall fence",
+                "value": "90006753"
+            }, {
+                "name": "Fence - Vinyl",
+                "value": "90006754"
+            }, {
+                "name": "Fence - wrought iron",
+                "value": "90006755"
+            }, {
+                "name": "Fence - chain link ",
+                "value": "90006756"
+            }, {
+                "name": "",
+                "value": "90007131"
+            }, {
+                "name": "Stone retaining wall. Replace",
+                "value": "90007132"
+            }, {
+                "name": "Railroad tie retaining wall. Replace",
+                "value": "90007133"
+            }, {
+                "name": "CMU retaining wall. Replace",
+                "value": "90007134"
+            }, {
+                "name": "Concrete retaining wall. Replace",
+                "value": "90007135"
+            }, {
+                "name": "Landscaping.  Add groundcover",
+                "value": "90007136"
+            }, {
+                "name": "Landscaping.  Replant grass",
+                "value": "90007137"
+            }, {
+                "name": "Irrigation system. Repair",
+                "value": "90007138"
+            }, {
+                "name": "Earthwork. Regrade",
+                "value": "90007139"
+            }, {
+                "name": "",
+                "value": "90007711"
+            }, {
+                "name": "Stone retaining wall. Replace",
+                "value": "90007712"
+            }, {
+                "name": "Railroad tie retaining wall. Replace",
+                "value": "90007713"
+            }, {
+                "name": "CMU retaining wall. Replace",
+                "value": "90007714"
+            }, {
+                "name": "Concrete retaining wall. Replace",
+                "value": "90007715"
+            }, {
+                "name": "Landscaping.  Add groundcover",
+                "value": "90007716"
+            }, {
+                "name": "Landscaping.  Replant grass",
+                "value": "90007717"
+            }, {
+                "name": "Irrigation system. Repair",
+                "value": "90007718"
+            }, {
+                "name": "Earthwork. Regrade",
+                "value": "90007719"
+            }, {
+                "name": "Topography, Re-grade/ recontour (minor) ",
+                "value": "90008788"
+            }, {
+                "name": "Retaining wall, Repair ",
+                "value": "90008789"
+            }, {
+                "name": "Landscape material, Plant. ",
+                "value": "90008790"
+            }, {
+                "name": "Retaining walls, wood, Replace ",
+                "value": "90008791"
+            }, {
+                "name": "Retaining wall, stone, Replace",
+                "value": "90008792"
+            }, {
+                "name": "Retaining wall, key stone, Replace",
+                "value": "90008793"
+            }, {
+                "name": "Retaining wall, poured concrete, Replace",
+                "value": "90008794"
+            }, {
+                "name": "Irrigation system, Repair ",
+                "value": "90008795"
+            }, {
+                "name": "Fence, wood post and rail, Repair/ Replace ",
+                "value": "90008796"
+            }, {
+                "name": "Wood - 4' tall fence, Replace",
+                "value": "90008797"
+            }, {
+                "name": "Wood - 6' tall fence, Replace",
+                "value": "90008798"
+            }, {
+                "name": "Fence - Vinyl, Replace",
+                "value": "90008799"
+            }, {
+                "name": "Fence - wrought iron, Replace",
+                "value": "90008800"
+            }, {
+                "name": "Fence - chain link, Replace ",
+                "value": "90008801"
+            }, {
+                "name": "Dry-stacked Retaining Wall, Locally Repair",
+                "value": "90011651"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace",
+                "value": "90011652"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair",
+                "value": "90011653"
+            }, {
+                "name": "Concrete Retaining Wall, Replace",
+                "value": "90011654"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90011655"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90011656"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90011657"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90011658"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "90011659"
+            }, {
+                "name": "Dry-stacked Retaining Wall, Locally Repair",
+                "value": "90012009"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace",
+                "value": "90012010"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair",
+                "value": "90012011"
+            }, {
+                "name": "Concrete Retaining Wall, Replace",
+                "value": "90012012"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90012013"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90012014"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90012015"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90012016"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "90012017"
+            }, {
+                "name": "Dry-stacked Retaining Wall, Locally Repair",
+                "value": "90012367"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace",
+                "value": "90012368"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair",
+                "value": "90012369"
+            }, {
+                "name": "Concrete Retaining Wall, Replace",
+                "value": "90012370"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90012371"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90012372"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90012373"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90012374"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "90012375"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "90012826"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90013314"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90013315"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90013316"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90013317"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90013318"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90013319"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90013320"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90013321"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90013322"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90013652"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90013653"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90013654"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90013655"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90013656"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90013657"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90013658"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90013659"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90013660"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90013992"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90013993"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90013994"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90013995"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90013996"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90013997"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90013998"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90013999"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90014000"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90014330"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90014331"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90014332"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90014333"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90014334"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90014335"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90014336"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90014337"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90014338"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90014811"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90014812"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "90014981"
+            }, {
+                "name": "Other",
+                "value": "90014982"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "90015153"
+            }, {
+                "name": "Other",
+                "value": "90015154"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90015312"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90015313"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90015314"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90015315"
+            }, {
+                "name": "",
+                "value": "90015316"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90015317"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90015318"
+            }, {
+                "name": "",
+                "value": "90015319"
+            }, {
+                "name": "Topography",
+                "value": "90015600"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "90015707"
+            }, {
+                "name": "Other",
+                "value": "90015708"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90015935"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90015936"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90016105"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90016106"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90016107"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90016108"
+            }, {
+                "name": "",
+                "value": "90016109"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90016110"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90016111"
+            }, {
+                "name": "",
+                "value": "90016112"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90016457"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90016458"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90016627"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90016628"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90016629"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90016630"
+            }, {
+                "name": "",
+                "value": "90016631"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90016632"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90016633"
+            }, {
+                "name": "",
+                "value": "90016634"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90017200"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90017201"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90017202"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90017204"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90017205"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90017206"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90017207"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90017208"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90017209"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90017292"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90017293"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90017462"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90017463"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90017464"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90017465"
+            }, {
+                "name": "",
+                "value": "90017466"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90017467"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90017468"
+            }, {
+                "name": "",
+                "value": "90017469"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90017814"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90017815"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90017984"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90017985"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90017986"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90017987"
+            }, {
+                "name": "",
+                "value": "90017988"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90017989"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90017990"
+            }, {
+                "name": "",
+                "value": "90017991"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90018837"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90018838"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90019007"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90019008"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90019009"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90019010"
+            }, {
+                "name": "",
+                "value": "90019011"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90019012"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90019013"
+            }, {
+                "name": "",
+                "value": "90019014"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90019290"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90019291"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90019292"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90019293"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90019294"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90019295"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90019296"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90019297"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90019298"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Locally Repair  ",
+                "value": "90019801"
+            }, {
+                "name": "Dry Stacked Retaining Wall, Replace  ",
+                "value": "90019802"
+            }, {
+                "name": "Concrete Retaining Wall, Locally Repair  ",
+                "value": "90019803"
+            }, {
+                "name": "Concrete Retaining Wall, Replace  ",
+                "value": "90019804"
+            }, {
+                "name": "Stone Retaining Wall, Replace",
+                "value": "90019805"
+            }, {
+                "name": "Timber Retaining Wall, Replace",
+                "value": "90019806"
+            }, {
+                "name": "Masonry Retaining Wall, Replace",
+                "value": "90019807"
+            }, {
+                "name": "Structural Assessment of Retaining Walls",
+                "value": "90019808"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90019809"
+            }, {
+                "name": "Topography",
+                "value": "90020118"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90020788"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90020789"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90020790"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90020791"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90021249"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90021250"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90021251"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90021252"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90021499"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90021500"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90021669"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90021670"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90021671"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90021672"
+            }, {
+                "name": "",
+                "value": "90021673"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90021674"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90021675"
+            }, {
+                "name": "",
+                "value": "90021676"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90022751"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90022752"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90022753"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90022754"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90022978"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90022979"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90022980"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90022981"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90023169"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90023170"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90023171"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90023172"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "90023173"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90023412"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90023413"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90023414"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90023415"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "90023416"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90023655"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90023656"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90023657"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90023658"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90023811"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90023812"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90023813"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90023814"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "90023815"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90024054"
+            }, {
+                "name": "Grading/ recontour (minor) ",
+                "value": "90024055"
+            }, {
+                "name": "Repair retaining wall ",
+                "value": "90024056"
+            }, {
+                "name": "Landscape material. Plant. ",
+                "value": "90024057"
+            }, {
+                "name": "Replace retaining wall (4' to 8' high)",
+                "value": "90024058"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90024688"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90024689"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90024858"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90024859"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90024860"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90024861"
+            }, {
+                "name": "",
+                "value": "90024862"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90024863"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90024864"
+            }, {
+                "name": "",
+                "value": "90024865"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90026441"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90026442"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90026611"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90026612"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90026613"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90026614"
+            }, {
+                "name": "",
+                "value": "90026615"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90026616"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90026617"
+            }, {
+                "name": "",
+                "value": "90026618"
+            }, {
+                "name": "Grading/ recontour (minor)",
+                "value": "90027548"
+            }, {
+                "name": "Earthwork, Grading, Erosion Control",
+                "value": "90029150"
+            }, {
+                "name": "Catch Basins, Inlets, Culverts",
+                "value": "90029151"
+            }, {
+                "name": "Catch basins.  Replace",
+                "value": "90029320"
+            }, {
+                "name": "Inlets. Replace",
+                "value": "90029321"
+            }, {
+                "name": "Culverts.  Replace",
+                "value": "90029322"
+            }, {
+                "name": "Storm drain lines.  Replace",
+                "value": "90029323"
+            }, {
+                "name": "",
+                "value": "90029324"
+            }, {
+                "name": "Earthwork, grading and erosion control.  Replace",
+                "value": "90029325"
+            }, {
+                "name": "Irrigation system.  Replace",
+                "value": "90029326"
+            }, {
+                "name": "",
+                "value": "90029327"
+            }, {
+                "name": "Landscape material.  Plant.",
+                "value": "90030106"
+            }, {
+                "name": "Irrigation system.",
+                "value": "90030107"
+            }, {
+                "name": "Replace retaining wall",
+                "value": "90030108"
+            }, {
+                "name": "Repair retaining wall",
+                "value": "90030109"
+            }, {
+                "name": "Civil Engineer, Investigate and Report",
+                "value": "90030612"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90030613"
+            }, {
+                "name": "Retaining wall, key stone. Replace",
+                "value": "90030614"
+            }, {
+                "name": "Retaining wall, poured concrete. Replace",
+                "value": "90030615"
+            }, {
+                "name": "Retaining wall, stone. Replace",
+                "value": "90030616"
+            }, {
+                "name": "Retaining walls, railroad tie. Replace ",
+                "value": "90030617"
+            }, {
+                "name": "Earthwork. Regrade  ",
+                "value": "90030618"
+            }, {
+                "name": "Topography",
+                "value": "90030929"
+            }, {
+                "name": "Regrade for proper drainage",
+                "value": "90031291"
+            }],
+            "unit": [
+				{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

@@ -1,0 +1,72 @@
+<div ng-show="!refactorDash" ng-controller="appBridgeLandingPageController as appBridgeCtrl">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group ">
+                <label>Date Range</label>
+                <div class="input-group full-width">
+                    <div id="appBridgeReportRange" class="pull-right form-control input-sm pointer">
+                        <i class="fa fa-calendar"></i>
+                        <span></span> <strong class="caret"></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2" data-intro="<h4 class='text-white'>REPORT SEARCH & FILTERING</h4>Use these filters to search for reports
+by date, status or project name." data-position="right">
+            <div class="form-group ">
+                <label for="projStatus">Status</label>
+                <select id="projStatus" class="form-control input-sm" ng-model="appBridgeCtrl.appBridgeStatusFilter" ng-change="appBridgeCtrl.appBridgeFilterByStatus();">
+                    <option value="OPEN">Non-Final</option>
+                    <option value="CLOSE">Final</option>
+                    <option value="ALL">All</option>
+                </select>
+            </div>
+        </div>
+
+        <!--<div ng-show="dashboard.showFilter" class="col-md-6" id="filter_global">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="global_filter">Project:</label>
+                        <div id="appBridgeSelect2" class="custom-select2" rt-select2="select2Options" provider="projectListProvider" template="generateMarkUp" afterevent="appBridgeDisplayProject" minimuminput=3></div>
+                    </div>
+                    <button class="btn btn-primary goto-project" ng-disabled="!dashboard.isProjectSelected">Go to project</button>
+                </div>
+            </div>-->
+    </div>
+
+    <div class="row" data-intro="Reports that meet your critera will be listed in the table below. You can further search, sort and filter the results to find just what you are looking for." data-position="top table-tooltip">
+        <hr class="margin-bottom">
+        <table id="appBridgeDataTable" class="table table-bordered table-condensend table-hover table-header-shaded small">
+            <thead>
+                <tr class="dataTableRow">
+                    <th class="pointer">R</th>
+                    <th class="pointer">P</th>
+                    <th>projectName</th>
+                    <th>clientProp</th>
+                    <th>siteName</th>
+                    <th>address </th>
+                    <th>city </th>
+                    <th>state</th>
+                    <th>reportType </th>
+                    <th>creationDate</th>
+                    <th>siteID </th>
+                </tr>
+
+                <tr id="filterrow" class="th-bg-white">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

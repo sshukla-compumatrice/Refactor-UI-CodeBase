@@ -1,0 +1,331 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.section1Title}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><div><div><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' data-ng-model='contentValues.ckEditData.value1' contenteditable='true' data-ck-editor></div></div><br><p>Please refer to Default Language for narrative options for this section.</p><br><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' data-ng-model='contentValues.ckEditData.value2' contenteditable='true' data-ck-editor ></div></div></div></div><br><vertical-table table='contentValues.verticalTable'></vertical-table><div ng-repeat='form in contentValues.forms'><div dynamic-form dynamic-form-data='form'></div></div>",
+    "contentValues": {
+        "section1Title": "3.0 Reason For Performing Phase I ESA",
+        "ckEditData": {
+            "value1": "The purpose of this Phase I Environmental Site Assessment (ESA) was to identify existing or potential Recognized Environmental Conditions (as defined by ASTM Standard E 1527-05) in connection with the Subject Property. {ConsultantName} understands that the findings of this study will be used to evaluate a pending financial transaction in connection with the Subject Property.The Phase I ESA is being conducted as part of environmental due diligence prior to property transfer or refinancing.",
+            "value2": "Write your comments here..."
+        },
+        "choice": {
+            "Y": "EDR Environmental Consulting",
+            "N": "EDR Environmental Application Development and Support",
+            "NS": "EDR Environmental Testing"
+        },
+        "table": {
+            "title": "At A Glance Description:",
+            "r11": "Item",
+            "r12": "Condition",
+            "r21": "General Condition",
+            "r22": "Good"
+        },
+        "tagData": "Please refer to Default Language for Reason For Performing Phase I ESA.",
+        "verticalTable": {
+            "header": {
+                "text": "This is the table header text"
+            },
+            "structure": [{
+                "label": "Utility",
+                "type": "text",
+                "defaultValue": "default utility val",
+                "colspan": 1,
+                "width": 30,
+                "align": "left",
+                "textWidth": 30,
+                "columnIndex": 1,
+                "rowIndex": 1
+            }, {
+                "label": "Provider",
+                "type": "text",
+                "defaultValue": "default provider val",
+                "colspan": 1,
+                "width": 30,
+                "align": "left",
+                "textWidth": 30,
+                "columnIndex": 2,
+                "rowIndex": 1
+            }, {
+                "label": "Comments",
+                "type": "text",
+                "defaultValue": "default comments val",
+                "colspan": 1,
+                "width": 40,
+                "align": "left",
+                "textWidth": 40,
+                "columnIndex": 3,
+                "rowIndex": 1
+            }],
+            "data": [{
+                "Utility": "Utility 1",
+                "Provider": "Provider 1",
+                "Comments": "Comments 1"
+            }, {
+                "Utility": "Utility 2",
+                "Provider": "Provider 2"
+            }],
+            "footer": {
+                "text": "This is the table footer text"
+            }
+        },
+        "forms": [{
+            "name": "Test Dyanmic Form",
+            "url": "http://someserver/service/resource",
+            "fields": [{
+                "mappedField": "name",
+                "fieldLabel": "Name",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 1,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "Test Site",
+                "fieldOption": []
+            }, {
+                "mappedField": "address",
+                "fieldLabel": "Address",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "6 Armstrong Road",
+                "fieldOption": []
+            }, {
+                "mappedField": "city",
+                "fieldLabel": "City",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "Shelton",
+                "fieldOption": []
+            }, {
+                "mappedField": "state",
+                "fieldLabel": "State",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "CT",
+                "fieldOption": []
+            }, {
+                "mappedField": "zip",
+                "fieldLabel": "Zip",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "06484",
+                "fieldOption": []
+            }, {
+                "mappedField": "county",
+                "fieldLabel": "County",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "ddd",
+                "fieldOption": []
+            }, {
+                "mappedField": "latitude",
+                "fieldLabel": "Latitude",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "12.12",
+                "fieldOption": []
+            }, {
+                "mappedField": "longitude",
+                "fieldLabel": "Longitude",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "98.54185",
+                "fieldOption": []
+            }, {
+                "mappedField": "regeocode",
+                "fieldLabel": "Re-geocode on save",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "radiooption",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "1111",
+                "tooltip": null,
+                "fieldValue": "",
+                "fieldOption": []
+            }, {
+                "mappedField": "siteRepresentative",
+                "fieldLabel": "Site Representative",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "text",
+                "orderIndex": 2,
+                "isVisible": 1,
+                "fieldGUID": "",
+                "tooltip": null,
+                "fieldValue": "Subhash",
+                "fieldOption": []
+            }, {
+                "mappedField": "email",
+                "fieldLabel": "Email",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "email",
+                "orderIndex": 9,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "aa@rr.com",
+                "fieldOption": []
+            }, {
+                "mappedField": "assessmentDate",
+                "fieldLabel": "Assessment Date",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldType": "date",
+                "orderIndex": 10,
+                "isVisible": 1,
+                "fieldGUID": "345sdfsd23y1djbvsk",
+                "tooltip": null,
+                "fieldValue": "11/25/2015",
+                "fieldOption": []
+            }, {
+                "mappedField": "summaryText",
+                "fieldLabel": "Enter Summary Text",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldOptions": [],
+                "fieldType": "ckEditor",
+                "orderIndex": 1,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "<p><strong>this is test summary data</strong></p>",
+                "fieldOption": []
+            }, {
+                "mappedField": "type",
+                "fieldLabel": "Property Type",
+                "isEditable": 1,
+                "isRequired": 0,
+                "defaultValue": null,
+                "fieldGroup": "",
+                "fieldOptions": [],
+                "fieldType": "dropdown",
+                "orderIndex": 1,
+                "isVisible": 1,
+                "fieldGUID": "-- --",
+                "tooltip": null,
+                "fieldValue": "Commercial",
+                "fieldOption": [{
+                    "option_name": "Apartment Complex",
+                    "subOption": [],
+                    "option_value": "Apartment Complex",
+                    "orderIndex": 1,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Assisted Living",
+                    "subOption": [],
+                    "option_value": "Assisted Living",
+                    "orderIndex": 2,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Commercial",
+                    "subOption": [],
+                    "option_value": "Commercial",
+                    "orderIndex": 3,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Fuel Center",
+                    "subOption": [],
+                    "option_value": "Fuel Center",
+                    "orderIndex": 4,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Golf Club",
+                    "subOption": [],
+                    "option_value": "Golf Club",
+                    "orderIndex": 5,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Healthcare - Mixed Use per Bed",
+                    "subOption": [],
+                    "option_value": "Healthcare - Mixed Use per Bed",
+                    "orderIndex": 6,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Healthcare - Mixed Use per Room",
+                    "subOption": [],
+                    "option_value": "Healthcare - Mixed Use per Room",
+                    "orderIndex": 7,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Hospital",
+                    "subOption": [],
+                    "option_value": "Hospital",
+                    "orderIndex": 8,
+                    "isDefault": 0
+                }, {
+                    "option_name": "Hospital - per Bed",
+                    "subOption": [],
+                    "option_value": "Hospital - per Bed",
+                    "orderIndex": 9,
+                    "isDefault": 0
+                }]
+            }]
+        }]
+
+    },
+    "sectionID": 3,
+    "name": "Reason For Performing Phase I ESA",
+    "number": "2.1"
+}

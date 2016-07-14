@@ -1,0 +1,137 @@
+<div class="container-fluid">
+    <div>
+        <a ng-click="dynamicFormCtrl.displayForm()" class="pointer">{{formData.name}}</a>
+    </div>
+    <script id="formDisplay.html" type="text/ng-template">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="panel-title">{{formData.name}}</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-right">
+                            <a class="pointer" data-toggle="tooltip" data-placement="top" title="Edit" ng-hide="displayFormCtrl.editMode" ng-click="displayFormCtrl.enableEdit()"><span class="glyphicon glyphicon-pencil"> </span></a>
+                            <div ng-show="displayFormCtrl.editMode">
+                                <input class="btn btn-primary" type="button" value="Save" ng-click="displayFormCtrl.save()" user-action="{{formData.name}} updated ">
+                                <input class="btn btn-default" type="button" value="Cancel" ng-click="displayFormCtrl.cancelEdit()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="row" ng-repeat="field in formData.fields | orderBy: 'orderIndex'">
+
+                        <div class="form-group" ng-show="field.isVisible">
+                            <label ng-if="field.fieldType != 'ckEditor'" class="control-label col-md-4 col-xs-12">{{field.fieldLabel}} : </label>
+
+                            <!-- control by field type here -->
+
+
+
+                            <div ng-switch="field.fieldType" ng-class="{'col-md-12 col-xs-12': field.fieldType == 'ckEditor', 'col-md-6 col-xs-12': field.fieldType != 'ckEditor'}">
+
+                                <!-- input control -->
+                                <div ng-switch-when="text">
+                                    <span class="form-control" ng-click="displayFormCtrl.enableEdit($index)" ng-hide="displayFormCtrl.editMode">{{field.fieldValue}}</span>
+                                    <input type="text" id="editDataField_{{formData.name}}_{{$index}}" class="form-control" ng-model="field.fieldValue" ng-show="displayFormCtrl.editMode" ng-required={ {generalInfoDataField.isRequired}}>
+
+                                </div>
+                                <!-- input control ends -->
+
+                                <!-- checkbox control -->
+                                <div ng-switch-when="checkbox" class="form-control-static">
+                                    <input type="checkbox" id="editDataField_{{formData.name}}_{{$index}}" ng-readonly="true" ng-hide="displayFormCtrl.editMode" ng-model="field.fieldValue" ng-click="displayFormCtrl.enableEdit($index);" ng-checked="field.fieldValue">
+                                    <input type="checkbox" id="editDataField_{{formData.name}}_{{$index}}" ng-readonly="false" ng-show="displayFormCtrl.editMode" ng-model="field.fieldValue" ng-checked="field.fieldValue">
+                                </div>
+                                <!-- checkbox control ends -->
+
+                                <!-- radio control -->
+                                <div ng-switch-when="radio" class="form-control-static">
+                                    <input type="radio" id="editDataField_{{formData.name}}_{{$index}}" ng-model="field.fieldValue" ng-readonly="true" ng-hide="displayFormCtrl.editMode" ng-change="displayFormCtrl.enableEdit($index)" value="field.fieldValue">
+                                    <input type="radio" id="editDataField_{{formData.name}}_{{$index}}" ng-model="field.fieldValue" ng-readonly="false" ng-show="displayFormCtrl.editMode" value="field.fieldValue">
+                                </div>
+                                <!-- radio control ends -->
+
+                                <!-- email control -->
+                                <div ng-switch-when="email">
+                                    <span class="form-control" ng-click="displayFormCtrl.enableEdit($index)" ng-hide="displayFormCtrl.editMode">{{field.fieldValue}}</span>
+                                    <input type="email" id="editDataField_{{formData.name}}_{{$index}}" class="form-control" ng-show="displayFormCtrl.editMode" ng-model="field.fieldValue">
+                                </div>
+                                <!-- email control ends -->
+
+                                <!-- date control -->
+                                <div ng-switch-when="date">
+                                    <span class="form-control" ng-click="displayFormCtrl.enableEdit($index); displayFormCtrl.openCalendar($event, field.fieldGUID);" ng-hide="displayFormCtrl.editMode">{{field.fieldValue}}</span>
+                                    <div class=" input-group" ng-show="displayFormCtrl.editMode">
+                                        <input type="text" class="form-control" datetime-picker="dd MMM yyyy" ng-model="field.fieldValue" is-open="displayFormCtrl.open[field.fieldGUID]" enable-time="false" datepicker-options="displayFormCtrl.dateOptions" date-disabled="displayFormCtrl.disabled(date, mode)" close-on-date-selection="true" datepicker-append-to-body="false" name="date" ng-click="displayFormCtrl.openCalendar($event, field.fieldGUID)">
+                                        <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="displayFormCtrl.openCalendar($event, field.fieldGUID)"><i class="fa fa-calendar"></i></button>
+                            </span>
+                                    </div>
+                                </div>
+                                <!-- date control ends -->
+
+                                <!-- dropdown control -->
+                                <div ng-switch-when="dropdown">
+
+                                    <select ng-model="field.fieldValue" ng-click="displayFormCtrl.enableEdit($index)" isRequired={{field.isRequired}} ng-disabled="!field.isEditable" class="form-control" dynamic-name="field.fieldName" data-ng-options="option.option_name as option.option_name for option in field.fieldOption" data-ng-change="generalInfoDataField.dropdownChange(field.mappedField,field.fieldValue)" ng-show="field.isVisible">
+
+                                        <option value="">Select {{field.fieldLabel}}</option>
+                                    </select>
+
+                                </div>
+                                <!-- dropdown ends -->
+                                <!-- radio option starts -->
+
+                                <div id="radioDivOption" class="radio" ng-switch-when="radiooption">
+
+                                    <label>
+                                        <input type="radio" name="{{field.mappedField}}_{{$index}}" id="optionsRadios1" value="1" ng-click="displayFormCtrl.enableEdit($index);generalInfoDataField.radioOption_yes(formData.name,$index)" ng-model="field.fieldValue" ng-init="field.fieldValue = 0;"> Yes
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="{{field.mappedField}}_{{$index}}" id="optionsRadios1" ng-click="displayFormCtrl.enableEdit($index);generalInfoDataField.radioOption_no(formData.name,$index)" value="0" checked ng-model="field.fieldValue"> No
+                                    </label>
+
+
+
+                                    <!--
+                                <label class="btn btn-primary" ng-click="displayFormCtrl.enableEdit($index);generalInfoDataField.radioOption_yes(formData.name,$index)">
+                                    <input type="radio" name="options" id="option2" autocomplete="off" value="1"> Yes
+                                </label>
+                                <label class="btn btn-primary" ng-click="displayFormCtrl.enableEdit($index);generalInfoDataField.radioOption_no(formData.name,$index)">
+                                    <input type="radio" name="options" id="option3" autocomplete="off" value="0"> No
+                                </label>
+-->
+                                </div>
+                                <!-- radio option ends -->
+
+
+                                <!-- ckEditor starts -->
+                                <div ng-switch-when="ckEditor">
+                                    <!--                                                                <span ng-show="!language.editmode" ng-bind-html="dll.renderHtml(language.text)"></span>-->
+
+                                    <div class='boxCK nomargin row'>
+                                        <span class='editCK'>edit</span>
+                                        <div ng-click="displayFormCtrl.enableEdit($index)">
+                                            <div name="ck" class="textCK form-control" type="text" ng-model="displayFormCtrl.ckVal" data-ck-editor remove-ck-plugin="saveReportWritingCkData">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- ckEditor ends -->
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script>
+</div>

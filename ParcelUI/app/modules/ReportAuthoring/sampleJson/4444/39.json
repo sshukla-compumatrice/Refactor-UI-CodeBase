@@ -1,0 +1,203 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.6 Wastewater and Storm Water Discharges",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Feature Identified",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Used for Waste Disposal",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Details",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Product Observed",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Details",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Odor Noted?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Details",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Staining Observed?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Details",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Ultimate Discharge Point",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Details",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }],
+            "data": [{
+                "Feature Identified": "Catch basin(s)Floor drain(s)Ditch(es)Dry well(s)Sump(s)Septic tank(s)Cistern(s)Cesspool(s)Slop sink(s)Other",
+                "Quantity": "",
+                "Specific Location": "",
+                "Used for Waste Disposal": "YesNo",
+                "Specific Details": "",
+                "Product Observed": "YesNo",
+                "Odor Noted?": "YesNo",
+                "Staining Observed?": "YesNoUnk",
+                "Ultimate Discharge Point": "Sanitary sewerStormwater sewerSeptic systemDry wellSurface water bodyGround surfaceBelow groundUnknownOther"
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

@@ -1,0 +1,72 @@
+
+
+
+
+
+<div id="appendixContent" >
+<div class="container-fluid" id="top-content" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+    <div class="row">
+
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+
+            <div class="top-margin-lg">
+                <div id="alertSiteDetailsMsgDiv" ng-show="appendixList.showAlert" class="alert alert-dismissible alert-danger" role="alert">
+                    <button type="button" class="close" ng-click="appendixList.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{appendixList.serviceMessage}}
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed small">
+                        <thead>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Uploaded By
+                            </th>
+                            <th>
+                                Uploaded On
+                            </th>
+                            <th>
+                                Size
+                            </th>
+                            <th>
+                                Pages
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="info in appendixList.filesArray">
+                                <td><a appendixobject="info" appendixlist = "appendixList" embed-content class="pointer">{{info.fileName}}</a></td>
+                                <td>{{info.uploadedByName}}</td>
+                                <td>{{info.uploadDateTime}}</td>
+                                <td>{{info.filesize}}</td>
+                                <td>{{info.pages}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="bottom-content" ng-if = "appendixList.displayDoc"></div>
+
+<div id="content-resizer"  ng-if = "appendixList.displayDoc"
+  			resizer="horizontal" 
+  			resizer-height="6" 
+  			resizer-top="#top-content" 
+  			resizer-bottom="#bottom-content">
+  		</div>
+
+
+</div>
+
+ 
+
+    
+
+

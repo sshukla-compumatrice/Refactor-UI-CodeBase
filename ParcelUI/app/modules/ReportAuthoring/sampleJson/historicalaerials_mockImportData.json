@@ -1,0 +1,16 @@
+{
+                "data" : [{
+                                                "YEAR" : "1983",
+                                                "SCALE" : "500",
+                                                "SUBJECT PROPERTY" : "Test data1",
+                                                "SURROUNDING AREA" : "Test data1"
+                                }, {
+                                                "YEAR" : "1994",
+                                                "SCALE" : "500",
+                                                "SUBJECT PROPERTY" : "Test data2",
+                                                "SURROUNDING AREA" : "Test data2"
+                                }
+                ]
+}
+
+

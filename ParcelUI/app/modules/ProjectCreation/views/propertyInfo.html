@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <span data-target="#collapsePropInfo">Property Information</span>
+        </h5>
+    </div>
+    <div id="collapsePropInfo" class="panel-collapse collapse in">
+        <div class="panel-body" ng-controller="PropertyInfoCtrl as propertyInfo">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="clientPropNum" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Client Property Number:
+                    </label>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="clientPropNum" ng-model="main.submitData.property.propertyNumber">
+                    </div>
+
+                </div>
+                <div class="form-group required">
+                    <label for="propName" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Property Name:
+                    </label>
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Property Name">
+                        <input type="text" class="form-control" id="propName" ng-model="main.submitData.property.name" required name="propName">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group required">
+                    <label for="address" class="control-label col-md-3 col-sm-3 col-xs-12">Address:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Address">
+
+                        <input type="text" class="form-control" id="address" ng-model="main.submitData.property.address1" required name="address">
+                    </div>
+
+                </div>
+                <div class="form-group">
+
+                    <div class="col-sm-offset-3 col-xs-12 col-md-4 col-sm-5">
+                        <input type="text" class="form-control" id="address" ng-model="main.submitData.property.address2" name="address1">
+                    </div>
+                </div>
+
+                <div class="form-group required">
+                    <label for="city" class="control-label col-md-3 col-sm-3 col-xs-12">City:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="City">
+
+                        <input type="text" class="form-control" id="city" ng-model="main.submitData.property.city" required name="city">
+                    </div>
+
+                </div>
+
+                <div class="form-group required">
+                    <label for="country" class="control-label col-md-3 col-sm-3 col-xs-12">Country:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Country">
+
+                        <!--<select class="form-control" id="country" type="select"
+                            name="Roles" ng-model="main.submitData.property.country"
+                            data-ng-options="country for country in main.countries" required name="country">
+                        <option value="">Select Country</option>
+                    </select>-->
+                        <select class="form-control" id="country" type="select" country-model="main.submitData.property.country" country-select name="propertyInfoCountry" required>
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group required">
+                    <label for="state" class="control-label col-md-3 col-sm-3 col-xs-12">State:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4" field-validation="State">
+
+                        <select class="form-control" id="state" type="select" state-model="main.submitData.property.state" state-select country-model="main.submitData.property.country" name="propertyState" required>
+                            <option value="">Select State</option>
+                        </select>
+                        <input type="text" class="form-control" id="state" ng-model="main.submitData.property.state" required name="propertyStateIp" state-input>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="zip" class="control-label col-md-3 col-sm-3 col-xs-12">Zip:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input name="zipcode" type="text" class="form-control" id="zip" ng-model="main.submitData.property.zip">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

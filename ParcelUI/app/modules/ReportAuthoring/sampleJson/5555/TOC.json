@@ -1,0 +1,470 @@
+{
+
+    "sectionNumber": "",
+    "sectionName": "",
+    "clickable": false,
+    "sectionID": 0,
+    "sectionGUID": "c921d5c3-014b-432b-a493-93df708cba54",
+    "sections": [
+        {
+            "sectionNumber": "",
+            "sectionName": "General Information",
+            "clickable": true,
+            "isGeneralInfo": true,
+            "sectionID": 1,
+            "sectionGUID": "69591f0d-cfc3-451d-bd3c-9985356b2167",
+            "sections": []
+
+    },
+        {
+            "sectionNumber": "1",
+            "sectionName": "Executive Summary ",
+            "clickable": true,
+            "sectionID": 2,
+            "sectionGUID": "072662b6-eb7f-4cbb-9d29-3751eb94d29b",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": "2",
+            "sectionName": "Purpose and Scope ",
+            "clickable": true,
+            "sectionID": 3,
+            "sectionGUID": "88b128d5-46e0-4120-b3bf-9ac61b78b348",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": "3",
+            "sectionName": "System Description and Observations",
+            "clickable": false,
+            "sectionID": 4,
+            "sectionGUID": "0d020da1-8f6d-4d33-92de-f99e0b3ee914",
+            "isGeneralInfo": false,
+            "sections": [
+                {
+                    "sectionNumber": "3.1",
+                    "sectionName": "Overall General Description ",
+                    "clickable": true,
+                    "sectionID": 5,
+                    "sectionGUID": "7b35a8ff-e7ab-4ddd-8893-02d26899b294",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.1.1",
+                            "sectionName": "Building Summary ",
+                            "clickable": true,
+                            "sectionID": 6,
+                            "sectionGUID": "ce2cad97-6e3b-4e19-bec0-5e8daef79e6d",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.1.2",
+                            "sectionName": "Other Structures ",
+                            "clickable": true,
+                            "sectionID": 7,
+                            "sectionGUID": "70d6e9fe-0cd9-4951-bd10-ca0e749820e0",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.1.3",
+                            "sectionName": "Accessibility to Disabled Persons ",
+                            "clickable": true,
+                            "sectionID": 8,
+                            "sectionGUID": "5b6cf78f-61c7-48cd-90b8-c751a665fd0b",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        },
+                {
+                    "sectionNumber": "3.2",
+                    "sectionName": "Site",
+                    "clickable": false,
+                    "sectionID": 9,
+                    "sectionGUID": "09cf24ff-7e50-4c0e-8a9b-15a2e8972e9d",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.2.1",
+                            "sectionName": "Topography ",
+                            "clickable": true,
+                            "sectionID": 10,
+                            "sectionGUID": "6470c392-c929-4ebf-83be-1c610d77d2e8",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.2",
+                            "sectionName": "Storm Water Drainage ",
+                            "clickable": true,
+                            "sectionID": 11,
+                            "sectionGUID": "e388ee6c-1b1b-423e-bde6-48024c19df38",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.3",
+                            "sectionName": "Access and Egress ",
+                            "clickable": true,
+                            "sectionID": 12,
+                            "sectionGUID": "221ee758-b202-4a7c-941a-ad700f97d2ea",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.4",
+                            "sectionName": "Paving, Curbing and Parking ",
+                            "clickable": true,
+                            "sectionID": 13,
+                            "sectionGUID": "b1710793-18c4-48a7-9aa9-3b006152bc82",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.5",
+                            "sectionName": "Flatwork ",
+                            "clickable": true,
+                            "sectionID": 14,
+                            "sectionGUID": "af529d4c-6700-41cf-8f54-3606bf36728c",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.6",
+                            "sectionName": "Landscaping and Appurtenances ",
+                            "clickable": true,
+                            "sectionID": 15,
+                            "sectionGUID": "42ecd914-477a-450b-98b8-b4353636655c",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.7",
+                            "sectionName": "Recreational Facilities ",
+                            "clickable": true,
+                            "sectionID": 16,
+                            "sectionGUID": "bebc2aac-579e-4334-85d4-f35ace771a23",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.2.8",
+                            "sectionName": "Utilities ",
+                            "clickable": true,
+                            "sectionID": 17,
+                            "sectionGUID": "d309da12-84cf-4c6a-8550-8e567fcbe194",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        },
+                {
+                    "sectionNumber": "3.3",
+                    "sectionName": "Structural Frame and Building Envelope",
+                    "clickable": false,
+                    "sectionID": 18,
+                    "sectionGUID": "b296c827-1811-4b2d-bc25-569eac346e6c",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.3.1",
+                            "sectionName": "Foundation ",
+                            "clickable": true,
+                            "sectionID": 19,
+                            "sectionGUID": "7e585476-a1f4-4e1f-a373-747389d0c803",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.3.2",
+                            "sectionName": "Building Frame ",
+                            "clickable": true,
+                            "sectionID": 20,
+                            "sectionGUID": "99200f50-1578-4f2c-a8c8-1155ec43cb3c",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.3.3",
+                            "sectionName": "Facades or Curtainwall ",
+                            "clickable": true,
+                            "sectionID": 21,
+                            "sectionGUID": "5672cc3a-a21b-46f1-a89e-8c397f9aad39",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.3.4",
+                            "sectionName": "Roofing ",
+                            "clickable": true,
+                            "sectionID": 22,
+                            "sectionGUID": "9f1b78f7-504f-49e4-86dd-9f001accd370",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.3.5",
+                            "sectionName": "Exterior and Interior Stairs ",
+                            "clickable": true,
+                            "sectionID": 23,
+                            "sectionGUID": "003f8a1b-5673-4f62-acdf-f506954e40f5",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.3.6",
+                            "sectionName": "Patio, Terrace, and Balcony ",
+                            "clickable": true,
+                            "sectionID": 24,
+                            "sectionGUID": "19881ea4-47bd-4464-bb6c-de382707b67e",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        },
+                {
+                    "sectionNumber": "3.4",
+                    "sectionName": "Mechanical and Electrical Systems",
+                    "clickable": false,
+                    "sectionID": 25,
+                    "sectionGUID": "6e49274f-be0f-4c72-830a-a9b83e5185d6",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.4.1",
+                            "sectionName": "Plumbing ",
+                            "clickable": true,
+                            "sectionID": 26,
+                            "sectionGUID": "0609ab93-d199-4b9e-80af-b71fc21ad6be",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.4.2",
+                            "sectionName": "Heating ",
+                            "clickable": true,
+                            "sectionID": 27,
+                            "sectionGUID": "9754d1d1-86e2-4628-b0dd-7b3172e92cfc",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.4.3",
+                            "sectionName": "Air Conditioning and Ventilation ",
+                            "clickable": true,
+                            "sectionID": 28,
+                            "sectionGUID": "40311c6a-ba95-4e93-a3eb-00d5318e256f",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.4.4",
+                            "sectionName": "Electrical ",
+                            "clickable": true,
+                            "sectionID": 29,
+                            "sectionGUID": "5a301959-4da3-4652-9ac2-cd6e4bea90f5",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        },
+                {
+                    "sectionNumber": "3.5",
+                    "sectionName": "Vertical Transportation ",
+                    "clickable": true,
+                    "sectionID": 30,
+                    "sectionGUID": "c8bf057e-6742-4b98-b568-1856b65cbdd5",
+                    "isGeneralInfo": false,
+                    "sections": []
+        },
+                {
+                    "sectionNumber": "3.6",
+                    "sectionName": "Life Safety/Fire Protection",
+                    "clickable": false,
+                    "sectionID": 31,
+                    "sectionGUID": "cde89dfb-bd8a-45ac-b06c-7573b63e12aa",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.6.1",
+                            "sectionName": "Sprinklers and Standpipes ",
+                            "clickable": true,
+                            "sectionID": 32,
+                            "sectionGUID": "98f23145-5e19-40bd-a25e-88d0ec039042",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.6.2",
+                            "sectionName": "Alarm Systems ",
+                            "clickable": true,
+                            "sectionID": 33,
+                            "sectionGUID": "76b46d6a-bb24-4ce8-94c4-ab8c6b7dfb0b",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.6.3",
+                            "sectionName": "Other Systems ",
+                            "clickable": true,
+                            "sectionID": 34,
+                            "sectionGUID": "6fb0d514-64a5-45ba-9d19-47260a627b49",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        },
+                {
+                    "sectionNumber": "3.7",
+                    "sectionName": "Interior Elements",
+                    "clickable": false,
+                    "sectionID": 35,
+                    "sectionGUID": "12fd02ca-c740-4bf6-ad39-7146e244399c",
+                    "isGeneralInfo": false,
+                    "sections": [
+                        {
+                            "sectionNumber": "3.7.1",
+                            "sectionName": "Common Areas ",
+                            "clickable": true,
+                            "sectionID": 36,
+                            "sectionGUID": "09546e61-4b87-4296-b937-b81d09d504fb",
+                            "isGeneralInfo": false,
+                            "sections": []
+            },
+                        {
+                            "sectionNumber": "3.7.2",
+                            "sectionName": "Tenant Spaces ",
+                            "clickable": true,
+                            "sectionID": 37,
+                            "sectionGUID": "8f188c0d-1110-471a-9e30-0d92e86977c0",
+                            "isGeneralInfo": false,
+                            "sections": []
+            }
+          ]
+        }
+      ]
+    },
+        {
+            "sectionNumber": "4",
+            "sectionName": "Additional Considerations ",
+            "clickable": true,
+            "sectionID": 38,
+            "sectionGUID": "8edd0649-b91c-4776-9813-d8e0f1ac44aa",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": "5",
+            "sectionName": "Document Review and Interviews",
+            "clickable": false,
+            "sectionID": 39,
+            "sectionGUID": "f7d78bfb-022f-4a6c-9ba5-5331de1b95ff",
+            "isGeneralInfo": false,
+            "sections": [
+                {
+                    "sectionNumber": "5.1",
+                    "sectionName": "Building and Fire Code Compliance ",
+                    "clickable": true,
+                    "sectionID": 40,
+                    "sectionGUID": "f92871b5-10bb-434e-b858-fbb92038551e",
+                    "isGeneralInfo": false,
+                    "sections": []
+        },
+                {
+                    "sectionNumber": "5.2",
+                    "sectionName": "Document Review ",
+                    "clickable": true,
+                    "sectionID": 41,
+                    "sectionGUID": "109f9b67-73f4-42a7-b8e4-b6d21eb97b7f",
+                    "isGeneralInfo": false,
+                    "sections": []
+        },
+                {
+                    "sectionNumber": "5.3",
+                    "sectionName": "Interviews ",
+                    "clickable": true,
+                    "sectionID": 42,
+                    "sectionGUID": "2694467a-d3ab-465b-bf85-bcdd45b84e57",
+                    "isGeneralInfo": false,
+                    "sections": []
+        }
+      ]
+    },
+        {
+            "sectionNumber": "6",
+            "sectionName": "Opinions of Probable Costs to Remedy Physical Deficiencies ",
+            "clickable": true,
+            "sectionID": 43,
+            "sectionGUID": "44e715b1-5ac1-4aa5-83b2-50736d23dbaa",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": "7",
+            "sectionName": "Out of Scope Considerations ",
+            "clickable": true,
+            "sectionID": 44,
+            "sectionGUID": "497e08a2-8543-4b2d-b5bc-796099498e87",
+            "isGeneralInfo": false,
+            "sections": [
+                {
+                    "sectionNumber": "7.1",
+                    "sectionName": "Flood Plain ",
+                    "clickable": true,
+                    "sectionID": 45,
+                    "sectionGUID": "fbd877a5-2a27-42d2-9a1c-e0a2e5ceaf56",
+                    "isGeneralInfo": false,
+                    "sections": []
+        },
+                {
+                    "sectionNumber": "7.2",
+                    "sectionName": "Moisture Intrusion ",
+                    "clickable": true,
+                    "sectionID": 46,
+                    "sectionGUID": "c6f915a8-0dee-48d4-ad22-70cdc4503fc1",
+                    "isGeneralInfo": false,
+                    "sections": []
+        },
+                {
+                    "sectionNumber": "7.3",
+                    "sectionName": "Seismic Zone ",
+                    "clickable": true,
+                    "sectionID": 47,
+                    "sectionGUID": "38107092-3016-4c7b-a883-425f3bde0ce5",
+                    "isGeneralInfo": false,
+                    "sections": []
+        }
+      ]
+    },
+        {
+            "sectionNumber": "8",
+            "sectionName": "Qualifications ",
+            "clickable": true,
+            "sectionID": 48,
+            "sectionGUID": "0b385243-274c-48c2-9852-b8d7d0914d96",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": "9",
+            "sectionName": "Limiting Conditions ",
+            "clickable": true,
+            "sectionID": 49,
+            "sectionGUID": "d438cd70-a31b-4fb8-858c-a72a3774f4c8",
+            "isGeneralInfo": false,
+            "sections": []
+    },
+        {
+            "sectionNumber": " ",
+            "sectionName": "Cost Tables ",
+            "clickable": true,
+            "sectionID": 50,
+            "sectionGUID": "167e7434-508a-45ec-b90f-2c91ab7641ec",
+            "isGeneralInfo": false,
+            "sections": []
+    }
+  ]
+}

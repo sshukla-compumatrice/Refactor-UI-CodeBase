@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+
+
+    </style>
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class="collapsed pointer" data-toggle="collapse" 
+               data-target="#collapseClientInfo">Client Information</a>
+        </h5>
+    </div>
+    <div id="collapseClientInfo" class="panel-collapse collapse ">
+        <div class="panel-body" ng-controller="ClientInfoCtrl as clientInfo">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="comapnyName" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Company Name:
+                    </label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" name="comapnyName" id="comapnyName" ng-model="clientInfo.data.client.companyName"> <a class="pointer" ng-click="clientInfo.ShowFindContact()">Find Contact</a>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="contact" class="control-label col-md-3 col-sm-3 col-xs-12">Contact:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" name="contact" id="contact" ng-model="clientInfo.data.client.contactName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="control-label col-md-3 col-sm-3 col-xs-12">Address:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="address" name="addressfield" ng-model="clientInfo.data.client.address">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="control-label col-md-3 col-sm-3 col-xs-12">City:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="city" ng-model="clientInfo.data.client.city" name="City">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="control-label col-md-3 col-sm-3 col-xs-12">Country:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="country" type="select" name="Roles" country-model="clientInfo.data.client.country" country-select>
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="state" class="control-label col-md-3 col-sm-3 col-xs-12">State:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="state" type="select" state-model="clientInfo.data.client.state" state-select country-model="clientInfo.data.client.country" name="clientState">
+                            <option value="">Select State</option>
+                        </select>
+                        <input type="text" class="form-control" id="state" ng-model="clientInfo.data.client.state" state-input name="clientState">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="zip" class="control-label col-md-3 col-sm-3 col-xs-12">Zip:</label>
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <input type="text" class="form-control" id="zip" ng-model="clientInfo.data.client.zip" name="zip">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

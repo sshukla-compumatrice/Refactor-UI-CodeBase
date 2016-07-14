@@ -1,0 +1,51 @@
+<div id="spreadsheetTable">
+    <div class="bottom-margin-sm top-margin-sm">
+        <div class="form-inline">
+            <button ng-show="!editmode && table.data.length>0" class="btn btn-md btn-primary" ng-click="editTable()">Edit Table</button>
+            <button type="button" ng-click="addRow()" class="btn btn-md btn-primary" ng-show="table.data.length<=0">Create table with</button>
+            <button type="button" ng-click="addRow()" class="btn btn-md btn-primary" ng-show="!editmode && table.data.length>0">Add</button>
+            <div class="form-group" ng-show="!editmode || table.data.length<=0">
+                <input type="text" class="form-control" ng-model="numberOfRowsAdd"> Row(s) to table
+            </div>
+            <button ng-click="deleteTable()" type="button" ng-click="deleteTable()" class="btn btn-md btn-danger" ng-show="!editmode && table.data.length>0">Delete Table</button>
+            <button ng-click="showHistory(editmode)" type="button" class="btn btn-md btn-primary" ng-show="!editmode && table.data.length>0" data-toggle="tooltip" data-placement="top" title="Undo/View History"><i class="fa fa-history"></i></button>
+        </div>
+        <div ng-show="editmode && table.data.length>0">
+            <button type="button" class="btn btn-md btn-primary" ng-click="saveChanges()">Save Changes</button>
+            <button type="button" class="btn btn-md btn-primary" ng-click="spellCheckTable($event.target)">Check Spelling</button>
+
+            <button type="button" class="btn btn-md btn-default" ng-click="cancelChanges()">Cancel</button>
+            <button ng-click="showHistory(editmode)" type="button" class="btn btn-md btn-primary" data-toggle="tooltip" data-placement="top" title="Undo/View History"><i class="fa fa-history"></i></button>
+        </div>
+
+    </div>
+
+    <div class="table-responsive">
+        <table ng-show="table.data.length>0" class="table table-bordered table-condensed" ng-class="{'table-striped':!editmode}">
+            <thead>
+                <th ng-show="!editmode" class="edit-action">Actions</th>
+                <th ng-repeat="col in table.structure">{{col.label}}</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in table.data" ng-click="rowEditClick()">
+                    <td ng-show="!editmode" class="tableAwaitingAcceptance-action">
+                        <div class="btn-group">
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Duplicate Row" ng-click="duplicateRow(data)"><span class="glyphicon glyphicon-duplicate"></span></button>
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Move to top" ng-click="moveToEnd($index, 0, 'UP')"><span class="glyphicon glyphicon-step-backward fa-rotate-90"></span></button>
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Move Up" ng-click="moveUp($index)"><span class="glyphicon glyphicon-chevron-up"></span></button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Delete Row" ng-click="deleteRow($index)"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Move to bottom" ng-click="moveToEnd($index, table.data.length-1, 'DOWN')"><span class="glyphicon glyphicon-step-backward fa-rotate-270"></span></button>
+                            <button class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" data-container="body" title="Move Down" ng-click="moveDown($index)"><span class="glyphicon glyphicon-chevron-down"></span></button>
+                        </div>
+                    </td>
+
+                    <td ng-repeat="col in table.structure | filter: { rowIndex : rowIndexVal } | orderBy: 'columnIndex'" width="{{col.width}}" style="text-align: {{col.align}};">
+                        <div tablefield-directive field="col" parentindex="$parent.$index" index="$index" data="data[col.label]" editmode="editmode" sectionguid="sectionGuid" tablescope="spreadsheetTableScope"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

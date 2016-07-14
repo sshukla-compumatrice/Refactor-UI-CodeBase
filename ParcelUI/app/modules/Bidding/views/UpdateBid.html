@@ -1,0 +1,157 @@
+
+<div class="container-fluid" ng-controller="UpdateBidController">
+<div class="panel panel-default">
+	<div class="panel-body">
+	<h2 class="page-header">Update Bid</h2>
+    <div class="row">
+        <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"> 
+            <p class="text-warning">Questions about this RFP? Need more information? Click here to email the lender
+                <a href="#" data-toggle="tooltip" data-placement="right" title="Email"><i class="glyphicon glyphicon-envelope fa-lg marginLeft"> </i></a>
+            </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <a href="#" ui-sref="directAwardsAndBids" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-chevron-left" ></i> Back to New Requests for Bid </a> 
+
+        </div>
+    </div>
+    <hr>
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12"> 
+
+                <h5>COLLATERAL INFORMATION</h5>
+                <hr>
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Property Name:</label>
+                    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">{{propertyName}}</p></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Property Address:</label>
+                    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">{{propertyAddress}}</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-11 col-sm-11 col-md-11 col-xs-11">
+                        <div google-map ng-model="searchLocation" class="google-map">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>SCOPE OF SERVICES</h5>
+                        <hr>
+                        <div class="form-group">
+                    <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Scope of Work:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{scopeOfWork}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Requested Draft Date:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{reqDraftDate}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Requested Delivery Date:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{reqDeliveryDate}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Comments:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{comments}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Bid Deadline:</label>
+							<div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{bidDeadline}}</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>ATTACHMENTS</h5>
+                        <hr>
+                        <div class="row">
+
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                <a href="#">RFP_Details_2015_11_21_01_26_26.pdf</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>RESPONSE</h5>
+                        <hr>
+                        <div class="form-group">
+                            <label for="Fee" class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-lable">Fee:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12" show-errors>
+                                <input type="text" class="has-error form-control" id="Fee" name="Fee" required ng-model="fee">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignatoryInformation" class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-lable">Signatory Information:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12" show-errors>
+                                <input type="text" class="has-error form-control" id="SignatoryInformation" name="SignatoryInformation" ng-model="signatoryInformation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="TAT" class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-lable">Turnaround Time (TAT) from Date of Engagement (business days):</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12" show-errors>
+                                <input type="text" class="has-error form-control" id="TAT" name="TAT" ng-model="turnaroundTime" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="SubjectProperty" class="col-lg-12 col-sm-12 col-md-12 col-xs-12 control-lable">Prior Services on Subject Property:</label>
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                <textarea name="comments" class="form-control" id="SubjectProperty"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ReasonBidRetract" class="col-lg-12 col-sm-12 col-md-12 col-xs-12 control-lable">Reason for Bid Retract:</label>
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                <textarea name="comments" class="form-control" id="ReasonBidRetract"></textarea>
+                            </div>
+                        </div>
+
+                       <div class="form-group">
+							<div class="col-xs-12">
+									<button class="btn btn-md btn-success fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+										<input id="file-3" type="file" data-file-input="files">
+									</button>
+									<button type="button" class="btn btn-md btn-primary start" >
+										<span class="glyphicon glyphicon-upload"></span> Upload
+									</button>
+									<span class="AU_uploadFilename text-primary" > {{file.name}}</span>
+								</div>
+						</div>
+
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" class="btn btn-sm btn-primary">Update Response</button>
+
+                                <button type="button" class="btn btn-sm btn-default">Cancel</button> 
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+	</div>
+</div>	
+</div>

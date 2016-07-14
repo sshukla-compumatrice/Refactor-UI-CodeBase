@@ -1,0 +1,14 @@
+<div class="form-group" >
+ 
+    <span class="control-label" ng-show="!editmode">{{data.name}}</span>
+      
+      <select id="grouping" ng-show="editmode" class="form-control" ng-model="data" ng-options="item.name for item in field.options | orderBy: 'orderIndex'" ng-model="data">
+                 <option value="">-- Select--</option>
+    </select>
+    
+   
+    
+</div>
+
+
+

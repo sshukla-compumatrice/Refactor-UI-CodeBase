@@ -1,0 +1,99 @@
+ 
+<h4>Closing</h4>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="closingFont" class="control-label">Font:</label>
+        <select id="closingFont" class="form-control" ng-model="transSetup.cssData['closing']['font-family']">
+            <option>Arial</option>
+            <option>Helvetica</option>
+            <option>Times</option>
+            <option>Times New Roman</option>
+            <option>Book Antiqua</option>
+            <option>Arial Narrow</option>
+            <option>Verdana</option>
+            <option>Calibri</option>
+            <option>Cambria</option>
+            <option>Century Gothic</option>
+            <option>Garamond</option>
+            <option>Tahoma</option>
+        </select>
+    </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="closingFontSize" class="control-label">Font Size:</label>
+        <select id="closingFontSize" class="form-control" ng-model="transSetup.cssData['closing']['font-size']">
+            <option value="8px">8</option>
+            <option value="9px">9</option>
+            <option value="10px">10</option>
+            <option value="11px">11</option>
+            <option value="12px">12</option>
+            <optionv value="13px">13</option>
+        </select>
+    </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="closingFontStyle" class="control-label">Font Style:</label>
+        <select id="closingFontStyle" class="form-control" ng-model="transSetup.cssData['closing'].style">
+            <option value="B">Bold</option>
+            <option value="I">Italic</option>
+            <option value="U">Underline</option>
+        </select>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+        <label for="closingOptions" class="control-label">
+            Options:
+        </label>
+        <select id="closingOptions" name="Options5" class="form-control" ng-model="transSetup.jsonData.closing.addDynamicContent">
+            <option value="">Add Dynamic Content...</option>
+            <option value="{compname}">Your Company's Name</option>
+            <option value="{fullname}">Your Full Name</option>
+            <option value="{firstname}">Your First Name</option>
+            <option value="{lastname}">Your Last Name</option>
+            <option value="{title}">Your Title</option>
+            <option value="{email}">E-mail</option>
+            <option value="{reviewer_name}">Senior Reviewer from General Information</option>
+            <option value="{reviewer_title}">Reviewer Title from General Information</option>
+            <option value="{consultAddress}">Consultant Address from General Information</option>
+            <option value="{consultCity}">Consultant City from General Information</option>
+            <option value="{consultState}">Consultant State from General Information</option>
+            <option value="{consultZip}">Consultant Zip from General Information</option>
+            <option value="{consultPhone}">Consultant Phone # from General Information</option>
+            <option value="{consultFax}">Consultant Fax # from General Information</option>
+        </select>
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="form-group">       
+        <textarea name="closing" rows="5" cols="30" class="form-control" ng-model="transSetup.jsonData.closing.optionsVal">
+        </textarea>
+    </div>
+    </div>
+</div>	
+
+<div class="row">
+       <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="linesafterClosing" class="control-label">
+                Lines after Closing:
+            </label>
+            <select id="linesafterClosing" name="LinesafterClosing" class="form-control" ng-model="transSetup.jsonData.closing.linesAfterClosing">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+</div>

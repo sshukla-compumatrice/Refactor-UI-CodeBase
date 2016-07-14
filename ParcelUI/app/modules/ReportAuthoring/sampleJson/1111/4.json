@@ -1,0 +1,11 @@
+{
+ 
+    "html": "<div><h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h2><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div00'>",
+ 
+    "contentValues": {
+        "sectionTitle00": "2 Purpose and Scope",
+        "ckEditData": {
+            "div00": "The purpose of the assessment was to provide a general overview of the present condition of the site improvements and to determine an opinion of probable costs to remedy any identified physical deficiencies over an evaluation period of <font color=\\\"#3333ff\\\">[NUMBER]<\\/font> years."
+        }
+    }
+}

@@ -1,0 +1,21 @@
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click ="showKeyword.cancelModal()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Keyword Groups</h4>
+            </div>
+            <div class="modal-body leftContent">
+                <div class="alert alert-info"> The following keywords appear in multiple sections. You can insert the language text into those sections by selecting them here and clicking <em>Select Language.</em> </div>
+                <div class="row">
+                    <div class="col-md-6" ng-repeat = "keyword in showKeyword.languageKeywords">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" ng-model="keyword.checked" ng-change="showKeyword.selectedKeyword(keyword)"> {{keyword.keyword}}<a href=""></a> </label>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click = "showKeyword.cancelModal()">CLOSE</button>
+                <button type="button" class="btn btn-primary" ng-click="showKeyword.selectLanguages()">SELECT LANGUAGE</button>
+            </div>

@@ -1,0 +1,10 @@
+{
+    "html": "<div><h2><strong><span>{{sectionTitle00}}</span></strong></h2><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div00'>",
+    "contentValues": {
+        "sectionTitle00": "7.1 Flood Plain",
+        "tagData": "\\u00A0 Please refer to Default Language for narrative options for this section",
+        "ckEditData": {
+            "div00": "[COMPANY] reviewed the Flood Insurance Rate Map Number [NUMBER], panel number [PANEL] published by the Federal Emergency Management Agency (FEMA) and dated [XXXX]. According to this map the property is located in Zone:"
+        }
+    }
+}

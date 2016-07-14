@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <style type="text/css">
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class="collapsed pointer" data-toggle="collapse" 
+               data-target="#collapseGrantAccess">Grant Access to Other Users</a>
+        </h5>
+    </div>
+    <div id="collapseGrantAccess" class="panel-collapse collapse" ng-controller="GrantAccessCtrl as grantAccess">
+        <div class="panel-body">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Grant Access to:
+                        <a ng-click="grantAccess.ShowAccessHelp()" title="How you can control access to your reports ?" class="pointer">
+                            <i class="text-blue fa fa-question-circle"></i>
+                        </a>
+                    </label>
+
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-md-2 col-sm-3 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkOffices" name="chkOffices" checked="checked" disabled="disabled"><span>
+                                Your
+                                Organization:
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="drpdownOffices" type="select" name="drpdownOffices" ng-model="(main.submitData.accessCollector['organization'] = main.submitData.accessCollector['organization'] || {}).val" data-ng-options="organization as organization.name for organization in main.loadData.accessTo.organizationOptions">
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-md-2 col-sm-3 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkboxTeams" name="chkTeams" ng-model="(main.submitData.accessCollector['client'] = main.submitData.accessCollector['client'] || {}).selected"><span>
+                                Your
+                                Client:
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="drpdownTeams" type="select" name="drpdownTeams" ng-disabled="!main.submitData.accessCollector['client'].selected" ng-model="main.submitData.accessCollector['client'].val" data-ng-options="client as client.name for client in main.loadData.accessTo.clientOptions">
+                            <option value="">Select Client</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-md-2 col-sm-3 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkboxRelatedCompanies" name="chkRelatedCompanies" ng-model="(main.submitData.accessCollector['third-party'] = main.submitData.accessCollector['third-party'] || {}).selected"><span>
+                                A Third Party:
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <select class="form-control" id="drpdownClient" type="select" name="drpdownClient" ng-disabled="!main.submitData.accessCollector['third-party'].selected" ng-model="main.submitData.accessCollector['third-party'].val" data-ng-options="option as option.name for option in main.loadData.accessTo.thirdPartyOptions">
+                            <option value="">Select Third Party</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filing Cabinet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+</head>
+
+<body>
+
+    <div class="container-fluid" ng-controller="FilingCabinetCtrl as FilingCabinet"> 
+		<div class="panel panel-default">
+		<div class="panel-body">	
+        <h2 class="page-header">Filing Cabinet</h2>
+        <div>
+            <div ng-class="FilingCabinet.UploadStatusClass">{{FilingCabinet.UploadStatusText}}</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <button class="btn btn-primary" ng-click="FilingCabinet.isReplyFormOpen = !FilingCabinet.isReplyFormOpen">Upload Document</button>
+
+                <form class="form-horizontal" ng-show="FilingCabinet.isReplyFormOpen">
+                    <div class="form-group">
+                        <label for="selectFolder" class="col-sm-2 control-label">Select Folder:</label>
+                        <div class="col-sm-3">
+                            <select id="selectFolder" name="SelectedFolderName" ng-model="FilingCabinet.SelectedFolderName" class="form-control" required>
+                    <option value="Select One" selected="selected">Select One</option>
+                    <option ng-repeat="option in FilingCabinet.folderList" value="{{option.folderName}}">{{option.folderName}}</option>                   
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-xs-10">
+                            <button class="btn btn-md btn-success fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+                                <input id="uploadFilefilingCabinet" type="file" data-file-input="files" ng-model="FilingCabinet.fileForAllFolders" ngf-select ngf-multiple="false">
+                            </button>
+                            <button type="button" ng-click="FilingCabinet.uploadFile()" class="btn btn-md btn-primary start">
+                                <span class="glyphicon glyphicon-upload"></span> Upload
+                            </button>
+                            <span class="text-primary" ng-repeat="file in files">{{file.name}}</span>
+                        </div>
+                    </div>
+                </form>
+         
+           <div ng-repeat="folder in FilingCabinet.folderList">
+                <h6 class="border-bottom">{{folder.folderName}}</h6>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-condensed">
+                        <thead>
+                            <th>Actions</th>
+                            <th>File Name</th>
+                        </thead>
+                        <tbody ng-repeat="fileData in FilingCabinet.FileList">  <!--{{FilingCabinet.FileList}}-->                         
+                        <tr ng-repeat="fileC in fileData" ng-show="folder.folderGUID == fileC.folderGUID">                            
+                            <td> 
+                                <div class="btn-group">
+    <a class="btn btn-sm btn-default" href="{{fileC.currentVersionURL}}" target="_blank" title="View This File"><i class="fa fa-search fa-lg"></i></a>
+    <a class="btn btn-sm btn-default" title="Download This File" href="{{fileC.currentVersionURL}}" download="fileC.currentVersionURL"><i class="fa fa-download fa-lg"></i></a>
+                                </div>
+                            </td>
+                                <td>
+                                
+                                <i class="fa fa-file-text-o fa-lg"></i> <a class="pointer" href="{{fileC.currentVersionURL}}" target="_blank">{{fileC.fileName}}</a> 
+                                
+                                
+                            </td>                                                      
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>                
+
+            </div>
+        </div>
+		</div>	
+		</div>
+    </div>        
+</body>
+
+</html>

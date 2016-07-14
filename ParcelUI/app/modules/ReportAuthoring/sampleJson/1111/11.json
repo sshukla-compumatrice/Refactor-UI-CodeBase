@@ -1,0 +1,2004 @@
+{
+ 
+    "html": "<div><h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h3></div><div><h4>{{contentValues.sectionTitle01}}</h4></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><div><h4>{{contentValues.sectionTitle03}}</h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h3 class='border-bottom  text-capitalize'>Cost Summary</h3></div><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'/></div>",
+ 
+    "contentValues": {
+        "sectionTitle00": "3.2.2 Storm Water Drainage",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 20,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Drainage devices",
+                "value": "2"
+            }, {
+                "name": "Earthwork",
+                "value": "3"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "4"
+            }, {
+                "name": "Storm water piping",
+                "value": "143"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "144"
+            }, {
+                "name": "Sump pump",
+                "value": "145"
+            }, {
+                "name": "Replace storm water drainage grate",
+                "value": "1741"
+            }, {
+                "name": "Perform miscellaneous earth work",
+                "value": "1742"
+            }, {
+                "name": "Repair storm water drainage system",
+                "value": "1743"
+            }, {
+                "name": "Repair storm water piping",
+                "value": "1744"
+            }, {
+                "name": "Install sump pumps",
+                "value": "1745"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "1746"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "2031"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "2137"
+            }, {
+                "name": "Earthwork ",
+                "value": "2342"
+            }, {
+                "name": "Drainage devices ",
+                "value": "2343"
+            }, {
+                "name": "Storm water piping ",
+                "value": "2344"
+            }, {
+                "name": "Sump pump ",
+                "value": "2345"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "2346"
+            }, {
+                "name": "Downspouts.  Connect to drains ",
+                "value": "2347"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "2597"
+            }, {
+                "name": "Catch basin assembly",
+                "value": "3000"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "3001"
+            }, {
+                "name": "Earthwork grade/recontour",
+                "value": "3002"
+            }, {
+                "name": "Engineer - evaluation",
+                "value": "3003"
+            }, {
+                "name": "Storm water piping, corrugated metal",
+                "value": "3004"
+            }, {
+                "name": "Storm water subdrainage perforated piping ",
+                "value": "3005"
+            }, {
+                "name": "Sump pump ",
+                "value": "3006"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "3358"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "3835"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "4026"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "4165"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "4932"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "5112"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "5644"
+            }, {
+                "name": "French drain system. Construct/Replace",
+                "value": "11006"
+            }, {
+                "name": "Storm water piping. Construct/Replace  ",
+                "value": "11007"
+            }, {
+                "name": "Downspouts. Connect to drains  ",
+                "value": "11008"
+            }, {
+                "name": "Earthwork. Regrade  ",
+                "value": "11009"
+            }, {
+                "name": "French drain system. Construct/Replace",
+                "value": "11271"
+            }, {
+                "name": "Storm water piping. Construct/Replace  ",
+                "value": "11272"
+            }, {
+                "name": "Downspouts. Connect to drains  ",
+                "value": "11273"
+            }, {
+                "name": "Earthwork. Regrade  ",
+                "value": "11274"
+            }, {
+                "name": "French drain system. Construct/Replace",
+                "value": "11536"
+            }, {
+                "name": "Storm water piping. Construct/Replace  ",
+                "value": "11537"
+            }, {
+                "name": "Downspouts. Connect to drains  ",
+                "value": "11538"
+            }, {
+                "name": "Earthwork. Regrade  ",
+                "value": "11539"
+            }, {
+                "name": "French drain system. Construct/Replace",
+                "value": "11801"
+            }, {
+                "name": "Storm water piping. Construct/Replace  ",
+                "value": "11802"
+            }, {
+                "name": "Downspouts. Connect to drains  ",
+                "value": "11803"
+            }, {
+                "name": "Earthwork. Regrade  ",
+                "value": "11804"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "12066"
+            }, {
+                "name": "Earthwork ",
+                "value": "12067"
+            }, {
+                "name": "Drainage devices ",
+                "value": "12068"
+            }, {
+                "name": "Storm water piping ",
+                "value": "12069"
+            }, {
+                "name": "Sump pump ",
+                "value": "12070"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "12071"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "12309"
+            }, {
+                "name": "Earthwork ",
+                "value": "12310"
+            }, {
+                "name": "Drainage devices ",
+                "value": "12311"
+            }, {
+                "name": "Storm water piping ",
+                "value": "12312"
+            }, {
+                "name": "Sump pump ",
+                "value": "12313"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "12314"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "12552"
+            }, {
+                "name": "Earthwork ",
+                "value": "12553"
+            }, {
+                "name": "Drainage devices ",
+                "value": "12554"
+            }, {
+                "name": "Storm water piping ",
+                "value": "12555"
+            }, {
+                "name": "Sump pump ",
+                "value": "12556"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "12557"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "12795"
+            }, {
+                "name": "Earthwork ",
+                "value": "12796"
+            }, {
+                "name": "Drainage devices ",
+                "value": "12797"
+            }, {
+                "name": "Storm water piping ",
+                "value": "12798"
+            }, {
+                "name": "Sump pump ",
+                "value": "12799"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "12800"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "13051"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "13405"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "13503"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "15637"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "15638"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "15639"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "15640"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "15641"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "15642"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "15643"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "15644"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "16488"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "16489"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "16490"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "16491"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "16492"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "16493"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "16494"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "16495"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "16751"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "16752"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "16753"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "16754"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "16755"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "16756"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "16757"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "16758"
+            }, {
+                "name": "Sump pump",
+                "value": "17830"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "17831"
+            }, {
+                "name": "Storm water piping",
+                "value": "17832"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "17833"
+            }, {
+                "name": "Earthwork",
+                "value": "17834"
+            }, {
+                "name": "Drainage devices",
+                "value": "17835"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "18227"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "18228"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "18229"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "18230"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "18231"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "18232"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "18233"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "18234"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "18490"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "18491"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "18492"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "18493"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "18494"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "18495"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "18496"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "18497"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "18555"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "18656"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "18757"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "18858"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "18995"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "19268"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "19269"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "19270"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "19271"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "19272"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "19273"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "19274"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "19275"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "20080"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "20400"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "20401"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "20402"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "20403"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "20404"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "20405"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "20406"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "20407"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "21758"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "21760"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "21761"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "21762"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "21763"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "21764"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "21765"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "21766"
+            }, {
+                "name": "Sump pump. Replace ",
+                "value": "21858"
+            }, {
+                "name": "Drainage devices. Replace ",
+                "value": "21859"
+            }, {
+                "name": "Utility drainage piping. Replace (4\") ",
+                "value": "21860"
+            }, {
+                "name": "Utility drainage piping. Replace (8\") ",
+                "value": "21861"
+            }, {
+                "name": "Utility drainage piping. Replace (12\") ",
+                "value": "21862"
+            }, {
+                "name": "Utility drainage piping. Replace (18\") ",
+                "value": "21863"
+            }, {
+                "name": "Storm water piping. Construct/Replace (6\") ",
+                "value": "21864"
+            }, {
+                "name": "Storm water piping. Construct/Replace (8\") ",
+                "value": "21865"
+            }, {
+                "name": "Storm water piping. Construct/Replace (12\") ",
+                "value": "21866"
+            }, {
+                "name": "Storm water piping. Construct/Replace (24\") ",
+                "value": "21867"
+            }, {
+                "name": "",
+                "value": "21868"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "22480"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "22757"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "22758"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "22759"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "22760"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "22761"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "22762"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "22763"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "22764"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "22993"
+            }, {
+                "name": "Earthwork ",
+                "value": "22994"
+            }, {
+                "name": "Drainage devices ",
+                "value": "22995"
+            }, {
+                "name": "Storm water piping ",
+                "value": "22996"
+            }, {
+                "name": "Sump pump ",
+                "value": "22997"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "22998"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90002214"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90002522"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90002523"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90002524"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90002525"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90002526"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90002527"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90002528"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90002529"
+            }, {
+                "name": "",
+                "value": "90002861"
+            }, {
+                "name": "Drainage devices. Replace",
+                "value": "90002862"
+            }, {
+                "name": "Sump pump system. Install",
+                "value": "90002863"
+            }, {
+                "name": "Sump pump. Replace",
+                "value": "90002864"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90003273"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90003887"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90003888"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90003889"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90003890"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90003891"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90003892"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90003893"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90003894"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90003939"
+            }, {
+                "name": "Earthwork ",
+                "value": "90003940"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90003941"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90003942"
+            }, {
+                "name": "Sump pump ",
+                "value": "90003943"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90003944"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90005438"
+            }, {
+                "name": "Sump pump ",
+                "value": "90005439"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90005440"
+            }, {
+                "name": "Earthwork ",
+                "value": "90005442"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90005443"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90005444"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90005753"
+            }, {
+                "name": "Sump pump ",
+                "value": "90005754"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90005755"
+            }, {
+                "name": "Earthwork ",
+                "value": "90005757"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90005758"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90005759"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90006432"
+            }, {
+                "name": "Sump pump ",
+                "value": "90006433"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90006434"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90006435"
+            }, {
+                "name": "Earthwork ",
+                "value": "90006436"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90006437"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90006757"
+            }, {
+                "name": "Earthwork ",
+                "value": "90006758"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90006759"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90006760"
+            }, {
+                "name": "Sump pump ",
+                "value": "90006761"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90006762"
+            }, {
+                "name": "",
+                "value": "90007127"
+            }, {
+                "name": "Drainage devices. Replace",
+                "value": "90007128"
+            }, {
+                "name": "Sump pump system. Install",
+                "value": "90007129"
+            }, {
+                "name": "Sump pump. Replace",
+                "value": "90007130"
+            }, {
+                "name": "",
+                "value": "90007707"
+            }, {
+                "name": "Drainage devices. Replace",
+                "value": "90007708"
+            }, {
+                "name": "Sump pump system. Install",
+                "value": "90007709"
+            }, {
+                "name": "Sump pump. Replace",
+                "value": "90007710"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90008802"
+            }, {
+                "name": "Earthwork, Regrade ",
+                "value": "90008803"
+            }, {
+                "name": "Storm water piping, Replace ",
+                "value": "90008804"
+            }, {
+                "name": "Sump pump, Replace ",
+                "value": "90008805"
+            }, {
+                "name": "Storm water piping, perforated, Replace ",
+                "value": "90008806"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90009141"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90011660"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90011661"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90011662"
+            }, {
+                "name": "Earthworkto alleviate drainage deficiencies",
+                "value": "90011663"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90011664"
+            }, {
+                "name": "Underground storm water piping, Install",
+                "value": "90011665"
+            }, {
+                "name": "Downspouts, Connect to drains",
+                "value": "90011666"
+            }, {
+                "name": "Sump Pump, Replace",
+                "value": "90011667"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90011668"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90011669"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install",
+                "value": "90011670"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90012018"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90012019"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90012020"
+            }, {
+                "name": "Earthworkto alleviate drainage deficiencies",
+                "value": "90012021"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90012022"
+            }, {
+                "name": "Underground storm water piping, Install",
+                "value": "90012023"
+            }, {
+                "name": "Downspouts, Connect to drains",
+                "value": "90012024"
+            }, {
+                "name": "Sump Pump, Replace",
+                "value": "90012025"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90012026"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90012027"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install",
+                "value": "90012028"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90012376"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90012377"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90012378"
+            }, {
+                "name": "Earthworkto alleviate drainage deficiencies",
+                "value": "90012379"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90012380"
+            }, {
+                "name": "Underground storm water piping, Install",
+                "value": "90012381"
+            }, {
+                "name": "Downspouts, Connect to drains",
+                "value": "90012382"
+            }, {
+                "name": "Sump Pump, Replace",
+                "value": "90012383"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90012384"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90012385"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install",
+                "value": "90012386"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90012743"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90013192"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90013323"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90013324"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90013325"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90013326"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90013327"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90013328"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90013329"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90013330"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90013331"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90013332"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90013333"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90013661"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90013662"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90013663"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90013664"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90013665"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90013666"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90013667"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90013668"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90013669"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90013670"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90013671"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90014001"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90014002"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90014003"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90014004"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90014005"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90014006"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90014007"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90014008"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90014009"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90014010"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90014011"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90014339"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90014340"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90014341"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90014342"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90014343"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90014344"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90014345"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90014346"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90014347"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90014348"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90014349"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90014708"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90014797"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90014798"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90014800"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90014801"
+            }, {
+                "name": "Water Main",
+                "value": "90014802"
+            }, {
+                "name": "Water Tower",
+                "value": "90014805"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90014814"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90015320"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90015321"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90015322"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90015323"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90015324"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90015325"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90015326"
+            }, {
+                "name": "",
+                "value": "90015327"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90015650"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90015921"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90015922"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90015924"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90015925"
+            }, {
+                "name": "Water Main",
+                "value": "90015926"
+            }, {
+                "name": "Water Tower",
+                "value": "90015929"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90015938"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90016113"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90016114"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90016115"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90016116"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90016117"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90016118"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90016119"
+            }, {
+                "name": "",
+                "value": "90016120"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90016443"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90016444"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90016446"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90016447"
+            }, {
+                "name": "Water Main",
+                "value": "90016448"
+            }, {
+                "name": "Water Tower",
+                "value": "90016451"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90016460"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90016635"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90016636"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90016637"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90016638"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90016639"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90016640"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90016641"
+            }, {
+                "name": "",
+                "value": "90016642"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90017190"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90017191"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90017192"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90017193"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90017194"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90017195"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90017196"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90017197"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90017198"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90017199"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90017203"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90017278"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90017279"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90017281"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90017282"
+            }, {
+                "name": "Water Main",
+                "value": "90017283"
+            }, {
+                "name": "Water Tower",
+                "value": "90017286"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90017295"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90017470"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90017471"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90017472"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90017473"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90017474"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90017475"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90017476"
+            }, {
+                "name": "",
+                "value": "90017477"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90017800"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90017801"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90017803"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90017804"
+            }, {
+                "name": "Water Main",
+                "value": "90017805"
+            }, {
+                "name": "Water Tower",
+                "value": "90017808"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90017817"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90017992"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90017993"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90017994"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90017995"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90017996"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90017997"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90017998"
+            }, {
+                "name": "",
+                "value": "90017999"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90018823"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90018824"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90018826"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90018827"
+            }, {
+                "name": "Water Main",
+                "value": "90018828"
+            }, {
+                "name": "Water Tower",
+                "value": "90018831"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90018840"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90019015"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90019016"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90019017"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90019018"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90019019"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90019020"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90019021"
+            }, {
+                "name": "",
+                "value": "90019022"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90019299"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90019300"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90019301"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90019302"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90019303"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90019304"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90019305"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90019306"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90019307"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90019308"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90019309"
+            }, {
+                "name": "French drain - shallow, Install",
+                "value": "90019810"
+            }, {
+                "name": "Foundation drain - at basement footer",
+                "value": "90019811"
+            }, {
+                "name": "Foudation Drain - 6' deep crawl space",
+                "value": "90019812"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90019813"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90019814"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90019815"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90019816"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90019817"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90019818"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90019819"
+            }, {
+                "name": "Storm water piping, perforated, Replace/ Install ",
+                "value": "90019820"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90020168"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90020241"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90020242"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90020243"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90020244"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90020245"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90020246"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90020247"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90020248"
+            }, {
+                "name": "Drainage devices",
+                "value": "90020792"
+            }, {
+                "name": "Earthwork",
+                "value": "90020793"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90020794"
+            }, {
+                "name": "Storm water piping",
+                "value": "90020795"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90020796"
+            }, {
+                "name": "Sump pump",
+                "value": "90020797"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90020967"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90020968"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90020969"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90020970"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90020971"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90020972"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90020973"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90020974"
+            }, {
+                "name": "Drainage devices",
+                "value": "90021253"
+            }, {
+                "name": "Earthwork",
+                "value": "90021254"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90021255"
+            }, {
+                "name": "Storm water piping",
+                "value": "90021256"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90021257"
+            }, {
+                "name": "Sump pump",
+                "value": "90021258"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90021485"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90021486"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90021488"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90021489"
+            }, {
+                "name": "Water Main",
+                "value": "90021490"
+            }, {
+                "name": "Water Tower",
+                "value": "90021493"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90021502"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90021677"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90021678"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90021679"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90021680"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90021681"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90021682"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90021683"
+            }, {
+                "name": "",
+                "value": "90021684"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90022453"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90022586"
+            }, {
+                "name": "Drainage devices",
+                "value": "90022755"
+            }, {
+                "name": "Earthwork",
+                "value": "90022756"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90022757"
+            }, {
+                "name": "Storm water piping",
+                "value": "90022758"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90022759"
+            }, {
+                "name": "Sump pump",
+                "value": "90022760"
+            }, {
+                "name": "Drainage devices",
+                "value": "90022982"
+            }, {
+                "name": "Earthwork",
+                "value": "90022983"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90022984"
+            }, {
+                "name": "Storm water piping",
+                "value": "90022985"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90022986"
+            }, {
+                "name": "Sump pump",
+                "value": "90022987"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90023174"
+            }, {
+                "name": "Earthwork ",
+                "value": "90023175"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90023176"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90023177"
+            }, {
+                "name": "Sump pump ",
+                "value": "90023178"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90023179"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90023417"
+            }, {
+                "name": "Earthwork ",
+                "value": "90023418"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90023419"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90023420"
+            }, {
+                "name": "Sump pump ",
+                "value": "90023421"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90023422"
+            }, {
+                "name": "Drainage devices",
+                "value": "90023659"
+            }, {
+                "name": "Earthwork",
+                "value": "90023660"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90023661"
+            }, {
+                "name": "Storm water piping",
+                "value": "90023662"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90023663"
+            }, {
+                "name": "Sump pump",
+                "value": "90023664"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90023816"
+            }, {
+                "name": "Earthwork ",
+                "value": "90023817"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90023818"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90023819"
+            }, {
+                "name": "Sump pump ",
+                "value": "90023820"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90023821"
+            }, {
+                "name": "Downspouts, connect to drains ",
+                "value": "90024059"
+            }, {
+                "name": "Earthwork ",
+                "value": "90024060"
+            }, {
+                "name": "Drainage devices ",
+                "value": "90024061"
+            }, {
+                "name": "Storm water piping ",
+                "value": "90024062"
+            }, {
+                "name": "Sump pump ",
+                "value": "90024063"
+            }, {
+                "name": "Storm water piping, perforated ",
+                "value": "90024064"
+            }, {
+                "name": "Drainage devices, catch basins",
+                "value": "90024305"
+            }, {
+                "name": "Earthwork",
+                "value": "90024306"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90024307"
+            }, {
+                "name": "Storm water piping",
+                "value": "90024308"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90024309"
+            }, {
+                "name": "Sump pump",
+                "value": "90024310"
+            }, {
+                "name": "Drainage devices, Catch Basins",
+                "value": "90024456"
+            }, {
+                "name": "Earthwork",
+                "value": "90024457"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90024458"
+            }, {
+                "name": "Storm water piping",
+                "value": "90024459"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90024460"
+            }, {
+                "name": "Sump pump",
+                "value": "90024461"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90024674"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90024675"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90024677"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90024678"
+            }, {
+                "name": "Water Main",
+                "value": "90024679"
+            }, {
+                "name": "Water Tower",
+                "value": "90024682"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90024691"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90024866"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90024867"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90024868"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90024869"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90024870"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90024871"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90024872"
+            }, {
+                "name": "",
+                "value": "90024873"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90025915"
+            }, {
+                "name": "Drainage devices, Catch Basins",
+                "value": "90026126"
+            }, {
+                "name": "Earthwork",
+                "value": "90026127"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90026128"
+            }, {
+                "name": "Storm water piping",
+                "value": "90026129"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90026130"
+            }, {
+                "name": "Sump pump",
+                "value": "90026131"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90026427"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90026428"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90026430"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90026431"
+            }, {
+                "name": "Water Main",
+                "value": "90026432"
+            }, {
+                "name": "Water Tower",
+                "value": "90026435"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90026444"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90026619"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90026620"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90026621"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90026622"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90026623"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90026624"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90026625"
+            }, {
+                "name": "",
+                "value": "90026626"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90027452"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90028059"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90028060"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90028061"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90028062"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90028063"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90028064"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90028065"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90028066"
+            }, {
+                "name": "Drainage Devices, Replace ",
+                "value": "90028570"
+            }, {
+                "name": "Earthwork to alleviate drainage deficiencies",
+                "value": "90028571"
+            }, {
+                "name": "Perforated underground storm water piping, Install",
+                "value": "90028572"
+            }, {
+                "name": "Underground storm water piping, Install  ",
+                "value": "90028573"
+            }, {
+                "name": "Downspouts, Connect to drains ",
+                "value": "90028574"
+            }, {
+                "name": "Sump Pump, Replace  ",
+                "value": "90028575"
+            }, {
+                "name": "Drainage Assessment",
+                "value": "90028576"
+            }, {
+                "name": "Replace Cavitated Drainage Inlets",
+                "value": "90028577"
+            }, {
+                "name": "Domestic Hot Water (DHW) - supply/return",
+                "value": "90029136"
+            }, {
+                "name": "Sanitary Treatment",
+                "value": "90029137"
+            }, {
+                "name": "Sanitary Lines",
+                "value": "90029139"
+            }, {
+                "name": "Water Supply Lines",
+                "value": "90029140"
+            }, {
+                "name": "Water Main",
+                "value": "90029141"
+            }, {
+                "name": "Water Tower",
+                "value": "90029144"
+            }, {
+                "name": "Storm Drain Lines",
+                "value": "90029153"
+            }, {
+                "name": "Domestic hot water, supply and return.  Replace",
+                "value": "90029328"
+            }, {
+                "name": "Lift station.  Replace",
+                "value": "90029329"
+            }, {
+                "name": "Sanitary lines.  Replace",
+                "value": "90029330"
+            }, {
+                "name": "Sanitary treatment.  Replace",
+                "value": "90029331"
+            }, {
+                "name": "Water main.  Replace",
+                "value": "90029332"
+            }, {
+                "name": "Water supply lines.  Replace",
+                "value": "90029333"
+            }, {
+                "name": "Water tower.  Replace",
+                "value": "90029334"
+            }, {
+                "name": "",
+                "value": "90029335"
+            }, {
+                "name": "Drainage devices",
+                "value": "90030110"
+            }, {
+                "name": "Earthwork",
+                "value": "90030111"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90030112"
+            }, {
+                "name": "Storm water piping",
+                "value": "90030113"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90030114"
+            }, {
+                "name": "Sump pump",
+                "value": "90030115"
+            }, {
+                "name": "Drainage devices, Catch Basins",
+                "value": "90030330"
+            }, {
+                "name": "Earthwork",
+                "value": "90030331"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90030332"
+            }, {
+                "name": "Storm water piping",
+                "value": "90030333"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90030334"
+            }, {
+                "name": "Sump pump",
+                "value": "90030335"
+            }, {
+                "name": "Install splash blocks",
+                "value": "90030619"
+            }, {
+                "name": "Sump pump. Replace ",
+                "value": "90030620"
+            }, {
+                "name": "French drain system. Construct/Replace",
+                "value": "90030621"
+            }, {
+                "name": "Site Drainage (Storm Drainage)",
+                "value": "90030979"
+            }, {
+                "name": "Drainage devices, Catch Basins",
+                "value": "90031045"
+            }, {
+                "name": "Earthwork",
+                "value": "90031046"
+            }, {
+                "name": "Storm water piping, perforated",
+                "value": "90031047"
+            }, {
+                "name": "Storm water piping",
+                "value": "90031048"
+            }, {
+                "name": "Downspouts, connect to drains",
+                "value": "90031049"
+            }, {
+                "name": "Sump pump",
+                "value": "90031050"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

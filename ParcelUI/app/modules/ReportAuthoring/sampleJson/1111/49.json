@@ -1,0 +1,9 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "9 Limiting Conditions",
+        "ckEditData": {
+            "div01": "This report has been prepared for the sole benefit of {ClientCompany}&#160; for the purposes of <font color=\\\"#3333ff\\\">[PURPOSE]. <\\/font>The report may not be relied upon by any other person or entity without the express written consent of {ConsultantName}&#160;and {ClientCompany}."
+        }
+    }
+}

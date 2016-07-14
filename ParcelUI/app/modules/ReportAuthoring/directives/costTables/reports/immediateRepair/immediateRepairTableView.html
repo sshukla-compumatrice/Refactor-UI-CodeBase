@@ -1,0 +1,40 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary btn-sm" onclick="window.close();">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close Window
+    </button>
+</div>
+<h2 class="page-header">Immediate Repairs</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-condensend table-hover">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Unit Cost</th>
+                <th>Total Cost</th>
+                <th>Brief Description</th>
+                <th>Section Reference</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="section in recommendationSummary.sections">
+            <tr>
+                <td colspan="7">
+                    <strong> {{section.sectionName}}</strong>
+                </td>
+            </tr>
+            <tr ng-repeat="item in section.sectionscomponents">
+                <td><a class="pointer" ng-click="recommendationSummary.editRecommendation(item)">
+                   {{item.name}} </a></td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.unit}}</td>
+                <td>{{item.unitCost}}</td>
+                <td>{{item.totalCost}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.section}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+
+ .dashboard-table {
+     position: relative;
+     overflow-x: auto;
+     overflow-y: hidden; 
+	 width: 100.21%;
+ }
+ .dashboard-table > table tbody td {
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     -o-text-overflow: ellipsis;
+     max-width: 2em;
+	 cursor: pointer;
+ }
+#landingpageTable_paginate{
+	
+	text-align: center !important;
+}
+#landingpageTable{
+	margin-bottom: 0px !important;
+}
+#landingpageTable thead th{
+	white-space: nowrap;
+}
+ .taskStatus, .signature, .reportRedirection, .email, .reportDeletion {min-width: 35px !important;}
+.reportType,  .reportStatus	{min-width: 45px !important;}
+.reviewComments{ min-width: 55px !important;}
+
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child{
+	
+	padding-left: 30px !important;
+}
+ 

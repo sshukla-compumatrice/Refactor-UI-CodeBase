@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+<style>
+	.body-bg-gray{
+		background-color: #ffffff !important;
+	}
+</style>
+</head>
+
+<body>
+    <div class="container-fluid">
+    <div class="row">
+    <form name="lenderPortfolio.submitForm" class="rightside-section">
+        <!--Policy Create start  -->
+        
+        
+            <!-- Left panel Start-->
+           <div class="col-md-3 col-lg-3 col-sm-3 bg-gray sidebar">
+                <div class="top-margin">
+                    <ul id="ulnavigation" class="nav nav-pills nav-stacked-lg">
+
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/ProjectInformation" class="active"><a> Step 1: <p class="text-11">Enter Project Information </p> </a></li>
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/ReportInformation"><a> Step 2:<p class="text-11"> Enter Report Information</p> </a></li>
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/FeeInformation"><a> Step 3:<p class="text-11"> Select an Environmental Consultant </p> </a></li>
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/Attachments"><a>Step 4:<p class="text-11"> Attach Documents </p> </a></li>
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/GrantAccess"><a> Step 5:<p class="text-11"> Grant Access</p> </a></li>
+                        <li active-class-lender urlparams="/LenderPortfolioCreation/ConfirmProjectInformation"><a> Step 6:<p class="text-11"> Confirm Project Information</p> </a></li>
+
+                    </ul>
+                    <hr>
+                    <div class="col-md-12 col-sm-12">
+
+                        <button id="previousStep" shift-previous-lender class="btn btn-md btn-primary pull-left" type="button"> Previous </button>
+                        <!-- <button id="nextButton" shift-next class="btn btn-md btn-primary pull-right" type="button"> {{lenderPortfolioCreation.nextButtonText}} </button>-->
+                        <div next-step get-submit-project-data="lenderPortfolio.getProjectData()" form="lenderPortfolio.submitForm" response-receiver="lenderPortfolio.setResponseProjectData(projectData)" current-project-data="lenderPortfolio.project" button-text="nextButtonText" state-navigation="lenderPortfolio.stateNavigation" error-handler="lenderPortfolio.showServiceError(errorMsg)"></div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Left panel end-->
+ 
+        <!-- Policy Create  end  -->
+        <div class="col-md-9 col-lg-9 col-sm-9 col-sm-offset-3">
+            <h2 class="page-header"> New Portfolio</h2>
+            <div ui-view=""></div>
+            
+        </div>
+    </form>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<div class="container-fluid">
+    <div class="row" ng-controller="SignController as sign" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+        <div id="leftContent">
+            <!-- comments div -->
+            <div id="comments" cg-busy="sign.waitingCommentsResources" class="col-md-4 leftContent nopadding">
+                <div ng-if="ck.reportStatusAbbreviation!='FIN'">
+                	<div class="topHeaderHeight">
+                <div class="row">
+
+                    <!--                         <button type="button" class="btn btn-default btn-sm" ng-show="sign.selectedSection.sectionNumber">{{sign.selectedSection.sectionNumber}}</button>-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group bottom-margin comments-section-btn">
+
+                            <button class="btn btn-sm btn-default tooltip-hide" ng-show="commentsArr.length > 0" title="Open all unaddressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="sign.OpenAll()"><i class="fa fa-lg fa-plus"></i> </button>
+                            <button class="btn btn-sm btn-default tooltip-hide" ng-show="commentsArr.length > 0" title="Close all unaddressed comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="sign.CloseAll()"><i class="fa fa-lg fa-minus"></i> </button>
+                              <button ng-if="ck.reportStatusAbbreviation!='FIN'" class="btn btn-sm btn-default tooltip-hide" title="Refresh Comments" data-toggle="tooltip" data-placement="top" data-container="body" data-trigger="hover" ng-click="sign.refreshComments()"><i class="glyphicon glyphicon-refresh"></i> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info nomargin" role="alert" id="serviceResponseDiv" ng-show="sign.serviceResponseAlert && commentsArr.length > 0">
+                    <button type="button" class="close" ng-click="sign.serviceResponseAlert = false; ck.closeAlertHeight();" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Use the select to toggle comment visibility. Click on user names to view comments or use the buttons to show/hide all. Green comments have not been addressed.
+                </div>
+				</div>
+                <div class="scrollDiv contentbodyHeight">
+
+                    <div ng-show="sign.commentsErrorStatus" class="alert alert-danger" role="alert" ng-class="danger">
+                        {{sign.commentsErrorText}}
+                    </div>
+                    <div ng-repeat="secVal in commentsArr track by $index">
+
+                        <div ng-show="(secVal.comments.length > 0)?true:false">
+ 
+                                    <div class="bottom-margin-xs border-bottom-xs">
+                                        <strong>{{secVal.sectionNumber}} {{secVal.sectionName}} </strong>
+                                    </div>
+                           
+                            <div ng-class="{'false': 'bg-green-comments','true': 'bg-gray-comments'}[comm.addressed]" ng-repeat="comm in secVal.comments">
+                                <div class="bottom-margin-xs">
+                                   <a class="pointer decoration-n">
+                                        <span id="{{comm.Id}}-plus-comment-span" ng-click="ck.setIconComment('collapse in',comm.Id)" class="ng-hide">
+                                          <i id="{{comm.Id}}-plus-comment"  class="fa fa-lg fa-plus-square-o ng-hide"> </i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>
+                                          <span id="{{comm.Id}}-minus-comment-span" ng-click="ck.setIconComment('collapse',comm.Id)">
+                                         <i id="{{comm.Id}}-minus-comment"  class="fa fa-lg fa-minus-square-o"></i> BY {{comm.commentedBy.toUpperCase()}}
+                                        </span>                                       
+                                    </a> 
+                                    <span class="pull-right">{{comm.date}}</span>
+                                    <div id="{{comm.Id}}-comment">
+                                        <span class="comment-text" ng-hide="comm.addressState == true || comm.commentEditState" ng-bind-html="comm.commentVal"></span>
+                                    </div>
+
+                                </div>
+                                <button ng-if="ck.reportStatusAbbreviation!='FIN'" class="btn btn-primary btn-sm" ng-click="sign.addressComments(secVal.sectionGUID,comm.Id);ck.closeAlertHeight();">Address</button>
+                            </div>
+
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                </div>
+			
+            </div>
+            <!-- comments div ends -->
+			<left-panel-slide-toggle></left-panel-slide-toggle>
+        </div>
+        
+        <div id="rightContent" class="col-md-8 scrollDiv">
+            <div id="signaturesMsgDiv" ng-show="sign.showSignaturesAlert" class="alert alert-dismissible" role="alert">
+                <button type="button" class="close" ng-click="sign.dismissSignatureAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{sign.signatureServiceMsg}}
+            </div>
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" ng-repeat="(parentIndex,signoff) in sign.signatures">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+					<a role="button" data-toggle="collapse" data-target="#collapse{{parentIndex}}" aria-expanded="true" aria-controls="collapse{{parentIndex}}">
+					 {{signoff.label}}
+					</a>
+					  
+				  </h4>
+                    </div>
+                    <div id="collapse{{parentIndex}}" class="panel-collapse collapse in" ng-class={in:$first}>
+                        <div class="panel-body">
+                            <!-- need to include pm check along with ep -->
+                            <div class="text-right bottom-margin">
+                                <button ng-show="!signoff.editmode" ng-disabled="sign.isReportFinal" class="btn btn-md btn-primary" data-toggle="tooltip" data-placement="top" title="Edit" type="submit" ng-click="signoff.editmode = true; sign.edit(signoff,parentIndex)"><span class="glyphicon glyphicon-pencil"> </span></button>
+                                <button id="btnSiteAssessor" ng-show="signoff.editmode" type="submit" class="btn btn-sm btn-primary" ng-click="sign.submitSignaturesSignOff(parentIndex,signoff)">Save</button>
+                                <button ng-show="signoff.editmode" class="btn btn-sm btn-default" ng-click="signoff.editmode = false;sign.cancelEdit(parentIndex)">Cancel</button>
+                            </div>
+
+                            <div class="form-horizontal">
+
+                                <!--section signatures before edit-->
+                                <div ng-show="!signoff.editmode">
+                                    <!--header for different signoffs-->
+                                    <div class="form-group">
+                                        <label for="{{signoff.label}}" class="col-sm-2 control-label">{{signoff.label}}:</label>
+                                        <div class="col-sm-4">
+                                            <p class="form-control-static"><span ng-if="!signoff.signedForUser.userGUID && !signoff.signedOnBehalfOfUser.userGUID ">{{signoff.signOffUser.userName}}</span>
+                                                <span ng-if="signoff.signedOnBehalfOfUser.userGUID">{{signoff.signOffUser.userName}} <i>On Behalf Of</i> {{signoff.signedOnBehalfOfUser.userName}}</span>
+                                                <span ng-if="signoff.signedForUser.userGUID">   {{signoff.signedForUser.userName}} (Signed by: {{signoff.signOffUser.userName}})</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--sec name signoff div-->
+                                    <div ng-show="signoff.signOffType=='SEC Name'">
+                                        <div class="form-group">
+                                            <label for="email" class="col-sm-2 control-label">Email:</label>
+                                            <div class="col-sm-4">
+                                                <p class="form-control-static">{{signoff.signOffUser.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone" class="col-sm-2 control-label">Phone:</label>
+                                            <div class="col-sm-4">
+                                                <p class="form-control-static">{{signoff.signOffUser.phone}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--signoff detail befor edit-->
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Signed off:</label>
+                                        <div class="col-sm-4">
+                                            <p class="form-control-static">
+                                                <span class="form-control-static" ng-if="!signoff.signatureGuid">Not Signed</span>
+                                                <span class="glyphicon glyphicon-ok text-success" ng-if="signoff.signatureGuid"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--End section signatures before edit-->
+
+                                <!--start section signatures after edit-->
+                                
+                                <div ng-if="signoff.editmode">                            
+                                    <div>
+                                        <div id="signOffMsgDiv{{parentIndex}}" ng-show="sign.showAlert[parentIndex]" class="alert alert-dismissible" role="alert">
+                                            <button type="button" class="close" ng-click="sign.dismissAlert(parentIndex)" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            {{sign.serviceMessage[parentIndex]}}
+                                        </div>
+                                        <div ng-if="!signoff.signOffUser.signatureFileCoreFileGUID" class="alert alert-warning">
+                                            <p>You do not have a signature uploaded! Click <a ng-href="/accountmgmt/#/accounts/company/office/user/view?companyguid={{sign.currentUserObject.companyGUID}}&officeguid={{sign.currentUserObject.officeGUID}}&userguid={{sign.currentUserObject.userGUID}}">here</a> to manage your account.</p>
+                                        </div>
+                                        
+                                        <div class="row" ng-if="signoff.signOffType=='SEC Name' || sign.isShowSignFor(signoff.orderIndex) || sign.checkForEP(signoff.eponly)">
+                                            <!--SEC div-->
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group" ng-if="signoff.signOffType=='SEC Name'">
+                                                    <div class="col-sm-8 col-xs-12 col-sm-offset-4">
+                                                        <select class="form-control" ng-options="user as user.firstName+ ' ' + user.lastName for user in sign.usersArray track by user.userGUID" id="SECUsers" name="users" ng-model="sign.secUser[parentIndex]" ng-change="sign.selectSecUser(parentIndex,user,signoff)">
+                                                            <option value="">Select a user...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!--common name div-->
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}Name" class="col-sm-4 control-label">{{signoff.label}}:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control signFirst" id="{{signoff.label}}Name" ng-model="signoff.signOffUser.userName">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--common title div-->
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}Title" class="col-sm-4 control-label">Title:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="{{signoff.label}}Title" ng-model="signoff.signOffUser.title">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--Email and Phone fields for SEC User-->
+                                        <div class="row" ng-if="signoff.signOffType=='SEC Name'">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="userEmail" class="col-sm-4 control-label">Email:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="userEmail" ng-model="signoff.signOffUser.email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="userPhone" class="col-sm-4 control-label">Phone:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="userPhone" ng-model="signoff.signOffUser.phone">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- section signOnBehalf -->
+                                        <div class="row signOnBehalf" ng-show="sign.isSignOnBehalfChecked(parentIndex,signoff) && sign.checkForEP(signoff.eponly)">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}UsersOnBehalf" class="col-sm-4 control-label">On behalf of:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <select class="form-control" id="{{signoff.label}}UsersOnBehalf" ng-options="user as user.firstName+ ' ' + user.lastName for user in sign.usersArray track by user.userGUID" name="usersOnBehalf" ng-change="sign.selectSignOnBehalfUser(parentIndex,user,signoff)" ng-model="sign.signOnBehalfUser[parentIndex]">
+                                                            <option value="">Select a user...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}SignOnBehalfName" class="col-sm-4 control-label">Name:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="{{signoff.label}}SignOnBehalfName" ng-model="signoff.signedOnBehalfOfUser.userName">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row signOnBehalf" ng-show="sign.isSignOnBehalfChecked(parentIndex,signoff) && sign.checkForEP(signoff.eponly)">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}SignOnBehalfTitle" class="col-sm-4 control-label">Title:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="{{signoff.label}}SignOnBehalfTitle" ng-model="signoff.signedOnBehalfOfUser.title">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--signOnBehalf section end-->
+
+                                        <!--Sign for section -->
+                                        <div class="row signFor" ng-show="sign.isSignForChecked(parentIndex, signoff, signoff.orderIndex)">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{signoff.label}}SignForUsers" class="col-sm-4 control-label">Sign For:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <select class="form-control" id="{{signoff.label}}SignForUsers" ng-options="user as user.firstName+ ' ' + user.lastName for user in sign.usersArray | filter: {allowAdminsToSign: true} track by user.userGUID" name="signForUsers" ng-change="sign.selectSignForUser(parentIndex,user,signoff)" ng-model="sign.signForUser[parentIndex]">
+                                                            <option value="">Select a user...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--signFor section end-->
+                                        
+                                        <div ng-if="signoff.eponly && !sign.currentUserObject.eponly && signoff.signOffType !='SEC Name'">
+                                            You don't have permission to sign as <i>{{signoff.label}}</i>. (requires Environmental Professional in <a ng-href="/accountmgmt/#/accounts/company/office/user/view?companyguid={{currentUserObject.CompanyGUID}}&officeguid={{currentUserObject.OfficeGUID}}&userguid={{currentUserObject.UserGUID}}">Your Account</a>)
+                                        </div>
+                                        
+                                        <div class="row" ng-if="sign.checkForSecName(signoff)">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Signed off:</label>
+                                                    <div class="col-sm-9">
+
+                                                        <div>
+                                                            <div class="radio" ng-if="signoff.signatureGuid && sign.checkForEP(signoff.eponly)">
+                                                                <label>
+                                                                    <input type="radio" id="unSign" name="{{parentIndex}}" ng-model="signoff.showSignVal" value="unSign{{parentIndex}}" ng-click="sign.unSignEvent(parentIndex,signoff)"> UnSign
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="radio" ng-if="sign.checkForEP(signoff.eponly)">
+                                                                <label>
+                                                                    <input type="radio" ng-init="sign.changeSignText(signoff,parentIndex)" id="signOrOverride" name="{{parentIndex}}" ng-model="signoff.showSignVal" value="sign{{parentIndex}}" ng-click="sign.signOrOverRideEvent(parentIndex,signoff)"> {{sign.signText[parentIndex]}}
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio" ng-if="sign.checkForEP(signoff.eponly)">
+                                                                <label>
+                                                                    <input type="radio" id="signOnBehalfOrOverride" ng-init="sign.changeSignOnBehalfText(signoff,parentIndex)" name="{{parentIndex}}" ng-model="signoff.showSignVal" value="signOnBehalf{{parentIndex}}" ng-click="sign.signOnBehalOrOverRideEvent(parentIndex,signoff)"> {{sign.signOnBehalfText[parentIndex]}}
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio" ng-if="sign.isShowSignFor(signoff.orderIndex)">
+                                                                <label>
+                                                                    <input type="radio" id="signForVal" ng-init="sign.changeSignForText(signoff,parentIndex)" name="{{parentIndex}}" ng-model="signoff.showSignVal" value="signFor{{parentIndex}}" ng-click="sign.signForOrOverRideEvent(parentIndex,signoff)"> {{sign.signForText[parentIndex]}}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="checkbox" ng-if="sign.checkForEP(signoff.eponly)">
+                                                            <label>
+                                                                <input type="checkbox" ng-model="signoff.digitalSignatureInPrintedReport">Wet Sign (no digital signature in printed report)
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox" ng-if="sign.checkForEP(signoff.eponly) && sign.isShowInReport(signoff.orderIndex)">
+                                                            <label>
+                                                                <input type="checkbox" ng-model="signoff.showInPrintedReport">Show In PDF (show signature in printed report)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end section signatures after edit-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Certication panel starts new-->
+                <div class="panel panel-default" ng-if="sign.certifications.length">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+					<a role="button" data-toggle="collapse" data-target="#collapse{{sign.signatures.length}}" aria-expanded="true" aria-controls="collapse{{sign.signatures.length}}">
+					 Certifications
+					</a>
+				  </h4>
+                    </div>
+                    <div id="collapse{{sign.signatures.length}}" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <!-- certification  button  -->
+                            <div class="text-right  bottom-margin" ng-if="!certification.eponly || (certification.eponly && sign.currentUserObject.eponly)">
+                                <button class="btn btn-md btn-primary" ng-disabled="sign.isReportFinal" ng-show="!sign.certicationEditMode" data-toggle="tooltip" data-placement="top" title="Edit"  type="submit" ng-click="sign.certicationEditMode = true; sign.editCertification()"><span class="glyphicon glyphicon-pencil"> </span></button>
+                                <button id="btnSiteAssessor" ng-show="sign.certicationEditMode" type="submit" class="btn btn-sm btn-primary" ng-click="sign.saveCertification()">Save</button>
+                                <button ng-show="sign.certicationEditMode" type="submit" class="btn btn-sm btn-default" ng-click="sign.cancelCertificationEdit(sign.signatures.length)">Cancel</button>
+                            </div>
+                            <!-- certification body -->
+                            <div ng-repeat="(certificationIndex,certification) in sign.certifications">
+                                <strong ng-if="!sign.certicationEditMode">{{certification.signOffType}}</strong>
+                                <div ng-if="!sign.certicationEditMode" class="well">
+                                    <span ng-if="!certification.signedForUser.userGUID && certification.signatureGuid"><strong>Signed By: </strong> {{sign.certifiedBy[certificationIndex]}}</span>
+                                    <span ng-if="certification.signedForUser.userGUID"><strong>Signed By: </strong>{{sign.certifiedForBy[certificationIndex]}}</span>
+                                    <span ng-if="!certification.signatureGuid">Not Signed</span>
+                                    <p>{{certification.certificationText}}</p>
+                                </div>
+                                <div ng-if="sign.certicationEditMode">                                    
+                                    <div ng-if="certification.eponly && !sign.currentUserObject.eponly">
+                                        <!-- put a check on user roll here -->
+                                        You cannot sign here because you are not listed as an Environmental Professional in <a ng-href="/accountmgmt/#/accounts/company/office/user/view?companyguid={{currentUserObject.CompanyGUID}}&officeguid={{currentUserObject.OfficeGUID}}&userguid={{currentUserObject.UserGUID}}">Your Account</a>.
+                                    </div>
+                                    <div>
+                                        <div id="certificationMsgDiv" ng-show="sign.checkForEP(certification.eponly) && sign.showCertAlert" class="alert alert-dismissible" role="alert">
+                                        <button type="button" class="close" ng-click="sign.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        {{sign.certificationServiceMsg}}
+                                        </div>
+
+                                    <div class="form-horizontal">
+                                        <div class="row" ng-if="sign.isShowSignForCertification(certification.orderIndex) || sign.checkForEP(certification.eponly)">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="{{certification.signOffType}}Name">{{certification.signOffType}}:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control signFirst" id="{{certification.signOffType}}Name" ng-model="certification.signOffUser.userName">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{certification.signOffType}}SignTitle" class="col-sm-4 control-label">Title:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <input type="text" class="form-control" id="{{certification.signOffType}}SignTitle" ng-model="certification.signOffUser.title">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" ng-show="sign.isCertificationForChecked(certificationIndex, certification, certification.orderIndex)">      
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="{{certification.signOffType}}CertificationsForUsers" class="col-sm-4 control-label">Sign For:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <select class="form-control" id="{{certification.signOffType}}CertificationsForUsers" ng-options="user as user.firstName+ ' ' + user.lastName for user in sign.usersArray | filter: {allowAdminsToSign: true} track by user.userGUID" name="signForUsers" ng-change="sign.selectCertificationForUser(certificationIndex,user,certification)" ng-model="sign.certificationForUser[certificationIndex]">
+                                                            <option value="">Select a user...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">Signed off:</label>
+                                                    <div class="col-sm-8 col-xs-12">
+                                                        <div class="checkbox" ng-if="sign.checkForEP(certification.eponly) && !sign.isShowSignForCertification(certification.orderIndex)">
+                                                            <label>
+                                                                <input type="checkbox" ng-model="certification.isCertified" ng-change="sign.checkUncheckCertification(certification.isCertified,certification)">Sign
+                                                            </label>
+                                                        </div>
+                                                        <div ng-if="sign.isShowSignForCertification(certification.orderIndex)">
+                                                            <div class="radio" ng-if="sign.checkForEP(certification.eponly) && certification.signatureGuid">
+                                                                <label>
+                                                                    <input type="radio" id="unSignCert" name="{{certificationIndex}}" ng-model="certification.showCertificationVal" value="unsign{{certificationIndex}}" ng-click="sign.unSignCertificationEvent(certificationIndex,certification)"> UnSign
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="radio" ng-if="sign.checkForEP(certification.eponly)">
+                                                                <label>
+                                                                    <input type="radio" ng-init="sign.changeCertText(certification,certificationIndex)" id="signOrOverrideCerttification" name="{{certificationIndex}}" ng-model="certification.showCertificationVal" value="sign{{certificationIndex}}" ng-click="sign.signOrOverRideCertificationEvent(certificationIndex,certification)"> {{sign.certText[certificationIndex]}}
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" id="certForVal" ng-init="sign.changeCertForText(certification,certificationIndex)" name="{{certificationIndex}}" ng-model="certification.showCertificationVal" value="signFor{{certificationIndex}}" ng-click="sign.certificationForOrOverRideEvent(certificationIndex,certification)"> {{sign.certForText[certificationIndex]}}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--<div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" ng-init="sign.changeCertForText(certificationIndex,certification)" ng-model="certification.isCertificationFor" ng-change="sign.checkUncheckCertificationForUser(certification.isCertificationFor,certification, certificationIndex)">{{sign.certText[certificationIndex]}}
+                                                    </label>
+                                                </div>-->
+                                                        <div class="checkbox" ng-if="sign.checkForEP(certification.eponly)">
+                                                            <label>
+                                                                <input type="checkbox" ng-model="certification.digitalSignatureInPrintedReport">Wet Sign (no digital signature in printed report)
+                                                            </label>
+                                                        </div>
+                                                        
+                                                        <textarea ng-model="certification.certificationText" rows="6" cols="70" id="County" class="form-control" ng-if="sign.isShowSignForCertification(certification.orderIndex) || sign.checkForEP(certification.eponly)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Certication panel starts-->
+        </div>
+    </div>
+</div>

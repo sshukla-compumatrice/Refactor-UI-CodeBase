@@ -1,0 +1,49 @@
+
+<div ng-controller="RejectedAndLostController as rejectedLost">
+
+    <table id="tableRejectedAndLost_id" class="table table-bordered table-condensend table-hover table-header-shaded small" load-data-table ng-show="bidsList.length > 0">
+        <thead>
+            <tr>
+                <th colspan="11">
+                    <div class="btn-group">
+
+                        <div class="settings-button" aria-haspopup="true" aria-expanded="false" id="openOrdersSettingsButton" ng-click="rejectedLost.settings()">
+                            <a items="rejectedLost.columns_rejectedAndLost" class="column-settings pointer decoration-n">
+                                <span class="glyphicon glyphicon-new-window"></span> Columns</a>
+
+                        </div>
+
+                    </div>
+
+                </th>
+            </tr>
+            <tr class="dataTableRow">
+             
+                <th>Client</th>
+                <th>Requestor</th>
+                <th>BidRequest</th>
+                <th>BidDeadline</th>
+                <th>Project</th>
+                <th>Address</th>
+                <th>ReportType</th>
+                <th>Sites</th>
+
+
+            </tr>
+
+            <tr id="filterrow" class="th-bg-white">
+              
+                <th>Client</th>
+                <th>Requestor</th>
+                <th>BidRequest</th>
+                <th>BidDeadline</th>
+                <th>Project</th>
+                <th>Address</th>
+                <th>ReportType</th>
+                <th>Sites</th>
+
+
+            </tr>
+        </thead>
+    </table>
+</div>

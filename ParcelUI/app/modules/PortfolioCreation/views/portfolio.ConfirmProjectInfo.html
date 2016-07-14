@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+    <div ng-controller="PortfolioConfirmInfoCtrl as confirmInfo">
+
+        <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="confirmInfo.serviceResponseAlert">
+            <button type="button" class="close" ng-click="confirmInfo.serviceResponseAlert = false;" aria-label="Close" tabindex="-1">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{confirmInfo.serviceResponseText}}
+        </div>
+
+        <!-- right panel start-->
+
+        <h4 class="heading-border"> Project Info</h4>
+        <form name="confirmProjectInfo" class="form-horizontal">
+
+            <div class="form-group required">
+                <label for="projectname" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Name:
+                </label>
+
+
+                <div class="col-xs-12 col-sm-5 col-md-4" field-validation="Project Name">
+                    <input id="projectname" type="text" class="form-control" name="projectName" ng-model="confirmInfo.editProjectInfo.name" focus-if required tabindex="1">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="clientrequestingwork" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Client Requesting Work:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <select id="clientrequestingwork" class="form-control" ng-model="confirmInfo.editProjectInfo.client.companyName" data-ng-options="client.name as client.name for client in portfolio.loadData.relatedCompanies | filter: portfolio.filterByContains('functions', 'Client')" tabindex="2" name="ClientRequestingWork">
+                        <option value="">Select a Client</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group required">
+                <label for="draftDate" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date draft report:
+                </label>
+
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Draft Due Date">
+                    
+					<div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="draftDate"  name="draftDate" type="text" class="form-control" ng-model="projectInfo.data.draftDueDate" required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+
+
+
+
+            </div>
+			</div>
+            <div class="form-group required">
+                <label for="finalDate" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Date final report:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4 " field-validation="Date Final Due">
+
+<div class="input-group date" data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="finalDate" name="finalDate" type="text" class="form-control" ng-model="projectInfo.data.finalDueDate"  required>
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="projectcomments" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Project Comments:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+
+                    <textarea id="projectcomments" class="form-control" placeholder="Project Comments" ng-model="confirmInfo.editProjectInfo.comments" name="projectcomments" tabindex="7"></textarea>
+                </div>
+
+            </div>
+
+            <div class="col-md-offset-3 col-md-9 col-sm-9 col-xs-12">
+
+
+                <button type="submit" class="btn btn-md btn-danger " ng-click="confirmInfo.resetProjectInfo()" tabindex="6"><i class="fa fa-times"></i> &nbsp; Reset</button>
+                <!--<button type="submit" class="btn btn-md btn-primary " ng-click="confirmInfo.updateProjectInfo()"><i class="fa fa-pencil"></i> &nbsp; Update</button>-->
+
+            </div>
+        </form>
+
+        <hr>
+
+        <h4 class="heading-border"> Sites  Info</h4>
+        <div class="sitestable overflow-auto" id="prjConfirmDiv">
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <!-- <th>Property # </th>-->
+                        <th>Site Name </th>
+                        <th>Address, City, State or Province, Zip</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Consultant</th>
+                        <th>Fee</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="loc in confirmInfo.tableArr">
+                    <tr class="info">
+                        <th scope="row">{{$index + 1}}</th>
+                        <!--<td>{{loc.locationObj.propertyNumber}}</td>-->
+                        <td>{{loc.locationObj.name}}</td>
+                        <td>{{loc.locationObj.address1}}, {{loc.locationObj.city}}, {{loc.locationObj.state}}, {{loc.locationObj.zip}}</td>
+                        <td>{{loc.contactObj.name}}</td>
+                        <td>{{loc.contactObj.email}}</td>
+                        <td></td>
+
+                        <td></td>
+                        <td class="tableNewRequest-action">
+                            <div class="btn-group">
+                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Edit Site" ng-click="confirmInfo.editSiteInfo(loc, $index)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" ng-show="confirmInfo.tableArr.length>1" data-placement="top" title="Delete Site" ng-click="confirmInfo.deleteSite($index)"><span class="glyphicon glyphicon-trash"></span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="report in loc.reportsArray">
+                        <td></td>
+                        <td colspan="4"> <strong>Report: </strong> {{report.templateObj.name}}</td>
+
+                        <td></td>
+                        <td>{{report.fee}}</td>
+                        <td class="tableNewRequest-action">
+                            <div class="btn-group">
+                                <button class="btn btn-primary btn-xs" ng-click="confirmInfo.editReportInfo(report, $parent.$index,$index)" data-toggle="tooltip" data-placement="top" title="Edit Report"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-danger btn-xs" ng-show="loc.reportsArray.length>1" ng-click="confirmInfo.deleteReport($parent.$index,$index)" data-toggle="tooltip" data-placement="top" title="Delete Report"><i class="glyphicon glyphicon-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+
+        <!-- right panel end-->
+    </div>
+
+    <script type="text/ng-template" id="editSiteInfo.html">
+
+        <div class="modal-header dividerline">
+            <button type="button" class="close" data-dismiss="modal" ng-click="Cancel()" aria-label="Close" tabindex="15"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Edit Site Info</h4>
+        </div>
+
+        <div class="alert" ng-class="msgType" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlert">
+            <button type="button" class="close" ng-click="serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{serviceResponseText}}
+        </div>
+
+        <form name="ContactListForm" novalidate>
+            <div class="modal-body ">
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="propertyname" class="control-label">
+                                Site Name:
+                            </label>
+                            <input id="propertyname" type="text" class="form-control" ng-model="modalObjContainer.data.locationObj.name" ng-disabled="true" tabindex="1">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group required" field-validation="Address">
+                            <label for="address" class="control-label">
+                                Address:
+                            </label>
+                            <input id="address" type="text" name="address" class="form-control" ng-model="modalObjContainer.data.locationObj.address1" required tabindex="2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="modalObjContainer.data.locationObj.address2" tabindex="3">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="form-group required" field-validation="City">
+
+                            <label for="city" class="control-label">
+                                City:
+                            </label>
+                            <input id="city" name="city" type="text" class="form-control" placeholder="City" required ng-model="modalObjContainer.data.locationObj.city" tabindex="4">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="form-group required" field-validation="State">
+
+                            <label for="stateorprovince" class="control-label">
+                                State or Province:
+                            </label>
+                            <input id="stateorprovince" name="state" type="text" class="form-control" placeholder="State or Province" required ng-model="modalObjContainer.data.locationObj.state" tabindex="5">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="form-group required" field-validation="Zip">
+
+                            <label for="zip" class="control-label">
+                                Zip:
+                            </label>
+                            <input id="zip" name="zip" type="text" class="form-control" placeholder="Zip" required ng-model="modalObjContainer.data.locationObj.zip" tabindex="6">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="contactname" class="control-label">
+                                Contact Name:
+                            </label>
+                            <input id="contactname" type="text" class="form-control" ng-model="modalObjContainer.data.contactObj.name" tabindex="7">
+                        </div>
+                    </div>
+
+                    <div class=" col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group" emailfield-validation="Email">
+                            <label for="contactemail" class="control-label">
+                                Contact Email:
+                            </label>
+                            <input id="contactemail" name="email" type="email" class="form-control" ng-model="modalObjContainer.data.contactObj.email" tabindex="8">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+
+
+                <button class="btn btn-default" ng-click="Cancel()" tabindex="14">Cancel</button>
+                <button class="btn btn-primary" ng-click="EditSiteInfo(ContactListForm)" tabindex="13">Save</button>
+
+            </div>
+
+        </form>
+    </script>
+
+
+
+    <script type="text/ng-template" id="editReportInfo.html">
+
+        <div class="modal-header dividerline">
+            <button type="button" class="close" data-dismiss="modal" ng-click="Cancel()" aria-label="Close" tabindex="15"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Edit Site Info</h4>
+        </div>
+
+        <form name="ReportListForm" novalidate>
+            <div class="modal-body ">
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="reporttemplate" class="control-label">
+                                Report Template:
+                            </label>
+                            <select id="reporttemplate" ng-model="modalObjContainer.data.templateObj" class="form-control" data-ng-options="template as template.name for template in portfolio.loadData.templates" tabindex="9"></select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="languagelibrary" class="control-label">
+                                Language Library:
+                            </label>
+                            <select id="languagelibrary" ng-model="modalObjContainer.data.libraryObj" class="form-control" data-ng-options="lib as lib.name for lib in portfolio.loadData.libraries | filter: lib.reportType = modalObjContainer.data.templateObj.reportType" tabindex="10"></select>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="consultant" class="control-label">
+                                Consultant:
+                            </label>
+                            <select id="consultant" ng-model="modalObjContainer.data.consultantObj" class="form-control" data-ng-options="consultant as consultant.name for consultant in portfolio.loadData.relatedCompanies | filter: modalObjContainer.filterByContains('functions', 'Consultant')" tabindex="11"></select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="fee" class="control-label">
+                                Fee:
+                            </label>
+                            <input id="fee" type="text" class="form-control" ng-model="modalObjContainer.data.fee" tabindex="12">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default" ng-click="Cancel()" tabindex="14">Cancel</button>
+                <button class="btn btn-primary" ng-click="EditReportInfo(ReportListForm)" tabindex="13">Save</button>
+
+            </div>
+
+        </form>
+</body>
+
+
+</html>

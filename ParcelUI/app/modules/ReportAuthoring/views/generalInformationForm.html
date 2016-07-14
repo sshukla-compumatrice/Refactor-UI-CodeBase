@@ -1,0 +1,50 @@
+<div ng-class="{'container-fluid':generalInformationForm.currentStateName == 'generalInformation'}" cg-busy="generalInformationForm.waitingProcessResources">
+    <div ng-class="{'panel panel-default':generalInformationForm.currentStateName == 'generalInformation'}">
+        <div ng-class="{'panel-body':generalInformationForm.currentStateName == 'generalInformation'}">
+            <h2 class="page-header" ng-show="generalInformationForm.currentStateName == 'generalInformation'">General Information</h2>
+            <div class="alert" role="alert" ng-class="generalInformationForm.userMsgAlertClass" ng-show="generalInformationForm.userMsg">
+                <span ng-bind-html="generalInformationForm.userMsg"></span>
+            </div>
+            <div class="bottom-margin-xs" ng-if="generalInformationForm.data.generalInformation.isOrderDatabase == 'true'">
+                <button id="orderdatabase" class="btn btn-primary dropdown-toggle" ng-click="generalInformationForm.openEdrCredentialsModal();">Order Database Reports</button>
+                <h4 ng-show="generalInformationForm.isOrderAvailable">EDR Order Status for: {{generalInformationForm.projectName}}</h4>
+                <div ng-include src="'app/modules/ProjectDashboard/views/orderStatus.html'"></div>
+            </div>
+            <form>
+                <div class="row" ng-show="generalInformationForm.data.generalInformation.instructions.html">
+                    <div class="col-lg-12">
+                        <div class="panel-group top-margin" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">Instructions :</a>
+                            </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+                                    <div class="panel-body">
+                                        <div>
+                                            <span ng-bind-html="generalInformationForm.instruction"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div ng-repeat="onLeftDataField in generalInformationForm.orderedDataFields = (generalInformationForm.data.generalInformation.dataFields | orderBy: 'orderIndex')">
+                            <div ng-if="$even" general-info-data-field info-field="onLeftDataField" company-info="generalInformationForm.companyInfo"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div ng-repeat="onLeftDataField in generalInformationForm.orderedDataFields">
+                            <div ng-if="$odd" general-info-data-field info-field="onLeftDataField" company-info="generalInformationForm.companyInfo"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div ng-include src="'app/modules/ReportAuthoring/views/orderDBReport.html'"></div>

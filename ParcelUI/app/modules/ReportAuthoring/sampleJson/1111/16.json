@@ -1,0 +1,3583 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.7 Recreational Facilities",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 25,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Re-surface Tennis Courts",
+                "value": "25"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "26"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "27"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "28"
+            }, {
+                "name": "Tennis court resurface",
+                "value": "1148"
+            }, {
+                "name": "Tennis court paint",
+                "value": "1149"
+            }, {
+                "name": "Tennis court net",
+                "value": "1150"
+            }, {
+                "name": "Pool, pump",
+                "value": "1151"
+            }, {
+                "name": "Pool, chemical metering pump",
+                "value": "1152"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "1153"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "1154"
+            }, {
+                "name": "Pool, deck resurface",
+                "value": "1155"
+            }, {
+                "name": "Pool resurface",
+                "value": "1156"
+            }, {
+                "name": "Resurface pool area",
+                "value": "1786"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "1787"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "1788"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "1789"
+            }, {
+                "name": "Replace pool chemical pump",
+                "value": "1790"
+            }, {
+                "name": "Replace tennis court net",
+                "value": "1791"
+            }, {
+                "name": "Resurface basketball court",
+                "value": "1792"
+            }, {
+                "name": "Resurface tennis courts",
+                "value": "1793"
+            }, {
+                "name": "Resurface pool deck",
+                "value": "1794"
+            }, {
+                "name": "Repair pool liner",
+                "value": "1795"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "1796"
+            }, {
+                "name": "Replace pool pump",
+                "value": "1797"
+            }, {
+                "name": "Repaint tennis/basketball court",
+                "value": "1798"
+            }, {
+                "name": "Tennis Courts",
+                "value": "2035"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "2036"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "2037"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "2038"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "2039"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "2040"
+            }, {
+                "name": "Sauna",
+                "value": "2041"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "2042"
+            }, {
+                "name": "Tennis Courts",
+                "value": "2141"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "2142"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "2143"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "2144"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "2145"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "2146"
+            }, {
+                "name": "Sauna",
+                "value": "2147"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "2148"
+            }, {
+                "name": "Tennis Courts",
+                "value": "2601"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "2602"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "2603"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "2604"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "2605"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "2606"
+            }, {
+                "name": "Sauna",
+                "value": "2607"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "2608"
+            }, {
+                "name": "Basketball court",
+                "value": "3048"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "3049"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "3050"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "3051"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "3052"
+            }, {
+                "name": "Pool, heater",
+                "value": "3053"
+            }, {
+                "name": "Pool, heater and pump",
+                "value": "3054"
+            }, {
+                "name": "Pool, plaster recoating w/ new filt. equip, L",
+                "value": "3055"
+            }, {
+                "name": "Pool, plaster recoating w/ new filt. equip, M",
+                "value": "3056"
+            }, {
+                "name": "Pool, plaster recoating w/ new filt. equip, S",
+                "value": "3057"
+            }, {
+                "name": "Pool, pump ",
+                "value": "3058"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "3059"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "3060"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "3061"
+            }, {
+                "name": "Shuffleboard court, resurface",
+                "value": "3062"
+            }, {
+                "name": "Spa heater",
+                "value": "3063"
+            }, {
+                "name": "Spa heater and pump",
+                "value": "3064"
+            }, {
+                "name": "Tennis court net ",
+                "value": "3065"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "3066"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "3067"
+            }, {
+                "name": "Tennis Courts",
+                "value": "3362"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "3363"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "3364"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "3365"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "3366"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "3367"
+            }, {
+                "name": "Sauna",
+                "value": "3368"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "3369"
+            }, {
+                "name": "Tennis Courts",
+                "value": "3839"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "3840"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "3841"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "3842"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "3843"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "3844"
+            }, {
+                "name": "Sauna",
+                "value": "3845"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "3846"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "4010"
+            }, {
+                "name": "Tennis Courts",
+                "value": "4030"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "4031"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "4032"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "4033"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "4034"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "4035"
+            }, {
+                "name": "Sauna",
+                "value": "4036"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "4037"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "4149"
+            }, {
+                "name": "Tennis Courts",
+                "value": "4169"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "4170"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "4171"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "4172"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "4173"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "4174"
+            }, {
+                "name": "Sauna",
+                "value": "4175"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "4176"
+            }, {
+                "name": "Tennis Courts",
+                "value": "4936"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "4937"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "4938"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "4939"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "4940"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "4941"
+            }, {
+                "name": "Sauna",
+                "value": "4942"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "4943"
+            }, {
+                "name": "Tennis Courts",
+                "value": "5116"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "5117"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "5118"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "5119"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "5120"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "5121"
+            }, {
+                "name": "Sauna",
+                "value": "5122"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "5123"
+            }, {
+                "name": "Tennis Courts",
+                "value": "5648"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "5649"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "5650"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "5651"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "5652"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "5653"
+            }, {
+                "name": "Sauna",
+                "value": "5654"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "5655"
+            }, {
+                "name": "Playground. Replace",
+                "value": "11025"
+            }, {
+                "name": "Tennis Court. Resurface",
+                "value": "11026"
+            }, {
+                "name": "Pool. Reline/Resurface ",
+                "value": "11027"
+            }, {
+                "name": "Pool deck. Replace",
+                "value": "11028"
+            }, {
+                "name": "Pool deck. Recoat ",
+                "value": "11029"
+            }, {
+                "name": "Pool equipment. Replace ",
+                "value": "11030"
+            }, {
+                "name": "Pool heater. Replace ",
+                "value": "11031"
+            }, {
+                "name": "Playground. Replace",
+                "value": "11290"
+            }, {
+                "name": "Tennis Court. Resurface",
+                "value": "11291"
+            }, {
+                "name": "Pool. Reline/Resurface ",
+                "value": "11292"
+            }, {
+                "name": "Pool deck. Replace",
+                "value": "11293"
+            }, {
+                "name": "Pool deck. Recoat ",
+                "value": "11294"
+            }, {
+                "name": "Pool equipment. Replace ",
+                "value": "11295"
+            }, {
+                "name": "Pool heater. Replace ",
+                "value": "11296"
+            }, {
+                "name": "Playground. Replace",
+                "value": "11555"
+            }, {
+                "name": "Tennis Court. Resurface",
+                "value": "11556"
+            }, {
+                "name": "Pool. Reline/Resurface ",
+                "value": "11557"
+            }, {
+                "name": "Pool deck. Replace",
+                "value": "11558"
+            }, {
+                "name": "Pool deck. Recoat ",
+                "value": "11559"
+            }, {
+                "name": "Pool equipment. Replace ",
+                "value": "11560"
+            }, {
+                "name": "Pool heater. Replace ",
+                "value": "11561"
+            }, {
+                "name": "Playground. Replace",
+                "value": "11820"
+            }, {
+                "name": "Tennis Court. Resurface",
+                "value": "11821"
+            }, {
+                "name": "Pool. Reline/Resurface ",
+                "value": "11822"
+            }, {
+                "name": "Pool deck. Replace",
+                "value": "11823"
+            }, {
+                "name": "Pool deck. Recoat ",
+                "value": "11824"
+            }, {
+                "name": "Pool equipment. Replace ",
+                "value": "11825"
+            }, {
+                "name": "Pool heater. Replace ",
+                "value": "11826"
+            }, {
+                "name": "Pool resurface ",
+                "value": "12111"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "12112"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "12113"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "12114"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "12115"
+            }, {
+                "name": "Tennis court net ",
+                "value": "12116"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "12117"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "12118"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "12119"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "12120"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "12121"
+            }, {
+                "name": "Pool, pump ",
+                "value": "12122"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "12123"
+            }, {
+                "name": "Pool resurface ",
+                "value": "12354"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "12355"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "12356"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "12357"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "12358"
+            }, {
+                "name": "Tennis court net ",
+                "value": "12359"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "12360"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "12361"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "12362"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "12363"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "12364"
+            }, {
+                "name": "Pool, pump ",
+                "value": "12365"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "12366"
+            }, {
+                "name": "Pool resurface ",
+                "value": "12597"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "12598"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "12599"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "12600"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "12601"
+            }, {
+                "name": "Tennis court net ",
+                "value": "12602"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "12603"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "12604"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "12605"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "12606"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "12607"
+            }, {
+                "name": "Pool, pump ",
+                "value": "12608"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "12609"
+            }, {
+                "name": "Pool resurface ",
+                "value": "12840"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "12841"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "12842"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "12843"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "12844"
+            }, {
+                "name": "Tennis court net ",
+                "value": "12845"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "12846"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "12847"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "12848"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "12849"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "12850"
+            }, {
+                "name": "Pool, pump ",
+                "value": "12851"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "12852"
+            }, {
+                "name": "Tennis Courts",
+                "value": "13055"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "13056"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "13057"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "13058"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "13059"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "13060"
+            }, {
+                "name": "Sauna",
+                "value": "13061"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "13062"
+            }, {
+                "name": "Tennis Courts",
+                "value": "13409"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "13410"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "13411"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "13412"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "13413"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "13414"
+            }, {
+                "name": "Sauna",
+                "value": "13415"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "13416"
+            }, {
+                "name": "Tennis Courts",
+                "value": "13507"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "13508"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "13509"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "13510"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "13511"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "13512"
+            }, {
+                "name": "Sauna",
+                "value": "13513"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "13514"
+            }, {
+                "name": "Pool resurface",
+                "value": "13756"
+            }, {
+                "name": "Pool deck resurface",
+                "value": "13757"
+            }, {
+                "name": "Pool chemical storage tank replace (230 gallon)",
+                "value": "13758"
+            }, {
+                "name": "Pool controller with bypass replacement",
+                "value": "13759"
+            }, {
+                "name": "Pool chemical metering pump replacement",
+                "value": "13760"
+            }, {
+                "name": "Pool pump replacement",
+                "value": "13761"
+            }, {
+                "name": "Tennis court net replacement",
+                "value": "13762"
+            }, {
+                "name": "Tennis court paint",
+                "value": "13763"
+            }, {
+                "name": "Tennis court resurface",
+                "value": "13764"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "15694"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "15695"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "15696"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "15697"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "15698"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "15699"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "15700"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "15701"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "16545"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "16546"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "16547"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "16548"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "16549"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "16550"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "16551"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "16552"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "16808"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "16809"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "16810"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "16811"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "16812"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "16813"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "16814"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "16815"
+            }, {
+                "name": "Recoat pool deck and dining patio",
+                "value": "17863"
+            }, {
+                "name": "Repaint pool",
+                "value": "17864"
+            }, {
+                "name": "Replace pool pump and filter",
+                "value": "17865"
+            }, {
+                "name": "Replace pool heater",
+                "value": "17866"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "17867"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "17868"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "17869"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "17870"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "18170"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "18171"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "18172"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "18173"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "18174"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "18175"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "18176"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "18177"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "18433"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "18434"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "18435"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "18436"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "18437"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "18438"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "18439"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "18440"
+            }, {
+                "name": "Tennis Courts",
+                "value": "18559"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "18560"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "18561"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "18562"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "18563"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "18564"
+            }, {
+                "name": "Sauna",
+                "value": "18565"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "18566"
+            }, {
+                "name": "Tennis Courts",
+                "value": "18660"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "18661"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "18662"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "18663"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "18664"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "18665"
+            }, {
+                "name": "Sauna",
+                "value": "18666"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "18667"
+            }, {
+                "name": "Tennis Courts",
+                "value": "18761"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "18762"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "18763"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "18764"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "18765"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "18766"
+            }, {
+                "name": "Sauna",
+                "value": "18767"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "18768"
+            }, {
+                "name": "Tennis Courts",
+                "value": "18862"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "18863"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "18864"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "18865"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "18866"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "18867"
+            }, {
+                "name": "Sauna",
+                "value": "18868"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "18869"
+            }, {
+                "name": "Tennis Courts",
+                "value": "18999"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "19000"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "19001"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "19002"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "19003"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "19004"
+            }, {
+                "name": "Sauna",
+                "value": "19005"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "19006"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "19211"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "19212"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "19213"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "19214"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "19215"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "19216"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "19217"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "19218"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping tennis court",
+                "value": "19625"
+            }, {
+                "name": "Install new pool apron",
+                "value": "19626"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "19680"
+            }, {
+                "name": "Repair/replace site amenities, fountains water features",
+                "value": "19681"
+            }, {
+                "name": "Repairs to carports",
+                "value": "19682"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "19683"
+            }, {
+                "name": "Resurface pool",
+                "value": "19684"
+            }, {
+                "name": "Resurface tennis court",
+                "value": "19685"
+            }, {
+                "name": "Tennis court resurface",
+                "value": "19996"
+            }, {
+                "name": "Tennis court paint",
+                "value": "19997"
+            }, {
+                "name": "Tennis court net",
+                "value": "19998"
+            }, {
+                "name": "Pool, pump",
+                "value": "19999"
+            }, {
+                "name": "Pool, chemical metering pump",
+                "value": "20000"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "20001"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "20002"
+            }, {
+                "name": "Pool, deck resurface",
+                "value": "20003"
+            }, {
+                "name": "Pool resurface",
+                "value": "20004"
+            }, {
+                "name": "Tennis Courts",
+                "value": "20084"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "20085"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "20086"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "20087"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "20088"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "20089"
+            }, {
+                "name": "Sauna",
+                "value": "20090"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "20091"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "20343"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "20344"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "20345"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "20346"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "20347"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "20348"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "20349"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "20350"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "21702"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "21703"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "21704"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "21705"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "21706"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "21707"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "21708"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "21709"
+            }, {
+                "name": "Playground. Replace (Small) ",
+                "value": "21907"
+            }, {
+                "name": "Playground. Replace (Medium) ",
+                "value": "21908"
+            }, {
+                "name": "Playground. Replace (Large) ",
+                "value": "21909"
+            }, {
+                "name": "Sport Court. Resurface ",
+                "value": "21910"
+            }, {
+                "name": "Swimming pool. Re-line ",
+                "value": "21911"
+            }, {
+                "name": "Swimming pool deck. Replace ",
+                "value": "21912"
+            }, {
+                "name": "Swimming pool equipment. Replace ",
+                "value": "21913"
+            }, {
+                "name": "Swimming pool water heater. Replace ",
+                "value": "21914"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "22464"
+            }, {
+                "name": "Tennis Courts",
+                "value": "22484"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "22485"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "22486"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "22487"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "22488"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "22489"
+            }, {
+                "name": "Sauna",
+                "value": "22490"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "22491"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "22700"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "22701"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "22702"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "22703"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "22704"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "22705"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "22706"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "22707"
+            }, {
+                "name": "Resurface tennis court",
+                "value": "22835"
+            }, {
+                "name": "Resurface pool",
+                "value": "22836"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "22837"
+            }, {
+                "name": "Repairs to carports",
+                "value": "22838"
+            }, {
+                "name": "Repair/replace site amenities, fountains water features",
+                "value": "22839"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "22840"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping tennis court",
+                "value": "22841"
+            }, {
+                "name": "Install new pool apron",
+                "value": "22842"
+            }, {
+                "name": "Pool resurface ",
+                "value": "23038"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "23039"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "23040"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "23041"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "23042"
+            }, {
+                "name": "Tennis court net ",
+                "value": "23043"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "23044"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "23045"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "23046"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "23047"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "23048"
+            }, {
+                "name": "Pool, pump ",
+                "value": "23049"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "23050"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90002218"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90002219"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90002220"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90002221"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90002222"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90002223"
+            }, {
+                "name": "Sauna",
+                "value": "90002224"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90002225"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90002465"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90002466"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90002467"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90002468"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90002469"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90002470"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90002471"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90002472"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90003277"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90003278"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90003279"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90003280"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90003281"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90003282"
+            }, {
+                "name": "Sauna",
+                "value": "90003283"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90003284"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90003830"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90003831"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90003832"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90003833"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90003834"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90003835"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90003836"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90003837"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90003984"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90003985"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90003986"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90003987"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90003988"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90003989"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90003990"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90003991"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90003992"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90003993"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90003994"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90003995"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90003996"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90005379"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90005380"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90005381"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90005382"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90005383"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90005384"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90005385"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90005386"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90005387"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90005388"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90005389"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90005694"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90005695"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90005696"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90005697"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90005698"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90005699"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90005700"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90005701"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90005702"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90005703"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90005704"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90006480"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90006481"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90006482"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90006483"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90006484"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90006485"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90006486"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90006487"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90006488"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90006489"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90006490"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90006491"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90006492"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90006770"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90006771"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90006772"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90006773"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90006774"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90006775"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90006776"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90006777"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90006778"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90006779"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90006780"
+            }, {
+                "name": "Swimming pool drain safety device.  Install for compliance.",
+                "value": "90007725"
+            }, {
+                "name": "Swimming pool heater. Replace",
+                "value": "90007726"
+            }, {
+                "name": "Swimming pool equipment. Replace",
+                "value": "90007727"
+            }, {
+                "name": "Swimming pool deck. Resurface",
+                "value": "90007728"
+            }, {
+                "name": "Swimming pool deck. Replace",
+                "value": "90007729"
+            }, {
+                "name": "Spa pool. Re-line",
+                "value": "90007730"
+            }, {
+                "name": "Swimming pool. Re-line",
+                "value": "90007731"
+            }, {
+                "name": "Playground. Replace",
+                "value": "90007738"
+            }, {
+                "name": "Sport Court. Resurfaceand stripe asphalt",
+                "value": "90007739"
+            }, {
+                "name": "Pool, Resurface ",
+                "value": "90008828"
+            }, {
+                "name": "Pool, Re-Line  ",
+                "value": "90008829"
+            }, {
+                "name": "Pool, chemical storage tank, Replace",
+                "value": "90008830"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90008831"
+            }, {
+                "name": "Pool Pump, Replace",
+                "value": "90008832"
+            }, {
+                "name": "Pool, Deck resurface ",
+                "value": "90008833"
+            }, {
+                "name": "Pool, Controller w/ bypass, Replace ",
+                "value": "90008834"
+            }, {
+                "name": "Pool Pump, Replace ",
+                "value": "90008835"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90008836"
+            }, {
+                "name": "Tennis court, Resurface ",
+                "value": "90008837"
+            }, {
+                "name": "Tennis court, Paint ",
+                "value": "90008838"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "90009125"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90009145"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90009146"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90009147"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90009148"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90009149"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90009150"
+            }, {
+                "name": "Sauna",
+                "value": "90009151"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90009152"
+            }, {
+                "name": "Tennis Courts, Re-surface",
+                "value": "90011714"
+            }, {
+                "name": "Tennis court net, Replace",
+                "value": "90011715"
+            }, {
+                "name": "Tennis court paint",
+                "value": "90011716"
+            }, {
+                "name": "Pool, Re-Line / Resurface",
+                "value": "90011717"
+            }, {
+                "name": "Pool Liner, Repair",
+                "value": "90011718"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90011719"
+            }, {
+                "name": "Pool Deck, Recoat",
+                "value": "90011720"
+            }, {
+                "name": "Pool Equipment, Replace",
+                "value": "90011721"
+            }, {
+                "name": "Pool Heater, Replace",
+                "value": "90011722"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "90011723"
+            }, {
+                "name": "Pool, chemical metering pump",
+                "value": "90011724"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "90011725"
+            }, {
+                "name": "Playground Equipment, Replace",
+                "value": "90011726"
+            }, {
+                "name": "Tennis Courts, Re-surface",
+                "value": "90012072"
+            }, {
+                "name": "Tennis court net, Replace",
+                "value": "90012073"
+            }, {
+                "name": "Tennis court paint",
+                "value": "90012074"
+            }, {
+                "name": "Pool, Re-Line / Resurface",
+                "value": "90012075"
+            }, {
+                "name": "Pool Liner, Repair",
+                "value": "90012076"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90012077"
+            }, {
+                "name": "Pool Deck, Recoat",
+                "value": "90012078"
+            }, {
+                "name": "Pool Equipment, Replace",
+                "value": "90012079"
+            }, {
+                "name": "Pool Heater, Replace",
+                "value": "90012080"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "90012081"
+            }, {
+                "name": "Pool, chemical metering pump",
+                "value": "90012082"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "90012083"
+            }, {
+                "name": "Playground Equipment, Replace",
+                "value": "90012084"
+            }, {
+                "name": "Tennis Courts, Re-surface",
+                "value": "90012430"
+            }, {
+                "name": "Tennis court net, Replace",
+                "value": "90012431"
+            }, {
+                "name": "Tennis court paint",
+                "value": "90012432"
+            }, {
+                "name": "Pool, Re-Line / Resurface",
+                "value": "90012433"
+            }, {
+                "name": "Pool Liner, Repair",
+                "value": "90012434"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90012435"
+            }, {
+                "name": "Pool Deck, Recoat",
+                "value": "90012436"
+            }, {
+                "name": "Pool Equipment, Replace",
+                "value": "90012437"
+            }, {
+                "name": "Pool Heater, Replace",
+                "value": "90012438"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon",
+                "value": "90012439"
+            }, {
+                "name": "Pool, chemical metering pump",
+                "value": "90012440"
+            }, {
+                "name": "Pool, controller w/ bypass",
+                "value": "90012441"
+            }, {
+                "name": "Playground Equipment, Replace",
+                "value": "90012442"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90012747"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90012748"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90012749"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90012750"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90012751"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90012752"
+            }, {
+                "name": "Sauna",
+                "value": "90012753"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90012754"
+            }, {
+                "name": "Pool resurface",
+                "value": "90012864"
+            }, {
+                "name": "Pool deck resurface",
+                "value": "90012865"
+            }, {
+                "name": "Pool chemical storage tank replace (230 gallon)",
+                "value": "90012866"
+            }, {
+                "name": "Pool controller with bypass replacement",
+                "value": "90012867"
+            }, {
+                "name": "Pool chemical metering pump replacement",
+                "value": "90012868"
+            }, {
+                "name": "Pool pump replacement",
+                "value": "90012869"
+            }, {
+                "name": "Tennis court net replacement",
+                "value": "90012870"
+            }, {
+                "name": "Tennis court paint",
+                "value": "90012871"
+            }, {
+                "name": "Tennis court resurface",
+                "value": "90012872"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90013196"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90013197"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90013198"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90013199"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90013200"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90013201"
+            }, {
+                "name": "Sauna",
+                "value": "90013202"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90013203"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90013377"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90013378"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90013379"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90013380"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90013381"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90013382"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90013383"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90013384"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90013385"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90013386"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90013387"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90013388"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90013389"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90013715"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90013716"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90013717"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90013718"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90013719"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90013720"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90013721"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90013722"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90013723"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90013724"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90013725"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90013726"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90013727"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90014055"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90014056"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90014057"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90014058"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90014059"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90014060"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90014061"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90014062"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90014063"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90014064"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90014065"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90014066"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90014067"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90014393"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90014394"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90014395"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90014396"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90014397"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90014398"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90014399"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90014400"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90014401"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90014402"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90014403"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90014404"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90014405"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "90014692"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90014712"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90014713"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90014714"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90014715"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90014716"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90014717"
+            }, {
+                "name": "Sauna",
+                "value": "90014718"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90014719"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90014770"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90014773"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90014774"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90014775"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90014776"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90014778"
+            }, {
+                "name": "Lift Station",
+                "value": "90014799"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90014815"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90014817"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90014835"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90014980"
+            }, {
+                "name": "Install new pool apron",
+                "value": "90015013"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "90015014"
+            }, {
+                "name": "Resurface pool",
+                "value": "90015015"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "90015016"
+            }, {
+                "name": "Other",
+                "value": "90015017"
+            }, {
+                "name": "Install new pool apron",
+                "value": "90015164"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "90015165"
+            }, {
+                "name": "Resurface pool",
+                "value": "90015166"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "90015167"
+            }, {
+                "name": "Other",
+                "value": "90015168"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping tennis court",
+                "value": "90015179"
+            }, {
+                "name": "Resurface tennis court",
+                "value": "90015180"
+            }, {
+                "name": "Repair/replace site amenities, fountains water features",
+                "value": "90015181"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90015359"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90015360"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90015361"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90015362"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90015363"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90015364"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90015365"
+            }, {
+                "name": "",
+                "value": "90015366"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90015367"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90015368"
+            }, {
+                "name": "",
+                "value": "90015369"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90015654"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90015655"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90015656"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90015657"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90015658"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90015659"
+            }, {
+                "name": "Sauna",
+                "value": "90015660"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90015661"
+            }, {
+                "name": "Install new pool apron",
+                "value": "90015718"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "90015719"
+            }, {
+                "name": "Resurface pool",
+                "value": "90015720"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "90015721"
+            }, {
+                "name": "Other",
+                "value": "90015722"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping tennis court",
+                "value": "90015733"
+            }, {
+                "name": "Resurface tennis court",
+                "value": "90015734"
+            }, {
+                "name": "Repair/replace site amenities, fountains water features",
+                "value": "90015735"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90015894"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90015897"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90015898"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90015899"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90015900"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90015902"
+            }, {
+                "name": "Lift Station",
+                "value": "90015923"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90015939"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90015941"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90015959"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90016104"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90016152"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90016153"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90016154"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90016155"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90016156"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90016157"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90016158"
+            }, {
+                "name": "",
+                "value": "90016159"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90016160"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90016161"
+            }, {
+                "name": "",
+                "value": "90016162"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90016416"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90016419"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90016420"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90016421"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90016422"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90016424"
+            }, {
+                "name": "Lift Station",
+                "value": "90016445"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90016461"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90016463"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90016481"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90016626"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90016674"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90016675"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90016676"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90016677"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90016678"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90016679"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90016680"
+            }, {
+                "name": "",
+                "value": "90016681"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90016682"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90016683"
+            }, {
+                "name": "",
+                "value": "90016684"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90017134"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90017135"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90017136"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90017137"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90017138"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90017139"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90017140"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90017141"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90017142"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90017143"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90017144"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90017145"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90017146"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90017251"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90017254"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90017255"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90017256"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90017257"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90017259"
+            }, {
+                "name": "Lift Station",
+                "value": "90017280"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90017296"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90017298"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90017316"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90017461"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90017509"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90017510"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90017511"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90017512"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90017513"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90017514"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90017515"
+            }, {
+                "name": "",
+                "value": "90017516"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90017517"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90017518"
+            }, {
+                "name": "",
+                "value": "90017519"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90017773"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90017776"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90017777"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90017778"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90017779"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90017781"
+            }, {
+                "name": "Lift Station",
+                "value": "90017802"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90017818"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90017820"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90017838"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90017983"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90018031"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90018032"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90018033"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90018034"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90018035"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90018036"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90018037"
+            }, {
+                "name": "",
+                "value": "90018038"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90018039"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90018040"
+            }, {
+                "name": "",
+                "value": "90018041"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90018796"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90018799"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90018800"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90018801"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90018802"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90018804"
+            }, {
+                "name": "Lift Station",
+                "value": "90018825"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90018841"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90018843"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90018861"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90019006"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90019054"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90019055"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90019056"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90019057"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90019058"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90019059"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90019060"
+            }, {
+                "name": "",
+                "value": "90019061"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90019062"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90019063"
+            }, {
+                "name": "",
+                "value": "90019064"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90019353"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90019354"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90019355"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90019356"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90019357"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90019358"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90019359"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90019360"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90019361"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90019362"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90019363"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90019364"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90019365"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90019864"
+            }, {
+                "name": "Tennis court net, Replace ",
+                "value": "90019865"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90019866"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90019867"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90019868"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90019869"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90019870"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90019871"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90019872"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90019873"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90019874"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90019875"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90019876"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90020172"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90020173"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90020174"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90020175"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90020176"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90020177"
+            }, {
+                "name": "Sauna",
+                "value": "90020178"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90020179"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90020298"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90020299"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90020300"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90020301"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90020302"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90020303"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90020304"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90020305"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90020817"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90020818"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90020819"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90020820"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90021024"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90021025"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90021026"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90021027"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90021028"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90021029"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90021030"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90021031"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90021279"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90021280"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90021281"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90021282"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90021458"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90021461"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90021462"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90021463"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90021464"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90021466"
+            }, {
+                "name": "Lift Station",
+                "value": "90021487"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90021503"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90021505"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90021523"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90021668"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90021716"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90021717"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90021718"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90021719"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90021720"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90021721"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90021722"
+            }, {
+                "name": "",
+                "value": "90021723"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90021724"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90021725"
+            }, {
+                "name": "",
+                "value": "90021726"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "90022470"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90022471"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90022472"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90022473"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90022474"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90022475"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90022476"
+            }, {
+                "name": "Sauna",
+                "value": "90022477"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90022478"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "90022607"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90022608"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90022609"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90022610"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90022611"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90022612"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90022613"
+            }, {
+                "name": "Sauna",
+                "value": "90022614"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90022615"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90022780"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90022781"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90022782"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90022783"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90023007"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90023008"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90023009"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90023010"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90023224"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90023225"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90023226"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90023227"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90023228"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90023229"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90023230"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90023231"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90023232"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90023233"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90023234"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90023235"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90023236"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90023467"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90023468"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90023469"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90023470"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90023471"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90023472"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90023473"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90023474"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90023475"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90023476"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90023477"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90023478"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90023479"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90023689"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90023690"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90023691"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90023692"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90023866"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90023867"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90023868"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90023869"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90023870"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90023871"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90023872"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90023873"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90023874"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90023875"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90023876"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90023877"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90023878"
+            }, {
+                "name": "Pool resurface ",
+                "value": "90024109"
+            }, {
+                "name": "Re-Line Pool ",
+                "value": "90024110"
+            }, {
+                "name": "Pool, chemical storage tank, 230 gallon ",
+                "value": "90024111"
+            }, {
+                "name": "Replace Playground Equipment ",
+                "value": "90024112"
+            }, {
+                "name": "Pool, chemical metering pump ",
+                "value": "90024113"
+            }, {
+                "name": "Tennis court net ",
+                "value": "90024114"
+            }, {
+                "name": "Tennis court resurface ",
+                "value": "90024115"
+            }, {
+                "name": "Re-surface Tennis Courts ",
+                "value": "90024116"
+            }, {
+                "name": "Pool, deck resurface ",
+                "value": "90024117"
+            }, {
+                "name": "Repair Pool Liner ",
+                "value": "90024118"
+            }, {
+                "name": "Pool, controller w/ bypass ",
+                "value": "90024119"
+            }, {
+                "name": "Pool, pump ",
+                "value": "90024120"
+            }, {
+                "name": "Tennis court paint ",
+                "value": "90024121"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90024317"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90024318"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90024319"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90024320"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90024470"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90024471"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90024472"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90024473"
+            }, {
+                "name": "Fence replacement, metal chain link",
+                "value": "90024474"
+            }, {
+                "name": "Fence replacement, metal chain link, 3 strands barbed wire",
+                "value": "90024475"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90024647"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90024650"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90024651"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90024652"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90024653"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90024655"
+            }, {
+                "name": "Lift Station",
+                "value": "90024676"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90024692"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90024694"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90024712"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90024857"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90024905"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90024906"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90024907"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90024908"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90024909"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90024910"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90024911"
+            }, {
+                "name": "",
+                "value": "90024912"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90024913"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90024914"
+            }, {
+                "name": "",
+                "value": "90024915"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90025919"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90025920"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90025921"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90025922"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90025923"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90025924"
+            }, {
+                "name": "Sauna",
+                "value": "90025925"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90025926"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90026140"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90026141"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90026142"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90026143"
+            }, {
+                "name": "Fence replacement, metal chain link",
+                "value": "90026144"
+            }, {
+                "name": "Fence replacement, metal chain link, 3 strands barbed wire",
+                "value": "90026145"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90026400"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90026403"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90026404"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90026405"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90026406"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90026408"
+            }, {
+                "name": "Lift Station",
+                "value": "90026429"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90026445"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90026447"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90026465"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90026610"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90026658"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90026659"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90026660"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90026661"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90026662"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90026663"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90026664"
+            }, {
+                "name": "",
+                "value": "90026665"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90026666"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90026667"
+            }, {
+                "name": "",
+                "value": "90026668"
+            }, {
+                "name": "Site Utilities",
+                "value": "90027468"
+            }, {
+                "name": "Site Lighting",
+                "value": "90027471"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "90027472"
+            }, {
+                "name": "Maintenance Structures",
+                "value": "90027473"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90027474"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90027475"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90027476"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90027477"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90027478"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90027479"
+            }, {
+                "name": "Sauna",
+                "value": "90027480"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90027481"
+            }, {
+                "name": "Pool resurface",
+                "value": "90027586"
+            }, {
+                "name": "Pool deck resurface",
+                "value": "90027587"
+            }, {
+                "name": "Pool chemical storage tank replace (230 gallon)",
+                "value": "90027588"
+            }, {
+                "name": "Pool controller with bypass replacement",
+                "value": "90027589"
+            }, {
+                "name": "Pool chemical metering pump replacement",
+                "value": "90027590"
+            }, {
+                "name": "Pool pump replacement",
+                "value": "90027591"
+            }, {
+                "name": "Tennis court net replacement",
+                "value": "90027592"
+            }, {
+                "name": "Tennis court paint",
+                "value": "90027593"
+            }, {
+                "name": "Tennis court resurface",
+                "value": "90027594"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90028116"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90028117"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90028118"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90028119"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90028120"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90028121"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90028122"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90028123"
+            }, {
+                "name": "Tennis Courts, Re-surface  ",
+                "value": "90028627"
+            }, {
+                "name": "Pool, Re-Line / Resurface ",
+                "value": "90028628"
+            }, {
+                "name": "Pool Liner, Repair  ",
+                "value": "90028629"
+            }, {
+                "name": "Pool Deck, Replace",
+                "value": "90028630"
+            }, {
+                "name": "Pool Deck, Recoat ",
+                "value": "90028631"
+            }, {
+                "name": "Pool Equipment, Replace ",
+                "value": "90028632"
+            }, {
+                "name": "Pool Heater, Replace ",
+                "value": "90028633"
+            }, {
+                "name": "Playground Equipment, Replace  ",
+                "value": "90028634"
+            }, {
+                "name": "Trash compactor industrial/multi-floor",
+                "value": "90029109"
+            }, {
+                "name": "Storage Shed - medium",
+                "value": "90029112"
+            }, {
+                "name": "Storage Shed - small",
+                "value": "90029113"
+            }, {
+                "name": "Carport - metal, including roof",
+                "value": "90029114"
+            }, {
+                "name": "Storage Shed - large",
+                "value": "90029115"
+            }, {
+                "name": "Carport - wood, including roof",
+                "value": "90029117"
+            }, {
+                "name": "Lift Station",
+                "value": "90029138"
+            }, {
+                "name": "Refurbish exterior stair assemblies (wood, metal/conc., concrete)",
+                "value": "90029154"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90029156"
+            }, {
+                "name": "Technical Pointing/Replacement brickwork",
+                "value": "90029174"
+            }, {
+                "name": "Interior Stairs",
+                "value": "90029319"
+            }, {
+                "name": "Parking Garage.  Repair cracked/spalled concrete",
+                "value": "90029367"
+            }, {
+                "name": "Parking Garage.  Repair linear cracks",
+                "value": "90029368"
+            }, {
+                "name": "Parking Garage.  Restripe (per space) ",
+                "value": "90029369"
+            }, {
+                "name": "Parking Garage.  Apply traffic coating",
+                "value": "90029370"
+            }, {
+                "name": "Parking Garage.  Replace expansion joint ",
+                "value": "90029371"
+            }, {
+                "name": "Parking Garage.  Paint/Seal",
+                "value": "90029372"
+            }, {
+                "name": "Parking Garage.  Scrape and paint rusted surfaces",
+                "value": "90029373"
+            }, {
+                "name": "",
+                "value": "90029374"
+            }, {
+                "name": "Metal Carport.  Repair",
+                "value": "90029375"
+            }, {
+                "name": "Metal Carport.  Replace",
+                "value": "90029376"
+            }, {
+                "name": "",
+                "value": "90029377"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90030135"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90030136"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90030137"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90030138"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90030344"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90030345"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90030346"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90030347"
+            }, {
+                "name": "Fence replacement, metal chain link",
+                "value": "90030348"
+            }, {
+                "name": "Fence replacement, metal chain link, 3 strands barbed wire",
+                "value": "90030349"
+            }, {
+                "name": "Swimming pool filter equipment. Replace ",
+                "value": "90030682"
+            }, {
+                "name": "Swimming pool water heater. Replace ",
+                "value": "90030683"
+            }, {
+                "name": "Swimming pool. Re-line ",
+                "value": "90030684"
+            }, {
+                "name": "Sport Court. Resurface ",
+                "value": "90030685"
+            }, {
+                "name": "Tennis Courts",
+                "value": "90030983"
+            }, {
+                "name": "Swimming Pool and/or Spa",
+                "value": "90030984"
+            }, {
+                "name": "Pool and/or Spa Plaster/Liner",
+                "value": "90030985"
+            }, {
+                "name": "Pool and/or Spa Heating Equipment",
+                "value": "90030986"
+            }, {
+                "name": "Pool and/or Spa Filtration Equipment",
+                "value": "90030987"
+            }, {
+                "name": "Pool and/or Spa Deck Surface",
+                "value": "90030988"
+            }, {
+                "name": "Sauna",
+                "value": "90030989"
+            }, {
+                "name": "Recreation/Play Area & Equipment",
+                "value": "90030990"
+            }, {
+                "name": "Re-surface Tennis Courts",
+                "value": "90031059"
+            }, {
+                "name": "Re-Line Pool",
+                "value": "90031060"
+            }, {
+                "name": "Repair Pool Liner",
+                "value": "90031061"
+            }, {
+                "name": "Replace Playground Equipment",
+                "value": "90031062"
+            }, {
+                "name": "Fence replacement, metal chain link",
+                "value": "90031063"
+            }, {
+                "name": "Fence replacement, metal chain link, 3 strands barbed wire",
+                "value": "90031064"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping tennis court",
+                "value": "90031308"
+            }, {
+                "name": "Install new pool apron",
+                "value": "90031309"
+            }, {
+                "name": "Pool and/or spa pump and filter replacement",
+                "value": "90031310"
+            }, {
+                "name": "Repair/replace site amenities, fountains water features",
+                "value": "90031311"
+            }, {
+                "name": "Repairs to carports",
+                "value": "90031312"
+            }, {
+                "name": "Repairs to pool apron",
+                "value": "90031313"
+            }, {
+                "name": "Resurface pool",
+                "value": "90031314"
+            }, {
+                "name": "Resurface tennis court",
+                "value": "90031315"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

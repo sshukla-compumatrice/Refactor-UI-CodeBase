@@ -1,0 +1,80 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.13 Radon Gas",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Livable Spaces Below Grade?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "16%",
+                "textWidth": "16%"
+            }, {
+                "label": "Bedrock Outcrops on-site?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "16%",
+                "textWidth": "16%"
+            }, {
+                "label": "Previous Site Plan Measurements?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "16%",
+                "textWidth": "16%"
+            }, {
+                "label": "Site Results, if known",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "18%",
+                "textWidth": "18%"
+            }, {
+                "label": "Previous Area Radon Measurements?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "16%",
+                "textWidth": "16%"
+            }, {
+                "label": "Area results, if known",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 6,
+                "width": "18%",
+                "textWidth": "18%"
+            }],
+            "data": [{
+                "Livable Spaces Below Grade?": "YesNoUnk",
+                "Bedrock Outcrops on-site?": "YesNoUnk",
+                "Previous Site Plan Measurements?": "YesNoUnk",
+                "Site Results, if known": "Less than 2 pCi\\/LBetween 2 and 4 pCi\\/LGreater than 4 pCi\\/L",
+                "Previous Area Radon Measurements?": "YesNoUnk",
+                "Area results, if known": "Less than 2 pCi\\/LBetween 2 and 4 pCi\\/LGreater than 4 pCi\\/L"
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p>Radon Gas was not addressed based on the Scope of Work. <\\/p>"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.7 Polychlorinated Biphenyls (PCBS)",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Type of Equipment",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Equipment Description",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Owned By",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Quantity",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "13%",
+                "textWidth": "13%"
+            }, {
+                "label": "PCB Labeling?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "13%",
+                "textWidth": "13%"
+            }, {
+                "label": "Staining?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 6,
+                "width": "14%",
+                "textWidth": "14%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 6,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Type of Equipment": "Transformer(s)Elevator(s)Fluorescent light(s)Hydraulic liftsOther",
+                "Equipment Description": "Pole-mountedPad-mountedBuilding-mountedAbove gradeBelow grade",
+                "Owned By": "Subject property ownerOccupantLocal electric companyUnknown",
+                "Quantity": "",
+                "PCB Labeling?": "YesNo",
+                "Staining?": "YesNoUnk",
+                "Specific Location": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\"><font color=\\\"#3333ff\\\"><font color=\\\"#000000\\\">The Project is supplied with secondary electrical service from utility-owned <\\/font><font color=\\\"#ff0000\\\">transformer<\\/font><font color=\\\"#cc0000\\\">s<\\/font><font color=\\\"#000000\\\">.&#160; <\\/font><font color=\\\"#000000\\\">No environmental concerns noted.<\\/font><\\/font> <\\/p>"
+        }
+    }
+}

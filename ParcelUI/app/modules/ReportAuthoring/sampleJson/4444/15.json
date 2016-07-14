@@ -1,0 +1,99 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><spreadsheet-table table='contentValues.spreadSheetTable02'></spreadSheet-table><br><vertical-table table='contentValues.verticalTable03'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "3.2 Description of Structures and Other Improvements",
+        "spreadSheetTable02": {
+            "structure": [{
+                "label": "Building Name",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Building Use",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "# of Stories",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Footprint (sq. ft)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Heat Source",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "20%",
+                "textWidth": "20%"
+            }],
+            "data": [{
+                "Building Name": "asdf"
+            }, {
+                "Building Use": "asdfsa"
+            }, {
+                "# of Stories": "dfasd"
+            }, {
+                "Footprint (sq. ft)": "fasdfdas"
+            }, {
+                "Heat Source": "df"
+            }, {
+                "Building Name": "xzcv"
+            }, {
+                "Building Use": "sadfa"
+            }, {
+                "# of Stories": "sdfas"
+            }, {
+                "Footprint (sq. ft)": "dfasdf"
+            }, {
+                "Heat Source": "asdf"
+            }]
+        },
+        "verticalTable03": {
+            "structure": [{
+                "label": "",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p>egrewtwert<\\/p>"
+        }
+    }
+}

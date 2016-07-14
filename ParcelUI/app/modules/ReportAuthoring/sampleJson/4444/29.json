@@ -1,0 +1,161 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><hr><spreadsheet-table table='contentValues.spreadSheetTable04'></spreadSheet-table><hr><horizontal-table table='contentValues.horizontalTable04'></horizontal-table>",
+    "contentValues": {
+        "sectionTitle00": "7.1 Federal & State Databases",
+        "tagData": "\\u00A0 To Import EDR Database Site Listings: \\u00A0 1)\\u00A0 Click on Import EDR Map Findings Summary Link.\\u00A0 Click button that says Check ASTM and Hits\\u00A0then click Submit.\\u00A0 If Protocol Checklist specifies that other non-standard databases be searched, include those as well by checking box at the left side of the table next to the appropriate database. \\u00A0 2)\\u00A0 Click Import EDR Database Detail Data.\\u00A0 Select the sites that you would like to discuss in detail.\\u00A0 If it is a tabular report, you only need to include those sites that are the Project, adjacent, or have potential to impact the Project. \\u00A0 3)\\u00A0 Click on the Edit Tables link to edit the language for each site.\\u00A0 Some basic language has been included to get you started.\\u00A0 The write ups should be in paragraph form just as you would normally do in Word.\\u00A0 Do not put one sentence per line. \\u00A0 4)\\u00A0 Click Import EDR Orphans to check Orphans listings and repeat Step 3.\\u00A0 \\u00A0 The actual database report can be found in Appendix F. \\u00A0 Only the following database listings need to be individually discussed in the Tabular format report: \\u00A0 All on-site listings Abutting \\/ Adjacent properties (i.e., those properties located across a street) Any remaining sites with the potential to impact the Project. All remaining sites are to be \\\"lump\\\" written off \\u0096 there is a sentence at the end of this section to \\\"lump\\\" write off these remaining site(s).",
+
+        "spreadSheetTable04": {
+            "structure": [{
+                "label": "Building Name",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Building Use",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "# of Stories",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Footprint (sq. ft)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Heat Source",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "20%",
+                "textWidth": "20%"
+            }],
+            "data": [{
+                "Building Name": ""
+            }, {
+                "Building Use": ""
+            }, {
+                "# of Stories": ""
+            }, {
+                "Footprint (sq. ft)": ""
+            }, {
+                "Heat Source": ""
+            }, {
+                "Building Name": ""
+            }, {
+                "Building Use": ""
+            }, {
+                "# of Stories": ""
+            }, {
+                "Footprint (sq. ft)": ""
+            }, {
+                "Heat Source": ""
+            }]
+        },
+
+        "horizontalTable04": {
+            "structure": [{
+                "label": "Site Name:",
+                "type": "textarea",
+                "colspan": 0,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Databases:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Address:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Distance:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Direction:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 5,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Elevation:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 6,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Comments:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 7,
+                "columnIndex": 7,
+                "width": "0%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Site Name:": "",
+                "Databases:": "",
+                "Address:": "",
+                "Distance:": "",
+                "Direction:": "",
+                "Elevation:": "",
+                "Comments:": ""
+            }]
+        },
+        "ckEditData": {
+            "div02": "<p align=\\\"justify\\\">EMG obtained a regulatory database report from Environmental Data Resources, Inc. (EDR) in an effort to determine if the Project is a listed regulatory site and whether there are any mappable regulatory database sites. &#160;The regulatory database search was run in accordance with the scope of work for this assessment.&#160; In addition, EMG reviewed the unmappable sites in the database report, cross-referencing addresses and site names. Unmappable sites are environmental risk sites that cannot be plotted with confidence, but can be located by zip code or city name. In general, a site cannot be geocoded because of inaccurate or missing location information in the record provided by the agency. &#160;A copy of the regulatory database report is included in the Appendices, Section 10.&#160;<\\/p><p align=\\\"justify\\\">&#160;<\\/p><p align=\\\"justify\\\">The search for sites listed on regulatory databases in the area surrounding the Project<font color=\\\"#ff0000\\\"> identified various sites<\\/font> within the specified search radii.&#160; <font color=\\\"#ff0000\\\">Adjacent and nearby off-site listed properties of significant environmental concern are discussed after the table below.&#160; <\\/font>Based on various factors such as distance, topographic relations, estimated groundwater flow, and\\/or regulatory status, the remaining off-site listed <font color=\\\"#ff0000\\\">properties are<\\/font> not anticipated to have adversely impacted the environmental integrity of the Project.<\\/p>"
+        }
+    }
+}

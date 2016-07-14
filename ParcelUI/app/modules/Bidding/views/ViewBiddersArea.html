@@ -1,0 +1,169 @@
+
+<div class="container-fluid" ng-controller="ViewBiddersAreaController">
+<div class="panel panel-default">
+<div class="panel-body">
+ <h2 class="page-header">View Bid</h2> 
+    <form class="form-horizontal">
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+
+                <h5>COLLATERAL INFORMATION</h5>
+                <hr>
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Property Name:</label>
+					<div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">sgsgsg dgg</p></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Property Address:</label>
+                    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">300 street address, Seattle, WA 90085</p> </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-11 col-sm-11 col-md-11 col-xs-11">
+                        <div google-map ng-model="searchLocation" class="google-map">
+                        </div>
+                    </div>
+
+                </div> 
+</div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                        <h5>SCOPE OF SERVICES</h5>
+                        <hr>
+                        <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Scope of Work:</strong></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">Residential Appraisal</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Requested Draft Date:</strong></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">12/15/2015</p></div>
+                        </div>
+
+                        <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Requested Delivery Date:</strong></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">12/15/2015</p></div>
+                        </div>
+
+                       <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Comments:</strong></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">dgdgd dgdgdg dgdgdgd ryryr</p> </div>
+                        </div>
+
+                        <div class="row">
+                            <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Bid Deadline:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                                <div> 11/27/2015 1:00 PM EST</div>
+                                <div> <a href="">Extend Deadline Retract</a> </div>
+                                <div> <a href="">Bid Request</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>ATTACHMENTS</h5>
+                        <hr>
+
+                        <div class="form-group">
+							<div class="col-xs-12">
+									<button class="btn btn-md btn-success fileinput-button"><i class="fa fa-file-text-o"></i> Attach
+										<input id="file-3" type="file" data-file-input="files">
+									</button>
+									<button type="button" class="btn btn-md btn-primary start" >
+										<span class="glyphicon glyphicon-upload"></span> Upload
+									</button>
+									<span class="AU_uploadFilename text-primary" > {{file.name}}</span>
+								</div>
+						</div>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                        <table class="table table-bordered  table-hover">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Number of Bids:</strong></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lowest Bidder:</strong></td>
+                                    <td>Test Appraisal</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bid Price:</strong></td>
+                                    <td>$500.00</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr class="bg-default">
+                                <th colspan="6">
+
+                                    <ul class="nav nav-pills">
+                                        <li role="presentation" class="active"><a href="">Request New Bids</a></li>
+                                        <li role="presentation"><a href="">Retract Portfolio</a></li>
+                                        <li role="presentation"><a href="">Return to Bid List</a></li>
+                                    </ul>
+
+                                </th>
+
+                            </tr>
+                            <tr class="bg-info">
+                                <th colspan="6">Showing 1 - 1 of 1 bids</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th><a href="">Bid Status</a></th>
+                                <th><a href="">Date Submitted</a></th>
+                                <th><a href="">Company</a></th>
+                                <th><a href="">Bid Amount</a></th>
+                                <th>Comments</th>
+                            </tr>
+
+                            <tr>
+                                <td><a href="">Accept Bid</a></td>
+                                <td>SUBMITTED</td>
+                                <td>02/09/2012 5:47 PM</td>
+                                <td>Test Appraisal</td>
+                                <td>$500.00</td>
+                                <td>[none]</td>
+                            </tr>
+                            <tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+</div>
+</div>

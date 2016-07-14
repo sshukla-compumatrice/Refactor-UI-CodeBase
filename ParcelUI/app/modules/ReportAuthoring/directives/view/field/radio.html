@@ -1,0 +1,12 @@
+<fieldset id="radio"> 
+	<div ng-show="!editmode">
+
+            <span ng-show="data" class="control-label">{{data}}</span>
+        </div>
+        <div data-ng-repeat="item in field.options | orderBy: 'orderIndex'">
+
+            <input type="radio" ng-show="editmode" value="{{item.value}}" name="radio_{{index}}" ng-model="data" ng-init="data=data||field.defaultValue" />
+            <span ng-show="editmode">{{item.name}}</span>
+
+        </div> 
+</fieldset>

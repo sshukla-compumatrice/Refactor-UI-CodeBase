@@ -1,0 +1,52 @@
+ 
+<h4 class="border-bottom">
+    PCA Specific Settings:
+</h4>
+<div class="row">
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+		<div class="form-group" title="Include the recommendations in the printed PDF report">
+			<label for="pcarecommendations" class="control-label">Print PCA Recommendations:</label>
+			<select id="pcarecommendations" class="form-control" ng-model="reportSetup.jsonData['pca']['printRecommendations']">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</select>
+		</div>
+
+		<div class="form-group" title="The color of the cost table header">
+			<label for="costtableheadercolor" class="control-label">Cost Table Header Color:</label>
+			<input id="costtableheadercolor" name="costtableheadercolor" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['pca-cost-table-header']['color']">
+		</div>
+
+	</div>
+
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+		<div class="form-group" title="Print the Description, Assessment & Recommendation below the header, rather than to the right of it">
+			<label for="darbelowheading" class="control-label">D/A/R Below Heading:</label>
+			<select id="darbelowheading" class="form-control" ng-model="reportSetup.jsonData['pca']['darBelowHeading']">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</select>
+		</div>
+
+		<div class="form-group" title="The color of the cost table header Text">
+			<label for="costtableheadertextcolor" class="control-label">Cost Table Header Text Color:</label>
+			<input id="costtableheadertextcolor" name="costtableheadertextcolor" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['pca-cost-table-header-text']['color']">
+		</div>
+
+	</div>
+
+	<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+		<div class="form-group" title="Print a horizontal line after system description sections">
+			<label for="printsepratorline" class="control-label">Print Separator Line:</label>
+			<select id="printsepratorline" class="form-control" ng-model="reportSetup.jsonData['pca']['printSeparatorLine']">
+				<option>Yes</option>
+				<option>No</option>
+
+			</select>
+		</div>
+
+	</div>
+</div>

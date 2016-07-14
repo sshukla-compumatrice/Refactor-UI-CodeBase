@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle06}}</span></strong></h2></div><div><h2><strong><span>{{contentValues.sectionTitle015}}</span></strong></h2></div><div><h2><strong><span>{{contentValues.sectionTitle028}}</span></strong></h2></div>",
+    "contentValues": {
+        "sectionTitle06": "Executive Summary",
+        "sectionTitle015": "Site Description",
+        "sectionTitle028": "Historical Information",
+        "ckEditData": {}
+    }
+}

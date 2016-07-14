@@ -1,0 +1,179 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.5 Non-Hazardous Wastes",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Material",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Num Containers",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Container Type",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Container Construction",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Container Condition",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Container Labeled",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Container Size",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Staining?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Evidence of Release",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Secondary Containment",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Migratory Pathway",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "MSDS",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 1,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Waste",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 2,
+                "width": "33%",
+                "textWidth": "33%"
+            }, {
+                "label": "Disposal Receipts",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 3,
+                "width": "33%",
+                "textWidth": "33%"
+            }],
+            "data": [{
+                "Material": "",
+                "Num Containers": "",
+                "Container Type": "Pail\\/BucketDrumRetail ContainersUnknownOther",
+                "Container Construction": "SteelPlasticFiberglassGlassUnknownOther",
+                "Container Condition": "GoodFairPoor",
+                "Container Labeled": "YesNoUnk",
+                "Container Size": "15103055Other",
+                "Specific Location": "",
+                "Staining?": "YesNoUnk",
+                "Evidence of Release": "YesNoUnk",
+                "Secondary Containment": "YesNo",
+                "Migratory Pathway": "Floor DrainSurface CrackingCatch BasinSumpDry WellOther",
+                "MSDS": "YesNoUnkN\\/A",
+                "Waste": "YesNoUnk",
+                "Disposal Receipts": "YesNoUnkN\\/A"
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

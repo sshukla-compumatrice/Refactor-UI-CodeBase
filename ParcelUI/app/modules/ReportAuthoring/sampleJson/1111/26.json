@@ -1,0 +1,3340 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.4.1 Plumbing",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 38,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Hot and cold water distribution piping",
+                "value": "233"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "234"
+            }, {
+                "name": "Water heater",
+                "value": "235"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "236"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "237"
+            }, {
+                "name": "Backflow preventer",
+                "value": "238"
+            }, {
+                "name": "Piping",
+                "value": "239"
+            }, {
+                "name": "Booster pumps",
+                "value": "240"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "241"
+            }, {
+                "name": "Submersible pumps",
+                "value": "242"
+            }, {
+                "name": "Gas distribution system",
+                "value": "243"
+            }, {
+                "name": "Gas main",
+                "value": "244"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "1879"
+            }, {
+                "name": "Replace commercial water heater",
+                "value": "1880"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "1881"
+            }, {
+                "name": "Piping",
+                "value": "1882"
+            }, {
+                "name": "Replace residential  water heater",
+                "value": "1883"
+            }, {
+                "name": "Gas distribution system",
+                "value": "1884"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "1885"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "1886"
+            }, {
+                "name": "Backflow preventer",
+                "value": "1887"
+            }, {
+                "name": "Booster pumps",
+                "value": "1888"
+            }, {
+                "name": "Submersible pumps",
+                "value": "1889"
+            }, {
+                "name": "Gas main",
+                "value": "1890"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "2067"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "2068"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "2073"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "2171"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "2172"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "2177"
+            }, {
+                "name": "Piping ",
+                "value": "2464"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "2465"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "2466"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "2467"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "2468"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "2469"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "2470"
+            }, {
+                "name": "Booster pumps ",
+                "value": "2471"
+            }, {
+                "name": "Water heater ",
+                "value": "2472"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "2473"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "2474"
+            }, {
+                "name": "Gas main ",
+                "value": "2475"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "2631"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "2632"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "2637"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "3187"
+            }, {
+                "name": "Booster pumps ",
+                "value": "3188"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "3189"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "3190"
+            }, {
+                "name": "Piping ",
+                "value": "3191"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "3192"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "3193"
+            }, {
+                "name": "Site gas lines",
+                "value": "3194"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "3195"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "3196"
+            }, {
+                "name": "Water heater, 150-gallon",
+                "value": "3197"
+            }, {
+                "name": "Water heater, 40-gallon",
+                "value": "3198"
+            }, {
+                "name": "Water heater, 50-gallon",
+                "value": "3199"
+            }, {
+                "name": "Water heater, 75-gallon",
+                "value": "3200"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "3201"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "3392"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "3393"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "3398"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "3869"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "3870"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "3875"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "3988"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "3989"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "3994"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "4127"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "4128"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "4133"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "4966"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "4967"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "4972"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "5146"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "5147"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "5148"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "5149"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "5150"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "5151"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "5152"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "12233"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "12234"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "12235"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "12236"
+            }, {
+                "name": "Piping ",
+                "value": "12237"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "12238"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "12239"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "12240"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "12241"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "12242"
+            }, {
+                "name": "Booster pumps ",
+                "value": "12243"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "12244"
+            }, {
+                "name": "Gas main ",
+                "value": "12245"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "12476"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "12477"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "12478"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "12479"
+            }, {
+                "name": "Piping ",
+                "value": "12480"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "12481"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "12482"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "12483"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "12484"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "12485"
+            }, {
+                "name": "Booster pumps ",
+                "value": "12486"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "12487"
+            }, {
+                "name": "Gas main ",
+                "value": "12488"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "12719"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "12720"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "12721"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "12722"
+            }, {
+                "name": "Piping ",
+                "value": "12723"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "12724"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "12725"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "12726"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "12727"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "12728"
+            }, {
+                "name": "Booster pumps ",
+                "value": "12729"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "12730"
+            }, {
+                "name": "Gas main ",
+                "value": "12731"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "12962"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "12963"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "12964"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "12965"
+            }, {
+                "name": "Piping ",
+                "value": "12966"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "12967"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "12968"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "12969"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "12970"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "12971"
+            }, {
+                "name": "Booster pumps ",
+                "value": "12972"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "12973"
+            }, {
+                "name": "Gas main ",
+                "value": "12974"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "13085"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "13086"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "13091"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "15805"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "15806"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "15807"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "15808"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "15809"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "15810"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "15811"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "15812"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "15813"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "16656"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "16657"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "16658"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "16659"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "16660"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "16661"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "16662"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "16663"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "16664"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "16919"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "16920"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "16921"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "16922"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "16923"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "16924"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "16925"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "16926"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "16927"
+            }, {
+                "name": "Replace hot water boilers",
+                "value": "17943"
+            }, {
+                "name": "Replace hot water storage tank",
+                "value": "17944"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "17945"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "17946"
+            }, {
+                "name": "Replace Hot Water Heater (40-gallon)",
+                "value": "17947"
+            }, {
+                "name": "Replace Hot Water Heater (120-gallon)",
+                "value": "17948"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "17949"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "17950"
+            }, {
+                "name": "Backflow preventer",
+                "value": "17951"
+            }, {
+                "name": "Piping",
+                "value": "17952"
+            }, {
+                "name": "Booster pumps",
+                "value": "17953"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "17954"
+            }, {
+                "name": "Submersible pumps",
+                "value": "17955"
+            }, {
+                "name": "Gas distribution system",
+                "value": "17956"
+            }, {
+                "name": "Gas main",
+                "value": "17957"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "18058"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "18059"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "18060"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "18061"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "18062"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "18063"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "18064"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "18065"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "18066"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "18321"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "18322"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "18323"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "18324"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "18325"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "18326"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "18327"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "18328"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "18329"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "18589"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "18590"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "18591"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "18592"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "18593"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "18594"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "18595"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "18690"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "18691"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "18692"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "18693"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "18694"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "18695"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "18696"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "18791"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "18792"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "18793"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "18794"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "18795"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "18796"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "18797"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "18892"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "18893"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "18894"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "18895"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "18896"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "18897"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "18898"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "19099"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "19100"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "19101"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "19102"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "19103"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "19104"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "19105"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "19106"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "19107"
+            }, {
+                "name": "Polybutylene piping replacement",
+                "value": "19627"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "20231"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "20232"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "20233"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "20234"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "20235"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "20236"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "20237"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "20238"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "20239"
+            }, {
+                "name": "Water Softening and Filtration Equipment, Replace ",
+                "value": "21593"
+            }, {
+                "name": "Water Heater Storage Tanks, Replace ",
+                "value": "21594"
+            }, {
+                "name": "Water Boiler, Replace ",
+                "value": "21595"
+            }, {
+                "name": "Water Heater, Replace ",
+                "value": "21596"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "21597"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "21598"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "21599"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "21600"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "21601"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "21602"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "21603"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "21604"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "21605"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 30 gallon) ",
+                "value": "22212"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 40 gallon) ",
+                "value": "22213"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 50 gallon) ",
+                "value": "22214"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 75 gallon) ",
+                "value": "22215"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 100 gallon) ",
+                "value": "22216"
+            }, {
+                "name": "Water heater. Replace (Gas-fired, 250 gallon) ",
+                "value": "22217"
+            }, {
+                "name": "Water heater. Replace (Electric, 10 gallon) ",
+                "value": "22218"
+            }, {
+                "name": "Water heater. Replace (Electric, 20 gallon) ",
+                "value": "22219"
+            }, {
+                "name": "Water heater. Replace (Electric, 30 gallon) ",
+                "value": "22220"
+            }, {
+                "name": "Water heater. Replace (Electric, 40 gallon) ",
+                "value": "22221"
+            }, {
+                "name": "Water heater. Replace (Electric, 50 gallon) ",
+                "value": "22222"
+            }, {
+                "name": "Water heater. Replace (Electric, 70 gallon) ",
+                "value": "22223"
+            }, {
+                "name": "Water heater. Replace (Electric, 80 gallon) ",
+                "value": "22224"
+            }, {
+                "name": "Water heater. Replace (Electric, 120 gallon) ",
+                "value": "22225"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 122 MBH) ",
+                "value": "22226"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 163 MBH) ",
+                "value": "22227"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 203 MBH) ",
+                "value": "22228"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 240 MBH) ",
+                "value": "22229"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 280 MBH) ",
+                "value": "22230"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 320 MBH) ",
+                "value": "22231"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 360 MBH) ",
+                "value": "22232"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 400 MBH) ",
+                "value": "22233"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 440 MBH) ",
+                "value": "22234"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 544 MBH) ",
+                "value": "22235"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 765 MBH) ",
+                "value": "22236"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,088 MBH) ",
+                "value": "22237"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,275 MBH) ",
+                "value": "22238"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,530 MBH) ",
+                "value": "22239"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,000 MBH) ",
+                "value": "22240"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,312 MBH) ",
+                "value": "22241"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,856 MBH) ",
+                "value": "22242"
+            }, {
+                "name": "Booster pump. Replace (1/2 HP) ",
+                "value": "22243"
+            }, {
+                "name": "Booster pump. Replace (1 HP) ",
+                "value": "22244"
+            }, {
+                "name": "Booster pump. Replace (1 1/2 HP) ",
+                "value": "22245"
+            }, {
+                "name": "Booster pump. Replace (2 HP) ",
+                "value": "22246"
+            }, {
+                "name": "Booster pump. Replace (3HP) ",
+                "value": "22247"
+            }, {
+                "name": "Booster pump. Replace (5 HP) ",
+                "value": "22248"
+            }, {
+                "name": "Backflow preventer. Replace (1\" pipe) ",
+                "value": "22249"
+            }, {
+                "name": "Backflow preventer. Replace (2\" pipe) ",
+                "value": "22250"
+            }, {
+                "name": "Backflow preventer. Replace (3\" pipe) ",
+                "value": "22251"
+            }, {
+                "name": "Backflow preventer. Replace (4\" pipe) ",
+                "value": "22252"
+            }, {
+                "name": "Backflow preventer. Replace (6\" pipe) ",
+                "value": "22253"
+            }, {
+                "name": "Backflow preventer. Replace (3/4\" pipe) ",
+                "value": "22254"
+            }, {
+                "name": "Piping. Replace (1/2\" PVC) ",
+                "value": "22255"
+            }, {
+                "name": "Piping. Replace (3/4\" PVC) ",
+                "value": "22256"
+            }, {
+                "name": "Piping. Replace (1\" PVC) ",
+                "value": "22257"
+            }, {
+                "name": "Piping. Replace (2\" PVC) ",
+                "value": "22258"
+            }, {
+                "name": "Piping. Replace (4\" PVC) ",
+                "value": "22259"
+            }, {
+                "name": "Piping. Replace (6\" PVC) ",
+                "value": "22260"
+            }, {
+                "name": "Piping. Replace (8\" PVC) ",
+                "value": "22261"
+            }, {
+                "name": "Piping. Replace (10\" PVC) ",
+                "value": "22262"
+            }, {
+                "name": "",
+                "value": "22263"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "22443"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "22444"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "22449"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "22588"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "22589"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "22590"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "22591"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "22592"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "22593"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "22594"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "22595"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "22596"
+            }, {
+                "name": "Polybutylene piping replacement",
+                "value": "22843"
+            }, {
+                "name": "Water heater replacement",
+                "value": "22902"
+            }, {
+                "name": "Water distribution pump replacement",
+                "value": "22903"
+            }, {
+                "name": "Plumbing fixture replacement",
+                "value": "22904"
+            }, {
+                "name": "Large gas fired water heater replacement",
+                "value": "22905"
+            }, {
+                "name": "Install seismic straps",
+                "value": "22906"
+            }, {
+                "name": "Hot water boiler replacement",
+                "value": "22907"
+            }, {
+                "name": "Gas fired water heater replacement",
+                "value": "22908"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "23166"
+            }, {
+                "name": "Water heater ",
+                "value": "23167"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "23168"
+            }, {
+                "name": "Piping ",
+                "value": "23169"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "23170"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "23171"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "23172"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "23173"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "23174"
+            }, {
+                "name": "Booster pumps ",
+                "value": "23175"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "23176"
+            }, {
+                "name": "Gas main ",
+                "value": "23177"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90002248"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90002249"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90002254"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90002353"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90002354"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90002355"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90002356"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90002357"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90002358"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90002359"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90002360"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90002361"
+            }, {
+                "name": "Water heater. Replace (30-40 gallon)",
+                "value": "90002669"
+            }, {
+                "name": "Water heater. Replace (41-60 gallon)",
+                "value": "90002670"
+            }, {
+                "name": "Water heater. Replace (61-80 gallon)",
+                "value": "90002671"
+            }, {
+                "name": "Water heater. Replace (81-100 gallon)",
+                "value": "90002672"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90002673"
+            }, {
+                "name": "Boiler. Replace gas-fired (per MBH)",
+                "value": "90002674"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90002675"
+            }, {
+                "name": "",
+                "value": "90002676"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90003307"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90003308"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "90003309"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "90003310"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "90003311"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "90003312"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90003313"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90003718"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90003719"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90003720"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90003721"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90003722"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90003723"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90003724"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90003725"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90003726"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90004112"
+            }, {
+                "name": "Water heater ",
+                "value": "90004113"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90004114"
+            }, {
+                "name": "Piping ",
+                "value": "90004115"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90004116"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90004119"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90006608"
+            }, {
+                "name": "Water heater ",
+                "value": "90006609"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90006610"
+            }, {
+                "name": "Piping ",
+                "value": "90006611"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90006612"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90006615"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90006886"
+            }, {
+                "name": "Water heater ",
+                "value": "90006887"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90006888"
+            }, {
+                "name": "Piping ",
+                "value": "90006889"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90006890"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "90006891"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90006892"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "90006893"
+            }, {
+                "name": "Booster pumps ",
+                "value": "90006894"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "90006895"
+            }, {
+                "name": "Gas main ",
+                "value": "90006896"
+            }, {
+                "name": "Water heater. Replace (30-40 gallon)",
+                "value": "90007265"
+            }, {
+                "name": "Water heater. Replace (41-60 gallon)",
+                "value": "90007266"
+            }, {
+                "name": "Water heater. Replace (61-80 gallon)",
+                "value": "90007267"
+            }, {
+                "name": "Water heater. Replace (81-100 gallon)",
+                "value": "90007268"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90007269"
+            }, {
+                "name": "Boiler. Replace gas-fired (per MBH)",
+                "value": "90007270"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90007271"
+            }, {
+                "name": "",
+                "value": "90007272"
+            }, {
+                "name": "Water heater. Replace (30-40 gallon)",
+                "value": "90007845"
+            }, {
+                "name": "Water heater. Replace (41-60 gallon)",
+                "value": "90007846"
+            }, {
+                "name": "Water heater. Replace (61-80 gallon)",
+                "value": "90007847"
+            }, {
+                "name": "Water heater. Replace (81-100 gallon)",
+                "value": "90007848"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90007849"
+            }, {
+                "name": "Boiler. Replace gas-fired (per MBH)",
+                "value": "90007850"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90007851"
+            }, {
+                "name": "",
+                "value": "90007852"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90008931"
+            }, {
+                "name": "Water heater, Replace ",
+                "value": "90008932"
+            }, {
+                "name": "Water Boiler, Replace",
+                "value": "90008933"
+            }, {
+                "name": "Water softening and filtration equipment, Replace ",
+                "value": "90008934"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90008935"
+            }, {
+                "name": "Sewage ejector, Replace",
+                "value": "90008936"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90008937"
+            }, {
+                "name": "Water heater storage tanks, Replace ",
+                "value": "90008938"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90008939"
+            }, {
+                "name": "Booster pump, Replace",
+                "value": "90008940"
+            }, {
+                "name": "Submersible pumps, Replace ",
+                "value": "90008941"
+            }, {
+                "name": "Gas main, Repair ",
+                "value": "90008942"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90009104"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90009105"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90009110"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace",
+                "value": "90011855"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace",
+                "value": "90011856"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90011857"
+            }, {
+                "name": "Backflow preventer, Replace",
+                "value": "90011858"
+            }, {
+                "name": "Piping, Replace",
+                "value": "90011859"
+            }, {
+                "name": "Booster Pump, Replace",
+                "value": "90011860"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90011861"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90011862"
+            }, {
+                "name": "Gas Distribution System, Replace",
+                "value": "90011863"
+            }, {
+                "name": "Gas Main, Repair",
+                "value": "90011864"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace",
+                "value": "90012213"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace",
+                "value": "90012214"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90012215"
+            }, {
+                "name": "Backflow preventer, Replace",
+                "value": "90012216"
+            }, {
+                "name": "Piping, Replace",
+                "value": "90012217"
+            }, {
+                "name": "Booster Pump, Replace",
+                "value": "90012218"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90012219"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90012220"
+            }, {
+                "name": "Gas Distribution System, Replace",
+                "value": "90012221"
+            }, {
+                "name": "Gas Main, Repair",
+                "value": "90012222"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace",
+                "value": "90012571"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace",
+                "value": "90012572"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90012573"
+            }, {
+                "name": "Backflow preventer, Replace",
+                "value": "90012574"
+            }, {
+                "name": "Piping, Replace",
+                "value": "90012575"
+            }, {
+                "name": "Booster Pump, Replace",
+                "value": "90012576"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90012577"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90012578"
+            }, {
+                "name": "Gas Distribution System, Replace",
+                "value": "90012579"
+            }, {
+                "name": "Gas Main, Repair",
+                "value": "90012580"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90012777"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90012778"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "90012779"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "90012780"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "90012781"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "90012782"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90012783"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90013226"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90013227"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "90013228"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "90013229"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "90013230"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "90013231"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90013232"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90013519"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90013520"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90013521"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90013522"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90013523"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90013524"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90013525"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90013526"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90013527"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90013528"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90013857"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90013858"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90013859"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90013860"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90013861"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90013862"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90013863"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90013864"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90013865"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90013866"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90014197"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90014198"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90014199"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90014200"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90014201"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90014202"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90014203"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90014204"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90014205"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90014206"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90014535"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90014536"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90014537"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90014538"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90014539"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90014540"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90014541"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90014542"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90014543"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90014544"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90014671"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90014672"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90014677"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90014919"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90014920"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90014921"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90014922"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90014923"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90014924"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90014925"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90014926"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90014927"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90014928"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90014929"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90014930"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90014931"
+            }, {
+                "name": "Water heater replacement",
+                "value": "90015263"
+            }, {
+                "name": "Gas fired water heater replacement",
+                "value": "90015264"
+            }, {
+                "name": "Large gas fired water heater replacement",
+                "value": "90015265"
+            }, {
+                "name": "Polybutylene piping replacement",
+                "value": "90015266"
+            }, {
+                "name": "Hot water boiler replacement",
+                "value": "90015267"
+            }, {
+                "name": "Plumbing fixture replacement",
+                "value": "90015268"
+            }, {
+                "name": "Install seismic straps",
+                "value": "90015269"
+            }, {
+                "name": "Water distribution pump replacement",
+                "value": "90015270"
+            }, {
+                "name": "None",
+                "value": "90015271"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90015472"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90015473"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90015474"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90015475"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90015476"
+            }, {
+                "name": "",
+                "value": "90015477"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90015478"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90015479"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90015480"
+            }, {
+                "name": "",
+                "value": "90015481"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90015482"
+            }, {
+                "name": "",
+                "value": "90015483"
+            }, {
+                "name": "Water heater replacement",
+                "value": "90015817"
+            }, {
+                "name": "Gas fired water heater replacement",
+                "value": "90015818"
+            }, {
+                "name": "Large gas fired water heater replacement",
+                "value": "90015819"
+            }, {
+                "name": "Polybutylene piping replacement",
+                "value": "90015820"
+            }, {
+                "name": "Hot water boiler replacement",
+                "value": "90015821"
+            }, {
+                "name": "Plumbing fixture replacement",
+                "value": "90015822"
+            }, {
+                "name": "Install seismic straps",
+                "value": "90015823"
+            }, {
+                "name": "Water distribution pump replacement",
+                "value": "90015824"
+            }, {
+                "name": "None",
+                "value": "90015825"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90016043"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90016044"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90016045"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90016046"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90016047"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90016048"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90016049"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90016050"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90016051"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90016052"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90016053"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90016054"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90016055"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90016265"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90016266"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90016267"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90016268"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90016269"
+            }, {
+                "name": "",
+                "value": "90016270"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90016271"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90016272"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90016273"
+            }, {
+                "name": "",
+                "value": "90016274"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90016275"
+            }, {
+                "name": "",
+                "value": "90016276"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90016565"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90016566"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90016567"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90016568"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90016569"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90016570"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90016571"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90016572"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90016573"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90016574"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90016575"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90016576"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90016577"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90016787"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90016788"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90016789"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90016790"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90016791"
+            }, {
+                "name": "",
+                "value": "90016792"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90016793"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90016794"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90016795"
+            }, {
+                "name": "",
+                "value": "90016796"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90016797"
+            }, {
+                "name": "",
+                "value": "90016798"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90016994"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90016995"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90016996"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90016997"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90016998"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90016999"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90017000"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90017001"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90017002"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90017004"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90017400"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90017401"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90017402"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90017403"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90017404"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90017405"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90017406"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90017407"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90017408"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90017409"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90017410"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90017411"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90017412"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90017622"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90017623"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90017624"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90017625"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90017626"
+            }, {
+                "name": "",
+                "value": "90017627"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90017628"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90017629"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90017630"
+            }, {
+                "name": "",
+                "value": "90017631"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90017632"
+            }, {
+                "name": "",
+                "value": "90017633"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90017922"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90017923"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90017924"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90017925"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90017926"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90017927"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90017928"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90017929"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90017930"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90017931"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90017932"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90017933"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90017934"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90018144"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90018145"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90018146"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90018147"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90018148"
+            }, {
+                "name": "",
+                "value": "90018149"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90018150"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90018151"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90018152"
+            }, {
+                "name": "",
+                "value": "90018153"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90018154"
+            }, {
+                "name": "",
+                "value": "90018155"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90018945"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90018946"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90018947"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90018948"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90018949"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90018950"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90018951"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90018952"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90018953"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90018954"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90018955"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90018956"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90018957"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90019167"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90019168"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90019169"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90019170"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90019171"
+            }, {
+                "name": "",
+                "value": "90019172"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90019173"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90019174"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90019175"
+            }, {
+                "name": "",
+                "value": "90019176"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90019177"
+            }, {
+                "name": "",
+                "value": "90019178"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90019495"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90019496"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90019497"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90019498"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90019499"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90019500"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90019501"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90019502"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90019503"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90019504"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90020006"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90020007"
+            }, {
+                "name": "Galvanized piping, Replace",
+                "value": "90020008"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90020009"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90020010"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90020011"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90020012"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90020013"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90020014"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90020015"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90020411"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90020412"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90020413"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90020414"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90020415"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90020416"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90020417"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90020418"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90020419"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90020906"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90020907"
+            }, {
+                "name": "Water heater",
+                "value": "90020908"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90020909"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90020910"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90020911"
+            }, {
+                "name": "Piping",
+                "value": "90020912"
+            }, {
+                "name": "Booster pumps",
+                "value": "90020913"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90020914"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90020915"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90020916"
+            }, {
+                "name": "Gas main",
+                "value": "90020917"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90021135"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90021136"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90021137"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90021138"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90021139"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90021140"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90021141"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90021142"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90021143"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90021359"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90021360"
+            }, {
+                "name": "Water heater",
+                "value": "90021361"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90021362"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90021363"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90021364"
+            }, {
+                "name": "Piping",
+                "value": "90021365"
+            }, {
+                "name": "Booster pumps",
+                "value": "90021366"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90021367"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90021368"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90021369"
+            }, {
+                "name": "Gas main",
+                "value": "90021370"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90021607"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90021608"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90021609"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90021610"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90021611"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90021612"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90021613"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90021614"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90021615"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90021616"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90021617"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90021618"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90021619"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90021829"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90021830"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90021831"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90021832"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90021833"
+            }, {
+                "name": "",
+                "value": "90021834"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90021835"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90021836"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90021837"
+            }, {
+                "name": "",
+                "value": "90021838"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90021839"
+            }, {
+                "name": "",
+                "value": "90021840"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90022532"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90022533"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "90022534"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "90022535"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "90022536"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "90022537"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90022538"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90022642"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90022643"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90022644"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90022910"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90022911"
+            }, {
+                "name": "Water heater",
+                "value": "90022912"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90022913"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90022914"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90022915"
+            }, {
+                "name": "Piping",
+                "value": "90022916"
+            }, {
+                "name": "Booster pumps",
+                "value": "90022917"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90022918"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90022919"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90022920"
+            }, {
+                "name": "Gas main",
+                "value": "90022921"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90023137"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90023138"
+            }, {
+                "name": "Water heater",
+                "value": "90023139"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90023140"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90023141"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90023142"
+            }, {
+                "name": "Piping",
+                "value": "90023143"
+            }, {
+                "name": "Booster pumps",
+                "value": "90023144"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90023145"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90023146"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90023147"
+            }, {
+                "name": "Gas main",
+                "value": "90023148"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90023339"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "90023340"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "90023341"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90023342"
+            }, {
+                "name": "Piping ",
+                "value": "90023343"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90023344"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "90023345"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "90023346"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90023347"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "90023348"
+            }, {
+                "name": "Booster pumps ",
+                "value": "90023349"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "90023350"
+            }, {
+                "name": "Gas main ",
+                "value": "90023351"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90023582"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "90023583"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "90023584"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90023585"
+            }, {
+                "name": "Piping ",
+                "value": "90023586"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90023587"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "90023588"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "90023589"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90023590"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "90023591"
+            }, {
+                "name": "Booster pumps ",
+                "value": "90023592"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "90023593"
+            }, {
+                "name": "Gas main ",
+                "value": "90023594"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90023736"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90023737"
+            }, {
+                "name": "Water heater",
+                "value": "90023738"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90023739"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90023740"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90023741"
+            }, {
+                "name": "Piping",
+                "value": "90023742"
+            }, {
+                "name": "Booster pumps",
+                "value": "90023743"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90023744"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90023745"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90023746"
+            }, {
+                "name": "Gas main",
+                "value": "90023747"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90023981"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "90023982"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "90023983"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90023984"
+            }, {
+                "name": "Piping ",
+                "value": "90023985"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90023986"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "90023987"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "90023988"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90023989"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "90023990"
+            }, {
+                "name": "Booster pumps ",
+                "value": "90023991"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "90023992"
+            }, {
+                "name": "Gas main ",
+                "value": "90023993"
+            }, {
+                "name": "Hot and cold water distribution piping ",
+                "value": "90024224"
+            }, {
+                "name": "Water heater (gas fired) 50 to 100 gallons",
+                "value": "90024225"
+            }, {
+                "name": "Water heater (electric fired) 50 to 100 gallons",
+                "value": "90024226"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90024227"
+            }, {
+                "name": "Piping ",
+                "value": "90024228"
+            }, {
+                "name": "Sewage ejectors ",
+                "value": "90024229"
+            }, {
+                "name": "Gas distribution system ",
+                "value": "90024230"
+            }, {
+                "name": "Sanitary waste and vent system piping ",
+                "value": "90024231"
+            }, {
+                "name": "Water heater storage tanks ",
+                "value": "90024232"
+            }, {
+                "name": "Backflow preventer ",
+                "value": "90024233"
+            }, {
+                "name": "Booster pumps ",
+                "value": "90024234"
+            }, {
+                "name": "Submersible pumps ",
+                "value": "90024235"
+            }, {
+                "name": "Gas main ",
+                "value": "90024236"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90024419"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90024420"
+            }, {
+                "name": "Water heater",
+                "value": "90024421"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90024422"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90024423"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90024424"
+            }, {
+                "name": "Piping",
+                "value": "90024425"
+            }, {
+                "name": "Booster pumps",
+                "value": "90024426"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90024427"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90024428"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90024429"
+            }, {
+                "name": "Gas main",
+                "value": "90024430"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90024593"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90024594"
+            }, {
+                "name": "Water heater",
+                "value": "90024595"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90024596"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90024597"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90024598"
+            }, {
+                "name": "Piping",
+                "value": "90024599"
+            }, {
+                "name": "Booster pumps",
+                "value": "90024600"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90024601"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90024602"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90024603"
+            }, {
+                "name": "Gas main",
+                "value": "90024604"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90024796"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90024797"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90024798"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90024799"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90024800"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90024801"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90024802"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90024803"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90024804"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90024805"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90024806"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90024807"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90024808"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90025018"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90025019"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90025020"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90025021"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90025022"
+            }, {
+                "name": "",
+                "value": "90025023"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90025024"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90025025"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90025026"
+            }, {
+                "name": "",
+                "value": "90025027"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90025028"
+            }, {
+                "name": "",
+                "value": "90025029"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90025949"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90025950"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90025955"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90026263"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90026264"
+            }, {
+                "name": "Water heater",
+                "value": "90026265"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90026266"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90026267"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90026268"
+            }, {
+                "name": "Piping",
+                "value": "90026269"
+            }, {
+                "name": "Booster pumps",
+                "value": "90026270"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90026271"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90026272"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90026273"
+            }, {
+                "name": "Gas main",
+                "value": "90026274"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90026549"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90026550"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90026551"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90026552"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90026553"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90026554"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90026555"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90026556"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90026557"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90026558"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90026559"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90026560"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90026561"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90026771"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90026772"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90026773"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90026774"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90026775"
+            }, {
+                "name": "",
+                "value": "90026776"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90026777"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90026778"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90026779"
+            }, {
+                "name": "",
+                "value": "90026780"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90026781"
+            }, {
+                "name": "",
+                "value": "90026782"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90027409"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90027410"
+            }, {
+                "name": "Water heater",
+                "value": "90027411"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90027412"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90027413"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90027414"
+            }, {
+                "name": "Piping",
+                "value": "90027415"
+            }, {
+                "name": "Booster pumps",
+                "value": "90027416"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90027417"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90027418"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90027419"
+            }, {
+                "name": "Gas main",
+                "value": "90027420"
+            }, {
+                "name": "Site Water Lines",
+                "value": "90027469"
+            }, {
+                "name": "Site Sanitary Lines",
+                "value": "90027470"
+            }, {
+                "name": "Mechanical/Plumbing",
+                "value": "90027508"
+            }, {
+                "name": "Hot and Cold Water Distribution",
+                "value": "90027509"
+            }, {
+                "name": "Sanitary Waste & Vent (Sewer)",
+                "value": "90027510"
+            }, {
+                "name": "Domestic Water Boiler",
+                "value": "90027511"
+            }, {
+                "name": "Domestic Water Boiler Peripherals",
+                "value": "90027512"
+            }, {
+                "name": "Domestic Water Heaters - Electric",
+                "value": "90027513"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90028227"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90028228"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90028229"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90028230"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90028231"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90028232"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90028233"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90028234"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90028235"
+            }, {
+                "name": "Hot and cold water distribution piping, Replace ",
+                "value": "90028740"
+            }, {
+                "name": "Sanitary waste and vent system piping, Replace ",
+                "value": "90028741"
+            }, {
+                "name": "Backflow preventer, Replace ",
+                "value": "90028742"
+            }, {
+                "name": "Piping, Replace ",
+                "value": "90028743"
+            }, {
+                "name": "Booster Pump, Replace ",
+                "value": "90028744"
+            }, {
+                "name": "Sewage Ejector, Replace",
+                "value": "90028745"
+            }, {
+                "name": "Submersible Pump, Replace",
+                "value": "90028746"
+            }, {
+                "name": "Gas Distribution System, Replace ",
+                "value": "90028747"
+            }, {
+                "name": "Gas Main, Repair ",
+                "value": "90028748"
+            }, {
+                "name": "Replace polybutylene plumbing lines",
+                "value": "90029258"
+            }, {
+                "name": "Replace galvanized plumbing lines",
+                "value": "90029259"
+            }, {
+                "name": "Solar Hot Water",
+                "value": "90029260"
+            }, {
+                "name": "Replace sewer mains",
+                "value": "90029261"
+            }, {
+                "name": "Water booster pump - domestic (1, 2, 5, 10 HP)",
+                "value": "90029262"
+            }, {
+                "name": "Water softener equipment (37, 81, 160 GPM)",
+                "value": "90029263"
+            }, {
+                "name": "Water storage tank - electric or gas (100 GAL.)",
+                "value": "90029264"
+            }, {
+                "name": "Water heater domestic electric (10, 30, 40, 52 GAL.)",
+                "value": "90029265"
+            }, {
+                "name": "Water heater domestic gas-fired, residential (30, 40, 50, 75, 100 GAL.)",
+                "value": "90029266"
+            }, {
+                "name": "Water heater domestic gas-fired, comm. (75, 98, 120, 140, 155, 180, 200 MBH)",
+                "value": "90029267"
+            }, {
+                "name": "Water heater domestic oil-fired, residential (30, 50, 70, 85 GAL.)",
+                "value": "90029268"
+            }, {
+                "name": "Water heater domestic oil-fired, comm. (140, 199, 255, 270, 400, 540, 720 MBH)",
+                "value": "90029269"
+            }, {
+                "name": "Water Boiler domestic gas-fired (81, 102, 163, 203, 240, 280, 320, 360, 400, 440, 544, 765, 892, 1275, 1530 MBH)",
+                "value": "90029270"
+            }, {
+                "name": "Water heater. Replace (40 gallon)",
+                "value": "90029480"
+            }, {
+                "name": "Water heater. Replace (60 gallon)",
+                "value": "90029481"
+            }, {
+                "name": "Water heater. Replace (80 gallon)",
+                "value": "90029482"
+            }, {
+                "name": "Water heater. Replace (100 gallon)",
+                "value": "90029483"
+            }, {
+                "name": "Water heater. Replace (250 gallon)",
+                "value": "90029484"
+            }, {
+                "name": "",
+                "value": "90029485"
+            }, {
+                "name": "Boiler, gas fired atmospheric.  Replace",
+                "value": "90029486"
+            }, {
+                "name": "Boiler, oil fired, sectional.  Replace",
+                "value": "90029487"
+            }, {
+                "name": "Boiler, Electric.  Replace",
+                "value": "90029488"
+            }, {
+                "name": "",
+                "value": "90029489"
+            }, {
+                "name": "Booster pump. Replace",
+                "value": "90029490"
+            }, {
+                "name": "",
+                "value": "90029491"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90030266"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90030267"
+            }, {
+                "name": "Water heater",
+                "value": "90030268"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90030269"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90030270"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90030271"
+            }, {
+                "name": "Piping",
+                "value": "90030272"
+            }, {
+                "name": "Booster pumps",
+                "value": "90030273"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90030274"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90030275"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90030276"
+            }, {
+                "name": "Gas main",
+                "value": "90030277"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90030467"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90030468"
+            }, {
+                "name": "Water heater",
+                "value": "90030469"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90030470"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90030471"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90030472"
+            }, {
+                "name": "Piping",
+                "value": "90030473"
+            }, {
+                "name": "Booster pumps",
+                "value": "90030474"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90030475"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90030476"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90030477"
+            }, {
+                "name": "Gas main",
+                "value": "90030478"
+            }, {
+                "name": "Mechanical Consultant. Review and report   ",
+                "value": "90030846"
+            }, {
+                "name": "Galvanized pipe evaluation",
+                "value": "90030847"
+            }, {
+                "name": "Galvanized pipe replacement program",
+                "value": "90030848"
+            }, {
+                "name": "Polybutylene pipe evaluation",
+                "value": "90030849"
+            }, {
+                "name": "Polybutylene pipe replacement program",
+                "value": "90030850"
+            }, {
+                "name": "Water softening and filtration equipment ",
+                "value": "90030851"
+            }, {
+                "name": "Water heater. Replace (30-40 gallon) ",
+                "value": "90030852"
+            }, {
+                "name": "Water heater. Replace (41-60 gallon) ",
+                "value": "90030853"
+            }, {
+                "name": "Water heater. Replace (61-80 gallon) ",
+                "value": "90030854"
+            }, {
+                "name": "Water heater. Replace (81-100 gallon standard) ",
+                "value": "90030855"
+            }, {
+                "name": "Water heater. Replace (81-100 gallon high efficiency) ",
+                "value": "90030856"
+            }, {
+                "name": "Water heater. Replace (250 gallon) ",
+                "value": "90030857"
+            }, {
+                "name": "Boiler. Replace. Ray-Pak style (Gas-fired, per MBH) ",
+                "value": "90030858"
+            }, {
+                "name": "Boiler. Replace. Large format (Gas-fired, per MBH) ",
+                "value": "90030859"
+            }, {
+                "name": "Sump pump. Replace  ",
+                "value": "90030860"
+            }, {
+                "name": "Sanitary sewer collection system. Replace (4\" PVC) ",
+                "value": "90030861"
+            }, {
+                "name": "Sanitary sewer collection system. Replace (8\" PVC) ",
+                "value": "90030862"
+            }, {
+                "name": "Hot and cold water distribution piping",
+                "value": "90031182"
+            }, {
+                "name": "Sanitary waste and vent system piping",
+                "value": "90031183"
+            }, {
+                "name": "Water heater",
+                "value": "90031184"
+            }, {
+                "name": "Water heater storage tanks",
+                "value": "90031185"
+            }, {
+                "name": "Water softening and filtration equipment",
+                "value": "90031186"
+            }, {
+                "name": "Backflow preventer",
+                "value": "90031187"
+            }, {
+                "name": "Piping",
+                "value": "90031188"
+            }, {
+                "name": "Booster pumps",
+                "value": "90031189"
+            }, {
+                "name": "Sewage ejectors",
+                "value": "90031190"
+            }, {
+                "name": "Submersible pumps",
+                "value": "90031191"
+            }, {
+                "name": "Gas distribution system",
+                "value": "90031192"
+            }, {
+                "name": "Gas main",
+                "value": "90031193"
+            }, {
+                "name": "Polybutylene piping replacement",
+                "value": "90031383"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

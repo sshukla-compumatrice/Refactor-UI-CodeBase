@@ -1,0 +1,8 @@
+/* Put your css in here */
+.select2-container {
+  width: 300px;  
+}
+.select2-choice {
+  height : 30px !important;
+}
+

@@ -1,0 +1,156 @@
+ 
+<!-- controller: ReportOutputSetupController as reportOutputSetup -->
+<div>
+    <div class="container-fluid   margin-top-header">
+        <div class="row">
+
+            <div>
+                <h2>Layouts</h2>
+            </div>
+
+            <!-- left content -->
+            <div id="leftContent" class="col-md-4 col-lg-4 col-sm-3 margin-padding-0 well">
+                <div class="top-margin">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('global')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'global'}">Global Settings</a>
+                        </li>
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('cover')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'cover'}">Cover Page</a>
+                        </li>
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('header')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'header'}">Header</a>
+                        </li>
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('footer')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'footer'}">Footer</a>
+                        </li>
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('generalInformation')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'generalInformation'}">General Information</a>
+                        </li>
+                        <li>
+                            <a class="toc-section" ng-click="reportOutputSetup.layoutClicked('transmittalLetter')" ng-class="{'current-section': reportOutputSetup.selectedLayout == 'transmittalLetter'}">Transmittal Letter</a>
+                        </li>
+                    </ul>
+                    <div class="top-margin">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li>
+                                <a class="toc-section">Section Overrides</a>
+                            </li>
+                        </ul>
+                        <toc-display sections="reportOutputSetup.toc.sections" selected-section="reportOutputSetup.selectedSection" section-click="reportOutputSetup.sectionClicked(section)">
+
+                        </toc-display>
+                    </div>
+                </div>
+            </div>
+            <!-- left content ends -->
+
+            <!-- right content -->
+            <div class="col-md-8 col-lg-8 col-sm-9">
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'global'">
+                    <div id="globalLayout" class="boxCK">
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.globalSt">
+                            <div id="section-title" name="section-narrative" contenteditable="true" style="cursor: pointer; background:#eee;border:1px solid #ccc;padding:5px 10px; margin-botton:10px;">
+                                <div>
+                                    <span id="data-placeholder">Section Title</span>
+                                </div>
+                            </div>
+                            <div id="section-sub-title" name="section-narrative" contenteditable="true" style="cursor: pointer; background:#eee;border:1px solid #ccc;padding:5px 10px; margin-botton:10px;">
+                                <div>
+                                    <span id="data-placeholder">Sub-Section Title</span>
+                                </div>
+                            </div>
+                            <div id="section-sub-sub-title" name="section-narrative" contenteditable="true" style="cursor: pointer; background:#eee;border:1px solid #ccc;padding:5px 10px; margin-botton:10px;">
+                                <div>
+                                    <span id="data-placeholder">Sub-Sub-Section Title</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="section-narrative" name="section-narrative" contenteditable="true" style="cursor: pointer; background:#eee;border:1px solid #ccc;padding:5px 10px; margin-botton:10px;">
+                                <div>
+                                    <span id="data-placeholder">Narrative</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="section-photos" name="section-photos" contenteditable="true" style="cursor: pointer; background:#eee;border:1px solid #ccc;padding:5px 10px; margin-botton:10px;">
+                                <div>
+                                    <span id="data-placeholder">Photos</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="section-table">
+                                <table>
+                                    <thead>
+                                        <th>Table Column</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Table Data</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <input type="button" class="btn btn-success top-margin" value="Preview" ng-click="reportOutputSetup.saveSetup()">
+
+                    </div>
+                </div>
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'cover'">
+                    <div id="globalLayout" class='boxCK'>
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.coverPageStyling">
+                            <div id="cover-page-styling">
+                                <img width="624" height="670" src="app/modules/ReportOutput/utilities/cover%20page%20sample.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'header'">
+                    <div id="globalLayout" class='boxCK'>
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.headerStyling">
+                            <div id="header-styling">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'footer'">
+                    <div id="globalLayout" class='boxCK'>
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.footerStyling">
+                            <div id="footer-styling">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'generalInformation'">
+                    <div id="globalLayout" class='boxCK'>
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.generalInformationStyling">
+                            <div id="general-information-styling">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" ng-show="reportOutputSetup.selectedLayout == 'transmittalLetter'">
+                    <div id="globalLayout" class='boxCK'>
+                        <span class='editCK'>edit</span>
+                        <div ck-editor remove-ck-plugin="saveReportWritingCkData" class="textCK" editor-full-page="true" editor-height="700" ng-model="reportOutputSetup.transmittalLetterStyling">
+                            <div id="transmittal-letter-styling">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="reportSectionData" ng-repeat="sec in reportOutputSetup.resp.sections">
+                    <div add-html id="section_{{sec.sectionID}}" resp="sec" obj="ck.obj" ng-show="reportOutputSetup.sectionVisible(sec)">
+
+                    </div>
+                </div>
+            </div>
+            <!-- right content ends -->
+
+        </div>
+    </div>
+</div>

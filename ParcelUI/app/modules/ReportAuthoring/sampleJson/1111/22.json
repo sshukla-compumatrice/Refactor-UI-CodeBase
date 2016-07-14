@@ -1,0 +1,5158 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.3.4 Roofing",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 31,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Roof membrane - Overlay",
+                "value": "149"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "150"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "151"
+            }, {
+                "name": "Roof shingles",
+                "value": "152"
+            }, {
+                "name": "Roof tiles",
+                "value": "153"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "154"
+            }, {
+                "name": "Parapet coping",
+                "value": "155"
+            }, {
+                "name": "Roof flashing",
+                "value": "156"
+            }, {
+                "name": "Roof sheathing",
+                "value": "157"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "158"
+            }, {
+                "name": "Roof drains",
+                "value": "159"
+            }, {
+                "name": "Roof structure",
+                "value": "160"
+            }, {
+                "name": "Access hatch",
+                "value": "161"
+            }, {
+                "name": "Skylights",
+                "value": "162"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "163"
+            }, {
+                "name": "Replace concrete tile roofing system",
+                "value": "1825"
+            }, {
+                "name": "Replace modified built up roofing system",
+                "value": "1826"
+            }, {
+                "name": "Add new roof drains and associated piping",
+                "value": "1827"
+            }, {
+                "name": "Parapet coping",
+                "value": "1828"
+            }, {
+                "name": "Parapet coping sealant",
+                "value": "1829"
+            }, {
+                "name": "Replace roof expansion joints",
+                "value": "1830"
+            }, {
+                "name": "Replace plywood roof decking",
+                "value": "1831"
+            }, {
+                "name": "Install emergency overflow scuppers",
+                "value": "1832"
+            }, {
+                "name": "Replace EPDM roofing system",
+                "value": "1833"
+            }, {
+                "name": "Replace roof drains",
+                "value": "1834"
+            }, {
+                "name": "Replace Architectural ashalt shingle roof system",
+                "value": "1835"
+            }, {
+                "name": "Replace/Repair counterflashing",
+                "value": "1836"
+            }, {
+                "name": "Replace damaged skylights",
+                "value": "1837"
+            }, {
+                "name": "Replacement of canopies and awnings",
+                "value": "1838"
+            }, {
+                "name": "Replace plumbing vent stacks",
+                "value": "1839"
+            }, {
+                "name": "Replace TPO/PVC roofing system",
+                "value": "1840"
+            }, {
+                "name": "Replace roof hatch",
+                "value": "1841"
+            }, {
+                "name": "Replace multi-ply ashalt built up roofing system",
+                "value": "1842"
+            }, {
+                "name": "Replace standing seam metal roofing system",
+                "value": "1843"
+            }, {
+                "name": "Replacement of IRMA-built up",
+                "value": "1844"
+            }, {
+                "name": "Replace multi-ply coal tar built up roofing system",
+                "value": "1845"
+            }, {
+                "name": "Replace 3-Tab ashalt shingle roofing system",
+                "value": "1846"
+            }, {
+                "name": "Replace aluminum downspouts",
+                "value": "1847"
+            }, {
+                "name": "Replace/install metal coping cap",
+                "value": "1848"
+            }, {
+                "name": "Perform miscellaneous roof repairs",
+                "value": "1849"
+            }, {
+                "name": "Repair roof to wall/curb base flashing",
+                "value": "1850"
+            }, {
+                "name": "Replace pitch pans",
+                "value": "1851"
+            }, {
+                "name": "Install/replace gutter and downspout system",
+                "value": "1852"
+            }, {
+                "name": "Install 3' x 4' walkway pads",
+                "value": "1853"
+            }, {
+                "name": "Overlay modified aphalt roofing system",
+                "value": "1854"
+            }, {
+                "name": "Overlay EPDM roofing system",
+                "value": "1855"
+            }, {
+                "name": "Perform miscellaneous roof repairs",
+                "value": "1856"
+            }, {
+                "name": "Coat roofing system with reflective emulsion",
+                "value": "1857"
+            }, {
+                "name": "Coat roofing system with elastomeric coating",
+                "value": "1858"
+            }, {
+                "name": "Condensate overflow piping",
+                "value": "1859"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "2057"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "2058"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "2059"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "2162"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "2163"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "2164"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "2376"
+            }, {
+                "name": "Roof structure ",
+                "value": "2377"
+            }, {
+                "name": "Roof tiles ",
+                "value": "2378"
+            }, {
+                "name": "Skylights ",
+                "value": "2379"
+            }, {
+                "name": "Parapet coping ",
+                "value": "2380"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "2381"
+            }, {
+                "name": "Roof membrane.  Replace ",
+                "value": "2382"
+            }, {
+                "name": "Roof drains ",
+                "value": "2383"
+            }, {
+                "name": "Roof shingles ",
+                "value": "2384"
+            }, {
+                "name": "Access hatch ",
+                "value": "2385"
+            }, {
+                "name": "Roof.  Metal panels ",
+                "value": "2386"
+            }, {
+                "name": "Roof flashing ",
+                "value": "2387"
+            }, {
+                "name": "Roof membrane.  Overlay ",
+                "value": "2388"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "2389"
+            }, {
+                "name": "Roof membrane.  Coat ",
+                "value": "2390"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "2622"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "2623"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "2624"
+            }, {
+                "name": "Aluminum emulsion coating, silver",
+                "value": "3113"
+            }, {
+                "name": "Built-up roof 3 ply asphalt",
+                "value": "3114"
+            }, {
+                "name": "Built-up roof 4 ply asphalt",
+                "value": "3115"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "3116"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "3117"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "3118"
+            }, {
+                "name": "Downspouts ",
+                "value": "3119"
+            }, {
+                "name": "Drains ",
+                "value": "3120"
+            }, {
+                "name": "Drip edge ",
+                "value": "3121"
+            }, {
+                "name": "EPDM, ballasted ",
+                "value": "3122"
+            }, {
+                "name": "EPDM, single-ply",
+                "value": "3123"
+            }, {
+                "name": "Expansion joint ",
+                "value": "3124"
+            }, {
+                "name": "Flashing, base ",
+                "value": "3125"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "3126"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "3127"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "3128"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "3129"
+            }, {
+                "name": "Gutters ",
+                "value": "3130"
+            }, {
+                "name": "Hatch ",
+                "value": "3131"
+            }, {
+                "name": "Hatch ",
+                "value": "3132"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "3133"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "3134"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "3135"
+            }, {
+                "name": "Metal roof ",
+                "value": "3136"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "3137"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "3138"
+            }, {
+                "name": "Parapet coping ",
+                "value": "3139"
+            }, {
+                "name": "Parapet coping ",
+                "value": "3140"
+            }, {
+                "name": "Pitch pan ",
+                "value": "3141"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "3142"
+            }, {
+                "name": "Roof drains ",
+                "value": "3143"
+            }, {
+                "name": "Roof flashing ",
+                "value": "3144"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "3145"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "3146"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "3147"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "3148"
+            }, {
+                "name": "Roof shingles ",
+                "value": "3149"
+            }, {
+                "name": "Roof structure ",
+                "value": "3150"
+            }, {
+                "name": "Roof tiles ",
+                "value": "3151"
+            }, {
+                "name": "Scuppers ",
+                "value": "3152"
+            }, {
+                "name": "Shingles, asphalt, architectural, 30-year",
+                "value": "3153"
+            }, {
+                "name": "Shingles, asphalt, std. 3-tab, 20-year",
+                "value": "3154"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "3155"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "3156"
+            }, {
+                "name": "Skylights ",
+                "value": "3157"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "3158"
+            }, {
+                "name": "Tile roof ",
+                "value": "3159"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "3160"
+            }, {
+                "name": "Walkways ",
+                "value": "3161"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "3383"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "3384"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "3385"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "3860"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "3861"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "3862"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "4009"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "4051"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "4052"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "4053"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "4148"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "4190"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "4191"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "4192"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "4957"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "4958"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "4959"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "5137"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "5138"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "5139"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "5626"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "5669"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "5670"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "5671"
+            }, {
+                "name": "Roof tiles ",
+                "value": "12167"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "12168"
+            }, {
+                "name": "Drains ",
+                "value": "12169"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12170"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "12171"
+            }, {
+                "name": "Expansion joint ",
+                "value": "12172"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "12173"
+            }, {
+                "name": "Scuppers ",
+                "value": "12174"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "12175"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "12176"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "12177"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "12178"
+            }, {
+                "name": "Access hatch ",
+                "value": "12179"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "12180"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "12181"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "12182"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "12183"
+            }, {
+                "name": "Hatch ",
+                "value": "12184"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "12185"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "12186"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "12187"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "12188"
+            }, {
+                "name": "Roof shingles ",
+                "value": "12189"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "12190"
+            }, {
+                "name": "Downspouts ",
+                "value": "12191"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "12192"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12193"
+            }, {
+                "name": "Drip edge ",
+                "value": "12194"
+            }, {
+                "name": "Roof flashing ",
+                "value": "12195"
+            }, {
+                "name": "Pitch pan ",
+                "value": "12196"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "12197"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "12198"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "12199"
+            }, {
+                "name": "Flashing, base ",
+                "value": "12200"
+            }, {
+                "name": "Roof structure ",
+                "value": "12201"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "12202"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "12203"
+            }, {
+                "name": "Skylights ",
+                "value": "12204"
+            }, {
+                "name": "Tile roof ",
+                "value": "12205"
+            }, {
+                "name": "Gutters ",
+                "value": "12206"
+            }, {
+                "name": "Walkways ",
+                "value": "12207"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "12208"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "12209"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "12210"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "12211"
+            }, {
+                "name": "Metal roof ",
+                "value": "12212"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "12213"
+            }, {
+                "name": "Roof tiles ",
+                "value": "12410"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "12411"
+            }, {
+                "name": "Drains ",
+                "value": "12412"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12413"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "12414"
+            }, {
+                "name": "Expansion joint ",
+                "value": "12415"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "12416"
+            }, {
+                "name": "Scuppers ",
+                "value": "12417"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "12418"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "12419"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "12420"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "12421"
+            }, {
+                "name": "Access hatch ",
+                "value": "12422"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "12423"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "12424"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "12425"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "12426"
+            }, {
+                "name": "Hatch ",
+                "value": "12427"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "12428"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "12429"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "12430"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "12431"
+            }, {
+                "name": "Roof shingles ",
+                "value": "12432"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "12433"
+            }, {
+                "name": "Downspouts ",
+                "value": "12434"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "12435"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12436"
+            }, {
+                "name": "Drip edge ",
+                "value": "12437"
+            }, {
+                "name": "Roof flashing ",
+                "value": "12438"
+            }, {
+                "name": "Pitch pan ",
+                "value": "12439"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "12440"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "12441"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "12442"
+            }, {
+                "name": "Flashing, base ",
+                "value": "12443"
+            }, {
+                "name": "Roof structure ",
+                "value": "12444"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "12445"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "12446"
+            }, {
+                "name": "Skylights ",
+                "value": "12447"
+            }, {
+                "name": "Tile roof ",
+                "value": "12448"
+            }, {
+                "name": "Gutters ",
+                "value": "12449"
+            }, {
+                "name": "Walkways ",
+                "value": "12450"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "12451"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "12452"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "12453"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "12454"
+            }, {
+                "name": "Metal roof ",
+                "value": "12455"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "12456"
+            }, {
+                "name": "Roof tiles ",
+                "value": "12653"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "12654"
+            }, {
+                "name": "Drains ",
+                "value": "12655"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12656"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "12657"
+            }, {
+                "name": "Expansion joint ",
+                "value": "12658"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "12659"
+            }, {
+                "name": "Scuppers ",
+                "value": "12660"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "12661"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "12662"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "12663"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "12664"
+            }, {
+                "name": "Access hatch ",
+                "value": "12665"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "12666"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "12667"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "12668"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "12669"
+            }, {
+                "name": "Hatch ",
+                "value": "12670"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "12671"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "12672"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "12673"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "12674"
+            }, {
+                "name": "Roof shingles ",
+                "value": "12675"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "12676"
+            }, {
+                "name": "Downspouts ",
+                "value": "12677"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "12678"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12679"
+            }, {
+                "name": "Drip edge ",
+                "value": "12680"
+            }, {
+                "name": "Roof flashing ",
+                "value": "12681"
+            }, {
+                "name": "Pitch pan ",
+                "value": "12682"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "12683"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "12684"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "12685"
+            }, {
+                "name": "Flashing, base ",
+                "value": "12686"
+            }, {
+                "name": "Roof structure ",
+                "value": "12687"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "12688"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "12689"
+            }, {
+                "name": "Skylights ",
+                "value": "12690"
+            }, {
+                "name": "Tile roof ",
+                "value": "12691"
+            }, {
+                "name": "Gutters ",
+                "value": "12692"
+            }, {
+                "name": "Walkways ",
+                "value": "12693"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "12694"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "12695"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "12696"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "12697"
+            }, {
+                "name": "Metal roof ",
+                "value": "12698"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "12699"
+            }, {
+                "name": "Roof tiles ",
+                "value": "12896"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "12897"
+            }, {
+                "name": "Drains ",
+                "value": "12898"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12899"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "12900"
+            }, {
+                "name": "Expansion joint ",
+                "value": "12901"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "12902"
+            }, {
+                "name": "Scuppers ",
+                "value": "12903"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "12904"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "12905"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "12906"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "12907"
+            }, {
+                "name": "Access hatch ",
+                "value": "12908"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "12909"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "12910"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "12911"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "12912"
+            }, {
+                "name": "Hatch ",
+                "value": "12913"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "12914"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "12915"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "12916"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "12917"
+            }, {
+                "name": "Roof shingles ",
+                "value": "12918"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "12919"
+            }, {
+                "name": "Downspouts ",
+                "value": "12920"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "12921"
+            }, {
+                "name": "Parapet coping ",
+                "value": "12922"
+            }, {
+                "name": "Drip edge ",
+                "value": "12923"
+            }, {
+                "name": "Roof flashing ",
+                "value": "12924"
+            }, {
+                "name": "Pitch pan ",
+                "value": "12925"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "12926"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "12927"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "12928"
+            }, {
+                "name": "Flashing, base ",
+                "value": "12929"
+            }, {
+                "name": "Roof structure ",
+                "value": "12930"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "12931"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "12932"
+            }, {
+                "name": "Skylights ",
+                "value": "12933"
+            }, {
+                "name": "Tile roof ",
+                "value": "12934"
+            }, {
+                "name": "Gutters ",
+                "value": "12935"
+            }, {
+                "name": "Walkways ",
+                "value": "12936"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "12937"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "12938"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "12939"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "12940"
+            }, {
+                "name": "Metal roof ",
+                "value": "12941"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "12942"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "13076"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "13077"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "13078"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "13430"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "13431"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "13528"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "13538"
+            }, {
+                "name": "Built-up roof 3 ply, replacement",
+                "value": "13846"
+            }, {
+                "name": "Built-up roof 4 ply, replacement",
+                "value": "13847"
+            }, {
+                "name": "Coal tar pitch roof replacement",
+                "value": "13848"
+            }, {
+                "name": "Condensate overflow piping, replacement",
+                "value": "13849"
+            }, {
+                "name": "Downspout replacement",
+                "value": "13850"
+            }, {
+                "name": "Drain replacement",
+                "value": "13851"
+            }, {
+                "name": "Drip edge replacement",
+                "value": "13852"
+            }, {
+                "name": "Expansion joint replacement",
+                "value": "13853"
+            }, {
+                "name": "Ballasted EPDM roof replacement",
+                "value": "13854"
+            }, {
+                "name": "Fully adhered EPDM roof replacement",
+                "value": "13855"
+            }, {
+                "name": "Mechanically attached EPDM roof replacement",
+                "value": "13856"
+            }, {
+                "name": "Base flasing repair",
+                "value": "13857"
+            }, {
+                "name": "Counterflashing repair",
+                "value": "13858"
+            }, {
+                "name": "Curb flashing repair",
+                "value": "13859"
+            }, {
+                "name": "Pipe flashing repair",
+                "value": "13860"
+            }, {
+                "name": "Gutter replacement",
+                "value": "13861"
+            }, {
+                "name": "Roof hatch replacement",
+                "value": "13862"
+            }, {
+                "name": "IRMA-single ply roof replacement",
+                "value": "13863"
+            }, {
+                "name": "IRMA-built up roof replacement",
+                "value": "13864"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "13865"
+            }, {
+                "name": "Metal roof \"O\" ring replacement",
+                "value": "13866"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "13867"
+            }, {
+                "name": "Parapet coping replacement",
+                "value": "13868"
+            }, {
+                "name": "Parapet coping sealant replacement",
+                "value": "13869"
+            }, {
+                "name": "Pitch pan replacement",
+                "value": "13870"
+            }, {
+                "name": "Scupper replacement",
+                "value": "13871"
+            }, {
+                "name": "Asphalt shingle replacement",
+                "value": "13872"
+            }, {
+                "name": "Slate shingle replacement",
+                "value": "13873"
+            }, {
+                "name": "Concrete tile replacement",
+                "value": "13874"
+            }, {
+                "name": "Clay tile replacement",
+                "value": "13875"
+            }, {
+                "name": "Prefabricated skylight replacement",
+                "value": "13876"
+            }, {
+                "name": "Tile roof replacement",
+                "value": "13877"
+            }, {
+                "name": "TPO/PVC roof replacement",
+                "value": "13878"
+            }, {
+                "name": "Walkway replacement",
+                "value": "13879"
+            }, {
+                "name": "Replace Asphalt Shingles (pitched roof)",
+                "value": "17888"
+            }, {
+                "name": "Replace Single-Ply Membrane (flat roof)",
+                "value": "17889"
+            }, {
+                "name": "Replace Built-up Membrane (flat roof)",
+                "value": "17890"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "17891"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "17892"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "17893"
+            }, {
+                "name": "Roof shingles",
+                "value": "17894"
+            }, {
+                "name": "Roof tiles",
+                "value": "17895"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "17896"
+            }, {
+                "name": "Parapet coping",
+                "value": "17897"
+            }, {
+                "name": "Roof flashing",
+                "value": "17898"
+            }, {
+                "name": "Roof sheathing",
+                "value": "17899"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "17900"
+            }, {
+                "name": "Roof drains",
+                "value": "17901"
+            }, {
+                "name": "Roof structure",
+                "value": "17902"
+            }, {
+                "name": "Access hatch",
+                "value": "17903"
+            }, {
+                "name": "Skylights",
+                "value": "17904"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "17905"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "18580"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "18581"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "18582"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "18681"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "18682"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "18683"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "18782"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "18783"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "18784"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "18883"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "18884"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "18885"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "19020"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "19030"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "20105"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "20115"
+            }, {
+                "name": "Smoke or Exhaust Vents, Replace",
+                "value": "21634"
+            }, {
+                "name": "Damaged skylights, Replace ",
+                "value": "21635"
+            }, {
+                "name": "Skylights, Replace ",
+                "value": "21636"
+            }, {
+                "name": "Access hatch, Replace ",
+                "value": "21637"
+            }, {
+                "name": "Roof flashing, Repair/ Replace ",
+                "value": "21638"
+            }, {
+                "name": "Parapet coping, Replace ",
+                "value": "21639"
+            }, {
+                "name": "Canopies and awnings, Replace ",
+                "value": "21640"
+            }, {
+                "name": "Roof drains, Repair ",
+                "value": "21641"
+            }, {
+                "name": "Gutters and downspouts, Replace ",
+                "value": "21642"
+            }, {
+                "name": "Concrete/Ceramic roof tiles, Repair  ",
+                "value": "21643"
+            }, {
+                "name": "Roof leak,  Repair",
+                "value": "21644"
+            }, {
+                "name": "Roof sheathing, Replace ",
+                "value": "21645"
+            }, {
+                "name": "Roofing metal panels, Replace ",
+                "value": "21646"
+            }, {
+                "name": "Asphalt Composition Roof shingles, Replace ",
+                "value": "21647"
+            }, {
+                "name": "Roof membrane, Replace ",
+                "value": "21648"
+            }, {
+                "name": "Built-up Roof, Overlay ",
+                "value": "21649"
+            }, {
+                "name": "TPO roof membrane, Replace",
+                "value": "21650"
+            }, {
+                "name": "Single-ply EPDM roof membrane, Replace",
+                "value": "21651"
+            }, {
+                "name": "Built-up roof membrane, Replace",
+                "value": "21652"
+            }, {
+                "name": "Built-up roofing system. Replace ",
+                "value": "21918"
+            }, {
+                "name": "Roll roofing membrane. Replace ",
+                "value": "21919"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace ",
+                "value": "21920"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace ",
+                "value": "21921"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay ",
+                "value": "21922"
+            }, {
+                "name": "Asphalt composition shingles. Replace ",
+                "value": "21923"
+            }, {
+                "name": "Standing seam metal roof. Replace (Copper) ",
+                "value": "21924"
+            }, {
+                "name": "Standing seam metal roof. Replace (Zinc) ",
+                "value": "21925"
+            }, {
+                "name": "Roof tiles. Replace (Clay) ",
+                "value": "21926"
+            }, {
+                "name": "Roof tiles. Replace (Concrete) ",
+                "value": "21927"
+            }, {
+                "name": "Roof leak. Repair ",
+                "value": "21928"
+            }, {
+                "name": "Gutters. Replace ",
+                "value": "21929"
+            }, {
+                "name": "Downspouts. Replace ",
+                "value": "21930"
+            }, {
+                "name": "Skylights. Replace ",
+                "value": "21931"
+            }, {
+                "name": "Smoke vents. Replace ",
+                "value": "21932"
+            }, {
+                "name": "",
+                "value": "21933"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "22463"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "22505"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "22506"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "22507"
+            }, {
+                "name": "Strip and replace asphalt shingle roof",
+                "value": "22816"
+            }, {
+                "name": "Roof repairs after warranty",
+                "value": "22817"
+            }, {
+                "name": "Ongoing roof repairs, psf",
+                "value": "22818"
+            }, {
+                "name": "Ongoing roof repairs",
+                "value": "22819"
+            }, {
+                "name": "Obtain copy of roofing manufacturer's warranty",
+                "value": "22820"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "22821"
+            }, {
+                "name": "Mineral cap sheet replacement",
+                "value": "22822"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "22823"
+            }, {
+                "name": "Investigate and repair roof leaks",
+                "value": "22824"
+            }, {
+                "name": "Inspection and report by roof consultant",
+                "value": "22825"
+            }, {
+                "name": "Foam roof replacement",
+                "value": "22826"
+            }, {
+                "name": "EPDM roof replacement",
+                "value": "22827"
+            }, {
+                "name": "Completion of repairs recommended by roof consultant (Cost TBD)",
+                "value": "22828"
+            }, {
+                "name": "Complete roof replacement with seamless roof product",
+                "value": "22829"
+            }, {
+                "name": "Built up roof replacement",
+                "value": "22830"
+            }, {
+                "name": "Asphalt shingle roof replacement",
+                "value": "22831"
+            }, {
+                "name": "Re-seal/replace flashing at chimney",
+                "value": "22832"
+            }, {
+                "name": "Gutter and downspout replacement",
+                "value": "22833"
+            }, {
+                "name": "Roof tiles ",
+                "value": "23094"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "23095"
+            }, {
+                "name": "Drains ",
+                "value": "23096"
+            }, {
+                "name": "Parapet coping ",
+                "value": "23097"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "23098"
+            }, {
+                "name": "Expansion joint ",
+                "value": "23099"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "23100"
+            }, {
+                "name": "Scuppers ",
+                "value": "23101"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "23102"
+            }, {
+                "name": "Roof drains ",
+                "value": "23103"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "23104"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "23105"
+            }, {
+                "name": "Access hatch ",
+                "value": "23106"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "23107"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "23108"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "23109"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "23110"
+            }, {
+                "name": "Hatch ",
+                "value": "23111"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "23112"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "23113"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "23114"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "23115"
+            }, {
+                "name": "Roof shingles ",
+                "value": "23116"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "23117"
+            }, {
+                "name": "Downspouts ",
+                "value": "23118"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "23119"
+            }, {
+                "name": "Parapet coping ",
+                "value": "23120"
+            }, {
+                "name": "Drip edge ",
+                "value": "23121"
+            }, {
+                "name": "Roof flashing ",
+                "value": "23122"
+            }, {
+                "name": "Pitch pan ",
+                "value": "23123"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "23124"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "23125"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "23126"
+            }, {
+                "name": "Flashing, base ",
+                "value": "23127"
+            }, {
+                "name": "Roof structure ",
+                "value": "23128"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "23129"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "23130"
+            }, {
+                "name": "Skylights ",
+                "value": "23131"
+            }, {
+                "name": "Tile roof ",
+                "value": "23132"
+            }, {
+                "name": "Gutters ",
+                "value": "23133"
+            }, {
+                "name": "Walkways ",
+                "value": "23134"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "23135"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "23136"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "23137"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "23138"
+            }, {
+                "name": "Metal roof ",
+                "value": "23139"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "23140"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90002239"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90002240"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90002241"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90002720"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90002721"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90002722"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90002723"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90002724"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90002725"
+            }, {
+                "name": "Inverted roof.  Replace.",
+                "value": "90002726"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90002727"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90002728"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90002729"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90002730"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90002731"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90002732"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90002733"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90002734"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90002735"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90002736"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90002737"
+            }, {
+                "name": "",
+                "value": "90002738"
+            }, {
+                "name": "Patio fence replacement ",
+                "value": "90004007"
+            }, {
+                "name": "Hardboard siding ",
+                "value": "90004008"
+            }, {
+                "name": "Exterior walls. paint ",
+                "value": "90004009"
+            }, {
+                "name": "Siding, stucco/plaster ",
+                "value": "90004010"
+            }, {
+                "name": "Aluminum Siding, paint ",
+                "value": "90004011"
+            }, {
+                "name": "EIFS. repair ",
+                "value": "90004012"
+            }, {
+                "name": "Siding, wood ",
+                "value": "90004013"
+            }, {
+                "name": "Caulk metal/glass curtain wall ",
+                "value": "90004014"
+            }, {
+                "name": "Masonry. clean. repoint ",
+                "value": "90004015"
+            }, {
+                "name": "Soffit, Gypsum Board ",
+                "value": "90004016"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90004017"
+            }, {
+                "name": "Wood siding ",
+                "value": "90004018"
+            }, {
+                "name": "Stone façade ",
+                "value": "90004019"
+            }, {
+                "name": "Expansion joint replacement ",
+                "value": "90004020"
+            }, {
+                "name": "Caulking and sealing ",
+                "value": "90004021"
+            }, {
+                "name": "Fascia, Wood ",
+                "value": "90004022"
+            }, {
+                "name": "Paint exterior ",
+                "value": "90004023"
+            }, {
+                "name": "Sealants ",
+                "value": "90004024"
+            }, {
+                "name": "Siding, metal ",
+                "value": "90004025"
+            }, {
+                "name": "Aluminum Siding ",
+                "value": "90004026"
+            }, {
+                "name": "Stucco. repair ",
+                "value": "90004027"
+            }, {
+                "name": "Siding, vinyl ",
+                "value": "90004028"
+            }, {
+                "name": "Brick façade tuckpointing ",
+                "value": "90004029"
+            }, {
+                "name": "Concrete. repair ",
+                "value": "90004030"
+            }, {
+                "name": "Soffit, Aluminum ",
+                "value": "90004031"
+            }, {
+                "name": "Caulk precast concrete panel joints ",
+                "value": "90004032"
+            }, {
+                "name": "Curtain wall. gaskets ",
+                "value": "90004033"
+            }, {
+                "name": "Soffit, Wood ",
+                "value": "90004034"
+            }, {
+                "name": "EIFS replacement ",
+                "value": "90004035"
+            }, {
+                "name": "Wood shingles ",
+                "value": "90004036"
+            }, {
+                "name": "Stone Façade, waterproof and caulk ",
+                "value": "90004037"
+            }, {
+                "name": "Fascia, Aluminum ",
+                "value": "90004038"
+            }, {
+                "name": "Paint EIFS ",
+                "value": "90004039"
+            }, {
+                "name": "Patio fence replacement ",
+                "value": "90006503"
+            }, {
+                "name": "Hardboard siding ",
+                "value": "90006504"
+            }, {
+                "name": "Exterior walls. paint ",
+                "value": "90006505"
+            }, {
+                "name": "Siding, stucco/plaster ",
+                "value": "90006506"
+            }, {
+                "name": "Aluminum Siding, paint ",
+                "value": "90006507"
+            }, {
+                "name": "EIFS. repair ",
+                "value": "90006508"
+            }, {
+                "name": "Siding, wood ",
+                "value": "90006509"
+            }, {
+                "name": "Caulk metal/glass curtain wall ",
+                "value": "90006510"
+            }, {
+                "name": "Masonry. clean. repoint ",
+                "value": "90006511"
+            }, {
+                "name": "Soffit, Gypsum Board ",
+                "value": "90006512"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90006513"
+            }, {
+                "name": "Wood siding ",
+                "value": "90006514"
+            }, {
+                "name": "Stone façade ",
+                "value": "90006515"
+            }, {
+                "name": "Expansion joint replacement ",
+                "value": "90006516"
+            }, {
+                "name": "Caulking and sealing ",
+                "value": "90006517"
+            }, {
+                "name": "Fascia, Wood ",
+                "value": "90006518"
+            }, {
+                "name": "Paint exterior ",
+                "value": "90006519"
+            }, {
+                "name": "Sealants ",
+                "value": "90006520"
+            }, {
+                "name": "Siding, metal ",
+                "value": "90006521"
+            }, {
+                "name": "Aluminum Siding ",
+                "value": "90006522"
+            }, {
+                "name": "Stucco. repair ",
+                "value": "90006523"
+            }, {
+                "name": "Siding, vinyl ",
+                "value": "90006524"
+            }, {
+                "name": "Brick façade tuckpointing ",
+                "value": "90006525"
+            }, {
+                "name": "Concrete. repair ",
+                "value": "90006526"
+            }, {
+                "name": "Soffit, Aluminum ",
+                "value": "90006527"
+            }, {
+                "name": "Caulk precast concrete panel joints ",
+                "value": "90006528"
+            }, {
+                "name": "Curtain wall. gaskets ",
+                "value": "90006529"
+            }, {
+                "name": "Soffit, Wood ",
+                "value": "90006530"
+            }, {
+                "name": "EIFS replacement ",
+                "value": "90006531"
+            }, {
+                "name": "Wood shingles ",
+                "value": "90006532"
+            }, {
+                "name": "Stone Façade, waterproof and caulk ",
+                "value": "90006533"
+            }, {
+                "name": "Fascia, Aluminum ",
+                "value": "90006534"
+            }, {
+                "name": "Paint EIFS ",
+                "value": "90006535"
+            }, {
+                "name": "Paint exterior ",
+                "value": "90006835"
+            }, {
+                "name": "Patio fence replacement ",
+                "value": "90006836"
+            }, {
+                "name": "Hardboard siding ",
+                "value": "90006837"
+            }, {
+                "name": "Exterior walls. paint ",
+                "value": "90006838"
+            }, {
+                "name": "Siding, stucco/plaster ",
+                "value": "90006839"
+            }, {
+                "name": "Aluminum Siding, paint ",
+                "value": "90006840"
+            }, {
+                "name": "EIFS. repair ",
+                "value": "90006841"
+            }, {
+                "name": "Siding, wood ",
+                "value": "90006842"
+            }, {
+                "name": "Caulk metal/glass curtain wall ",
+                "value": "90006843"
+            }, {
+                "name": "Masonry. clean. repoint ",
+                "value": "90006844"
+            }, {
+                "name": "Soffit, Gypsum Board ",
+                "value": "90006845"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90006846"
+            }, {
+                "name": "Wood siding ",
+                "value": "90006847"
+            }, {
+                "name": "Stone façade ",
+                "value": "90006848"
+            }, {
+                "name": "Expansion joint replacement ",
+                "value": "90006849"
+            }, {
+                "name": "Caulking and sealing ",
+                "value": "90006850"
+            }, {
+                "name": "Fascia, Wood ",
+                "value": "90006851"
+            }, {
+                "name": "Paint exterior ",
+                "value": "90006852"
+            }, {
+                "name": "Sealants ",
+                "value": "90006853"
+            }, {
+                "name": "Siding, metal ",
+                "value": "90006854"
+            }, {
+                "name": "Aluminum Siding ",
+                "value": "90006855"
+            }, {
+                "name": "Stucco. repair ",
+                "value": "90006856"
+            }, {
+                "name": "Siding, vinyl ",
+                "value": "90006857"
+            }, {
+                "name": "Brick façade tuckpointing ",
+                "value": "90006858"
+            }, {
+                "name": "Concrete. repair ",
+                "value": "90006859"
+            }, {
+                "name": "Soffit, Aluminum ",
+                "value": "90006860"
+            }, {
+                "name": "Caulk precast concrete panel joints ",
+                "value": "90006861"
+            }, {
+                "name": "Curtain wall. gaskets ",
+                "value": "90006862"
+            }, {
+                "name": "Soffit, Wood ",
+                "value": "90006863"
+            }, {
+                "name": "EIFS replacement ",
+                "value": "90006864"
+            }, {
+                "name": "Wood shingles ",
+                "value": "90006865"
+            }, {
+                "name": "Stone Façade, waterproof and caulk ",
+                "value": "90006866"
+            }, {
+                "name": "Fascia, Aluminum ",
+                "value": "90006867"
+            }, {
+                "name": "Paint EIFS ",
+                "value": "90006868"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90007178"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90007179"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90007180"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90007181"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90007182"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90007183"
+            }, {
+                "name": "Inverted roof.  Replace.",
+                "value": "90007184"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90007185"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90007186"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90007187"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90007188"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90007189"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90007190"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90007191"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90007192"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90007193"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90007194"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90007195"
+            }, {
+                "name": "",
+                "value": "90007196"
+            }, {
+                "name": "Exterior walls. Paint",
+                "value": "90007777"
+            }, {
+                "name": "Exterior walls. Paint (per dwelling unit)",
+                "value": "90007778"
+            }, {
+                "name": "EIFS. Paint and seal",
+                "value": "90007779"
+            }, {
+                "name": "Stucco. Repair and seal with elastomeric paint",
+                "value": "90007780"
+            }, {
+                "name": "Sealant. Replace",
+                "value": "90007781"
+            }, {
+                "name": "EIFS. Repair",
+                "value": "90007782"
+            }, {
+                "name": "Masonry. Sandblast",
+                "value": "90007783"
+            }, {
+                "name": "Masonry. Repoint",
+                "value": "90007784"
+            }, {
+                "name": "Expansion joint. Replace",
+                "value": "90007785"
+            }, {
+                "name": "Facade. Repair",
+                "value": "90007786"
+            }, {
+                "name": "Facade. Renovate",
+                "value": "90007787"
+            }, {
+                "name": "Curtain wall. Renovate",
+                "value": "90007788"
+            }, {
+                "name": "Curtain wall. Wet seal",
+                "value": "90007789"
+            }, {
+                "name": "Hardboard siding. Replace",
+                "value": "90007790"
+            }, {
+                "name": "Plywood siding. Replace",
+                "value": "90007791"
+            }, {
+                "name": "Vinyl siding. Replace",
+                "value": "90007792"
+            }, {
+                "name": "Fiber cement siding. Replace",
+                "value": "90007793"
+            }, {
+                "name": "Cedar siding. Replace",
+                "value": "90007794"
+            }, {
+                "name": "Aluminum siding. Replace",
+                "value": "90007795"
+            }, {
+                "name": "",
+                "value": "90007796"
+            }, {
+                "name": "Exterior Walls, Repaint ",
+                "value": "90008879"
+            }, {
+                "name": "Exterior Walls, Recaulk",
+                "value": "90008880"
+            }, {
+                "name": "Exterior Walls, Recaulk",
+                "value": "90008881"
+            }, {
+                "name": "EIFS, Recoat ",
+                "value": "90008882"
+            }, {
+                "name": "EIFS. Repair ",
+                "value": "90008883"
+            }, {
+                "name": "Stucco, Repair ",
+                "value": "90008884"
+            }, {
+                "name": "Fiber-Cement siding, Repaint",
+                "value": "90008885"
+            }, {
+                "name": "Fiber-Cement siding, Replace",
+                "value": "90008886"
+            }, {
+                "name": "Caulking and sealing, Replace ",
+                "value": "90008887"
+            }, {
+                "name": "Wood Siding, Repair",
+                "value": "90008888"
+            }, {
+                "name": "Hardboard siding, Replace ",
+                "value": "90008889"
+            }, {
+                "name": "Stucco/plaster Siding, Repair",
+                "value": "90008890"
+            }, {
+                "name": "T1-11 Plywood siding, Replace",
+                "value": "90008891"
+            }, {
+                "name": "Aluminum Siding, paint ",
+                "value": "90008892"
+            }, {
+                "name": "Masonry, Clean and repoint ",
+                "value": "90008893"
+            }, {
+                "name": "Masonry, Repoint ",
+                "value": "90008894"
+            }, {
+                "name": "Metal Siding, Replace",
+                "value": "90008895"
+            }, {
+                "name": "Aluminum Siding, Replace ",
+                "value": "90008896"
+            }, {
+                "name": "Vinyl Siding, Replace",
+                "value": "90008897"
+            }, {
+                "name": "Wood shingles, Replace ",
+                "value": "90008898"
+            }, {
+                "name": "Metal/glass curtain wall, Reseal ",
+                "value": "90008899"
+            }, {
+                "name": "Curtain wall gaskets, Replace ",
+                "value": "90008900"
+            }, {
+                "name": "Concrete epoxy injection ",
+                "value": "90008901"
+            }, {
+                "name": "Stone façade, Replace ",
+                "value": "90008902"
+            }, {
+                "name": "Expansion joint, Replace",
+                "value": "90008903"
+            }, {
+                "name": "Soffit, Gypsum Board, Replace ",
+                "value": "90008904"
+            }, {
+                "name": "Wood Fascia, Replace",
+                "value": "90008905"
+            }, {
+                "name": "Aluminum Soffit, Replace",
+                "value": "90008906"
+            }, {
+                "name": "Precast concrete panel joints, Recaulk ",
+                "value": "90008907"
+            }, {
+                "name": "Wood Soffit, Replace",
+                "value": "90008908"
+            }, {
+                "name": "EIFS, Replace ",
+                "value": "90008909"
+            }, {
+                "name": "Fascia, Aluminum ",
+                "value": "90008910"
+            }, {
+                "name": "Façade Assessment",
+                "value": "90008911"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "90009124"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90009166"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90009167"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90009168"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90012768"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90012769"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90012770"
+            }, {
+                "name": "Built-up roof 3 ply, replacement",
+                "value": "90012956"
+            }, {
+                "name": "Built-up roof 4 ply, replacement",
+                "value": "90012957"
+            }, {
+                "name": "Coal tar pitch roof replacement",
+                "value": "90012958"
+            }, {
+                "name": "Condensate overflow piping, replacement",
+                "value": "90012959"
+            }, {
+                "name": "Downspout replacement",
+                "value": "90012960"
+            }, {
+                "name": "Drain replacement",
+                "value": "90012961"
+            }, {
+                "name": "Drip edge replacement",
+                "value": "90012962"
+            }, {
+                "name": "Expansion joint replacement",
+                "value": "90012963"
+            }, {
+                "name": "Ballasted EPDM roof replacement",
+                "value": "90012964"
+            }, {
+                "name": "Fully adhered EPDM roof replacement",
+                "value": "90012965"
+            }, {
+                "name": "Mechanically attached EPDM roof replacement",
+                "value": "90012966"
+            }, {
+                "name": "Base flashing repair",
+                "value": "90012967"
+            }, {
+                "name": "Counterflashing repair",
+                "value": "90012968"
+            }, {
+                "name": "Curb flashing repair",
+                "value": "90012969"
+            }, {
+                "name": "Pipe flashing repair",
+                "value": "90012970"
+            }, {
+                "name": "Gutter replacement",
+                "value": "90012971"
+            }, {
+                "name": "Roof hatch replacement",
+                "value": "90012972"
+            }, {
+                "name": "IRMA-single ply roof replacement",
+                "value": "90012973"
+            }, {
+                "name": "IRMA-built up roof replacement",
+                "value": "90012974"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "90012975"
+            }, {
+                "name": "Metal roof \"O\" ring replacement",
+                "value": "90012976"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "90012977"
+            }, {
+                "name": "Parapet coping replacement",
+                "value": "90012978"
+            }, {
+                "name": "Parapet coping sealant replacement",
+                "value": "90012979"
+            }, {
+                "name": "Pitch pan replacement",
+                "value": "90012980"
+            }, {
+                "name": "Scupper replacement",
+                "value": "90012981"
+            }, {
+                "name": "Asphalt shingle replacement",
+                "value": "90012982"
+            }, {
+                "name": "Slate shingle replacement",
+                "value": "90012983"
+            }, {
+                "name": "Concrete tile replacement",
+                "value": "90012984"
+            }, {
+                "name": "Clay tile replacement",
+                "value": "90012985"
+            }, {
+                "name": "Prefabricated skylight replacement",
+                "value": "90012986"
+            }, {
+                "name": "Tile roof replacement",
+                "value": "90012987"
+            }, {
+                "name": "TPO/PVC roof replacement",
+                "value": "90012988"
+            }, {
+                "name": "Walkway replacement",
+                "value": "90012989"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90013217"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90013218"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90013219"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "90014691"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90014733"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90014734"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90014735"
+            }, {
+                "name": "Roof Railing",
+                "value": "90014858"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90014859"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90014860"
+            }, {
+                "name": "Chimney",
+                "value": "90014861"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90014862"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90014863"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90014864"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90014865"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90014866"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90014867"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90014868"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90014869"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90014870"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90014871"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90014872"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90014873"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90014874"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90014875"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90014876"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90014877"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90014878"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90014879"
+            }, {
+                "name": "Downspouts",
+                "value": "90014880"
+            }, {
+                "name": "Roof Structure",
+                "value": "90014881"
+            }, {
+                "name": "EPDM roof replacement",
+                "value": "90015206"
+            }, {
+                "name": "Built up roof replacement",
+                "value": "90015207"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "90015208"
+            }, {
+                "name": "Asphalt shingle roof replacement",
+                "value": "90015209"
+            }, {
+                "name": "Strip and replace asphalt shingle roof",
+                "value": "90015210"
+            }, {
+                "name": "Gutter and downspout replacement",
+                "value": "90015211"
+            }, {
+                "name": "Mineral cap sheet replacement",
+                "value": "90015212"
+            }, {
+                "name": "Foam roof replacement",
+                "value": "90015213"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "90015214"
+            }, {
+                "name": "Ongoing roof repairs",
+                "value": "90015215"
+            }, {
+                "name": "Ongoing roof repairs, psf",
+                "value": "90015216"
+            }, {
+                "name": "Roof repairs after warranty",
+                "value": "90015217"
+            }, {
+                "name": "Investigate and repair roof leaks",
+                "value": "90015218"
+            }, {
+                "name": "Inspection and report by roof consultant",
+                "value": "90015219"
+            }, {
+                "name": "Completion of repairs recommended by roof consultant (Cost TBD)",
+                "value": "90015220"
+            }, {
+                "name": "Complete roof replacement with seamless roof product",
+                "value": "90015221"
+            }, {
+                "name": "Obtain copy of roofing manufacturer's warranty",
+                "value": "90015222"
+            }, {
+                "name": "Re-seal/replace flashing at chimney",
+                "value": "90015223"
+            }, {
+                "name": "Other",
+                "value": "90015224"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90015395"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90015396"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90015397"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90015398"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90015399"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90015400"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90015401"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90015402"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90015403"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90015404"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90015405"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90015406"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90015407"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90015408"
+            }, {
+                "name": "",
+                "value": "90015409"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90015410"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90015411"
+            }, {
+                "name": "",
+                "value": "90015412"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90015413"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90015414"
+            }, {
+                "name": "",
+                "value": "90015415"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90015675"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90015685"
+            }, {
+                "name": "EPDM roof replacement",
+                "value": "90015760"
+            }, {
+                "name": "Built up roof replacement",
+                "value": "90015761"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "90015762"
+            }, {
+                "name": "Asphalt shingle roof replacement",
+                "value": "90015763"
+            }, {
+                "name": "Strip and replace asphalt shingle roof",
+                "value": "90015764"
+            }, {
+                "name": "Gutter and downspout replacement",
+                "value": "90015765"
+            }, {
+                "name": "Mineral cap sheet replacement",
+                "value": "90015766"
+            }, {
+                "name": "Foam roof replacement",
+                "value": "90015767"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "90015768"
+            }, {
+                "name": "Ongoing roof repairs",
+                "value": "90015769"
+            }, {
+                "name": "Ongoing roof repairs, psf",
+                "value": "90015770"
+            }, {
+                "name": "Roof repairs after warranty",
+                "value": "90015771"
+            }, {
+                "name": "Investigate and repair roof leaks",
+                "value": "90015772"
+            }, {
+                "name": "Inspection and report by roof consultant",
+                "value": "90015773"
+            }, {
+                "name": "Completion of repairs recommended by roof consultant (Cost TBD)",
+                "value": "90015774"
+            }, {
+                "name": "Complete roof replacement with seamless roof product",
+                "value": "90015775"
+            }, {
+                "name": "Obtain copy of roofing manufacturer's warranty",
+                "value": "90015776"
+            }, {
+                "name": "Re-seal/replace flashing at chimney",
+                "value": "90015777"
+            }, {
+                "name": "Other",
+                "value": "90015778"
+            }, {
+                "name": "Roof Railing",
+                "value": "90015982"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90015983"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90015984"
+            }, {
+                "name": "Chimney",
+                "value": "90015985"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90015986"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90015987"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90015988"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90015989"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90015990"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90015991"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90015992"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90015993"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90015994"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90015995"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90015996"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90015997"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90015998"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90015999"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90016000"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90016001"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90016002"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90016003"
+            }, {
+                "name": "Downspouts",
+                "value": "90016004"
+            }, {
+                "name": "Roof Structure",
+                "value": "90016005"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90016188"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90016189"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90016190"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90016191"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90016192"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90016193"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90016194"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90016195"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90016196"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90016197"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90016198"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90016199"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90016200"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90016201"
+            }, {
+                "name": "",
+                "value": "90016202"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90016203"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90016204"
+            }, {
+                "name": "",
+                "value": "90016205"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90016206"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90016207"
+            }, {
+                "name": "",
+                "value": "90016208"
+            }, {
+                "name": "Roof Railing",
+                "value": "90016504"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90016505"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90016506"
+            }, {
+                "name": "Chimney",
+                "value": "90016507"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90016508"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90016509"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90016510"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90016511"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90016512"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90016513"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90016514"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90016515"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90016516"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90016517"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90016518"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90016519"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90016520"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90016521"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90016522"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90016523"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90016524"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90016525"
+            }, {
+                "name": "Downspouts",
+                "value": "90016526"
+            }, {
+                "name": "Roof Structure",
+                "value": "90016527"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90016710"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90016711"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90016712"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90016713"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90016714"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90016715"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90016716"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90016717"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90016718"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90016719"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90016720"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90016721"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90016722"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90016723"
+            }, {
+                "name": "",
+                "value": "90016724"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90016725"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90016726"
+            }, {
+                "name": "",
+                "value": "90016727"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90016728"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90016729"
+            }, {
+                "name": "",
+                "value": "90016730"
+            }, {
+                "name": "Roof Railing",
+                "value": "90017339"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90017340"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90017341"
+            }, {
+                "name": "Chimney",
+                "value": "90017342"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90017343"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90017344"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90017345"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90017346"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90017347"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90017348"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90017349"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90017350"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90017351"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90017352"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90017353"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90017354"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90017355"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90017356"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90017357"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90017358"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90017359"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90017360"
+            }, {
+                "name": "Downspouts",
+                "value": "90017361"
+            }, {
+                "name": "Roof Structure",
+                "value": "90017362"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90017545"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90017546"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90017547"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90017548"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90017549"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90017550"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90017551"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90017552"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90017553"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90017554"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90017555"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90017556"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90017557"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90017558"
+            }, {
+                "name": "",
+                "value": "90017559"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90017560"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90017561"
+            }, {
+                "name": "",
+                "value": "90017562"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90017563"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90017564"
+            }, {
+                "name": "",
+                "value": "90017565"
+            }, {
+                "name": "Roof Railing",
+                "value": "90017861"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90017862"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90017863"
+            }, {
+                "name": "Chimney",
+                "value": "90017864"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90017865"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90017866"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90017867"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90017868"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90017869"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90017870"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90017871"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90017872"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90017873"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90017874"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90017875"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90017876"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90017877"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90017878"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90017879"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90017880"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90017881"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90017882"
+            }, {
+                "name": "Downspouts",
+                "value": "90017883"
+            }, {
+                "name": "Roof Structure",
+                "value": "90017884"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90018067"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90018068"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90018069"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90018070"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90018071"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90018072"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90018073"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90018074"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90018075"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90018076"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90018077"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90018078"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90018079"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90018080"
+            }, {
+                "name": "",
+                "value": "90018081"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90018082"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90018083"
+            }, {
+                "name": "",
+                "value": "90018084"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90018085"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90018086"
+            }, {
+                "name": "",
+                "value": "90018087"
+            }, {
+                "name": "Roof Railing",
+                "value": "90018884"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90018885"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90018886"
+            }, {
+                "name": "Chimney",
+                "value": "90018887"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90018888"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90018889"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90018890"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90018891"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90018892"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90018893"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90018894"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90018895"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90018896"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90018897"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90018898"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90018899"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90018900"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90018901"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90018902"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90018903"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90018904"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90018905"
+            }, {
+                "name": "Downspouts",
+                "value": "90018906"
+            }, {
+                "name": "Roof Structure",
+                "value": "90018907"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90019090"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90019091"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90019092"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90019093"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90019094"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90019095"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90019096"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90019097"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90019098"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90019099"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90019100"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90019101"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90019102"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90019103"
+            }, {
+                "name": "",
+                "value": "90019104"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90019105"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90019106"
+            }, {
+                "name": "",
+                "value": "90019107"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90019108"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90019109"
+            }, {
+                "name": "",
+                "value": "90019110"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90020193"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90020203"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90020837"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90020838"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90020839"
+            }, {
+                "name": "Roof shingles",
+                "value": "90020840"
+            }, {
+                "name": "Roof tiles",
+                "value": "90020841"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90020842"
+            }, {
+                "name": "Parapet coping",
+                "value": "90020843"
+            }, {
+                "name": "Roof flashing",
+                "value": "90020844"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90020845"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90020846"
+            }, {
+                "name": "Roof drains",
+                "value": "90020847"
+            }, {
+                "name": "Roof structure",
+                "value": "90020848"
+            }, {
+                "name": "Access hatch",
+                "value": "90020849"
+            }, {
+                "name": "Skylights",
+                "value": "90020850"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90020851"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90021300"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90021301"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90021302"
+            }, {
+                "name": "Roof shingles",
+                "value": "90021303"
+            }, {
+                "name": "Roof tiles",
+                "value": "90021304"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90021305"
+            }, {
+                "name": "Parapet coping",
+                "value": "90021306"
+            }, {
+                "name": "Roof flashing",
+                "value": "90021307"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90021308"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90021309"
+            }, {
+                "name": "Roof drains",
+                "value": "90021310"
+            }, {
+                "name": "Roof structure",
+                "value": "90021311"
+            }, {
+                "name": "Access hatch",
+                "value": "90021312"
+            }, {
+                "name": "Skylights",
+                "value": "90021313"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90021314"
+            }, {
+                "name": "Roof Railing",
+                "value": "90021546"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90021547"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90021548"
+            }, {
+                "name": "Chimney",
+                "value": "90021549"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90021550"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90021551"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90021552"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90021553"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90021554"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90021555"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90021556"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90021557"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90021558"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90021559"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90021560"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90021561"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90021562"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90021563"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90021564"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90021565"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90021566"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90021567"
+            }, {
+                "name": "Downspouts",
+                "value": "90021568"
+            }, {
+                "name": "Roof Structure",
+                "value": "90021569"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90021752"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90021753"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90021754"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90021755"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90021756"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90021757"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90021758"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90021759"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90021760"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90021761"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90021762"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90021763"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90021764"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90021765"
+            }, {
+                "name": "",
+                "value": "90021766"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90021767"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90021768"
+            }, {
+                "name": "",
+                "value": "90021769"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90021770"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90021771"
+            }, {
+                "name": "",
+                "value": "90021772"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "90022492"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90022493"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90022494"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90022495"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "90022630"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90022631"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90022632"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90022633"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90022810"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90022811"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90022812"
+            }, {
+                "name": "Roof shingles",
+                "value": "90022813"
+            }, {
+                "name": "Roof tiles",
+                "value": "90022814"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90022815"
+            }, {
+                "name": "Parapet coping",
+                "value": "90022816"
+            }, {
+                "name": "Roof flashing",
+                "value": "90022817"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90022818"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90022819"
+            }, {
+                "name": "Roof drains",
+                "value": "90022820"
+            }, {
+                "name": "Roof structure",
+                "value": "90022821"
+            }, {
+                "name": "Access hatch",
+                "value": "90022822"
+            }, {
+                "name": "Skylights",
+                "value": "90022823"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90022824"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90023042"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90023043"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90023044"
+            }, {
+                "name": "Roof shingles",
+                "value": "90023045"
+            }, {
+                "name": "Roof tiles",
+                "value": "90023046"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90023047"
+            }, {
+                "name": "Parapet coping",
+                "value": "90023048"
+            }, {
+                "name": "Roof flashing",
+                "value": "90023049"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90023050"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90023051"
+            }, {
+                "name": "Roof drains",
+                "value": "90023052"
+            }, {
+                "name": "Roof structure",
+                "value": "90023053"
+            }, {
+                "name": "Access hatch",
+                "value": "90023054"
+            }, {
+                "name": "Skylights",
+                "value": "90023055"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90023056"
+            }, {
+                "name": "Roof tiles ",
+                "value": "90023286"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "90023287"
+            }, {
+                "name": "Drains ",
+                "value": "90023288"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023289"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "90023290"
+            }, {
+                "name": "Expansion joint ",
+                "value": "90023291"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "90023292"
+            }, {
+                "name": "Scuppers ",
+                "value": "90023293"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "90023294"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "90023295"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "90023296"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "90023297"
+            }, {
+                "name": "Access hatch ",
+                "value": "90023298"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "90023299"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "90023300"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "90023301"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "90023302"
+            }, {
+                "name": "Hatch ",
+                "value": "90023303"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "90023304"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "90023305"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "90023306"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "90023307"
+            }, {
+                "name": "Roof shingles ",
+                "value": "90023308"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "90023309"
+            }, {
+                "name": "Downspouts ",
+                "value": "90023310"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "90023311"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023312"
+            }, {
+                "name": "Drip edge ",
+                "value": "90023313"
+            }, {
+                "name": "Roof flashing ",
+                "value": "90023314"
+            }, {
+                "name": "Pitch pan ",
+                "value": "90023315"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "90023316"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "90023317"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "90023318"
+            }, {
+                "name": "Flashing, base ",
+                "value": "90023319"
+            }, {
+                "name": "Roof structure ",
+                "value": "90023320"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "90023321"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "90023322"
+            }, {
+                "name": "Skylights ",
+                "value": "90023323"
+            }, {
+                "name": "Tile roof ",
+                "value": "90023324"
+            }, {
+                "name": "Gutters ",
+                "value": "90023325"
+            }, {
+                "name": "Walkways ",
+                "value": "90023326"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "90023327"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "90023328"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "90023329"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "90023330"
+            }, {
+                "name": "Metal roof ",
+                "value": "90023331"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "90023332"
+            }, {
+                "name": "Roof tiles ",
+                "value": "90023529"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "90023530"
+            }, {
+                "name": "Drains ",
+                "value": "90023531"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023532"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "90023533"
+            }, {
+                "name": "Expansion joint ",
+                "value": "90023534"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "90023535"
+            }, {
+                "name": "Scuppers ",
+                "value": "90023536"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "90023537"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "90023538"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "90023539"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "90023540"
+            }, {
+                "name": "Access hatch ",
+                "value": "90023541"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "90023542"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "90023543"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "90023544"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "90023545"
+            }, {
+                "name": "Hatch ",
+                "value": "90023546"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "90023547"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "90023548"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "90023549"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "90023550"
+            }, {
+                "name": "Roof shingles ",
+                "value": "90023551"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "90023552"
+            }, {
+                "name": "Downspouts ",
+                "value": "90023553"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "90023554"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023555"
+            }, {
+                "name": "Drip edge ",
+                "value": "90023556"
+            }, {
+                "name": "Roof flashing ",
+                "value": "90023557"
+            }, {
+                "name": "Pitch pan ",
+                "value": "90023558"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "90023559"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "90023560"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "90023561"
+            }, {
+                "name": "Flashing, base ",
+                "value": "90023562"
+            }, {
+                "name": "Roof structure ",
+                "value": "90023563"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "90023564"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "90023565"
+            }, {
+                "name": "Skylights ",
+                "value": "90023566"
+            }, {
+                "name": "Tile roof ",
+                "value": "90023567"
+            }, {
+                "name": "Gutters ",
+                "value": "90023568"
+            }, {
+                "name": "Walkways ",
+                "value": "90023569"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "90023570"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "90023571"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "90023572"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "90023573"
+            }, {
+                "name": "Metal roof ",
+                "value": "90023574"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "90023575"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90023715"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90023716"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90023717"
+            }, {
+                "name": "Roof shingles",
+                "value": "90023718"
+            }, {
+                "name": "Roof tiles",
+                "value": "90023719"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90023720"
+            }, {
+                "name": "Parapet coping",
+                "value": "90023721"
+            }, {
+                "name": "Roof flashing",
+                "value": "90023722"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90023723"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90023724"
+            }, {
+                "name": "Roof drains",
+                "value": "90023725"
+            }, {
+                "name": "Roof structure",
+                "value": "90023726"
+            }, {
+                "name": "Access hatch",
+                "value": "90023727"
+            }, {
+                "name": "Skylights",
+                "value": "90023728"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90023729"
+            }, {
+                "name": "Roof tiles ",
+                "value": "90023928"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "90023929"
+            }, {
+                "name": "Drains ",
+                "value": "90023930"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023931"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "90023932"
+            }, {
+                "name": "Expansion joint ",
+                "value": "90023933"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "90023934"
+            }, {
+                "name": "Scuppers ",
+                "value": "90023935"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "90023936"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "90023937"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "90023938"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "90023939"
+            }, {
+                "name": "Access hatch ",
+                "value": "90023940"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "90023941"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "90023942"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "90023943"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "90023944"
+            }, {
+                "name": "Hatch ",
+                "value": "90023945"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "90023946"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "90023947"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "90023948"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "90023949"
+            }, {
+                "name": "Roof shingles ",
+                "value": "90023950"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "90023951"
+            }, {
+                "name": "Downspouts ",
+                "value": "90023952"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "90023953"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90023954"
+            }, {
+                "name": "Drip edge ",
+                "value": "90023955"
+            }, {
+                "name": "Roof flashing ",
+                "value": "90023956"
+            }, {
+                "name": "Pitch pan ",
+                "value": "90023957"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "90023958"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "90023959"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "90023960"
+            }, {
+                "name": "Flashing, base ",
+                "value": "90023961"
+            }, {
+                "name": "Roof structure ",
+                "value": "90023962"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "90023963"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "90023964"
+            }, {
+                "name": "Skylights ",
+                "value": "90023965"
+            }, {
+                "name": "Tile roof ",
+                "value": "90023966"
+            }, {
+                "name": "Gutters ",
+                "value": "90023967"
+            }, {
+                "name": "Walkways ",
+                "value": "90023968"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "90023969"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "90023970"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "90023971"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "90023972"
+            }, {
+                "name": "Metal roof ",
+                "value": "90023973"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "90023974"
+            }, {
+                "name": "Roof tiles ",
+                "value": "90024171"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "90024172"
+            }, {
+                "name": "Drains ",
+                "value": "90024173"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90024174"
+            }, {
+                "name": "Parapet coping sealant ",
+                "value": "90024175"
+            }, {
+                "name": "Expansion joint ",
+                "value": "90024176"
+            }, {
+                "name": "Roof sheathing ",
+                "value": "90024177"
+            }, {
+                "name": "Scuppers ",
+                "value": "90024178"
+            }, {
+                "name": "EPDM / FA-MA ",
+                "value": "90024179"
+            }, {
+                "name": "Roof drains (5\" to 8\" drains)",
+                "value": "90024180"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "90024181"
+            }, {
+                "name": "Flashing, counter ",
+                "value": "90024182"
+            }, {
+                "name": "Access hatch ",
+                "value": "90024183"
+            }, {
+                "name": "Skylights, prefab ",
+                "value": "90024184"
+            }, {
+                "name": "Canopies and awnings ",
+                "value": "90024185"
+            }, {
+                "name": "Flashing, pipes ",
+                "value": "90024186"
+            }, {
+                "name": "TPO/PVC ",
+                "value": "90024187"
+            }, {
+                "name": "Hatch ",
+                "value": "90024188"
+            }, {
+                "name": "Built-up roof 3 ply ",
+                "value": "90024189"
+            }, {
+                "name": "Roof membrane - Replace ",
+                "value": "90024190"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "90024191"
+            }, {
+                "name": "Coal tar pitch roof ",
+                "value": "90024192"
+            }, {
+                "name": "Roof shingles ",
+                "value": "90024193"
+            }, {
+                "name": "Metal Roof \"O\" rings ",
+                "value": "90024194"
+            }, {
+                "name": "Downspouts ",
+                "value": "90024195"
+            }, {
+                "name": "Roof - metal panels ",
+                "value": "90024196"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90024197"
+            }, {
+                "name": "Drip edge ",
+                "value": "90024198"
+            }, {
+                "name": "Roof flashing ",
+                "value": "90024199"
+            }, {
+                "name": "Pitch pan ",
+                "value": "90024200"
+            }, {
+                "name": "EPDM / ballasted ",
+                "value": "90024201"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "90024202"
+            }, {
+                "name": "Shingles, asphalt ",
+                "value": "90024203"
+            }, {
+                "name": "Flashing, base ",
+                "value": "90024204"
+            }, {
+                "name": "Roof structure ",
+                "value": "90024205"
+            }, {
+                "name": "Shingles, wood shake ",
+                "value": "90024206"
+            }, {
+                "name": "Flashing, curb ",
+                "value": "90024207"
+            }, {
+                "name": "Skylights ",
+                "value": "90024208"
+            }, {
+                "name": "Tile roof ",
+                "value": "90024209"
+            }, {
+                "name": "Gutters ",
+                "value": "90024210"
+            }, {
+                "name": "Walkways ",
+                "value": "90024211"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "90024212"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "90024213"
+            }, {
+                "name": "Built-up roof 4 ply ",
+                "value": "90024214"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "90024215"
+            }, {
+                "name": "Metal roof ",
+                "value": "90024216"
+            }, {
+                "name": "Condensate overflow piping ",
+                "value": "90024217"
+            }, {
+                "name": "Roof covering, built-up system, replacement",
+                "value": "90024328"
+            }, {
+                "name": "Roof covering, EPDM membrane, replacement",
+                "value": "90024329"
+            }, {
+                "name": "Roof covering, asphalt shingles replacement",
+                "value": "90024330"
+            }, {
+                "name": "Roof covering, wood shingles",
+                "value": "90024331"
+            }, {
+                "name": "Roof covering, modified bitumen",
+                "value": "90024332"
+            }, {
+                "name": "Roof covering, rolled mineral",
+                "value": "90024333"
+            }, {
+                "name": "Roof covering, slate, clay, concrete tile",
+                "value": "90024334"
+            }, {
+                "name": "Roof covering, metal (preformed)",
+                "value": "90024335"
+            }, {
+                "name": "Parapet coping",
+                "value": "90024336"
+            }, {
+                "name": "Roof flashing",
+                "value": "90024337"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90024338"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90024339"
+            }, {
+                "name": "Roof drains",
+                "value": "90024340"
+            }, {
+                "name": "Roof structure",
+                "value": "90024341"
+            }, {
+                "name": "Access hatch",
+                "value": "90024342"
+            }, {
+                "name": "Skylights",
+                "value": "90024343"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90024344"
+            }, {
+                "name": "Roof covering, built-up system, replacement",
+                "value": "90024483"
+            }, {
+                "name": "Roof covering, EPDM membrane, replacement",
+                "value": "90024484"
+            }, {
+                "name": "Roof covering, asphalt shingles replacement",
+                "value": "90024485"
+            }, {
+                "name": "Roof covering, wood shingles",
+                "value": "90024486"
+            }, {
+                "name": "Roof covering, modified bitumen",
+                "value": "90024487"
+            }, {
+                "name": "Roof covering, rolled mineral",
+                "value": "90024488"
+            }, {
+                "name": "Roof covering, slate, clay, concrete tile",
+                "value": "90024489"
+            }, {
+                "name": "Roof covering, metal (preformed)",
+                "value": "90024490"
+            }, {
+                "name": "Parapet coping",
+                "value": "90024491"
+            }, {
+                "name": "Roof flashing",
+                "value": "90024492"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90024493"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90024494"
+            }, {
+                "name": "Roof drains",
+                "value": "90024495"
+            }, {
+                "name": "Roof structure",
+                "value": "90024496"
+            }, {
+                "name": "Access hatch",
+                "value": "90024497"
+            }, {
+                "name": "Skylights",
+                "value": "90024498"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90024499"
+            }, {
+                "name": "Roof Railing",
+                "value": "90024735"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90024736"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90024737"
+            }, {
+                "name": "Chimney",
+                "value": "90024738"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90024739"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90024740"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90024741"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90024742"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90024743"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90024744"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90024745"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90024746"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90024747"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90024748"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90024749"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90024750"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90024751"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90024752"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90024753"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90024754"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90024755"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90024756"
+            }, {
+                "name": "Downspouts",
+                "value": "90024757"
+            }, {
+                "name": "Roof Structure",
+                "value": "90024758"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90024941"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90024942"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90024943"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90024944"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90024945"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90024946"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90024947"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90024948"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90024949"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90024950"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90024951"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90024952"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90024953"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90024954"
+            }, {
+                "name": "",
+                "value": "90024955"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90024956"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90024957"
+            }, {
+                "name": "",
+                "value": "90024958"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90024959"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90024960"
+            }, {
+                "name": "",
+                "value": "90024961"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90025940"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90025941"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90025942"
+            }, {
+                "name": "Roof covering, built-up system, replacement",
+                "value": "90026153"
+            }, {
+                "name": "Roof covering, EPDM membrane, replacement",
+                "value": "90026154"
+            }, {
+                "name": "Roof covering, asphalt shingles replacement",
+                "value": "90026155"
+            }, {
+                "name": "Roof covering, wood shingles",
+                "value": "90026156"
+            }, {
+                "name": "Roof covering, modified bitumen",
+                "value": "90026157"
+            }, {
+                "name": "Roof covering, rolled mineral",
+                "value": "90026158"
+            }, {
+                "name": "Roof covering, slate, clay, concrete tile",
+                "value": "90026159"
+            }, {
+                "name": "Roof covering, metal (preformed)",
+                "value": "90026160"
+            }, {
+                "name": "Parapet coping",
+                "value": "90026161"
+            }, {
+                "name": "Roof flashing",
+                "value": "90026162"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90026163"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90026164"
+            }, {
+                "name": "Roof drains",
+                "value": "90026165"
+            }, {
+                "name": "Roof structure",
+                "value": "90026166"
+            }, {
+                "name": "Access hatch",
+                "value": "90026167"
+            }, {
+                "name": "Skylights",
+                "value": "90026168"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90026169"
+            }, {
+                "name": "Roof Railing",
+                "value": "90026488"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90026489"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90026490"
+            }, {
+                "name": "Chimney",
+                "value": "90026491"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90026492"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90026493"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90026494"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90026495"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90026496"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90026497"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90026498"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90026499"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90026500"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90026501"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90026502"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90026503"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90026504"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90026505"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90026506"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90026507"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90026508"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90026509"
+            }, {
+                "name": "Downspouts",
+                "value": "90026510"
+            }, {
+                "name": "Roof Structure",
+                "value": "90026511"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90026694"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90026695"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90026696"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90026697"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90026698"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90026699"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90026700"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90026701"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90026702"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90026703"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90026704"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90026705"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90026706"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90026707"
+            }, {
+                "name": "",
+                "value": "90026708"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90026709"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90026710"
+            }, {
+                "name": "",
+                "value": "90026711"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90026712"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90026713"
+            }, {
+                "name": "",
+                "value": "90026714"
+            }, {
+                "name": "Garages - Replace Roof Coverings",
+                "value": "90027496"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90027497"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90027498"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90027499"
+            }, {
+                "name": "Built-up roof 3 ply, replacement",
+                "value": "90027678"
+            }, {
+                "name": "Built-up roof 4 ply, replacement",
+                "value": "90027679"
+            }, {
+                "name": "Coal tar pitch roof replacement",
+                "value": "90027680"
+            }, {
+                "name": "Condensate overflow piping, replacement",
+                "value": "90027681"
+            }, {
+                "name": "Downspout replacement",
+                "value": "90027682"
+            }, {
+                "name": "Drain replacement",
+                "value": "90027683"
+            }, {
+                "name": "Drip edge replacement",
+                "value": "90027684"
+            }, {
+                "name": "Expansion joint replacement",
+                "value": "90027685"
+            }, {
+                "name": "Ballasted EPDM roof replacement",
+                "value": "90027686"
+            }, {
+                "name": "Fully adhered EPDM roof replacement",
+                "value": "90027687"
+            }, {
+                "name": "Mechanically attached EPDM roof replacement",
+                "value": "90027688"
+            }, {
+                "name": "Base flashing repair",
+                "value": "90027689"
+            }, {
+                "name": "Counterflashing repair",
+                "value": "90027690"
+            }, {
+                "name": "Curb flashing repair",
+                "value": "90027691"
+            }, {
+                "name": "Pipe flashing repair",
+                "value": "90027692"
+            }, {
+                "name": "Gutter replacement",
+                "value": "90027693"
+            }, {
+                "name": "Roof hatch replacement",
+                "value": "90027694"
+            }, {
+                "name": "IRMA-single ply roof replacement",
+                "value": "90027695"
+            }, {
+                "name": "IRMA-built up roof replacement",
+                "value": "90027696"
+            }, {
+                "name": "Metal roof replacement",
+                "value": "90027697"
+            }, {
+                "name": "Metal roof \"O\" ring replacement",
+                "value": "90027698"
+            }, {
+                "name": "Modified bitumen roof replacement",
+                "value": "90027699"
+            }, {
+                "name": "Parapet coping replacement",
+                "value": "90027700"
+            }, {
+                "name": "Parapet coping sealant replacement",
+                "value": "90027701"
+            }, {
+                "name": "Pitch pan replacement",
+                "value": "90027702"
+            }, {
+                "name": "Scupper replacement",
+                "value": "90027703"
+            }, {
+                "name": "Asphalt shingle replacement",
+                "value": "90027704"
+            }, {
+                "name": "Slate shingle replacement",
+                "value": "90027705"
+            }, {
+                "name": "Concrete tile replacement",
+                "value": "90027706"
+            }, {
+                "name": "Clay tile replacement",
+                "value": "90027707"
+            }, {
+                "name": "Prefabricated skylight replacement",
+                "value": "90027708"
+            }, {
+                "name": "Tile roof replacement",
+                "value": "90027709"
+            }, {
+                "name": "TPO/PVC roof replacement",
+                "value": "90027710"
+            }, {
+                "name": "Walkway replacement",
+                "value": "90027711"
+            }, {
+                "name": "Roof Railing",
+                "value": "90029197"
+            }, {
+                "name": "Roof Hatch",
+                "value": "90029198"
+            }, {
+                "name": "Roof Skylight",
+                "value": "90029199"
+            }, {
+                "name": "Chimney",
+                "value": "90029200"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - 3 tab",
+                "value": "90029201"
+            }, {
+                "name": "Composite (asphalt/fiberglass) Shingles - Architectural",
+                "value": "90029202"
+            }, {
+                "name": "Roof slate shingles - replace",
+                "value": "90029203"
+            }, {
+                "name": "Cedar shake shingles - replace",
+                "value": "90029204"
+            }, {
+                "name": "Standing seam metal roofing - 26 ga",
+                "value": "90029205"
+            }, {
+                "name": "Clay or Concrete tile roofing - repair",
+                "value": "90029206"
+            }, {
+                "name": "Clay or Concrete tile roofing - replace",
+                "value": "90029207"
+            }, {
+                "name": "Modified bitumen roofing",
+                "value": "90029208"
+            }, {
+                "name": "Conventionally Built-up roofing (BUR)",
+                "value": "90029209"
+            }, {
+                "name": "EPDM (membrane) - Mech. Fastened",
+                "value": "90029210"
+            }, {
+                "name": "EPDM (membrane) - Ballasted",
+                "value": "90029211"
+            }, {
+                "name": "EPDM (membrane) - Adhered",
+                "value": "90029212"
+            }, {
+                "name": "PVC membrane - welded seams (Mech. Fastened)",
+                "value": "90029213"
+            }, {
+                "name": "PVC membrane - welded seams (Ballasted)",
+                "value": "90029214"
+            }, {
+                "name": "PVC membrane - welded seams (Adhered)",
+                "value": "90029215"
+            }, {
+                "name": "Polyurethane sprayed foam - repaint & repair",
+                "value": "90029216"
+            }, {
+                "name": "Polyurethane sprayed foam - replacement",
+                "value": "90029217"
+            }, {
+                "name": "Aluminum 5\" gutters & downspouts",
+                "value": "90029218"
+            }, {
+                "name": "Downspouts",
+                "value": "90029219"
+            }, {
+                "name": "Roof Structure",
+                "value": "90029220"
+            }, {
+                "name": "Built-up roofing system. Replace",
+                "value": "90029403"
+            }, {
+                "name": "Built-up roofing system with gravel ballast. Replace",
+                "value": "90029404"
+            }, {
+                "name": "Built-up roofing system.  Apply emulsion coating.",
+                "value": "90029405"
+            }, {
+                "name": "Single-ply EPDM roof membrane. Replace",
+                "value": "90029406"
+            }, {
+                "name": "Single-ply PVC/TPO roof membrane. Replace",
+                "value": "90029407"
+            }, {
+                "name": "Asphalt composition shingles. Replace",
+                "value": "90029408"
+            }, {
+                "name": "Wood cedar shake shingles. Replace",
+                "value": "90029409"
+            }, {
+                "name": "Standing seam metal roof. Replace",
+                "value": "90029410"
+            }, {
+                "name": "Corrugated metal roof. Replace",
+                "value": "90029411"
+            }, {
+                "name": "Metal roof. Apply coating",
+                "value": "90029412"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay",
+                "value": "90029413"
+            }, {
+                "name": "Roof tiles. Replace",
+                "value": "90029414"
+            }, {
+                "name": "Roof leak. Repair",
+                "value": "90029415"
+            }, {
+                "name": "Parapet wall coping.  Replace",
+                "value": "90029416"
+            }, {
+                "name": "",
+                "value": "90029417"
+            }, {
+                "name": "Gutters. Replace",
+                "value": "90029418"
+            }, {
+                "name": "Downspouts. Replace",
+                "value": "90029419"
+            }, {
+                "name": "",
+                "value": "90029420"
+            }, {
+                "name": "Acrylic skylights. Replace",
+                "value": "90029421"
+            }, {
+                "name": "Glass skylights. Replace",
+                "value": "90029422"
+            }, {
+                "name": "",
+                "value": "90029423"
+            }, {
+                "name": "Roof membrane - Overlay",
+                "value": "90030165"
+            }, {
+                "name": "Roof membrane - Replace",
+                "value": "90030166"
+            }, {
+                "name": "Roof membrane - Coat",
+                "value": "90030167"
+            }, {
+                "name": "Roof shingles",
+                "value": "90030168"
+            }, {
+                "name": "Roof tiles",
+                "value": "90030169"
+            }, {
+                "name": "Roof - metal panels",
+                "value": "90030170"
+            }, {
+                "name": "Parapet coping",
+                "value": "90030171"
+            }, {
+                "name": "Roof flashing",
+                "value": "90030172"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90030173"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90030174"
+            }, {
+                "name": "Roof drains",
+                "value": "90030175"
+            }, {
+                "name": "Roof structure",
+                "value": "90030176"
+            }, {
+                "name": "Access hatch",
+                "value": "90030177"
+            }, {
+                "name": "Skylights",
+                "value": "90030178"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90030179"
+            }, {
+                "name": "Roof covering, built-up system, replacement",
+                "value": "90030357"
+            }, {
+                "name": "Roof covering, EPDM membrane, replacement",
+                "value": "90030358"
+            }, {
+                "name": "Roof covering, asphalt shingles replacement",
+                "value": "90030359"
+            }, {
+                "name": "Roof covering, wood shingles",
+                "value": "90030360"
+            }, {
+                "name": "Roof covering, modified bitumen",
+                "value": "90030361"
+            }, {
+                "name": "Roof covering, rolled mineral",
+                "value": "90030362"
+            }, {
+                "name": "Roof covering, slate, clay, concrete tile",
+                "value": "90030363"
+            }, {
+                "name": "Roof covering, metal (preformed)",
+                "value": "90030364"
+            }, {
+                "name": "Parapet coping",
+                "value": "90030365"
+            }, {
+                "name": "Roof flashing",
+                "value": "90030366"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90030367"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90030368"
+            }, {
+                "name": "Roof drains",
+                "value": "90030369"
+            }, {
+                "name": "Roof structure",
+                "value": "90030370"
+            }, {
+                "name": "Access hatch",
+                "value": "90030371"
+            }, {
+                "name": "Skylights",
+                "value": "90030372"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90030373"
+            }, {
+                "name": "Roofing Consultant. Review and report   ",
+                "value": "90030727"
+            }, {
+                "name": "Asphalt composition shingles. Replace ",
+                "value": "90030728"
+            }, {
+                "name": "Built-up roof. Replace ",
+                "value": "90030729"
+            }, {
+                "name": "Modified Bitumen roof ",
+                "value": "90030730"
+            }, {
+                "name": "Spray Polyurethane Foam. Overlay ",
+                "value": "90030731"
+            }, {
+                "name": "Roof membrane - Coat ",
+                "value": "90030732"
+            }, {
+                "name": "Roof membrane - Overlay ",
+                "value": "90030733"
+            }, {
+                "name": "EPDM / ballasted. Replace ",
+                "value": "90030734"
+            }, {
+                "name": "EPDM / non-ballasted ",
+                "value": "90030735"
+            }, {
+                "name": "IRMA-built up ",
+                "value": "90030736"
+            }, {
+                "name": "IRMA-single ply ",
+                "value": "90030737"
+            }, {
+                "name": "TPO membrane",
+                "value": "90030738"
+            }, {
+                "name": "Standing seam metal roof",
+                "value": "90030739"
+            }, {
+                "name": "Corrugated metal roof",
+                "value": "90030740"
+            }, {
+                "name": "Concrete/ Ceramic Roof tiles. Replace ",
+                "value": "90030741"
+            }, {
+                "name": "Shingles, slate ",
+                "value": "90030742"
+            }, {
+                "name": "Access hatch ",
+                "value": "90030743"
+            }, {
+                "name": "Condensate overflow piping, Install ",
+                "value": "90030744"
+            }, {
+                "name": "Curb Flashing. Replace/ Repair",
+                "value": "90030745"
+            }, {
+                "name": "Base Flashing. Replace/ Repair",
+                "value": "90030746"
+            }, {
+                "name": "Downspouts ",
+                "value": "90030747"
+            }, {
+                "name": "Gutters and downspouts ",
+                "value": "90030748"
+            }, {
+                "name": "Drains ",
+                "value": "90030749"
+            }, {
+                "name": "Parapet coping ",
+                "value": "90030750"
+            }, {
+                "name": "Pitch pan ",
+                "value": "90030751"
+            }, {
+                "name": "Roof leak. Repair ",
+                "value": "90030752"
+            }, {
+                "name": "Roof sheathing replacement",
+                "value": "90030753"
+            }, {
+                "name": "Scuppers - repair/replace",
+                "value": "90030754"
+            }, {
+                "name": "Acrylic skylights. Replace ",
+                "value": "90030755"
+            }, {
+                "name": "Glass skylights. Replace ",
+                "value": "90030756"
+            }, {
+                "name": "Smoke vents. Replace ",
+                "value": "90030757"
+            }, {
+                "name": "Roof Coverings - Repairs / Flood Coat",
+                "value": "90031004"
+            }, {
+                "name": "Roof Drainage (Gutters/Down spouts)",
+                "value": "90031014"
+            }, {
+                "name": "Roof covering, built-up system, replacement",
+                "value": "90031072"
+            }, {
+                "name": "Roof covering, EPDM membrane, replacement",
+                "value": "90031073"
+            }, {
+                "name": "Roof covering, asphalt shingles replacement",
+                "value": "90031074"
+            }, {
+                "name": "Roof covering, wood shingles",
+                "value": "90031075"
+            }, {
+                "name": "Roof covering, modified bitumen",
+                "value": "90031076"
+            }, {
+                "name": "Roof covering, rolled mineral",
+                "value": "90031077"
+            }, {
+                "name": "Roof covering, slate, clay, concrete tile",
+                "value": "90031078"
+            }, {
+                "name": "Roof covering, metal (preformed)",
+                "value": "90031079"
+            }, {
+                "name": "Parapet coping",
+                "value": "90031080"
+            }, {
+                "name": "Roof flashing",
+                "value": "90031081"
+            }, {
+                "name": "Roof sheathing",
+                "value": "90031082"
+            }, {
+                "name": "Gutters and downspouts",
+                "value": "90031083"
+            }, {
+                "name": "Roof drains",
+                "value": "90031084"
+            }, {
+                "name": "Roof structure",
+                "value": "90031085"
+            }, {
+                "name": "Access hatch",
+                "value": "90031086"
+            }, {
+                "name": "Skylights",
+                "value": "90031087"
+            }, {
+                "name": "Canopies and awnings",
+                "value": "90031088"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

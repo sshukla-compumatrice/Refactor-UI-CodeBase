@@ -1,0 +1,18 @@
+<div class="form-group">
+	
+    <span class="control-label" ng-show="!editmode">{{data | date:'dd-MM-yyyy'}}</span>
+    <div ng-show="editmode" class=" input-group" >
+                                    <input type="text" class="form-control" datetime-picker="dd-MM-yyyy" ng-model="data" is-open="status.opened" enable-time="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-on-date-selection="true" datepicker-append-to-body="true" name="date" ng-click="open($event)">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+                            </span>
+                                </div>
+
+</div>
+
+
+
+
+
+
+

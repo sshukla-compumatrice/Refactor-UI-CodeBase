@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+
+
+    </style>
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class=" collapsed pointer" data-toggle="collapse" 
+               data-target="#collapseAttachment">Attachments</a>
+		</h5>
+    </div>
+    <div id="collapseAttachment" class="panel-collapse collapse" ng-controller="AttachmentCtrl as attachments">
+        <div id="fileupload" class="panel-body">
+
+            <div class="fileupload-buttonbar AU_uploadbox ">
+                
+                    <div class="form-group">
+
+                        <div class="btn btn-md btn-primary fileinput-button" ng-class="{disabled: disabled}">
+                            <i class="fa fa-file-text-o"></i> Attach
+                            <input id="file-3" type="file" data-file-input="files" ngf-select ngf-change="upload($files)" ngf-multiple="true">
+                        </div>
+
+                        <!--
+                        <button class="btn btn-md btn-primary fileinput-button" ng-class="{disabled: disabled}"><i
+							class="fa fa-file-text-o"></i> Attach <input id="file-3"
+							type="file" data-file-input="files"
+							ngf-select ngf-change="upload($files)" ngf-multiple="true">
+						</button>-->
+
+                        <!--<button type="button" class="btn btn-md btn-primary start" ng-click="attachments.Upload()">
+                            <span class="glyphicon glyphicon-upload"></span> Done
+                        </button>-->
+                        <span class="AU_uploadFilename text-primary" ng-repeat="file in files">{{file.name}}</span>
+                    </div>
+                
+                <!-- The global file processing state -->
+                <span class="fileupload-process"></span>
+                <!-- The global progress state -->
+                <div class="table-responsive">
+                    <table class="table table-condensed  table-bordered table-hover no-margin" ng-show="attachments.attachmentFilesExists">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>File Name</th>
+
+                                <th>File Size</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in attachments.attachmentFiles">
+
+                                <td><a style="cursor: pointer;" ng-click="attachments.RemoveAttachment(file.name);">Remove</a></td>
+                                <td>{{file.name}}</td>
+                                <td>{{file.size}}</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <!--<div  ng-hide="attachments.attachmentFiles.length == 0">
+
+                            <div class="alert alert-success">Files Uploaded Successfully</div>
+                        </div>-->
+
+                    <div ng-show="attachments.isUploadErrorMsg">
+                        <div class="alert alert-danger">{{attachments.UploadErrorMsg}}</div>
+                    </div>
+                    <div ng-show="attachments.isUploadErrorMsg">
+                        <div class="alert alert-danger">{{attachments.IncorrectFormat}}</div>
+                    </div>
+                    <div ng-show="attachments.isUploadErrorMsg">
+                        <div class="alert alert-danger">
+                            <a ng-click="ShowUploadStatus()" ng-show="popuplink">Click here for more details</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

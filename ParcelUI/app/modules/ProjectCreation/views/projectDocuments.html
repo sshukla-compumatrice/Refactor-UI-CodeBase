@@ -1,0 +1,285 @@
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-body">
+
+
+
+            <h2 class="page-header">Project Documents <a class="btn btn-md btn-default pull-right" ng-click="closeProjectdocumentwindow()"><i class="glyphicon glyphicon-remove"></i> Close Window</a></h2>
+
+            <!--            <div class="row text-center"> <a class="btn-link" href=""> Upload documents</a> </div>-->
+            <div class="row">
+
+                <div class="col-md-12">
+                    <h6>Project: Test Project</h6>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div class="form-group">
+                        <div>
+                            <select ng-init="docType = 0" id="selProjectDocuments" ng-model="docType" class="form-control" data-style="btn-primary" name="selProjectDocument" ng-click="serviceResponseAlertDanger = false;fileErrorDanger = false;serviceResponseAlertSuccess = false;fileErrorSuccess = false;serviceResponseAlertDangerFileType = false;fileErrorDangerFileType = false;serviceResponseAlertDangerFileSize = false;fileErrorDangerFileSize = false;">
+                                <option value="0">Select Document Type </option>
+                                 <option value="1">Client Documents</option>
+                                <option value="3">Invoices</option>
+                                <option value="2">General Documents</option> 
+                                <option value="4">Reports</option>              
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="form-group">
+
+                        <div class="btn btn-md btn-primary fileinput-button" ng-class="{disabled: disabled}">
+                            <i class="fa fa-file-text-o"></i> Attach
+                            <!--                            <input id="fileButton" type="file" multiple ng-model="files" file-change >-->
+                            <div file-select="file"></div>
+
+                        </div>
+
+                        <!--                        <button ng-click="clear()">upload</button>-->
+
+                        <button class="btn btn-primary" ng-click="serviceResponseAlertDanger = false;fileErrorDanger = false;serviceResponseAlertSuccess = false;fileErrorSuccess = false;serviceResponseAlertDangerFileType = false;fileErrorDangerFileType = false;serviceResponseAlertDangerFileSize = false;fileErrorDangerFileSize = false;uploadFiles();">{{btnText}}</button>
+
+                        <!--                        <button class="btn btn-primary" ng-click="serviceResponseAlertDanger = false;fileErrorDanger = false;serviceResponseAlertSuccess = false;fileErrorSuccess = false;serviceResponseAlertDangerFileType = false;fileErrorDangerFileType = false;serviceResponseAlertDangerFileSize = false;fileErrorDangerFileSize = false;uploadFiles(files);">{{btnText}}</button>-->
+
+                        <span class="AU_uploadFilename text-primary" ng-repeat="file in file">{{file.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--
+                     <div ng-show="fileError">
+                            <div class="alert alert-danger">{{fileErrorText}}</div>
+                        </div>
+-->
+
+
+                    <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlertDanger || fileErrorDanger">
+                        <button type="button" class="close" ng-click="serviceResponseAlertDanger = false;fileErrorDanger = false;" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        {{fileErrorTextDanger}}
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlertDangerFileType || fileErrorDangerFileType">
+                        <button type="button" class="close" ng-click="serviceResponseAlertDangerFileType = false;fileErrorDangerFileType = false;" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        {{fileErrorTextDangerFileType}}
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlertDangerFileSize || fileErrorDangerFileSize">
+                        <button type="button" class="close" ng-click="serviceResponseAlertDangerFileSize = false;fileErrorDangerFileSize = false;" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        {{fileErrorTextDangerFileSize}}
+                    </div>
+
+
+                    <div class="alert alert-success" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlertSuccess || fileErrorSuccess">
+                        <button type="button" class="close" ng-click="serviceResponseAlertSuccess = false;fileErrorSuccess = false;" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        {{fileErrorTextSuccess}}
+                    </div>
+
+
+                    <div class="bottom-margin">
+                        <div id="fileupload">
+
+                            <div class="fileupload-buttonbar AU_uploadbox ">
+
+
+
+                                <!-- The global file processing state -->
+                                <!--                                <span class="fileupload-process"></span>-->
+                                <!-- The global progress state -->
+
+                                <div id="divClientDocuments">
+
+                                    <h3>Client Documents</h3>
+                                    <div class="table-responsive">
+                                        <table id="tblClientDocuments" class="table table-condensed  table-bordered table-hover no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1">Action</th>
+                                                    <th>File Name</th>
+
+
+
+                                                </tr>
+                                            </thead>
+                                            <tbody ng-hide="clientDocArr.length > 0">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        No Client Documents available
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody ng-hide="clientDocArr.length == 0">
+                                                <tr ng-repeat="file in clientDocArr">
+
+                                                    <td>
+                                                        <!--                                                        <a style="cursor: pointer;" ng-click="openDeletePopup(file.fileGUID,1)">Remove</a>-->
+                                                        <button class="btn btn-danger btn-xs" ng-click="openDeletePopup(file.fileGUID,1)" data-toggle="tooltip" data-placement="top" title="Delete" data-trigger="hover"><i class="glyphicon glyphicon-trash"></i></button>
+                                                    </td>
+                                                    <td><a class="pointer" href="{{file.downloadURL}}">{{file.fileName}}</a></td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="divInvoices">
+
+                                    <h3>Invoices</h3>
+                                    <div class="table-responsive">
+                                        <table id="tblInvoices" class="table table-condensed  table-bordered table-hover no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1">Action</th>
+                                                    <th>File Name</th>
+
+
+
+                                                </tr>
+                                            </thead>
+                                            <tbody ng-hide="invoicesArr.length > 0">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        No Invoice Documents available
+                                                    </td>
+                                                </tr>
+
+                                                <tbody ng-hide="invoicesArr.length == 0">
+
+                                                    <tr ng-repeat="file in invoicesArr">
+
+                                                        <td>
+                                                            <!--                                                            <a style="cursor: pointer;" ng-click="openDeletePopup(file.fileGUID,2)">Remove</a>-->
+                                                            <button class="btn btn-danger btn-xs" ng-click="openDeletePopup(file.fileGUID,2)" data-toggle="tooltip" data-placement="top" title="Delete" data-trigger="hover"><i class="glyphicon glyphicon-trash"></i></button>
+                                                        </td>
+                                                        <td><a class="pointer" href="{{file.downloadURL}}">{{file.fileName}}</a></td>
+
+                                                    </tr>
+
+                                                </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="divGeneralDocuments">
+
+                                    <h3>General Documents</h3>
+                                    <table id="tblGeneralDocuments" class="table table-condensed  table-bordered table-hover no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-sm-1">Action</th>
+                                                <th>File Name</th>
+
+
+
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-hide="generalDocArr.length > 0">
+                                            <tr>
+                                                <td colspan="2">
+                                                    No General Documents available
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody ng-hide="generalDocArr.length == 0">
+                                            <tr ng-repeat="file in generalDocArr">
+
+                                                <td>
+                                                    <!--                                                        <a style="cursor: pointer;" ng-click="openDeletePopup(file.fileGUID,3)">Remove</a>-->
+
+                                                    <button class="btn btn-danger btn-xs" ng-click="openDeletePopup(file.fileGUID,3)" data-toggle="tooltip" data-placement="top" title="Delete" data-trigger="hover"><i class="glyphicon glyphicon-trash"></i></button>
+                                                </td>
+                                                <td><a class="pointer" href="{{file.downloadURL}}">{{file.fileName}}</a></td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <div id="divReports">
+
+                                    <h3>Reports</h3>
+                                    <div class="table-responsive">
+                                        <table id="tblReports" class="table table-condensed  table-bordered table-hover no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1">Action</th>
+                                                    <th>File Name</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody ng-hide="reportsArr.length > 0">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        No Report Documents available
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody ng-hide="reportsArr.length == 0">
+                                                <tr ng-repeat="file in reportsArr">
+
+                                                    <td>
+                                                        <button class="btn btn-danger btn-xs" ng-click="openDeletePopup(file.fileGUID,4)" data-toggle="tooltip" data-placement="top" title="Delete" data-trigger="hover"><i class="glyphicon glyphicon-trash"></i></button>
+                                                        <!--                                                        <a style="cursor: pointer;" ng-click="openDeletePopup(file.fileGUID,4)">Remove</a>-->
+                                                    </td>
+                                                    <td><a class="pointer" href="{{file.downloadURL}}">{{file.fileName}}</a></td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script id="dllDelete.html" type="text/ng-template">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete File</h4>
+    </div>
+
+
+    <form name="myFormAddTemplate1" novalidate>
+
+        <div class="modal-body ">
+
+            <strong>This will delete the selected file. Are you sure you want to continue?</strong>
+
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+            <a class="btn btn-primary" role="button" ng-click="deleteFile()">Continue</a>
+        </div>
+    </form>
+
+</script>

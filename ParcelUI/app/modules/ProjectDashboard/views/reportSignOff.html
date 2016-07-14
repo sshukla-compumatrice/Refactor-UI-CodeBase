@@ -1,0 +1,54 @@
+
+<div class="modal-header">
+    <button type="button" class="close" ng-click="reportSignOff.close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+</div>
+
+
+<form class="form-horizontal" name="reportSignOffForm" novalidate>
+    <div class="modal-body">
+        <h4>Sign Off -  {{reportSignOff.signOffType}}</h4>
+        <p ng-show="reportSignOff.showAlert" class="text-danger">{{reportSignOff.serviceMessage}}</p>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-11">
+                <div ng-if="!reportSignOff.alreadySigned" class="radio" show-errors>
+                    <label>
+                        <input type="radio" value="1" ng-model="reportSignOff.sign" name="sign" id="sign" required>Sign
+                    </label>
+                </div>
+                <div ng-if="reportSignOff.alreadySigned">
+                    <label class="radio-inline">
+                        <input type="radio" value="2" ng-model="reportSignOff.updateSignatures" name="updateSignatures" id="unsign" ng-required="reportSignOff.updateSignatures == '2'">Unsign
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" value="3" ng-model="reportSignOff.updateSignatures" name="updateSignatures" id="override" ng-required="reportSignOff.updateSignatures == '3'">Over-ride
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required" show-errors>
+            <label for="signOffType" class="col-sm-4 control-label">{{reportSignOff.signOffType}}:</label>
+            <div class="col-sm-6">
+
+                <input id="signOffType" type="text" class="form-control" ng-model="reportSignOff.name" name="signerName" required ng-disabled="reportSignOff.updateSignatures == '2' ">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-sm-4 control-label">Title:</label>
+            <div class="col-sm-6">
+                <input id="title" name="title" ng-model="reportSignOff.title" type="text" class="form-control" ng-disabled="reportSignOff.updateSignatures == '2' ">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="modal-footer">
+
+        <button class="btn btn-default btn-sm" type="submit" ng-click="reportSignOff.closeAndUpdate(reportSignOffForm)">Close And Update Dashboard</button>
+        <button type="button" class="btn btn-default btn-sm" ng-click="reportSignOff.close()">Close Window</button>
+    </div>
+</form>

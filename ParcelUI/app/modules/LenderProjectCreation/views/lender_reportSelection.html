@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style></style>
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title"> <span class="pointer">Report Selection</span> </h5>
+    </div>
+    <div id="collapseReportDiv" class="panel-collapse collapse in">
+
+        <div class="panel-body" ng-controller="LenderReportSelectionCtrl as reportSelection">
+            <div class="form-horizontal">
+                <div class="alert alert-info"> <span>*Select report to create Project</span> </div>
+                <div>To select multiple report types, check the box next to each desired type.</div>
+                <div ng-repeat="report in main.loadData.reportTypes">
+                    <div class="text-left">
+                        <h5>{{report.title}} </h5>
+                    </div>
+                    <hr>
+                    <div ng-repeat="template in report.templates">
+                        <div class="container-fluid">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="Report" name="Report" ng-model="(main.submitData.reports[template.templateID] = main.submitData.reports[template.templateID] || {}).selected" />
+                                        <span> {{template.name}} </span> </label>
+                                </div>
+                            </div>
+                            <div id="{{template.templateID}}" ng-show="main.submitData.reports[template.templateID].selected">
+
+                                <div class="col-md-6">
+                                    <div class="radio">
+                                        <input id="assign" type="radio" name="{{template.templateID}}.content" ng-model="main.submitData.reports[template.templateID].content" value="assign">
+                                        <label>Assign a consultant to this report</label>
+                                    </div>
+                                    <div class="col-md-11" ng-show="main.submitData.reports[template.templateID].content == 'assign'">
+                                        <div class="form-group">
+                                            <hr>
+                                            <select class="form-control" id="consultant" type="select" name="consultant" data-ng-options="consultant.companyID as consultant.name for consultant in main.loadData.consultants" ng-model="main.submitData.reports[template.templateID].companyID">
+                                                <option value="">Select a Company</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="radio">
+                                        <input id="request" type="radio" name="{{template.templateID}}.content" ng-model="main.submitData.reports[template.templateID].content" value="request">
+                                        <label>Request bids from one or more consultants</label>
+                                    </div>
+                                    <div class="col-md-11" ng-show="main.submitData.reports[template.templateID].content == 'request'">
+                                        <div class="form-group">
+                                            <hr>
+                                            <label for="bid" class="control-label">Set Bid deadline date/time: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" datetime-picker="dd MMM yyyy" ng-model="main.submitData.reports[template.templateID].bidDeadline" is-open="open[template.templateID]" enable-time="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-on-date-selection="false" datepicker-append-to-body="false" />
+                                                <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="openCalendar($event, template.templateID)"><i class="fa fa-calendar"></i></button>
+                      </span> </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <multiselect class="input-xlarge" multiple="true" ng-model="main.submitData.reports[template.templateID].bidCompanys" header="select consultants" options="consultant.companyID as consultant.name for consultant in main.loadData.consultants"></multiselect>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

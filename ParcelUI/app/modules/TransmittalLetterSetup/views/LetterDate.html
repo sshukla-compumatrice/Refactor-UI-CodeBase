@@ -1,0 +1,100 @@
+ 
+<div class="checkbox">
+    <label>
+     <h4><input type="checkbox" name="letterDateIncluded" value="1" checked="">Letter Date</h4>
+    </label>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="font" class="control-label">Font:</label>
+            <select id="font" class="form-control" ng-model="transSetup.cssData['letter-date']['font-family']">
+                <option>Arial</option>
+                <option>Helvetica</option>
+                <option>Times</option>
+                <option>Times New Roman</option>
+                <option>Book Antiqua</option>
+                <option>Arial Narrow</option>
+                <option>Verdana</option>
+                <option>Calibri</option>
+                <option>Cambria</option>
+                <option>Century Gothic</option>
+                <option>Garamond</option>
+                <option>Tahoma</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="fontSize" class="control-label">Font Size:</label>
+            <select id="fontSize" class="form-control" ng-model="transSetup.cssData['letter-date']['font-size']">
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option selected="">12</option>
+                <option>13</option>
+                <option>14</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="fontStyle" class="control-label">Font Style:</label>
+            <select id="fontStyle" class="form-control" ng-model="transSetup.cssData['letter-date'].style">
+                <option value="B" selected="">Bold</option>
+                <option value="I">Italic</option>
+                <option value="U">Underline</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="format" class="control-label col-md-2 col-sm-2 col-xs-12">
+            Format:
+        </label>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <select id="format" name="Format" class="form-control" ng-model="transSetup.jsonData.letterDate.format">
+                <option value="{weekday}, {month_full} {day}, {year_full}">Wednesday, October 31, 2001</option>
+                <option value="{month_full} {day} {year_full}" selected="">October 31, 2001</option>
+                <option value="{day} {month_full}, {year_full}">31 October, 2001</option>
+                <option value="{day}-{month_abbr}-{year_short}">31-Oct-01</option>
+                <option value="{month_abbr}-{day}-{year_short}">Oct-31-01</option>
+                <option value="{day}.{month_num}.{year_short}">31.10.01</option>
+                <option value="{month_num}.{day}.{year_short}">10.31.01</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="align" class="control-label col-md-2 col-sm-2 col-xs-12">
+            Align:
+        </label>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <select id="align" name="Align" class="form-control" ng-model="transSetup.cssData['letter-date']['align']">
+                <option value="left" selected="">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="linesafterDate" class="control-label col-md-2 col-sm-2 col-xs-12">
+            Lines after Date:
+        </label>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <select id="linesafterDate" name="LinesafterDate" class="form-control" ng-model="transSetup.jsonData.letterDate.linesAfterDate">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+</div>

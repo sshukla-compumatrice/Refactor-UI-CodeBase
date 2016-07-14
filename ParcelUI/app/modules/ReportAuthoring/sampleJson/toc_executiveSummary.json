@@ -1,0 +1,230 @@
+{
+	"report": null,
+	"template": null,
+	"section": null,
+	"history": null,
+	"message": null,
+	"comments": null,
+	"historyLibraries": null,
+	"reportTemplate": null,
+	"sectionData": null,
+	"appendices": null,
+	"appendix": null,
+	"commentTypes": null,
+	"tableOfContent": 
+    {
+		"hasNarrative": false,
+		"hasComments": false,
+		"comments": [],
+		"updatedBy": {
+			"userID": 0,
+			"userGUID": "bbc8bb95-f8d0-42aa-b053-00f187134f16",
+			"firstName": "Developer",
+			"middleInitial": null,
+			"lastName": "User",
+			"companyGUID": null,
+			"officeGUID": null
+		},
+		"reportGUID": "e55f73bd-fa74-11e5-95e5-0e29ed3d2a45",
+		"clickable": false,
+		"sectionNumber": "",
+		"isCommentsAddressed": false,
+		"sectionID": 0,
+		"updatedDate": "04-07-2016 09:44:25 PM EDT",
+		"sections": [ 
+		{
+			"hasNarrative": true,
+			"hasComments": false,
+			"comments": [],
+			"updatedBy": {
+				"userID": 0,
+				"userGUID": "bbc8bb95-f8d0-42aa-b053-00f187134f16",
+				"firstName": "Developer",
+				"middleInitial": null,
+				"lastName": "User",
+				"companyGUID": null,
+				"officeGUID": null
+			},
+			"clickable": true,
+			"sectionNumber": "Section 1",
+			"isCommentsAddressed": false,
+			"sectionID": 2,
+			"updatedDate": "04-08-2016 06:25:31 AM EDT",
+			"sections": [],
+			"sectionName": "Environmental Report Summary",
+			"sectionGUID": "9bc23a1f-dd48-11e5-b5c1-0e29ed3d2a45",
+			"sectionData": {
+				"contentValues": {
+					"tagData": "",
+                    "executiveSummaryTable": {
+                        "structure": [{
+                            "label": "Results",
+                            "style": "CHECKBOX",
+                           
+                            "options": [{
+
+                                "label": "No Further Action",
+                                "orderIndex": "1"
+                            }, {
+                                "label": "REC",
+                                "orderIndex": "3"
+                            }, {
+                                "label": "HREC",
+                                "orderIndex": "4"
+                            }, {
+                                "label": "Issue/Further Investigation",
+                                "orderIndex": "5"
+                            }],
+                            "orderIndex": 1
+                        }, {
+                            "label": "Comments",
+                            "style": "MEMO",
+                            "orderIndex": 2
+                        }, {
+                            "label": "Results",
+                            "style": "SELECT",
+                           
+                            "options": [{
+                                "label": "No Further Action",
+                                "orderIndex": "1"
+                            }, {
+                                "label": "REC",
+                                "orderIndex": "3"
+                            }, {
+                                "label": "HREC",
+                                "orderIndex": "4"
+                            }, {
+                                "label": "Issue/Further Investigation",
+                                "orderIndex": "5"
+                            }],
+                            "orderIndex": 3
+                        }],
+                        "sections": [{
+                            "sectionId": 1,
+                            "sectionTitle": "section 1 title"
+                        }, {
+                            "sectionId": 2,
+                            "sectionTitle": "section 2 title"
+                        }, {
+                            "sectionId": 3,
+                            "sectionTitle": "section 3 title"
+                        }],
+                        "data": [{
+
+                            "Results": {
+                                "No Further Action": false,
+                                "REC": true,
+                                "HREC": true,
+                                "Issue/Further Investigation": true
+                            },
+                            "Comments": "comments for section 1",
+                            "sectionId": 1
+
+                        }, {
+
+                            "Results": {
+                                "No Further Action": true,
+                                "REC": true,
+                                "HREC": true,
+                                "Issue/Further Investigation": true
+                            },
+                            "Comments": "comments for section 2",
+                            "sectionId": 2
+
+                        }],
+                         "dropdownOptions":[{
+                                
+                                
+                                
+                            }]
+                    }
+                },
+				"operationCode": "EDIT"
+			},
+			"isAppendix": false,
+			"appendixTools": [],
+			"html": "<div><h2>{{section1Title}}<div class='pull-right btn-group'><button class='btn btn-primary btn-md' ng-click='importData(41,4,0,0,false)'>Import Data</button><button type='button' class='btn btn-primary'>Conclusions</button></div></h2><div class='clearfix'></div><div id='divHardcodedImportData_0' ng-show='isHardcodedImportData'>test data</div></div><br><tag-with-dashes></tag-with-dashes><br><ul> <li>{{Y}}</li> <li>{{N}}</li> <li>{{NS}}</li></ul><br><div><button id='createHost' class='btn btn-mini btn-success' data-ng-click='uploadSpreadsheet()'><b>Upload Spreadsheet</b></button></div><br><div class='boxCK'><span class='editCK'>edit</span> <div id='ckEdit' class='textCK'><p>The purpose of the Phase I Environmental Site Assessment (ESA) was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property. </p></div></div><br><h3>Attached Files:</h3>     <div><table class='table table-condensed  table-bordered table-hover top-margin'><thead><tr><th>Action</th><th>File Name</th><th>File Size</th></tr></thead><tbody><tr ><td><a style='cursor: pointer;' >Remove</a></td><td>file 1</td><td>10 Bytes</td></tr></tbody></table></div><hr><executive-summary-table table='contentValues.executiveSummaryTable'></executive-summary-table><div freddie-mac-all-recommendation cost-table='contentValues.costTable' />",
+			"isGeneralInfo": false
+		}],
+		"sectionName": "",
+		"sectionData": {
+			
+		},
+		"isAppendix": false,
+		"appendixTools": [],
+		"html": "",
+		"isGeneralInfo": false
+	},
+	"comment": null,
+	"sections": null,
+	"defaults": null,
+	"project": {
+		"projectID": 0,
+		"name": "Gautam_TestNavigation",
+		"companyID": 0,
+		"finalDueDate": null,
+		"draftDueDate": null,
+		"client": null,
+		"locations": null,
+		"siteContact": null,
+		"accessParties": null,
+		"notification": null,
+		"comments": null,
+		"projectGUID": "b122f584-5203-4f83-8e50-4ebeb3eed516",
+		"companyGUID": null,
+		"generalInfo": null,
+		"attachments": null,
+		"inputFile": null,
+		"mortgageBroker": null,
+		"reports": null,
+		"totalReports": 0,
+		"numberOfFinalReports": 0
+	},
+	"location": {
+		"locationGUID": null,
+		"categories": null,
+		"propertyNumber": "",
+		"name": "",
+		"address": "",
+		"address1": "Pune",
+		"address2": "",
+		"city": "Pune",
+		"state": "MH",
+		"zip": "",
+		"county": "",
+		"latitude": 0.0,
+		"longitude": 0.0,
+		"acreage": "",
+		"numBuildings": "",
+		"transactionTypeID": 0,
+		"reports": null,
+		"siteContact": {
+			"name": null,
+			"phone": null,
+			"fax": null,
+			"email": null
+		},
+		"country": "India",
+		"transactionTypeGUID": null,
+		"propertyTypeGUID": null,
+		"propertyID": 0,
+		"propertyName": "Compumatrice",
+		"elevation": 0,
+		"elevationUnits": null,
+		"contactName": null,
+		"contactEmail": null,
+		"contactPhone": null,
+		"contactFax": null,
+		"notes": null,
+		"dataSource": null,
+		"dataSourceKey": null,
+		"propertyGuid": "e55e8467-fa74-11e5-95e5-0e29ed3d2a45",
+		"projectGuid": null,
+		"propertyType": null,
+		"transactionType": null,
+		"geocodeSource": null
+	},
+	"reportDetails": null,
+	"prepopulatedTableData": null,
+	"sortEnum": null
+}

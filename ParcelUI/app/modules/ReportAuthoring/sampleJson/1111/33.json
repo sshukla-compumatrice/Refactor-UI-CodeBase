@@ -1,0 +1,193 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.6.2 Alarm Systems",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 234,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Smoke & Fire Detection",
+                "value": "5693"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "5694"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "5700"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "13382"
+            }, {
+                "name": "Security",
+                "value": "13386"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "13480"
+            }, {
+                "name": "Security",
+                "value": "13484"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "18972"
+            }, {
+                "name": "Security",
+                "value": "18976"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "20057"
+            }, {
+                "name": "Security",
+                "value": "20061"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "21570"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "21571"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "21572"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "21573"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "21574"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "21575"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "22852"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "22853"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "90015102"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "90015103"
+            }, {
+                "name": "Other",
+                "value": "90015104"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "90015303"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "90015304"
+            }, {
+                "name": "None",
+                "value": "90015305"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "90015627"
+            }, {
+                "name": "Security",
+                "value": "90015631"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "90015857"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "90015858"
+            }, {
+                "name": "None",
+                "value": "90015859"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "90020145"
+            }, {
+                "name": "Security",
+                "value": "90020149"
+            }, {
+                "name": "",
+                "value": "90021379"
+            }, {
+                "name": "Fire Alarm System Inspection - provide current inspection",
+                "value": "90030911"
+            }, {
+                "name": "Central alarm panel, low-rise",
+                "value": "90030912"
+            }, {
+                "name": "Central alarm panel, high-rise",
+                "value": "90030913"
+            }, {
+                "name": "Smoke & Fire Detection (Electrical)",
+                "value": "90030956"
+            }, {
+                "name": "Security",
+                "value": "90030960"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

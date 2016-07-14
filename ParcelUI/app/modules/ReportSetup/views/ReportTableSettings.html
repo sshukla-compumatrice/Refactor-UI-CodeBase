@@ -1,0 +1,267 @@
+ 
+<h4 class="border-bottom">
+    Report Table Settings:
+</h4>
+<div class="row">
+	<div class="col-xs-12 col-md-3">
+		<div class="form-group">
+
+			<label for="tableleftindent" class="control-label">
+				Table Left Indent (inches):
+			</label>
+			<select id="tableleftindent" class="form-control" ng-model="reportSetup.cssData['report-table-settings']['margin-left']">
+				<option value="0in">0</option>
+				<option value="0.125in">0.125</option>
+				<option value="0.166in">0.166</option>
+				<option value="0.25in">0.25</option>
+			</select>
+
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-3">
+		<div class="form-group">
+
+			<label for="doubleborders" class="control-label">
+				Double Borders:
+			</label>
+			<select id="doubleborders" class="form-control" ng-model="reportSetup.jsonData.reportTableSettings.doubleBorders">
+				<option>No</option>
+				<option>Yes</option>
+			</select>
+
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<!-- Table Header: -->
+
+<!-- section title -->
+<strong>Table Header:  </strong>
+<!-- end: section title -->
+
+<!-- left part of section -->
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+
+		<label for="Fontfifth" class="label-control">
+			Font:
+		</label>
+		<div class="form-group">
+			<select id="Fontfifth" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-family']">
+				<option>Arial</option>
+				<option>Helvetica</option>
+				<option>Times</option>
+				<option>Americana</option>
+				<option>Times New Roman</option>
+				<option>Book Antiqua</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-size']">
+				<option value="8px">8</option>
+				<option value="9px">9</option>
+				<option value="10px">10</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-table-settings-table-header'].style">
+				<option value="B">Bold</option>
+				<option value="I">Italic</option>
+				<option value="U">Underline</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- end: left part of section -->
+
+	<!-- right part of section -->
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalign1" class="label-control">
+						Text Align:
+					</label>
+					<select id="textalign1" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="lineheight" class="label-control">
+						Line Height:
+					</label>
+					<select id="lineheight" class="form-control" ng-model="reportSetup.jsonData.reportTableSettings.tableHeader.lineHeight">
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="fillcolor" class="label-control">
+						Fill Color:
+					</label>
+					<input id="fillcolor" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-table-settings-table-header']['background-color']">
+				</div>
+			</div>
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcolor" class="label-control">
+						Text Color:
+					</label>
+					<input id="textcolor" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-table-settings-table-header']['color']">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linesunderheader" class="label-control">
+						Lines Under Header:
+					</label>
+					<select id="linesunderheader" class="form-control" ng-model="reportSetup.jsonData.reportTableSettings.tableHeader.linesUnderHeader">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end: right part of section -->
+<!-- end: Table Header: -->
+<hr>
+
+<!-- Table Column Header: -->
+
+<!-- section title -->
+
+<strong>Table Column Header: </strong>
+
+<!-- end: section title -->
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+
+		<label for="Fontfifth" class="label-control">
+			Font:
+		</label>
+		<div class="form-group">
+			<select id="Fontfifth" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-family']">
+				<option>Arial</option>
+				<option>Helvetica</option>
+				<option>Times</option>
+				<option>Americana</option>
+				<option>Times New Roman</option>
+				<option>Book Antiqua</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-size']">
+				<option value="8px">8</option>
+				<option value="9px">9</option>
+				<option value="10px">10</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-table-settings-table-header'].style">
+				<option value="B">Bold</option>
+				<option value="I">Italic</option>
+				<option value="U">Underline</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- end: left part of section -->
+
+	<!-- right part of section -->
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalign1" class="label-control">
+						Text Align:
+					</label>
+					<select id="textalign1" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- end: Table Column Header:  -->
+<hr>
+
+<!-- Table Data -->
+<!-- section title -->
+
+<strong>  Table Data: </strong>
+
+<!-- end: section title -->
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+
+		<label for="Fontfifth" class="label-control">
+			Font:
+		</label>
+		<div class="form-group">
+			<select id="Fontfifth" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-family']">
+				<option>Arial</option>
+				<option>Helvetica</option>
+				<option>Times</option>
+				<option>Americana</option>
+				<option>Times New Roman</option>
+				<option>Book Antiqua</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['font-size']">
+				<option value="8px">8</option>
+				<option value="9px">9</option>
+				<option value="10px">10</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-table-settings-table-header'].style">
+				<option value="B">Bold</option>
+				<option value="I">Italic</option>
+				<option value="U">Underline</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- end: left part of section -->
+
+	<!-- right part of section -->
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalign1" class="label-control">
+						Text Align:
+					</label>
+					<select id="textalign1" class="form-control" ng-model="reportSetup.cssData['report-table-settings-table-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- end: Table Column Header:   -->

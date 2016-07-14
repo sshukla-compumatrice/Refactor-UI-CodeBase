@@ -1,0 +1,36 @@
+<style>
+	.body-bg-gray{
+		background-color: #ffffff !important;
+	}
+</style>
+<div class="container-fluid rightside-section">
+    <div class="row">
+        <!-- Left panel Start-->
+        <div class="col-md-3 col-lg-3 col-sm-3 sidebar bg-gray">
+
+            <div class="top-margin">
+                <ul id="portfolioUlNavigation" class="nav nav-pills nav-stacked-lg">
+                    <li active-class-portfolio="/Portfolio/Select" state="Portfolio.Select" ng-click="portfolioNavigation.redirectToSelectPortfolio($event)" class="active"><a class="pointer"> Step 1: <p class="text-11">Select Portfolio</p> </a></li>
+
+                    <li class="disabled" active-class-portfolio="/Portfolio/Select/Reports" state="Portfolio.SelectReports" ng-click="portfolioNavigation.redirectToSelectReports($event)"><a class="pointer"> Step 2:<p class="text-11">Select Reports</p> </a></li>
+
+                    <li class="disabled" ng-click="portfolioNavigation.redirectToSelectReportsParts($event)" state="Portfolio.SelectReportsParts" active-class-portfolio="/Portfolio/Select/ReportsParts"><a class="pointer"> Step 3:<p class="text-11">Select Report Parts</p> </a></li>
+
+                    <li ng-click="portfolioNavigation.redirectToConfirm()" class="disabled" state="Portfolio.Confirm" active-class-portfolio="/Portfolio/Confirm"><a class="pointer"> Step 4:<p class="text-11">Confirm Your Selections</p></a></li>
+                </ul>
+                <hr class="border-gray">
+                <div class="col-md-12 col-sm-12">
+                    <button id="buttonPrevious" ng-click="portfolioNavigation.redirectToPreviousState()" class="btn btn-primary pull-left" type="submit">Pevious</button>
+                    <button id="buttonNext" ng-click="portfolioNavigation.redirectToNextState()" btn-next class="btn btn-primary pull-right" type="submit">Next</button>
+                </div>
+                <div class="clearfix"></div>
+                <hr class="border-gray">
+            </div>
+        </div>
+
+        <div class="col-sm-offset-3 col-md-9 col-lg-9 col-sm-9">
+            
+            <div ui-view=""></div>
+        </div>
+    </div>
+</div>

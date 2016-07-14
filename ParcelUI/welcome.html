@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/edr-uxt.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/Styles.css" />
+    
+    <script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="scripts/angular_v1.2.16.min.js"></script>
+    
+    <script type="text/javascript" src="app/modules/Welcome/init.js"></script>
+    <script type="text/javascript" src="app/modules/Welcome/controller/welcomeController.js"></script>
+    <script type="text/javascript" src="scripts/edr-uxt.min.js"></script>
+</head>
+
+<body>
+    <div class="bg-image" ng-app="welcomeApp" ng-controller="welcomeController as parcelAuthCtrl">
+        <div class="container-fluid ">
+            <div class="top-margin-lg">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="login-inner">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href=""><img class="img-responsive" src="images/logo.png"></a>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <img class="img-responsive" src="images/taglogo.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <hr class="border-white">
+                                </div>
+                            </div>
+
+                            <!-- Login and Announcements panel -->
+                            <div ng-show="!parcelAuthCtrl.resetPassword">
+                                <div class="row" id="parcelSignInPanel">
+                                    <div class="col-md-4 left-side">
+                                        <form name="parcelLoginForm" novalidate>
+                                            <!--
+                                    <div class="form-group" field-validation="Your Username">
+                                        <label class="help-block" for="username">PARCEL Username:</label>
+                                        <input type="text" class="form-control" placeholder="Username" ng-model="parcelAuthCtrl.username" name="username" required>
+                                    </div>
+
+                                    <div class="form-group" field-validation="Your Password">
+                                        <label class="help-block" for="password">PARCEL Password:</label>
+                                        <input type="password" class="form-control" placeholder="Password" ng-model="parcelAuthCtrl.password" name="password" required>
+                                    </div>
+-->
+                                            <button class="btn btn-primary col-md-12" ng-click="parcelAuthCtrl.submitCredentials(parcelLoginForm)">Login to PARCEL</button>
+                                            <!--                                    <p><a href="" ng-click="parcelAuthCtrl.setForgotPasswordDisplay(true)">Forgot Your Password?</a></p>-->
+                                        </form>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <p><strong>Updates &amp; Announcements</strong></p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="pull-left">
+                                                    <span class="label label-info">Info</span>
+                                                    <strong class="text-capitalize">Notice to our Lender Clients</strong> </p>
+                                                <p class="pull-right">
+                                                    <small>Posted on September 7, 2015</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>On Tuesday, September 8, EDR is relaunching the Lender Portal platform and reintroducing it as Collateral360. The new name better reflects our mission to provide you best in class property information and workflow solutions.
+                                        </p>
+                                        <p>We've made some enhancements to the platform, but overall the impact on you will be minimal, and your workflow will not be disrupted. You will find it has a more intuitive interface, is easier to navigate, as well as other enhancements.
+                                        </p>
+                                        <p>In the future lenders will login through</p>
+                                        <p><a href="http://www.collateral360.com">http://www.collateral360.com</a></p>
+                                        <p>Please bookmark this URL!</p>
+                                        <div class="pull-right bottom-margin">
+                                            <a href="http://www.edrnet.com/PARCEL" class="btn btn-md btn-default">Learn More</a>
+                                            <a href="http://landing.edrnet.com/PARCELTrainingRequest.html" class="btn btn-md btn-default">Register for Training</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Login and Announcements panel End -->
+
+                                <!-- Forgot password panel -->
+                                <!--<div class="row" ng-show="parcelAuthCtrl.forgotPassword">-->
+                                <div class="row" id="parcelForgotPassPanel">
+                                    <div class="col-md-12">
+                                        <p><strong>PARCEL Password Reset</strong></p>
+                                        <p>If you have forgotten your username or password, you can request to have your username emailed to you and to reset your password.</p>
+                                        <p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+                                        <hr class="border-white">
+                                        <form class="form-horizontal" name="parcelForgotPasswordForm" ng-show="!parcelAuthCtrl.forgotPassSubmit" novalidate>
+                                            <div class="form-group" field-validation="Your Email">
+                                                <label class="col-sm-3 control-label">Your email address:</label>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" type="email" name="forgot-password-email" placeholder="Email" ng-model="parcelAuthCtrl.forgotPassEmail" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-3 col-sm-4">
+                                                    <button class="btn btn-default" ng-click="parcelAuthCtrl.setForgotPasswordDisplay(false)">Cancel</button>
+                                                    <button class="btn btn-primary" ng-click="parcelAuthCtrl.submitForgotPassRequest(parcelForgotPasswordForm)">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="alert alert-success" ng-show="parcelAuthCtrl.forgotPassSubmit" role="alert">
+                                            Your username and details about how to reset your password have been sent to you by email.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Forgot password panel end -->
+                            </div>
+
+                            <!-- Reset password -->
+                            <div ng-show="parcelAuthCtrl.resetPassword" class="row">
+                                <div class="col-md-12">
+                                    <p><strong>PARCEL Password Reset</strong></p>
+
+                                    <p>If you have forgotten your username or password, you can reset your password here.</p>
+                                    <p>Upon submission you will be logged into PARCEL.</p>
+                                    <hr class="border-white">
+                                    <form class="form-horizontal" name="parcelResetPassForm" ng-show="!parcelAuthCtrl.resetPassSubmit" novalidate>
+                                        <div class="form-group" field-validation="New Password">
+
+                                            <label for="reset-password-new" class="col-sm-2 control-label">New Password:</label>
+                                            <div class="col-sm-4">
+                                                <input class="form-control" type="password" placeholder="New Password" id="reset-password-new" name="reset-password-new" ng-model="parcelAuthCtrl.newPassword" ng-pattern="/^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).*$/" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" field-validation="Repeat Password">
+                                            <label class="col-sm-2 control-label">Retype Password:</label>
+                                            <div class="col-sm-4">
+                                                <input class="form-control" type="password" placeholder="Retype Password" name="reset-password-repeat" ng-model="parcelAuthCtrl.repeatPassword" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button class="btn btn-default" ng-click="parcelAuthCtrl.setResetPassword(false)">Cancel</button>
+                                                <button class="btn btn-primary" ng-click="parcelAuthCtrl.submitNewPassword(parcelResetPassForm)">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="alert alert-success" ng-show="parcelAuthCtrl.resetPassSubmit" role="alert">Your password was reset successfully. Please wait while you are redirected.</div>
+                                </div>
+                            </div>
+                            <!-- Reset password end -->
+
+                        </div>
+                        <div id="row" class="footer-container">
+                            <div class="col-md-6">
+                                <a href="http://edrnet.com/privacy-policy/privacy-policy">Privacy Policy</a> /
+
+                                <a href="http://edrnet.com/terms-conditions/">Terms and Conditions</a> / &copy; 2015 Copyright <a href="http://edrnet.com/">EDR</a> / Need Help? Call 1.866.475.1272
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <a href="http://edrnet.com/about-edr/in-the-news?display=rss">RSS</a> /
+                                <a href="https://www.facebook.com/edrnet">Facebook</a> /
+                                <a href="https://twitter.com/#!/Enviro_Data">Twitter</a> /
+                                <a href="http://www.linkedin.com/company/edr">LinkedIn</a> /
+                                <a href="http://www.youtube.com/user/EDRincvideo">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

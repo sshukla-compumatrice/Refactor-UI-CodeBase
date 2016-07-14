@@ -1,0 +1,135 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.14 Wetlands and Endangered Species",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Evidence of Wetlands",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Vegetation",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Flags",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Standing Water",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Identified on Maps",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 5,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Water Body",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Sheen",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Total Approximate Size",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Size Units",
+                "id": "",
+                "type": "select",
+                "colspan": 2,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 4,
+                "width": "40%",
+                "textWidth": "40%"
+            }, {
+                "label": "Other Evidence",
+                "id": "",
+                "type": "textarea",
+                "colspan": 5,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 5,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Evidence of Wetlands": "YesNoUnk",
+                "Vegetation": "YesNo",
+                "Flags": "YesNo",
+                "Standing Water": "YesNo",
+                "Identified on Maps": "YesNo",
+                "Water Body": "YesNo",
+                "Sheen": "YesNoUnk",
+                "Total Approximate Size": "",
+                "Size Units": "AcresSq. Feet",
+                "Other Evidence": "",
+                "Specific Location": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

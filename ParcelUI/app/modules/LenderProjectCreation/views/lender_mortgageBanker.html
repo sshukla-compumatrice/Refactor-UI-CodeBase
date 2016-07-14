@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <style type="text/css">
+ 
+    </style>
+</head>
+
+<body>
+ 
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <a class="collapsed pointer" data-toggle="collapse" data-target="#collapseClientInfo">Mortgage Banker</a>
+        </h5>
+    </div>
+    <div id="collapseClientInfo" class="panel-collapse collapse ">
+        <div class="panel-body" ng-controller="LenderMortgageBankerCtrl as mortgageBankerInfo">
+            <div class="form-horizontal">
+            <div class="form-group">
+                <label for="comapnyName" class="control-label col-md-2 col-sm-3 col-xs-12">
+                    Company Name:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="comapnyName" ng-model="mortgageBankerInfo.data.mortgageBroker.companyName">
+                </div>
+               
+            </div>
+            <div class="form-group">
+                <label for="contact" class="control-label col-md-2 col-sm-3 col-xs-12">Contact:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="contact" ng-model="mortgageBankerInfo.data.mortgageBroker.contactName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="control-label col-md-2 col-sm-3 col-xs-12">Address:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="address" ng-model="mortgageBankerInfo.data.mortgageBroker.address">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city" class="control-label col-md-2 col-sm-3 col-xs-12">City:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="city" ng-model="mortgageBankerInfo.data.mortgageBroker.city">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country" class="control-label col-md-2 col-sm-3 col-xs-12">Country:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <select class="form-control" id="country" type="select" name="Roles" country-select country-model="mortgageBankerInfo.data.mortgageBroker.country">
+                        <option value="">Select Country</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="state" class="control-label col-md-2 col-sm-3 col-xs-12">State:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <select class="form-control" id="state" type="select" state-model="mortgageBankerInfo.data.mortgageBroker.state" state-select country-model="mortgageBankerInfo.data.mortgageBroker.country" name="propertyState">
+                        <option value="">Select State</option>
+                    </select>
+                    <input type="text" class="form-control" id="state" ng-model="mortgageBankerInfo.data.mortgageBroker.state" state-input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="zip" class="control-label col-md-2 col-sm-3 col-xs-12">Zip:</label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="zip" ng-model="mortgageBankerInfo.data.mortgageBroker.zip">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone" class="control-label col-md-2 col-sm-3 col-xs-12">Phone:</label>
+                <div class="col-xs-12 col-sm-5  col-md-4">
+                    <input type="text" class="form-control" id="phone" ng-model="mortgageBankerInfo.data.mortgageBroker.phone" name="phone" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="email" class="control-label col-md-2 col-sm-3 col-xs-12">Email:</label>
+                <div class="col-xs-12 col-sm-5  col-md-4">
+                    <input type="text" class="form-control" id="email" ng-model="mortgageBankerInfo.data.mortgageBroker.email" name="email" />
+                </div>
+
+            </div>
+            </div> 
+        </div>
+    </div> 
+</body>
+
+</html>

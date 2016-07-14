@@ -1,0 +1,31 @@
+<div id="executiveSummaryTable">
+    <div class="bottom-margin-sm top-margin-sm">
+        <div class="form-inline">
+            <button ng-show="!editmode && table.data.length>0" class="btn btn-md btn-primary" ng-click="editTable()">Edit All</button>
+
+        </div>
+        <div ng-show="editmode && table.data.length>0">
+            <button type="button" class="btn btn-md btn-primary" ng-click="saveChanges()">Save Changes</button>
+
+            <button type="button" class="btn btn-md btn-default" ng-click="cancelChanges()">Cancel</button>
+
+        </div>
+
+    </div>
+    <div class="table-responsive">
+        <table ng-show="table.data.length>0" class="table table-bordered table-condensed" ng-class="{'table-striped':!editmode}">
+            <thead>
+                <th class="edit-action">Report Section</th>
+                <th ng-repeat="col in table.colStructure">{{col.label}}</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in table.data">
+                    <td><a class="pointer" ng-click="gotoSection(data.sectionId)">{{data.sectionNumber}} {{data.sectionName}}</a></td>
+                    <td ng-repeat="col in table.colStructure" width="{{col.width}}" style="text-align: {{col.align}};">
+                        <div tablefield-directive field="col" parentindex="$parent.$index" index="$index" data="data.rowData[col.label]" editmode="editmode" sectionguid="sectionGuid" tablescope="executiveSummaryTableScope"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

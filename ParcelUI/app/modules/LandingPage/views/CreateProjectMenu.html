@@ -1,0 +1,236 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div id="wraper">
+            <div class="top-margin report-contain col-md-9">
+                <span id="menu-toggle" menu-toggle class="hidden-sm hidden-xs  fa fa-step-forward btn btn-md btn-primary fa-lg"></span>
+                <div class="panel panel-default">
+                    <div class="report-panel" ng-class="dashboard.getClass('panel')" data-intro="<h4 class='text-white'>RECENTLY VIEWED REPORTS</h4> Any reports you view on PARCEL will be listed here for quick access" data-position="top recentview-tolltip">
+                        <div class="container-fluid">
+                            <div cg-busy="dashboard.activityLoader">
+                                <div ng-repeat="item in dashboard.recentViewReports" ng-if="$index % 3 == 0" class="row">
+                                    <!--first-->
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="report-panel-head top-margin-sm pointer">
+                                            <a class="decoration-n" target="_self" title="View the Project Dashboard for {{item.activityInfo.projectName}}" href="#/projectDashboard?projectGuid={{item.activityInfo.projectGuid}}&accountGuid={{dashboard.accountGuid}}&companyGuid={{dashboard.companyGuid}}">
+                                                <span class="pull-right label label-primary site-type">{{item.activityInfo.reportType | uppercase}}</span>
+                                                <div class="text-uppercase site-name">{{item.activityInfo.projectName}}</div>
+                                            </a>
+                                            <a class="text-black decoration-n" title="Go to report ID {{item.activityInfo.siteID}} for {{item.activityInfo.address}}" target="_self" href="#/ReportAuthoring/Write?projectGuid={{item.activityInfo.projectGuid}}&reportGuid={{item.activityInfo.reportGuid}}">
+                                                <div class="site-details">{{item.activityInfo.propertyName}}</div>
+                                                <div class="site-details"><span ng-if="item.activityInfo.propertyNumber">{{item.activityInfo.propertyNumber}}&nbsp;:&nbsp;</span>{{item.activityInfo.address}}&nbsp;{{item.activityInfo.city}},&nbsp;{{item.activityInfo.state}}</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--first end-->
+
+                                    <!--repeated second and third sections in order to display 3 columns in a row -->
+                                    <!--second-->
+                                    <div class="col-md-4 col-sm-4" ng-if="dashboard.recentViewReports[$index+1]">
+                                        <div class="report-panel-head top-margin-sm pointer">
+                                            <a class="decoration-n" target="_self" title="View the Project Dashboard for {{dashboard.recentViewReports[$index+1].activityInfo.projectName}}" href="#/projectDashboard?projectGuid={{dashboard.recentViewReports[$index+1].activityInfo.projectGuid}}&accountGuid={{dashboard.accountGuid}}&companyGuid={{dashboard.companyGuid}}">
+                                                <span class="pull-right label label-primary site-type">{{dashboard.recentViewReports[$index+1].activityInfo.reportType | uppercase}}</span>
+                                                <div class="text-uppercase site-name">{{dashboard.recentViewReports[$index+1].activityInfo.projectName}}</div>
+                                            </a>
+                                            <a class="text-black decoration-n" title="Go to report ID {{dashboard.recentViewReports[$index+1].activityInfo.siteID}} for {{dashboard.recentViewReports[$index+1].activityInfo.address}}" target="_self" href="#/ReportAuthoring/Write?projectGuid={{dashboard.recentViewReports[$index+1].activityInfo.projectGuid}}&reportGuid={{dashboard.recentViewReports[$index+1].activityInfo.reportGuid}}">
+                                                <div class="site-details">{{dashboard.recentViewReports[$index+1].activityInfo.propertyName}}</div>
+                                                <div class="site-details"><span ng-if="dashboard.recentViewReports[$index+1].activityInfo.propertyNumber">{{dashboard.recentViewReports[$index+1].activityInfo.propertyNumber}}&nbsp;:&nbsp;</span>{{dashboard.recentViewReports[$index+1].activityInfo.address}}&nbsp;{{dashboard.recentViewReports[$index+1].activityInfo.city}},&nbsp;{{dashboard.recentViewReports[$index+1].activityInfo.state}}</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--second end-->
+
+                                    <!--third-->
+                                    <div class="col-md-4 col-sm-4" ng-if="dashboard.recentViewReports[$index+2]">
+                                        <div class="report-panel-head top-margin-sm pointer">
+                                            <a class="decoration-n" target="_self" title="View the Project Dashboard for {{dashboard.recentViewReports[$index+2].activityInfo.projectName}}" href="#/projectDashboard?projectGuid={{dashboard.recentViewReports[$index+2].activityInfo.projectGuid}}&accountGuid={{dashboard.accountGuid}}&companyGuid={{dashboard.companyGuid}}">
+                                                <span class="pull-right label label-primary site-type">{{dashboard.recentViewReports[$index+2].activityInfo.reportType | uppercase}}</span>
+                                                <div class="text-uppercase site-name">{{dashboard.recentViewReports[$index+2].activityInfo.projectName}}</div>
+                                            </a>
+                                            <a class="text-black decoration-n" title="Go to report ID {{dashboard.recentViewReports[$index+2].activityInfo.siteID}} for {{dashboard.recentViewReports[$index+2].activityInfo.address}}" target="_self" href="#/ReportAuthoring/Write?projectGuid={{dashboard.recentViewReports[$index+2].activityInfo.projectGuid}}&reportGuid={{dashboard.recentViewReports[$index+2].activityInfo.reportGuid}}">
+                                                <div class="site-details">{{dashboard.recentViewReports[$index+2].activityInfo.propertyName}}</div>
+                                                <div class="site-details"><span ng-if="dashboard.recentViewReports[$index+2].activityInfo.propertyNumber">{{dashboard.recentViewReports[$index+2].activityInfo.propertyNumber}}&nbsp;:&nbsp;</span>{{dashboard.recentViewReports[$index+2].activityInfo.address}}&nbsp;{{dashboard.recentViewReports[$index+2].activityInfo.city}},&nbsp;{{dashboard.recentViewReports[$index+2].activityInfo.state}}</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--third end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center report-head-border">
+                        <span id="recent-report">
+                            <i class="fa fa-chevron-up up-arrow pointer" activity-updisplay></i><span class="recent-report">RECENTLY VIEWED REPORTS</span><i class="fa fa-chevron-down down-arrow" ng-class="dashboard.getClass('arrow')" activity-downdisplay length="dashboard.recentViewReports.length"></i>
+                        </span>
+                    </p>
+                    <div ng-include src="'app/modules/LandingPage/views/Dashboard.html'"></div>
+                </div>
+
+            </div>
+
+            <div class="report-menu top-margin col-md-3">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body" data-intro="<h4 class='text-white'>NEED TO START A PROJECT?</h4>Click one of these links to do so!" data-position="bottom">
+                        <h3 class="top-margin-xs text-capitalize">Start</h3>
+
+                        <ul class="nav nav-pills nav-stacked nav-pills-sm">
+                            <li>
+                                <a ui-sref="quickCreateProj" href="#/QuickProjectSetup">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">New Single Site Project</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ui-sref="PortfolioCreation.ProjectInformation" href="#/PortfolioCreation/ProjectInformation">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">New portfolio</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ui-sref="orderPlacedOnEDR" href="#/OrderPlacedOnEDR">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-fw fa-link fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Order placed on the EDR website?</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="top-margin-xs  text-capitalize">Other</h3>
+
+                        <ul class="nav nav-pills nav-stacked nav-pills-sm">
+                            <li>
+                                <a href="#">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Help and eLearning</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ng-href="/accountmgmt/#/accounts/company/office/user/edit?companyguid={{dashboard.currentUserCompanyGuid}}&officeguid={{dashboard.currentUserOfficeGuid}}&userguid={{dashboard.currentUserGuid}}">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-fw fa-indent fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Update my Personal Info</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ng-href="/accountmgmt/#/accounts/company/office/user/new?companyguid={{dashboard.currentUserCompanyGuid}}&officeguid={{dashboard.currentUserOfficeGuid}}">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-fw fa-user-plus fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Add A New User</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="pointer" href="" ng-click="dashboard.grantAccessToReport(dashboard.projectGuid)">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-fw fa-users fa-stack-1x fa-inverse"></i>
+								   </span>
+                                    <div class="nav-list-text"> Grant Access to a Report </div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#/DefaultLanguage">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-fw fa-server fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Update Default Language</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-signal fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">View My Company's Statistics</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Parcel Intel</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-exchange fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">EDR Advisory Partner Portal</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ui-sref="Support" href="#/Support">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Feedback or Support</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="fa-stack fa-lg pull-left">
+								  <i class="fa fa-square fa-stack-2x text-warning"></i>
+								  <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+								</span>
+                                    <div class="nav-list-text">Administrative Tools</div>
+                                    <span class="clearfix"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

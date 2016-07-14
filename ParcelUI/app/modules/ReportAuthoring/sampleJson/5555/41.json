@@ -1,0 +1,61 @@
+{
+    "html": "<div><h3 class='border-bottom'>{{contentValues.sectionTitle00}}</h3></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><spreadSheet-table table='contentValues.spreadSheetTable02'></spreadSheet-table>",
+    "contentValues": {
+        "sectionTitle00": "5.2 Document Review",
+        "spreadSheetTable02": {
+            "structure": [{
+                "label": "Document Title",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Date",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "15%",
+                "textWidth": "15%"
+            }, {
+                "label": "Conducted By",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "20%",
+                "textWidth": "20%"
+            }, {
+                "label": "Findings",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "40%",
+                "textWidth": "40%"
+            }],
+            "data": [{
+                "Document Title": ""
+            }, {
+                "Date": ""
+            }, {
+                "Conducted By": ""
+            }, {
+                "Findings": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

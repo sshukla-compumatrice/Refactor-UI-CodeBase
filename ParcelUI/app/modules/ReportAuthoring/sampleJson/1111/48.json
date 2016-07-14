@@ -1,0 +1,9 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "8 Qualifications",
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

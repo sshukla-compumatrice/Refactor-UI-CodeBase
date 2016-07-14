@@ -1,0 +1,52 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary btn-sm" onclick="window.close();">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close Window
+    </button>
+</div>
+<h2 class="page-header">Freddie Mac Form 1105 Section II</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-condensend table-hover">
+        <thead>
+            <tr>
+
+                <th>Component</th>
+                <th>AVE. EUL</th>
+                <th>Condition</th>
+                <th>RUL</th>
+                <th>Action</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+		<tbody ng-repeat="groupType in recommendationSummary.groupTypes">
+            <tr>
+
+				<td colspan="19"><strong>{{groupType.name}}</strong>
+				
+				</td>
+
+            </tr>
+			<tr ng-repeat="item in recommendationSummary.recommendations | filter:{ group: groupType.value }">
+            
+				<td>
+                    <a class="pointer" ng-click="recommendationSummary.editRecommendation(item)">{{item.name}}</a>
+                </td>
+                <td>{{item.eul}}</td>
+                <td>
+				<span ng-repeat="conditionItem in item.condition">					
+					{{conditionItem}} {{$last ? '' : ', '}}					
+				</span>
+				</td>
+                <td>{{item.rul}}</td>
+                <td>				
+				<span ng-repeat="actionItem in item.action">					
+					{{actionItem}} {{$last ? '' : ', '}}					
+				</span>
+				</td>
+                <td>{{item.conditionComments}}</td>
+            </tr>
+		
+        </tbody>
+		
+        
+    </table>
+</div>

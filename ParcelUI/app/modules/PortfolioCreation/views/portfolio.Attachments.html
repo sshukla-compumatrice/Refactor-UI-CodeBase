@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+
+    <div class="alert alert-info">
+		<strong>Click Choose Files to attach documents (prior Phase I ESAs, Title Records, etc.) to this project.</strong>
+    </div>
+
+    <div class="form-group" id="collapseAttachment" class="top-margin" ng-controller="PortfolioAttachmentCtrl as portfolioAttachments">
+        <form id="fileupload">
+            <div class="fileupload-buttonbar AU_uploadbox">
+
+                <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="portfolioAttachments.serviceResponseAlert">
+                    <button type="button" class="close" ng-click="portfolioAttachments.serviceResponseAlert = false;" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{portfolioAttachments.serviceResponseText}}
+                </div>
+
+                <div class="form-inline">
+
+                    <div class="form-group">
+                        <span class="btn btn-md btn-primary fileinput-button" ng-class="{disabled: disabled}" tabindex="1">
+                                            <i class="fa fa-file-text-o"></i> Choose Files <input id="file-3"
+                                                                                            type="file" data-file-input="files"
+                                                                                            ngf-select ngf-change="upload($files)" ngf-multiple="true" >
+                                        </span>
+                        <!--<button type="button" class="btn btn-md btn-primary start" ng-click="portfolioAttachments.Upload()">
+                                    <span class="glyphicon glyphicon-upload"></span> Upload
+                                </button>-->
+
+                        <!--<span class="AU_uploadFilename text-primary" ng-repeat="file in files">{{file.name}}</span>-->
+                    </div>
+
+                    <!--<div ng-show="files && files.length" class="form-group">
+                        <input class="form-control" type="text" placeholder="Add Description" ng-model="files[0].description">
+                        <button type="button" class="btn btn-md btn-primary start" ng-click="portfolioAttachments.submitToAttachFiles()">
+                            <span class="glyphicon glyphicon-upload"></span> Submit
+                        </button>
+                    </div>-->
+
+
+                    <hr>
+                </div>
+
+
+                <div class=" form-group" ng-hide="portfolioAttachments.attachmentFiles.length == 0">
+
+
+
+                    <table class="table table-condensed  table-bordered table-hover top-margin">
+
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>File Name</th>
+                                <!--<th>File Description</th>-->
+                                <th>File Size</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in portfolioAttachments.attachmentFiles">
+                                <td>
+                                    <button class="btn btn-danger btn-xs" ng-click="portfolioAttachments.removeAttachment($index);" data-toggle="tooltip" data-placement="top" title="Delete"><i class="glyphicon glyphicon-trash"></i></button>
+                                </td>
+                                <td>{{file.name}}</td>
+                                <!--<td ng-click="portfolioAttachments.enableAttachedFileEdit(file, $index, fileupload)">
+                                    <span ng-show="!file.editDesc">{{file.description}}</span>
+                                    <input id="fileDesc_{{$index}}" class="form-control" type="text" ng-model="file.description" ng-show="file.editDesc" ng-blur="file.editDesc = false;">
+                                </td>-->
+                                <td>{{file.size}}</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div class="form-group">
+                    <!--<div class="alert alert-success" ng-hide="portfolioAttachments.attachmentFiles.length == 0">
+
+                        <span>Files Uploaded Successfully</span>
+                    </div>-->
+
+
+                    <div class="alert alert-danger" ng-show="portfolioAttachments.isUploadErrorMsg">
+                        <span>{{portfolioAttachments.UploadErrorMsg}}</span>
+                    </div>
+                    <div class="alert alert-danger" ng-show="portfolioAttachments.isUploadErrorMsg">
+                        <span>{{portfolioAttachments.IncorrectFormat}}</span>
+                    </div>
+                    <div class="alert alert-danger" ng-show="portfolioAttachments.isUploadErrorMsg">
+
+                        <a ng-click="ShowUploadStatus()" ng-show="popuplink">Click here for more details</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>

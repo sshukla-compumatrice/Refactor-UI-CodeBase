@@ -1,0 +1,406 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.3 Access and Egress",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 21,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "5"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "1747"
+            }, {
+                "name": "Widen Vehicular Entrance at Street ",
+                "value": "3007"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "11010"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "11275"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "11540"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "11805"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "12072"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "12315"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "12558"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "12801"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "13440"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "13454"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "13720"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "13721"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "13722"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "13723"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "13724"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "13725"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "13726"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "13727"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "13728"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "13729"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "13730"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "13731"
+            }, {
+                "name": "Concrete repair",
+                "value": "13732"
+            }, {
+                "name": "Concrete sealant",
+                "value": "13733"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "15645"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "16496"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "16759"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "17829"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "18225"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "18488"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "18946"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "19266"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "20031"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "20398"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "21759"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "22755"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "22999"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90002520"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90003885"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90003945"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90005441"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90005756"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90006431"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90006763"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen ",
+                "value": "90008807"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen",
+                "value": "90011671"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen",
+                "value": "90012029"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen",
+                "value": "90012387"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90012827"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "90012828"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "90012829"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "90012830"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "90012831"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "90012832"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "90012833"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "90012834"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90012835"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "90012836"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "90012837"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "90012838"
+            }, {
+                "name": "Concrete repair",
+                "value": "90012839"
+            }, {
+                "name": "Concrete sealant",
+                "value": "90012840"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90013334"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90013672"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90014012"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90014350"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "90014983"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "90014984"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "90014985"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "90014986"
+            }, {
+                "name": "Repair curbs",
+                "value": "90014987"
+            }, {
+                "name": "Other",
+                "value": "90014988"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "90015601"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90017189"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90019310"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen   ",
+                "value": "90019821"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "90020119"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90020249"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90020798"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90020975"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90021259"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90022761"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90022988"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90023180"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90023423"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90023665"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90023822"
+            }, {
+                "name": "Widen Vechicular Entrance at Street ",
+                "value": "90024065"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90027549"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "90027550"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "90027551"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "90027552"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "90027553"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "90027554"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "90027555"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "90027556"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90027557"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "90027558"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "90027559"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "90027560"
+            }, {
+                "name": "Concrete repair",
+                "value": "90027561"
+            }, {
+                "name": "Concrete sealant",
+                "value": "90027562"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90028067"
+            }, {
+                "name": "Vehicular Entrance at Street, Widen  ",
+                "value": "90028578"
+            }, {
+                "name": "Widen Vechicular Entrance at Street",
+                "value": "90030116"
+            }, {
+                "name": "Property Access and Egress",
+                "value": "90030930"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

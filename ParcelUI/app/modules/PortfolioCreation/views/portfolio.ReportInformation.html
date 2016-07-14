@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+
+</head>
+
+<body>
+    <div ng-controller="PortfolioReportInformationController as reportInfo">
+
+        <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="reportInfo.serviceResponseAlert">
+            <button type="button" class="close" ng-click="reportInfo.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{reportInfo.serviceResponseText}}
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="reportInfo.isSiteAdded">
+            <button type="button" class="close" aria-label="Close" ng-click="reportInfo.isSiteAdded = false">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            Site added. Add another site or click NEXT when finished adding sites."
+        </div>
+        <form novalidate>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="propertyname" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Property Name:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <input id="propertyname" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].name" tabindex="1" focus-if>
+                    </div>
+                    <!--<span class="text-danger"> * </span>-->
+                </div>
+                <div class="form-group">
+                    <label for="propertytype" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Property Type:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <select id="propertytype" class="form-control" data-ng-options="propertyType.propertyTypeGUID as propertyType.propertyTypeName for propertyType in portfolio.loadData.propertyTypes" ng-model="reportInfo.locations[reportInfo.locationCount].propertyTypeGUID" tabindex="2">
+                            <option ng-if="!portfolio.submitData" value="">*** Select one from the list ***</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label for="address" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Address:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4" field-validation="Address">
+                        <input id="address" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].address1" required name="locationAddress1" tabindex="3">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-3 col-md-4 col-md-offset-3 col-sm-offset-3">
+                        <input type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].address2" tabindex="4">
+
+                    </div>
+                </div>
+
+                <div class="form-group required">
+
+                    <label for="country" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Country:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4" field-validation="Country">
+                        <!--<select id="country" class="form-control" required ng-model="reportInfo.locations[reportInfo.locationCount].country" name="country" tabindex="5">
+                        <option></option>
+                        <option>United States</option>
+                        <option>Other</option>
+                    </select>-->
+                        <select class="form-control" id="country" type="select" country-model="reportInfo.locations[reportInfo.locationCount].country" country-select required name="country" tabindex="5">
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group required">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        City/State or Province/Zip:
+                    </label>
+                    <div class="col-xs-12 col-sm-2 col-md-2" field-validation="City">
+                        <input type="text" class="form-control" placeholder="City" required ng-model="reportInfo.locations[reportInfo.locationCount].city" name="city" tabindex="6">
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2 col-md-2" field-validation="State">
+                        <!--<input type="text" class="form-control" placeholder="State or Province" required ng-model="reportInfo.locations[reportInfo.locationCount].state" name="state" tabindex="7">-->
+                        <select class="form-control" id="state" type="select" state-model="reportInfo.locations[reportInfo.locationCount].state" state-select country-model="reportInfo.locations[reportInfo.locationCount].country" name="state" required tabindex="7">
+                            <option value="">Select State</option>
+                        </select>
+                        <input type="text" class="form-control" id="state" ng-model="reportInfo.locations[reportInfo.locationCount].state" required name="propertyStateIp" state-input tabindex="7">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2 col-md-2" field-validation="Zip">
+                        <input type="text" class="form-control" placeholder="Zip" required ng-model="reportInfo.locations[reportInfo.locationCount].zip" name="zip" id="zip" data-CountryCode="{{reportInfo.locations[reportInfo.locationCount].country.code}}" required tabindex="8" format-zip>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="county" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        County:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <input id="county" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].county" tabindex="9">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="latitude" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Latitude:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <input id="latitude" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].latitude" tabindex="10">
+                    </div>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                        <span class="pull-left">(Example: 42.3462)</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="longitude" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Longitude:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <input id="longitude" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].longitude" tabindex="11">
+                    </div>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                        <span class="pull-left">(Example: -71.0978)</span>
+                    </label>
+                </div>
+
+
+                <div class="form-group ">
+                    <label for="propertycontactname" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Property Contact Name:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <input id="propertycontactname" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].siteContact.name" tabindex="12">
+
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="phone" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Phone:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <input id="phone" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].siteContact.phone" tabindex="13">
+
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="fax" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Fax:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <input id="fax" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].siteContact.fax" tabindex="14">
+                    </div>
+
+                </div>
+                <div class="form-group ">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Email:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 " field-validation="Email">
+                        <input id="email" name="reportInfoEmail" type="email" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].siteContact.email" tabindex="15">
+
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="po" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        PO #:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <input id="po" type="text" class="form-control" ng-model="reportInfo.poNumber" tabindex="16">
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="transactiontype" class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Transaction Type:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <select id="transactiontype" class="form-control " data-ng-options="transactionType.transactionTypeGUID as transactionType.transactionTypeName for transactionType in portfolio.loadData.transactionTypes" ng-model="reportInfo.locations[reportInfo.locationCount].transactionTypeGUID" tabindex="17">
+                            <option value="">*** Select one from the list ***</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="property" class="control-label col-md-3 col-sm-3 col-xs-12">
+                        Property #:
+                    </label>
+                    <div class="col-xs-12 col-sm-3 col-md-4 ">
+                        <input id="property" type="text" class="form-control" ng-model="reportInfo.locations[reportInfo.locationCount].propertyNumber" tabindex="18">
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 ">
+                        Report Requested:
+                    </label>
+
+                    <div class="col-xs-12 col-sm-8 col-md-8" field-validation="Report Requested">
+                        <multiselect class="input-xlarge dropup" multiple="true" ng-model="reportInfo.locations[reportInfo.locationCount].reports" options="template as template.name for template in portfolio.loadData.templates" required name="reports" header="Select Report Requested" place-holder="Search Report Requested " tabindex="19 "></multiselect>
+
+                        <!--<span class="help-block error-text " ng-if="!reportInfo.locations[reportInfo.locationCount].reports || !reportInfo.locations[reportInfo.locationCount].reports.length ">Reports are mandatory</span>-->
+                    </div>
+
+                </div>
+
+                <div class="form-group ">
+                    <div class="col-md-offset-3 col-md-9 col-xs-12 ">
+                        <button type="button " class="btn btn-md btn-success " ng-click="reportInfo.addAnotherSite() " tabindex="20 "> Add another site</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+
+    </div>
+</body>
+
+</html>

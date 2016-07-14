@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="alert alert-info">
+        <p>
+            <b>
+                This step automatically emails you and attaches a PDF document with the project information for your records.<br>
+                If you would like to notify additional project team members and/or client contacts that the project has been setup in PARCEL, please add their email addresses in the CC box below. Otherwise, click 'Send Email' to complete the Project Setup.
+            </b>
+        </p>
+    </div>
+
+    <div class="form-horizontal" ng-controller="PortfolioEmailCtrl as email">
+
+        <form name="EmailForm">
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="email.serviceResponseAlert">
+                <button type="button" class="close" ng-click="email.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{email.serviceResponseText}}
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-4 col-xs-12">
+                    To:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <p class="form-control-static">
+                        {{portfolio.loadData.currentUser.email}}
+                    </p>
+                </div>
+            </div>
+
+            <div class=" form-group">
+                <label class="control-label col-md-3 col-sm-4 col-xs-12">
+                    From:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <p class="form-control-static">
+                        {{portfolio.loadData.currentUser.email}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cc" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    CC:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4" emailfield-validation="CC">
+                    <!-- <textarea autofocus id="cc" class="form-control" type="text" ng-model="email.emailCC" tabindex="1"></textarea>-->
+                    <input type="text" class="form-control" id="cc" ng-model="email.emailCC" tabindex="1" name="CC" focus-if>
+                    <!--<a class="pointer" ng-click="email.ShowFindContact()">Find Contact</a>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Message:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <textarea id="message" class="form-control" rows="6" type="text" ng-model="email.emailBody" tabindex="2"></textarea>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

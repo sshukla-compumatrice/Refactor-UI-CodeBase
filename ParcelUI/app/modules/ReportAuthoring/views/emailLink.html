@@ -1,0 +1,82 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="emailLink.CancelDelete()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Email Deliverable Link</h4>
+</div>
+
+<div class="modal-body">
+    <div id="alertEmailMsgDiv" ng-show="emailLink.showAlert" class="alert alert-dismissible" role="alert">
+        <button type="button" class="close" ng-click="emailLink.dismissAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{emailLink.serviceMessage}}
+    </div>
+    <form name="myFormAddTemplate" class="form-horizontal" novalidate>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">From:</label>
+            <div class="col-sm-6">
+                <p class="form-control-static" ng-bind="emailLink.fromUserEmail"></p>
+            </div>
+        </div>
+        <div class="form-group toEmailDiv required">
+            <label class="col-sm-2 control-label" for="to">To:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="mailTo" data-role="tagsinput" required/>
+                <span class="requiredToField text-danger">The message must have at least one recipient.</span><br>
+                <a class="pointer" ng-click="emailLink.findContact()">Find Contact</a>
+            </div>            
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="cc">CC:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="mailCC" value="" data-role="tagsinput" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="subject">Subject:</label>
+            <div class="col-sm-6">
+                <input class="form-control" id="subject" type="text" ng-model="emailLink.subject">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="message">Message:</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="4" id="message" ng-model="emailLink.message"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-5 col-sm-offset-2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="sendToSelf" ng-model="emailLink.sendToSelf" value="1">&nbsp;Send a copy of this email to your email address
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default" id="panel1">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-target="#instructions" class="pointer collapsed">Instructions to Recipient:</a></h4>
+            </div>
+            <div id="instructions" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><strong>This text will be automatically appended to the bottom of your message-- do not copy it into your message.</strong></p>
+                    <p>1. Open this link in your web browser: [LINK WILL BE INSERTED HERE]</p>
+                    <p>2. The ensuing web page will prompt you for your password. Enter this password: [PASSWORD WILL BE INSERTED HERE]</p>
+                    <p>3. Click the 'Download Report' button.</p>
+                    <p>4. When prompted, save the file to your computer.</p>
+                    <p>This link will expire on 12/15/15 at 04:16:43 AM EST
+                        <br> If you have any technical difficulties accessing the report, please contact PARCEL Support by calling 866-475-1272 or emailing parcelsupport@edrnet.com.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-md btn-default" data-dismiss="modal" ng-click="emailLink.CancelDelete()">Cancel</button>
+    <button class="btn btn-md btn-primary" type="button" ng-click="emailLink.submit(myFormAddTemplate)">Send Email</button>
+</div>

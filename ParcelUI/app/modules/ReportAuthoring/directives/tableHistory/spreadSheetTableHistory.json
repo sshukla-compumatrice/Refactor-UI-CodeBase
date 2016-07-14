@@ -1,0 +1,92 @@
+{
+  "history": [
+    {
+      "historyGUID": null,
+      "createDate": "02-17-2016 04:46:19 AM",
+      "createdBy": {
+        "userID": 0,
+        "userGUID": "1234e294-b497-4c16-8fa4-526c9413530f",
+        "userName": "Shubhash Walunj",
+        "title": "",
+        "firstName": "Shubhash",
+        "middleInitial": "",
+        "lastName": "Walunj",
+        "email": "",
+        "officeEmail": "swalunj@edrnet.com",
+        "emailClosing": "",
+        "directPhone": "9604785213",
+        "cellPhone": "98956321047"
+      },
+      "updateComment": null,
+      "section": {
+        "sectionGUID": "2495a86c-1c7c-4e86-b236-f5f1cf3dca2c",
+        "sectionData": {
+          "contentValues": {
+            "sectionTitle00": "3.2.1 Topography",
+            "sectionTitle01": "Description:",
+            "sectionTitle03": "Recommendation:",
+            "ckEditData": {
+              "div02": "",
+              "div04": ""
+            },
+             "spreadSheetTable03": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 2
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            }           
+          }
+        },
+        "sectionTitle": null,
+        "sectionNumber": null,
+        "subSections": null,
+        "languageLibraries": null,
+        "historyLibrary": null,
+        "comments": null,
+        "attachmentReference": null,
+        "html": "<div><h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h3></div><div><h4>{{contentValues.sectionTitle01}}</h2></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK'ng-model='contentValues.ckEditData.div02'></div></div><div><h2>{{contentValues.sectionTitle03}}</h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h3 class='border-bottom  text-capitalize'>Cost Summary</h3></div><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'/></div>"
+      }
+    }
+  ]
+}

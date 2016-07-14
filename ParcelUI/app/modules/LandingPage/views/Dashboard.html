@@ -1,0 +1,81 @@
+<div class="container-fluid" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+    <ul ng-if="dashboard.isRefactorBridgeLinked" class="nav nav-tabs">
+        <li role="presentation" ng-class="{'active': refactorDash}" ng-click="dashboard.setRefactorDashFlag(true);"><a class="pointer">Refactor Dashboard</a></li>
+        <li role="presentation" ng-class="{'active': !refactorDash}" ng-click="dashboard.setRefactorDashFlag(false);"><a class="pointer">Application Bridge Dashboard</a></li>
+    </ul>
+    <div ng-show="refactorDash">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group ">
+                    <label>Date Range</label>
+                    <div class="input-group">
+                        <div id="reportrange" class="pull-right form-control input-sm pointer">
+                            <i class="fa fa-calendar"></i>
+                            <span></span> <strong class="caret"></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" data-intro="<h4 class='text-white'>REPORT SEARCH & FILTERING</h4>Use these filters to search for reports
+by date, status or project name." data-position="right">
+                <div class="form-group ">
+                    <label for="projStatus">Status</label>
+                    <select id="projStatus" class="form-control input-sm" ng-model="dashboard.statusFilter" ng-change="dashboard.filterByStatus();">
+                        <option value="0">Non-Final</option>
+                        <option value="1">Final</option>
+                        <option value="">All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div ng-show="dashboard.showFilter" class="col-md-6" id="filter_global">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="global_filter">Project:</label>
+                        <div id="refactorSelect2" class="custom-select2" rt-select2="select2Options" provider="projectListProvider" template="projectSearchGenerateMarkup" afterevent="displayProject" minimuminput=3></div>
+                        <!--<input type="text" class="form-control global_filter input-sm" id="global_filter">-->
+                    </div>
+                    <button class="btn btn-primary btn-sm goto-project" ng-click="dashboard.goToProject()" ng-disabled="!dashboard.isProjectSelected">Go to project</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-intro="Reports that meet your critera will be listed in the table below. You can further search, sort and filter the results to find just what you are looking for." data-position="top table-tooltip">
+            <hr class="margin-bottom">
+            <table id="landingpageTable" class="table table-bordered table-condensend table-hover table-header-shaded small dt-responsive" load-data-table>
+                <thead>
+                    <tr class="dataTableRow">
+                        <th class="pointer thHeader1">R</th>
+                        <th class="pointer thHeader2">P</th>
+                        <th class="thHeader3">projectName</th>
+                        <th class="thHeader4">clientProp</th>
+                        <th class="thHeader5">siteName</th>
+                        <th class="thHeader6">address </th>
+                        <th class="thHeader7">city </th>
+                        <th class="thHeader8">state</th>
+                        <th class="thHeader9">reportType </th>
+                        <th class="thHeader10">creationDate</th>
+                        <th class="thHeader11">siteID </th>
+                    </tr>
+
+                    <tr id="filterrow" class="th-bg-white">
+                        <th class="headerFilter1"></th>
+                        <th class="headerFilter2"></th>
+                        <th class="headerFilter3"></th>
+                        <th class="headerFilter4"></th>
+                        <th class="headerFilter5"></th>
+                        <th class="headerFilter6"></th>
+                        <th class="headerFilter7"></th>
+                        <th class="headerFilter8"></th>
+                        <th class="headerFilter9"></th>
+                        <th class="headerFilter10"></th>
+                        <th class="headerFilter11"></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+    <div ng-if="dashboard.isRefactorBridgeLinked" ng-include src="'app/modules/LandingPage/appBridge/dashboard.html'"></div>
+</div>

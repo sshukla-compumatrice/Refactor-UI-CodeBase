@@ -1,0 +1,57 @@
+<div class="container-fluid" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+    <div class="panel panle-default">
+        <div class="panel-body">
+            <h4 class="text-center">EDR Order Status</h4>
+            <div ng-if="portfolioOrderStatus.isServiceError == 'YES'" class="alert alert-danger" role="alert">
+                <span>Problem in fetching EDR order status.</span>
+            </div>
+            <div class="row" ng-if="!portfolioOrderStatus.isServiceError">
+                <div class="col-sm-12">
+                    <p class="text-center">
+                        <strong ng-show="portfolioOrderStatus.isOrderPlaced">Portfolio: <span ng-bind="portfolioOrderStatus.projectName"></span><br>
+                        Status: <span ng-bind="portfolioOrderStatus.orderStatus.portfolioOrder.ordersCompleted"></span> placed out of <span ng-bind="portfolioOrderStatus.orderStatus.portfolioOrder.ordersRequested"></span></strong>
+                        <span ng-show="!portfolioOrderStatus.isOrderPlaced"><i>Your EDR orders are being placed...</i></span>
+                    </p>
+                    <div class="alert alert-info">
+                        <strong>Your EDR orders are being placed.<br>This page will check order status in every six seconds to reflect the current status of your order below.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-center" ng-if="!portfolioOrderStatus.isServiceError">EDR Order Confirmation</h4>
+            <div class="row" ng-if="!portfolioOrderStatus.isServiceError">
+                <div class="col-sm-12">
+                    <p class="text-center" ng-show="portfolioOrderStatus.isOrderPlaced">
+                        <strong># of Orders Placed: {{portfolioOrderStatus.orderStatus.portfolioOrder.ordersCompleted}}</strong>
+                    </p>
+                    <p class="text-center" ng-repeat="groupByOrder in portfolioOrderStatus.groupByOrders">
+                        <strong># Ordered With {{groupByOrder[0].portfolioProductName}}: {{groupByOrder.length}}</strong>
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Prop #</th>
+                                    <th>Address</th>
+                                    <th>Package</th>
+                                    <th>Order Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-if="portfolioOrderStatus.orderStatus.portfolioOrder.orders.length" ng-repeat="order in portfolioOrderStatus.orderStatus.portfolioOrder.orders">
+                                    <td ng-bind="order.properties[0].propertyNumber"></td>
+                                    <td>{{order.properties[0].address}}, {{order.properties[0].city}}, {{order.properties[0].state}} {{order.properties[0].zip}}</td>
+                                    <td ng-bind="order.portfolioProductName"></td>
+                                    <td ng-bind="order.orderStatus"></td>
+                                </tr>
+                                <tr ng-if="!portfolioOrderStatus.orderStatus.portfolioOrder.orders.length">
+                                    <td colspan="4" align="center">No orders available here.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

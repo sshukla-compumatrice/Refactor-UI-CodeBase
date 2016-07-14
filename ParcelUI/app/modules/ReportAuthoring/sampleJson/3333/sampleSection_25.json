@@ -1,0 +1,387 @@
+{
+    "Section": {
+        "html": "<div><h2>Cost Tables</h2></div><ul><br><div id='packageSelection' package-selection/>",
+
+        "packages": {
+            "type": "displayEMG",
+            "packagesArray": [{
+                "packageName": "None",
+                "packageId": 12
+            }, {
+                "packageName": "EMG Default Cost Tables",
+                "packageId": 14,
+
+                "tables": [
+                    {
+                        "tableName": "Immediate and Short Term Repair Costs Tables",
+                        "tableId": "19",
+                        "evaluationPeriod": 10,
+                        "tableType": "immediateAndShortTermRepairTableView",
+                        "groupTypes": [{
+                                "value": "1",
+                                "name": "Site Components"
+                            },
+                            {
+                                "value": "2",
+                                "name": "Architectural Components"
+                            },
+                            {
+                                "value": "3",
+                                "name": "Building Interior Components"
+                            },
+                            {
+                                "value": "4",
+                                "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                            {
+                                "value": "5",
+                                "name": "Dwelling Unit Components"
+                            }],
+                        "recommendationTypes": [{
+                                "value": "1",
+                                "name": "Sidewalk_1"
+                                },
+                            {
+                                "value": "2",
+                                "name": "Sidewalk_2"
+                                },
+                            {
+                                "value": "3",
+                                "name": "Sidewalk_3"
+                                },
+                            {
+                                "value": "other_",
+                                "name": "Other"
+                                }],
+                        "sections": [
+                            {
+                                "section": "4.2",
+                                "sectionId": "4",
+                                "sectionName": "ADA Accessiblity",
+                                "group": 2,
+                                "components": [{
+
+                                    "componentDescription": "Parking - Add signage indicating VAN Accessible Parking",
+                                    "quantity": "5",
+                                    "unit": "TON",
+                                    "unitCost": "700.00",
+                                    "immediateRepairsTotal": "0",
+                                    "shortTermRepairsTotal": "150"
+                               }, {
+
+
+                                    "componentDescription": "Parking - Install signage giving direction to accessible entrance",
+                                    "quantity": "5",
+                                    "unit": "TON",
+                                    "unitCost": "700.00",
+                                    "immediateRepairsTotal": "0",
+                                    "shortTermRepairsTotal": "150"
+                               }]
+
+
+                    }]
+                },
+                    {
+                        "tableName": "Replacement Reserve Costs Table",
+                        "tableId": "25",
+                        "evaluationPeriod": 10,
+                        "tableType": "replacementReserveTableView",
+                        "groupTypes": [{
+                                "value": "1",
+                                "name": "Site Components"
+                            },
+                            {
+                                "value": "2",
+                                "name": "Architectural Components"
+                            },
+                            {
+                                "value": "3",
+                                "name": "Building Interior Components"
+                            },
+                            {
+                                "value": "4",
+                                "name": "Mechanical / Electrical / Plumbing Components"
+                            },
+                            {
+                                "value": "5",
+                                "name": "Dwelling Unit Components"
+                            }],
+                        "recommendationTypes": [{
+                                "value": "1",
+                                "name": "Sidewalk_1"
+                                },
+                            {
+                                "value": "2",
+                                "name": "Sidewalk_2"
+                                },
+                            {
+                                "value": "3",
+                                "name": "Sidewalk_3"
+                                },
+                            {
+                                "value": "other_",
+                                "name": "Other"
+                                }],
+                        "sections": [
+                            {
+                                "section": "7.1",
+                                "sectionId": "7",
+                                "sectionName": "HVAC",
+                                "group": 2,
+                                "components": [{
+                                        "recommendationTypes": [{
+                                                "value": "1",
+                                                "name": "Sidewalk_1"
+                                },
+                                            {
+                                                "value": "2",
+                                                "name": "Sidewalk_2"
+                                },
+                                            {
+                                                "value": "3",
+                                                "name": "Sidewalk_3"
+                                },
+                                            {
+                                                "value": "other_",
+                                                "name": "Other"
+                                }],
+                                        "componentDescription": "Condensing unit. Replace (2x 1.5-ton, 1x 2-ton)",
+                                        "eul": 15,
+                                        "eff": 12,
+                                        "rul": 3,
+                                        "quantity": 5,
+                                        "unit": "TON",
+                                        "unitCost": 7000,
+                                        "cycleReplacement": 3500,
+                                        "replacePercent": 100,
+
+                                        "critical": {
+                                            "name": "critical",
+                                            "include": true,
+                                            "val": 150
+                                        },
+                                        "priority90Days": {
+                                            "name": "priority90Days",
+                                            "include": true,
+                                            "val": 150
+                                        },
+                                        "priority": {
+                                            "name": "priority",
+                                            "include": false,
+                                            "val": 150
+                                        },
+                                        "yearlyCostSpread": [{
+                                            "label": "2",
+                                            "include": true,
+                                            "val": 50
+                        }, {
+                                            "label": "4",
+                                            "include": true,
+                                            "val": 650
+                        }, {
+                                            "label": "9",
+                                            "include": true,
+                                            "val": 450
+                        }],
+                                        "condition": ["E", "P"],
+                                        "action": ["CR", "PR"],
+                                        "criticalComments": "this is a critical comment",
+                                        "conditionComments": "this is condition comments",
+                                        "totalCost": "31,500"
+                            }
+                        , {
+                                        "recommendationTypes": [{
+                                                "value": "1",
+                                                "name": "Sidewalk_1"
+                                },
+                                            {
+                                                "value": "2",
+                                                "name": "Sidewalk_2"
+                                },
+                                            {
+                                                "value": "3",
+                                                "name": "Sidewalk_3"
+                                },
+                                            {
+                                                "value": "other_",
+                                                "name": "Other"
+                                }],
+                                        "componentDescription": "Fire alarm control panel - Low rise. Replace",
+
+                                        "eul": 15,
+                                        "eff": 12,
+                                        "rul": 3,
+                                        "quantity": 4,
+                                        "unit": "EA",
+                                        "unitCost": 2500,
+                                        "cycleReplacement": 1000,
+                                        "replacePercent": 100,
+                                        "critical": {
+                                            "name": "critical",
+                                            "include": true,
+                                            "val": 150
+                                        },
+                                        "priority90Days": {
+                                            "name": "priority90Days",
+                                            "include": true,
+                                            "val": 150
+                                        },
+                                        "priority": {
+                                            "name": "priority",
+                                            "include": false,
+                                            "val": 150
+                                        },
+                                        "yearlyCostSpread": [{
+                                            "label": "3",
+                                            "include": true,
+                                            "val": 350
+                        }, {
+                                            "label": "7",
+                                            "include": true,
+                                            "val": 850
+                        }, {
+                                            "label": "8",
+                                            "include": true,
+                                            "val": 50
+                        }],
+                                        "totalCost": "31,500"
+
+                            }
+
+
+
+
+
+                          ]
+                    }]
+
+                }]
+            }]
+        },
+
+
+
+        "reports": [
+            {
+                "reportName": "Replacement Reserve Costs Table",
+
+                "evaluationPeriod": 10,
+                "totalSquareFootage": "75,806",
+                "reservePerSFPerYearUninflated": "0.06",
+                "reservePerSFPerYearInflated": "0.07",
+                "totalUninflated": "1,65056",
+                "totalInflated": "3,65043",
+                "totalUninflatedYearWise": [{
+                        "label": 1,
+                        "include": true,
+                        "val": ""
+                    },
+                    {
+                        "label": 2,
+                        "include": true,
+                        "val": "1,650"
+                    }, {
+                        "label": 3,
+                        "include": true,
+                        "val": "21,000"
+                    }, {
+                        "label": 4,
+                        "include": true,
+                        "val": "15,500"
+                    }, {
+                        "label": 5,
+                        "include": true,
+                        "val": "10,500"
+                    }, {
+                        "label": 6,
+                        "include": true,
+                        "val": ""
+                    }, {
+                        "label": 7,
+                        "include": true,
+                        "val": "12,500"
+                    }, {
+                        "label": 8,
+                        "include": true,
+                        "val": ""
+                    }, {
+                        "label": 9,
+                        "include": true,
+                        "val": ""
+                    }, {
+                        "label": 10,
+                        "include": true,
+                        "val": ""
+                    }],
+
+                "inflationFactorYearWise": [{
+                        "year": 1,
+                        "val": "1.000"
+                    },
+                    {
+                        "year": 2,
+                        "val": "1.030"
+                    }, {
+                        "year": 3,
+                        "val": "1.051"
+                    }, {
+                        "year": 4,
+                        "val": "1.077"
+                    }, {
+                        "year": 5,
+                        "val": "1.104"
+                    }, {
+                        "year": 6,
+                        "val": "1.131"
+                    }, {
+                        "year": 7,
+                        "val": "1.160"
+                    }, {
+                        "year": 8,
+                        "val": "1.189"
+                    }, {
+                        "year": 9,
+                        "val": "1.218"
+                    }, {
+                        "year": 10,
+                        "val": "1.249"
+                    }],
+                "totalInflatedYearWise": [{
+                        "year": 1,
+                        "val": "1.000"
+                    },
+                    {
+                        "year": 2,
+                        "val": "1.030"
+                    }, {
+                        "year": 3,
+                        "val": "1.051"
+                    }, {
+                        "year": 4,
+                        "val": "1.077"
+                    }, {
+                        "year": 5,
+                        "val": "1.104"
+                    }, {
+                        "year": 6,
+                        "val": "1.131"
+                    }, {
+                        "year": 7,
+                        "val": "1.160"
+                    }, {
+                        "year": 8,
+                        "year8": "1.189"
+                    }, {
+                        "year": 9,
+                        "val": "1.218"
+                    }, {
+                        "year": 10,
+                        "val": "1.249"
+                    }]
+            }],
+        "sectionID": 25,
+        "name": "Cost Tables",
+        "number": "25"
+
+    }
+}

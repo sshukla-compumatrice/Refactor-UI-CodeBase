@@ -1,0 +1,3592 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.4 Paving, Curbing and Parking",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 22,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Asphalt pavement - full depth",
+                "value": "6"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "7"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "8"
+            }, {
+                "name": "Concrete pavement",
+                "value": "10"
+            }, {
+                "name": "Restripe paving",
+                "value": "11"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "12"
+            }, {
+                "name": "Concrete walkways",
+                "value": "140"
+            }, {
+                "name": "Curbs",
+                "value": "142"
+            }, {
+                "name": "Concrete sealant",
+                "value": "1748"
+            }, {
+                "name": "Perform asphalt cold planing (milling)",
+                "value": "1749"
+            }, {
+                "name": "Overlay asphalt pavement",
+                "value": "1750"
+            }, {
+                "name": "Asphalt pavement crack sealing",
+                "value": "1751"
+            }, {
+                "name": "Allowance for pavement repairs",
+                "value": "1752"
+            }, {
+                "name": "Restripe paving",
+                "value": "1753"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "1754"
+            }, {
+                "name": "Concrete curbs machine formed",
+                "value": "1755"
+            }, {
+                "name": "Miscellaneous concrete repairs",
+                "value": "1756"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "1757"
+            }, {
+                "name": "Asphalt pavement - full depthÂ repairs",
+                "value": "1758"
+            }, {
+                "name": "Concrete pavement/walkway crack sealing",
+                "value": "1759"
+            }, {
+                "name": "Asphalt pavement - seal coat",
+                "value": "1760"
+            }, {
+                "name": "Asphalt curb replacement",
+                "value": "1761"
+            }, {
+                "name": "Concrete pavementÂ replacement",
+                "value": "1762"
+            }, {
+                "name": "Minor asphalt pavement repair, sealcoat and restriping",
+                "value": "1763"
+            }, {
+                "name": "Concrete walkway repair",
+                "value": "1764"
+            }, {
+                "name": "Concrete precast parking bumpers",
+                "value": "1765"
+            }, {
+                "name": "Concrete walkways",
+                "value": "1766"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "1767"
+            }, {
+                "name": "Concrete curb replacement",
+                "value": "1768"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "2017"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "2018"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "2019"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "2020"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "2021"
+            }, {
+                "name": "Striping (included above)",
+                "value": "2022"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "2023"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "2024"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "2025"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "2123"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "2124"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "2125"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "2126"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "2127"
+            }, {
+                "name": "Striping (included above)",
+                "value": "2128"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "2129"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "2130"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "2131"
+            }, {
+                "name": "Restripe paving ",
+                "value": "2333"
+            }, {
+                "name": "Asphalt pavement.  Full depth repair",
+                "value": "2334"
+            }, {
+                "name": "Asphalt pavement.  Overlay ",
+                "value": "2335"
+            }, {
+                "name": "Asphalt pavement.  Seal coat (SF)",
+                "value": "2336"
+            }, {
+                "name": "Asphalt pavement.  Seal coat (per space)",
+                "value": "2337"
+            }, {
+                "name": "Concrete walkways.  Replace",
+                "value": "2338"
+            }, {
+                "name": "Concrete walkways.  New",
+                "value": "2339"
+            }, {
+                "name": "Concrete pavement.  Replace",
+                "value": "2340"
+            }, {
+                "name": "Curbs ",
+                "value": "2341"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "2583"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "2584"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "2585"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "2586"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "2587"
+            }, {
+                "name": "Striping (included above)",
+                "value": "2588"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "2589"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "2590"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "2591"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "3008"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "3009"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "3010"
+            }, {
+                "name": "Asphalt curb, machine formed ",
+                "value": "3011"
+            }, {
+                "name": "Asphalt pavement - deep patching and overlay ",
+                "value": "3012"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "3013"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "3014"
+            }, {
+                "name": "Asphalt resealing and restriping, <35K SF",
+                "value": "3015"
+            }, {
+                "name": "Asphalt resealing and restriping, > 200K SF",
+                "value": "3016"
+            }, {
+                "name": "Asphalt resealing and restriping, 100K - 200K SF",
+                "value": "3017"
+            }, {
+                "name": "Asphalt resealing and restriping, 35K - 100K SF",
+                "value": "3018"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "3019"
+            }, {
+                "name": "Concrete curbs, machine formed ",
+                "value": "3020"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "3021"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "3022"
+            }, {
+                "name": "Concrete repair ",
+                "value": "3023"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "3024"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "3025"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "3026"
+            }, {
+                "name": "Curbs ",
+                "value": "3027"
+            }, {
+                "name": "Parking bumpers, precast concrete",
+                "value": "3028"
+            }, {
+                "name": "Restripe paving ",
+                "value": "3029"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "3344"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "3345"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "3346"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "3347"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "3348"
+            }, {
+                "name": "Striping (included above)",
+                "value": "3349"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "3350"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "3351"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "3352"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "3821"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "3822"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "3823"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "3824"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "3825"
+            }, {
+                "name": "Striping (included above)",
+                "value": "3826"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "3827"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "3828"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "3829"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "4012"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "4013"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "4014"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "4015"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "4016"
+            }, {
+                "name": "Striping (included above)",
+                "value": "4017"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "4018"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "4019"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "4020"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "4151"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "4152"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "4153"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "4154"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "4155"
+            }, {
+                "name": "Striping (included above)",
+                "value": "4156"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "4157"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "4158"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "4159"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "4918"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "4919"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "4920"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "4921"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "4922"
+            }, {
+                "name": "Striping (included above)",
+                "value": "4923"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "4924"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "4925"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "4926"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "5098"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "5099"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "5100"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "5101"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "5102"
+            }, {
+                "name": "Striping (included above)",
+                "value": "5103"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "5104"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "5105"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "5630"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "5631"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "5632"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "5633"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "5634"
+            }, {
+                "name": "Striping (included above)",
+                "value": "5635"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "5636"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "5637"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "5638"
+            }, {
+                "name": "Asphalt pavement. Seal Coat & Restripe",
+                "value": "11011"
+            }, {
+                "name": "Pavement. Stripe ",
+                "value": "11012"
+            }, {
+                "name": "Asphalt pavement. Seal Coat ",
+                "value": "11013"
+            }, {
+                "name": "Asphalt pavement. Overlay  ",
+                "value": "11014"
+            }, {
+                "name": "Asphalt pavement. Full depth repair ",
+                "value": "11015"
+            }, {
+                "name": "Asphalt pavement. Crack repair",
+                "value": "11016"
+            }, {
+                "name": "Concrete pavement. Replace ",
+                "value": "11017"
+            }, {
+                "name": "Curbs. Replace  ",
+                "value": "11018"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "11019"
+            }, {
+                "name": "Asphalt pavement. Seal Coat & Restripe",
+                "value": "11276"
+            }, {
+                "name": "Pavement. Stripe ",
+                "value": "11277"
+            }, {
+                "name": "Asphalt pavement. Seal Coat ",
+                "value": "11278"
+            }, {
+                "name": "Asphalt pavement. Overlay  ",
+                "value": "11279"
+            }, {
+                "name": "Asphalt pavement. Full depth repair ",
+                "value": "11280"
+            }, {
+                "name": "Asphalt pavement. Crack repair",
+                "value": "11281"
+            }, {
+                "name": "Concrete pavement. Replace ",
+                "value": "11282"
+            }, {
+                "name": "Curbs. Replace  ",
+                "value": "11283"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "11284"
+            }, {
+                "name": "Asphalt pavement. Seal Coat & Restripe",
+                "value": "11541"
+            }, {
+                "name": "Pavement. Stripe ",
+                "value": "11542"
+            }, {
+                "name": "Asphalt pavement. Seal Coat ",
+                "value": "11543"
+            }, {
+                "name": "Asphalt pavement. Overlay  ",
+                "value": "11544"
+            }, {
+                "name": "Asphalt pavement. Full depth repair ",
+                "value": "11545"
+            }, {
+                "name": "Asphalt pavement. Crack repair",
+                "value": "11546"
+            }, {
+                "name": "Concrete pavement. Replace ",
+                "value": "11547"
+            }, {
+                "name": "Curbs. Replace  ",
+                "value": "11548"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "11549"
+            }, {
+                "name": "Asphalt pavement. Seal Coat & Restripe",
+                "value": "11806"
+            }, {
+                "name": "Pavement. Stripe ",
+                "value": "11807"
+            }, {
+                "name": "Asphalt pavement. Seal Coat ",
+                "value": "11808"
+            }, {
+                "name": "Asphalt pavement. Overlay  ",
+                "value": "11809"
+            }, {
+                "name": "Asphalt pavement. Full depth repair ",
+                "value": "11810"
+            }, {
+                "name": "Asphalt pavement. Crack repair",
+                "value": "11811"
+            }, {
+                "name": "Concrete pavement. Replace ",
+                "value": "11812"
+            }, {
+                "name": "Curbs. Replace  ",
+                "value": "11813"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "11814"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "12073"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "12074"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "12075"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12076"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "12077"
+            }, {
+                "name": "Restripe paving ",
+                "value": "12078"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "12079"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "12080"
+            }, {
+                "name": "Concrete repair ",
+                "value": "12081"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "12082"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "12083"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12084"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "12085"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "12086"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "12087"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "12088"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "12089"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "12090"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "12091"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "12092"
+            }, {
+                "name": "Curbs ",
+                "value": "12093"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "12316"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "12317"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "12318"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12319"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "12320"
+            }, {
+                "name": "Restripe paving ",
+                "value": "12321"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "12322"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "12323"
+            }, {
+                "name": "Concrete repair ",
+                "value": "12324"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "12325"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "12326"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12327"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "12328"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "12329"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "12330"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "12331"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "12332"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "12333"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "12334"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "12335"
+            }, {
+                "name": "Curbs ",
+                "value": "12336"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "12559"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "12560"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "12561"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12562"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "12563"
+            }, {
+                "name": "Restripe paving ",
+                "value": "12564"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "12565"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "12566"
+            }, {
+                "name": "Concrete repair ",
+                "value": "12567"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "12568"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "12569"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12570"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "12571"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "12572"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "12573"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "12574"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "12575"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "12576"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "12577"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "12578"
+            }, {
+                "name": "Curbs ",
+                "value": "12579"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "12802"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "12803"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "12804"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12805"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "12806"
+            }, {
+                "name": "Restripe paving ",
+                "value": "12807"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "12808"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "12809"
+            }, {
+                "name": "Concrete repair ",
+                "value": "12810"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "12811"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "12812"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "12813"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "12814"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "12815"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "12816"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "12817"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "12818"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "12819"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "12820"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "12821"
+            }, {
+                "name": "Curbs ",
+                "value": "12822"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "13037"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "13038"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "13039"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "13040"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "13041"
+            }, {
+                "name": "Striping (included above)",
+                "value": "13042"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "13043"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "13044"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "13045"
+            }, {
+                "name": "Carports",
+                "value": "13387"
+            }, {
+                "name": "Garages",
+                "value": "13388"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "13390"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "13391"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "13392"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "13393"
+            }, {
+                "name": "Concrete Paving",
+                "value": "13394"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "13395"
+            }, {
+                "name": "Striping",
+                "value": "13396"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "13397"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "13398"
+            }, {
+                "name": "Carports",
+                "value": "13485"
+            }, {
+                "name": "Garages",
+                "value": "13486"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "13488"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "13489"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "13490"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "13491"
+            }, {
+                "name": "Concrete Paving",
+                "value": "13492"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "13493"
+            }, {
+                "name": "Striping",
+                "value": "13494"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "13495"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "13496"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "13734"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "13735"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "13736"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "13737"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "13738"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "13739"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "13740"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "13741"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "13742"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "13743"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "13744"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "13745"
+            }, {
+                "name": "Concrete repair",
+                "value": "13746"
+            }, {
+                "name": "Concrete sealant",
+                "value": "13747"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "15646"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "15647"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "15648"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "15649"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "15650"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "15651"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "15652"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "16497"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "16498"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "16499"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "16500"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "16501"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "16502"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "16503"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "16760"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "16761"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "16762"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "16763"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "16764"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "16765"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "16766"
+            }, {
+                "name": "Repair Asphalt Cracks",
+                "value": "17826"
+            }, {
+                "name": "Restripe parking stalls",
+                "value": "17827"
+            }, {
+                "name": "Asphalt sealcoat",
+                "value": "17828"
+            }, {
+                "name": "Seal-Coat, Stripe and Patch Pavement",
+                "value": "17842"
+            }, {
+                "name": "Overlay and Stripe Pavement",
+                "value": "17843"
+            }, {
+                "name": "Restripe Parking (on concrete pavement)",
+                "value": "17844"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "17845"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "17846"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "17847"
+            }, {
+                "name": "Concrete pavement",
+                "value": "17848"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "17849"
+            }, {
+                "name": "Concrete walkways",
+                "value": "17850"
+            }, {
+                "name": "Curbs",
+                "value": "17851"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "18219"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "18220"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "18221"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "18222"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "18223"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "18224"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "18226"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "18482"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "18483"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "18484"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "18485"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "18486"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "18487"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "18489"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "18541"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "18542"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "18543"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "18544"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "18545"
+            }, {
+                "name": "Striping (included above)",
+                "value": "18546"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "18547"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "18548"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "18642"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "18643"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "18644"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "18645"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "18646"
+            }, {
+                "name": "Striping (included above)",
+                "value": "18647"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "18648"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "18649"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "18743"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "18744"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "18745"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "18746"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "18747"
+            }, {
+                "name": "Striping (included above)",
+                "value": "18748"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "18749"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "18750"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "18844"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "18845"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "18846"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "18847"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "18848"
+            }, {
+                "name": "Striping (included above)",
+                "value": "18849"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "18850"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "18851"
+            }, {
+                "name": "Carports",
+                "value": "18977"
+            }, {
+                "name": "Garages",
+                "value": "18978"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "18980"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "18981"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "18982"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "18983"
+            }, {
+                "name": "Concrete Paving",
+                "value": "18984"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "18985"
+            }, {
+                "name": "Striping",
+                "value": "18986"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "18987"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "18988"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "19260"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "19261"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "19262"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "19263"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "19264"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "19265"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "19267"
+            }, {
+                "name": "Striping",
+                "value": "19628"
+            }, {
+                "name": "Repair curbs",
+                "value": "19629"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "19630"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "19631"
+            }, {
+                "name": "Parking garage weather sealant",
+                "value": "19632"
+            }, {
+                "name": "Parking garage sealant renewal",
+                "value": "19633"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "19634"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "19635"
+            }, {
+                "name": "Carports",
+                "value": "20062"
+            }, {
+                "name": "Garages",
+                "value": "20063"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "20065"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "20066"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "20067"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "20068"
+            }, {
+                "name": "Concrete Paving",
+                "value": "20069"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "20070"
+            }, {
+                "name": "Striping",
+                "value": "20071"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "20072"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "20073"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "20392"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "20393"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "20394"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "20395"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "20396"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "20397"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "20399"
+            }, {
+                "name": "Damaged Curbs, Sectional Replace/ Repair",
+                "value": "21747"
+            }, {
+                "name": "Asphalt Curbs, Replace",
+                "value": "21749"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "21750"
+            }, {
+                "name": "Concrete Curbs, Replace",
+                "value": "21751"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "21752"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "21753"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "21754"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "21755"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "21756"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "21757"
+            }, {
+                "name": "Asphalt pavement. Seal/stripe (SF) ",
+                "value": "21849"
+            }, {
+                "name": "Asphalt pavement. Overlay/stripe ",
+                "value": "21850"
+            }, {
+                "name": "Asphalt pavement. Full depth spot repairs ",
+                "value": "21851"
+            }, {
+                "name": "Concrete pavement. Repair",
+                "value": "21852"
+            }, {
+                "name": "Concrete pavement. Restripe (per space) ",
+                "value": "21853"
+            }, {
+                "name": "Concrete walkways. Replace/repair ",
+                "value": "21854"
+            }, {
+                "name": "Concrete curbs. Replace ",
+                "value": "21855"
+            }, {
+                "name": "Asphalt curbs. Replace ",
+                "value": "21856"
+            }, {
+                "name": "",
+                "value": "21857"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "22466"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "22467"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "22468"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "22469"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "22470"
+            }, {
+                "name": "Striping (included above)",
+                "value": "22471"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "22472"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "22473"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "22474"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "22749"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "22750"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "22751"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "22752"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "22753"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "22754"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "22756"
+            }, {
+                "name": "Striping",
+                "value": "22844"
+            }, {
+                "name": "Repair curbs",
+                "value": "22845"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "22846"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "22847"
+            }, {
+                "name": "Parking garage weather sealant",
+                "value": "22848"
+            }, {
+                "name": "Parking garage sealant renewal",
+                "value": "22849"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "22850"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "22851"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "23000"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "23001"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "23002"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "23003"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "23004"
+            }, {
+                "name": "Restripe paving ",
+                "value": "23005"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "23006"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "23007"
+            }, {
+                "name": "Concrete repair ",
+                "value": "23008"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "23009"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "23010"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "23011"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "23012"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "23013"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "23014"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "23015"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "23016"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "23017"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "23018"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "23019"
+            }, {
+                "name": "Curbs ",
+                "value": "23020"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90002200"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90002201"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90002202"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90002203"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90002204"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90002205"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90002206"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90002207"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90002208"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90002514"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90002515"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90002516"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90002517"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90002518"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90002519"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90002521"
+            }, {
+                "name": "Trip hazard.  Repair",
+                "value": "90002786"
+            }, {
+                "name": "Asphalt walkway.  Replace",
+                "value": "90002787"
+            }, {
+                "name": "Asphalt curbs. Replace",
+                "value": "90002788"
+            }, {
+                "name": "Pre-cast wheel stop.  Add.",
+                "value": "90002789"
+            }, {
+                "name": "Concrete curbs. Replace",
+                "value": "90002790"
+            }, {
+                "name": "Concrete walkways. Repair",
+                "value": "90002791"
+            }, {
+                "name": "Concrete pavement. Restripe (per space)",
+                "value": "90002792"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "90002793"
+            }, {
+                "name": "Concrete pavement. Repair",
+                "value": "90002794"
+            }, {
+                "name": "Asphalt pavement. Full depth spot repairs",
+                "value": "90002795"
+            }, {
+                "name": "Asphalt pavement. Mill, overlay, and stripe",
+                "value": "90002796"
+            }, {
+                "name": "Asphalt pavement. Seal and stripe",
+                "value": "90002798"
+            }, {
+                "name": "",
+                "value": "90002865"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90003259"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90003260"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90003261"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90003262"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90003263"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90003264"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90003265"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90003266"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90003879"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90003880"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90003881"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90003882"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90003883"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90003884"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90003886"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90003946"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90003947"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90003948"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90003949"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90003950"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90003951"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90003952"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90003953"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90003954"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90003955"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90003956"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90003957"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90003958"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90003959"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90003960"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90003961"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90003962"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90003963"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90003964"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90003965"
+            }, {
+                "name": "Curbs ",
+                "value": "90003966"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90003967"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90003968"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90003969"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90003970"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90003971"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90003972"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90005418"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90005419"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90005420"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90005421"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90005422"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90005423"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90005424"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90005425"
+            }, {
+                "name": "Asphalt pavement - full depth  ($500 min.) saw cut",
+                "value": "90005426"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90005427"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90005428"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90005429"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90005430"
+            }, {
+                "name": "Restripe paving  (.1 - .32 lnft)",
+                "value": "90005431"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90005432"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90005433"
+            }, {
+                "name": "Asphalt overlay  (10,000 sqft)",
+                "value": "90005434"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90005435"
+            }, {
+                "name": "Seal Coat and Restripe",
+                "value": "90005436"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90005437"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90005733"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90005734"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90005735"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90005736"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90005737"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90005738"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90005739"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90005740"
+            }, {
+                "name": "Asphalt pavement - full depth  ($500 min.) saw cut",
+                "value": "90005741"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90005742"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90005743"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90005744"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90005745"
+            }, {
+                "name": "Restripe paving  (.1 - .32 lnft)",
+                "value": "90005746"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90005747"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90005748"
+            }, {
+                "name": "Asphalt overlay  (10,000 sqft)",
+                "value": "90005749"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90005750"
+            }, {
+                "name": "Seal Coat and Restripe",
+                "value": "90005751"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90005752"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90006430"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90006443"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90006444"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90006445"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90006446"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90006447"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90006448"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90006449"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90006450"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90006451"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90006452"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90006453"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90006454"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90006455"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90006456"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90006457"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90006458"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90006459"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90006460"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90006461"
+            }, {
+                "name": "Curbs ",
+                "value": "90006462"
+            }, {
+                "name": "Replace Concrete Sidewalk ",
+                "value": "90006463"
+            }, {
+                "name": "Sidewalks asphalt ",
+                "value": "90006464"
+            }, {
+                "name": "Re-set interlocking paving ",
+                "value": "90006465"
+            }, {
+                "name": "Locally repair concrete Sidewalk ",
+                "value": "90006466"
+            }, {
+                "name": "Sidewalks concrete ",
+                "value": "90006467"
+            }, {
+                "name": "Replace interlocking paving ",
+                "value": "90006468"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90006764"
+            }, {
+                "name": "Seal Coat and Restripe",
+                "value": "90006765"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90006766"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90006767"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90007019"
+            }, {
+                "name": "Asphalt overlay  (10,000 sqft)",
+                "value": "90007020"
+            }, {
+                "name": "Restripe paving  (.1 - .32 lnft)",
+                "value": "90007021"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90007022"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90007023"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90007024"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90007025"
+            }, {
+                "name": "Asphalt pavement - full depth  ($500 min.) saw cut",
+                "value": "90007026"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90007027"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90007028"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90007029"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90007030"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90007031"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90007032"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90007033"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90007034"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90007035"
+            }, {
+                "name": "Trip hazard.  Repair",
+                "value": "90007114"
+            }, {
+                "name": "Asphalt walkway.  Replace",
+                "value": "90007115"
+            }, {
+                "name": "Asphalt curbs. Replace",
+                "value": "90007116"
+            }, {
+                "name": "Pre-cast wheel stop.  Add.",
+                "value": "90007117"
+            }, {
+                "name": "Concrete curbs. Replace",
+                "value": "90007118"
+            }, {
+                "name": "Concrete walkways. Repair",
+                "value": "90007119"
+            }, {
+                "name": "Concrete pavement. Restripe (per space)",
+                "value": "90007120"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "90007121"
+            }, {
+                "name": "Concrete pavement. Repair",
+                "value": "90007122"
+            }, {
+                "name": "Asphalt pavement. Full depth spot repairs",
+                "value": "90007123"
+            }, {
+                "name": "Asphalt pavement. Mill, overlay, and stripe",
+                "value": "90007124"
+            }, {
+                "name": "Asphalt pavement. Seal and stripe",
+                "value": "90007125"
+            }, {
+                "name": "",
+                "value": "90007126"
+            }, {
+                "name": "Trip hazard.  Repair",
+                "value": "90007694"
+            }, {
+                "name": "Asphalt walkway.  Replace",
+                "value": "90007695"
+            }, {
+                "name": "Asphalt curbs. Replace",
+                "value": "90007696"
+            }, {
+                "name": "Pre-cast wheel stop.  Add.",
+                "value": "90007697"
+            }, {
+                "name": "Concrete curbs. Replace",
+                "value": "90007698"
+            }, {
+                "name": "Concrete walkways. Repair",
+                "value": "90007699"
+            }, {
+                "name": "Concrete pavement. Restripe (per space)",
+                "value": "90007700"
+            }, {
+                "name": "Concrete walkways. Replace",
+                "value": "90007701"
+            }, {
+                "name": "Concrete pavement. Repair",
+                "value": "90007702"
+            }, {
+                "name": "Asphalt pavement. Full depth spot repairs",
+                "value": "90007703"
+            }, {
+                "name": "Asphalt pavement. Mill, overlay, and stripe",
+                "value": "90007704"
+            }, {
+                "name": "Asphalt pavement. Seal and stripe",
+                "value": "90007705"
+            }, {
+                "name": "",
+                "value": "90007706"
+            }, {
+                "name": "Asphalt pavement, Seal Coat & Restripe",
+                "value": "90008808"
+            }, {
+                "name": "Asphalt pavement, Overlay  ",
+                "value": "90008809"
+            }, {
+                "name": "Asphalt pavement, Full depth repair ",
+                "value": "90008810"
+            }, {
+                "name": "Concrete Pavement, Restripe ",
+                "value": "90008811"
+            }, {
+                "name": "Concrete Curbs, Replace  ",
+                "value": "90008812"
+            }, {
+                "name": "Asphalt Curbs, Replace",
+                "value": "90008813"
+            }, {
+                "name": "Damaged Concrete walkways, Replace",
+                "value": "90008814"
+            }, {
+                "name": "Damaged Asphalt Sidewalks, Replace",
+                "value": "90008815"
+            }, {
+                "name": "Asphalt Sidewalks, Replace",
+                "value": "90008816"
+            }, {
+                "name": "Concrete flatwork, Replace",
+                "value": "90008817"
+            }, {
+                "name": "Interlocking paving, Replace ",
+                "value": "90008818"
+            }, {
+                "name": "Concrete precast parking wheel stops, Replace ",
+                "value": "90008819"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90009127"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90009128"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90009129"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90009130"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90009131"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90009132"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90009133"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90009134"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90009135"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90011672"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90011673"
+            }, {
+                "name": "Asphalt Pavement, Overlay",
+                "value": "90011674"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay",
+                "value": "90011675"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe",
+                "value": "90011676"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90011677"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90011678"
+            }, {
+                "name": "Pavement, Restripe(per space)",
+                "value": "90011679"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90012030"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90012031"
+            }, {
+                "name": "Asphalt Pavement, Overlay",
+                "value": "90012032"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay",
+                "value": "90012033"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe",
+                "value": "90012034"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90012035"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90012036"
+            }, {
+                "name": "Pavement, Restripe(per space)",
+                "value": "90012037"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90012388"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90012389"
+            }, {
+                "name": "Asphalt Pavement, Overlay",
+                "value": "90012390"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay",
+                "value": "90012391"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe",
+                "value": "90012392"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90012393"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90012394"
+            }, {
+                "name": "Pavement, Restripe(per space)",
+                "value": "90012395"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90012729"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90012730"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90012731"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90012732"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90012733"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90012734"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90012735"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90012736"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90012841"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "90012842"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "90012843"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "90012844"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "90012845"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "90012846"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "90012847"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "90012848"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90012849"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "90012850"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "90012851"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "90012852"
+            }, {
+                "name": "Concrete repair",
+                "value": "90012853"
+            }, {
+                "name": "Concrete sealant",
+                "value": "90012854"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90013178"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90013179"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90013180"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90013181"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90013182"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90013183"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90013184"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90013185"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90013335"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90013336"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90013337"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90013338"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90013339"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90013340"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90013341"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90013342"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90013673"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90013674"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90013675"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90013676"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90013677"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90013678"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90013679"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90013680"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90014013"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90014014"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90014015"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90014016"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90014017"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90014018"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90014019"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90014020"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90014351"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90014352"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90014353"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90014354"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90014355"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90014356"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90014357"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90014358"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90014694"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90014695"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90014696"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90014697"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90014698"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90014699"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90014700"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90014701"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90014702"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "90014989"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "90014990"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "90014991"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "90014992"
+            }, {
+                "name": "Repair curbs",
+                "value": "90014993"
+            }, {
+                "name": "Other",
+                "value": "90014994"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "90015155"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "90015156"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "90015157"
+            }, {
+                "name": "Striping",
+                "value": "90015158"
+            }, {
+                "name": "Parking garage weather sealant",
+                "value": "90015159"
+            }, {
+                "name": "Parking garage sealant renewal",
+                "value": "90015160"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "90015161"
+            }, {
+                "name": "Repair curbs",
+                "value": "90015162"
+            }, {
+                "name": "Other",
+                "value": "90015163"
+            }, {
+                "name": "Carports",
+                "value": "90015632"
+            }, {
+                "name": "Garages",
+                "value": "90015633"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "90015635"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90015636"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "90015637"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90015638"
+            }, {
+                "name": "Concrete Paving",
+                "value": "90015639"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "90015640"
+            }, {
+                "name": "Striping",
+                "value": "90015641"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90015642"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90015643"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "90015709"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "90015710"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "90015711"
+            }, {
+                "name": "Striping",
+                "value": "90015712"
+            }, {
+                "name": "Parking garage weather sealant",
+                "value": "90015713"
+            }, {
+                "name": "Parking garage sealant renewal",
+                "value": "90015714"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "90015715"
+            }, {
+                "name": "Repair curbs",
+                "value": "90015716"
+            }, {
+                "name": "Other",
+                "value": "90015717"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90017181"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90017182"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90017183"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90017184"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90017185"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90017186"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90017187"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90017188"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90019311"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90019312"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90019313"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90019314"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90019315"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90019316"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90019317"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90019318"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90019822"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90019823"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90019824"
+            }, {
+                "name": "Asphalt Pavement, Mill and Overlay ",
+                "value": "90019825"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90019826"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace",
+                "value": "90019827"
+            }, {
+                "name": "Reinforced Concrete Pavement, Replace damaged sections",
+                "value": "90019828"
+            }, {
+                "name": "Pavement, Restripe (per space)",
+                "value": "90019829"
+            }, {
+                "name": "Carports",
+                "value": "90020150"
+            }, {
+                "name": "Garages",
+                "value": "90020151"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "90020153"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90020154"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "90020155"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90020156"
+            }, {
+                "name": "Concrete Paving",
+                "value": "90020157"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "90020158"
+            }, {
+                "name": "Striping",
+                "value": "90020159"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90020160"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90020161"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90020250"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90020251"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90020252"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90020253"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90020254"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90020255"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90020256"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90020799"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90020800"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90020801"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90020802"
+            }, {
+                "name": "Restripe paving",
+                "value": "90020803"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90020804"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90020805"
+            }, {
+                "name": "Curbs",
+                "value": "90020806"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90020976"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90020977"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90020978"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90020979"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90020980"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90020981"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90020982"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90021260"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90021261"
+            }, {
+                "name": "Asphalt pavement - repair",
+                "value": "90021262"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90021263"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90021264"
+            }, {
+                "name": "Restripe paving",
+                "value": "90021265"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90021266"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90021267"
+            }, {
+                "name": "Curbs",
+                "value": "90021268"
+            }, {
+                "name": "Carports",
+                "value": "90022454"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90022455"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90022456"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90022457"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90022458"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90022459"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90022460"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90022461"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90022462"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90022587"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90022588"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90022589"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90022590"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90022591"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90022592"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90022593"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90022594"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90022595"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90022762"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90022763"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90022764"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90022765"
+            }, {
+                "name": "Restripe paving",
+                "value": "90022766"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90022767"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90022768"
+            }, {
+                "name": "Curbs",
+                "value": "90022769"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90022989"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90022990"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90022991"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90022992"
+            }, {
+                "name": "Restripe paving",
+                "value": "90022993"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90022994"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90022995"
+            }, {
+                "name": "Curbs",
+                "value": "90022996"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90023181"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90023182"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90023183"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023184"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90023185"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90023186"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90023187"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90023188"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90023189"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90023190"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90023191"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023192"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90023193"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90023194"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90023195"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90023196"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90023197"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90023198"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90023199"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90023200"
+            }, {
+                "name": "Curbs ",
+                "value": "90023201"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90023424"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90023425"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90023426"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023427"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90023428"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90023429"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90023430"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90023431"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90023432"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90023433"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90023434"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023435"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90023436"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90023437"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90023438"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90023439"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90023440"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90023441"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90023442"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90023443"
+            }, {
+                "name": "Curbs ",
+                "value": "90023444"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90023666"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90023667"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90023668"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90023669"
+            }, {
+                "name": "Restripe paving",
+                "value": "90023670"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90023671"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90023672"
+            }, {
+                "name": "Curbs",
+                "value": "90023673"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90023823"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90023824"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90023825"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023826"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90023827"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90023828"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90023829"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90023830"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90023831"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90023832"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90023833"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90023834"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90023835"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90023836"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90023837"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90023838"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90023839"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90023840"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90023841"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90023842"
+            }, {
+                "name": "Curbs ",
+                "value": "90023843"
+            }, {
+                "name": "Concrete sealant ",
+                "value": "90024066"
+            }, {
+                "name": "Asphalt cold planing (milling) ",
+                "value": "90024067"
+            }, {
+                "name": "Asphalt pavement - overlay ",
+                "value": "90024068"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90024069"
+            }, {
+                "name": "Asphalt overlay ",
+                "value": "90024070"
+            }, {
+                "name": "Restripe paving ",
+                "value": "90024071"
+            }, {
+                "name": "Asphalt surface repair ",
+                "value": "90024072"
+            }, {
+                "name": "Concrete curbs machine formed ",
+                "value": "90024073"
+            }, {
+                "name": "Concrete repair ",
+                "value": "90024074"
+            }, {
+                "name": "Asphalt base repair ",
+                "value": "90024075"
+            }, {
+                "name": "Asphalt pavement - full depth ",
+                "value": "90024076"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90024077"
+            }, {
+                "name": "Asphalt pavement - seal coat ",
+                "value": "90024078"
+            }, {
+                "name": "Asphalt curb machine formed ",
+                "value": "90024079"
+            }, {
+                "name": "Concrete pavement ",
+                "value": "90024080"
+            }, {
+                "name": "Asphalt sealcoat and restriping ",
+                "value": "90024081"
+            }, {
+                "name": "Concrete walkways - repair ",
+                "value": "90024082"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90024083"
+            }, {
+                "name": "Concrete walkways ",
+                "value": "90024084"
+            }, {
+                "name": "Concrete parking space striping ",
+                "value": "90024085"
+            }, {
+                "name": "Curbs ",
+                "value": "90024086"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90024297"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90024298"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90024299"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90024300"
+            }, {
+                "name": "Restripe paving",
+                "value": "90024301"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90024302"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90024303"
+            }, {
+                "name": "Concrete Curbs",
+                "value": "90024304"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90024448"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90024449"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90024450"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90024451"
+            }, {
+                "name": "Restripe paving",
+                "value": "90024452"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90024453"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90024454"
+            }, {
+                "name": "Curbs, Concrete",
+                "value": "90024455"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90025901"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90025902"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90025903"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90025904"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90025905"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90025906"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90025907"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90025908"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90025909"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90026118"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90026119"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90026120"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90026121"
+            }, {
+                "name": "Restripe paving",
+                "value": "90026122"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90026123"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90026124"
+            }, {
+                "name": "Curbs, Concrete",
+                "value": "90026125"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90027395"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90027396"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90027397"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90027398"
+            }, {
+                "name": "Restripe paving",
+                "value": "90027399"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90027400"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90027401"
+            }, {
+                "name": "Curbs",
+                "value": "90027402"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90027453"
+            }, {
+                "name": "Asphaltic Concrete Repairs/Crack Sealing",
+                "value": "90027454"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90027455"
+            }, {
+                "name": "Concrete Paving - Repairs and Crack Sealing",
+                "value": "90027456"
+            }, {
+                "name": "Integral colored, stamped concrete",
+                "value": "90027457"
+            }, {
+                "name": "Striping (included above)",
+                "value": "90027458"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90027459"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90027460"
+            }, {
+                "name": "Pedestrian Paving / Hardscape",
+                "value": "90027461"
+            }, {
+                "name": "Carports",
+                "value": "90027462"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90027563"
+            }, {
+                "name": "Asphalt cold planing (milling)",
+                "value": "90027564"
+            }, {
+                "name": "Asphalt crack seal (<10K LF)",
+                "value": "90027565"
+            }, {
+                "name": "Asphalt crack seal (>10K LF)",
+                "value": "90027566"
+            }, {
+                "name": "Asphalt curb machine formed",
+                "value": "90027567"
+            }, {
+                "name": "Asphalt overlay",
+                "value": "90027568"
+            }, {
+                "name": "Asphalt sealcoat and restriping",
+                "value": "90027569"
+            }, {
+                "name": "Asphalt surface repair",
+                "value": "90027570"
+            }, {
+                "name": "Asphalt base repair",
+                "value": "90027571"
+            }, {
+                "name": "Concrete precast parking bumper replacement",
+                "value": "90027572"
+            }, {
+                "name": "Machine formed concrete curb replacement",
+                "value": "90027573"
+            }, {
+                "name": "Concrete parking space striping",
+                "value": "90027574"
+            }, {
+                "name": "Concrete repair",
+                "value": "90027575"
+            }, {
+                "name": "Concrete sealant",
+                "value": "90027576"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90028068"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90028069"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90028070"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90028071"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90028072"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90028073"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90028074"
+            }, {
+                "name": "Asphalt Pavement, Full depth replacement",
+                "value": "90028579"
+            }, {
+                "name": "Asphalt Pavement, Full depth sectional replacement/ repairs",
+                "value": "90028580"
+            }, {
+                "name": "Asphalt Pavement, Overlay ",
+                "value": "90028581"
+            }, {
+                "name": "Asphalt Pavement, Crack seal, seal coat, restripe ",
+                "value": "90028582"
+            }, {
+                "name": "Concrete Pavement, Replace",
+                "value": "90028583"
+            }, {
+                "name": "Concrete Pavement, Replace damaged sections",
+                "value": "90028584"
+            }, {
+                "name": "Pavement, Restripe ",
+                "value": "90028585"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90030117"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90030118"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90030119"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90030120"
+            }, {
+                "name": "Restripe paving",
+                "value": "90030121"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90030122"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90030123"
+            }, {
+                "name": "Curbs",
+                "value": "90030124"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90030322"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90030323"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90030324"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90030325"
+            }, {
+                "name": "Restripe paving",
+                "value": "90030326"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90030327"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90030328"
+            }, {
+                "name": "Curbs, Concrete",
+                "value": "90030329"
+            }, {
+                "name": "Civil Engineer, Investigate and Report",
+                "value": "90030622"
+            }, {
+                "name": "Swimming pool deck. Replace ",
+                "value": "90030623"
+            }, {
+                "name": "Asphalt Curbs. Replace, machine formed",
+                "value": "90030624"
+            }, {
+                "name": "Asphalt pavement, Full depth repair ",
+                "value": "90030625"
+            }, {
+                "name": "Asphalt pavement, Overlay  ",
+                "value": "90030626"
+            }, {
+                "name": "Asphalt pavement, Seal Coat & Restripe",
+                "value": "90030627"
+            }, {
+                "name": "Asphalt crack seal (<10K LF) ",
+                "value": "90030628"
+            }, {
+                "name": "Concrete Curbs, machine formed Replace  ",
+                "value": "90030629"
+            }, {
+                "name": "Concrete Pavement, Restripe ",
+                "value": "90030630"
+            }, {
+                "name": "Damaged Concrete walkways. Replace",
+                "value": "90030631"
+            }, {
+                "name": "Grind tripping hazard",
+                "value": "90030632"
+            }, {
+                "name": "Concrete precast parking bumpers ",
+                "value": "90030633"
+            }, {
+                "name": "Interlocking paving. Replace ",
+                "value": "90030634"
+            }, {
+                "name": "Expansion joint. Replace  ",
+                "value": "90030635"
+            }, {
+                "name": "Deck surface waterproofing ",
+                "value": "90030636"
+            }, {
+                "name": "Parking Garage Assessment",
+                "value": "90030637"
+            }, {
+                "name": "Parking Garage, Waterproof sealant",
+                "value": "90030638"
+            }, {
+                "name": "Parking Garage, Repair concrete surface",
+                "value": "90030639"
+            }, {
+                "name": "Carport. Repair ",
+                "value": "90030640"
+            }, {
+                "name": "Carports",
+                "value": "90030961"
+            }, {
+                "name": "Garages",
+                "value": "90030962"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "90030964"
+            }, {
+                "name": "Roadways / Parking Lots",
+                "value": "90030965"
+            }, {
+                "name": "Asphaltic Concrete",
+                "value": "90030966"
+            }, {
+                "name": "Seal Coat and Stripe",
+                "value": "90030967"
+            }, {
+                "name": "Concrete Paving",
+                "value": "90030968"
+            }, {
+                "name": "Integral colored, pattern stamped concrete",
+                "value": "90030969"
+            }, {
+                "name": "Striping",
+                "value": "90030970"
+            }, {
+                "name": "Curb & Gutter",
+                "value": "90030971"
+            }, {
+                "name": "Interior Gutter (Swale)",
+                "value": "90030972"
+            }, {
+                "name": "Asphalt pavement - full depth",
+                "value": "90031037"
+            }, {
+                "name": "Asphalt pavement - overlay",
+                "value": "90031038"
+            }, {
+                "name": "Asphalt Pavement - crack seal, seal coat, restripe",
+                "value": "90031039"
+            }, {
+                "name": "Concrete pavement",
+                "value": "90031040"
+            }, {
+                "name": "Restripe paving",
+                "value": "90031041"
+            }, {
+                "name": "Concrete walkways - repair",
+                "value": "90031042"
+            }, {
+                "name": "Concrete walkways",
+                "value": "90031043"
+            }, {
+                "name": "Curbs, Concrete",
+                "value": "90031044"
+            }, {
+                "name": "Striping",
+                "value": "90031292"
+            }, {
+                "name": "Repair curbs",
+                "value": "90031293"
+            }, {
+                "name": "Patching, crack sealing, sealing and striping",
+                "value": "90031294"
+            }, {
+                "name": "Patch and repair concrete",
+                "value": "90031295"
+            }, {
+                "name": "Parking garage weather sealant",
+                "value": "90031296"
+            }, {
+                "name": "Parking garage sealant renewal",
+                "value": "90031297"
+            }, {
+                "name": "New asphalt overlay",
+                "value": "90031298"
+            }, {
+                "name": "Full depth asphalt repairs and overlay",
+                "value": "90031299"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

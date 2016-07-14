@@ -1,0 +1,133 @@
+<div class="container-fluid" ng-controller="SimplifiedReportController as ck" cg-busy="ck.waitingProcessResources.pdfLoader">
+    <div class="ReportwriteHead top-margin">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-xs-12">
+                <span ng-bind-html="projectDashLink"></span>
+                <h4><ins ng-bind-html="giLink"></ins></h4>
+            </div>
+            <div class="col-md-5 col-lg-5 col-xs-12 top-margin-xs text-right">
+                <div class="btn-group">
+
+                    <button class="btn btn-default disabled" type="button" ng-show="ck.reportPhase">{{ck.reportPhase}} <img class="reportsstatusloader" src="images/reportstatusloader.gif" ng-show="ck.isBusy" /></button>
+
+
+                    <button class="btn btn-danger" type="button" ng-disabled="ck.isBusy" ng-show="ck.showDOWNbutton" ng-click="ck.changeReportstatus('DOWN')" title="Move status down to '{{ck.prevreportPhase}}'"><i class="glyphicon glyphicon-minus"></i></button>
+
+                    <button class="btn btn-success" type="button" ng-disabled="ck.isBusy" ng-show="ck.showUPbutton" ng-click="ck.changeReportstatus('UP')" title="Move status up to '{{ck.nextreportPhase}}'"><i class="glyphicon glyphicon-plus"></i></button>
+
+
+                    <button class="btn btn-danger" ng-disabled="ck.isBusy" ng-show="ck.showUNFINbutton" type="button" ng-click="ck.changeReportstatus('UNFIN')" title="Unfinalize">Unfinalize</button>
+
+                    <button class="btn btn-default" ng-disabled="ck.isBusy" ng-show="ck.showFINbutton" type="button" ng-click="ck.changeReportstatus('FIN')" title="Finalize">Finalize</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <ul class="nav nav-tabs bottom-margin-none">
+                    <li ui-sref-active="active">
+                        <a class="pointer" ui-sref=".Setup" ng-click="ck.setAppendicesFlag('appendices');">Setup</a>
+                    </li>
+                    <li id="li_write" ui-sref-active="active">
+                        <a class="pointer" ui-sref=".Write" ng-click="ck.writeTabClicked();ck.closeAlertHeight();ck.setAppendicesFlag('nonAppendices');">Write</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a class="pointer" ui-sref=".Appendices" ng-click="ck.closeAlertHeight();ck.setAppendicesFlag('appendices');">Appendices</a>
+                    </li>
+                    <li id="li_sign" ui-sref-active="active">
+                        <a class="pointer" ui-sref=".Sign" ng-click="ck.closeAlertHeight();ck.setAppendicesFlag('appendices');">Sign</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a class="pointer" ui-sref=".Assemble" ng-click="ck.closeAlertHeight();ck.setAppendicesFlag('appendices');">Assemble</a>
+                    </li>
+                    <li>
+                        <div id="lastUpdatedDetails" class="top-margin-sm"></div>
+                    </li>
+                    <li class="pull-right">
+                        <div class="form-inline">
+                            <span ng-controller="ReportOutputPDFConvertController as pdfconvertctrl">
+								<button type="button" class="btn btn-sm btn-default dropdown-toggle" ng-disabled="!pdfconvertctrl.quickViewArr.length" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="glyphicon glyphicon-book"></i> Quick View <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                <li ng-repeat="item in pdfconvertctrl.quickViewArr">
+
+                                    <a ng-click="pdfconvertctrl.GeneratePDF(item.generationType);" class="pointer" id="dropdown1-tab">{{item.label}}</a>
+                                </li>
+                            </ul>
+                            </span>
+                            <span class="dropdown">
+								<button type="button" class="btn btn-sm btn-default dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" data-disabled="true">
+									<i class="glyphicon glyphicon-wrench"></i> Tools <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu tools-dropdown" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                <li><a target="_blank" ng-href="#/ParcelWriter?projectGuid={{projectGuid}}&reportGuid={{reportGuid}}">PARCEL Writer</a></li>
+                                <li class="pointer" ng-click="openVariableReplacer()"><a>Variable Replacer</a></li>
+                                <li class="disabled"><a>Compare</a></li>
+
+                                <li><a target="_blank" ng-href = "#/grantAccess?projectGuid={{projectGuid}}&prevState={{prevState}}" >Grant Access</a></li>
+
+                                <li class="disabled"><a>Kickoff Report</a></li>
+                                <li class="disabled"><a>Import</a></li>
+                                <li class="disabled"><a>PARCEL Intel</a></li>
+                                <!--<li class="pointer"><a ng-href="#/addProjectReport?projectGuid={{projectGuid}}&prevState={{prevState}}">Add Report(s) to this Project</a></li>-->
+                                <li class="pointer"><a ui-sref="addProjectReport({projectGuid : projectGuid,prevState : prevState, reportGuid :reportGuid})">Add Report(s) to this Project</a></li>
+                                <li class="disabled"><a>Related Links</a></li>
+                                <li class="pointer"><a ng-click="projectDocumentRedirect()">Project Documents</a></li>
+                                <li class="disabled"><a>Review Memo</a></li>
+                                <li class="disabled"><a>Administrative Tools</a></li>
+                            </ul>
+                            </span>
+                            <div class="form-group">
+                                <div id="refactorSelect2" class="custom-select2" rt-select2="select2Options" provider="reportsProvider" template="reportsSearchGenerateMarkup" afterevent="displayReports" minimuminput=0></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="RW-headerButton" ng-click="ck.toggleReportwriteHead()">
+        <span class="btn btn-xs btn-primary hideRwHeader"><i class="fa fa-chevron-up pointer"></i>&nbsp;Hide&nbsp;<i class="fa fa-chevron-up pointer"></i></span>
+        <span class="btn btn-xs btn-primary showRwHeader" style="display:none"><i class="fa fa-chevron-down pointer"></i>&nbsp;Show &nbsp;<i class="fa fa-chevron-down pointer"></i></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div role="tabpanel" class="tab-content panel bottom-margin-xs">
+                <div class="panel-body">
+                    <div ui-view=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="loading" style="display:none;">
+    <div class="cg-busy cg-busy-animation ">
+        <div class="cg-busy cg-busy-backdrop"></div>
+        <div class="cg-busy-default-wrapper">
+            <div class="cg-busy-default-sign loadatcenter">
+                <div class="cg-busy-default-spinner">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                    <div class="bar5"></div>
+                    <div class="bar6"></div>
+                    <div class="bar7"></div>
+                    <div class="bar8"></div>
+                    <div class="bar9"></div>
+                    <div class="bar10"></div>
+                    <div class="bar11"></div>
+                    <div class="bar12"></div>
+                </div>
+                <div class="cg-busy-default-text ng-binding">Please Wait...</div>
+            </div>
+        </div>
+    </div>
+</div>

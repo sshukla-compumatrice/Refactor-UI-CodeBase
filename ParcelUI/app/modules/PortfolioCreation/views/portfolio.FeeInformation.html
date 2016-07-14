@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+
+    <form name="feeInformationForm" class="form-horizontal">
+
+
+        <div class="overflow-auto" ng-controller="PortfolioFeeInfoCtrl as feeInfo">
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="feeInfo.serviceResponseAlert">
+                <button type="button" class="close" ng-click="feeInfo.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{feeInfo.serviceResponseText}}
+            </div>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>Property #</th>
+                            <th>Address</th>
+                            <th>Report</th>
+                            <th>Consultant</th>
+                            <th>Language Library</th>
+                            <th>Project Number</th>
+                            <th>Cost to Client</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in feeInfo.tableArr">
+                            <td>{{data.propertyNumber}}</td>
+                            <td>{{data.address}}</td>
+                            <td>{{data.reportType}}</td>
+                            <td>
+                                <select ng-model="data.companyGUID" class="form-control" data-ng-options="consultant.companyGUID as consultant.name for consultant in portfolio.loadData.relatedCompanies | filter: portfolio.filterByContains('functions', 'Consultant')" tabindex="1" autofocus focus-if>
+                                    <option value="">Select Consultant</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control" ng-model="data.languageLibraryGUID" tabindex="2">
+                                    <option value="">
+                                        Select Language Library
+                                    </option>
+
+                                    <option ng-repeat="lib in portfolio.loadData.libraries | filter: lib.reportType = data.reportType" value="{{lib.libraryGUID}}" ng-selected="data.languageLibraryGUID==lib.libraryGUID">{{lib.name}}
+                                    </option>
+                                </select>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="projNumber" ng-model="data.projectNumber" tabindex="3">
+
+                            </td>
+
+
+                            <td class="cost-to-client">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="costToClient" ng-model="data.fee" tabindex="4">
+                                    </div>
+
+                                    <button ng-show="$index==0 && feeInfo.tableArr.length>1" class="btn btn-sm btn-primary" ng-click="fillDown(data.fee,data.projectNumber)">Fill Down</button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

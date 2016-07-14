@@ -1,0 +1,3040 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.4.3 Air Conditioning and Ventilation",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 40,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Boilers - electric",
+                "value": "177"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "178"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "179"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "180"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "181"
+            }, {
+                "name": "Furnaces",
+                "value": "182"
+            }, {
+                "name": "Make-up air units",
+                "value": "183"
+            }, {
+                "name": "Space heaters",
+                "value": "184"
+            }, {
+                "name": "Unit heaters",
+                "value": "185"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "186"
+            }, {
+                "name": "Heat exchanger",
+                "value": "187"
+            }, {
+                "name": "Rooftop units",
+                "value": "188"
+            }, {
+                "name": "Air handling units",
+                "value": "189"
+            }, {
+                "name": "Fan coil units",
+                "value": "190"
+            }, {
+                "name": "Heat Pumps",
+                "value": "191"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "192"
+            }, {
+                "name": "Chillers",
+                "value": "193"
+            }, {
+                "name": "Condensers",
+                "value": "194"
+            }, {
+                "name": "Condensing units",
+                "value": "195"
+            }, {
+                "name": "Cooling towers",
+                "value": "196"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "197"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "198"
+            }, {
+                "name": "Insulation",
+                "value": "199"
+            }, {
+                "name": "Fans",
+                "value": "200"
+            }, {
+                "name": "VAV boxes",
+                "value": "201"
+            }, {
+                "name": "Room Area HVAC PTAC 1-ton",
+                "value": "202"
+            }, {
+                "name": "Common Area HVAC 5-ton",
+                "value": "203"
+            }, {
+                "name": "Insulation",
+                "value": "1891"
+            }, {
+                "name": "Space heaters",
+                "value": "1892"
+            }, {
+                "name": "VAV boxes",
+                "value": "1893"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "1894"
+            }, {
+                "name": "Allowance for HVAC replacement",
+                "value": "1895"
+            }, {
+                "name": "Rooftop units",
+                "value": "1896"
+            }, {
+                "name": "Fan coil units",
+                "value": "1897"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "1898"
+            }, {
+                "name": "Boilers - electric",
+                "value": "1899"
+            }, {
+                "name": "Condensers",
+                "value": "1900"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "1901"
+            }, {
+                "name": "Replace cooling towers",
+                "value": "1902"
+            }, {
+                "name": "Remediation of cooling tower",
+                "value": "1903"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "1904"
+            }, {
+                "name": "Make-up air units",
+                "value": "1905"
+            }, {
+                "name": "Fans",
+                "value": "1906"
+            }, {
+                "name": "Unit heaters",
+                "value": "1907"
+            }, {
+                "name": "Hotel Room Area HVAC PTAC 1-ton",
+                "value": "1908"
+            }, {
+                "name": "Heat exchanger",
+                "value": "1909"
+            }, {
+                "name": "Air handling units",
+                "value": "1910"
+            }, {
+                "name": "Heat Pumps",
+                "value": "1911"
+            }, {
+                "name": "Chillers",
+                "value": "1912"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "1913"
+            }, {
+                "name": "Condensing units",
+                "value": "1914"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "1915"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "1916"
+            }, {
+                "name": "Furnaces",
+                "value": "1917"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "2074"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "2076"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "2178"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "2180"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "2535"
+            }, {
+                "name": "Cooling towers ",
+                "value": "2536"
+            }, {
+                "name": "Boilers - oil-fired, cast iron ",
+                "value": "2537"
+            }, {
+                "name": "Air handling units ",
+                "value": "2538"
+            }, {
+                "name": "Furnaces ",
+                "value": "2539"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "2540"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "2541"
+            }, {
+                "name": "Space heaters ",
+                "value": "2542"
+            }, {
+                "name": "Fans ",
+                "value": "2543"
+            }, {
+                "name": "Chillers ",
+                "value": "2544"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "2545"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "2546"
+            }, {
+                "name": "Condensing units ",
+                "value": "2547"
+            }, {
+                "name": "Boilers - gas-fired, steel ",
+                "value": "2548"
+            }, {
+                "name": "Rooftop units ",
+                "value": "2549"
+            }, {
+                "name": "Boilers - oil-fired, steel ",
+                "value": "2550"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "2551"
+            }, {
+                "name": "Fan coil units ",
+                "value": "2552"
+            }, {
+                "name": "Make-up air units ",
+                "value": "2553"
+            }, {
+                "name": "Insulation ",
+                "value": "2554"
+            }, {
+                "name": "Packaged terminal air conditioner ",
+                "value": "2555"
+            }, {
+                "name": "Unit heaters ",
+                "value": "2556"
+            }, {
+                "name": "VAV boxes ",
+                "value": "2557"
+            }, {
+                "name": "Condensers ",
+                "value": "2558"
+            }, {
+                "name": "Boilers - gas-fired, cast iron ",
+                "value": "2559"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "2638"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "2640"
+            }, {
+                "name": "Air handling units ",
+                "value": "3202"
+            }, {
+                "name": "Boiler, gas-fired, 100 MBH",
+                "value": "3203"
+            }, {
+                "name": "Boiler, gas-fired, 2,000 - 2,200 MBH",
+                "value": "3204"
+            }, {
+                "name": "Boiler, gas-fired, 400 MBH",
+                "value": "3205"
+            }, {
+                "name": "Boiler, gas-fired, 6,970 MBH",
+                "value": "3206"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "3207"
+            }, {
+                "name": "Chillers ",
+                "value": "3208"
+            }, {
+                "name": "Common Area HVAC 5-ton ",
+                "value": "3209"
+            }, {
+                "name": "Condenser, 1.5 tons",
+                "value": "3210"
+            }, {
+                "name": "Condenser, 2.0 tons",
+                "value": "3211"
+            }, {
+                "name": "Condenser, 2.5 tons",
+                "value": "3212"
+            }, {
+                "name": "Condenser, 3.0 tons",
+                "value": "3213"
+            }, {
+                "name": "Condenser, 3.5 tons",
+                "value": "3214"
+            }, {
+                "name": "Condenser, 4.0 tons",
+                "value": "3215"
+            }, {
+                "name": "Condenser, 5.0 tons",
+                "value": "3216"
+            }, {
+                "name": "Condensers ",
+                "value": "3217"
+            }, {
+                "name": "Condensing units ",
+                "value": "3218"
+            }, {
+                "name": "Cooling towers ",
+                "value": "3219"
+            }, {
+                "name": "Fan coil units ",
+                "value": "3220"
+            }, {
+                "name": "Fans ",
+                "value": "3221"
+            }, {
+                "name": "Furnaces ",
+                "value": "3222"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "3223"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "3224"
+            }, {
+                "name": "Heating supply and return ductwork",
+                "value": "3225"
+            }, {
+                "name": "Insulation ",
+                "value": "3226"
+            }, {
+                "name": "Make-up air units ",
+                "value": "3227"
+            }, {
+                "name": "Packaged terminal AC (PTAC), 12,000 BTUs",
+                "value": "3228"
+            }, {
+                "name": "Packaged terminal AC (PTAC), 9,000 BTUs",
+                "value": "3229"
+            }, {
+                "name": "Packaged Unit, 2.0 tons",
+                "value": "3230"
+            }, {
+                "name": "Packaged Unit, 3.0 tons",
+                "value": "3231"
+            }, {
+                "name": "Packaged Unit, 4.0 tons",
+                "value": "3232"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "3233"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "3234"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "3235"
+            }, {
+                "name": "Space heaters ",
+                "value": "3236"
+            }, {
+                "name": "Unit heaters ",
+                "value": "3237"
+            }, {
+                "name": "VAV boxes ",
+                "value": "3238"
+            }, {
+                "name": "Window AC unit",
+                "value": "3239"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "3399"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "3401"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "3876"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "3878"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "4973"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "4975"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "13092"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "13094"
+            }, {
+                "name": "Replace guestroom PTAC units",
+                "value": "17958"
+            }, {
+                "name": "Replace public areas and back of house split heat pumps",
+                "value": "17959"
+            }, {
+                "name": "Replace HVAC Package Units (1-5 tons)",
+                "value": "17960"
+            }, {
+                "name": "Replace HVAC Package Units (6-10 tons)",
+                "value": "17961"
+            }, {
+                "name": "Boilers - electric",
+                "value": "17962"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "17963"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "17964"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "17965"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "17966"
+            }, {
+                "name": "Furnaces",
+                "value": "17967"
+            }, {
+                "name": "Make-up air units",
+                "value": "17968"
+            }, {
+                "name": "Space heaters",
+                "value": "17969"
+            }, {
+                "name": "Unit heaters",
+                "value": "17970"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "17971"
+            }, {
+                "name": "Heat exchanger",
+                "value": "17972"
+            }, {
+                "name": "Rooftop units",
+                "value": "17973"
+            }, {
+                "name": "Air handling units",
+                "value": "17974"
+            }, {
+                "name": "Fan coil units",
+                "value": "17975"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "17976"
+            }, {
+                "name": "Chillers",
+                "value": "17977"
+            }, {
+                "name": "Condensers",
+                "value": "17978"
+            }, {
+                "name": "Condensing units",
+                "value": "17979"
+            }, {
+                "name": "Cooling towers",
+                "value": "17980"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "17981"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "17982"
+            }, {
+                "name": "Insulation",
+                "value": "17983"
+            }, {
+                "name": "Fans",
+                "value": "17984"
+            }, {
+                "name": "VAV boxes",
+                "value": "17985"
+            }, {
+                "name": "Exhaust/Ventilation fan, Replace",
+                "value": "21615"
+            }, {
+                "name": "Cooling tower, Replace",
+                "value": "21616"
+            }, {
+                "name": "Chiller,  Overhaul",
+                "value": "21617"
+            }, {
+                "name": "Chiller,  Replace",
+                "value": "21618"
+            }, {
+                "name": "Packaged Terminal Air Conditioners (PTACs), Replace",
+                "value": "21619"
+            }, {
+                "name": "Window/Through-wall Air Conditioner, Replace ",
+                "value": "21620"
+            }, {
+                "name": "Condensing unit, Replace",
+                "value": "21621"
+            }, {
+                "name": "Fan Coil Unit, Replace ",
+                "value": "21622"
+            }, {
+                "name": "Packaged rooftop unit, Replace.",
+                "value": "21623"
+            }, {
+                "name": "Make-up air unit, Replace",
+                "value": "21624"
+            }, {
+                "name": "VAV box, Replace",
+                "value": "21625"
+            }, {
+                "name": "Pump,  Replace",
+                "value": "21626"
+            }, {
+                "name": "Split-system Air handling Unit with Gas-fired Furnace, Replace",
+                "value": "21627"
+            }, {
+                "name": "Air Handling Unit, Overhaul",
+                "value": "21628"
+            }, {
+                "name": "Air Handling Unit, Replace",
+                "value": "21629"
+            }, {
+                "name": "Boiler, Overhaul",
+                "value": "21630"
+            }, {
+                "name": "Boiler, Replace",
+                "value": "21631"
+            }, {
+                "name": "Baseboard heater, Replace",
+                "value": "21632"
+            }, {
+                "name": "Heat Pump, Replace",
+                "value": "21633"
+            }, {
+                "name": "Packaged rooftop unit. Replace (Various capacities) ",
+                "value": "21978"
+            }, {
+                "name": "Packaged rooftop unit. Replace (2 tons) ",
+                "value": "21979"
+            }, {
+                "name": "Packaged rooftop unit. Replace (3 tons) ",
+                "value": "21980"
+            }, {
+                "name": "Packaged rooftop unit. Replace (4 tons) ",
+                "value": "21981"
+            }, {
+                "name": "Packaged rooftop unit. Replace (5 tons) ",
+                "value": "21982"
+            }, {
+                "name": "Packaged rooftop unit. Replace (6 tons) ",
+                "value": "21983"
+            }, {
+                "name": "Packaged rooftop unit. Replace (7.5 tons) ",
+                "value": "21984"
+            }, {
+                "name": "Packaged rooftop unit. Replace (10 tons) ",
+                "value": "21985"
+            }, {
+                "name": "Packaged rooftop unit. Replace (12.5 tons) ",
+                "value": "21986"
+            }, {
+                "name": "Packaged rooftop unit. Replace (15 tons) ",
+                "value": "21987"
+            }, {
+                "name": "Packaged rooftop unit. Replace (20 tons) ",
+                "value": "21988"
+            }, {
+                "name": "Packaged rooftop unit. Replace (25 tons) ",
+                "value": "21989"
+            }, {
+                "name": "Packaged rooftop unit. Replace (30 tons) ",
+                "value": "21990"
+            }, {
+                "name": "Packaged rooftop unit. Replace (40 tons) ",
+                "value": "21991"
+            }, {
+                "name": "Packaged rooftop unit. Replace (50 tons) ",
+                "value": "21992"
+            }, {
+                "name": "Packaged rooftop unit. Replace (70 tons) ",
+                "value": "21993"
+            }, {
+                "name": "Packaged rooftop unit. Replace (80 tons) ",
+                "value": "21994"
+            }, {
+                "name": "Packaged rooftop unit. Replace (90 tons) ",
+                "value": "21995"
+            }, {
+                "name": "Packaged rooftop unit. Replace (105 tons) ",
+                "value": "21996"
+            }, {
+                "name": "Rooftop air conditioner. Replace (4 tons) ",
+                "value": "21997"
+            }, {
+                "name": "Rooftop air conditioner. Replace (5 tons) ",
+                "value": "21998"
+            }, {
+                "name": "Rooftop air conditioner. Replace (6 tons) ",
+                "value": "21999"
+            }, {
+                "name": "Rooftop air conditioner. Replace (7.5 tons) ",
+                "value": "22000"
+            }, {
+                "name": "Rooftop air conditioner. Replace (8.5 tons) ",
+                "value": "22001"
+            }, {
+                "name": "Rooftop air conditioner. Replace (10 tons) ",
+                "value": "22002"
+            }, {
+                "name": "Rooftop air conditioner. Replace (12 tons) ",
+                "value": "22003"
+            }, {
+                "name": "Rooftop air conditioner. Replace (15 tons) ",
+                "value": "22004"
+            }, {
+                "name": "Rooftop air conditioner. Replace (18 tons) ",
+                "value": "22005"
+            }, {
+                "name": "Rooftop air conditioner. Replace (20 tons) ",
+                "value": "22006"
+            }, {
+                "name": "Rooftop air conditioner. Replace (25 tons) ",
+                "value": "22007"
+            }, {
+                "name": "Rooftop air conditioner. Replace (30 tons) ",
+                "value": "22008"
+            }, {
+                "name": "Rooftop air conditioner. Replace (40 tons) ",
+                "value": "22009"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (1 ton) ",
+                "value": "22010"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (1.5 ton) ",
+                "value": "22011"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (2 ton) ",
+                "value": "22012"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (2.5 ton) ",
+                "value": "22013"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (3 ton) ",
+                "value": "22014"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (3.5 ton) ",
+                "value": "22015"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (4 ton) ",
+                "value": "22016"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (5 ton) ",
+                "value": "22017"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (7.5 ton) ",
+                "value": "22018"
+            }, {
+                "name": "Fan Coil and Condensing Unit. Replace (10 ton) ",
+                "value": "22019"
+            }, {
+                "name": "Fan Coil Units. Replace (1/2 ton) ",
+                "value": "22020"
+            }, {
+                "name": "Fan Coil Units. Replace (3/4 ton) ",
+                "value": "22021"
+            }, {
+                "name": "Fan Coil Units. Replace (1 ton) ",
+                "value": "22022"
+            }, {
+                "name": "Fan Coil Units. Replace (1.5 ton) ",
+                "value": "22023"
+            }, {
+                "name": "Fan Coil Units. Replace (2 ton) ",
+                "value": "22024"
+            }, {
+                "name": "Fan Coil Units. Replace (2.5 ton) ",
+                "value": "22025"
+            }, {
+                "name": "Fan Coil Units. Replace (3 ton) ",
+                "value": "22026"
+            }, {
+                "name": "Fan Coil Units. Replace (3.5 ton) ",
+                "value": "22027"
+            }, {
+                "name": "Fan Coil Units. Replace (4 ton) ",
+                "value": "22028"
+            }, {
+                "name": "Fan Coil Units. Replace (5 ton) ",
+                "value": "22029"
+            }, {
+                "name": "Fan Coil Units. Replace (7.5 ton) ",
+                "value": "22030"
+            }, {
+                "name": "Fan Coil Units. Replace (10 ton) ",
+                "value": "22031"
+            }, {
+                "name": "Condensing units. Replace (2 tons) ",
+                "value": "22032"
+            }, {
+                "name": "Condensing units. Replace (2.5 tons) ",
+                "value": "22033"
+            }, {
+                "name": "Condensing units. Replace (3 tons) ",
+                "value": "22034"
+            }, {
+                "name": "Condensing units. Replace (3.5 tons) ",
+                "value": "22035"
+            }, {
+                "name": "Condensing units. Replace (4 tons) ",
+                "value": "22036"
+            }, {
+                "name": "Condensing units. Replace (5 tons) ",
+                "value": "22037"
+            }, {
+                "name": "Condensing units. Replace (7.5 tons) ",
+                "value": "22038"
+            }, {
+                "name": "Condensing units. Replace (8.5 tons) ",
+                "value": "22039"
+            }, {
+                "name": "Condensing units. Replace (10 tons) ",
+                "value": "22040"
+            }, {
+                "name": "Condensing units. Replace (11 tons) ",
+                "value": "22041"
+            }, {
+                "name": "Condensing units. Replace (15 tons) ",
+                "value": "22042"
+            }, {
+                "name": "Condensing units. Replace (20 tons) ",
+                "value": "22043"
+            }, {
+                "name": "Condensing units. Replace (25 tons) ",
+                "value": "22044"
+            }, {
+                "name": "Condensing units. Replace (30 tons) ",
+                "value": "22045"
+            }, {
+                "name": "Condensing units. Replace (40 tons) ",
+                "value": "22046"
+            }, {
+                "name": "Condensing units. Replace (50 tons) ",
+                "value": "22047"
+            }, {
+                "name": "Condensing units. Replace (60 tons) ",
+                "value": "22048"
+            }, {
+                "name": "Condensing units. Replace (75 tons) ",
+                "value": "22049"
+            }, {
+                "name": "Condensing units. Replace (80 tons) ",
+                "value": "22050"
+            }, {
+                "name": "Condensing units. Replace (100 tons) ",
+                "value": "22051"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 1.5 tons) ",
+                "value": "22052"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 2 tons) ",
+                "value": "22053"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 2.5 tons) ",
+                "value": "22054"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 3 tons) ",
+                "value": "22055"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 3.5 tons) ",
+                "value": "22056"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 4 tons) ",
+                "value": "22057"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 5 tons) ",
+                "value": "22058"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 7.5 tons) ",
+                "value": "22059"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 10 tons) ",
+                "value": "22060"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 15 tons) ",
+                "value": "22061"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 20 tons) ",
+                "value": "22062"
+            }, {
+                "name": "Heat Pumps. Replace (Air-Source, 25 tons) ",
+                "value": "22063"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 1 ton) ",
+                "value": "22064"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 1.5 ton) ",
+                "value": "22065"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 2 ton) ",
+                "value": "22066"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 2.5 ton) ",
+                "value": "22067"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 3 ton) ",
+                "value": "22068"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 3.5 ton) ",
+                "value": "22069"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 4 ton) ",
+                "value": "22070"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 5 ton) ",
+                "value": "22071"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 7.5 ton) ",
+                "value": "22072"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 8.5 ton) ",
+                "value": "22073"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 10 ton) ",
+                "value": "22074"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 15 ton) ",
+                "value": "22075"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 20 ton) ",
+                "value": "22076"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 25 ton) ",
+                "value": "22077"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 30 ton) ",
+                "value": "22078"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 40 ton) ",
+                "value": "22079"
+            }, {
+                "name": "Heat Pumps. Replace (Water Source, 50 ton) ",
+                "value": "22080"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (5,000 BTUH) ",
+                "value": "22081"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (6,000 BTUH) ",
+                "value": "22082"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (8,000 BTUH) ",
+                "value": "22083"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (10,000 BTUH) ",
+                "value": "22084"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (12,000 BTUH) ",
+                "value": "22085"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (17,000 BTUH) ",
+                "value": "22086"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (25,000 BTUH) ",
+                "value": "22087"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace (29,000 BTUH) ",
+                "value": "22088"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (0.5 ton) ",
+                "value": "22089"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (0.75 ton) ",
+                "value": "22090"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (1 ton) ",
+                "value": "22091"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (1.25 ton) ",
+                "value": "22092"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (1.5 ton) ",
+                "value": "22093"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (2 ton) ",
+                "value": "22094"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (2.5 ton) ",
+                "value": "22095"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (3 ton) ",
+                "value": "22096"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (3.5 ton) ",
+                "value": "22097"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC). Replace (4 ton) ",
+                "value": "22098"
+            }, {
+                "name": "Electric baseboard heater. Replace (2 ft.) ",
+                "value": "22099"
+            }, {
+                "name": "Electric baseboard heater. Replace (3 ft.) ",
+                "value": "22100"
+            }, {
+                "name": "Electric baseboard heater. Replace (4 ft.) ",
+                "value": "22101"
+            }, {
+                "name": "Electric baseboard heater. Replace (5 ft.) ",
+                "value": "22102"
+            }, {
+                "name": "Electric baseboard heater. Replace (6 ft.) ",
+                "value": "22103"
+            }, {
+                "name": "Electric baseboard heater. Replace (7 ft.) ",
+                "value": "22104"
+            }, {
+                "name": "Electric baseboard heater. Replace (8 ft.) ",
+                "value": "22105"
+            }, {
+                "name": "Electric baseboard heater. Replace (9 ft.) ",
+                "value": "22106"
+            }, {
+                "name": "Electric baseboard heater. Replace (10 ft.) ",
+                "value": "22107"
+            }, {
+                "name": "Chiller. Replace (Centrifugal, 400 ton) ",
+                "value": "22108"
+            }, {
+                "name": "Chiller. Replace (Centrifugal, 1000 ton) ",
+                "value": "22109"
+            }, {
+                "name": "Chiller. Replace (Centrifugal, 1300 ton) ",
+                "value": "22110"
+            }, {
+                "name": "Chiller. Replace (Centrifugal, 1500 ton) ",
+                "value": "22111"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 15 ton) ",
+                "value": "22112"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 20 ton) ",
+                "value": "22113"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 25 ton) ",
+                "value": "22114"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 30 ton) ",
+                "value": "22115"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 40 ton) ",
+                "value": "22116"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 50 ton) ",
+                "value": "22117"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 60 ton) ",
+                "value": "22118"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 70 ton) ",
+                "value": "22119"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 80 ton) ",
+                "value": "22120"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 90 ton) ",
+                "value": "22121"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 100 ton) ",
+                "value": "22122"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 110 ton) ",
+                "value": "22123"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 120 ton) ",
+                "value": "22124"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 140 ton) ",
+                "value": "22125"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Water cooled, 160 ton) ",
+                "value": "22126"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 70 ton) ",
+                "value": "22127"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 90 ton) ",
+                "value": "22128"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 100 ton) ",
+                "value": "22129"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 110 ton) ",
+                "value": "22130"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 130 ton) ",
+                "value": "22131"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 150 ton) ",
+                "value": "22132"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 175 ton) ",
+                "value": "22133"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 190 ton) ",
+                "value": "22134"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 210 ton) ",
+                "value": "22135"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 240 ton) ",
+                "value": "22136"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 270 ton) ",
+                "value": "22137"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 300 ton) ",
+                "value": "22138"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 330 ton) ",
+                "value": "22139"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 360 ton) ",
+                "value": "22140"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 390 ton) ",
+                "value": "22141"
+            }, {
+                "name": "Chiller. Replace (Reciprocating, Air Cooled, 420 ton) ",
+                "value": "22142"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 122 MBH) ",
+                "value": "22143"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 163 MBH) ",
+                "value": "22144"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 203 MBH) ",
+                "value": "22145"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 240 MBH) ",
+                "value": "22146"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 280 MBH) ",
+                "value": "22147"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 320 MBH) ",
+                "value": "22148"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 360 MBH) ",
+                "value": "22149"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 400 MBH) ",
+                "value": "22150"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 440 MBH) ",
+                "value": "22151"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 544 MBH) ",
+                "value": "22152"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 765 MBH) ",
+                "value": "22153"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,088 MBH) ",
+                "value": "22154"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,275 MBH) ",
+                "value": "22155"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 1,530 MBH) ",
+                "value": "22156"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,000 MBH) ",
+                "value": "22157"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,312 MBH) ",
+                "value": "22158"
+            }, {
+                "name": "Boiler. Replace (Gas-fired, Cast iron, 2,856 MBH) ",
+                "value": "22159"
+            }, {
+                "name": "Cooling tower. Replace (57 ton) ",
+                "value": "22160"
+            }, {
+                "name": "Cooling tower. Replace (61 ton) ",
+                "value": "22161"
+            }, {
+                "name": "Cooling tower. Replace (91 ton) ",
+                "value": "22162"
+            }, {
+                "name": "Cooling tower. Replace (100 ton) ",
+                "value": "22163"
+            }, {
+                "name": "Cooling tower. Replace (111 ton) ",
+                "value": "22164"
+            }, {
+                "name": "Cooling tower. Replace (115 ton) ",
+                "value": "22165"
+            }, {
+                "name": "Cooling tower. Replace (126 ton) ",
+                "value": "22166"
+            }, {
+                "name": "Cooling tower. Replace (131 ton) ",
+                "value": "22167"
+            }, {
+                "name": "Cooling tower. Replace (162 ton) ",
+                "value": "22168"
+            }, {
+                "name": "Cooling tower. Replace (167 ton) ",
+                "value": "22169"
+            }, {
+                "name": "Cooling tower. Replace (297 ton) ",
+                "value": "22170"
+            }, {
+                "name": "Cooling tower. Replace (582 ton) ",
+                "value": "22171"
+            }, {
+                "name": "Cooling tower. Replace (849 ton) ",
+                "value": "22172"
+            }, {
+                "name": "Cooling tower. Replace (1016 ton) ",
+                "value": "22173"
+            }, {
+                "name": "Air Handling Unit. Replace (3,000 CFM) ",
+                "value": "22174"
+            }, {
+                "name": "Air Handling Unit. Replace (3,200 CFM) ",
+                "value": "22175"
+            }, {
+                "name": "Air Handling Unit. Replace (4,000 CFM) ",
+                "value": "22176"
+            }, {
+                "name": "Air Handling Unit. Replace (4,400 CFM) ",
+                "value": "22177"
+            }, {
+                "name": "Air Handling Unit. Replace (6,000 CFM) ",
+                "value": "22178"
+            }, {
+                "name": "Air Handling Unit. Replace (7,000 CFM) ",
+                "value": "22179"
+            }, {
+                "name": "Air Handling Unit. Replace (10,000 CFM) ",
+                "value": "22180"
+            }, {
+                "name": "Air Handling Unit. Replace (12,000 CFM) ",
+                "value": "22181"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 45 MBH) ",
+                "value": "22182"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 60 MBH) ",
+                "value": "22183"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 75 MBH) ",
+                "value": "22184"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 100 MBH) ",
+                "value": "22185"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 125 MBH) ",
+                "value": "22186"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 150 MBH) ",
+                "value": "22187"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 200 MBH) ",
+                "value": "22188"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 300 MBH) ",
+                "value": "22189"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, 400 MBH) ",
+                "value": "22190"
+            }, {
+                "name": "Make-up air unit. Replace (2,000 CFM) ",
+                "value": "22191"
+            }, {
+                "name": "Make-up air unit. Replace (3,000 CFM) ",
+                "value": "22192"
+            }, {
+                "name": "Make-up air unit. Replace (4,000 CFM) ",
+                "value": "22193"
+            }, {
+                "name": "Make-up air unit. Replace (6,000 CFM) ",
+                "value": "22194"
+            }, {
+                "name": "Make-up air unit. Replace (8,000 CFM) ",
+                "value": "22195"
+            }, {
+                "name": "Make-up air unit. Replace (10,000 CFM) ",
+                "value": "22196"
+            }, {
+                "name": "Make-up air unit. Replace (12,000 CFM) ",
+                "value": "22197"
+            }, {
+                "name": "Make-up air unit. Replace (14,000 CFM) ",
+                "value": "22198"
+            }, {
+                "name": "Make-up air unit. Replace (18,000 CFM) ",
+                "value": "22199"
+            }, {
+                "name": "Make-up air unit. Replace (20,000 CFM) ",
+                "value": "22200"
+            }, {
+                "name": "Make-up air unit. Replace (24,000 CFM) ",
+                "value": "22201"
+            }, {
+                "name": "Make-up air unit. Replace (30,000 CFM) ",
+                "value": "22202"
+            }, {
+                "name": "Make-up air unit. Replace (35,000 CFM) ",
+                "value": "22203"
+            }, {
+                "name": "Make-up air unit. Replace (40,000 CFM) ",
+                "value": "22204"
+            }, {
+                "name": "Make-up air unit. Replace (45,000 CFM) ",
+                "value": "22205"
+            }, {
+                "name": "Make-up air unit. Replace (50,000 CFM) ",
+                "value": "22206"
+            }, {
+                "name": "Make-up air unit. Replace (55,000 CFM) ",
+                "value": "22207"
+            }, {
+                "name": "Make-up air unit. Replace (60,000 CFM) ",
+                "value": "22208"
+            }, {
+                "name": "Make-up air unit. Replace (65,000 CFM) ",
+                "value": "22209"
+            }, {
+                "name": "Make-up air unit. Replace (75,000 CFM) ",
+                "value": "22210"
+            }, {
+                "name": "",
+                "value": "22211"
+            }, {
+                "name": "VAV box replacement",
+                "value": "22855"
+            }, {
+                "name": "Through wall unit replacement",
+                "value": "22857"
+            }, {
+                "name": "PTAC unit replacement, with sleeve",
+                "value": "22858"
+            }, {
+                "name": "PTAC unit replacement",
+                "value": "22859"
+            }, {
+                "name": "Partial HVAC unit replacement",
+                "value": "22860"
+            }, {
+                "name": "HVAC unit replacement, per ton",
+                "value": "22861"
+            }, {
+                "name": "HVAC unit replacement",
+                "value": "22862"
+            }, {
+                "name": "HVAC condenser replacement - 3-4 ton",
+                "value": "22863"
+            }, {
+                "name": "HVAC condenser replacement - 1-2 ton",
+                "value": "22864"
+            }, {
+                "name": "HVAC component replacement",
+                "value": "22865"
+            }, {
+                "name": "Cooling tower replacement",
+                "value": "22866"
+            }, {
+                "name": "Cooling tower recoring",
+                "value": "22867"
+            }, {
+                "name": "Chiller replacement",
+                "value": "22868"
+            }, {
+                "name": "Boiler retubing",
+                "value": "22869"
+            }, {
+                "name": "Boiler replacement - small oil fired",
+                "value": "22870"
+            }, {
+                "name": "Boiler replacement - small gas fired",
+                "value": "22871"
+            }, {
+                "name": "Boiler replacement - per BTUH",
+                "value": "22872"
+            }, {
+                "name": "Boiler replacement - large oil fired",
+                "value": "22873"
+            }, {
+                "name": "Boiler replacement - large gas fired",
+                "value": "22874"
+            }, {
+                "name": "Boiler replacement - large commercial gas fired",
+                "value": "22875"
+            }, {
+                "name": "Boiler replacement",
+                "value": "22876"
+            }, {
+                "name": "Apartment furnace replacement",
+                "value": "22877"
+            }, {
+                "name": "Air-handler replacement/refurbishment",
+                "value": "22878"
+            }, {
+                "name": "Insulation ",
+                "value": "23178"
+            }, {
+                "name": "Space heaters ",
+                "value": "23179"
+            }, {
+                "name": "VAV boxes ",
+                "value": "23180"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "23181"
+            }, {
+                "name": "Common Area HVAC 5-ton ",
+                "value": "23182"
+            }, {
+                "name": "Rooftop units ",
+                "value": "23183"
+            }, {
+                "name": "Fan coil units ",
+                "value": "23184"
+            }, {
+                "name": "Packaged terminal air conditioner ",
+                "value": "23185"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "23186"
+            }, {
+                "name": "Condensers ",
+                "value": "23187"
+            }, {
+                "name": "Boilers - gas-fired, steel ",
+                "value": "23188"
+            }, {
+                "name": "Cooling towers ",
+                "value": "23189"
+            }, {
+                "name": "Boilers - oil-fired, steel ",
+                "value": "23190"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "23191"
+            }, {
+                "name": "Make-up air units ",
+                "value": "23192"
+            }, {
+                "name": "Fans ",
+                "value": "23193"
+            }, {
+                "name": "Unit heaters ",
+                "value": "23194"
+            }, {
+                "name": "Room Area HVAC PTAC 1-ton ",
+                "value": "23195"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "23196"
+            }, {
+                "name": "Air handling units ",
+                "value": "23197"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "23198"
+            }, {
+                "name": "Chillers ",
+                "value": "23199"
+            }, {
+                "name": "Boilers - gas-fired, cast iron ",
+                "value": "23200"
+            }, {
+                "name": "Condensing units ",
+                "value": "23201"
+            }, {
+                "name": "Boilers - oil-fired, cast iron ",
+                "value": "23202"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "23203"
+            }, {
+                "name": "Furnaces ",
+                "value": "23204"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "90002255"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "90002257"
+            }, {
+                "name": "Insulation ",
+                "value": "90004124"
+            }, {
+                "name": "Space heaters ",
+                "value": "90004125"
+            }, {
+                "name": "VAV boxes ",
+                "value": "90004126"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "90004127"
+            }, {
+                "name": "Common Area HVAC 5-ton ",
+                "value": "90004128"
+            }, {
+                "name": "Rooftop units ",
+                "value": "90004129"
+            }, {
+                "name": "Fan coil units ",
+                "value": "90004130"
+            }, {
+                "name": "Packaged terminal air conditioner ",
+                "value": "90004131"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "90004132"
+            }, {
+                "name": "Condensers ",
+                "value": "90004133"
+            }, {
+                "name": "Boilers - gas-fired, steel ",
+                "value": "90004134"
+            }, {
+                "name": "Cooling towers ",
+                "value": "90004135"
+            }, {
+                "name": "Boilers - oil-fired, steel ",
+                "value": "90004136"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "90004137"
+            }, {
+                "name": "Make-up air units ",
+                "value": "90004138"
+            }, {
+                "name": "Fans ",
+                "value": "90004139"
+            }, {
+                "name": "Unit heaters ",
+                "value": "90004140"
+            }, {
+                "name": "Room Area HVAC PTAC 1-ton ",
+                "value": "90004141"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "90004142"
+            }, {
+                "name": "Air handling units ",
+                "value": "90004143"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "90004144"
+            }, {
+                "name": "Chillers ",
+                "value": "90004145"
+            }, {
+                "name": "Boilers - gas-fired, cast iron ",
+                "value": "90004146"
+            }, {
+                "name": "Condensing units ",
+                "value": "90004147"
+            }, {
+                "name": "Boilers - oil-fired, cast iron ",
+                "value": "90004148"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "90004149"
+            }, {
+                "name": "Furnaces ",
+                "value": "90004150"
+            }, {
+                "name": "Insulation ",
+                "value": "90006620"
+            }, {
+                "name": "Space heaters ",
+                "value": "90006621"
+            }, {
+                "name": "VAV boxes ",
+                "value": "90006622"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "90006623"
+            }, {
+                "name": "Common Area HVAC 5-ton ",
+                "value": "90006624"
+            }, {
+                "name": "Rooftop units ",
+                "value": "90006625"
+            }, {
+                "name": "Fan coil units ",
+                "value": "90006626"
+            }, {
+                "name": "Packaged terminal air conditioner ",
+                "value": "90006627"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "90006628"
+            }, {
+                "name": "Condensers ",
+                "value": "90006629"
+            }, {
+                "name": "Boilers - gas-fired, steel ",
+                "value": "90006630"
+            }, {
+                "name": "Cooling towers ",
+                "value": "90006631"
+            }, {
+                "name": "Boilers - oil-fired, steel ",
+                "value": "90006632"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "90006633"
+            }, {
+                "name": "Make-up air units ",
+                "value": "90006634"
+            }, {
+                "name": "Fans ",
+                "value": "90006635"
+            }, {
+                "name": "Unit heaters ",
+                "value": "90006636"
+            }, {
+                "name": "Room Area HVAC PTAC 1-ton ",
+                "value": "90006637"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "90006638"
+            }, {
+                "name": "Air handling units ",
+                "value": "90006639"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "90006640"
+            }, {
+                "name": "Chillers ",
+                "value": "90006641"
+            }, {
+                "name": "Boilers - gas-fired, cast iron ",
+                "value": "90006642"
+            }, {
+                "name": "Condensing units ",
+                "value": "90006643"
+            }, {
+                "name": "Boilers - oil-fired, cast iron ",
+                "value": "90006644"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "90006645"
+            }, {
+                "name": "Furnaces ",
+                "value": "90006646"
+            }, {
+                "name": "Insulation ",
+                "value": "90006897"
+            }, {
+                "name": "Space heaters ",
+                "value": "90006898"
+            }, {
+                "name": "VAV boxes ",
+                "value": "90006899"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet ",
+                "value": "90006900"
+            }, {
+                "name": "Common Area HVAC 5-ton ",
+                "value": "90006901"
+            }, {
+                "name": "Rooftop units ",
+                "value": "90006902"
+            }, {
+                "name": "Fan coil units ",
+                "value": "90006903"
+            }, {
+                "name": "Packaged terminal air conditioner ",
+                "value": "90006904"
+            }, {
+                "name": "Boilers - electric ",
+                "value": "90006905"
+            }, {
+                "name": "Condensers ",
+                "value": "90006906"
+            }, {
+                "name": "Boilers - gas-fired, steel ",
+                "value": "90006907"
+            }, {
+                "name": "Cooling towers ",
+                "value": "90006908"
+            }, {
+                "name": "Boilers - oil-fired, steel ",
+                "value": "90006909"
+            }, {
+                "name": "Pumps - condensate return ",
+                "value": "90006910"
+            }, {
+                "name": "Make-up air units ",
+                "value": "90006911"
+            }, {
+                "name": "Fans ",
+                "value": "90006912"
+            }, {
+                "name": "Unit heaters ",
+                "value": "90006913"
+            }, {
+                "name": "Room Area HVAC PTAC 1-ton ",
+                "value": "90006914"
+            }, {
+                "name": "Heat exchanger ",
+                "value": "90006915"
+            }, {
+                "name": "Air handling units",
+                "value": "90006916"
+            }, {
+                "name": "Heat Pumps ",
+                "value": "90006917"
+            }, {
+                "name": "Chillers ",
+                "value": "90006918"
+            }, {
+                "name": "Boilers - gas-fired, cast iron  (per 1000 BTU input)",
+                "value": "90006919"
+            }, {
+                "name": "Condensing units ",
+                "value": "90006920"
+            }, {
+                "name": "Boilers - oil-fired, cast iron ",
+                "value": "90006921"
+            }, {
+                "name": "Pumps - circulating ",
+                "value": "90006922"
+            }, {
+                "name": "Furnaces ",
+                "value": "90006923"
+            }, {
+                "name": "Exterior air source heat pump. Replace (per ton)",
+                "value": "90007823"
+            }, {
+                "name": "Window/Through-wall AC. Replace",
+                "value": "90007824"
+            }, {
+                "name": "PTAC unit. Replace",
+                "value": "90007825"
+            }, {
+                "name": "Air-cooled chiller. Replace (per ton)",
+                "value": "90007826"
+            }, {
+                "name": "Water-cooled chiller. Replace (per ton)",
+                "value": "90007827"
+            }, {
+                "name": "Chiller. Rebuild (per ton)",
+                "value": "90007828"
+            }, {
+                "name": "Boiler. Replace gas-fired. (per MBH)",
+                "value": "90007829"
+            }, {
+                "name": "Rooftop-mounted cooling tower. Replace (per ton)",
+                "value": "90007830"
+            }, {
+                "name": "Surface-mounted cooling tower. Replace (per ton)",
+                "value": "90007831"
+            }, {
+                "name": "Cooling tower. Replace components (per ton)",
+                "value": "90007832"
+            }, {
+                "name": "Air handling unit. Replace (per 1,000 CFM)",
+                "value": "90007833"
+            }, {
+                "name": "Water source heat pumps.  Replace (per ton)",
+                "value": "90007834"
+            }, {
+                "name": "Circulating pumps.  Replace",
+                "value": "90007835"
+            }, {
+                "name": "",
+                "value": "90007836"
+            }, {
+                "name": "Condensing unit. Replace (per ton)",
+                "value": "90007837"
+            }, {
+                "name": "Fan coil and condensing unit. Replace (per ton)",
+                "value": "90007838"
+            }, {
+                "name": "Fan coil unit. Replace (per ton)",
+                "value": "90007839"
+            }, {
+                "name": "Furnace. Replace gas-fired. (per MBH)",
+                "value": "90007840"
+            }, {
+                "name": "Make-up air unit. Replace (per 1,000 CFM)",
+                "value": "90007841"
+            }, {
+                "name": "Large capacity packaged rooftop unit. Replace components (per ton)",
+                "value": "90007842"
+            }, {
+                "name": "Large capacity packaged rooftop unit. Replace (per ton)",
+                "value": "90007843"
+            }, {
+                "name": "Small capacity packaged rooftop unit. Replace (per ton)",
+                "value": "90007844"
+            }, {
+                "name": "Packaged rooftop unit, Replace",
+                "value": "90008943"
+            }, {
+                "name": "Large Packaged rooftop unit, Replace",
+                "value": "90008944"
+            }, {
+                "name": "Fan Coil Units, Replace ",
+                "value": "90008945"
+            }, {
+                "name": "Condensing units, Replace",
+                "value": "90008946"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC), Replace",
+                "value": "90008947"
+            }, {
+                "name": "Window/Through-wall Air Conditioner, Replace ",
+                "value": "90008948"
+            }, {
+                "name": "Baseboard heater, Replace",
+                "value": "90008949"
+            }, {
+                "name": "Chiller, Replace",
+                "value": "90008950"
+            }, {
+                "name": "Boiler, Replace",
+                "value": "90008951"
+            }, {
+                "name": "Cooling tower, Replace",
+                "value": "90008952"
+            }, {
+                "name": "Air Handling Unit, Replace",
+                "value": "90008953"
+            }, {
+                "name": "Large Air Handling Unit, Refurbish",
+                "value": "90008954"
+            }, {
+                "name": "Split-system Air handling Unit with Gas-fired Furnace, Replace",
+                "value": "90008955"
+            }, {
+                "name": "Pump, Replace",
+                "value": "90008956"
+            }, {
+                "name": "VAV box, Replace",
+                "value": "90008957"
+            }, {
+                "name": "Make-up air unit, Replace",
+                "value": "90008958"
+            }, {
+                "name": "Exhaust/Ventilation fan, Replace",
+                "value": "90008959"
+            }, {
+                "name": "Space heater, Replace ",
+                "value": "90008960"
+            }, {
+                "name": "VAV boxes, Replace ",
+                "value": "90008961"
+            }, {
+                "name": "Fan coil units, Replace ",
+                "value": "90008962"
+            }, {
+                "name": "Heat exchanger, Replace ",
+                "value": "90008963"
+            }, {
+                "name": "Air handling units, Replace",
+                "value": "90008964"
+            }, {
+                "name": "Chiller, Replace",
+                "value": "90008965"
+            }, {
+                "name": "Pump, Replace",
+                "value": "90008966"
+            }, {
+                "name": "Insulation, Install ",
+                "value": "90008967"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90014946"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90014947"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90014948"
+            }, {
+                "name": "HVAC unit replacement",
+                "value": "90015059"
+            }, {
+                "name": "Partial HVAC unit replacement",
+                "value": "90015060"
+            }, {
+                "name": "HVAC unit replacement, per ton",
+                "value": "90015061"
+            }, {
+                "name": "HVAC condenser replacement - 1-2 ton",
+                "value": "90015062"
+            }, {
+                "name": "HVAC condenser replacement - 3-4 ton",
+                "value": "90015063"
+            }, {
+                "name": "HVAC component replacement",
+                "value": "90015064"
+            }, {
+                "name": "Through wall unit replacement",
+                "value": "90015065"
+            }, {
+                "name": "PTAC unit replacement",
+                "value": "90015066"
+            }, {
+                "name": "PTAC unit replacement, with sleeve",
+                "value": "90015067"
+            }, {
+                "name": "VAV box replacement",
+                "value": "90015068"
+            }, {
+                "name": "Air-handler replacement/refurbishment",
+                "value": "90015069"
+            }, {
+                "name": "Apartment furnace replacement",
+                "value": "90015070"
+            }, {
+                "name": "Boiler replacement - per BTUH",
+                "value": "90015071"
+            }, {
+                "name": "Boiler replacement - small oil fired",
+                "value": "90015072"
+            }, {
+                "name": "Boiler replacement - small gas fired",
+                "value": "90015073"
+            }, {
+                "name": "Boiler replacement - large oil fired",
+                "value": "90015074"
+            }, {
+                "name": "Boiler replacement - large gas fired",
+                "value": "90015075"
+            }, {
+                "name": "Boiler replacement - large commercial gas fired",
+                "value": "90015076"
+            }, {
+                "name": "Boiler retubing",
+                "value": "90015077"
+            }, {
+                "name": "Boiler replacement",
+                "value": "90015078"
+            }, {
+                "name": "Cooling tower replacement",
+                "value": "90015079"
+            }, {
+                "name": "Cooling tower recoring",
+                "value": "90015080"
+            }, {
+                "name": "Chiller replacement",
+                "value": "90015081"
+            }, {
+                "name": "Other",
+                "value": "90015082"
+            }, {
+                "name": "HVAC unit replacement",
+                "value": "90015272"
+            }, {
+                "name": "Partial HVAC unit replacement",
+                "value": "90015273"
+            }, {
+                "name": "HVAC unit replacement, per ton",
+                "value": "90015274"
+            }, {
+                "name": "HVAC condenser replacement - 1-2 ton",
+                "value": "90015275"
+            }, {
+                "name": "HVAC condenser replacement - 3-4 ton",
+                "value": "90015276"
+            }, {
+                "name": "HVAC component replacement",
+                "value": "90015277"
+            }, {
+                "name": "Through wall unit replacement",
+                "value": "90015278"
+            }, {
+                "name": "PTAC unit replacement",
+                "value": "90015279"
+            }, {
+                "name": "PTAC unit replacement, with sleeve",
+                "value": "90015280"
+            }, {
+                "name": "VAV box replacement",
+                "value": "90015281"
+            }, {
+                "name": "Air-handler replacement/refurbishment",
+                "value": "90015282"
+            }, {
+                "name": "Apartment furnace replacement",
+                "value": "90015283"
+            }, {
+                "name": "Boiler replacement - per BTUH",
+                "value": "90015284"
+            }, {
+                "name": "Boiler replacement - small oil fired",
+                "value": "90015285"
+            }, {
+                "name": "Boiler replacement - small gas fired",
+                "value": "90015286"
+            }, {
+                "name": "Boiler replacement - large oil fired",
+                "value": "90015287"
+            }, {
+                "name": "Boiler replacement - large gas fired",
+                "value": "90015288"
+            }, {
+                "name": "Boiler replacement - large commercial gas fired",
+                "value": "90015289"
+            }, {
+                "name": "Boiler retubing",
+                "value": "90015290"
+            }, {
+                "name": "Boiler replacement",
+                "value": "90015291"
+            }, {
+                "name": "Cooling tower replacement",
+                "value": "90015292"
+            }, {
+                "name": "Cooling tower recoring",
+                "value": "90015293"
+            }, {
+                "name": "Chiller replacement",
+                "value": "90015294"
+            }, {
+                "name": "Other",
+                "value": "90015295"
+            }, {
+                "name": "",
+                "value": "90015510"
+            }, {
+                "name": "HVAC unit replacement",
+                "value": "90015826"
+            }, {
+                "name": "Partial HVAC unit replacement",
+                "value": "90015827"
+            }, {
+                "name": "HVAC unit replacement, per ton",
+                "value": "90015828"
+            }, {
+                "name": "HVAC condenser replacement - 1-2 ton",
+                "value": "90015829"
+            }, {
+                "name": "HVAC condenser replacement - 3-4 ton",
+                "value": "90015830"
+            }, {
+                "name": "HVAC component replacement",
+                "value": "90015831"
+            }, {
+                "name": "Through wall unit replacement",
+                "value": "90015832"
+            }, {
+                "name": "PTAC unit replacement",
+                "value": "90015833"
+            }, {
+                "name": "PTAC unit replacement, with sleeve",
+                "value": "90015834"
+            }, {
+                "name": "VAV box replacement",
+                "value": "90015835"
+            }, {
+                "name": "Air-handler replacement/refurbishment",
+                "value": "90015836"
+            }, {
+                "name": "Apartment furnace replacement",
+                "value": "90015837"
+            }, {
+                "name": "Boiler replacement - per BTUH",
+                "value": "90015838"
+            }, {
+                "name": "Boiler replacement - small oil fired",
+                "value": "90015839"
+            }, {
+                "name": "Boiler replacement - small gas fired",
+                "value": "90015840"
+            }, {
+                "name": "Boiler replacement - large oil fired",
+                "value": "90015841"
+            }, {
+                "name": "Boiler replacement - large gas fired",
+                "value": "90015842"
+            }, {
+                "name": "Boiler replacement - large commercial gas fired",
+                "value": "90015843"
+            }, {
+                "name": "Boiler retubing",
+                "value": "90015844"
+            }, {
+                "name": "Boiler replacement",
+                "value": "90015845"
+            }, {
+                "name": "Cooling tower replacement",
+                "value": "90015846"
+            }, {
+                "name": "Cooling tower recoring",
+                "value": "90015847"
+            }, {
+                "name": "Chiller replacement",
+                "value": "90015848"
+            }, {
+                "name": "Other",
+                "value": "90015849"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90016070"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90016071"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90016072"
+            }, {
+                "name": "",
+                "value": "90016303"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90016592"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90016593"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90016594"
+            }, {
+                "name": "",
+                "value": "90016825"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90017427"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90017428"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90017429"
+            }, {
+                "name": "",
+                "value": "90017660"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90017949"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90017950"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90017951"
+            }, {
+                "name": "",
+                "value": "90018182"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90018972"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90018973"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90018974"
+            }, {
+                "name": "",
+                "value": "90019205"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90020918"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90020919"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90020920"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90020921"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90020922"
+            }, {
+                "name": "Furnaces",
+                "value": "90020923"
+            }, {
+                "name": "Make-up air units",
+                "value": "90020924"
+            }, {
+                "name": "Space heaters",
+                "value": "90020925"
+            }, {
+                "name": "Unit heaters",
+                "value": "90020926"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90020927"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90020928"
+            }, {
+                "name": "Rooftop units",
+                "value": "90020929"
+            }, {
+                "name": "Air handling units",
+                "value": "90020930"
+            }, {
+                "name": "Fan coil units",
+                "value": "90020931"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90020932"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90020933"
+            }, {
+                "name": "Chillers- Water chilled- 40-60 tons",
+                "value": "90020934"
+            }, {
+                "name": "Chillers- Water chilled- 70-180 tons",
+                "value": "90020935"
+            }, {
+                "name": "Condensers- 3 ton",
+                "value": "90020936"
+            }, {
+                "name": "Condensers- 5 ton",
+                "value": "90020937"
+            }, {
+                "name": "Condensing units",
+                "value": "90020938"
+            }, {
+                "name": "Cooling towers- 10- 40 tons",
+                "value": "90020939"
+            }, {
+                "name": "Cooling towers- 100-300 tons",
+                "value": "90020940"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90020941"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90020942"
+            }, {
+                "name": "Insulation",
+                "value": "90020943"
+            }, {
+                "name": "Fans",
+                "value": "90020944"
+            }, {
+                "name": "VAV boxes",
+                "value": "90020945"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90021327"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90021328"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90021329"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90021330"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90021331"
+            }, {
+                "name": "Furnaces",
+                "value": "90021332"
+            }, {
+                "name": "Make-up air units",
+                "value": "90021333"
+            }, {
+                "name": "Space heaters",
+                "value": "90021334"
+            }, {
+                "name": "Unit heaters",
+                "value": "90021335"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90021336"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90021337"
+            }, {
+                "name": "Rooftop units",
+                "value": "90021338"
+            }, {
+                "name": "Air handling units",
+                "value": "90021339"
+            }, {
+                "name": "Fan coil units",
+                "value": "90021340"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90021341"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90021342"
+            }, {
+                "name": "Chillers",
+                "value": "90021343"
+            }, {
+                "name": "Condensers",
+                "value": "90021344"
+            }, {
+                "name": "Condensing units",
+                "value": "90021345"
+            }, {
+                "name": "Cooling towers",
+                "value": "90021346"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90021347"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90021348"
+            }, {
+                "name": "Insulation",
+                "value": "90021349"
+            }, {
+                "name": "Fans",
+                "value": "90021350"
+            }, {
+                "name": "VAV boxes",
+                "value": "90021351"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90021634"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90021635"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90021636"
+            }, {
+                "name": "",
+                "value": "90021867"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "90022529"
+            }, {
+                "name": "Heating System (FAUs)",
+                "value": "90022530"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "90022531"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90022885"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90022886"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90022887"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90022888"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90022889"
+            }, {
+                "name": "Furnaces",
+                "value": "90022890"
+            }, {
+                "name": "Make-up air units",
+                "value": "90022891"
+            }, {
+                "name": "Space heaters",
+                "value": "90022892"
+            }, {
+                "name": "Unit heaters",
+                "value": "90022893"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90022894"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90022895"
+            }, {
+                "name": "Rooftop units",
+                "value": "90022896"
+            }, {
+                "name": "Air handling units",
+                "value": "90022897"
+            }, {
+                "name": "Fan coil units",
+                "value": "90022898"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90022899"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90022900"
+            }, {
+                "name": "Chillers",
+                "value": "90022901"
+            }, {
+                "name": "Condensers",
+                "value": "90022902"
+            }, {
+                "name": "Condensing units",
+                "value": "90022903"
+            }, {
+                "name": "Cooling towers",
+                "value": "90022904"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90022905"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90022906"
+            }, {
+                "name": "Insulation",
+                "value": "90022907"
+            }, {
+                "name": "Fans",
+                "value": "90022908"
+            }, {
+                "name": "VAV boxes",
+                "value": "90022909"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90023112"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90023113"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90023114"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90023115"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90023116"
+            }, {
+                "name": "Furnaces",
+                "value": "90023117"
+            }, {
+                "name": "Make-up air units",
+                "value": "90023118"
+            }, {
+                "name": "Space heaters",
+                "value": "90023119"
+            }, {
+                "name": "Unit heaters",
+                "value": "90023120"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90023121"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90023122"
+            }, {
+                "name": "Rooftop units",
+                "value": "90023123"
+            }, {
+                "name": "Air handling units",
+                "value": "90023124"
+            }, {
+                "name": "Fan coil units",
+                "value": "90023125"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90023126"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90023127"
+            }, {
+                "name": "Chillers",
+                "value": "90023128"
+            }, {
+                "name": "Condensers",
+                "value": "90023129"
+            }, {
+                "name": "Condensing units",
+                "value": "90023130"
+            }, {
+                "name": "Cooling towers",
+                "value": "90023131"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90023132"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90023133"
+            }, {
+                "name": "Insulation",
+                "value": "90023134"
+            }, {
+                "name": "Fans",
+                "value": "90023135"
+            }, {
+                "name": "VAV boxes",
+                "value": "90023136"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90024394"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90024395"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90024396"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90024397"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90024398"
+            }, {
+                "name": "Furnaces",
+                "value": "90024399"
+            }, {
+                "name": "Make-up air units",
+                "value": "90024400"
+            }, {
+                "name": "Space heaters",
+                "value": "90024401"
+            }, {
+                "name": "Unit heaters",
+                "value": "90024402"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90024403"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90024404"
+            }, {
+                "name": "Rooftop units",
+                "value": "90024405"
+            }, {
+                "name": "Air handling units",
+                "value": "90024406"
+            }, {
+                "name": "Fan coil units",
+                "value": "90024407"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90024408"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90024409"
+            }, {
+                "name": "Chillers",
+                "value": "90024410"
+            }, {
+                "name": "Condensers",
+                "value": "90024411"
+            }, {
+                "name": "Condensing units",
+                "value": "90024412"
+            }, {
+                "name": "Cooling towers",
+                "value": "90024413"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90024414"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90024415"
+            }, {
+                "name": "Insulation",
+                "value": "90024416"
+            }, {
+                "name": "Fans",
+                "value": "90024417"
+            }, {
+                "name": "VAV boxes",
+                "value": "90024418"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90024568"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90024569"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90024570"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90024571"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90024572"
+            }, {
+                "name": "Furnaces",
+                "value": "90024573"
+            }, {
+                "name": "Make-up air units",
+                "value": "90024574"
+            }, {
+                "name": "Space heaters",
+                "value": "90024575"
+            }, {
+                "name": "Unit heaters",
+                "value": "90024576"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90024577"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90024578"
+            }, {
+                "name": "Rooftop units",
+                "value": "90024579"
+            }, {
+                "name": "Air handling units",
+                "value": "90024580"
+            }, {
+                "name": "Fan coil units (Split system)",
+                "value": "90024581"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90024582"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90024583"
+            }, {
+                "name": "Chillers",
+                "value": "90024584"
+            }, {
+                "name": "Condensers (Split system)",
+                "value": "90024585"
+            }, {
+                "name": "Condensing units",
+                "value": "90024586"
+            }, {
+                "name": "Cooling towers",
+                "value": "90024587"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90024588"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90024589"
+            }, {
+                "name": "Insulation",
+                "value": "90024590"
+            }, {
+                "name": "Fans",
+                "value": "90024591"
+            }, {
+                "name": "VAV boxes",
+                "value": "90024592"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90024823"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90024824"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90024825"
+            }, {
+                "name": "",
+                "value": "90025056"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "90025956"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "90025958"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90026238"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90026239"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90026240"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90026241"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90026242"
+            }, {
+                "name": "Furnaces",
+                "value": "90026243"
+            }, {
+                "name": "Make-up air units",
+                "value": "90026244"
+            }, {
+                "name": "Space heaters",
+                "value": "90026245"
+            }, {
+                "name": "Unit heaters",
+                "value": "90026246"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90026247"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90026248"
+            }, {
+                "name": "Rooftop units",
+                "value": "90026249"
+            }, {
+                "name": "Air handling units",
+                "value": "90026250"
+            }, {
+                "name": "Fan coil units (Split system)",
+                "value": "90026251"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90026252"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90026253"
+            }, {
+                "name": "Chillers",
+                "value": "90026254"
+            }, {
+                "name": "Condensers (Split system)",
+                "value": "90026255"
+            }, {
+                "name": "Condensing units",
+                "value": "90026256"
+            }, {
+                "name": "Cooling towers",
+                "value": "90026257"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90026258"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90026259"
+            }, {
+                "name": "Insulation",
+                "value": "90026260"
+            }, {
+                "name": "Fans",
+                "value": "90026261"
+            }, {
+                "name": "VAV boxes",
+                "value": "90026262"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90026576"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90026577"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90026578"
+            }, {
+                "name": "",
+                "value": "90026809"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90027421"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90027422"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90027423"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90027424"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90027425"
+            }, {
+                "name": "Furnaces",
+                "value": "90027426"
+            }, {
+                "name": "Make-up air units",
+                "value": "90027427"
+            }, {
+                "name": "Space heaters",
+                "value": "90027428"
+            }, {
+                "name": "Unit heaters",
+                "value": "90027429"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90027430"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90027431"
+            }, {
+                "name": "Rooftop units",
+                "value": "90027432"
+            }, {
+                "name": "Air handling units",
+                "value": "90027433"
+            }, {
+                "name": "Fan coil units",
+                "value": "90027434"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90027435"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90027436"
+            }, {
+                "name": "Chillers",
+                "value": "90027437"
+            }, {
+                "name": "Condensers",
+                "value": "90027438"
+            }, {
+                "name": "Condensing units",
+                "value": "90027439"
+            }, {
+                "name": "Cooling towers",
+                "value": "90027440"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90027441"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90027442"
+            }, {
+                "name": "Insulation",
+                "value": "90027443"
+            }, {
+                "name": "Fans",
+                "value": "90027444"
+            }, {
+                "name": "VAV boxes",
+                "value": "90027445"
+            }, {
+                "name": "Domestic Water Pumps",
+                "value": "90027500"
+            }, {
+                "name": "Mechanical/HVAC",
+                "value": "90027501"
+            }, {
+                "name": "Heating System (FAUs)",
+                "value": "90027502"
+            }, {
+                "name": "Cooling System (describe)",
+                "value": "90027503"
+            }, {
+                "name": "Energy Star exhaust fan",
+                "value": "90029285"
+            }, {
+                "name": "Rooftop Make-up air unit (gas-fired) (995-11900 CFM / 75-900 MBH)",
+                "value": "90029286"
+            }, {
+                "name": "Rooftop ventilation fan unit (320, 600, 815, 1450, 1650, 2050, 2750, 3500, 4910, 8525 CFM)",
+                "value": "90029287"
+            }, {
+                "name": "",
+                "value": "90029518"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90030442"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90030443"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90030444"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90030445"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90030446"
+            }, {
+                "name": "Furnaces",
+                "value": "90030447"
+            }, {
+                "name": "Make-up air units",
+                "value": "90030448"
+            }, {
+                "name": "Space heaters",
+                "value": "90030449"
+            }, {
+                "name": "Unit heaters",
+                "value": "90030450"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90030451"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90030452"
+            }, {
+                "name": "Rooftop units",
+                "value": "90030453"
+            }, {
+                "name": "Air handling units",
+                "value": "90030454"
+            }, {
+                "name": "Fan coil units (Split system)",
+                "value": "90030455"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90030456"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90030457"
+            }, {
+                "name": "Chillers",
+                "value": "90030458"
+            }, {
+                "name": "Condensers (Split system)",
+                "value": "90030459"
+            }, {
+                "name": "Condensing units",
+                "value": "90030460"
+            }, {
+                "name": "Cooling towers",
+                "value": "90030461"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90030462"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90030463"
+            }, {
+                "name": "Insulation",
+                "value": "90030464"
+            }, {
+                "name": "Fans",
+                "value": "90030465"
+            }, {
+                "name": "VAV boxes",
+                "value": "90030466"
+            }, {
+                "name": "Mechanical Consultant - review and report  ",
+                "value": "90030863"
+            }, {
+                "name": "Air Handling Unit. Replace, per 1000 CFM",
+                "value": "90030864"
+            }, {
+                "name": "Boiler. Heating. Replace (Gas-fired, per MBH) ",
+                "value": "90030865"
+            }, {
+                "name": "Chiller. Replace ( Air Cooled, per ton) ",
+                "value": "90030866"
+            }, {
+                "name": "Chiller. Replace (Water cooled, per ton) ",
+                "value": "90030867"
+            }, {
+                "name": "Chiller. Component replace and rebuild",
+                "value": "90030868"
+            }, {
+                "name": "Condensing units. Replace (each, 1-2 tons) ",
+                "value": "90030869"
+            }, {
+                "name": "Cooling tower. Replace (Pad-mounted, per ton) ",
+                "value": "90030870"
+            }, {
+                "name": "Cooling tower. Replace (Roof-mounted, per ton) ",
+                "value": "90030871"
+            }, {
+                "name": "Cooling tower. Component replace and rebuild ",
+                "value": "90030872"
+            }, {
+                "name": "Electric baseboard heater. Replace",
+                "value": "90030873"
+            }, {
+                "name": "Fan Coil Units (with split system 1-2 tons). Refurbish",
+                "value": "90030874"
+            }, {
+                "name": "Furnace. Replace (Gas-fired, per MBH) ",
+                "value": "90030875"
+            }, {
+                "name": "Heat Pumps. Replace (per ton) ",
+                "value": "90030876"
+            }, {
+                "name": "Make-up air unit. Replace (per 1,000 CFM) ",
+                "value": "90030877"
+            }, {
+                "name": "Packaged rooftop unit. Small capacity. Replace (1-15 tons) ",
+                "value": "90030878"
+            }, {
+                "name": "Packaged rooftop unit. Large capacity. Replace (16+ tons) ",
+                "value": "90030879"
+            }, {
+                "name": "Packaged rooftop unit. Component replacement.",
+                "value": "90030880"
+            }, {
+                "name": "Packaged Terminal Air Conditioner (PTAC)",
+                "value": "90030881"
+            }, {
+                "name": "Window/Through-wall Air Conditioner. Replace",
+                "value": "90030882"
+            }, {
+                "name": "Exhaust/Ventilation fan. Replace",
+                "value": "90030883"
+            }, {
+                "name": "Boilers - electric",
+                "value": "90031157"
+            }, {
+                "name": "Boilers - gas-fired, cast iron",
+                "value": "90031158"
+            }, {
+                "name": "Boilers - gas-fired, steel",
+                "value": "90031159"
+            }, {
+                "name": "Boilers - oil-fired, cast iron",
+                "value": "90031160"
+            }, {
+                "name": "Boilers - oil-fired, steel",
+                "value": "90031161"
+            }, {
+                "name": "Furnaces",
+                "value": "90031162"
+            }, {
+                "name": "Make-up air units",
+                "value": "90031163"
+            }, {
+                "name": "Space heaters",
+                "value": "90031164"
+            }, {
+                "name": "Unit heaters",
+                "value": "90031165"
+            }, {
+                "name": "Radiant heaters, baseboard and cabinet",
+                "value": "90031166"
+            }, {
+                "name": "Heat exchanger",
+                "value": "90031167"
+            }, {
+                "name": "Rooftop units",
+                "value": "90031168"
+            }, {
+                "name": "Air handling units",
+                "value": "90031169"
+            }, {
+                "name": "Fan coil units (Split system)",
+                "value": "90031170"
+            }, {
+                "name": "Heat Pumps",
+                "value": "90031171"
+            }, {
+                "name": "Packaged terminal air conditioner",
+                "value": "90031172"
+            }, {
+                "name": "Chillers",
+                "value": "90031173"
+            }, {
+                "name": "Condensers (Split system)",
+                "value": "90031174"
+            }, {
+                "name": "Condensing units",
+                "value": "90031175"
+            }, {
+                "name": "Cooling towers",
+                "value": "90031176"
+            }, {
+                "name": "Pumps - circulating",
+                "value": "90031177"
+            }, {
+                "name": "Pumps - condensate return",
+                "value": "90031178"
+            }, {
+                "name": "Insulation",
+                "value": "90031179"
+            }, {
+                "name": "Fans",
+                "value": "90031180"
+            }, {
+                "name": "VAV boxes",
+                "value": "90031181"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <div class="modal-header dividerline">
+        <button type="button" class="close" data-dismiss="modal" ng-click="close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"> {{addLocation.title}}</h4>
+    </div>
+
+
+    <div class="modal-body">
+        <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="addLocation.serviceResponseAlert">
+            <button type="button" class="close" ng-click="addLocation.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{addLocation.serviceResponseText}}
+        </div>
+
+        <form name="addLocationForm" novalidate>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="property" class="control-label">
+                            Property #
+                        </label>
+                        <input id="property" type="text" class="form-control" ng-model="addLocation.location.propertyNumber" focus-if>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="name" class="control-label">
+                            Name
+                        </label>
+                        <input id="name" type="text" class="form-control" ng-model="addLocation.location.name">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <div class="form-group required" field-validation="Address">
+                        <label for="address" class="control-label">
+                            Address
+                        </label>
+                        <input id="address" name="addressPortfolioLocation" type="text" class="form-control" ng-model="addLocation.location.address1" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="addLocation.location.address2">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <!-- <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="county" class="control-label ">
+                            County
+                        </label>
+                        <input id="county" type="text" class="form-control" ng-model="addLocation.location.county">
+                        </div>
+                    </div>-->
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group required" field-validation="Country">
+                        <label for="country" class="control-label ">
+                            Country
+                        </label>
+
+                        <!--  <select class="form-control" id="country" type="select" country-model="addLocation.location.country" country-select name="countryPortfolioLocation" tabindex="5" required>
+                            <option value="">Select Country</option>
+                        </select>-->
+                        <select ng-model="addLocation.selectedCountry" ng-change="addLocation.editCountry()" ng-options="country as country.name for country in addLocation.countries
+                            track by country.code" class="form-control">
+                            <option value="">Select Country</option>
+                        </select>
+
+                    </div>
+                </div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group required" field-validation="state">
+                        <label for="state" class="control-label">
+                            State
+                        </label>
+
+                        <!--<select class="form-control" id="state" type="select" state-model="addLocation.location.state" state-select country-model="addLocation.location.country" name="statePortfolioLocation" required tabindex="7">
+                            <option value="">Select State</option>
+                        </select>
+
+                        <input type="text" class="form-control" name="statePortfolioLocation" id="state" ng-model="addLocation.location.state" required state-input tabindex="7" />-->
+
+
+
+                        <select name="statePortfolioLocation" ng-show="addLocation.selectedCountry.isStateProvDataAvailable" ng-model="addLocation.location.state" ng-options="state as state.name for state in addLocation.states track by state.code" class="form-control">
+                            <option value="">Select State</option>
+                        </select>
+                        <input name="statePortfolioLocation" ng-show="!addLocation.selectedCountry.isStateProvDataAvailable" type="text" ng-model="addLocation.location.state" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group required" field-validation="city">
+                        <label for="city" class="control-label">
+                            City
+                        </label>
+                        <input id="city" name="cityPortfolioLocation" type="text" class="form-control" ng-model="addLocation.location.city" required />
+                    </div>
+                </div>
+       
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group required" field-validation="zip">
+                        <label for="zip" class="control-label">
+                            Zip
+                        </label>
+                        <input id="zip" type="text" class="form-control" name="zipPortfolioLocation" ng-model="addLocation.location.zip" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="latitude" class="control-label">
+                            Latitude
+                        </label>
+                        <input id="latitude" type="text" class="form-control" ng-model="addLocation.location.latitude">
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="longitude" class="control-label">
+                            Longitude
+                        </label>
+                        <input id="longitude" type="text" class="form-control" ng-model="addLocation.location.longitude">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label for="contact" class="control-label">
+                            Contact
+                        </label>
+                        <input id="contact" type="text" class="form-control" ng-model="addLocation.location.contact">
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label for="phone" class="control-label">
+                            Phone
+                        </label>
+                        <input id="phone" type="text" class="form-control" ng-model="addLocation.location.phone">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="form-group">
+                        <label for="fax" class="control-label">
+                            Fax
+                        </label>
+                        <input id="fax" type="text" class="form-control" ng-model="addLocation.location.fax">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group" emailfield-validation="Email">
+                        <label for="email" class="control-label">
+                            Email
+                        </label>
+                        <input id="email" type="text" name="emailPortfolioLocation" class="form-control" ng-model="addLocation.location.email">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="ponumber" class="control-label">
+                            PO Number
+                        </label>
+                        <input id="ponumber" type="text" class="form-control" ng-model="addLocation.location.poNumber">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="modal-footer">
+
+        <button type="reset" class="btn btn-md btn-default" ng-click="addLocation.Cancel()"> Cancel</button>
+        <button type="button" class="btn btn-md btn-primary" ng-click="addLocation.AddSite(addLocationForm)"> <!--{{addLocation.action}}--> Save This Site</button>
+
+        </form>
+    </div>
+
+
+
+
+</body>
+
+
+
+</html>

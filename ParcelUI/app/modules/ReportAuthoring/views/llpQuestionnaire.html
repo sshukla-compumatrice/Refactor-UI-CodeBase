@@ -1,0 +1,242 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <h4 class="text-center">USER QUESTIONNAIRE</h4>
+
+            <p>
+                For Landowner Liability Protections (LLPs) offered by the Small Business Liability Relief and Brownfields Revitalization Act of 2001 (the "Brownfields Amendments"), the user must provide the following information (if available) to the environmental professional. As per the Brownfields Amendments, failure to provide this information could result in a determination that "all appropriate inquiry" is not complete.
+            </p>
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="respondentname" class="col-sm-3 control-label">Respondent Name:</label>
+                    <div class="col-sm-5">
+                        <input id="respondentname" type="text" class="form-control" ng-model="appendixTool.data.respondentName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="col-sm-3 control-label">Date:</label>
+                    <div class="col-sm-3 col-lg-2 col-md-2">
+                      
+						<div class="input-group date"  data-provide="datepicker" data-date-autoclose="true" data-date-today-highlight="true" data-date-start-date="parcelCtrl.discountAdd.startDate" data-date-format="mm/dd/yyyy">
+                        <input id="date" name="date"  type="text" class="form-control" ng-model="appendixTool.data.date"  >
+                        <div class="input-group-btn">
+                             <button type="button" class="btn btn-default dateCalendar"><i class="fa fa-calendar"></i></button>
+                        </div>
+                </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Address:</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static">{{appendixTool.data.address}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">1. Environmental Cleanup Liens</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Are you aware of any environmental cleanup liens against the property that are filed or recorded under federal, tribal, state or local law?</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.environmentalCleanupLiens" value="1" name="environmentalCleanupLiens"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.environmentalCleanupLiens" value="0" name="environmentalCleanupLiens"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">2. Activity and Land Use Limitations</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Are you aware of any AULs, such as engineering controls, land use restrictions or institutional controls that are in place at the site and/or have been filed or recorded in a registry under federal, tribal, state or local law?</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.activityandLandUseLimitations" value="1" name="activityandLandUseLimitations"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.activityandLandUseLimitations" value="0" name="activityandLandUseLimitations"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">3. Specialized Knowledge or Experience</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Do you have any specialized knowledge or experiences related to the property, nearby properties, or are you involved in the same line of business as the current or former occupants of the property or an adjoining property so that you would have specialized knowledge of the chemicals and processes used by this type of business?</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.specializedKnowledge" value="1" name="specializedKnowledge"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.specializedKnowledge" value="0" name="specializedKnowledge"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">4. Purchase Price vs. Fair Market Value</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Does the purchase price being paid for this property reasonably reflect the fair market value of the property?</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.priceVsMarketValue" value="1" name="priceVsMarketValue"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.priceVsMarketValue" value="0" name="priceVsMarketValue"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">5. Commonly Known or Reasonably Ascertainable Information</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Are you aware of commonly known or reasonably ascertainable information about the property that would help the environmental professional to identify conditions indicative of releases or threatened releases?</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.commonInfo" value="1" name="commonInfo"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.commonInfo" value="0" name="commonInfo"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        5a. Do you know the past uses of the property?
+                    </div>
+                    <div class="panel-body">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.pastUse" value="1" name="pastUse"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.pastUse" value="0" name="pastUse"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        5b. Do you know of specific chemicals that are present or were once were present at the property?
+                    </div>
+                    <div class="panel-body">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.chemicals" value="1" name="chemicals"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.chemicals" value="0" name="chemicals"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        5c. Do you know of spills or other chemical releases that have taken place at the property?
+                    </div>
+                    <div class="panel-body">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.spills" value="1" name="spills"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.spills" value="0" name="spills"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        5d. Do you know of any environmental cleanups that have taken place at the property?
+                    </div>
+                    <div class="panel-body">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.cleanups" value="1" name="cleanups"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.cleanups" value="0" name="cleanups"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">6. Obviousness of the Presence or Likely Presence of Contamination</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>As the user of this ESA, based on your knowledge and experience related to the property are there any obvious indicators that point to the presence or likely presence of contamination at the property?</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.presenceOfContamination" value="1" name="presenceOfContamination"> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="appendixTool.data.presenceOfContamination" value="0" name="presenceOfContamination"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-md btn-default" ng-click="appendixTool.cancel()">Cancel </button>
+                <button type="button" class="btn btn-md btn-primary" ng-click="appendixTool.submitPut()">Save and Put file in Appendix </button>
+                <button name="submitBtn" type="submit" class="btn btn-md btn-primary" ng-click="appendixTool.submit($event)">Save Changes </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr>

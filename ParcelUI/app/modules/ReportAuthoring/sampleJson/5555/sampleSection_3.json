@@ -1,0 +1,285 @@
+{
+    "Section": {
+        "html": "<div><h4>{{section1Title}}</span></strong></h4></div><br><tag-with-dashes></tag-with-dashes><br><div><div><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' data-ng-model='contentValues.ckEditData.value1' contenteditable='true' data-ck-editor></div></div><br><p>Please refer to Default Language for narrative options for this section.</p><br><div class='boxCK'><span class='editCK'>edit</span><div class='textCK' data-ng-model='contentValues.ckEditData.value2' contenteditable='true' data-ck-editor ></div></div></div></div><br><vertical-table table='contentValues.verticalTable'/></div><h4>Cost Summary</h4><br><div ng-repeat = 'costTable in contentValues.costTable'><div add-recommendation  cost-table = 'costTable'/><div atc-recommendation-list cost-table='costTable'/></div></div>",
+        "contentValues": {
+            "section1Title": "3.0 Reason For Performing Phase I ESA",
+            "ckEditData": {
+                "value1": "The purpose of this Phase I Environmental Site Assessment (ESA) was to identify existing or potential Recognized Environmental Conditions (as defined by ASTM Standard E 1527-05) in connection with the Subject Property. {ConsultantName} understands that the findings of this study will be used to evaluate a pending financial transaction in connection with the Subject Property.The Phase I ESA is being conducted as part of environmental due diligence prior to property transfer or refinancing.",
+                "value2": "Write your comments here..."
+            },
+            "choice": {
+                "Y": "EDR Environmental Consulting",
+                "N": "EDR Environmental Application Development and Support",
+                "NS": "EDR Environmental Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "tagData": "Please refer to Default Language for Reason For Performing Phase I ESA.",
+            "verticalTable": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 1
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            },
+             "costTable": [{
+                "recommendationHeader" : "",
+               
+                "type": "displayATC",
+                "listHeaders" : ["recommendation","eul","eff","rul","year","cost"],
+                "recommendationTypes" : [{"value" : "1", "name" : "Concrete crack seal"},
+                                        {"value" : "2", "name" : "Concrete repair"},
+                                        {"value" : "3", "name" : "Concrete crub repair"},
+                                         {"value" : "4", "name" : "Asphalt crack seal(>10KLF)"},
+                                        {"value" : "other_", "name" : "Other"}],
+                 "years" : 8,
+                
+                
+                "data": [{
+                    "group": 1,
+                    "sectionID": 3,                   
+                    "recommendation": [
+                        {
+                        "recommendationId": 1,
+                        "name": "Concrete crack seal",   
+                        "package" : ["EMG Replacement and Immediate (No Short Term)","EMG Default Cost Tables"],
+                        "tables" : ["Immediate and Short Term Repair Costs Tables"],
+                        "eul": "NA",
+                        "eff": "NA",
+                        "rul": "NA",
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,                        
+                        "yearlyCostSpread": [{
+                            "label": "1",                            
+                            "include": true,
+                            "val": 6000
+                        }],
+                          "immed" : {
+                            "name" : "immed",
+                            "include": true,
+                            "val": 172839
+                        },
+                        "short" : {
+                            "name" : "short",
+                            "include": true,
+                            "val": 172
+                        },
+                          "immedRequired" : {
+                            "name" : "Required",
+                            "include": false
+                        },
+                             "immedRecommended" : {
+                            "name" : "Recommended",
+                            "include": false
+                        },
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    },
+                        {
+                        "recommendationId": 2,
+                        "name": "Concrete repair",
+                        "eul": 0,
+                        "eff": 36,
+                        "rul": -36,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "yearlyCostSpread": [{
+                            "label": "5",
+                            
+                            "include": true,
+                            "val": 3000
+                        }],
+                        "immed" : {
+                            "name" : "Immed",
+                            "include": true,
+                            "val": 2
+                        },
+                        "short" : {
+                            "name" : "short",
+                            "include": false,
+                            "val": 1
+                        },
+                        "immedRequired" : {
+                            "name" : "Required",
+                            "include": false
+                        },
+                        "immedRecommended" : {
+                            "name" : "Recommended",
+                            "include": true
+                        },
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    },
+                        {
+                        "recommendationId": 3,
+                        "name": "Concrete crub repair",
+                        "eul": 30,
+                        "eff": "Varies",
+                        "rul": "Varies",
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "yearlyCostSpread": [{
+                            "label": "1",
+                            
+                            "include": true,
+                            "val": 800
+                        }],
+                        "immed" : {
+                            "name" : "Immed",
+                            "include": true,
+                            "val": 172839
+                        },
+                        "short" : {
+                            "name" : "short",
+                            "include": true,
+                            "val": 150
+                        },
+                        "immedRequired" : {
+                            "name" : "Required",
+                            "include": true
+                        },
+                        "immedRecommended" : {
+                            "name" : "Recommended",
+                            "include": false
+                        },
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    },
+                        {
+                        "recommendationId": 4,
+                        "name": "Asphalt crack seal(>10KLF)",
+                        "eul": 3,
+                        "eff": 36,
+                        "rul": -33,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "yearlyCostSpread": [
+                            {
+                            "label": "1",
+                            
+                            "include": true,
+                            "val": 308
+                        },
+                        {
+                            "label": "2",
+                            
+                            "include": true,
+                            "val": 308
+                        },
+                        {
+                            "label": "3",
+                            
+                            "include": true,
+                            "val": 309
+                        },
+                        {
+                            "label": "5",
+                            
+                            "include": true,
+                            "val": 309
+                        }
+                        ],
+                        "immed" : {
+                            "name" : "Immed",
+                            "include": true,
+                            "val": 172839
+                        },
+                        "short" : {
+                            "name" : "short",
+                            "include": true,
+                            "val": 160
+                        },
+                        "immedRequired" : {
+                            "name" : "Required",
+                            "include": false
+                        },
+                             "immedRecommended" : {
+                            "name" : "Recommended",
+                            "include": true
+                        },
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }
+                    ]
+                }]
+            }]
+
+        },
+        "sectionID": 3,
+        "name": "Reason For Performing Phase I ESA",
+        "number": "2.1"
+    }
+}

@@ -1,0 +1,155 @@
+
+<div class="container-fluid" ng-controller="RetractBidController">
+<div class="panel panel-default">
+	<div class="panel-body">
+    <h2 class="page-header">Retract Bid</h2>
+    <div class="row">
+        <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12">
+            
+            <p class="text-warning">Questions about this RFP? Need more information? Click here to email the lender <a href="#" data-toggle="tooltip" data-placement="right" title="Email"><i class="glyphicon glyphicon-envelope fa-lg marginLeft"> </i></a></p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <a href="#" ui-sref="directAwardsAndBids" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-chevron-left" ></i> Back to New Requests for Bid </a>
+
+        </div>
+    </div>
+    <hr>
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                <h5>COLLATERAL INFORMATION</h5>
+                <hr>
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">Property Name:</label>
+                    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">{{propertyName}}</p></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-sm-3 col-md-3 col-xs-12 control-label">
+                       Property Address:
+                    </label>
+                    <div class="col-lg-9 col-sm-9 col-md-9 col-xs-12"><p class="form-control-static">{{propertyAddress}}</p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-11 col-sm-11 col-md-11 col-xs-11">
+                        <div google-map ng-model="searchLocation" class="google-map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>SCOPE OF SERVICES</h5>
+                        <hr>
+                        <div class="form-group">
+                            <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Scope of Work:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{scopeOfWork}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Requested Draft Date:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{reqDraftDate}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Requested Delivery Date:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{reqDeliveryDate}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Comments:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{comments}}</p></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-sm-4 col-md-4 col-xs-12 control-label">Bid Deadline:</label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12"><p class="form-control-static">{{bidDeadline}}</p></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+                        <h5>ATTACHMENTS</h5>
+                        <hr>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                <a href="#">RFP_Details_2015_11_21_01_26_26.pdf</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        <h5>RESPONSE</h5>
+                        <hr>
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Date Submitted:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">{{dateSubmitted}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Fee:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">  {{fee}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Signatory Information:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">   {{signatoryInformation}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Turnaround Time (TAT) from Date of Engagement (business days):</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">   {{turnaroundTime}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Additional Comments:</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">  {{additionalComments}}</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-5 col-sm-5 col-md-5 col-xs-12 control-label">Prior Services on Subject Property :</label>
+                            <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                                <p class="form-control-static">{{priorServices}}</p>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="ReasonBidRetract" class="col-lg-12 col-sm-12 col-md-12 col-xs-12 control-lable">Reason for Bid Retract:</label>
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                <textarea name="comments" class="form-control" id="ReasonBidRetract"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+	</div>
+</div>	
+</div>

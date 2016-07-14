@@ -1,0 +1,10 @@
+
+<div class="col-xs-12 col-lg-12 col-md-12  form-group">
+
+    <span class="control-label" ng-show="!editmode">{{data}}</span>
+    
+    <input type="email" placeholder="Email" ng-show="editmode"  ng-init="data = data || field.defaultValue"  value="{{data}}"
+			ng-model="data"  /> 
+    
+</div>
+

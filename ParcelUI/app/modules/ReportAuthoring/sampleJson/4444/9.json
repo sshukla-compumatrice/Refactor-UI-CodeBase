@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "2.2 Title Records, Liens, and Property Use Limitations",
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\">The user did not engage EMG to review title and judicial records for environmental liens or Activity and Use Limitations (AULs) recorded against the Project.&#160; Furthermore, these documents were not provided to EMG for review.&#160; The lack of or inability to obtain this information represents a data gap.&#160; However, based on the findings of this report, the absence of this information is not considered a <em>significant<\\/em> data gap.<\\/p>"
+        }
+    }
+}

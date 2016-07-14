@@ -1,0 +1,1495 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.6.3 Other Systems",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 152,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Emergency lighting and exit signs",
+                "value": "258"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "259"
+            }, {
+                "name": "Central alarm panel",
+                "value": "260"
+            }, {
+                "name": "Smoke detectors",
+                "value": "261"
+            }, {
+                "name": "Fire suppression system",
+                "value": "262"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "263"
+            }, {
+                "name": "Fire pump",
+                "value": "264"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "1964"
+            }, {
+                "name": "Central alarm panel",
+                "value": "1965"
+            }, {
+                "name": "Fire suppression system",
+                "value": "1966"
+            }, {
+                "name": "Fire pump",
+                "value": "1967"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "1968"
+            }, {
+                "name": "Replace/install smoke detectors",
+                "value": "1969"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "1970"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "2082"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "2083"
+            }, {
+                "name": "Fire Suppression",
+                "value": "2084"
+            }, {
+                "name": "Security",
+                "value": "2086"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "2186"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "2187"
+            }, {
+                "name": "Fire Suppression",
+                "value": "2188"
+            }, {
+                "name": "Security",
+                "value": "2190"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "2489"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "2490"
+            }, {
+                "name": "Fire pump ",
+                "value": "2491"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "2492"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "2493"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "2494"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "2495"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "2646"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "2647"
+            }, {
+                "name": "Fire Suppression",
+                "value": "2648"
+            }, {
+                "name": "Security",
+                "value": "2650"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "3286"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "3287"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "3288"
+            }, {
+                "name": "Fire pump ",
+                "value": "3289"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "3290"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "3291"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "3292"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "3407"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "3408"
+            }, {
+                "name": "Fire Suppression",
+                "value": "3409"
+            }, {
+                "name": "Security",
+                "value": "3411"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "3884"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "3885"
+            }, {
+                "name": "Fire Suppression",
+                "value": "3886"
+            }, {
+                "name": "Security",
+                "value": "3888"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "3960"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "3961"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "4003"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "4004"
+            }, {
+                "name": "Fire Suppression",
+                "value": "4005"
+            }, {
+                "name": "Security",
+                "value": "4007"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "4101"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "4102"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "4142"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "4143"
+            }, {
+                "name": "Fire Suppression",
+                "value": "4144"
+            }, {
+                "name": "Security",
+                "value": "4146"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "4981"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "4982"
+            }, {
+                "name": "Fire Suppression",
+                "value": "4983"
+            }, {
+                "name": "Security",
+                "value": "4985"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "5161"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "5162"
+            }, {
+                "name": "Fire Suppression",
+                "value": "5163"
+            }, {
+                "name": "Security",
+                "value": "5165"
+            }, {
+                "name": "Central alarm panel. Replace  ",
+                "value": "11056"
+            }, {
+                "name": "Fire alarm system, Modernize",
+                "value": "11057"
+            }, {
+                "name": "Central alarm panel. Replace  ",
+                "value": "11321"
+            }, {
+                "name": "Fire alarm system, Modernize",
+                "value": "11322"
+            }, {
+                "name": "Central alarm panel. Replace  ",
+                "value": "11586"
+            }, {
+                "name": "Fire alarm system, Modernize",
+                "value": "11587"
+            }, {
+                "name": "Central alarm panel. Replace  ",
+                "value": "11851"
+            }, {
+                "name": "Fire alarm system, Modernize",
+                "value": "11852"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "12259"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "12260"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "12261"
+            }, {
+                "name": "Fire pump ",
+                "value": "12262"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "12263"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "12264"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "12265"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "12502"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "12503"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "12504"
+            }, {
+                "name": "Fire pump ",
+                "value": "12505"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "12506"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "12507"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "12508"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "12745"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "12746"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "12747"
+            }, {
+                "name": "Fire pump ",
+                "value": "12748"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "12749"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "12750"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "12751"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "12988"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "12989"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "12990"
+            }, {
+                "name": "Fire pump ",
+                "value": "12991"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "12992"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "12993"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "12994"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "13100"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "13101"
+            }, {
+                "name": "Fire Suppression",
+                "value": "13102"
+            }, {
+                "name": "Security",
+                "value": "13104"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "15835"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "15836"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "15837"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "15838"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "15839"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "15840"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "16686"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "16687"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "16688"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "16689"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "16690"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "16691"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "16949"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "16950"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "16951"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "16952"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "16953"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "16954"
+            }, {
+                "name": "Replace fire alarm panel",
+                "value": "18003"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "18004"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "18005"
+            }, {
+                "name": "Central alarm panel",
+                "value": "18006"
+            }, {
+                "name": "Smoke detectors",
+                "value": "18007"
+            }, {
+                "name": "Fire suppression system",
+                "value": "18008"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "18009"
+            }, {
+                "name": "Fire pump",
+                "value": "18010"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "18031"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "18032"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "18033"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "18034"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "18035"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "18036"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "18294"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "18295"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "18296"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "18297"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "18298"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "18299"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "18603"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "18604"
+            }, {
+                "name": "Fire Suppression",
+                "value": "18605"
+            }, {
+                "name": "Security",
+                "value": "18607"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "18704"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "18705"
+            }, {
+                "name": "Fire Suppression",
+                "value": "18706"
+            }, {
+                "name": "Security",
+                "value": "18708"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "18805"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "18806"
+            }, {
+                "name": "Fire Suppression",
+                "value": "18807"
+            }, {
+                "name": "Security",
+                "value": "18809"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "18906"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "18907"
+            }, {
+                "name": "Fire Suppression",
+                "value": "18908"
+            }, {
+                "name": "Security",
+                "value": "18910"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "19072"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "19073"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "19074"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "19075"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "19076"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "19077"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "19636"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "19637"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "20203"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "20204"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "20205"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "20207"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "20208"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "20209"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "22417"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "22418"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "22457"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "22458"
+            }, {
+                "name": "Fire Suppression",
+                "value": "22459"
+            }, {
+                "name": "Security",
+                "value": "22461"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "22561"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "22562"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "22563"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "22564"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "22565"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "22566"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "23251"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "23252"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "23253"
+            }, {
+                "name": "Fire pump ",
+                "value": "23254"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "23255"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "23256"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "23257"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90002262"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90002263"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90002264"
+            }, {
+                "name": "Security",
+                "value": "90002266"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90002326"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90002327"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90002328"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90002329"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90002330"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90002331"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90002692"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90002693"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90002694"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90002695"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90002696"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90002697"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90002698"
+            }, {
+                "name": "Fire pump. Replace (per GPM)",
+                "value": "90002699"
+            }, {
+                "name": "",
+                "value": "90002700"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90003321"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90003322"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90003323"
+            }, {
+                "name": "Security",
+                "value": "90003325"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90003691"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90003692"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90003693"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90003694"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90003695"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90003696"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90004197"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90004198"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90004199"
+            }, {
+                "name": "Fire pump ",
+                "value": "90004200"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90004201"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90004202"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90004203"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90005201"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90005202"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90005203"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90005516"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90005517"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90005518"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90006693"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90006694"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90006695"
+            }, {
+                "name": "Fire pump ",
+                "value": "90006696"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90006697"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90006698"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90006699"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90006924"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90006925"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90006926"
+            }, {
+                "name": "Fire pump ",
+                "value": "90006927"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90006928"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90006929"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90006930"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90007288"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90007289"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90007290"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90007291"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90007292"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90007293"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90007294"
+            }, {
+                "name": "Fire pump. Replace (per GPM)",
+                "value": "90007295"
+            }, {
+                "name": "",
+                "value": "90007296"
+            }, {
+                "name": "Fire alarm control panel - Low rise. Replace",
+                "value": "90007868"
+            }, {
+                "name": "Fire alarm control panel - High rise. Replace",
+                "value": "90007869"
+            }, {
+                "name": "Fire alarm system.  Modernize",
+                "value": "90007870"
+            }, {
+                "name": "Fire suppression system.  Install new",
+                "value": "90007871"
+            }, {
+                "name": "Commercial smoke detector. Replace",
+                "value": "90007872"
+            }, {
+                "name": "Residential smoke detector. Replace",
+                "value": "90007873"
+            }, {
+                "name": "CO detector. Replace",
+                "value": "90007874"
+            }, {
+                "name": "Fire pump. Replace (per GPM)",
+                "value": "90007875"
+            }, {
+                "name": "",
+                "value": "90007876"
+            }, {
+                "name": "Emergency lighting and exit signs , Replace",
+                "value": "90008984"
+            }, {
+                "name": "Central alarm panel, Replace ",
+                "value": "90008985"
+            }, {
+                "name": "Fire alarm system, Modernize",
+                "value": "90008986"
+            }, {
+                "name": "Fire pump, Replace ",
+                "value": "90008987"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90008988"
+            }, {
+                "name": "Smoke detector, Replace ",
+                "value": "90008989"
+            }, {
+                "name": "Fire extinguishers, Replace ",
+                "value": "90008990"
+            }, {
+                "name": "Update Fire Sprinkler System Inspection",
+                "value": "90008991"
+            }, {
+                "name": "Update Fire Alarm System Inspection",
+                "value": "90008992"
+            }, {
+                "name": "Update Fire Extinguisher Inspection",
+                "value": "90008993"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90009078"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90009079"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90009118"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90009119"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90009120"
+            }, {
+                "name": "Security",
+                "value": "90009122"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace",
+                "value": "90011891"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace",
+                "value": "90011892"
+            }, {
+                "name": "Central Alarm Panel, Replace",
+                "value": "90011893"
+            }, {
+                "name": "Smoke Detectors, Replace",
+                "value": "90011894"
+            }, {
+                "name": "Fire Extinguishers, Replace",
+                "value": "90011895"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90011896"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace",
+                "value": "90012249"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace",
+                "value": "90012250"
+            }, {
+                "name": "Central Alarm Panel, Replace",
+                "value": "90012251"
+            }, {
+                "name": "Smoke Detectors, Replace",
+                "value": "90012252"
+            }, {
+                "name": "Fire Extinguishers, Replace",
+                "value": "90012253"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90012254"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace",
+                "value": "90012607"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace",
+                "value": "90012608"
+            }, {
+                "name": "Central Alarm Panel, Replace",
+                "value": "90012609"
+            }, {
+                "name": "Smoke Detectors, Replace",
+                "value": "90012610"
+            }, {
+                "name": "Fire Extinguishers, Replace",
+                "value": "90012611"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90012612"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90012791"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90012792"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90012793"
+            }, {
+                "name": "Security",
+                "value": "90012795"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90013240"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90013241"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90013242"
+            }, {
+                "name": "Security",
+                "value": "90013244"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90013560"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90013561"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90013562"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90013563"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90013564"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90013565"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90013898"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90013899"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90013900"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90013901"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90013902"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90013903"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90014238"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90014239"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90014240"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90014241"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90014242"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90014243"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90014576"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90014577"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90014578"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90014579"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90014580"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90014581"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90014645"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90014646"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90014685"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90014686"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90014687"
+            }, {
+                "name": "Security",
+                "value": "90014689"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90016957"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90016958"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90016959"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90016960"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90016961"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90016962"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90019536"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90019537"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90019538"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90019539"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90019540"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90019541"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90020047"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90020048"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90020049"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90020050"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90020051"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90020052"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90020441"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90020442"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90020443"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90020444"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90020445"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90020446"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90020960"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90020961"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90020962"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90020963"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90020964"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90020965"
+            }, {
+                "name": "Fire pump",
+                "value": "90020966"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90021165"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90021166"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90021167"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90021168"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90021169"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90021170"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90021381"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90021382"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90021383"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90021384"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90021385"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90021386"
+            }, {
+                "name": "Fire pump",
+                "value": "90021387"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90022545"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90022546"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90022547"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90022548"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90022549"
+            }, {
+                "name": "Security",
+                "value": "90022550"
+            }, {
+                "name": "Fire Escapes",
+                "value": "90022551"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90022649"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90022650"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90022651"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90022652"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90022653"
+            }, {
+                "name": "Security",
+                "value": "90022654"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90022935"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90022936"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90022937"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90022938"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90022939"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90022940"
+            }, {
+                "name": "Fire pump",
+                "value": "90022941"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90023162"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90023163"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90023164"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90023165"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90023166"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90023167"
+            }, {
+                "name": "Fire pump",
+                "value": "90023168"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90023359"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90023360"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90023361"
+            }, {
+                "name": "Fire pump ",
+                "value": "90023362"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90023363"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90023364"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90023365"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90023602"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90023603"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90023604"
+            }, {
+                "name": "Fire pump ",
+                "value": "90023605"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90023606"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90023607"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90023608"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90023755"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90023756"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90023757"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90023758"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90023759"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90023760"
+            }, {
+                "name": "Fire pump",
+                "value": "90023761"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90024001"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90024002"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90024003"
+            }, {
+                "name": "Fire pump ",
+                "value": "90024004"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90024005"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90024006"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90024007"
+            }, {
+                "name": "Emergency lighting and exit signs ",
+                "value": "90024244"
+            }, {
+                "name": "Central alarm panel ",
+                "value": "90024245"
+            }, {
+                "name": "Fire suppression system ",
+                "value": "90024246"
+            }, {
+                "name": "Fire pump ",
+                "value": "90024247"
+            }, {
+                "name": "Fire alarm, horn and strobe lights ",
+                "value": "90024248"
+            }, {
+                "name": "Smoke detectors ",
+                "value": "90024249"
+            }, {
+                "name": "Fire extinguishers ",
+                "value": "90024250"
+            }, {
+                "name": "Smoke & Fire Detection",
+                "value": "90025963"
+            }, {
+                "name": "Buzzer/Intercom (Security)",
+                "value": "90025964"
+            }, {
+                "name": "Fire Suppression",
+                "value": "90025965"
+            }, {
+                "name": "Security",
+                "value": "90025967"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90028257"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90028258"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90028259"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90028260"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90028261"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90028262"
+            }, {
+                "name": "Emergency Lighting and Exit Signs, Replace ",
+                "value": "90028770"
+            }, {
+                "name": "Fire Alarm, Horn and Strobe Lights, Replace ",
+                "value": "90028771"
+            }, {
+                "name": "Central Alarm Panel, Replace ",
+                "value": "90028772"
+            }, {
+                "name": "Smoke Detectors, Replace ",
+                "value": "90028773"
+            }, {
+                "name": "Fire Extinguishers, Replace ",
+                "value": "90028774"
+            }, {
+                "name": "Fire Alarm System, Inspect",
+                "value": "90028775"
+            }, {
+                "name": "Emergency lighting and exit signs",
+                "value": "90030291"
+            }, {
+                "name": "Fire alarm, horn and strobe lights",
+                "value": "90030292"
+            }, {
+                "name": "Central alarm panel",
+                "value": "90030293"
+            }, {
+                "name": "Smoke detectors",
+                "value": "90030294"
+            }, {
+                "name": "Fire suppression system",
+                "value": "90030295"
+            }, {
+                "name": "Fire extinguishers",
+                "value": "90030296"
+            }, {
+                "name": "Fire pump",
+                "value": "90030297"
+            }, {
+                "name": "Replace fire alarm control panel",
+                "value": "90031393"
+            }, {
+                "name": "Install smoke detectors",
+                "value": "90031394"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

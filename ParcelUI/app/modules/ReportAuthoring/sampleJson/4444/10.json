@@ -1,0 +1,9 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div>",
+    "contentValues": {
+        "sectionTitle00": "2.3 Specialized Knowledge",
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\">The user did not provide a response to the User Questionnaire and did not provide information regarding specialized knowledge or experience.&#160; The lack of or inability to obtain this information represents a data gap.&#160; However, based on the findings of this report, the absence of this information is not considered a <em>significant<\\/em> data gap.<\\/p>"
+        }
+    }
+}

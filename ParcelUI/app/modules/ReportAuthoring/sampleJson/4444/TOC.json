@@ -1,0 +1,466 @@
+{
+  "sectionNumber": "",
+  "sectionName": "",
+  "clickable": false,
+  "sectionID": 0,
+  "sectionGUID": "e1f565de-a34b-40f5-8d96-c746d29578ba",
+  "isGeneralInfo": false,
+  "sections": [
+    {
+      "sectionNumber": " ",
+      "sectionName": "General Information",
+      "clickable": true,
+      "sectionID": 1,
+      "sectionGUID": "5427b967-39e6-41d1-9db9-6a9d41709fc3",
+      "isGeneralInfo": true,
+      "sections": []
+    },
+    {
+      "sectionNumber": " ",
+      "sectionName": "Executive Summary ",
+      "clickable": true,
+      "sectionID": 2,
+      "sectionGUID": "4dbd3483-4463-478e-86f2-02fb09e8e78d",
+      "isGeneralInfo": false,
+      "sections": []
+    },
+    {
+      "sectionNumber": "1.0",
+      "sectionName": "Introduction",
+      "clickable": false,
+      "sectionID": 3,
+      "sectionGUID": "0a034860-5e60-4a42-8823-a76697445674",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "1.1",
+          "sectionName": "Purpose ",
+          "clickable": true,
+          "sectionID": 4,
+          "sectionGUID": "e743717d-bb37-4fd9-b109-658cec5eb123",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "1.2",
+          "sectionName": "Special Terms and Conditions ",
+          "clickable": true,
+          "sectionID": 5,
+          "sectionGUID": "3015eb23-ea53-4c0a-80c1-e357b7b85457",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "1.3",
+          "sectionName": "Project-Specific Limitations and Exceptions ",
+          "clickable": true,
+          "sectionID": 6,
+          "sectionGUID": "de61e55a-3993-4bfe-98e4-93a50ee37d46",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "2.0",
+      "sectionName": "User Provided Information",
+      "clickable": false,
+      "sectionID": 7,
+      "sectionGUID": "3902626f-7931-42c8-88aa-30057809b0b3",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "2.1",
+          "sectionName": "Reason For Performing the Phase I ",
+          "clickable": true,
+          "sectionID": 8,
+          "sectionGUID": "d104cafc-9fd8-403d-8f3e-4655746b42ac",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "2.2",
+          "sectionName": "Title Records, Liens, and Property Use Limitations ",
+          "clickable": true,
+          "sectionID": 9,
+          "sectionGUID": "c353201b-e599-48c8-82c3-004efdad8bad",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "2.3",
+          "sectionName": "Specialized Knowledge ",
+          "clickable": true,
+          "sectionID": 10,
+          "sectionGUID": "46d553bf-d7e9-421f-a1d2-5f8ad5627f9f",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "2.4",
+          "sectionName": "Value Reduction for Environmental Issues ",
+          "clickable": true,
+          "sectionID": 11,
+          "sectionGUID": "224675f8-b10b-4bb7-9f7f-f87eca515107",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "2.5",
+          "sectionName": "Owner, Property Manager, and Occupant Information ",
+          "clickable": true,
+          "sectionID": 12,
+          "sectionGUID": "90fbb1ec-65f8-4f2e-99d2-a553b8a3292a",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "3.0",
+      "sectionName": "Site Description",
+      "clickable": false,
+      "sectionID": 13,
+      "sectionGUID": "536d372c-2e46-47c8-a45c-3f48ca8b18d4",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "3.1",
+          "sectionName": "Site Characteristics and Features ",
+          "clickable": true,
+          "sectionID": 14,
+          "sectionGUID": "855ef9e6-f7b8-487d-8e7a-7818a795d422",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "3.2",
+          "sectionName": "Description of Structures and Other Improvements ",
+          "clickable": true,
+          "sectionID": 15,
+          "sectionGUID": "468ac60f-afb4-4126-9623-2b7716148ad8",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "3.3",
+          "sectionName": "Utilities ",
+          "clickable": true,
+          "sectionID": 16,
+          "sectionGUID": "b6781ba9-6fc9-49ee-8252-b879c2f4ab49",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "4.0",
+      "sectionName": "Vicinity Reconnaissance ",
+      "clickable": true,
+      "sectionID": 17,
+      "sectionGUID": "c45a3b9d-f150-49f2-b87d-1266b24e1171",
+      "isGeneralInfo": false,
+      "sections": []
+    },
+    {
+      "sectionNumber": "5.0",
+      "sectionName": "Physical Setting ",
+      "clickable": true,
+      "sectionID": 18,
+      "sectionGUID": "c1ecf77c-92a3-493b-bcdb-cfdfae68494a",
+      "isGeneralInfo": false,
+      "sections": []
+    },
+    {
+      "sectionNumber": "6.0",
+      "sectionName": "Historical Information Review",
+      "clickable": false,
+      "sectionID": 19,
+      "sectionGUID": "c08ba1b5-9315-43c1-bc70-e7d368627929",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "6.1",
+          "sectionName": "Historical Fire Insurance Maps ",
+          "clickable": true,
+          "sectionID": 20,
+          "sectionGUID": "906b9d7b-60c2-4a58-9cf9-f11e96c9ea10",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.2",
+          "sectionName": "Aerial Photographs ",
+          "clickable": true,
+          "sectionID": 21,
+          "sectionGUID": "d2db9d22-b491-4b5e-a1be-445abe21cc21",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.3",
+          "sectionName": "Historical Topographic Maps ",
+          "clickable": true,
+          "sectionID": 22,
+          "sectionGUID": "f9ae1aa8-61a8-489e-84c4-596681c04787",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.4",
+          "sectionName": "Agency Records, Interviews and Other Historical Sources ",
+          "clickable": true,
+          "sectionID": 23,
+          "sectionGUID": "792220b4-001e-44f7-b6d5-605fc8d984cf",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.5",
+          "sectionName": "City Directories ",
+          "clickable": true,
+          "sectionID": 24,
+          "sectionGUID": "7989126f-fceb-477f-9709-bb8d5c7c9372",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.6",
+          "sectionName": "Chain of Title ",
+          "clickable": true,
+          "sectionID": 25,
+          "sectionGUID": "2db70af1-5434-4282-a5d0-65affc23d510",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.7",
+          "sectionName": "Previous Environmental Reports ",
+          "clickable": true,
+          "sectionID": 26,
+          "sectionGUID": "08e4c938-e546-4468-9b83-662c6dcb44f1",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "6.8",
+          "sectionName": "Historical Information Conclusions ",
+          "clickable": true,
+          "sectionID": 27,
+          "sectionGUID": "a47f032d-80b5-4bb8-8c47-42853496a6e9",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "7.0",
+      "sectionName": "Environmental Database Search and Review",
+      "clickable": false,
+      "sectionID": 28,
+      "sectionGUID": "5b57383a-6229-4043-8621-6b577e6b10e2",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "7.1",
+          "sectionName": "Federal \u0026 State Databases ",
+          "clickable": true,
+          "sectionID": 29,
+          "sectionGUID": "96224a33-a267-46de-b383-747904f1079f",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "7.2",
+          "sectionName": "Supplemental Databases ",
+          "clickable": true,
+          "sectionID": 30,
+          "sectionGUID": "fff83546-e1c5-4322-be69-bf12530b8939",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "7.3",
+          "sectionName": "Unmappable Sites ",
+          "clickable": true,
+          "sectionID": 31,
+          "sectionGUID": "19150f15-c760-4d3f-841c-bd43cf691c62",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "7.4",
+          "sectionName": "Environmental Database Search and Review Conclusions ",
+          "clickable": true,
+          "sectionID": 32,
+          "sectionGUID": "28b0cb61-b031-43a6-a94c-90845b30e217",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "8.0",
+      "sectionName": "Site Inspection",
+      "clickable": false,
+      "sectionID": 33,
+      "sectionGUID": "2a2e2711-f8b1-4213-bf43-851d467c7a95",
+      "isGeneralInfo": false,
+      "sections": [
+        {
+          "sectionNumber": "8.1",
+          "sectionName": "Chemicals and Materials Usage ",
+          "clickable": true,
+          "sectionID": 34,
+          "sectionGUID": "821bda50-6f4a-4d2d-a65e-0f5700feb12b",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.2",
+          "sectionName": "Underground Storage Tanks (USTS) ",
+          "clickable": true,
+          "sectionID": 35,
+          "sectionGUID": "d1e05665-e77c-46d4-bd60-d72a80483385",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.3",
+          "sectionName": "Aboveground Storage Tanks (ASTS) ",
+          "clickable": true,
+          "sectionID": 36,
+          "sectionGUID": "c02223a7-fbb9-4f6c-965f-129da9bb2975",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.4",
+          "sectionName": "Hazardous Wastes ",
+          "clickable": true,
+          "sectionID": 37,
+          "sectionGUID": "055f05cb-3812-4743-98cf-d02c92eb003f",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.5",
+          "sectionName": "Non-Hazardous Wastes ",
+          "clickable": true,
+          "sectionID": 38,
+          "sectionGUID": "7c1b740d-58b4-4f5c-8047-3352f19bd932",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.6",
+          "sectionName": "Wastewater and Storm Water Discharges ",
+          "clickable": true,
+          "sectionID": 39,
+          "sectionGUID": "ac4b41c8-33e3-47f0-9697-e5493a22b8ac",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.7",
+          "sectionName": "Polychlorinated Biphenyls (PCBS) ",
+          "clickable": true,
+          "sectionID": 40,
+          "sectionGUID": "f8da10da-7005-4a29-961d-bb12626293d2",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.8",
+          "sectionName": "Ponds, Pits, And Lagoons ",
+          "clickable": true,
+          "sectionID": 41,
+          "sectionGUID": "865631d3-988c-43f6-802b-d7ec58ec3721",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.9",
+          "sectionName": "Underground Pipelines ",
+          "clickable": true,
+          "sectionID": 42,
+          "sectionGUID": "c0b75a53-4458-43df-a0a5-6d1df53e5845",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.10",
+          "sectionName": "Air Emissions ",
+          "clickable": true,
+          "sectionID": 43,
+          "sectionGUID": "bf2435be-5bae-44ad-8ef9-1e16546bfa15",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.11",
+          "sectionName": "Asbestos-Containing Materials (ACM) ",
+          "clickable": true,
+          "sectionID": 44,
+          "sectionGUID": "e827aaa4-4ced-49bb-8113-c4284dd23767",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.12",
+          "sectionName": "Lead-Based Paint (LBP) ",
+          "clickable": true,
+          "sectionID": 45,
+          "sectionGUID": "cfca95dd-7194-4c87-87fe-cad65cf28907",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.13",
+          "sectionName": "Radon Gas ",
+          "clickable": true,
+          "sectionID": 46,
+          "sectionGUID": "a3a739aa-e4d0-45ce-85ed-2ba3e1dbda02",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.14",
+          "sectionName": "Wetlands and Endangered Species ",
+          "clickable": true,
+          "sectionID": 47,
+          "sectionGUID": "ef0e945b-05cd-4fd8-a500-9ddf43ad6951",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.15",
+          "sectionName": "EMFs ",
+          "clickable": true,
+          "sectionID": 48,
+          "sectionGUID": "d53f2db7-6dda-4893-b629-47af74bef29d",
+          "isGeneralInfo": false,
+          "sections": []
+        },
+        {
+          "sectionNumber": "8.16",
+          "sectionName": "Client-Specific Items ",
+          "clickable": true,
+          "sectionID": 49,
+          "sectionGUID": "cd6466df-5f68-4723-b29b-c9e21feb2cab",
+          "isGeneralInfo": false,
+          "sections": []
+        }
+      ]
+    },
+    {
+      "sectionNumber": "9.0",
+      "sectionName": "Conclusions and Recommendations ",
+      "clickable": true,
+      "sectionID": 50,
+      "sectionGUID": "a4f8cb35-df2b-4ec8-bd2d-9a021776cc22",
+      "isGeneralInfo": false,
+      "sections": []
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <div class="modal-header dividerline">
+        <button type="button" class="close" data-dismiss="modal" ng-click="Cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"> {{addLocation.title}}</h4>
+    </div>
+
+    <form>
+        <div class="modal-body">
+           
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="property" class="control-label">
+                                Property #
+                            </label>
+                            <input id="property" type="text" class="form-control" ng-model="addLocation.location.propertyNumber">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="name" class="control-label">
+                                Name
+                            </label>
+                            <input id="name" type="text" class="form-control" ng-model="addLocation.location.name">
+                        </div>
+                    </div>
+                </div>
+           
+            
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                        <label for="address" class="control-label">
+                            Address
+                        </label>
+                        <input id="address" type="text" class="form-control" ng-model="addLocation.location.address1">
+                        </div>
+                    </div>
+                </div>
+            
+          
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                        <input type="text" class="form-control" ng-model="addLocation.location.address2">
+                        </div>
+                    </div>
+                </div>
+          
+            
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="city" class="control-label">
+                            City
+                        </label>
+
+                        <input id="city" type="text" class="form-control" ng-model="addLocation.location.city">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="state" class="control-label">
+                            State
+                        </label>
+
+                        <input id="state" type="text" class="form-control" ng-model="addLocation.location.state">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="zip" class="control-label">
+                            Zip
+                        </label>
+
+                        <input id="zip" type="text" class="form-control" ng-model="addLocation.location.zip">
+                        </div>
+                    </div>
+                </div>
+           
+           
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="county" class="control-label ">
+                            County
+                        </label>
+
+                        <input id="county" type="text" class="form-control" ng-model="addLocation.location.county">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="country" class="control-label ">
+                            Country
+                        </label>
+
+                        <input id="country" type="text" class="form-control" ng-model="addLocation.location.country">
+                        </div>
+                    </div>
+                </div>
+           
+           
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="latitude" class="control-label">
+                            Latitude
+                        </label>
+
+                        <input id="latitude" type="text" class="form-control" ng-model="addLocation.location.latitude">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="longitude" class="control-label">
+                            Longitude
+                        </label>
+
+                        <input id="longitude" type="text" class="form-control" ng-model="addLocation.location.longitude">
+                        </div>
+                    </div>
+                </div>
+           
+           
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="contact" class="control-label">
+                            Contact
+                        </label>
+                        <input id="contact" type="text" class="form-control" ng-model="addLocation.location.contact">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="phone" class="control-label">
+                            Phone
+                        </label>
+
+                        <input id="phone" type="text" class="form-control" ng-model="addLocation.location.phone">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                        <label for="fax" class="control-label">
+                            Fax
+                        </label>
+
+                        <input id="fax" type="text" class="form-control" ng-model="addLocation.location.fax">
+                        </div>
+                    </div>
+                </div>
+           
+            
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="email" class="control-label">
+                            Email
+                        </label>
+
+                        <input id="email" type="text" class="form-control" ng-model="addLocation.location.email">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        <label for="ponumber" class="control-label">
+                            PO Number
+                        </label>
+
+                        <input id="ponumber" type="text" class="form-control" ng-model="addLocation.location.poNumber">
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        <div class="modal-footer">
+            <button type="reset" class="btn btn-md btn-default" ng-click="addLocation.cancel()"> Cancel</button>
+            <button type="submit" class="btn btn-md btn-success" ng-click="addLocation.addSite()"> {{addLocation.action}} This Site</button>
+
+
+        </div>
+    </form>
+
+</body>
+
+</html>

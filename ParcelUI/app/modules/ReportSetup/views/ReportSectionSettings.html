@@ -1,0 +1,512 @@
+ 
+<h4 class="border-bottom">
+    Report Section Settings
+</h4>
+
+<div class="form-horizontal">
+	<div class="form-group">
+		<label for="noofheaderspaces" class="control-label col-md-3 col-sm-2 col-xs-12" title="The number of carriage returns below each section header">
+			Number of Header Spaces:
+		</label>
+		<div class="col-xs-12 col-sm-3 col-md-4">
+			<select id="noofheaderspaces" name="noofheaderspaces" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.headerSpaces">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<hr>
+<div class="row">
+	<label class="control-label col-xs-12 col-md-12">
+		Section Header (1.0 - Top Level Sections):
+	</label>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-lg-4 col-sm-4 col-md-4">
+		<div class="row">
+			<div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+				<label for="Font" class="control-label">Font:</label>
+
+				<div class="form-group">
+					<select id="Font" class="form-control" ng-model="reportSetup.cssData['report-section-settings-section-header']['font-family']">
+						<option>Arial</option>
+						<option selected="">Helvetica</option>
+						<option>Times</option>
+						<option>Americana</option>
+						<option>Times New Roman</option>
+						<option>Book Antiqua</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="reportSetup.cssData['report-section-settings-section-header']['font-size']">
+						<option value="8px">8</option>
+						<option value="9px">9</option>
+						<option value="10px">10</option>
+						<option value="11px">11</option>
+						<option value="12px">12</option>
+						<option value="13px">13</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-section-settings-section-header'].style">
+						<option value="B" selected="">Bold</option>
+						<option value="I">Italic</option>
+						<option value="U">Underline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group ">
+					<label for="leftindent1" class="control-label">Left Indent (inches):</label>
+					<select id="leftindent1" class="form-control" ng-model="reportSetup.cssData['report-section-settings-section-header']['margin-left']">
+						<option value="0in">0</option>
+						<option value="0.125in">0.125</option>
+						<option value="0.166in">0.166</option>
+						<option value="0.25in">0.25</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalignsection1" class="control-label">Text Align:</label>
+					<select id="textalignsection1" class="form-control" ng-model="reportSetup.cssData['report-section-settings-section-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcaoitalizedsection1" class="control-label">Text Capitalized:</label>
+					<select id="textcaoitalizedsection1" class="form-control" ng-model="reportSetup.cssData['report-section-settings-section-header']['text-transform']">
+						<option value="none">No</option>
+						<option value="capitalize">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcolorsection1" class="control-label">Text Color:</label>
+					<input id="textcolorsection1" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-section-header']['color']">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+
+				<div class="form-group">
+					<label for="shoerectsection1" class="control-label">Show Rectangle:</label>
+					<select id="shoerectsection1" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.sectionHeader.showRectangle">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+
+			</div>
+
+
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillsection1" class="control-label">Header Fill:</label>
+					<select id="headerfillsection1" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.sectionHeader.fillHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillcolorsection1" class="control-label">Header Fill Color:</label>
+					<input id="headerfillcolorsection1" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-section-header']['background-color']">
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="lowbelowheadersection1" class="control-label">Line Below Header:</label>
+					<select id="lowbelowheadersection1" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.sectionHeader.lineBelowHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="lowbelowheadercolorsection1" class="control-label">Line Below Header Color:</label>
+					<input id="lowbelowheadercolorsection1" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-section-header-below']['background-color']">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<hr>
+<div class="row">
+	<label class="control-label col-xs-12 col-md-12">
+		Sub-Section Header (1.1 - First child level sections):
+	</label>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<label for="Fontsecond" class="control-label">Font:</label>
+
+				<div class="form-group">
+					<select id="Fontsecond" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['font-family']">
+						<option>Arial</option>
+						<option selected="">Helvetica</option>
+						<option>Times</option>
+						<option>Americana</option>
+						<option>Times New Roman</option>
+						<option>Book Antiqua</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['font-size']">
+						<option value="8px">8</option>
+						<option value="9px">9</option>
+						<option value="10px">10</option>
+						<option value="11px">11</option>
+						<option value="12px">12</option>
+						<option value="13px">13</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-section-settings-sub-section-header'].style">
+						<option value="B" selected="">Bold</option>
+						<option value="I">Italic</option>
+						<option value="U">Underline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group ">
+					<label for="leftindentsec2" class="control-label">Left Indent (inches):</label>
+					<select id="leftindentsec2" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['margin-left']">
+						<option value="0in">0</option>
+						<option value="0.125in">0.125</option>
+						<option value="0.166in">0.166</option>
+						<option value="0.25in">0.25</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalignsec2" class="control-label">Text Align:</label>
+					<select id="textalignsec2" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center" selected="">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcapsec2" class="control-label">Text Capitalized:</label>
+					<select id="textcapsec2" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['text-transform']">
+						<option value="none">No</option>
+						<option value="capitalize">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcolorsec2" class="control-label">Text Color:</label>
+					<input id="textcolorsec2" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['color']">
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="showcolorsec2" class="control-label">Show Rectangle:</label>
+					<select id="showcolorsec2" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSectionHeader.showRectangle">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillsec2" class="control-label">Header Fill:</label>
+					<select id="headerfillsec2" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSectionHeader.fillHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillcolorsec2" class="control-label">Header Fill Color:</label>
+					<input id="headerfillcolorsec2" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-section-header']['background-color']">
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linebelowheadersec2" class="control-label">Line Below Header:</label>
+					<select id="linebelowheadersec2" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSectionHeader.lineBelowHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linebelowheadercolorsec2" class="control-label">Line Below Header Color:</label>
+					<input id="linebelowheadercolorsec2" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-section-header-below']['background-color']">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<label class="control-label col-xs-12 col-md-12">
+		Sub-Sub-Section Header (1.1.1 - Second Child level sections and anything deeper):
+	</label>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<label class="control-label" for="Fontthird">Font:</label>
+				<div class="form-group">
+					<select id="Fontthird" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['font-family']">
+						<option>Arial</option>
+						<option selected="">Helvetica</option>
+						<option>Times</option>
+						<option>Americana</option>
+						<option>Times New Roman</option>
+						<option>Book Antiqua</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['font-size']">
+						<option value="8px">8</option>
+						<option value="9px">9</option>
+						<option value="10px">10</option>
+						<option value="11px">11</option>
+						<option value="12px">12</option>
+						<option value="13px">13</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header'].style">
+						<option value="B" selected="">Bold</option>
+						<option value="I">Italic</option>
+						<option value="U">Underline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group ">
+					<label for="leftindentsec3" class="control-label">Left Indent (inches):</label>
+					<select id="leftindentsec3" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['margin-left']">
+						<option value="0in">0</option>
+						<option value="0.125in">0.125</option>
+						<option value="0.166in">0.166</option>
+						<option value="0.25in">0.25</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalignsec3" class="control-label">Text Align:</label>
+					<select id="textalignsec3" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['text-align']">
+						<option value="left">Left</option>
+						<option value="center" selected="">Center</option>
+						<option value="right">Right</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcapsec3" class="control-label">Text Capitalized:</label>
+					<select id="textcapsec3" class="form-control" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['text-transform']">
+						<option value="none">No</option>
+						<option value="capitalize">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textcolorsec3" class="control-label">Text Color:</label>
+					<input id="textcolorsec3" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['color']">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="showectsec3" class="control-label">Show Rectangle:</label>
+					<select id="showectsec3" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSubSectionHeader.showRectangle">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillsec3" class="control-label">Header Fill:</label>
+					<select id="headerfillsec3" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSubSectionHeader.fillHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="headerfillcolorsec3" class="control-label">Header Fill Color:</label>
+					<input id="headerfillcolorsec3" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header']['background-color']">
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linebelowheadersec3" class="control-label">Line Below Header:</label>
+					<select id="linebelowheadersec3" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.subSubSectionHeader.lineBelowHeader">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linebelowheadercolorsec3" class="control-label">Line Below Header Color:</label>
+					<input id="linebelowheadercolorsec3" colorpicker class="form-control ng-valid ng-dirty" ng-model="reportSetup.cssData['report-section-settings-sub-sub-section-header-below']['background-color']">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<label class="control-label col-xs-12 col-md-12">
+		Narrative Section Text:
+	</label>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-md-4">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<label for="Fontfourth" class="control-label">Font:</label>
+				<div class="form-group">
+					<select id="Fontfourth" class="form-control" ng-model="reportSetup.cssData['report-section-settings-narrative-section']['font-family']">
+						<option>Arial</option>
+						<option selected="">Helvetica</option>
+						<option>Times</option>
+						<option>Americana</option>
+						<option>Times New Roman</option>
+						<option>Book Antiqua</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="reportSetup.cssData['report-section-settings-narrative-section']['font-size']">
+						<option value="8px">8</option>
+						<option value="9px">9</option>
+						<option value="10px">10</option>
+						<option value="11px">11</option>
+						<option value="12px">12</option>
+						<option value="13px">13</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" multiple="" ng-model="reportSetup.cssData['report-section-settings-narrative-section'].style">
+						<option value="B" selected="">Bold</option>
+						<option value="I">Italic</option>
+						<option value="U">Underline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-8">
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="leftindentnar" class="control-label">Left Indent (inches):</label>
+					<select id="leftindentnar" class="form-control" ng-model="reportSetup.cssData['report-section-settings-narrative-section']['margin-left']">
+						<option value="0in">0</option>
+						<option value="0.125in">0.125</option>
+						<option value="0.166in">0.166</option>
+						<option value="0.25in">0.25</option>
+					</select>
+				</div>
+			</div>
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="textalignnar" class="control-label">Text Align:</label>
+					<select id="textalignnar" class="form-control" ng-model="reportSetup.cssData['report-section-settings-narrative-section']['text-align']">
+						<option value="left">Left</option>
+						<option value="center">Center</option>
+						<option value="right">Right</option>
+						<option value="justify">Full-Justify</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="matchheaderindentnar" class="control-label">Match Header Indent:</label>
+					<select id="matchheaderindentnar" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.narrativeSection.matchHeaderIndent">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class=" col-xs-12 col-md-6">
+				<div class="form-group">
+					<label for="linespacingnar" class="control-label">Line Spacing:</label>
+					<select id="linespacingnar" class="form-control" ng-model="reportSetup.jsonData.reportSectionSettings.narrativeSection.lineSpacing">
+						<option value="1.0" selected="">1.0</option>
+						<option value="1.5">1.5</option>
+						<option value="2.0">2.0</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

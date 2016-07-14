@@ -1,0 +1,124 @@
+<h4>Report Appendix Settings</h4>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-md-2">
+            Font:
+        </label>
+        <div class="col-xs-12 col-md-10">
+            <p class="form-control-static"><strong>Appendices font settings pull from Sub Section Header above.</strong></p>
+        </div>
+    </div>
+</div>
+<!-- controls -->
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="form-group">
+            <label for="beginAppendices" class="control-label">
+                Begin Appendices on a new page:
+            </label>
+            <select class="form-control" id="beginAppendices" ng-model="tocSetup.jsonData.reportAppendixSettings.appendicesOnNewPage">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="indentAppendixTitle" class="control-label">
+                Indent Appendix Title:
+            </label>
+            <select class="form-control" id="indentAppendixTitle" ng-model="tocSetup.jsonData.reportAppendixSettings.indentAppendixTitle">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="appendixTabLeader" class="control-label">
+                Tab Leader:
+            </label>
+            <select class="form-control" id="appendixTabLeader" ng-model="tocSetup.jsonData.reportAppendixSettings.tabLeader">
+                <option value=" ">(none)</option>
+                <option value=".">...</option>
+                <option value="-">---</option>
+                <option value="_">___</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <input class="form-control" ng-disabled="true" value=Section{{tocSetup.jsonData.reportAppendixSettings.tabLeader}}1>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="form-group">
+            <label for="usesAppendixContainerStyle" class="control-label">
+                Uses Appendix Container Style:
+            </label>
+            <select class="form-control" id="usesAppendixContainerStyle" ng-model="tocSetup.jsonData.reportAppendixSettings.usesAppendixContainerStyle">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="hideAppendixTitleInPdf" class="control-label">
+                Hide Appendix Title in PDF:
+            </label>
+            <select id="hideAppendixTitleInPdf" class="form-control" ng-model="tocSetup.jsonData.reportAppendixSettings.hideAppendixTitleInPdf">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="linesBeforeAppendices" class="control-label">
+                Number of Lines before Appendices:
+            </label>
+            <select id="linesBeforeAppendices" class="form-control" ng-model="tocSetup.jsonData.reportAppendixSettings.linesBeforeAppendices">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="form-group">
+            <label for="containerFontStyle" class="control-label">
+                Appendix Container Font Style:
+            </label>
+            <select class="form-control" id="containerFontStyle" ng-model="tocSetup.cssData['report-appendix-settings'].style">
+
+                <option value="B">Bold</option>
+                <option value="I">Italic</option>
+                <option value="U">Underline</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="hideAppendixCoverPages" class="control-label">
+                Hide Appendix Cover Pages:
+            </label>
+            <select class="form-control" id="hideAppendixCoverPages" ng-model="tocSetup.jsonData.reportAppendixSettings.hideAppendixCoverPages">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="form-group">
+            <label for="appendixContainerTitle" class="control-label">
+                Appendix Container Title:
+            </label>
+            <input id="appendixContainerTitle" class="form-control" value="" ng-model="tocSetup.jsonData.reportAppendixSettings.appendixContainerTitle">
+        </div>
+        <div class="form-group">
+            <label for="showPageNumbers" class="control-label">
+                Show Page Numbers:
+            </label>
+            <select class="form-control" id="showPageNumbers" ng-model="tocSetup.jsonData.reportAppendixSettings.showPageNumbers">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+<!-- controls end -->

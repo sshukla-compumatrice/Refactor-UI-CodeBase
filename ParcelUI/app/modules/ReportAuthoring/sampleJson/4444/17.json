@@ -1,0 +1,92 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><br><vertical-table table='contentValues.verticalTable03'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "4.0 Vicinity Reconnaissance",
+        "tagData": "\\u00A0 Cross reference to Section 9 if the adjacent property is listed on Regulatory Database.",
+        "verticalTable03": {
+            "structure": [{
+                "label": "Direction From Site",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Shared Border?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Across What?",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Current Use",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Occupant(s) Name",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Address",
+                "id": "",
+                "type": "textarea",
+                "colspan": 3,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "75%",
+                "textWidth": "75%"
+            }, {
+                "label": "Potential Environmental Concerns",
+                "id": "",
+                "type": "textarea",
+                "colspan": 4,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Direction From Site": "NorthSouthEastWestNortheastNorthwestSoutheastSouthwestOther",
+                "Shared Border?": "YesNo",
+                "Across What?": "",
+                "Current Use": "UndevelopedUnimprovedAgriculturalCommercial\\/ IndustrialCommercialIndustrialResidentialInstitutionalAthletic FacilityRetailMixed UseMulti-FamilyOfficeOther",
+                "Occupant(s) Name": "",
+                "Address": "",
+                "Potential Environmental Concerns": ""
+            }]
+        },
+        "ckEditData": {
+            "div02": "<p align=\\\"justify\\\">Based on observations and available regulatory information, the adjacent property uses are not anticipated to adversely impact the environmental integrity of the Project. <\\/p>"
+        }
+    }
+}

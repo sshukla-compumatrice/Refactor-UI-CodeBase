@@ -1,0 +1,78 @@
+{
+    "sections": [{
+        "sectionID": 1,
+        "number": "1.0",
+        "name": "General Information"
+    }, {
+        "sectionID": 2,
+        "number": "2.0",
+        "name": "Executive Summary",
+        "sections": [{
+            "sectionID": 3,
+            "number": "2.1",
+            "name": "Subject Property Description"
+        }, {
+            "sectionID": 4,
+            "number": "2.2",
+            "name": "Data Gaps"
+        }]
+    }, {
+        "sectionID": 5,
+        "number": "3.0",
+        "name": "Introduction",
+        "sections": [{
+            "sectionID": 6,
+            "number": "3.1",
+            "name": "Purpose"
+        }]
+    }, {
+        "sectionID": 7,
+        "number": "4.0",
+        "name": "Records Review",
+        "sections": [{
+            "sectionID": 8,
+            "number": "4.1",
+            "name": "General Site Setting",
+            "sections": [{
+                "sectionID": 9,
+                "number": "4.1.1",
+                "name": "Topography"
+            }, {
+                "sectionID": 10,
+                "number": "4.1.2",
+                "name": "Surface Water Bodies"
+            }, {
+                "sectionID": 11,
+                "number": "4.1.3",
+                "name": "Geology and Hydrology"
+            }]
+        }]
+    }, {
+        "sectionID": 12,
+        "number": "5.0",
+        "name": "Topography",
+        "sections": [{
+            "sectionID": 13,
+            "number": "5.1",
+            "name": "Specialized Knowledge"
+        }, {
+            "sectionID": 14,
+            "number": "5.2",
+            "name": "Valuation Reduction for Environmental Issues"
+        }, {
+            "sectionID": 15,
+            "number": "5.3",
+            "name": "Owner, Property Manager, and Occupant Information"
+        }, {
+            "sectionID": 16,
+            "number": "5.4",
+            "name": "Reason For Performing Phase I ESA"
+        }]
+    },{
+            "sectionID": 25,
+            "number": "",
+            "name": "Cost Tables",
+            "sections": []
+            
+    }]
+}

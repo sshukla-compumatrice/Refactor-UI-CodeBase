@@ -1,0 +1,28 @@
+{
+ 
+    "html": "<h3 class='border-bottom text-capitalize' >{{contentValues.sectionTitle00}}</h3><h4>{{contentValues.sectionTitle01}}</h4><div class='boxCK'><span class='editCK'>edit</span><div associate-photos ap-data='contentValues.associatPhotos' /><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><div><h4>{{contentValues.sectionTitle03}}</h4></div><tag-with-dashes></tag-with-dashes><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h4>{{contentValues.sectionTitle05}}</h4></div> <div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div06'></div></div><div><h4>{{contentValues.sectionTitle07}}</h4></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div08'></div></div><div><h4>{{contentValues.sectionTitle09}}</h4></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div010'></div></div>",
+  
+    "contentValues": {
+         "tagData": "This is instruction >Based on information gathered and observations made by {ConsultantName} on {SiteVisitDate}, the site building appears to be in <font color=\\\"#3333ff\\\">[good\\/fair\\/poor] <\\/font>condition overall.<\\/p><p>&#160;<\\/p><p>The following deficiencies require immediate attention: <\\/p><ul><li><font color=\\\"#ff0000\\\">bullet list of issues requiring immediate repairs<\\/font><\\/li><\\/ul><p><font color=\\\"#ff0000\\\"><\\/font>&#160;<\\/p><p><font color=\\\"#000000\\\">The fo",
+        "sectionTitle00": "1 Executive Summary",
+        "sectionTitle01": "1.1 General Description",
+        "sectionTitle03": "1.2 General Physical Condition",
+        "sectionTitle05": "1.3 Opinions of Probable Costs",
+        "sectionTitle07": "1.4 Deviations from the Guide",
+        "sectionTitle09": "1.5 Recommendations",
+		"associatPhotos": {
+                "enabled": true,
+                "associated": [{
+                    "url": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+                    "name": "renamed for section 1"
+                }]
+            },
+        "ckEditData": {
+            "div02": "<p>{ConsultantName} was commissioned by {ClientCompany} to conduct a Property Condition Assessment (PCA) on the property referred to as \\\" {PropertyName} \\\" located at {PropertyAddress} in {PropertyCity}, {PropertyCounty}, {PropertyZip}.<\\/p>",
+            "div04": "<p>Based on information gathered and observations made by {ConsultantName} on {SiteVisitDate}, the site building appears to be in <font color=\\\"#3333ff\\\">[good\\/fair\\/poor] <\\/font>condition overall.<\\/p><p>&#160;<\\/p><p>The following deficiencies require immediate attention: <\\/p><ul><li><font color=\\\"#ff0000\\\">bullet list of issues requiring immediate repairs<\\/font><\\/li><\\/ul><p><font color=\\\"#ff0000\\\"><\\/font>&#160;<\\/p><p><font color=\\\"#000000\\\">The following significant deficiencies were observed<\\/font><\\/p><ul><li><font color=\\\"#ff0000\\\">bullet list of significant deficiencies<\\/font><\\/li><\\/ul>",
+            "div06": "Tables indicating cost estimates for immediate repairs, <font color=\\\"#3333ff\\\">[short term repairs]<\\/font> and replacement reserve costs are included in this report.",
+            "div08": "This property condition assessment was generally carried out as per ASTM E 2018-01. No additional consultants were used in the assessment and preparation of the PCA.",
+            "div010": "<p>Based on the findings of the PCA, further studies, research testing, or exploratory probing are <font color=\\\"#3333ff\\\">[NOT]<\\/font> recommended for this Project. <font color=\\\"#ff0000\\\">[if applicable, discuss recommendation for further study\\/testing]<\\/font><\\/p><p><font color=\\\"#ff0000\\\"><\\/font>&#160;<\\/p><p><font color=\\\"#000000\\\">The following deficiencies require immediation action:<\\/font><\\/p><ul><li><font color=\\\"#ff0000\\\">if there are immediate repairs, discuss<\\/font><\\/li><\\/ul><p><font color=\\\"#ff0000\\\"><\\/font>&#160;<\\/p><p>The following deficiences require attention in the short term:<\\/p><ul><li><font color=\\\"#ff0000\\\">:if there are short term repairs, discuss<\\/font><\\/li><\\/ul>"
+        }
+    }
+}

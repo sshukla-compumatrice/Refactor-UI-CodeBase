@@ -1,0 +1,61 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><spreadsheet-table table='contentValues.spreadSheetTable02'></spreadSheet-table>",
+    "contentValues": {
+        "sectionTitle00": "5.3 Interviews",
+        "spreadSheetTable02": {
+            "structure": [{
+                "label": "Contact",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Title",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Association",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Telephone No.",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }],
+            "data": [{
+                "Contact": ""
+            }, {
+                "Title": ""
+            }, {
+                "Association": ""
+            }, {
+                "Telephone No.": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

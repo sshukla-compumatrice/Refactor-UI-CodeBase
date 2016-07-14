@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Report Output Setup</title>
+</head>
+
+<body>
+    <script id="tocDelete.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Delete Table of Content Setup</h4>
+        </div>
+
+
+        <form name="myFormAddTemplate" novalidate>
+            <div class="modal-body ">                
+                    <p><strong>You are about to delete the " {{tocSetupName}} ". Are you sure you want to delete it?</strong></p>                
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+                 <a class="btn btn-danger" role="button" ng-click="deleteReport()">Continue</a>
+            </div>
+        </form>
+
+    </script>
+
+    <script id="tocRename.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Rename Table of Content Setup:</h4>
+        </div>
+        <form name="myFormAddTemplate" novalidate>
+            <div class="modal-body"> 
+                <div class="form-group" show-errors>
+                <label for="renameReportTemplate" class="control-label">Enter a new name for this Table of Content Setup:</label>      
+                    <span class="reqText">*</span>
+                                <input id="renameReportTemplate" name="renameReportTemplate" class="form-control" type="text" placeholder="Enter a new name" ng-model="cloned.name" required>                            
+                </div>                                    
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="CancelDelete()">Cancel</button>
+                <button type="button" class="btn btn-primary" ng-click="renameReport(myFormAddTemplate)">Continue</button>
+            </div>
+        </form>
+
+    </script>
+
+  
+    <script id="tocDuplicate.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Duplicate Table of Content Setup</h4>
+        </div>
+
+        <form name="myFormAddTemplate" class="form-horizontal">
+            <div class="modal-body ">
+                <div class="form-group">
+                    <label for="setupCopyFrom" class="col-sm-3 col-lg-3 control-label">Copy From:</label>        
+                            <div class="col-md-7 col-lg-7 col-xs-12" show-errors>
+                                <select id="setupCopyFrom" name="setupCopyFrom" class="form-control" ng-model="report" ng-options="report.name for report in tocSetup.setupProperties.reportSection.coll" required ng-change="duplicateError = ''">
+                                    <option value="">Select Table of Content Setup</option>
+                                </select>
+                            </div>
+                            <span class="reqText">*</span>                                        
+                </div>
+                                   
+                        <div class="form-group">
+                            <label for="copyTo" class="col-sm-3 col-lg-3 control-label">Copy To:</label>        
+                                    <div class="col-md-7 col-lg-7 col-xs-12">
+                                        <select id="copyTo" name="copyTo" class="form-control" ng-init="copyToAction='Existing'" ng-model="copyToAction" ng-change="duplicateError = ''">
+                                            <option value="Existing">Existing</option>
+                                            <option value="New">New</option>
+                                        </select>
+                                    </div>                            
+                        </div>
+
+                        <div class="form-group">
+                            <label for="copyToAction" class="col-sm-3 col-lg-3 control-label">{{copyToAction}}</label>                           
+                                
+                                    <div class="col-md-7 col-lg-7 col-xs-12" form-input-validation="(myFormAddTemplate.newName && myFormAddTemplate.newName.$invalid) || (myFormAddTemplate.copyTo && myFormAddTemplate.copyTo.$invalid)">
+                                        <input id="copyToAction" class="form-control" type="text" placeholder="Enter a name" ng-show="copyToAction == 'New'" ng-model="toCreateReport" name="newName" ng-required="copyToAction == 'New'">
+                                        <select name="copyTo" class="form-control" ng-init="copyToReport='';" ng-model="copyToReport" ng-options="report.name for report in tocSetup.setupProperties.reportSection.coll" ng-show="copyToAction == 'Existing'" ng-required="copyToAction == 'Existing'" ng-change="duplicateError = ''">
+                                            <option value="">Select Table of Content Setup</option>
+                                        </select>
+                                    </div>
+                                    <span class="reqText">*</span>
+                        </div>                
+            </div>
+
+            <div ng-show="duplicateError != '' && duplicateError != null && duplicateError != undefined" class="alert alert-danger" role="alert" ng-class="danger">
+                {{duplicateError}}
+            </div>
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="CancelDelete()">Cancel</button>
+                <button type="button" class="btn btn-primary" ng-click="duplicate(myFormAddTemplate)">Continue</button>
+            </div>
+        </form>
+
+    </script>
+
+
+    <div class="container-fluid" ng-controller="TOCSetupCtrl as tocSetup">
+		<div class="panel panel-default">
+		<div class="panel-body">	
+        <h2 class="page-header">Table of Contents Setup</h2>
+        <span class="pull-right"> 
+            <button type="reset" class="btn btn-md btn-default" tabindex="-1">Cancel</button>
+            <button type="submit" class="btn btn-md btn-primary" ng-click="tocSetup.save()" tabindex="-1">Save Changes</button>
+        </span>
+
+        <form class="form-horizontal">
+        <div class="form-group ">
+            <label for="company" class="control-label col-md-2 col-sm-2 col-xs-12">
+                Company:
+            </label>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <select id="company" name="companyID" class="form-control" ng-init="tocSetup.selectedCompanyId = 0" ng-model="tocSetup.selectedCompanyId" ng-change="tocSetup.selectedCompanyChanged()" tabindex="1" focus-if>
+                    <option value="0" ng-if="!tocSetup.selectedCompanyId">Select a company</option>
+                    <option value="5572"> Land Environmental Group</option>
+                    <option value="5684"> Lauenstein &amp; Associates</option>
+                    <option value="3099">123 ENG Test</option>
+                    <option value="7590">14555 Blanco Road</option>
+                    <option value="5745">172d Airlift Wing MS ANG</option>
+                    <option value="5666">1st Bank Yuma</option>
+                    <option value="5315">1st Colonial Community Bank</option>
+                    <option value="5857">1st Constitution Bank</option>
+                    <option value="4991">1st National Bank of Demo</option>
+                    <option value="8014">1st National Bank of South Florida</option>
+                    <option value="5829">1st National Community Bank</option>
+                    <option value="9599">1st Security Bank of Washington</option>
+                    <option value="5926">1st Source Bank</option>
+                    <option value="7917">21 Environmental</option>
+                    <option value="4734">2G Environmental, LLC</option>
+                    <option value="6477">3 Kings Environmental</option>
+                    <option value="4735">3 Kings Environmental, Inc.</option>
+                    <option value="3098">3065866: Vince Grandinetti</option>
+                    <option value="3206">3126775: Monty Bruner</option>
+                    <option value="4367">3266541: Benjamin Ford</option>
+                    <option value="5048">3434731: Paul Gebhard</option>
+                </select>
+            </div>
+        </div>
+       
+        <div class="form-group" ng-if="tocSetup.setupProperties.reportSection.coll && tocSetup.setupProperties.reportSection.coll.length">
+            <label for="reportSetup" class="control-label col-md-2 col-sm-2 col-xs-12">
+                Report Setup:
+            </label>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <select name="setupID" id="reportSetup" class="form-control" ng-model="tocSetup.setupProperties.reportSection.selected" ng-options="report.name for report in tocSetup.setupProperties.reportSection.coll track by report.tocSetupID" ng-change="tocSetup.setupProperties.reportSectionChanged()" tabindex="2">
+                    <option ng-if="!tocSetup.setupProperties.reportSection.selected" value="">Select Table of Content Setup...</option>
+                </select>
+
+                <!--
+                <select class="form-control" name="reportSel" type="select" ng-model="tocSetup.setupProperties.reportSection.selected" ng-options="report.name for report in tocSetup.setupProperties.reportSection.coll track by report.reportOutputSetupID" ng-change="tocSetup.setupProperties.reportSectionChanged()">
+                    <option value="">Select Report Output Setup</option>
+                </select>
+-->
+            </div>
+        </div>
+
+        <div ng-show="tocSetup.setupProperties.reportSection.setupReady">
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                    Tools:
+                </label>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <button data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-md btn-default" ng-click="tocSetup.setupProperties.toolOptions.selectAction('delete')" tabindex="3"><i class="fa fa-times text-danger icon-16"></i></button>
+                    <button data-toggle="tooltip" data-placement="top" title="Rename" class="btn btn-md btn-default" ng-click="tocSetup.setupProperties.toolOptions.selectAction('rename')" tabindex="4"><i class="fa fa-terminal text-info icon-16"></i></button>
+                    <!--
+                    <button data-toggle="tooltip" data-placement="top" title="Copy FROM" class="btn btn-md btn-default" ng-click="tocSetup.setupProperties.toolOptions.selectAction('copyFrom')"><i class="fa fa-files-o text-primary icon-16"></i></button>
+                    <button data-toggle="tooltip" data-placement="top" title="Copy TO" class="btn btn-md btn-default" ng-click="tocSetup.setupProperties.toolOptions.selectAction('copyTo')"><i class="fa fa-file text-success icon-16"></i></button>
+-->
+                    <button data-toggle="tooltip" data-placement="top" title="Duplicate" class="btn btn-md btn-default" ng-click="tocSetup.setupProperties.toolOptions.selectAction('duplicate')" tabindex="5"><i class="fa fa-file text-success icon-16"></i></button>
+                </div>
+
+            </div>
+        </div>
+        </form>
+        <div class="alert" ng-class="tocSetup.msgType" role="alert" id="serviceResponseDiv" ng-show="tocSetup.serviceResponseAlert">
+            <button type="button" class="close" ng-click="tocSetup.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{tocSetup.serviceResponseText}}
+        </div>
+        <hr>
+        <div ng-show="tocSetup.setupProperties.reportSection.setupReady">
+
+
+            <div ng-include src="'app/modules/TableOfContentsSetup/views/GlobalPageSettings.html'"></div>
+            <hr>
+
+            <div ng-include src="'app/modules/TableOfContentsSetup/views/PageHeaderSettings.html'"></div>
+            <hr>
+
+            <div ng-include src="'app/modules/TableOfContentsSetup/views/ReportSectionSettings.html'"></div>
+            <hr>
+
+            <div ng-include src="'app/modules/TableOfContentsSetup/views/ReportAppendixSettings.html'"></div>
+            <hr>
+            <div ng-include src="'app/modules/TableOfContentsSetup/views/PageFooterSettings.html'"></div>
+            <hr>
+            
+            
+
+            <div class="form-group text-center">                
+                <button type="reset" class="btn btn-md btn-default">Cancel</button>
+                <button type="submit" class="btn btn-md btn-primary" ng-click="tocSetup.save()">Save Changes</button>
+            </div>
+
+            <div ng-show="false">
+                <hr>
+                <div class="" id="applied">
+                    <span>Test html </span>
+                </div>
+            </div>
+        </div>
+		</div>	
+		</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,2197 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable'  alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.2.6 Landscaping and Appurtenances",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 24,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Repair Sign Base",
+                "value": "19"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "20"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "21"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "22"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "23"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "24"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "1775"
+            }, {
+                "name": "Replace wood/stockade fencing",
+                "value": "1776"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "1777"
+            }, {
+                "name": "Retaining walls, wood",
+                "value": "1778"
+            }, {
+                "name": "Replace Retaining Wall",
+                "value": "1779"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "1780"
+            }, {
+                "name": "Replace chainlink fence",
+                "value": "1781"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "1782"
+            }, {
+                "name": "Replace pole mounted lighting",
+                "value": "1783"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "1784"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block",
+                "value": "1785"
+            }, {
+                "name": "Signage",
+                "value": "2026"
+            }, {
+                "name": "Site Lighting",
+                "value": "2030"
+            }, {
+                "name": "Landscaping",
+                "value": "2032"
+            }, {
+                "name": "Irrigation",
+                "value": "2033"
+            }, {
+                "name": "Site Fences",
+                "value": "2034"
+            }, {
+                "name": "Signage",
+                "value": "2132"
+            }, {
+                "name": "Site Lighting",
+                "value": "2136"
+            }, {
+                "name": "Landscaping",
+                "value": "2138"
+            }, {
+                "name": "Irrigation",
+                "value": "2139"
+            }, {
+                "name": "Site Fences",
+                "value": "2140"
+            }, {
+                "name": "Signage",
+                "value": "2592"
+            }, {
+                "name": "Site Lighting",
+                "value": "2596"
+            }, {
+                "name": "Landscaping",
+                "value": "2598"
+            }, {
+                "name": "Irrigation",
+                "value": "2599"
+            }, {
+                "name": "Site Fences",
+                "value": "2600"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "3036"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "3037"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "3038"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "3039"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "3040"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "3041"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "3042"
+            }, {
+                "name": "Irrigation system",
+                "value": "3043"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "3044"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "3045"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "3046"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "3047"
+            }, {
+                "name": "Signage",
+                "value": "3353"
+            }, {
+                "name": "Site Lighting",
+                "value": "3357"
+            }, {
+                "name": "Landscaping",
+                "value": "3359"
+            }, {
+                "name": "Irrigation",
+                "value": "3360"
+            }, {
+                "name": "Site Fences",
+                "value": "3361"
+            }, {
+                "name": "Signage",
+                "value": "3830"
+            }, {
+                "name": "Site Lighting",
+                "value": "3834"
+            }, {
+                "name": "Landscaping",
+                "value": "3836"
+            }, {
+                "name": "Irrigation",
+                "value": "3837"
+            }, {
+                "name": "Site Fences",
+                "value": "3838"
+            }, {
+                "name": "Signage",
+                "value": "4021"
+            }, {
+                "name": "Landscaping",
+                "value": "4027"
+            }, {
+                "name": "Irrigation",
+                "value": "4028"
+            }, {
+                "name": "Site Fences",
+                "value": "4029"
+            }, {
+                "name": "Signage",
+                "value": "4160"
+            }, {
+                "name": "Landscaping",
+                "value": "4166"
+            }, {
+                "name": "Irrigation",
+                "value": "4167"
+            }, {
+                "name": "Site Fences",
+                "value": "4168"
+            }, {
+                "name": "Signage",
+                "value": "4927"
+            }, {
+                "name": "Site Lighting",
+                "value": "4931"
+            }, {
+                "name": "Landscaping",
+                "value": "4933"
+            }, {
+                "name": "Irrigation",
+                "value": "4934"
+            }, {
+                "name": "Site Fences",
+                "value": "4935"
+            }, {
+                "name": "Signage",
+                "value": "5107"
+            }, {
+                "name": "Site Lighting",
+                "value": "5111"
+            }, {
+                "name": "Landscaping",
+                "value": "5113"
+            }, {
+                "name": "Irrigation",
+                "value": "5114"
+            }, {
+                "name": "Site Fences",
+                "value": "5115"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "5629"
+            }, {
+                "name": "Signage",
+                "value": "5639"
+            }, {
+                "name": "Site Lighting",
+                "value": "5643"
+            }, {
+                "name": "Landscaping",
+                "value": "5645"
+            }, {
+                "name": "Irrigation",
+                "value": "5646"
+            }, {
+                "name": "Site Fences",
+                "value": "5647"
+            }, {
+                "name": "Retaining wall. Repair  ",
+                "value": "11021"
+            }, {
+                "name": "Retaining wall. Replace  ",
+                "value": "11022"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "11023"
+            }, {
+                "name": "Landscape material. Plant ",
+                "value": "11024"
+            }, {
+                "name": "Retaining wall. Repair  ",
+                "value": "11286"
+            }, {
+                "name": "Retaining wall. Replace  ",
+                "value": "11287"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "11288"
+            }, {
+                "name": "Landscape material. Plant ",
+                "value": "11289"
+            }, {
+                "name": "Retaining wall. Repair  ",
+                "value": "11551"
+            }, {
+                "name": "Retaining wall. Replace  ",
+                "value": "11552"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "11553"
+            }, {
+                "name": "Landscape material. Plant ",
+                "value": "11554"
+            }, {
+                "name": "Retaining wall. Repair  ",
+                "value": "11816"
+            }, {
+                "name": "Retaining wall. Replace  ",
+                "value": "11817"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "11818"
+            }, {
+                "name": "Landscape material. Plant ",
+                "value": "11819"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "12100"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "12101"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "12102"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "12103"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "12104"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "12105"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "12106"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "12107"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "12108"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "12109"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "12110"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "12343"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "12344"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "12345"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "12346"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "12347"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "12348"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "12349"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "12350"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "12351"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "12352"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "12353"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "12586"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "12587"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "12588"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "12589"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "12590"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "12591"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "12592"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "12593"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "12594"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "12595"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "12596"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "12829"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "12830"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "12831"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "12832"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "12833"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "12834"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "12835"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "12836"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "12837"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "12838"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "12839"
+            }, {
+                "name": "Signage",
+                "value": "13046"
+            }, {
+                "name": "Site Lighting",
+                "value": "13050"
+            }, {
+                "name": "Landscaping",
+                "value": "13052"
+            }, {
+                "name": "Irrigation",
+                "value": "13053"
+            }, {
+                "name": "Site Fences",
+                "value": "13054"
+            }, {
+                "name": "Signage",
+                "value": "13400"
+            }, {
+                "name": "Site Lighting",
+                "value": "13404"
+            }, {
+                "name": "Landscaping",
+                "value": "13406"
+            }, {
+                "name": "Irrigation",
+                "value": "13407"
+            }, {
+                "name": "Site Fences",
+                "value": "13408"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "13432"
+            }, {
+                "name": "Signage",
+                "value": "13498"
+            }, {
+                "name": "Site Lighting",
+                "value": "13502"
+            }, {
+                "name": "Landscaping",
+                "value": "13504"
+            }, {
+                "name": "Irrigation",
+                "value": "13505"
+            }, {
+                "name": "Site Fences",
+                "value": "13506"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "13534"
+            }, {
+                "name": "Chain link fence replacement",
+                "value": "13750"
+            }, {
+                "name": "Wood stockade fence replacement, 6 foot height",
+                "value": "13751"
+            }, {
+                "name": "Wood post and rail fence replacement",
+                "value": "13752"
+            }, {
+                "name": "HID lighting fixture replacement",
+                "value": "13753"
+            }, {
+                "name": "Wooden retaining wall replacement",
+                "value": "13754"
+            }, {
+                "name": "Dry set interlocking concrete block retaining wall replacement",
+                "value": "13755"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "15663"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "15664"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "15665"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "15666"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "15667"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "16514"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "16515"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "16516"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "16517"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "16518"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "16777"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "16778"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "16779"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "16780"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "16781"
+            }, {
+                "name": "Tree Trimming",
+                "value": "17856"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "17857"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "17858"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "17859"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "17860"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "17861"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "17862"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "18204"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "18205"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "18206"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "18207"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "18208"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "18467"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "18468"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "18469"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "18470"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "18471"
+            }, {
+                "name": "Signage",
+                "value": "18550"
+            }, {
+                "name": "Site Lighting",
+                "value": "18554"
+            }, {
+                "name": "Landscaping",
+                "value": "18556"
+            }, {
+                "name": "Irrigation",
+                "value": "18557"
+            }, {
+                "name": "Site Fences",
+                "value": "18558"
+            }, {
+                "name": "Signage",
+                "value": "18651"
+            }, {
+                "name": "Site Lighting",
+                "value": "18655"
+            }, {
+                "name": "Landscaping",
+                "value": "18657"
+            }, {
+                "name": "Irrigation",
+                "value": "18658"
+            }, {
+                "name": "Site Fences",
+                "value": "18659"
+            }, {
+                "name": "Signage",
+                "value": "18752"
+            }, {
+                "name": "Site Lighting",
+                "value": "18756"
+            }, {
+                "name": "Landscaping",
+                "value": "18758"
+            }, {
+                "name": "Irrigation",
+                "value": "18759"
+            }, {
+                "name": "Site Fences",
+                "value": "18760"
+            }, {
+                "name": "Signage",
+                "value": "18853"
+            }, {
+                "name": "Site Lighting",
+                "value": "18857"
+            }, {
+                "name": "Landscaping",
+                "value": "18859"
+            }, {
+                "name": "Irrigation",
+                "value": "18860"
+            }, {
+                "name": "Site Fences",
+                "value": "18861"
+            }, {
+                "name": "Signage",
+                "value": "18990"
+            }, {
+                "name": "Site Lighting",
+                "value": "18994"
+            }, {
+                "name": "Landscaping",
+                "value": "18996"
+            }, {
+                "name": "Irrigation",
+                "value": "18997"
+            }, {
+                "name": "Site Fences",
+                "value": "18998"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "19026"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "19245"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "19246"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "19247"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "19248"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "19249"
+            }, {
+                "name": "Replace fencing",
+                "value": "19638"
+            }, {
+                "name": "Repair fencing",
+                "value": "19639"
+            }, {
+                "name": "Signage",
+                "value": "20075"
+            }, {
+                "name": "Site Lighting",
+                "value": "20079"
+            }, {
+                "name": "Landscaping",
+                "value": "20081"
+            }, {
+                "name": "Irrigation",
+                "value": "20082"
+            }, {
+                "name": "Site Fences",
+                "value": "20083"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "20111"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "20377"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "20378"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "20379"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "20380"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "20381"
+            }, {
+                "name": "Signage, Replace",
+                "value": "21710"
+            }, {
+                "name": "Sign Base, Replace  ",
+                "value": "21711"
+            }, {
+                "name": "Sign Base, Repair  ",
+                "value": "21712"
+            }, {
+                "name": "CMU Dumpster enclosure, Replace ",
+                "value": "21713"
+            }, {
+                "name": "Chain-link Dumpster enclosure, Replace ",
+                "value": "21714"
+            }, {
+                "name": "Wooden Dumpster enclosure, Replace ",
+                "value": "21715"
+            }, {
+                "name": "Loading Dock Lifts, Replace",
+                "value": "21716"
+            }, {
+                "name": "Loading Dock Levelers, Replace",
+                "value": "21717"
+            }, {
+                "name": "Loading Dock Seals, Replace ",
+                "value": "21718"
+            }, {
+                "name": "Loading Dock Bumpers, Replace ",
+                "value": "21719"
+            }, {
+                "name": "Building mounted light fixture, Replace",
+                "value": "21720"
+            }, {
+                "name": "Pole-mounted light fixture, Repair",
+                "value": "21721"
+            }, {
+                "name": "Metal Pole Light fixture, Replace",
+                "value": "21722"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "21735"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "21737"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "21738"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "21739"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "21740"
+            }, {
+                "name": "Fence. Replace (Tube metal, 4' high) ",
+                "value": "21878"
+            }, {
+                "name": "Fence. Replace (Tube metal, 5' high) ",
+                "value": "21879"
+            }, {
+                "name": "Fence. Replace (Tube metal, 6' high) ",
+                "value": "21880"
+            }, {
+                "name": "Fence. Replace (Chain link, 4' high) ",
+                "value": "21881"
+            }, {
+                "name": "Fence. Replace (Chain link, 6' high) ",
+                "value": "21882"
+            }, {
+                "name": "Fence. Replace (Vinyl, 4' high) ",
+                "value": "21883"
+            }, {
+                "name": "Fence. Replace (Vinyl, 5' high) ",
+                "value": "21884"
+            }, {
+                "name": "Fence. Replace (Vinyl, 6' high) ",
+                "value": "21885"
+            }, {
+                "name": "Fence. Replace (Wood Board, 3' high) ",
+                "value": "21886"
+            }, {
+                "name": "Fence. Replace (Wood Board, 4' high) ",
+                "value": "21887"
+            }, {
+                "name": "Fence. Replace (Wood Board, 5' high) ",
+                "value": "21888"
+            }, {
+                "name": "Fence. Replace (Wood Board, 6' high) ",
+                "value": "21889"
+            }, {
+                "name": "Fence. Replace (Wood Picket, 3' high) ",
+                "value": "21890"
+            }, {
+                "name": "Fence. Replace (Wood Picket, 4' high) ",
+                "value": "21891"
+            }, {
+                "name": "Dumpster enclosure. Replace (Chain link) ",
+                "value": "21892"
+            }, {
+                "name": "Dumpster enclosure. Replace (Wood board) ",
+                "value": "21893"
+            }, {
+                "name": "Dumpster enclosure. Replace (CMU) ",
+                "value": "21894"
+            }, {
+                "name": "Metal pole light. Replace (8' pole) ",
+                "value": "21895"
+            }, {
+                "name": "Metal pole light. Replace (10' pole) ",
+                "value": "21896"
+            }, {
+                "name": "Metal pole light. Replace (12' pole) ",
+                "value": "21897"
+            }, {
+                "name": "Metal pole light. Replace (14' pole) ",
+                "value": "21898"
+            }, {
+                "name": "Metal pole light. Replace (16' pole) ",
+                "value": "21899"
+            }, {
+                "name": "Metal pole light. Replace (20' pole) ",
+                "value": "21900"
+            }, {
+                "name": "Metal pole light. Replace (30' pole) ",
+                "value": "21901"
+            }, {
+                "name": "Metal pole light. Replace (35' pole) ",
+                "value": "21902"
+            }, {
+                "name": "Metal pole light. Replace (40' pole) ",
+                "value": "21903"
+            }, {
+                "name": "Building mounted light. Replace (Incandescent) ",
+                "value": "21904"
+            }, {
+                "name": "Building mounted light. Replace (Metal Halide) ",
+                "value": "21905"
+            }, {
+                "name": "Building mounted light. Replace (Sodium) ",
+                "value": "21906"
+            }, {
+                "name": "",
+                "value": "21915"
+            }, {
+                "name": "Signage",
+                "value": "22475"
+            }, {
+                "name": "Landscaping",
+                "value": "22481"
+            }, {
+                "name": "Irrigation",
+                "value": "22482"
+            }, {
+                "name": "Site Fences",
+                "value": "22483"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "22734"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "22735"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "22736"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "22737"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "22738"
+            }, {
+                "name": "Replacement of parking area poles and lighting",
+                "value": "22814"
+            }, {
+                "name": "Repairs to parking area lighting",
+                "value": "22815"
+            }, {
+                "name": "Repair retaining walls",
+                "value": "22834"
+            }, {
+                "name": "Replace fencing",
+                "value": "22854"
+            }, {
+                "name": "Repair fencing",
+                "value": "22856"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "23027"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "23028"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "23029"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "23030"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "23031"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "23032"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "23033"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "23034"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "23035"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "23036"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "23037"
+            }, {
+                "name": "Signage",
+                "value": "90002209"
+            }, {
+                "name": "Site Lighting",
+                "value": "90002213"
+            }, {
+                "name": "Landscaping",
+                "value": "90002215"
+            }, {
+                "name": "Irrigation",
+                "value": "90002216"
+            }, {
+                "name": "Site Fences",
+                "value": "90002217"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90002499"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90002500"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90002501"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90002502"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90002503"
+            }, {
+                "name": "Signage",
+                "value": "90003268"
+            }, {
+                "name": "Site Lighting",
+                "value": "90003272"
+            }, {
+                "name": "Landscaping",
+                "value": "90003274"
+            }, {
+                "name": "Irrigation",
+                "value": "90003275"
+            }, {
+                "name": "Site Fences",
+                "value": "90003276"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90003864"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90003865"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90003866"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90003867"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90003868"
+            }, {
+                "name": "Fence - chain link ",
+                "value": "90005395"
+            }, {
+                "name": "Fence - wrought iron",
+                "value": "90005396"
+            }, {
+                "name": "Fence - Vinyl",
+                "value": "90005397"
+            }, {
+                "name": "Wood - 6' tall fence",
+                "value": "90005398"
+            }, {
+                "name": "Wood - 4' tall fence",
+                "value": "90005399"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90005400"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90005401"
+            }, {
+                "name": "Fence - chain link ",
+                "value": "90005710"
+            }, {
+                "name": "Fence - wrought iron",
+                "value": "90005711"
+            }, {
+                "name": "Fence - Vinyl",
+                "value": "90005712"
+            }, {
+                "name": "Wood - 6' tall fence",
+                "value": "90005713"
+            }, {
+                "name": "Wood - 4' tall fence",
+                "value": "90005714"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90005715"
+            }, {
+                "name": "Irrigation system. ",
+                "value": "90005716"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90006768"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90006769"
+            }, {
+                "name": "",
+                "value": "90007720"
+            }, {
+                "name": "Monument signage.  Replace",
+                "value": "90007721"
+            }, {
+                "name": "Wood post-mounted signage.  Replace",
+                "value": "90007722"
+            }, {
+                "name": "Pole-mounted signage.  Replace",
+                "value": "90007723"
+            }, {
+                "name": "Pylon signage.  Replace",
+                "value": "90007724"
+            }, {
+                "name": "Wood dumpster enclosure. Replace",
+                "value": "90007732"
+            }, {
+                "name": "CMU dumpster enclosure. Replace",
+                "value": "90007733"
+            }, {
+                "name": "Metal landscaping pole light. Replace",
+                "value": "90007734"
+            }, {
+                "name": "Metal street light standard. Replace",
+                "value": "90007735"
+            }, {
+                "name": "Residential-style building mounted light. Replace",
+                "value": "90007736"
+            }, {
+                "name": "Commercial-style building mounted light. Replace",
+                "value": "90007737"
+            }, {
+                "name": "Chain link dumpster enclosure. Replace",
+                "value": "90007740"
+            }, {
+                "name": "Automated security gates.  Replace",
+                "value": "90007741"
+            }, {
+                "name": "Wood fence. Replace",
+                "value": "90007742"
+            }, {
+                "name": "Vinyl fence. Replace",
+                "value": "90007743"
+            }, {
+                "name": "Chain link fence. Replace",
+                "value": "90007744"
+            }, {
+                "name": "Tube metal fence. Replace",
+                "value": "90007745"
+            }, {
+                "name": "Sign Base, Replace ",
+                "value": "90008820"
+            }, {
+                "name": "Sign Base, Repair ",
+                "value": "90008821"
+            }, {
+                "name": "Signage, Replace",
+                "value": "90008822"
+            }, {
+                "name": "Dumpster enclosure, Replace ",
+                "value": "90008823"
+            }, {
+                "name": "Metal pole light fixture, Replace",
+                "value": "90008824"
+            }, {
+                "name": "Building mounted light fixture, Replace",
+                "value": "90008825"
+            }, {
+                "name": "Patio fence, Replace  ",
+                "value": "90008826"
+            }, {
+                "name": "Exterior light fixtures, Replace ",
+                "value": "90008827"
+            }, {
+                "name": "Signage",
+                "value": "90009136"
+            }, {
+                "name": "Landscaping",
+                "value": "90009142"
+            }, {
+                "name": "Irrigation",
+                "value": "90009143"
+            }, {
+                "name": "Site Fences",
+                "value": "90009144"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90011690"
+            }, {
+                "name": "Irrigation System, Repair",
+                "value": "90011691"
+            }, {
+                "name": "Patio Fence, Sectional Replacement",
+                "value": "90011692"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90011693"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90011694"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90011695"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90011696"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90012048"
+            }, {
+                "name": "Irrigation System, Repair",
+                "value": "90012049"
+            }, {
+                "name": "Patio Fence, Sectional Replacement",
+                "value": "90012050"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90012051"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90012052"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90012053"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90012054"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90012406"
+            }, {
+                "name": "Irrigation System, Repair",
+                "value": "90012407"
+            }, {
+                "name": "Patio Fence, Sectional Replacement",
+                "value": "90012408"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90012409"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90012410"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90012411"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90012412"
+            }, {
+                "name": "Signage",
+                "value": "90012738"
+            }, {
+                "name": "Site Lighting",
+                "value": "90012742"
+            }, {
+                "name": "Landscaping",
+                "value": "90012744"
+            }, {
+                "name": "Irrigation",
+                "value": "90012745"
+            }, {
+                "name": "Site Fences",
+                "value": "90012746"
+            }, {
+                "name": "Chain link fence replacement",
+                "value": "90012857"
+            }, {
+                "name": "Wood stockade fence replacement, 6 foot height",
+                "value": "90012858"
+            }, {
+                "name": "Wood post and rail fence replacement",
+                "value": "90012859"
+            }, {
+                "name": "HID lighting fixture replacement",
+                "value": "90012860"
+            }, {
+                "name": "Wooden retaining wall replacement (less than 15 ft in height)",
+                "value": "90012861"
+            }, {
+                "name": "Wooden retaining wall replacement (greater than 15 ft in height)",
+                "value": "90012862"
+            }, {
+                "name": "Dry set interlocking concrete block retaining wall replacement",
+                "value": "90012863"
+            }, {
+                "name": "Signage",
+                "value": "90013187"
+            }, {
+                "name": "Site Lighting",
+                "value": "90013191"
+            }, {
+                "name": "Landscaping",
+                "value": "90013193"
+            }, {
+                "name": "Irrigation",
+                "value": "90013194"
+            }, {
+                "name": "Site Fences",
+                "value": "90013195"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90013353"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90013354"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90013355"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90013356"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90013357"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90013358"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90013359"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90013691"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90013692"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90013693"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90013694"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90013695"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90013696"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90013697"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90014031"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90014032"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90014033"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90014034"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90014035"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90014036"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90014037"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90014369"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90014370"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90014371"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90014372"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90014373"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90014374"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90014375"
+            }, {
+                "name": "Signage",
+                "value": "90014703"
+            }, {
+                "name": "Landscaping",
+                "value": "90014709"
+            }, {
+                "name": "Irrigation",
+                "value": "90014710"
+            }, {
+                "name": "Site Fences",
+                "value": "90014711"
+            }, {
+                "name": "Repair fencing",
+                "value": "90015006"
+            }, {
+                "name": "Replace fencing",
+                "value": "90015007"
+            }, {
+                "name": "Repairs to parking area lighting",
+                "value": "90015008"
+            }, {
+                "name": "Replacement of parking area poles and lighting",
+                "value": "90015009"
+            }, {
+                "name": "Repairs to carports",
+                "value": "90015010"
+            }, {
+                "name": "Repair retaining walls",
+                "value": "90015011"
+            }, {
+                "name": "Other",
+                "value": "90015012"
+            }, {
+                "name": "Repair fencing",
+                "value": "90015172"
+            }, {
+                "name": "Replace fencing",
+                "value": "90015173"
+            }, {
+                "name": "Repairs to parking area lighting",
+                "value": "90015174"
+            }, {
+                "name": "Replacement of parking area poles and lighting",
+                "value": "90015175"
+            }, {
+                "name": "Repairs to carports",
+                "value": "90015176"
+            }, {
+                "name": "Repair retaining walls",
+                "value": "90015177"
+            }, {
+                "name": "Other",
+                "value": "90015178"
+            }, {
+                "name": "Signage",
+                "value": "90015645"
+            }, {
+                "name": "Site Lighting",
+                "value": "90015649"
+            }, {
+                "name": "Landscaping",
+                "value": "90015651"
+            }, {
+                "name": "Irrigation",
+                "value": "90015652"
+            }, {
+                "name": "Site Fences",
+                "value": "90015653"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90015681"
+            }, {
+                "name": "Repair fencing",
+                "value": "90015726"
+            }, {
+                "name": "Replace fencing",
+                "value": "90015727"
+            }, {
+                "name": "Repairs to parking area lighting",
+                "value": "90015728"
+            }, {
+                "name": "Replacement of parking area poles and lighting",
+                "value": "90015729"
+            }, {
+                "name": "Repairs to carports",
+                "value": "90015730"
+            }, {
+                "name": "Repair retaining walls",
+                "value": "90015731"
+            }, {
+                "name": "Other",
+                "value": "90015732"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90017164"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90017165"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90017166"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90017167"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90017168"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90017169"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90017170"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90019329"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90019330"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90019331"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90019332"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90019333"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90019334"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90019335"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90019840"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90019841"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90019842"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90019843"
+            }, {
+                "name": "Vinyl Fence, Replace",
+                "value": "90019844"
+            }, {
+                "name": "Wrought Iron Fence, Replace",
+                "value": "90019845"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90019846"
+            }, {
+                "name": "Signage",
+                "value": "90020163"
+            }, {
+                "name": "Site Lighting",
+                "value": "90020167"
+            }, {
+                "name": "Landscaping",
+                "value": "90020169"
+            }, {
+                "name": "Irrigation",
+                "value": "90020170"
+            }, {
+                "name": "Site Fences",
+                "value": "90020171"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90020199"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90020267"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90020268"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90020269"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90020270"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90020271"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90020811"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90020812"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90020813"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90020814"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90020815"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90020816"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90020993"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90020994"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90020995"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90020996"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90020997"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90021273"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90021274"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90021275"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90021276"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90021277"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90021278"
+            }, {
+                "name": "Trash Enclosures",
+                "value": "90022465"
+            }, {
+                "name": "Signage",
+                "value": "90022466"
+            }, {
+                "name": "Landscaping",
+                "value": "90022467"
+            }, {
+                "name": "Irrigation",
+                "value": "90022468"
+            }, {
+                "name": "Site Fences",
+                "value": "90022469"
+            }, {
+                "name": "Signage",
+                "value": "90022598"
+            }, {
+                "name": "Landscaping",
+                "value": "90022599"
+            }, {
+                "name": "Irrigation",
+                "value": "90022600"
+            }, {
+                "name": "Site Fences",
+                "value": "90022601"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90022774"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90022775"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90022776"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90022777"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90022778"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90022779"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90023001"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90023002"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90023003"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90023004"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90023005"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90023006"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90023213"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90023214"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90023215"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90023216"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90023217"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90023218"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90023219"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90023220"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90023221"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90023222"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90023223"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90023456"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90023457"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90023458"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90023459"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90023460"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90023461"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90023462"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90023463"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90023464"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90023465"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90023466"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90023683"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90023684"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90023685"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90023686"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90023687"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90023688"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90023855"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90023856"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90023857"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90023858"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90023859"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90023860"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90023861"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90023862"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90023863"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90023864"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90023865"
+            }, {
+                "name": "Replace Sign Base ",
+                "value": "90024098"
+            }, {
+                "name": "Fence, wood post and rail ",
+                "value": "90024099"
+            }, {
+                "name": "Replace Dry Stacked retaining wall ",
+                "value": "90024100"
+            }, {
+                "name": "Retaining walls, wood ",
+                "value": "90024101"
+            }, {
+                "name": "Replace Concrete Retaining Wall ",
+                "value": "90024102"
+            }, {
+                "name": "Repair Sign Base ",
+                "value": "90024103"
+            }, {
+                "name": "Fence, chain link ",
+                "value": "90024104"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall ",
+                "value": "90024105"
+            }, {
+                "name": "Lighting - HID ",
+                "value": "90024106"
+            }, {
+                "name": "Locally Repair Concrete retaining wall ",
+                "value": "90024107"
+            }, {
+                "name": "Retaining walls: dry set interlocking concrete block ",
+                "value": "90024108"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90024311"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90024312"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90024313"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90024314"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90024315"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90024316"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90024462"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90024463"
+            }, {
+                "name": "Locally Repair Dry stacked (concrete masonry) retaining wall",
+                "value": "90024464"
+            }, {
+                "name": "Replace Dry Stacked (concrete masonry) retaining wall",
+                "value": "90024465"
+            }, {
+                "name": "Locally repair wood timber retaining wall",
+                "value": "90024466"
+            }, {
+                "name": "Replace wood timber retaining wall",
+                "value": "90024467"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90024468"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90024469"
+            }, {
+                "name": "Signage",
+                "value": "90025910"
+            }, {
+                "name": "Site Lighting",
+                "value": "90025914"
+            }, {
+                "name": "Landscaping",
+                "value": "90025916"
+            }, {
+                "name": "Irrigation",
+                "value": "90025917"
+            }, {
+                "name": "Site Fences",
+                "value": "90025918"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90026132"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90026133"
+            }, {
+                "name": "Locally Repair Dry stacked (concrete masonry) retaining wall",
+                "value": "90026134"
+            }, {
+                "name": "Replace Dry Stacked (concrete masonry) retaining wall",
+                "value": "90026135"
+            }, {
+                "name": "Locally repair wood timber retaining wall",
+                "value": "90026136"
+            }, {
+                "name": "Replace wood timber retaining wall",
+                "value": "90026137"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90026138"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90026139"
+            }, {
+                "name": "Signage",
+                "value": "90027464"
+            }, {
+                "name": "Landscaping",
+                "value": "90027465"
+            }, {
+                "name": "Irrigation",
+                "value": "90027466"
+            }, {
+                "name": "Site Fences",
+                "value": "90027467"
+            }, {
+                "name": "Chain link fence replacement",
+                "value": "90027579"
+            }, {
+                "name": "Wood stockade fence replacement, 6 foot height",
+                "value": "90027580"
+            }, {
+                "name": "Wood post and rail fence replacement",
+                "value": "90027581"
+            }, {
+                "name": "HID lighting fixture replacement",
+                "value": "90027582"
+            }, {
+                "name": "Wooden retaining wall replacement (less than 15 ft in height)",
+                "value": "90027583"
+            }, {
+                "name": "Wooden retaining wall replacement (greater than 15 ft in height)",
+                "value": "90027584"
+            }, {
+                "name": "Dry set interlocking concrete block retaining wall replacement",
+                "value": "90027585"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90028085"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90028086"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90028087"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90028088"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90028089"
+            }, {
+                "name": "Landscape Material, Replace",
+                "value": "90028596"
+            }, {
+                "name": "Irrigation System, Repair ",
+                "value": "90028597"
+            }, {
+                "name": "Patio Fence, Sectional Replacement ",
+                "value": "90028598"
+            }, {
+                "name": "Wooden Fence, Replace",
+                "value": "90028599"
+            }, {
+                "name": "Metal/ Chain-link Fence, Replace",
+                "value": "90028600"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90030129"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90030130"
+            }, {
+                "name": "Locally Repair Dry stacked retaining Wall",
+                "value": "90030131"
+            }, {
+                "name": "Replace Dry Stacked retaining wall",
+                "value": "90030132"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90030133"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90030134"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90030336"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90030337"
+            }, {
+                "name": "Locally Repair Dry stacked (concrete masonry) retaining wall",
+                "value": "90030338"
+            }, {
+                "name": "Replace Dry Stacked (concrete masonry) retaining wall",
+                "value": "90030339"
+            }, {
+                "name": "Locally repair wood timber retaining wall",
+                "value": "90030340"
+            }, {
+                "name": "Replace wood timber retaining wall",
+                "value": "90030341"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90030342"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90030343"
+            }, {
+                "name": "Civil Engineer, Investigate and Report",
+                "value": "90030646"
+            }, {
+                "name": "Dumpster enclosure. Replace (Chain link) ",
+                "value": "90030647"
+            }, {
+                "name": "Dumpster enclosure. Replace (CMU) ",
+                "value": "90030648"
+            }, {
+                "name": "Dumpster enclosure. Replace (Wood board) ",
+                "value": "90030649"
+            }, {
+                "name": "Sign Base. Repair ",
+                "value": "90030650"
+            }, {
+                "name": "Sign Base. Replace ",
+                "value": "90030651"
+            }, {
+                "name": "Signage, Pylon. Replace",
+                "value": "90030652"
+            }, {
+                "name": "Signage, Pole. Replace",
+                "value": "90030653"
+            }, {
+                "name": "Signage, Monument. Replace",
+                "value": "90030654"
+            }, {
+                "name": "Signage, Wood. Replace",
+                "value": "90030655"
+            }, {
+                "name": "Fence. Replace (Chain link, 4' high) ",
+                "value": "90030656"
+            }, {
+                "name": "Fence. Replace (Chain link, 6' high) ",
+                "value": "90030657"
+            }, {
+                "name": "Fence. Replace (Tube metal, 4' high) ",
+                "value": "90030658"
+            }, {
+                "name": "Fence. Replace (Tube metal, 5' high) ",
+                "value": "90030659"
+            }, {
+                "name": "Fence. Replace (Tube metal, 6' high) ",
+                "value": "90030660"
+            }, {
+                "name": "Fence. Replace (Vinyl, 4' high) ",
+                "value": "90030661"
+            }, {
+                "name": "Fence. Replace (Vinyl, 5' high) ",
+                "value": "90030662"
+            }, {
+                "name": "Fence. Replace (Vinyl, 6' high) ",
+                "value": "90030663"
+            }, {
+                "name": "Fence. Replace (Wood Board, 3' high) ",
+                "value": "90030664"
+            }, {
+                "name": "Fence. Replace (Wood Board, 4' high) ",
+                "value": "90030665"
+            }, {
+                "name": "Fence. Replace (Wood Board, 5' high) ",
+                "value": "90030666"
+            }, {
+                "name": "Fence. Replace (Wood Board, 6' high) ",
+                "value": "90030667"
+            }, {
+                "name": "Fence. Replace (Wood Picket, 3' high) ",
+                "value": "90030668"
+            }, {
+                "name": "Fence. Replace (Wood Picket, 4' high) ",
+                "value": "90030669"
+            }, {
+                "name": "Irrigation system. Repair ",
+                "value": "90030670"
+            }, {
+                "name": "Landscape material, reseed ",
+                "value": "90030671"
+            }, {
+                "name": "Landscape material, trim trees",
+                "value": "90030672"
+            }, {
+                "name": "Concrete stairs. Repair  ",
+                "value": "90030673"
+            }, {
+                "name": "Metal pole light. Replace (8' pole) ",
+                "value": "90030674"
+            }, {
+                "name": "Metal pole light. Replace (10-16' pole) ",
+                "value": "90030675"
+            }, {
+                "name": "Metal pole light. Replace (20' pole) ",
+                "value": "90030676"
+            }, {
+                "name": "Metal pole light. Replace (30' pole) ",
+                "value": "90030677"
+            }, {
+                "name": "Metal pole light. Replace (35' pole) ",
+                "value": "90030678"
+            }, {
+                "name": "Metal pole light. Replace (40' pole) ",
+                "value": "90030679"
+            }, {
+                "name": "Building mounted light. Replace (Incandescent) ",
+                "value": "90030680"
+            }, {
+                "name": "Building mounted light. Replace (Commercial) ",
+                "value": "90030681"
+            }, {
+                "name": "Signage",
+                "value": "90030974"
+            }, {
+                "name": "Site Lighting",
+                "value": "90030978"
+            }, {
+                "name": "Landscaping",
+                "value": "90030980"
+            }, {
+                "name": "Irrigation",
+                "value": "90030981"
+            }, {
+                "name": "Site Fences",
+                "value": "90030982"
+            }, {
+                "name": "Building Mounted Lighting",
+                "value": "90031010"
+            }, {
+                "name": "Repair Sign Base",
+                "value": "90031051"
+            }, {
+                "name": "Replace Sign Base",
+                "value": "90031052"
+            }, {
+                "name": "Locally Repair Dry stacked (concrete masonry) retaining wall",
+                "value": "90031053"
+            }, {
+                "name": "Replace Dry Stacked (concrete masonry) retaining wall",
+                "value": "90031054"
+            }, {
+                "name": "Locally repair wood timber retaining wall",
+                "value": "90031055"
+            }, {
+                "name": "Replace wood timber retaining wall",
+                "value": "90031056"
+            }, {
+                "name": "Locally Repair Concrete retaining wall",
+                "value": "90031057"
+            }, {
+                "name": "Replace Concrete Retaining Wall",
+                "value": "90031058"
+            }, {
+                "name": "Replace fencing",
+                "value": "90031303"
+            }, {
+                "name": "Repair fencing",
+                "value": "90031304"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

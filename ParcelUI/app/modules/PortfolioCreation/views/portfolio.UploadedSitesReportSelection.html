@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+    <div>
+        <h4 class="headingmain"> Upload Spreadsheet Option - Template Selection</h4>
+        <div class="" ng-controller="UploadedSitesReportSelectionCtrl as reportSelection">
+
+            <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="reportSelection.serviceResponseAlert">
+                <button type="button" class="close" ng-click="reportSelection.serviceResponseAlert = false;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{reportSelection.serviceResponseText}}
+            </div>
+
+            <form name="feeInformationForm">
+                <table class="table table-condensed  table-bordered table-hover no-margin">
+
+                    <thead>
+                        <tr>
+                            <th class="col-md-3">Address</th>
+                            <th class="col-md-3">Transaction Type</th>
+                            <th class="col-md-6">Report Requested</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="location in reportSelection.data.locations">
+                            <td>
+                                {{location.address1}}
+                            </td>
+                            <td>
+                                <select class="form-control " data-ng-options="transactionType.transactionTypeGUID as transactionType.transactionTypeName for transactionType in portfolio.loadData.transactionTypes" ng-model="location.transactionTypeGUID">
+                                    <option value="">*** Select one from the list ***</option>
+                                </select>
+                            </td>
+
+                            <td id="showPopupatTop" class="cost-to-client" multiselectfield-validation="Report Requested">
+
+                                <multiselect class="col-sm-8" multiple="true" ng-model="location.reports" options="template as template.name for template in portfolio.loadData.templates" name="reports{{$index}}" required></multiselect>
+
+                                <button ng-show="$index==0 && reportSelection.data.locations.length>1" class="btn btn-primary" ng-click="reportSelection.fillReportAndTransactionDown(location.reports,location.transactionTypeGUID)">Fill Down</button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

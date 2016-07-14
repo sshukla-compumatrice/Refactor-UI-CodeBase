@@ -1,0 +1,73 @@
+<div ng-class="{'container-fluid':orderList.projectOrders}"  ng-controller="OrderStatus as orderList" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+	<div ng-class="{'row':orderList.projectOrders}">
+	<div ng-class="{'col-sm-12':orderList.projectOrders}">
+    <div ng-class="{'panel panel-default':orderList.projectOrders}" ng-show="orderList.showOrderGrid">
+        <div ng-class="{'panel-body':orderList.projectOrders}">                            
+                    <h2 class="page-header" ng-if="orderList.projectOrders">EDR Order Status for: {{orderList.projectName}} <a class="btn btn-md btn-default pull-right" ng-click="orderList.closeOrderwindow()"><i class="glyphicon glyphicon-remove"></i> Close Window</a></h2>
+                    <div id="alertOrderStatusMsgDiv" ng-show="orderList.showAlert" class="alert alert-dismissible" role="alert">
+                        <button type="button" class="close" ng-click="orderList.showAlert = !orderList.showAlert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{orderList.serviceMessage}}
+                    </div>
+                    <div class="table-responsive">
+                        <table id="orderStatusDatatable" ng-class="{'setuptab-orderstatus':orderList.isFromSetupTab}" class="table table-bordered table-striped table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th ng-show="orderList.projectOrders" class="orderAddress">Address</th>
+                                    <th class="orderInquiry">Inquiry#</th>
+                                    <th class="orderStatus">Status</th>
+                                    <th class="orderPackage">Package Ordered</th>
+                                    <th class="orderRadiusGeo">Radius Map Report with GeoCheck®</th>
+                                    <th class="orderRadiusMap">Radius Map Report</th>
+                                    <th class="orderSanborn">Sanborn Map® Search/Print</th>
+                                    <th class="orderCityDirectory">City Directory Abstract</th>
+                                    <th class="orderAerialPhoto">Aerial Photo Decade Package</th>
+                                    <th class="orderHistorical">Historical Topo Map</th>
+                                    <th class="orderLienSearch">Lien Search</th>
+                                    <th class="orderActions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="edrOrder in orderList.edrOrderListArr">
+                                    <td ng-show="orderList.projectOrders">{{edrOrder.address}}</td>
+                                    <td>{{edrOrder.inquiryNo}}</td>
+                                    <td>{{edrOrder.status}}</td>
+                                    <td>{{edrOrder.packageOrdered}}</td>
+                                    
+                                    <td>
+                                        <i field="radiusMapReportWithGeoCheck" display-popover="{{edrOrder}}" data-trigger="hover" data-toggle="popover" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.radiusMapReportWithGeocheck.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x blueFlag': edrOrder.radiusMapReportWithGeocheck.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.radiusMapReportWithGeocheck.toLowerCase() == 'unknown' || edrOrder.radiusMapReportWithGeocheck == '', 'fa fa-circle-o fa-2x text-black': edrOrder.radiusMapReportWithGeocheck.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="radiusMapReport" display-popover="{{edrOrder}}" data-trigger="hover" data-toggle="popover" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.radiusMapReport.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x text-primary': edrOrder.radiusMapReport.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.radiusMapReport.toLowerCase() == 'unknown' || edrOrder.radiusMapReport == '', 'fa fa-circle-o fa-2x text-black': edrOrder.radiusMapReport.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="sanbornMap" data-trigger="hover" data-toggle="popover" display-popover="{{edrOrder}}" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.sanbornMap.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x text-primary': edrOrder.sanbornMap.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.sanbornMap.toLowerCase() == 'unknown' || edrOrder.sanbornMap == '', 'fa fa-circle-o fa-2x text-black': edrOrder.sanbornMap.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="cityDirectoryAbstract" display-popover="{{edrOrder}}" data-trigger="hover" data-toggle="popover" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.cityDirectoryAbstract.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x blueFlag': edrOrder.cityDirectoryAbstract.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.cityDirectoryAbstract.toLowerCase() == 'unknown' || edrOrder.cityDirectoryAbstract == '', 'fa fa-circle-o fa-2x text-black': edrOrder.cityDirectoryAbstract.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="aerialPhoto" data-trigger="hover" data-toggle="popover" display-popover="{{edrOrder}}" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.aerialPhotoDecadePackage.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x blueFlag': edrOrder.aerialPhotoDecadePackage.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.aerialPhotoDecadePackage.toLowerCase() == 'unknown' || edrOrder.aerialPhotoDecadePackage == '', 'fa fa-circle-o fa-2x text-black': edrOrder.aerialPhotoDecadePackage.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="historicalTopoMap" display-popover="{{edrOrder}}" data-trigger="hover" data-toggle="popover" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.historicalTopMmap.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x blueFlag': edrOrder.historicalTopMmap.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.historicalTopMmap.toLowerCase() == 'unknown' || edrOrder.historicalTopMmap == '', 'fa fa-circle-o fa-2x text-black': edrOrder.historicalTopMmap.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td>
+                                        <i field="lienSearch" display-popover="{{edrOrder}}" data-trigger="hover" data-toggle="popover" data-container="body" ng-class="{'fa fa-adjust fa-2x rotate-90': edrOrder.lienSearch.toLowerCase() == 'shipped-nocoverage', 'fa fa-circle fa-2x blueFlag': edrOrder.lienSearch.toLowerCase() == 'shipped', 'fa fa-times-circle-o fa-2x text-danger': edrOrder.lienSearch.toLowerCase() == 'unknown' || edrOrder.lienSearch == '', 'fa fa-circle-o fa-2x text-black': edrOrder.lienSearch.toLowerCase() == 'inproduction'}"></i>
+                                    </td>
+
+                                    <td><a ng-if="edrOrder.action.displayLink" class="pointer" field="action" title="{{edrOrder.action.tooltip}}" data-placement="top" data-toggle="tooltip" data-container="body" ng-click="orderList.showEDRStatusPage(edrOrder)" ng-bind="edrOrder.action.linkText"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                           
+        </div>
+    </div>
+	</div>	
+	</div>
+</div>

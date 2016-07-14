@@ -1,0 +1,50 @@
+<h4>Global Page Settings:</h4>
+
+<div class="row">
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label for="leftMargin" class="control-label">Left Margin (inches):</label>
+            <select id="leftMargin" class="form-control" ng-model="tocSetup.cssData['global']['margin-left']">
+                <option value="0.5">0.5"</option>
+                <option value="0.75">0.75"</option>
+                <option value="1">1"</option>
+                <option value="1.25">1.25"</option>
+                <option value="0.5">0.5"</option>
+                <option value="1.75">1.75"</option>
+                <option value="2">2"</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label for="rightMargin" class="control-label">Right Margin (inches):</label>
+            <select id="rightMargin" class="form-control" ng-model="tocSetup.cssData['global']['margin-right']">
+                <option value="0.5">0.5"</option>
+                <option value="0.75">0.75"</option>
+                <option value="1">1"</option>
+                <option value="1.25">1.25"</option>
+                <option value="0.5">0.5"</option>
+                <option value="1.75">1.75"</option>
+                <option value="2">2"</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label for="indentSectionNumber" class="control-label">Indent Section Number:</label>
+            <select id="indentSectionNumber" class="form-control" ng-model="tocSetup.jsonData.global.indentSectionNumber">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label for="blanklineBeforeSection">Blank Line Before Section:</label>
+            <select id="blanklineBeforeSection" class="form-control" ng-model="tocSetup.jsonData.global.blankLinesBeforeSection">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+    </div>
+</div>

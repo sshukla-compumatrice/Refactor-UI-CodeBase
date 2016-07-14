@@ -1,0 +1,99 @@
+{
+	"Structure":[		
+		{
+			"label": "Database(s)",
+			"columnIndex": 1
+		},{
+			"label": "Facility Name",
+			"columnIndex": 2
+		},{
+			"label": "Address",
+			"columnIndex": 3
+		},{
+			"label": "City",
+			"columnIndex": 4
+		},{
+			"label": "State",
+			"columnIndex": 5
+		},{
+			"label": "ZIPCODE",
+			"columnIndex": 6
+		},{
+			"label": "Direction",
+			"columnIndex": 7
+		},{
+			"label": "Elevation From TP",
+			"columnIndex": 8
+		},{
+			"label": "Elevation",
+			"columnIndex": 9
+		},{
+			"label": "Target Property",
+			"columnIndex": 10
+		},{
+			"label": "Latitude",
+			"columnIndex": 11
+		},{
+			"label": "Longitude",
+			"columnIndex": 12
+		}
+	],
+	"data" : [{
+			"Database(s)" : "FINANCIAL ASSURANCE 1,UST",
+			"Facility Name" : "E-Z MART 137",
+			"Address" : "907 N MAIN ST",
+			"City" : "HIGHLANDS",
+			"State" : "TX",
+			"ZIPCODE" : "775622627",
+			"Direction" : "ESE",
+			"Elevation From TP" : "174",
+			"Elevation" : "40",
+			"Target Property" : "",
+			"Latitude" : "29.8272",
+			"Longitude" : "-95.0575",
+			"Source" : "State"
+		}, {
+			"Database(s)" : "LPST",
+			"Facility Name" : "FORMER E Z MART 137",
+			"Address" : "907 N MAIN ST",
+			"City" : "HIGHLANDS",
+			"State" : "TX",
+			"ZIPCODE" : "77562",
+			"Direction" : "ESE",
+			"Elevation From TP" : "174",
+			"Elevation" : "40",
+			"Target Property" : "",
+			"Latitude" : "29.8272",
+			"Longitude" : "-95.0575",
+			"Source" : "State"
+		}, {
+			"Database(s)" : "EDR GAS STATIONS",
+			"Facility Name" : "",
+			"Address" : "1011 N MAIN ST",
+			"City" : "HIGHLANDS",
+			"State" : "TX",
+			"ZIPCODE" : "77562",
+			"Direction" : "NE",
+			"Elevation From TP" : "465",
+			"Elevation" : "39",
+			"Target Property" : "",
+			"Latitude" : "29.8296",
+			"Longitude" : "-95.0576",
+			"Source" : "Federal"
+		}, {
+			"Database(s)" : "FINANCIAL ASSURANCE 1,LPST,GCC,UST",
+			"Facility Name" : "HONEY STOP 8",
+			"Address" : "1015 N MAIN ST",
+			"City" : "HIGHLANDS",
+			"State" : "TX",
+			"ZIPCODE" : "775621905",
+			"Direction" : "NE",
+			"Elevation From TP" : "527",
+			"Elevation" : "38",
+			"Target Property" : "",
+			"Latitude" : "29.8298",
+			"Longitude" : "-95.0576",
+			"Source" : "State"
+		}
+	]
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+ 
+</head>
+
+<body>
+    <script id="dllDeleteTemplate.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Delete Default Template </h4>
+        </div>
+
+        <form name="myFormAddTemplate" novalidate>
+
+            <div class="modal-body ">
+                <p> This will delete the Default Template. Are you sure you want to continue ?</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">No</a>
+                <a class="btn btn-primary" role="button" ng-click="deleteDefaultTemplate()">Yes</a>
+            </div>
+        </form>
+
+    </script>
+    <div class="container-fluid " ng-controller="DefaultTemplateSettingsController">
+		<div class="panel panel-default">
+		<div class="panel-body">	
+        <h2>Templates</h2>
+
+
+        <div class="form-group">
+            <div class="row">
+            <label for="company" class="control-label col-md-2 col-sm-3 col-xs-12">Company:</label>
+            <div class="col-xs-12 col-sm-5 col-md-4">
+                <select class="form-control" id="company" name="company" ng-model="companyID" ng-change="companySelectionChanged()" focus-if>
+                  <!--  ng-options="company as company.name for company in companyList  track by company.companyGUID"-->
+                    <option value="">Select Company</option>
+                    <option value="d7c051ed-fa1c-48d6-8d71-f3947d768e3d"> 172d Airlift Wing MS ANG</option>
+                    
+                    <option value="cd024ac2-f962-472f-acf1-1dc4238c321e"> Lauenstein &amp; Associates</option>  
+                    <option value="1086ef14-8c71-437f-a6f6-95457a41c225"> Land Environmental Group</option>  
+                    
+                </select>
+            </div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <hr>                
+                    <div class="alert" ng-class="msgType" role="alert" id="serviceResponseDiv" ng-show="serviceResponseAlert">
+                        <button type="button" class="close" ng-click="serviceResponseAlert = false;" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{serviceResponseText}}
+                    </div>
+                    <span ng-hide="templateArr.length && templateArr.length > 0">  No templates available</span>
+                    <div class="table-responsive">
+                        <table ng-show="templateArr.length > 0" class="table table-condensed table-hover">
+
+                            <thead>
+                                <tr>
+                                    <th class="col-sm-3">Template</th>
+                                    <th>Default Language Library</th>
+                                    <th>Report Setup</th>
+                                    <th>Table of Contents Setup</th>
+                                    <th>Transmittal Letter</th>
+                                    <th>Cover Page</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>                                
+
+                                <tr ng-repeat="template in templateArr ">
+                                    <td>
+
+                                        <span e-name="name" e-form="rowform" e-required>
+   <a class="pointer" ng-href="#/Templates/Edit?templateGuid={{template.templateGUID}}&companyGuid={{currentUserCompanyGuid}}"> {{ template.name || 'empty' }}</a>
+
+                            </span>
+                                    </td>
+                                    <td>                                      
+                                        <span editable-select="template.languageLibraryID" e-name="languageLibraryID" e-form="rowform" e-ng-options="s.value as s.text for s in defLangLibArr">
+                                {{ showdefLangLib(template) }}
+                            </span>
+                                    </td>
+                                    <td>
+
+                                        <span editable-select="template.reportOutputSetupID" e-name="reportOutputSetupID" e-form="rowform" e-ng-options="s.value as s.text for s in repSetupArr">
+                                {{ showrepSetup(template) }}
+                            </span>
+                                    </td>
+                                    <td>
+
+                                        <span editable-select="template.tocSetupID" e-name="tocSetupID" e-form="rowform" e-ng-options="s.value as s.text for s in tocArr">
+                                {{ showtoc(template) }}
+                            </span>
+                                    </td>
+                                    <td>
+
+                                        <span editable-select="template.transmittalSetupID" e-name="transmittalSetupID" e-form="rowform" e-ng-options="s.value as s.text for s in transLetterArr">
+                                {{ showtranLetter(template) }}
+                            </span>
+                                    </td>
+                                    <td>
+
+                                        <span editable-select="template.coverPageVal" e-name="coverPageVal" e-form="rowform" e-ng-options="s.value as s.text for s in coverPageArr">
+                                {{ showcoverPage(template) }}
+                            </span>
+                                    </td>
+
+
+
+                                    <td class="template-action-btn">
+                                        <!-- form -->
+                                        <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == template" onbeforesave="saveDefaultTemplate(template,$data)" >
+
+                                            <button class="btn btn-sm btn-primary" type="submit" ng-disabled="rowform.$waiting" data-toggle="tooltip" data-placement="top" title="Save Template" ng-disabled="rowform.$waiting">
+                                                <i class="fa fa-floppy-o pointer"></i>
+                                            </button>
+                                            
+                                            <button class="btn btn-sm btn-default" type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" data-toggle="tooltip" data-placement="top" title="Cancel">
+                                                cancel
+                                            </button>
+
+                                        </form>
+                                        <div ng-show="!rowform.$visible"> 
+											
+										<div class="btn-group">
+										  <button class="btn btn-primary btn-xs" ng-click="rowform.$show()" title="Edit Template" data-toggle="tooltip" data-placement="right"><i class="fa fa-pencil"></i></button>
+										  <button class="btn btn-danger btn-xs" ng-disabled="rowform.$waiting" ng-click="openDelete(template)" title="Delete Report" data-toggle="tooltip" data-placement="right"><i class="glyphicon glyphicon-trash"></i></button>
+										</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>                                    
+            </div>
+        </div>
+		</div>	
+		</div>
+    </div>
+
+</body>
+
+</html>

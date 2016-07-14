@@ -1,0 +1,74 @@
+<div costtable-pdf>
+
+    <table style="border: 1px solid #000;  width: 100%; max-width: 100%; margin-bottom: 19px; background-color: transparent;  border-spacing: 0; border-collapse: collapse;">
+
+
+        <thead style="background-color:#9696FF;">
+            <tr>
+
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Component</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Repair Type (C=Critical, P=Priority, PR-90=90 Day)</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Quantity</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit Cost</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Total Cost</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Comments</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="groupType in groupTypes" generate-html>
+
+            <tr>
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000; " colspan="19"><strong>{{groupType.name}}</strong>
+
+                </td>
+
+            </tr>
+            <tr ng-repeat="item in recommendations | filter:{ group: groupType.value }">
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">
+                    {{item.name}}
+                </td>
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">
+                    <span>{{item.critical.include ? 'C' : '' }}
+					{{item.priority.include ? 'P' : ''}} 
+					{{item.priority90Days.include ? 'PR-90' : ''}} </span>
+                </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.unit}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.quantity}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.unitCost}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{getRecommendationTotal(item)}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;"> {{item.criticalComments}}</td>
+
+            </tr>
+
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="5">
+                    Sub Total
+                </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">
+                    {{getRecommendationSubTotal(recommendations, groupType.value)}}
+
+                </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;"></td>
+            </tr>
+
+
+        </tbody>
+        <tbody>
+            <tr>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;" colspan="5">
+                    Total
+                </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">
+                    {{recommendationsSubTotal}}
+
+
+                </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;"></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

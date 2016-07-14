@@ -1,0 +1,415 @@
+<div class="container-fluid">
+    <div class="panel panel-deafult">
+        <div class="panel-body">                  
+           
+            <h2 class="page-header">Access Management   <a ng-show="grantAccess.prevState == 'ProjectDashboard'" href="{{grantAccess.projectDashboardUrl}}" ng-click="grantAccess.gotoProjectDashboard()" class="btn btn-md btn-default pull-right"><i class="glyphicon glyphicon-arrow-up"></i> Return to Project</a>
+            <a ng-show="grantAccess.prevState == 'ReportWrite'" ng-click="grantAccess.gotoReportAuthoring()" class="btn btn-md btn-default pull-right"><i class="glyphicon glyphicon-remove"></i> Close Window</a>
+            </h2>         
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4>1 Select a Project:</h4>
+
+                    <div class="alert alert-info">
+                        <p><i class="glyphicon glyphicon-question-sign"></i> Select the Project that you will be granting access to.</p>
+                    </div>
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <div class="col-lg-5">
+                                
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
+                        <div rt-select2="select2Options" provider="projectListProvider" template="generateMarkUp" afterevent="displayProject" minimuminput=0 total="{{grantAccess.totalProjectCount}}"></div>
+                    </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <h4>2 Select Users:</h4>
+                        <div class="alert alert-info">
+                            <p><i class="glyphicon glyphicon-question-sign"></i> Select users or groups of users by using one of the three methods below. If using Select by Company/Office or the Search tool, check the box next to displayed users and then click Add Selected. You may continue to aggregate a group of users to grant access to by repeating these steps. All users to be given access will be displayed in Step 3.
+                            </p>
+                        </div>
+
+                        <div id="alertSelectCompanyMsgDiv" ng-show="grantAccess.showAlertForCompany" class="alert alert-dismissible alert-danger" role="alert">
+                            <button type="button" class="close" ng-click="grantAccess.dismissAlert('company')" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{grantAccess.serviceMessage}}
+                        </div>
+
+
+                        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                            <li ng-click="grantAccess.tabClicked('office')" role="presentation" class="active"><a class="pointer" data-target="#office-tab" id="office-tab-tab" role="tab" data-toggle="tab" aria-controls="office-tab" aria-expanded="false"><i class="fa fa-building-o fa-lg" ></i> Select By Company & Office</a></li>
+
+                            <li ng-click="grantAccess.tabClicked('user')" role="presentation"><a class="pointer" data-target="#user-searching" role="user-tab" id="user-tab-select" data-toggle="tab" aria-controls="user-tab" aria-expanded="true"><i class="fa fa-binoculars fa-lg"></i> Select By Searching</a></li>
+
+                            <li ng-click="grantAccess.tabClicked('team')" role="presentation"><a class="pointer" data-target="#team-tab" role="tab" id="team" data-toggle="tab" aria-controls="contact" aria-expanded="true"><i class="fa fa-users fa-lg"></i> Select From a Preconfigured or Saved Team</a></li>
+                        </ul>
+
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="office-tab" aria-labelledby="office-tab">
+                                <h4 class="border-bottom">Select a Company & Office</h4>
+
+                                <div class="form-group">
+                                    <label for="SelectOffice1" class="col-sm-2 control-label">Company:</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="Company1" ng-disabled = "grantAccess.companies.length === 1" ng-change="grantAccess.setCascadedCompany(grantAccess.selectedOrganization)" ng-options="company.companyGUID as company.name for company in grantAccess.companies" ng-model="grantAccess.selectedOrganization">
+                                            <option value="">Select a company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="divCompany2" ng-if="grantAccess.hasCompany">
+                                    <label for="SelectOffic2" class="col-sm-2 control-label">Company:</label>
+                                    <div class="col-sm-4">
+                                        <select ng-disabled="!grantAccess.hasCompany" class="form-control" id="selectCompany2" ng-options="childCompany.companyGUID as childCompany.name for childCompany in grantAccess.childCompanies" ng-model="grantAccess.childCompany" ng-change="grantAccess.setCascadedOffice()">
+                                            <option value="">Select a company</option>
+                                        </select>
+                                        <!--<p class="form-control-static" id="spanCompany2">The selected company contains no companies.</p>-->
+
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SelectOffice" class="col-sm-2 control-label">Office:</label>
+                                    <div class="col-sm-4">
+                                        <select ng-disabled="!grantAccess.hasOffice" class="form-control" id="selectOffice" ng-options="office.companyOfficeGUID as office.officeName for office in grantAccess.offices" ng-model="grantAccess.office" ng-change="grantAccess.getUsersInOffice()">
+                                            <option value="">Select An Office</option>
+                                        </select>
+                                        <p class="form-control-static" id="spanOffice">The selected company has no office</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-danger" ng-if="grantAccess.usersNotUnderOffice">
+                                    <p>No users found in this office</p>
+                                </div>
+
+                                <div ng-if="grantAccess.accessToUsersOnOfficeLevel.length > 0">
+                                    <div class="row bottom-margin">
+                                        <div class="col-lg-3" ng-repeat="accessToUserOnOfficeLevel in grantAccess.accessToUsersOnOfficeLevel">
+                                            <div class="checkbox" id="officeUsers{{$index}}">
+                                                <label>
+                                                    <input type="checkbox" ng-init="grantAccess.checkDefault('office')" ng-model="grantAccess.searchedUserInOfficeCheckbox[$index]">{{accessToUserOnOfficeLevel.firstName + " " }} {{accessToUserOnOfficeLevel.lastName}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+
+                                            <button class="btn btn-sm btn-default" ng-click="grantAccess.selectAllSearchedUsers('office')" type="submit"><i class="glyphicon glyphicon-ok"></i> Check All</button>
+
+                                            <button class="btn btn-sm btn-default" ng-click="grantAccess.unSelectAllSearchedUsers('office')" type="submit"><i class="glyphicon glyphicon-remove"></i> Uncheck All</button>
+
+                                            <button class="btn btn-sm btn-primary" ng-click="grantAccess.addSelectedUsers('office')" type="submit"><i class="glyphicon glyphicon-plus"></i> Add Selected</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="user-searching" aria-labelledby="user-tab">
+                                <div class="">
+                                    <label>Search for a User :</label>
+                                    <div class="input-group  col-lg-4">
+                                        <input type="text" class="form-control" ng-model="grantAccess.searchTerm">
+                                        <span class="input-group-btn">
+                                <button class="btn btn-default" ng-click = "grantAccess.searchUser()" type="button">Search</button>
+                              </span>
+                                    </div>
+                                </div>
+                                <h4 ng-if="grantAccess.searchUserResults && grantAccess.searchedUsers.length > 0" class="border-bottom">Specific Users:</h4>
+                                <div class="row" ng-if="grantAccess.searchUserResults">
+                                    <div class="col-md-2" ng-repeat="searchedUser in grantAccess.searchedUsers">
+                                        <div class="checkbox" id="usersByName{{$index}}">
+                                            <label>
+                                                <input type="checkbox" ng-init="grantAccess.checkDefault('user')" ng-model="grantAccess.searchedUserCheckbox[$index]">{{searchedUser.firstName + " " }} {{searchedUser.lastName}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="alert alert-danger" ng-if="!grantAccess.searchUserResults">
+                                    <p>No Users Found. Try a different search term or phrase.</p>
+                                </div>
+                                <div class="row" ng-if="grantAccess.searchUserResults && grantAccess.searchedUsers.length > 0">
+                                    <div class="col-lg-12">
+
+                                        <button class="btn btn-sm btn-default" ng-click="grantAccess.selectAllSearchedUsers('user')" type="submit"><i class="glyphicon glyphicon-ok"></i> Check All</button>
+
+                                        <button class="btn btn-sm btn-default" ng-click="grantAccess.unSelectAllSearchedUsers('user')" type="submit"><i class="glyphicon glyphicon-remove"></i> Uncheck All</button>
+
+                                        <button class="btn btn-sm btn-primary" ng-click="grantAccess.addSelectedUsers('user')" type="submit"><i class="glyphicon glyphicon-plus"></i> Add Selected</button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="team-tab" aria-labelledby="contact-tab">
+                                <h4 class="border-bottom">Select a Team </h4>
+
+                                <div class="form-group">
+                                    <label for="SelectOrganization" class="col-sm-2 control-label">Company</label>
+                                    <div class="col-sm-4">
+                                        <select ng-options="teamCompany.companyGUID as teamCompany.name for teamCompany in grantAccess.companies" ng-model="grantAccess.selectedTeamOrganization" ng-change="grantAccess.setCascadedTeamCompany(grantAccess.selectedTeamOrganization)" class="form-control" id="teamParentCompany">                                           
+                                            <option value="">Select a Company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="grantAccess.hasTeamChildCompany">
+                                    <label for="SelectAnCompany" class="col-sm-2 control-label">Company</label>
+                                    <div class="col-sm-4">
+                                        <select ng-disabled="!grantAccess.hasTeamChildCompany" class="form-control" id="selectTeamChildCompany" ng-options="teamChildCompany.companyGUID as teamChildCompany.name for teamChildCompany in grantAccess.teamChildCompanies" ng-model="grantAccess.selectedTeamChildCompany" ng-change="grantAccess.getCascadeTeams(grantAccess.selectedTeamChildCompany)">
+                                            <option value="">Select a Company</option>
+                                        </select>
+                                         <!--<p class="form-control-static" id="spanTeamChildCompany">The selected company contains no companies.</p>-->
+                                    </div>
+                                   
+                                </div>
+                                <div class="form-group">
+                                    <label for="SelectAnOffice" class="col-sm-2 control-label">Saved Teams:
+                                    </label>
+                                    <div class="col-sm-4">
+                                        <select ng-disabled="!grantAccess.hasSavedTeam" class="form-control" id="selectSavedTeam" ng-options="savedTeam.name for savedTeam in grantAccess.savedTeams" ng-model="grantAccess.selectedSavedTeam" ng-change="grantAccess.getTeamUsers(grantAccess.selectedSavedTeam.teamGUID)">
+                                            <option value="">Select A Saved Team</option>
+                                        </select>
+
+                                    
+                                    <p class="form-control-static" id="spanSavedTeam">The selected office has no saved team</p>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="PreconfiguredTeams1" class="col-sm-2 control-label">Preconfigured Teams:
+
+                                    </label>
+                                    <div class="col-sm-4">
+                                        <select ng-disabled="!grantAccess.hasPreconfiguredTeam" class="form-control" id="selectPreConfiguredTeam" ng-options="preconfiguredTeam.queryName for preconfiguredTeam in grantAccess.preconfiguredTeams" ng-model="grantAccess.selectedPreconfiguredTeam"
+                                                ng-change="grantAccess.getPreconfiguredTeamUsers(grantAccess.selectedPreconfiguredTeam)">
+                                            <option value="">Select A Preconfigured Team</option>
+                                        </select>
+                                    </div>
+                                    <p class="form-control-static" id="spanPreConfiguredTeam">The selected office has no preconfigured team</p>
+                                </div>
+                                <p ng-if = "grantAccess.teamUsersNotFound">Users not present under this team</p>
+
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        <h4 class="border-bottom">3 Selected Users:</h4>
+
+                        <p class="alert alert-info"><i class="glyphicon glyphicon-question-sign"></i> Those selected (check box) in the following list will be granted access to the selected reports below. You may save the group below as a Project Team for future use by clicking on the link below the table. Project Teams will be available to everyone in your company.
+                        </p>
+
+                        <div ng-if="grantAccess.users.length > 0">
+
+                            <div class="table-responsive">
+
+                                <table class="table table-striped table-condensed table-hover ">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Select</th>
+                                            <th>User</th>
+                                            <th>Company</th>
+                                            <th>Default Level of Access</th>
+                                            <th>Level of Access</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="user in grantAccess.users track by $index">
+                                            <td><a class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="right" ng-click="grantAccess.removeUser($index)" title="Click to Remove this User"><i class="fa fa-trash-o fa-lg"></i></a></td>
+
+                                            <td>
+                                                <div class="checkbox nopadding">
+                                                    <label>
+                                                        <input type="checkbox" ng-init = "grantAccess.checkDefault('selectedUser')" ng-model="user.selectUser">{{user.firstName + " " }} {{user.lastName}}
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td>{{user.companyName}}</td>
+                                            <td>{{user.defaultRoleName}}</td>
+                                            <td>                                                
+                                                <select id="roles" ng-options="role.roleGUID as role.roleName for role in grantAccess.roles" class="form-control" ng-model="user.changedRole" ng-change = "grantAccess.changeToUsersRole(user)">
+                                                    
+                                                    <option value="">(Grant Default Access)</option>
+                                                </select>                                                
+                                            </td>
+ 
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <button class="btn btn-sm btn-default" type="submit" ng-click="grantAccess.selectAllUsers()"><i class="glyphicon glyphicon-ok"></i> Check All</button>
+
+                                    <button class="btn btn-sm btn-default" type="submit" ng-click="grantAccess.unSelectAllUsers()"><i class="glyphicon glyphicon-remove"></i> Uncheck All</button>
+
+
+                                    <button ng-click="grantAccess.removeAllUsers()" class="btn btn-sm btn-danger" type="submit"><i class="fa fa-trash-o fa-lg"></i> Remove All Users</button>
+
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button ng-click="grantAccess.createNewTeam()" class="btn btn-md btn-primary" role="button"><i class="glyphicon fa-lg glyphicon-floppy-save"></i> Save selected as a new Project Team</button>
+                                    <button ng-click = "grantAccess.updateTeam()" ng-show = "grantAccess.teamCreated" role="button" class="btn btn-md btn-success"><i class="glyphicon glyphicon-refresh fa-lg"></i> Update {{" " + grantAccess.teamName}} </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div ng-if="grantAccess.users.length === 0">You haven't selected any users yet.</div>
+                        <hr>
+                        <h4 class="border-bottom">4 Selected Reports:</h4>
+
+
+                        <p class="alert alert-info"><i class="glyphicon glyphicon-question-sign"></i> The table below lists all the reports within the given project. You can click on the green '+' to expand the window and view who already has access to the report. (In that screen you click the red 'X' next to the person's name, to revoke their access to the report.) With the desired reports selected, click on Grant Access below the table.
+                        </p>
+                        
+                        
+
+                        <div id="alertSelectReportMsgDiv" ng-show="grantAccess.showAlertForReports" class="alert alert-dismissible alert-danger" role="alert">
+                            <button type="button" class="close" ng-click="grantAccess.dismissAlert('report')" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{grantAccess.serviceMessageForReport}}
+                        </div>
+
+                        <div class="table-responsive" ng-if = "grantAccess.selectedProject">
+
+                            <table class="table table-striped table-condensed table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Select</th>
+                                        <th>Prop. Number</th>
+                                        <th>Site Name</th>
+                                        <th>Address</th>
+                                        <th>Site Type</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="report in grantAccess.reports">
+                                    <tr>
+                                        <td>
+
+                                            <a  ng-click="grantAccess.getUsersByReport($index)" class="btn btn-primary btn-xs"  data-toggle="collapse" data-target="#report{{$index}}" class="" aria-expanded="true"><span data-toggle="tooltip" data-placement = "top" title = "{{grantAccess.tooltiptext}}"><i id="expandReports{{$index}}" class="fa fa-plus fa-sm"></i></span></a>
+                                            
+
+                                        </td>
+
+                                        <td>
+                                            <div class="checkbox nopadding">
+                                                <label>
+                                                    <input class="stoppropagation" type="checkbox" ng-model="grantAccess.reportsCheckbox[$index]">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>{{report.propertyNumber}}</td>
+                                        <td>{{report.propertyName}}</td>
+                                        <td>{{report.address}}</td>
+                                        <td>{{report.reportType}}</td>
+                                        <td>{{report.reportStatus}}</td>
+                                    </tr>
+                                    <tr class="accordian-body sub-table collapse" id="report{{$index}}" aria-expanded="true">
+                                        <td colspan="12">
+                                            <div class="panel panel-default">
+												<div class="panel-body">
+                                                <table class="table table-striped table-condensed small">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <th>Name</th>
+                                                            <th>Company</th>
+                                                            <th>Role</th>
+                                                           
+                                                            <th>Email</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="user in report.reportUsers">
+                                                            <td><a data-toggle="tooltip" data-placement = "top" title = "Click to revoke this user's access to this report" ng-if="user.userGUID != grantAccess.userGuid" ng-click="grantAccess.revokeAccessForSingleUser($index,user.roleAccessEntityAssetGUID,report,'single',user.userGUID)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o fa-xs"></i></a></td>
+                                        <td>{{user.lastName}} , {{ user.firstName}} </td>
+                                                            <td>{{user.companyName}}</td>
+                                                            <!--<td>{{user.defaultRoleName}}</td>-->
+                                                            <td><a auto-close='1' role="button" data-toggle="popover" title="Change user default role" data-placement="right" data-template="changeUserDefaultRole.html" bs-popover>{{user.defaultRoleName}} &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a></td>
+                                                            
+                                                            
+                                                           
+                                                            <td>{{user.email}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+												</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+
+                        <div class="bottom-margin" ng-if = "grantAccess.selectedProject">
+
+
+                            <button class="btn btn-sm btn-default" type="submit" ng-click="grantAccess.selectAllReports()"><i class="glyphicon glyphicon-ok"></i> Check All</button>
+
+                            <button class="btn btn-sm btn-default" type="submit" ng-click="grantAccess.unSelectAllReports()"><i class="glyphicon glyphicon-remove"></i> Uncheck All</button>
+
+                        </div>
+
+
+                        <div class="bottom-margin" ng-if = "grantAccess.selectedProject">
+
+                            <button class="btn btn-md btn-primary" ng-click="grantAccess.grantAccessBulkUsers()"><i class="fa fa-key"></i> Grant Access to reports and users selected above </button>
+                            <button class="btn btn-md btn-danger" ng-click="grantAccess.revokeAccessBulkUsers()"><i class="fa fa-trash-o fa-lg"></i> Revoke Access to reports and users selected above</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="changeUserDefaultRole.html">
+        <div  class="popover" id = "defaultRolePopOver">
+            <div class="arrow"></div>
+            <h3 class="popover-title" ng-bind="title" ng-show="title"></h3>
+            <div class="popover-content" ng-model="content">
+                        <select id="defaultRoles" ng-options="role.text for role in rolesForExditable.rolesArray" class="form-control" ng-model="role">
+                         <option value="">(Grant Default Access)</option>
+                         </select> 
+                    
+                    <hr>
+                    <div class="text-right">
+                        <button ng-click = "roleObject.updateDefaultRole(role,user,report)" type="button" class="btn btn-md btn-primary">Update</button>
+                        <button ng-click = "$hide()" type="button" class="btn btn-md btn-default closebtn">Close</button>
+                    </div>
+                    </div>
+            </div>
+    </script>
+
+
+
+<script type="application/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>

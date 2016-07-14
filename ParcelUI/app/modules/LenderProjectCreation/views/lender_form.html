@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <style>
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+		<div class="panel panel-default">
+		<div class="panel-body">
+        <h2 class="page-header">New Single Site Project </h2>
+        <div class="alert alert-info"><strong>Use this page to create a new single-site project. <br> If your project contains multiple sites, you can set them up under a single portfolio using the <a href="#" ui-sref="PortfolioCreation.ProjectInformation" tabindex="-1">New Portfolio</a>.</strong></div>
+        <div class="alert" ng-class="main.msgType" role="alert" id="serviceResponseDiv" ng-show="main.serviceResponseAlert">
+            <button type="button" class="close" ng-click="main.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{main.serviceResponseText}}
+        </div>
+    
+        <form name="userForm">
+            <div class="panel-group" id="accordion">
+
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_projectInfo.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_mortgageBanker.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_propertyInfo.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_reportSelection.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_additionalPropertyInfo.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_siteContactInfo.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_grantAccessToUsers.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_attachments.html'"></div>
+                <div class="panel panel-default" ng-include src="'app/modules/LenderProjectCreation/views/lender_emailNotification.html'"></div>
+
+            </div>
+            <div class="text-center form-group" ng-show="main.lastDivLoaded">
+			 <button class="btn btn-md btn-default" ng-click="main.cancelCreateProject()">Cancel and Return Home
+                </button>
+                <button class="btn btn-md btn-primary" ng-click="main.CreateProject(userForm)">Create Project</button>
+               
+            </div> 
+        </form>
+		</div>
+		</div>
+    </div>
+</body>
+
+</html>

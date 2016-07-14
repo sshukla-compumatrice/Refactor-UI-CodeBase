@@ -1,0 +1,136 @@
+{
+ 
+    "html": "<div><h3 class='border-bottom  text-capitalize'>{{contentValues.sectionTitle00}}</h3></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><horizontal-table table='contentValues.horizontalTable02'></horizontal-table>",
+ 
+    "contentValues": {
+        "sectionTitle00": "3.1.1 Building Summary",
+        "horizontalTable02": {
+            "structure": [{
+                "label": "Building Name:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "10%",
+                "textWidth": "90%"
+            }, {
+                "label": "Number of Floors:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Number of Rooms:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Number of Basement Levels:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Total Leasable Area:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 5,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Structure:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 6,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Exterior Walls:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 7,
+                "columnIndex": 7,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Roof:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 8,
+                "columnIndex": 8,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Foundation:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 9,
+                "columnIndex": 9,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "HVAC:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 10,
+                "columnIndex": 10,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Electrical:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 11,
+                "columnIndex": 11,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Vertical Transportation:",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 12,
+                "columnIndex": 12,
+                "width": "0%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Building Name:": "",
+                "Number of Floors:": "",
+                "Number of Rooms:": "",
+                "Number of Basement Levels:": "",
+                "Total Leasable Area:": "",
+                "Structure:": "wood-framedreinforced concretesteel-framedconcrete and steelOther",
+                "Exterior Walls:": "brick veneerreinforced concreteconcrete tiltupEIFSstuccovinyl sidingaluminum sidingcurtain wallconcrete masonry blockarchitectural stoneOther",
+                "Roof:": "EPDMconventional builtup roofmodified bituminousasphalt shingleinvertedpartial replacementmetalOther",
+                "Foundation:": "Slab-on-GradePilesSpread footingsUnknownOther",
+                "HVAC:": "Central PlantIndividual HVAC UnitsPackage UnitOther",
+                "Electrical:": "OffSite SourcePad Mounted TransformersPole Mounted TransformersOther",
+                "Vertical Transportation:": "HydraulicCable DrivenEscalatorsNoneOther"
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

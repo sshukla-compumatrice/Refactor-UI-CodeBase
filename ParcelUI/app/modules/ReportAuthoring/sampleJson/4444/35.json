@@ -1,0 +1,224 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><br><vertical - table table='contentValues.verticalTable03'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.2 Underground Storage Tanks (USTS)",
+        "tagData": "\\u00A0 Current tanks should be discussed in the Storage Tanks section. Former tanks\\/release(s) should be discussed the Prior Reports, Regulatory Review and\\/or Historical Review\\u00A0sections, as applicable. Refer to the other sections as appropriate.",
+        "verticalTable03": {
+            "structure": [{
+                "label": "Tank No.",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Specific Tank Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "UST Constructions",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Walls",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Product",
+                "id": "",
+                "type": "text",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Installation Year",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Volume (Gals.)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Active?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Non-Active Status",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Leak Detection System Present?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Prev. Tank Integrity Test",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Tank Test Date (M\\/Y)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Tank Test Results",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Location",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Construction",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Piping Walls",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Prev. Pipe Integrity Test",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Pipe Test Date (M\\/Y)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "25%"
+            }, {
+                "label": "Pipe Test Results",
+                "id": "",
+                "type": "select",
+                "colspan": 2,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 3,
+                "width": "50%",
+                "textWidth": "50%"
+            }],
+            "data": [{
+                "Tank No.": "",
+                "Specific Tank Location": "",
+                "UST Constructions": "SteelFiberglassUnknownNot ProvidedPlasticConcreteOther",
+                "Walls": "Single walledDouble walled",
+                "Product": "GasolineDieselKeroseneNo. 2 fuel oilNo. 4 fuel oilNo. 6 fuel oilHazardous substanceUnknownOther",
+                "Installation Year": "",
+                "Volume (Gals.)": "",
+                "Active?": "YesNoUnk",
+                "Non-Active Status": "ActiveFilled in placeNo longer utilizedRemovedUnknown",
+                "Leak Detection System Present?": "YesNoUnknown",
+                "Prev. Tank Integrity Test": "YesNoUnk",
+                "Tank Test Date (M\\/Y)": "",
+                "Tank Test Results": "PassedFailed",
+                "Piping Location": "Above groundUndergroundBoth",
+                "Piping Construction": "SteelFiberglass",
+                "Piping Walls": "Single walledDouble walled",
+                "Prev. Pipe Integrity Test": "YesNoUnk",
+                "Pipe Test Date (M\\/Y)": "",
+                "Pipe Test Results": "PassedFailed"
+            }]
+        },
+        "ckEditData": {
+            "div02": "<p align=\\\"justify\\\">No evidence of underground storage tanks (USTs), aboveground storage tanks (ASTs), or pipelines (above or belowground) was identified.&#160; No environmental concerns noted.<\\/p>"
+        }
+    }
+}

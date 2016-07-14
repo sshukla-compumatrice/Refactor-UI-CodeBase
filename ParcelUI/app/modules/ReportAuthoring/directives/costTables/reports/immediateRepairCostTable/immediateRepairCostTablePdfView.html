@@ -1,0 +1,30 @@
+<div costtable-pdf>
+
+    <table style="border: 1px solid #000;  width: 100%; max-width: 100%; margin-bottom: 19px; background-color: transparent;  border-spacing: 0; border-collapse: collapse;">
+        <thead style="background-color:#9696FF;">
+            <tr>
+
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Component Description</th>
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Quantity</th>
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Unit</th>
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Unit Cost</th>
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Replacement Percent</th>
+                <th style="border: 1px solid #ddd;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 1px solid #ddd;padding:5px; font-size: 11px;">Immediate Total</th>
+            </tr>
+        </thead>
+        <tbody generate-html>
+
+            <tr ng-repeat="item in recommendations">
+
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.name}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.quantity}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.unit}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.unitCost}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.replacePercent}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #000;">{{item.totalCost}}</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

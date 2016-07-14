@@ -1,0 +1,53 @@
+{
+    "data": {
+        "html": "<div id='section1'><div><h2><strong><span class='global'>{{sectionNumber}} {{sectionTitle}}</span></strong></h2></div><br><hr><div ng-repeat='data in contentValues.ckEditData'><div ng-bind-html='renderHtml(data.html)'></div></div></div>",
+        "contentValues": {
+            "reportData": {
+                "data": [{
+                    "html": "<p><span style='font-family:comic sans ms,cursive;'>The purpose of the <span style='color:#FF0000;'><span style='font-size:18px;'>Phase I Environmental Site Assessment</span></span> <span style='background-color:#FFFF00;'>(ESA)</span> was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property.</span></p>",
+                    "key": "section-narrative"                    
+                }, {
+                    "html": "{{sec.number}} {{sec.name}}",
+                    "key": "section-title",
+                    "compile": true
+                }, {
+                    "html": "<div class='panel panel-body'><div id='associatedImgs'><!-- ngRepeat: associated in associatedImages --><div class='col-md-6 pull-center ng-scope' ng-repeat='associated in associatedImages'><div><img src='app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg' width='304' height='236'></div><div><!--<div cl-inline-edit cl-model-data='associated.name' cl-exp-style='text-decoration: underline;' ></div>--><div ng-show='!associated.renameAction' ng-click='enableRename(associated)' class=''><span class='ng-binding'>renamed for section 1</span></div><div ng-show='associated.renameAction' ng-blur='cancelRename(associated)' class='ng-hide'></div></div></div><!-- end ngRepeat: associated in associatedImages --></div><!--<div id='imgCollection' ng-show='selectImgAction'></div>--></div>",
+                    "key": "section-associatedPhotos"
+                }, {
+                    "html": "<table class='table table-striped table-bordered' ng-show='show==true'><thead><tr><th/><th>Tenant Name</th><th>Location</th><th>Type of Use</th><th>Comments</th></tr></thead><tbody><!-- ngRepeat: entry in appkeys --><tr data-ng-repeat='entry in appkeys' class='ng-scope'><td class='ng-binding'>1</td><td><span data-ng-hide='editMode' class='ng-binding'>sefree</span></td><td><span data-ng-hide='editMode' class='ng-binding'>Pune</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td></tr><!-- end ngRepeat: entry in appkeys --><tr data-ng-repeat='entry in appkeys' class='ng-scope'><td class='ng-binding'>2</td><td><span data-ng-hide='editMode' class='ng-binding'>mnbvc</span></td><td><span data-ng-hide='editMode' class='ng-binding'>Pune</span></td><td><span data-ng-hide='editMode' class='ng-binding'>bvcx</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td></tr><!-- end ngRepeat: entry in appkeys --></tbody></table>",
+                    "key": "section-horizontalTable"
+                }]
+                
+            },
+            "ckEditData": [
+            {
+                "html": "<p><span style='font-family:comic sans ms,cursive;'>The purpose of the <span style='color:#FF0000;'><span style='font-size:18px;'>Phase I Environmental Site Assessment</span></span> <span style='background-color:#FFFF00;'>(ESA)</span> was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property.</span></p>"
+            }, {
+                "html": "<p><strong>test data for ck editor</strong></p>"
+            }, {
+                "html": "<ul><li><address>Coffee</address></li><li><span style='color:#0000FF;'><em><span style='font-family:times new roman,times,serif;'>Tea</span></em></span></li><li><u><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Milk</span></span></u></li></ul>"
+            }, {
+                "html": "<div class='panel panel-body'><div id='associatedImgs'><!-- ngRepeat: associated in associatedImages --><div class='col-md-6 pull-center ng-scope' ng-repeat='associated in associatedImages'><div><img src='app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg' width='304' height='236'></div><div><!--<div cl-inline-edit cl-model-data='associated.name' cl-exp-style='text-decoration: underline;' ></div>--><div ng-show='!associated.renameAction' ng-click='enableRename(associated)' class=''><span class='ng-binding'>renamed for section 1</span></div><div ng-show='associated.renameAction' ng-blur='cancelRename(associated)' class='ng-hide'></div></div></div><!-- end ngRepeat: associated in associatedImages --></div><!--<div id='imgCollection' ng-show='selectImgAction'></div>--></div>"
+            }, {
+                "html": "<table class='table table-striped table-bordered' ng-show='show==true'><thead><tr><th/><th>Tenant Name</th><th>Location</th><th>Type of Use</th><th>Comments</th></tr></thead><tbody><!-- ngRepeat: entry in appkeys --><tr data-ng-repeat='entry in appkeys' class='ng-scope'><td class='ng-binding'>1</td><td><span data-ng-hide='editMode' class='ng-binding'>sefree</span></td><td><span data-ng-hide='editMode' class='ng-binding'>Pune</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td></tr><!-- end ngRepeat: entry in appkeys --><tr data-ng-repeat='entry in appkeys' class='ng-scope'><td class='ng-binding'>2</td><td><span data-ng-hide='editMode' class='ng-binding'>mnbvc</span></td><td><span data-ng-hide='editMode' class='ng-binding'>Pune</span></td><td><span data-ng-hide='editMode' class='ng-binding'>bvcx</span></td><td><span data-ng-hide='editMode' class='ng-binding'>nbv</span></td></tr><!-- end ngRepeat: entry in appkeys --></tbody></table>"
+            }],
+           
+            "choice": {
+                "Y": "Consulting",
+                "N": "Application Development and Support",
+                "NS": "Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            }
+        },
+
+        "sectionID": 2,
+        "name": "Environmental Report Summary",
+        "number": "2.0"
+    }
+}

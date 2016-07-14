@@ -1,0 +1,549 @@
+{
+    "Section": {
+        "html": "<div><h2><strong><span>{{section1Title}}</span></strong></h2></div><br><tag-with-dashes></tag-with-dashes><br><button  id='submitData' class='btn btn-mini btn-success' data-ng-click='submit();'><b>Submit Data</b></button><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div3'></div></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK'><p ng-bind-html='contentValues.ckEditData.div2'></p></div></div><hr><div><button  id='createHost' class='btn btn-mini btn-success' data-ng-click='val();createTable()'><b>Create Table</b></button></div><br> <dynamic-table ng-show='show==true'></dynamic-table><hr><horizontal-table table='contentValues.horizontalTable'></horizontal-table><div associate-photos ap-data='contentValues.associatPhotos' /><div><h2>Cost Summary</h2></div><br><div ng-repeat = 'costTable in contentValues.costTable'><div add-recommendation  cost-table = 'costTable'/><div freddie-mac-recommendation-list cost-table='costTable'/></div>",
+
+        "contentValues": {
+            "section1Title": "1.0 EDR Order Status",
+            "choice": {
+                "Y": "Consulting",
+                "N": "Application Development and Support",
+                "NS": "Testing"
+            },
+            "table": {
+                "title": "At A Glance Description:",
+                "r11": "Item",
+                "r12": "Condition",
+                "r21": "General Condition",
+                "r22": "Good"
+            },
+            "ckEditData": {
+                "div1": "<p>The purpose of the Phase I Environmental Site Assessment (ESA) was to evaluate the current and historical conditions of the Subject Property in an effort to identify recognized environmental conditions in connection with the Subject Property. </p>",
+
+                "div2": "<p><strong>test data for ck editor</strong></p>",
+                "div3": "<ul><li>Coffee</li><li>Tea</li><li>Milk</li></ul>"
+            },
+            "tagData": "Please refer to Default Language for EDR Order Status.",
+            "horizontalTable": {
+                "header": {
+                    "text": "This is the table header text"
+                },
+                "structure": [{
+                    "label": "Utility",
+                    "type": "text",
+                    "defaultValue": "default utility val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 1,
+                    "rowIndex": 2
+                }, {
+                    "label": "Provider",
+                    "type": "text",
+                    "defaultValue": "default provider val",
+                    "colspan": 1,
+                    "width": 30,
+                    "align": "left",
+                    "textWidth": 30,
+                    "columnIndex": 2,
+                    "rowIndex": 1
+                }, {
+                    "label": "Comments",
+                    "type": "text",
+                    "defaultValue": "default comments val",
+                    "colspan": 1,
+                    "width": 40,
+                    "align": "left",
+                    "textWidth": 40,
+                    "columnIndex": 3,
+                    "rowIndex": 1
+                }],
+                "data": [{
+                    "Utility": "Utility 1",
+                    "Provider": "Provider 1",
+                    "Comments": "Comments 1"
+                }, {
+                    "Utility": "Utility 2",
+                    "Provider": "Provider 2"
+                }],
+                "footer": {
+                    "text": "This is the table footer text"
+                }
+            },
+            "associatPhotos": {
+                "enabled": true,
+                "associated": [{
+                    "url": "app/modules/ReportAuthoring/directives/associatePhotos/sampleImgs/abstract-blue-backgrounds-35_1920x1200_71473.jpg",
+                    "name": "renamed for section 1"
+                }]
+            },
+
+            "costTable": [{
+                "recommendationHeader": "Paving",
+
+                "type": "displayFreddie2015",
+                "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                "recommendationTypes": [{
+                        "value": "1",
+                        "name": "Roof Coverings - Repairs / Flood"
+                    },
+                    {
+                        "value": "2",
+                        "name": "Roof Drainage (Gutters/Down spouts)"
+                    },
+                    {
+                        "value": "3",
+                        "name": "Building Mounted Lighting"
+                    },
+                    {
+                        "value": "other_",
+                        "name": "Other"
+                    }],
+                "years": 10,
+
+
+                "data": [
+                    {
+                        "group": "Site",
+                        "sectionID": 23,
+                        "recommendation": [
+                            {
+                                "name": "Roof Coverings - Repairs / Flood",
+                                "package": ["EMG Replacement and Immediate (No Short Term)", "EMG Default Cost Tables"],
+                                "tables": ["Immediate and Short Term Repair Costs Tables"],
+                                "eul": 200,
+                                "eff": 100,
+                                "rul": 100,
+                                "quantity": 150,
+                                "unit": "LS",
+                                "unitCost": 100,
+                                "cycleReplacement": 15000,
+                                "replacePercent": 2,
+                                "totalCost": 300,
+                                "unallocatedCost": 700,
+                                "critical": {
+                                    "name": "critical",
+                                    "include": true,
+                                    "val": 150
+                                },
+                                "priority90Days": {
+                                    "name": "priority90Days",
+                                    "include": true,
+                                    "val": 150
+                                },
+                                "priority": {
+                                    "name": "priority",
+                                    "include": false,
+                                    "val": 150
+                                },
+                                "yearlyCostSpread": [{
+                                    "label": "1",
+                                    "include": true,
+                                    "val": 150
+                        }, {
+                                    "label": "2",
+                                    "include": true,
+                                    "val": 150
+                        }, {
+                                    "label": "3",
+                                    "include": true,
+                                    "val": 150
+                        }],
+                                "condition": ["E", "P"],
+                                "action": ["CR", "PR"],
+                                "criticalComments": "this is a critical comment",
+                                "conditionComments": "this is condition comments"
+                    }, {
+                                "name": "Building Mounted Lighting 123",
+                                "eul": 200,
+                                "eff": 100,
+                                "rul": 100,
+                                "quantity": 150,
+                                "unit": "LS",
+                                "unitCost": 100,
+                                "cycleReplacement": 15000,
+                                "replacePercent": 2,
+                                "totalCost": 300,
+                                "unallocatedCost": 700,
+                                "critical": {
+                                    "name": "critical",
+                                    "include": false,
+                                    "val": 150
+                                },
+                                "priority90Days": {
+                                    "name": "priority90Days",
+                                    "include": true,
+                                    "val": "150"
+                                },
+                                "priority": {
+                                    "name": "priority",
+                                    "include": false,
+                                    "val": ""
+                                },
+                                "yearlyCostSpread": [{
+                                    "label": "1",
+
+                                    "include": true,
+                                    "val": 150
+                        }, {
+                                    "label": "2",
+                                    "include": true,
+                                    "val": 150
+                        }, {
+                                    "label": "5",
+                                    "include": true,
+                                    "val": 150
+                        }],
+                                "condition": ["E", "P"],
+                                "action": ["CR", "PR"],
+                                "criticalComments": "this is a critical comment",
+                                "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }, {
+                "recommendationHeader": "Sidewalks",
+                "type": "displayFreddie2015",
+                "listHeaders": ["recommendation", "eul", "eff", "rul", "qty", "year", "cost"],
+                "recommendationTypes": [{
+                        "value": "1",
+                        "name": "Sidewalk_1"
+                    },
+                    {
+                        "value": "2",
+                        "name": "Sidewalk_2"
+                    },
+                    {
+                        "value": "3",
+                        "name": "Sidewalk_3"
+                    },
+                    {
+                        "value": "other_",
+                        "name": "Other"
+                    }],
+                "years": 10,
+
+
+                "data": [{
+                    "group": "Site",
+                    "sectionID": 23,
+                    "recommendation": [{
+                        "name": "Sidewalk_1",
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": 150
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": 150
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "3",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }, {
+                        "name": "Sidewalk_2",
+                        "eul": 200,
+                        "eff": 100,
+                        "rul": 100,
+                        "quantity": 150,
+                        "unit": "LS",
+                        "unitCost": 100,
+                        "cycleReplacement": 15000,
+                        "replacePercent": 2,
+                        "totalCost": 300,
+                        "unallocatedCost": 700,
+                        "critical": {
+                            "name": "critical",
+                            "include": false,
+                            "val": 150
+                        },
+                        "priority90Days": {
+                            "name": "priority90Days",
+                            "include": true,
+                            "val": "150"
+                        },
+                        "priority": {
+                            "name": "priority",
+                            "include": false,
+                            "val": ""
+                        },
+                        "yearlyCostSpread": [{
+                            "label": "1",
+
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "2",
+                            "include": true,
+                            "val": 150
+                        }, {
+                            "label": "5",
+                            "include": true,
+                            "val": 150
+                        }],
+                        "condition": ["E", "P"],
+                        "action": ["CR", "PR"],
+                        "criticalComments": "this is a critical comment",
+                        "conditionComments": "this is condition comments"
+                    }]
+                }]
+            }]
+
+        },
+
+        "sectionID": 1,
+        "name": "EDR Order Status",
+        "number": "1.0"
+
+    }
+}
+
+
+
+
+{
+    "report": null,
+    "template": null,
+    "section": null,
+    "history": null,
+    "message": null,
+    "comments": null,
+    "historyLibraries": null,
+    "reportTemplate": null,
+    "sectionData": null,
+    "appendices": null,
+    "appendix": null,
+    "commentTypes": null,
+    "tableOfContent": {
+        "hasNarrative": false,
+        "hasComments": false,
+        "comments": [],
+        "updatedBy": {
+            "userID": 0,
+            "userGUID": "bbc8bb95-f8d0-42aa-b053-00f187134f16",
+            "firstName": "Developer",
+            "middleInitial": null,
+            "lastName": "User",
+            "companyGUID": "cd024ac2-f962-472f-acf1-1dc4238c321e",
+            "officeGUID": "5d96e57b-5571-4914-88b3-ce07d0c592bf"
+        },
+        "reportGUID": "b1b0e8dc-2960-11e6-95e5-0e29ed3d2a45",
+        "clickable": false,
+        "sectionNumber": "",
+        "isCommentsAddressed": false,
+        "sectionID": 0,
+        "updatedDate": "06-09-2016 05:28:13 AM EDT",
+        "sections": [
+            {
+                "hasNarrative": true,
+                "hasComments": false,
+                "comments": [],
+                "hasPhotos": false,
+                "clickable": true,
+                "sectionNumber": "Section 9",
+                "isCommentsAddressed": false,
+                "sectionID": 111,
+                "sections": [],
+                "sectionName": "Conclusions",
+                "sectionGUID": "9bc28133-dd48-11e5-b5c1-0e29ed3d2a45",
+                "sectionData": {
+                    "contentValues": {
+                        "sectionTitle0": "Section 9 Conclusions",
+                        "ckEditData": {
+                            "div1": ""
+                        }
+                    }
+                },
+                "isAppendix": false,
+                "appendixTools": [],
+                "isVisibleInToc": true,
+                "html": "<div><h3 class='border-bottom text-capitalize'>{{contentValues.sectionTitle0}}<div class='pull-right top-margin-xs bottom-margin-xs btn-group'></div><div class='clearfix'></div></h3></div><div last-updated-by updated-date='updatedDate' updated-by='updatedBy' sec-id='secId'></div><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div1'></div></div>",
+                "isGeneralInfo": false
+		}, {
+                "hasNarrative": true,
+                "hasComments": false,
+                "comments": [],
+                "hasPhotos": false,
+                "clickable": true,
+                "sectionNumber": "Section 10",
+                "isCommentsAddressed": false,
+                "sectionID": 112,
+                "sections": [],
+                "sectionName": "Opinions and Recommendations",
+                "sectionGUID": "9bc23912-dd48-11e5-b5c1-0e29ed3d2a45",
+                "sectionData": {
+                    "contentValues": {
+                        "tagData": ["Copy from Recommendations in Section 1 Executive Summary OR choose an option from the default language OR make your own."],
+                        "sectionTitle0": "Section 10 Opinions and Recommendations",
+                        "ckEditData": {
+                            "div1": ""
+                        }
+                    }
+                },
+                "isAppendix": false,
+                "appendixTools": [],
+                "isVisibleInToc": true,
+                "html": "<div><h3 class='border-bottom text-capitalize'>{{contentValues.sectionTitle0}}<div class='pull-right top-margin-xs bottom-margin-xs btn-group'></div><div class='clearfix'></div></h3></div><div last-updated-by updated-date='updatedDate' updated-by='updatedBy' sec-id='secId'></div><tag-with-dashes></tag-with-dashes><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div1'></div></div>",
+                "isGeneralInfo": false
+		}],
+        "sectionName": "",
+        "isAppendix": false,
+        "appendixTools": [],
+        "isVisibleInToc": true,
+        "html": "",
+        "isGeneralInfo": false
+    },
+    "comment": null,
+    "sections": null,
+    "defaults": null,
+    "project": {
+        "projectID": 0,
+        "name": "Edr Order Test",
+        "companyID": 0,
+        "finalDueDate": null,
+        "draftDueDate": null,
+        "client": null,
+        "locations": null,
+        "siteContact": null,
+        "accessParties": null,
+        "notification": null,
+        "comments": null,
+        "projectGUID": "0874b6d4-4dc7-49b5-a100-eddb468c186f",
+        "companyGUID": null,
+        "generalInfo": null,
+        "attachments": null,
+        "inputFile": null,
+        "mortgageBroker": null,
+        "reports": null,
+        "totalReports": 0,
+        "numberOfFinalReports": 0
+    },
+    "location": {
+        "locationGUID": null,
+        "categories": null,
+        "propertyNumber": "",
+        "name": "",
+        "address": "",
+        "address1": "Chunabhatti",
+        "address2": "",
+        "city": "Pune",
+        "state": "UT",
+        "zip": null,
+        "county": "",
+        "latitude": 39.32098,
+        "longitude": -111.093731,
+        "acreage": "",
+        "numBuildings": "",
+        "transactionTypeID": 0,
+        "reports": null,
+        "siteContact": {
+            "name": null,
+            "phone": null,
+            "fax": null,
+            "email": null
+        },
+        "country": "US",
+        "transactionTypeGUID": null,
+        "propertyTypeGUID": null,
+        "propertyID": 0,
+        "propertyName": "Kachara Patti",
+        "elevation": 0,
+        "elevationUnits": null,
+        "contactName": null,
+        "contactEmail": null,
+        "contactPhone": null,
+        "contactFax": null,
+        "notes": null,
+        "dataSource": null,
+        "dataSourceKey": null,
+        "propertyGuid": "b1b0366c-2960-11e6-95e5-0e29ed3d2a45",
+        "projectGuid": null,
+        "propertyType": null,
+        "transactionType": null,
+        "geocodeSource": null
+    },
+    "reportDetails": {
+        "reportGuid": "b1b0e8dc-2960-11e6-95e5-0e29ed3d2a45",
+        "projectGuid": null,
+        "templateID": 0,
+        "libraryID": 0,
+        "projectNumber": null,
+        "poNumber": null,
+        "fee": null,
+        "reportID": 0,
+        "taskedCompanyID": 0,
+        "statusID": 0,
+        "createDate": null,
+        "reportOutputSetupID": 0,
+        "reportOutputSetupGuid": null,
+        "tocSetupID": 0,
+        "transmittalSetupID": 0,
+        "coverTemplateID": 0,
+        "languageLibraryID": 2642,
+        "propertyID": 0,
+        "outToBid": false,
+        "templateGUID": null,
+        "taskedCompanyGUID": "cd024ac2-f962-472f-acf1-1dc4238c321e",
+        "languageLibraryGUID": "1dd1ed9d-e1c9-11e5-886c-0eddda3124c5",
+        "reportStatusGuid": "726cd04a-9791-11e5-8226-0e29ed3d2a45",
+        "reportStatus": "Work Order Created",
+        "templateVersionGUID": null,
+        "reportTypeGuid": null,
+        "reportType": "Phase I ESA",
+        "propertyNumber": null,
+        "propertyName": null,
+        "propertyName": null,
+        "address": null,
+        "city": null,
+        "state": null,
+        "zipCode": null,
+        "signatures": null,
+        "generalInfo": null,
+        "propertyGuid": null,
+        "projectDueDate": null,
+        "county": null,
+        "clientCompany": null,
+        "consultantCompany": null,
+        "property": null,
+        "projectName": null,
+        "siteAssessor": null,
+        "seniorReviewer": null,
+        "siteID": "A0119849",
+        "reportStatusAbbreviation": "WO",
+        "final": false,
+        "isDeactivated": false,
+        "isLocked": false
+    },
+    "prepopulatedTableData": null,
+    "sortEnum": null
+}

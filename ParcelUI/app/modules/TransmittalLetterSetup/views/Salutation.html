@@ -1,0 +1,64 @@
+ 
+<h4>Salutation</h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="salutationFont" class="control-label">Font:</label>
+            <select id="salutationFont" class="form-control" ng-model="transSetup.cssData['salutation']['font-family']">
+                <option>Arial</option>
+                <option>Helvetica</option>
+                <option>Times</option>
+                <option>Times New Roman</option>
+                <option>Book Antiqua</option>
+                <option>Arial Narrow</option>
+                <option>Verdana</option>
+                <option>Calibri</option>
+                <option>Cambria</option>
+                <option>Century Gothic</option>
+                <option>Garamond</option>
+                <option>Tahoma</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="salutationFontSize" class="control-label">Font Size:</label>
+            <select id="salutationFontSize" class="form-control" ng-model="transSetup.cssData['salutation']['font-size']">
+                <option value="8px">8</option>
+                <option value="9px">9</option>
+                <option value="10px">10</option>
+                <option value="11px">11</option>
+                <option value="12px">12</option>
+                <option value="13px">13</option>
+                <option value="14px">14</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="salutationFontStyle" class="control-label">Font Style:</label>
+            <select id="salutationFontStyle" class="form-control" ng-model="transSetup.cssData['salutation'].style">
+                <option value="B" selected="">Bold</option>
+                <option value="I">Italic</option>
+                <option value="U">Underline</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="form-group">
+            <label for="linesAfterSalutaion" class="control-label">
+                Lines after Salutation:
+            </label>
+            <select id="linesAfterSalutaion" name="linesAfterSalutaion" class="form-control" ng-model="transSetup.jsonData.salutation.linesAfterSalutaion">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+</div>

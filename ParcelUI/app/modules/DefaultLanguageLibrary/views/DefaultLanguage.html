@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+    <!-- Browser Metrics Tracking Script -->
+    <!--  <script type="text/javascript" src="scripts/newrelic.min.js"></script>  
+	Browser Metrics Tracking Script end -->
+
+</head>
+
+<body>
+
+    <script id="dllDeleteAll.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Delete All Default language from every section </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate1" novalidate>
+
+            <div class="modal-body ">
+
+                <strong>You are about to delete all Default Language options from this library. This cannot be undone. Do you want to continue?</strong>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">No</a>
+                <a class="btn btn-danger" role="button" ng-click="removeAllDefaultLanguage()">Yes</a>
+            </div>
+        </form>
+
+    </script>
+
+    <script id="dllRename.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Rename this Default Language Library </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate3" novalidate>
+
+            <div class="modal-body ">
+
+                <div class="row required" show-errors>
+                    <label for="newLibName" class="control-label col-xs-12">Enter a new name for this language library:</label>
+                    <div class="form-group col-md-6 col-lg-6 col-xs-12" show-errors>
+                        <input class="form-control" name="newLibName" id="newLibName" type="text" placeholder="Enter new library name" ng-model="newNameDll" required>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-md btn-default" ng-click="CancelDelete()">Cancel</button>
+                <button type="submit" class="btn btn-md btn-primary" ng-click="renameDll(myFormAddTemplate3)">Rename</button>
+            </div>
+        </form>
+
+    </script>
+
+
+    <script id="dllDuplicate.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Duplicate Language Library </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate4">
+
+            <div class="modal-body ">
+
+                <div class="row required">
+                    <label for="setupCopyFrom" class="control-label col-xs-12"> Copy From:</label>
+                    <div class="form-group col-md-5 col-lg-5 col-xs-12" show-errors>
+                        <select name="setupCopyFrom" id="setupCopyFrom" class="form-control" ng-model="langLibrarySelectedFrom" ng-options="dll as dll.name for dll in dll.dllList" required ng-change="duplicateError = ''">
+                            <option value="">Select Language Library</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <label for="copyTo" class="control-label col-xs-12"> Copy To:</label>
+                    <div class="form-group col-md-5 col-lg-5 col-xs-12">
+                        <select name="copyTo" id="copyTo" class="form-control" ng-init="copyToAction='Existing'" ng-model="copyToAction" ng-change="duplicateError = ''">
+                            <option value="Existing">Existing</option>
+                            <option value="New">New</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row required">
+                    <label for="newName" class="control-label col-xs-12"> {{copyToAction}}</label>
+                    <div class="form-group col-md-5 col-lg-5 col-xs-12" form-input-validation="(myFormAddTemplate4.newName && myFormAddTemplate4.newName.$invalid) || (myFormAddTemplate4.setupCopyTo && myFormAddTemplate4.setupCopyTo.$invalid)">
+                        <input class="form-control" type="text" placeholder="Enter a name" ng-show="copyToAction == 'New'" ng-model="toCreateReport" id="newName" name="newName" ng-required="copyToAction == 'New'">
+
+                        <select name="setupCopyTo" class="form-control" ng-init="langLibrarySelectedTo='';" ng-model="langLibrarySelectedTo" ng-options="dll as dll.name for dll in dll.dllList" ng-required="copyToAction == 'Existing'" ng-change="duplicateError = ''" ng-show="copyToAction == 'Existing'">
+                            <option value="">Select Language Library</option>
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div ng-show="duplicateError != '' && duplicateError != null && duplicateError != undefined" class="alert alert-danger" role="alert" ng-class="danger">
+                {{duplicateError}}
+            </div>
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="CancelDelete()">Cancel</button>
+                <button ng-show="copyToAction == 'New'" type="button" class="btn btn-primary" ng-click="duplicate(myFormAddTemplate4)">Duplicate</button>
+                <button ng-show="copyToAction == 'Existing'" type="button" class="btn btn-primary" ng-click="duplicate(myFormAddTemplate4)">Copy</button>
+            </div>
+        </form>
+
+    </script>
+
+    <script id="dllLink.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Link this default language library to another</h4>
+        </div>
+
+
+        <form name="linkLibraryForm" novalidate>
+
+            <div class="modal-body ">
+
+                <div class="row required" show-errors>
+                    <label for="newLibName" class="control-label col-xs-12"> Linked Library Name:</label>
+                    <div class="form-group col-md-6 col-lg-6 col-xs-12" show-errors>
+                        <input class="form-control" name="newLibName" id="newLibName" type="text" placeholder="Enter new name" ng-model="linkLibraryName" required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="reset " class="btn btn-md btn-default " ng-click="CancelDelete()">Cancel</button>
+                <button type="submit " class="btn btn-md btn-primary " ng-click="linkLibrary(linkLibraryForm)">Link Library</button>
+
+            </div>
+        </form>
+
+    </script>
+
+
+    <script id="dllDelete.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Delete Default language </h4>
+        </div>
+        <form name="myFormAddTemplate5" novalidate>
+
+            <div class="modal-body ">
+                <strong>This will delete the complete Default Language Library. Are you sure you want to continue?</strong>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">No</a>
+                <a class="btn btn-danger" role="button" ng-click="deleteDll()">Yes</a>
+            </div>
+        </form>
+
+    </script>
+
+    <script id="dllMove.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Move default language library to different company </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate6" novalidate>
+
+            <div class="modal-body ">
+                <div class="row required" show-errors>
+                    <label for="moveCompany" class="control-label col-xs-12">Select the company name you want to move this Default Language Library to:</label>
+                    <div class="form-group col-md-6 col-lg-6 col-xs-12" show-errors>
+                        <select name="moveCompany" id="moveCompany" class="form-control" ng-model="moveToCompany" ng-options="company as company.name for company in companies track by company.companyGUID|filter:removeCurrentCompany" required>
+                            <!-- <option value="0" ng-if="!moveToCompany">Select Company</option> ng-init="moveToCompany = 0;"-->
+                            <option value="">Select Company</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+                <a class="btn btn-primary" role="button" ng-click="moveToDifferentCompany(myFormAddTemplate6)">Continue</a>
+
+            </div>
+        </form>
+
+    </script>
+
+    <script id="dllSetDefaultStructure.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Success Message </h4>
+        </div>
+        <form name="myFormAddTemplate7" novalidate>
+
+            <div class="modal-body ">
+                <strong>This will set the selected Template as default structure for this Default Language Library. Are you sure you want to continue?</strong>
+
+                <div ng-show="setTemplateComplete">
+                    <p><strong><i class="fa fa-exclamation-circle"></i> Template was set as default structure successfully.</strong></p>
+                </div>
+            </div>
+
+
+            <div class="modal-footer" ng-show="!setTemplateComplete">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+                <a class="btn btn-primary" role="button" ng-click="setTemplateAsDefault()">Continue</a>
+            </div>
+        </form>
+
+    </script>
+
+
+    <script id="dllPDFGeneration.html" type="text/ng-template">
+
+        <div class="modal-header ">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Set Default Template</h4>
+        </div>
+
+
+        <form name="myFormAddTemplate7" novalidate>
+
+            <div class="modal-body ">
+
+                <iframe src="http://www.pdf995.com/samples/pdf.pdf" class="dllPDFGenerationIframe"> </iframe>
+                <p><strong>{{library}}</strong></p>
+                <p><strong>{{pdfURL}}</strong></p>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Close</a>
+
+            </div>
+        </form>
+
+    </script>
+
+    <div class="container-fluid " cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2 class="page-header">Default Language</h2>
+                <form class="form-horizontal">
+
+                    <!-- company selection -->
+                    <div class="form-group ">
+                        <label for="companyID" class="control-label col-md-2 col-sm-2 col-xs-12">
+                            Company:
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-4">
+                            <select name="companyID" readonly id="companyID" class="form-control" ng-model="dll.selectedCompanyId" ng-options="dll as dll.name for dll in dll.dllCompanyList  track by dll.companyGUID" ng-change="dll.companySelectionChanged()" focus-if>
+                                <!-- ng-init="dll.companySelectionChanged();" <option value="" ng-if="!dll.selectedCompanyId">Select Company</option>-->
+                                <!-- ng-options="dll as dll.name for dll in companies track by dll.companyGUID"-->
+                                <!-- ng-options="dll as dll.name for dll in dll.dllCompanyList  track by dll.companyGUID"-->
+                                <!-- <option value="602AE305-1B48-49B2-BC86-ABB0FA530C03"> Land Environmental Group</option>
+                        <option value="A744B47F-529A-40FF-B6C1-33C504A1AAAE"> Lauenstein &amp; Associates</option>-->
+                                <!--<option value="3099">123 ENG Test</option>
+                        <option value="7590">14555 Blanco Road</option>-->
+                                <!-- <option value="12180000-0000-0000-0000-000000000000">172d Airlift Wing MS ANG</option>-->
+                                <!--<option value="5666">1st Bank Yuma</option>
+                        <option value="5315">1st Colonial Community Bank</option>
+                        <option value="5857">1st Constitution Bank</option>
+                        <option value="4991">1st National Bank of Demo</option>
+                        <option value="8014">1st National Bank of South Florida</option>
+                        <option value="5829">1st National Community Bank</option>
+                        <option value="9599">1st Security Bank of Washington</option>
+                        <option value="5926">1st Source Bank</option>
+                        <option value="7917">21 Environmental</option>
+                        <option value="4734">2G Environmental, LLC</option>
+                        <option value="6477">3 Kings Environmental</option>
+                        <option value="4735">3 Kings Environmental, Inc.</option>
+                        <option value="3098">3065866: Vince Grandinetti</option>
+                        <option value="3206">3126775: Monty Bruner</option>
+                        <option value="4367">3266541: Benjamin Ford</option>
+                        <option value="5048">3434731: Paul Gebhard</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <!-- company selection ends -->
+
+                    <!-- dll selection -->
+                    <div class="form-group" ng-show="dll.dllList && dll.dllList.length">
+                        <label for="setupID" class="control-label col-md-2 col-sm-2 col-xs-12">
+                            Language Library:
+                        </label>
+                        <div class="col-xs-12 col-sm-3 col-md-4">
+                            <select name="setupID" id="setupID" class="form-control" ng-model="dll.languageLibrarySelected" ng-options="dll as dll.name for dll in dll.dllList" ng-change="dll.dllSelectionChanged()">
+                                <option value="" ng-if="!dll.languageLibrarySelected">Select Language Library</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- dll selection ends -->
+
+                    <div ng-show="dll.languageLibrarySelected">
+                        <!-- template selection -->
+                        <div class="form-group">
+                            <label for="templateStructure" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Template Structure:
+                            </label>
+                            <div class="col-xs-12 col-sm-3 col-md-4">
+                                <select id="templateStructure" class="form-control" ng-model="dll.templateSelectedId" ng-options="template.name for template in dll.templateList track by template.templateID" ng-change="dll.templateSelectionChanged()">
+                                    <option value="" ng-if="!dll.templateSelectedId">Select a template...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- template selection ends -->
+
+                        <!-- template section selection -->
+                        <div class="form-group">
+                            <label for="allSections" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Sections:
+                            </label>
+                            <div class="col-xs-12 col-sm-3 col-md-4">
+                                <select id="allSections" class="form-control" ng-model="dll.sectionSelected" ng-options="section as section.sectionNumber + ' ' + (section.sectionName ?section.sectionName : section.isAppendix ? 'List of Appendices' : section.sectionName) for section in dll.templateSectionList" ng-change="dll.sectionSelectionChanged()">
+                                    <option value="">All Sections</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!-- template section selection ends -->
+
+                        <!-- library tools -->
+                        <div class="form-group ">
+                            <label for="libraryTools" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Library Tools:
+                            </label>
+                            <div class="col-xs-12 col-sm-3 col-md-4">
+                                <!--<a id="getPDF" user-action="get DLL pdf" ng-click="dll.openPopup('pdf')" data-toggle="tooltip" data-placement="top" title="Generate a PDF file containing all default language for every section of this library." class="btn btn-md btn-default"><i class="fa fa-file-pdf-o text-danger fa-lg"></i></a>-->
+                                <a id="getPDF" target="_blank" href="{{dll.pdfURL}}" data-toggle="tooltip" data-placement="top" title="Generate a PDF file containing all default language for every section of this library." class="btn btn-md btn-default"><i class="fa fa-file-pdf-o text-danger fa-lg"></i></a>
+                                <a ng-click="dll.openPopup('deleteAll')" data-toggle="tooltip" data-placement="top" title="Delete all default language from every section of this library." class="btn btn-md btn-default"><i class="fa fa-trash-o text-danger fa-lg"></i></a>
+
+                                <a ng-click="dll.openPopup('duplicate')" data-toggle="tooltip" data-placement="top" title="Language Library copy/duplication tools. Move language between libraries." class="btn btn-md btn-default"><i class="fa fa-file text-success fa-lg"></i></a>
+                                <a ng-click="dll.openPopup('rename')" data-toggle="tooltip" data-placement="top" title=" Rename this Default Language Library" class="btn btn-md btn-default"><i class="fa fa-terminal text-info fa-lg"></i></a>
+
+
+                                <a ng-show="!dll.languageLibrarySelected.linkedLibraryID" ng-click="dll.openPopup('link')" data-toggle="tooltip" data-placement="top" title="Create a new library that is linked to this library" class="btn btn-md btn-default"><i class="fa fa-link"></i></a>
+                                <a ng-click="dll.openPopup('delete')" data-toggle="tooltip" data-placement="top" title="Delete default language library" class="btn btn-md btn-default"><i class="fa fa-times text-danger fa-lg"></i></a>
+                                <a ng-click="dll.openPopup('move')" disabled={{dll.disableFlag}} data-toggle="tooltip" data-placement="top" title={{dll.moveText}} class="btn btn-md btn-default"><i class="fa fa-arrows text-info fa-lg"></i></a>
+                                <a ng-click="dll.openPopup('setDefaultStructure')" data-toggle="tooltip" data-placement="top" title="Set selected template as default structure for selected library." class="btn btn-md btn-default"><i class="fa fa-check text-success fa-lg"></i></a>
+                                <a ng-show="dll.isLibraryLinked" ng-click="dll.unlinkCompleteLibrary(dll.languageLibrarySelected.libraryGUID,dll.languageLibrarySelected.name)" data-toggle="tooltip" data-placement="top" title="Unlink Library" class="btn btn-md btn-default"><i class="fa fa-unlink text-success fa-lg"></i></a>
+
+                            </div>
+
+                        </div>
+                        <!-- library tools ends -->
+
+                        <!-- color legend -->
+                        <div class="form-group ">
+                            <label for="colorLegend" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Color Legend:
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-10 color-legend">
+                                <p class="form-control-static">
+                                    <span><i class="fa fa-stop pink-box"></i>&nbsp; Hardcoded Language</span> <span>&nbsp;|&nbsp;</span>
+                                    <span><i class="fa fa-stop light-Pink-box"></i>&nbsp; Included in Project Setup </span><span>&nbsp;|&nbsp;</span>
+                                    <span><i class="fa fa-stop light-Yellow-box"></i>&nbsp; Instructions</span><span>&nbsp;|&nbsp;</span>
+                                    <span><i class="fa fa-stop light-Blue-box"></i>&nbsp; Sample Language</span><span>&nbsp;|&nbsp;</span>
+                                    <span><i class="fa fa-stop Option-white-box"></i>&nbsp; Option to Insert</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- color legend ends -->
+                    </div>
+                    <div class="alert" ng-class="dll.msgType" role="alert" id="serviceResponseDiv" ng-show="dll.serviceResponseAlert">
+                        <button type="button" class="close" ng-click="dll.serviceResponseAlert = false;" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{dll.serviceResponseText}}
+                    </div>
+                </form>
+                <hr/>
+
+                <div ng-repeat="sectionLanguage in dll.languageBySectionList" ng-show=" dll.languageLibrarySelected && (!dll.sectionSelected || dll.sectionSelected.sectionID == sectionLanguage.sectionID || dll.sectionSelected.sectionID == sectionLanguage.rootSectionID)">
+                    <!--<div ng-init="dll.currentSectionFlag = sectionLanguage.hasNarrative;shouldShow();" class="well">-->
+                    <div ng-init="shouldShow(sectionLanguage.hasNarrative,sectionLanguage.sectionID);" class="well">
+                        <h4>{{sectionLanguage.number}} {{sectionLanguage.name}}</h4>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <form class="form-inline">
+                                    <a ng-click="dll.addOptionsToSection(sectionLanguage.addOptions, sectionLanguage,sectionLanguage.hasNarrative,sectionLanguage.sectionID)" class="btn btn-default" role="button">Add</a>
+                                    <div class="input-group col-md-1 col-lg-1 col-xs-12">
+                                        <!--  <input class="form-control" type="text" ng-init="sectionLanguage.addOptions = 1;" ng-model="sectionLanguage.addOptions">-->
+                                        <select class="form-control" ng-init="sectionLanguage.addOptions = 1;" ng-model="sectionLanguage.addOptions">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <span> options to this section</span>
+                                    <span ng-if="sectionLanguage.languageList && sectionLanguage.languageList.length"> | 
+                            <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Delete All Language in Section" ng-click="dll.deleteOption($index, dll.languageLibrarySelected.libraryGUID,sectionLanguage.sectionGUID,sectionLanguage.languageList, true)"><span class="glyphicon glyphicon-remove-circle"> </span></a>
+                                    </span>
+
+                                    <span ng-if="sectionLanguage.languageList && sectionLanguage.languageList.length && !sectionLanguage.languageList[0].isLinked">
+                            <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Edit Section" ng-click="dll.editOption($index, dll.languageLibrarySelected.libraryGUID,sectionLanguage.sectionGUID,sectionLanguage.languageList, true)"><span class="glyphicon glyphicon-pencil"> </span></a>
+                                    </span>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--add here hardcoded language-->
+                    <div class="panel panel-default hardcoded-language" ng-if="dll.hardCodedlangBySection[sectionLanguage.sectionGUID]">
+                    <div class="panel-body ">
+                        <form name="hardcodedForm" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Hardcoded Language:</label>
+                                         <div class="col-md-4 col-sm-4 col-xs-12">
+                                         <p class="form-control-static" ng-bind-html="dll.renderHtml(dll.hardCodedlangBySection[sectionLanguage.sectionGUID].text)"></p>
+                                        </div>
+                                     </div>
+                        </form>
+                    </div>
+                    </div>                    
+                    <!-- end of hardcoded language-->
+
+                    <div>
+                        <!-- ui-sortable ng-model="sectionLanguage.languageList">-->
+
+                        <div ng-repeat="language in sectionLanguage.languageList | orderBy: 'orderIndex'" ng-class="{'instructions-language': language.category == 'Instructions', 'sample-language': language.category == 'Sample'&& !language.isAddedOnProjectStartup, 'language-included-in-project-setup': (language.category == 'Options' || language.category == 'Sample') && language.isAddedOnProjectStartup, 'language-option-to-insert': language.category == 'Options' && !language.isAddedOnProjectStartup}" class="panel panel-default">
+                            <div class="panel-body">
+                                <form name="editLanguageForm" class="form-horizontal">
+                                    <div class="container-fluid">
+                                        <div class="form-group">
+                                            <!--!dll.isLibraryLinked for no linked lib in ng-show-->
+                                            <div class="col-sm-offset-2 col-sm-10" ng-hide="language.isLinked">
+                                                <!--                                        <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Delete Option" ng-click="dll.deleteOption($index, dll.languageLibrarySelected.libraryGUID,language.languageGUID,sectionLanguage.languageList)"><span class="glyphicon glyphicon-remove-circle"> </span></a>-->
+                                                <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Delete Option" ng-click="dll.deleteOption($index, dll.languageLibrarySelected.libraryGUID,language.languageItemGuid,sectionLanguage.languageList)"><span class="glyphicon glyphicon-remove-circle"> </span></a>
+                                                <span ng-if="sectionLanguage.languageList.length > 1"> <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move to Top" ng-click="dll.moveTopOption($index, sectionLanguage.languageList,sectionLanguage.sectionGUID)"><span class="glyphicon glyphicon-step-backward fa-rotate-90"></span></a>
+                                                <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move Up" ng-click="dll.moveUpOption($index, sectionLanguage.languageList,sectionLanguage.sectionGUID)"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+                                                <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move Down" ng-click="dll.moveDownOption($index, sectionLanguage.languageList,sectionLanguage.sectionGUID)"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+                                                <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Move to Bottom" ng-click="dll.moveEndOption($index, sectionLanguage.languageList,sectionLanguage.sectionGUID)"><span class="glyphicon glyphicon-step-backward fa-rotate-270"></span></a></span>
+                                                <a class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Edit" ng-click="dll.editLanguage(language)" ng-show="!language.editmode"><span class="glyphicon glyphicon-pencil"> </span></a>
+                                            </div>
+                                            <div class="col-sm-offset-2 col-sm-10" ng-show="language.isLinked">
+                                                <a class="btn btn-default" ng-click="dll.unlinkLibrary(dll.languageLibrarySelected.libraryGUID,sectionLanguage.sectionGUID,language.languageGUID,dll.languageLibrarySelected.name)" data-html="true" data-toggle="tooltip" data-placment="top" title="This language is linked <br> Click to Unlink Library"><span class="fa fa-link"> </span></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group required">
+                                            <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Category:</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12" show-errors>
+                                                <p class="form-control-static" ng-show="!language.editmode">
+                                                    {{language.category}}
+                                                    <span ng-show="language.category == 'Instructions' && language.showInPage">(These instructions are shown under the section name within the web page)</span>
+                                                </p>
+<!--
+                                <div class="col-sm-6" ng-show="sectionLanguage.isGeneralInfo && !language.editmode">
+                                     <p class="form-control-static" >
+
+                                    Instructions
+
+                                    </p>
+                                </div>
+-->
+                                                <div ng-show="language.editmode">
+                                                    
+                                                     <p class="form-control-static" ng-show="sectionLanguage.isGeneralInfo && language.editmode">
+
+                                    Instructions
+
+                                    </p>
+                                                    
+                                                 <select name="category" required ng-show="!sectionLanguage.isGeneralInfo && language.editmode" class="form-control" ng-options="categoryOp.value as categoryOp.text for categoryOp in shouldShow(sectionLanguage.hasNarrative,sectionLanguage.sectionID)" ng-model="language.category">
+
+                                                </select>
+                                                
+                                                </div>
+                                               
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="form-group required">
+                                            <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Title/Keyword:</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12" field-validation="Title/Keyword">
+                                                <p class="form-control-static" ng-show="!language.editmode">{{language.keyword}}</p>
+
+                                                <input name="keyword" id="keyword" required ng-show="language.editmode" class="form-control" type="text" ng-model="language.keyword">
+                                            </div>
+
+                                        </div>
+                                        <div ng-show="language.editmode" class="form-group ">
+                                            <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12" ng-show="language.editmode">
+                                                Included:
+                                            </label>
+                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                                <div ng-show="language.editmode && language.category != 'Instructions'" class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" ng-if="language.category != 'Instructions'" ng-model="language.isAddedOnProjectStartup" ng-show="language.editmode">
+                                                        <span ng-show="language.editmode && language.category != 'Instructions'">Include automatically when report is created.</span></label>
+                                                </div>
+                                                <div ng-show="language.editmode && language.category == 'Instructions'" class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" ng-if="language.category == 'Instructions'" ng-model="language.showInPage" ng-show="language.editmode">
+                                                        <span ng-show="language.editmode && language.category == 'Instructions'">Show instructions under the section name within the web page.</span></label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group required">
+                                            <label class="control-label col-lg-2 col-md-2 col-sm-2 col-xs-12">Language:</label>
+                                            <div class="col-lg-8 col-md-7 col-xs-12" show-errors>
+                                                <p class="form-control-static language-text" ng-show="!language.editmode" ng-bind-html="dll.renderHtml(language.text)"></p>
+                                                <div class='boxCK' ng-show="language.editmode">
+                                                    <span class='editCK'>edit</span>
+                                                    <div name="language" required class="textCK" type="text" ng-model="language.text" data-ck-editor remove-ck-plugin="saveReportWritingCkData">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button ng-show="language.editmode" type="reset " class="btn btn-md btn-default " ng-click="dll.cancelEditLanguage(language)"> Cancel</button>
+                                                <button ng-show="language.editmode && dll.editAllMode" type="submit " class="btn btn-md btn-success " ng-click="dll.saveLanguage($index,dll.languageLibrarySelected.libraryGUID,language,editLanguageForm,sectionLanguage.isGeneralInfo)"> Save</button>
+
+                                            </div>
+                                        </div>
+
+                                        <div ng-if="($index+1) == sectionLanguage.languageList.length && !dll.editAllMode" class="row">
+                                            <div class="text-center col-sm-12">
+                                                <button ng-show="language.editmode" type="reset " class="btn btn-md btn-default " ng-click="dll.cancelAllEditLanguage(sectionLanguage.languageList)"> Cancel All</button>
+                                                <button ng-show="language.editmode" type="submit " class="btn btn-md btn-success " ng-click="dll.saveAllLanguage($index,dll.languageLibrarySelected.libraryGUID,sectionLanguage.languageList,editLanguageForm)"> Save All</button>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- <div ng-show="dll.editAllMode" class="row">
+                                    <div class="text-center col-sm-12">
+                                        <button type="reset " class="btn btn-md btn-default " ng-click="dll.cancelAllEditLanguage(sectionLanguage.languageList)"> Cancel All</button>
+                                        <button type="submit " class="btn btn-md btn-success " ng-click="dll.saveAllLanguage($index,dll.languageLibrarySelected.libraryGUID,sectionLanguage.languageList)"> Save All</button>
+
+                                    </div>
+                                </div>-->
+                    </div>
+                    <hr/>
+                </div>
+
+                <div ng-hide="!dll.languageLibrarySelected || (dll.languageList && dll.languageList.length)" class="alert alert-danger" role="alert" ng-class="danger">
+                    No default language has been added to this Library.
+                </div>
+                <div class="alert alert-danger" role="alert" ng-class="danger" ng-show="dll.addLangLibError">
+                    <button type="button" class="close" ng-click="dll.addLangLibError = false;" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{dll.languageError}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="addOptionsToSection.html" type="text/ng-template">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="cancelAddOptionToSection()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Add Options to Section: {{selectedSection_addOptions.name}} </h4>
+        </div>
+        <form name="addSectionForm" class="form-horizontal ">
+            <div class="modal-body ">
+                <div class="panel panel-default" ng-repeat="optionNo in getNumber(noOfOptions) track by $index">
+                    <div class="panel-body">
+                        <ng-form name="urlForm">
+                            <div class="form-group required">
+                                <label for="dllCategory" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                    Category:
+                                </label>
+                                <div class="col-sm-6" ng-hide="!selectedSection_addOptions.isGeneralInfo">
+                                 <p class="form-control-static" >
+                              
+                                Instructions
+                              
+                                </p>
+                                </div>
+                               
+                               
+                                <div class="col-xs-12 col-sm-6 col-md-6" show-errors ng-hide="selectedSection_addOptions.isGeneralInfo">
+                                    <select id="dllCategory" name="category" class="form-control" ng-init="(toAddOptions[$index]= toAddOptions[$index] || {}).category = categoryOptions[0].value;" ng-options="categoryOp.value as categoryOp.text for categoryOp in shouldShow(narative,number)" ng-model="toAddOptions[$index].category" required>
+                                        <options value="instructions">Instructions</options>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </ng-form>
+                        <ng-form name="urlForm">
+                            <div class="form-group required ">
+                                <label for="titleKeyword" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                    Title/Keyword:
+                                </label>
+                                <div class="col-xs-12 col-sm-6 col-md-6" field-validation="Title/Keyword">
+                                    <input id="titleKeyword" type="text" name="title" required class="form-control" ng-model="toAddOptions[$index].keyword">
+                                </div>
+
+                                <span>(Comma Delimited)</span>
+
+                            </div>
+                        </ng-form>
+                        <div class="form-group ">
+                            <label for="Included" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                Included:
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="Included" type="checkbox" ng-model="toAddOptions[$index].included">
+                                        <span ng-show="toAddOptions[$index].category == 'Instructions'">Show instructions under the section name within the web page.</span>
+                                        <span ng-show="toAddOptions[$index].category != 'Instructions'">Include automatically when report is created.</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <ng-form name="urlForm">
+                            <div class="form-group required ">
+                                <label for="Language" class="control-label col-md-2 col-sm-2 col-xs-12">
+                                    Language:
+                                </label>
+
+                                <div class="col-lg-8 col-md-7 col-xs-12" show-errors>
+								<div class='boxCK'>
+                                    <span class='editCK'>edit</span>
+                                    <div name="language" required class="textCK" type="text" ng-model="toAddOptions[$index].text" data-ck-editor remove-ck-plugin="saveReportWritingCkData">
+                                    </div>
+                                </div>
+								</div>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                </div>
+                <div class="alert alert-danger" role="alert" ng-class="danger" ng-show="addLangLibError == true">
+                    {{languageError}}
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset " class="btn btn-md btn-default " ng-click="cancelAddOptionToSection()"> Cancel</button>
+                <button type="submit " class="btn btn-md btn-primary " ng-click="addNewOptionsToSection(addSectionForm)"> Save</button>
+
+            </div>
+        </form>
+    </script>
+    <script id="dllLanguage.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 ng-if="!isDeleteBySection" class="modal-title">Delete language </h4>
+            <h4 ng-if="isDeleteBySection" class="modal-title">Delete Section languages </h4>
+        </div>
+
+
+        <form name="myFormAddTemplate" novalidate>
+
+            <div class="modal-body ">
+
+                <strong ng-if="!isDeleteBySection">This will delete the Language. Are you sure you want to continue?</strong>
+                <strong ng-if="isDeleteBySection">This will delete all the Languages in the section. Are you sure you want to continue?</strong>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDeleteLanguage()">Cancel</a>
+                <a class="btn btn-primary" role="button" ng-click="deleteLanguage()">Continue</a>
+            </div>
+        </form>
+    </script>
+    <script id="dllLibraryUnlinkSection.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Unlink Library Section</h4>
+
+        </div>
+
+
+        <form name="myFormAddTemplate" novalidate>
+
+            <div class="modal-body ">
+
+                <strong>This will unlink current section. Are you sure you want to continue?</strong>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+                <a class="btn btn-primary" role="button" ng-click="unlinkLibrary()">Unlink section</a>
+            </div>
+        </form>
+    </script>
+
+    <script id="dllLibraryUnlink.html" type="text/ng-template">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Unlink Complete Library</h4>
+
+        </div>
+
+
+        <form name="myFormAddTemplate" novalidate>
+
+            <div class="modal-body ">
+
+                <strong>This will unlink library completely. Are you sure you want to continue?</strong>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" role="button" ng-click="CancelDelete()">Cancel</a>
+                <a class="btn btn-primary" role="button" ng-click="unlinkLibrary()">Unlink library</a>
+            </div>
+        </form>
+    </script>
+</body>
+
+</html>

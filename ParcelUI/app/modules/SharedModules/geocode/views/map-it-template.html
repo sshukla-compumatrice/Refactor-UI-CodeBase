@@ -1,0 +1,49 @@
+<div cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div ng-repeat="field in mapItFieldsConfig.dataFields | orderBy: 'orderIndex'">
+            <div ng-switch="field.fieldType">
+                <!-- input control -->
+                <div ng-switch-when="text" class="form-group" ng-show="field.viewStatus">
+                    <label for="map-it-field-{{field.fieldName}}" class="{{field.fieldLabelClasses}}">{{field.fieldLabel}}</label>
+                    <div class="{{field.fieldDivClasses}}">
+                        <input type="text" id="map-it-field-{{field.fieldName}}" class="{{field.fieldClasses}}" ng-model="field.fieldValue" ng-show="field.viewStatus" ng-required=field.required>
+                    </div>
+                </div>
+
+                <!-- select control -->
+                <div ng-switch-when="dropdown" ng-if="field.fieldName != 'countryCode'" class="form-group" ng-show="field.viewStatus">
+                    <label for="map-it-field-{{field.fieldName}}" class="{{field.fieldLabelClasses}}">{{field.fieldLabel}}</label>
+                    <div class="{{field.fieldDivClasses}}">
+                        <select id="map-it-field-{{field.fieldName}}" ng-model="field.fieldValue" ng-required={{field.required}} ng-disabled="!field.editable" class="{{field.fieldClasses}}" data-ng-options="option.name for option in field.options | orderBy : 'name' track by option.value">
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- country select control -->
+                <div ng-switch-when="dropdown" ng-if="field.fieldName == 'countryCode'" class="form-group" ng-show="field.viewStatus">
+                    <label for="map-it-field-{{field.fieldName}}" class="{{field.fieldLabelClasses}}">{{field.fieldLabel}}</label>
+                    <div class="{{field.fieldDivClasses}}">
+                        <select id="map-it-field-{{field.fieldName}}" ng-model="field.fieldValue" ng-required={{field.required}} ng-disabled="!field.editable" class="{{field.fieldClasses}}" ng-change="onCountrySelect(field.fieldValue.value);" data-ng-options="option.name for option in field.options | orderBy : 'name' track by option.value">
+                        </select>
+                    </div>
+                </div>
+
+                <!-- button control -->
+                <div ng-switch-when="button" class="form-group" ng-show="field.viewStatus">
+                    <label class="{{field.fieldLabelClasses}}"></label>
+                    <div class="{{field.fieldDivClasses}}">
+                        <button ng-if="field.btnType == 'doGeocode'" class="{{field.fieldClasses}}" ng-click="geocodeAddress('GEOCODE');" ng-disabled="isGeocodeDisabled();">{{field.fieldLabel}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="mapItFieldsConfig.mapConfig" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <!-- google map -->
+        <div class="col-md-12 col-lg-12">
+            <geocode-map class="{{mapItFieldsConfig.mapConfig.mapClasses}}" center="mapItFieldsConfig.mapConfig.center" marker="mapItFieldsConfig.mapConfig.marker" zoom="mapItFieldsConfig.mapConfig.mapZoom" height="{{mapItFieldsConfig.mapConfig.height}}" draggable="{{mapItFieldsConfig.mapConfig.mapDraggable}}"></geocode-map>
+            <i>{{mapItFieldsConfig.mapConfig.mapInstruction}}</i>
+        </div>
+    </div>
+</div>

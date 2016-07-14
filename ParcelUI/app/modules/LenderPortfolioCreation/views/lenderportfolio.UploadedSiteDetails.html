@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+</head>
+
+<body>
+
+
+    <div ng-controller="LenderPortfolioUploadedSiteDetailsCtrl as uploadedSiteDetails">
+
+        <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="uploadedSiteDetails.serviceResponseAlert">
+            <button type="button" class="close" ng-click="uploadedSiteDetails.serviceResponseAlert = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{uploadedSiteDetails.serviceResponseText}}
+        </div>
+
+        <div>
+            
+                <button type="button" class="btn btn-md btn-primary" ng-click="uploadedSiteDetails.addNewLocation()">Add New Location</button>
+ 
+            <form name="" class="form-horizontal">
+
+                <div class="overflow-auto">
+
+                    <table class="table table-condensed  table-bordered table-hover top-margin">
+
+                        <thead>
+                            <tr>
+                                <th>Actions</th>
+                                <th>Project Number</th>
+
+                                <th>Property #</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th>
+                                <th>Country</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Contact</th>
+                                <th>Phone</th>
+                                <th>Fax</th>
+                                <th>Email</th>
+                                <th>PO #</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="site in uploadedSiteDetails.siteDetails">
+                                <td>
+                                    <div class="btn-group">
+                                        <button data-toggle="dropdown" class="btn btn-xs dropdown-toggle" data-original-title="" title="">
+                                            Action
+                                            <span class="caret">
+                                            </span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-left">
+                                            <li>
+                                                <a ng-click="uploadedSiteDetails.editSite(site)"><i class="fa fa-pencil"></i>&nbsp;  Edit</a>
+                                            </li>
+                                            <li>
+                                                <a ng-click="uploadedSiteDetails.deleteSite(site)"><i class="fa fa-times text-danger"></i>&nbsp; Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>{{site.projectNumber}}</td>
+                                <td>{{site.propertyNumber}}</td>
+                                <td>{{site.name}}</td>
+                                <td>{{site.address1}}</td>
+                                <td>{{site.city}}</td>
+                                <td>{{site.state}}</td>
+                                <td>{{site.zip}}</td>
+                                <td>{{site.country}}</td>
+                                <td>{{site.latitude}}</td>
+                                <td>{{site.longitude}}</td>
+                                <td>{{site.contact}}</td>
+                                <td>{{site.phone}}</td>
+                                <td>{{site.fax}}</td>
+                                <td>{{site.email}}</td>
+                                <td>{{site.poNumber}}</td>
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-offset-4 col-md-8 col-sm-8 col-xs-12 top-margin">
+            <!-- <button type="button" class="btn btn-md btn-primary " ui-sref="PortfolioCreation.UploadedSitesReportSelection">Continue</button>-->
+            <button type="button" class="btn btn-md btn-default ">Delete All Sites and Re-Upload</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

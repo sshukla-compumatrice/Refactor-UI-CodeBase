@@ -1,0 +1,34 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><horizontal-table table='contentValues.horizontalTable02'></horizontal-table>",
+    "contentValues": {
+        "sectionTitle00": "8.16 Client-Specific Items",
+        "horizontalTable02": {
+            "structure": [{
+                "label": "Item:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "0%",
+                "textWidth": "100%"
+            }, {
+                "label": "Findings:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "0%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Item:": "",
+                "Findings:": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": ""
+        }
+    }
+}

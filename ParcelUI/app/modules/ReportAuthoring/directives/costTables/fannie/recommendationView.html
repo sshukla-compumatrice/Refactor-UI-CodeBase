@@ -1,0 +1,351 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Cost Summary</h4>
+    </div>
+
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-3 col-md-3" for="grouping">Change to grouping:</label>
+                        <div class="col-lg-5 col-md-5">
+                            <!-- <select class="form-control" id="grouping" ng-model="">
+                                        <option selected="selected">SITE</option>
+                                        <option>STRUCTURAL, BUILDING ENVELOPE AND COMMON AREA FURNITURE, FIXTURES, AND EQUIPMENT</option>
+                                        <option>MECHANICAL AND ELECTRICAL</option>
+                                        <option>DWELLING UNITS</option>
+                                    </select>-->
+                            <select id="grouping" class="form-control" ng-model="recommendation.group" ng-options="groupType.name for groupType in recommendation.groupTypes track by groupType.value">
+                                <option value="">-- Select a Group--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 col-md-5">
+                    <div class="form-group">
+                        <label class="col-lg-12 col-md-12" for="freddieListRecommendation">Recommendation:</label>
+                        <div class="col-lg-12 col-md-12">
+
+                            <select id="freddieListRecommendation" class="form-control" ng-model="recommendation.recType" ng-options="recommendationType.name for recommendationType in recommendation.recommendationTypes track by recommendationType.value">
+                                <option value="">-- Select a Recommendation--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group ">
+                        <label class="control-label col-lg-12 col-md-12" for="eul">
+                            <div class="text-center">EUL</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="eul" ng-model="recommendation.eul">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group ">
+                        <label class="control-label col-lg-12 col-md-12" for="effage">
+                            <div class="text-center">EFF AGE</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="effage" ng-model="recommendation.eff">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group">
+                        <label class="control-label col-lg-12 col-md-12" for="rul">
+                            <div class="text-center">RUL</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="rul" ng-model="recommendation.rul" ng-bind="recommendation.rul = commonFunctionsService.isNumber(recommendation.eul) && commonFunctionsService.isNumber(recommendation.eff) ? recommendation.eul - recommendation.eff : ''">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- recommendation other -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <div class="col-lg-5 col-md-5">
+                            <input type="text" class="form-control" id="test" ng-model="recommendation.otherRecommendationType" ng-show="recommendation.recType.value == 'other_'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- recommendation other ends -->
+
+            <!-- cost calculation -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group margin-top-19">
+                            <label class="control-label" for="quantity">
+                                <div class="text-center">Quantity</div>
+                            </label>
+                            <div class="">
+                                <input type="text" class="form-control" id="quantity" ng-model="recommendation.quantity">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 form-icons calculator">
+                        <a rel="popover" ng-click="showCalculator($event)">
+                            <i class="fa fa-calculator"></i></a>
+                    </div>
+
+
+
+
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group margin-top-19">
+                            <label class="control-label" for="unit">
+                                <div class="text-center">Unit</div>
+                            </label>
+                            <div class="">
+                                                 <select id="fannieListUnits" class="form-control" ng-model="recommendation.unit" ng-options="unit.name for unit in recommendation.units track by unit.value">
+                                
+                            </select>
+                                <!--select class="form-control" id="unit" ng-model="recommendation.unit">
+                                    <option value="LS">LS</option>
+                                    <option value="EA">EA</option>
+                                    <option value="SF">SF</option>
+                                    <option value="LF">LF</option>
+                                    <option value="SQ">SQ</option>
+                                    <option value="SY">SY</option>
+                                    <option value="TON">TON</option>
+                                    <option value="SH">SH</option>
+                                    <option value="KW">KW</option>
+                                    <option value="MBH">MBH</option>
+                                    <option value="CFM">CFM</option>
+                                    <option value="GPM">GPM</option>
+                                    <option value="HP">HP</option>
+                                    <option value="LB">LB</option>
+                                    <option value="Day">Day</option>
+                                    <option value="RM">RM</option>
+                                    <option value="BED">BED</option>
+                                    <option value="UNIT">UNIT</option>
+                                    <option value="LM">LM</option>
+                                </select-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 form-icons">*</div>
+
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group margin-top-19">
+                            <label class="control-label" for="unitcost">
+                                <div class="text-center">Unit Cost</div>
+                            </label>
+                            <div>
+                                <input type="text" class="form-control" id="unitcost" ng-model="recommendation.unitCost">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 form-icons">=</div>
+
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group">
+                            <label class="control-label" for="cyclereplacement">
+                                <div class="text-center">Cycle Replacement</div>
+                            </label>
+                            <div class="">
+                                <input type="text" class="form-control" id="cyclereplacement" disabled ng-disabled="true" ng-bind="recommendation.cycleReplacement = recommendation.unitCost * recommendation.quantity" ng-model="recommendation.cycleReplacement">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 form-icons">*</div>
+
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group">
+                            <label class="control-label" for="replacepercent">
+                                <div class="text-center">Replace Percent</div>
+                            </label>
+                            <div class="">
+                                <input type="text" class="form-control" id="replacepercent" ng-model="recommendation.replacePercent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 form-icons">%=</div>
+
+                    <div class="col-lg-1 col-md-1">
+                        <div class="form-group margin-top-19">
+                            <label class="control-label" for="totalcost">
+                                <div class="text-center">Total Cost</div>
+                            </label>
+                            <div class="">
+                                <input type="text" class="form-control" id="totalcost" disabled ng-bind="recommendation.totalCost = (recommendation.cycleReplacement * recommendation.replacePercent) / 100" ng-model="recommendation.totalCost" ng-disabled="true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-md-offset-1">
+                        <div class="form-group">
+                            <label class="control-label" for="unallocatedcost">
+                                <div class="text-center">Unallocated Cost</div>
+                            </label>
+                            <div class="">
+                                <input type="text" class="form-control" id="unallocatedcost" disabled ng-disabled="true" ng-model="recommendation.unallocatedCost" ng-bind="recommendation.unallocatedCost = recommendation.totalCost -  commonFunctionsService.calculateTotalSpreadCost(costSpread)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- cost calculation ends -->
+
+            <!-- priortiy distribution -->
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group ">
+                        <label class="control-label col-lg-12 col-md-12" for="lifesafety">
+                            <div class="text-center">Life Safety</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="lifesafety" ng-model="(costSpread['lifesafety'] = costSpread['lifesafety'] || {}).val">
+                            <div class="checkbox text-center">
+                                <label>
+                                    <input type="checkbox" ng-model="costSpread['lifesafety'].include">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group ">
+                        <label class="control-label col-lg-12 col-md-12" for="criticalitem">
+                            <div class="text-center">Critical Item</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="criticalitem" ng-model="(costSpread['criticalitem'] = costSpread['criticalitem'] || {}).val">
+                            <div class="checkbox text-center">
+                                <label>
+                                    <input type="checkbox" ng-model="costSpread['criticalitem'].include">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="form-group">
+                        <label class="control-label col-lg-12 col-md-12" for="deferredmaint">
+                            <div class="text-center">Deferred Maint</div>
+                        </label>
+                        <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="deferredmaint" ng-model="(costSpread['deferredmaint'] = costSpread['deferredmaint'] || {}).val">
+                            <div class="checkbox text-center">
+                                <label>
+                                    <input type="checkbox" ng-model="costSpread['deferredmaint'].include">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- priortiy distribution ends -->
+
+            <!-- yearly distribution -->
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="col-lg-1 col-md-1" ng-repeat="yr in commonFunctionsService.getNumberArr(yearlyDistribution) track by $index">
+                        <div class="form-group">
+                            <label class="control-label col-lg-12 col-md-12">
+                                <div class="text-center">Yr {{$index + 1}}</div>
+                            </label>
+                            <input type="text" class="form-control" id="{{yr.yearNaturalIndex}}" ng-init="yr.yearNaturalIndex = 'yr_' + ($index + 1);" ng-model="(costSpread[yr.yearNaturalIndex] = costSpread[yr.yearNaturalIndex] || {}).val">
+                            <div class="checkbox text-center">
+                                <label>
+                                    <input type="checkbox" ng-model="costSpread[yr.yearNaturalIndex].include">
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- yearly distribution ends -->
+
+            <!-- condition n action -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        <label class="control-label col-lg-3 col-md-3" for="condition">Condition:</label>
+                        <div class="col-lg-4 col-md-4">
+                                 <select id="fannieListUnits" class="form-control" ng-model="recommendation.condition" ng-options="condition.name for condition in recommendation.conditions track by condition.value">
+                                
+                            </select>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="form-group">
+                        <label class="control-label col-lg-2 col-md-2">Action:</label>
+                         <div class="col-lg-10 col-md-10" >
+                            <div class="checkbox" ng-repeat="action in recommendation.actions">
+                                <label>
+                                    <input name="action" ng-model="recommendation.action" type="radio" value="{{action.value}}"> {{action.name}}
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- condition n action ends -->
+
+            <!-- comments -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-3 col-md-3" for="criticalComments">Critical/Deferred Comments:</label>
+                        <div class="col-lg-5 col-md-5">
+                            <input type="text" class="form-control" id="criticalComments" ng-model="recommendation.criticalComments">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 col-md-3" for="source">Source:</label>
+                        <div class="col-lg-5 col-md-5">
+                            <input type="text" class="form-control" id="source" ng-model="recommendation.source">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- comments ends -->
+
+            <!-- buttons -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+
+                    <button class="btn btn-primary btn-sm" type="button" ng-click="commonFunctionsService.checkAll(costSpread)">Check All</button>
+                    <button class="btn btn-primary btn-sm" type="button" ng-click="commonFunctionsService.uncheckAll(costSpread)">Uncheck All</button>
+                    <button class="btn btn-primary btn-sm" type="button" ng-click="commonFunctionsService.spreadCost(costSpread,recommendation.totalCost)">Spread Cost</button>
+
+                </div>
+            </div>
+            <!-- buttons ends -->
+
+        </form>
+    </div>
+
+    <div class="modal-footer">
+
+        <button class="btn btn-primary btn-sm" type="button" ng-click="addUpdateRecommendation()">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="close()">Close</button>
+    </div>
+
+</div>

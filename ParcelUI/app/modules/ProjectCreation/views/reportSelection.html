@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <style>
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="panel-heading">
+        <h5 class="panel-title">
+            <span data-target="#collapseReportDiv">Report Selection <i class="fa fa-asterisk requiredicon"></i></span>
+        </h5>
+    </div>
+
+
+    <div id="collapseReportDiv" class="panel-collapse collapse in">
+        <div class="panel-body" ng-controller="ReportSelectionCtrl as reportSelection">
+
+            <div class="alert alert-danger" ng-show="main.reportSelectionInvalid">
+                <span>
+                <button type="button" class="close" ng-click="main.reportSelectionInvalid = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                You must select a Report Type.
+                </span>
+            </div>
+            <div>To select multiple report types, check the box next to each desired type.</div>
+            <div ng-repeat="report in main.loadData.reportTypes" class="bottom-margin-xs">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+        					<a role="button" data-toggle="collapse" data-target="#{{report.title}}">
+                        		{{report.reportTypeName}} 
+							</a>
+						</h4>
+                    </div>
+                    <div id="{{report.title}}" class="panel-collapse collapse in" aria-expanded="true">
+                        <div class="panel-body panel-body-sm">
+                            <div ng-repeat="template in report.templates" ng-if="$even" class="row">
+
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="Report" name="Report" ng-model="(main.submitData.reports[template.templateID] = main.submitData.reports[template.templateID] || { templateGUID: template.templateGUID, templateVersionGUID: template.templateVersionGUID }).selected">
+                                                <span>{{template.name}}</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class=" form-group" id="{{template.templateID}}" ng-show="main.submitData.reports[template.templateID].selected">
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class=" form-group">
+                                                    <label for="fee" class="control-label">
+                                                        Fee
+                                                        <a ng-click="reportSelection.ShowFeeHelp()" title="Why am I being asked to enter the fee?" class="pointer"> <i class=" text-blue fa fa-question-circle"></i></a>
+                                                    </label>
+                                                    <input type="text" id="fee" class="form-control" ng-model="main.submitData.reports[template.templateID].fee" placeholder="N/A"> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="project" class="control-label">Project #: </label>
+                                                    <input type="text" class="form-control" ng-model="main.submitData.reports[template.templateID].projectNumber" id="project" placeholder="N/A" name="project">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="po" class="control-label">PO #: </label>
+                                                    <input type="text" id="po" class="form-control" ng-model="main.submitData.reports[template.templateID].poNumber" placeholder="N/A"> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="langlib" class="control-label">
+                                                        Language Library:
+                                                    </label>
+                                                    <select class="form-control" id="langlib" type="select" name="langlib" ng-model="main.submitData.reports[template.templateID].languageLibraryGUID">
+                                                        <option value="">Select a Language Library</option>
+                                                        <option ng-repeat="library in report.libraries" value="{{library.libraryGUID}}" ng-selected="library.libraryGUID==template.defaultLanguageLibraryGUID">{{library.name}}
+                                                        </option>
+
+                                                    </select> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6" ng-if="report.templates.length > ($index + 1)" ng-init="siblingTemplate = report.templates[$index + 1]">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="Report" name="Report" ng-model="(main.submitData.reports[siblingTemplate.templateID] = main.submitData.reports[siblingTemplate.templateID] || { templateGUID: siblingTemplate.templateGUID, templateVersionGUID: siblingTemplate.templateVersionGUID  }).selected"><span> {{siblingTemplate.name}}</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class=" form-group" id="{{siblingTemplate.templateID}}" ng-show="main.submitData.reports[siblingTemplate.templateID].selected">
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class=" form-group">
+                                                    <label for="fee" class="control-label">
+                                                        Fee
+                                                        <a ng-click="reportSelection.ShowFeeHelp()" title="Why am I being asked to enter the fee?" class="pointer"> <i class=" text-blue fa fa-question-circle"></i></a>
+                                                    </label>
+                                                    <input type="text" id="fee" class="form-control" ng-model="main.submitData.reports[siblingTemplate.templateID].fee" placeholder="N/A"> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="project" class="control-label">Project #: </label>
+                                                    <input type="text" class="form-control" ng-model="main.submitData.reports[siblingTemplate.templateID].projectNumber" id="project" placeholder="N/A" name="project">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="po" class="control-label">PO #: </label>
+                                                    <input type="text" id="po" class="form-control" ng-model="main.submitData.reports[siblingTemplate.templateID].poNumber" placeholder="N/A"> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="langlib" class="control-label">
+                                                        Language Library:
+                                                    </label>
+                                                    <select class="form-control" id="langlib" type="select" name="langlib" ng-model="main.submitData.reports[siblingTemplate.templateID].languageLibraryGUID">
+                                                        <option value="">Select a Language Library</option>
+                                                        <option ng-repeat="library in report.libraries" value="{{library.libraryGUID}}" ng-selected="library.libraryGUID==siblingTemplate.defaultLanguageLibraryGUID">{{library.name}}
+                                                        </option>
+
+                                                    </select> <span class="help-block"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

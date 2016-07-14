@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+    <div>
+        <h4 class="headingmain"> Upload Site Spreadsheet</h4>
+        <div>
+
+            <p>
+                To upload an Excel spreadsheet containing Property Information, please complete the following steps:
+            </p>
+            <ol>
+                <li>Save the Excel template : <b><a href="app/modules/PortfolioCreation/assets/propertyTemplate.xls">XLS</a></b> or <b><a href="app/modules/PortfolioCreation/assets/propertyTemplate.xlsx">XLSX</a></b> to your computer and open it from there.</li>
+                <li>Fill out the spreadsheet with your site information, and save your changes.
+                    <br> Each site must have data entered for address, city, and state/province.</li>
+                <li>Click the "Browse" button below these instructions and select the file that you just saved.</li>
+                <li>Click the "Upload File" button.</li>
+            </ol>
+            <div class="" ng-controller="ReportInfoCtrl as reportInfo">
+                <form class="form-horizontal">
+
+                    <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="reportInfo.serviceResponseAlert">
+                        <button type="button" class="close" ng-click="reportInfo.serviceResponseAlert = false;" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{reportInfo.serviceResponseText}}
+                    </div>
+                   
+                        <div class="form-group">
+                            <span class="btn btn-md btn-primary fileinput-button" ng-class="{disabled: disabled}"><i
+							class="fa fa-file-text-o"></i> Choose File <input id="file-3"
+							type="file" data-file-input="files"
+							ngf-select ngf-change="upload($files)" ngf-multiple="false">
+						</span>
+                            <!--<button type="button" class="btn btn-md btn-primary start" ng-click="reportInfo.Upload()">
+                                <span class="glyphicon glyphicon-upload"></span> Upload File
+                            </button>-->
+                            <span class="AU_uploadFilename text-primary" ng-repeat="file in files">{{file.name}}</span>
+                        </div>                    
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

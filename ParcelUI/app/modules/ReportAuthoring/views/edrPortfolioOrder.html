@@ -1,0 +1,206 @@
+<div class="container-fluid" cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h2 class="page-header">EDR Portfolio Order</h2>
+                    <h4>Project Name: {{portfolioOrderController.projectName}}</h4>
+                    <form class="form-horizontal" name="contactForm">
+                        <fieldset ng-disabled="portfolioOrderController.disableFormFields">
+                            <div class="form-group required">
+                                <label for="name" class="col-sm-2 control-label">Name:</label>
+                                <div class="col-sm-4" field-validation="Name">
+                                    <input type="text" class="form-control" id="name" name="contactName" ng-model="portfolioOrderController.user.name" required>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="email" class="col-sm-2 control-label">Email:</label>
+                                <div class="col-sm-4" field-validation="Email">
+                                    <input type="email" class="form-control" id="email" name="contactEmail" ng-model="portfolioOrderController.user.email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="portfolioOrderController.deliveryType">Do not send PDFs via email</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="phone" class="col-sm-2 control-label">Phone:</label>
+                                <div class="col-sm-4" field-validation="Phone">
+                                    <input type="text" class="form-control" id="phone" name="contactPhone" ng-model="portfolioOrderController.user.phone" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <div ng-if="!portfolioOrderController.portfolioData.reports" class="alert alert-danger" role="alert">
+                        <span>Property is not available here to place order on EDR.</span>
+                    </div>
+                    <div ng-if="portfolioOrderController.portfolioData.reports">
+                        <button type="submit" class="btn btn-default" ng-click="portfolioOrderController.checkAll();">Check All</button>
+                        <button type="submit" class="btn btn-default" ng-click="portfolioOrderController.uncheckAll();">Uncheck All</button>
+                        <div class="pull-right" ng-if="portfolioOrderController.isEdrCredentialsAvailable">
+                            <button type="submit" class="btn btn-primary" ng-click="portfolioOrderController.createPortfolioOrders();" ng-disabled="portfolioOrderController.disableFormFields">{{portfolioOrderController.continueBtnText}}</button>
+                        </div>
+                        <hr>
+                        <div class="alert" role="alert" ng-class="portfolioOrderController.userMsgAlertClass" ng-show="portfolioOrderController.userMsg">
+                            <button type="button" class="close" ng-click="portfolioOrderController.userMsg = false;" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <span ng-bind-html="portfolioOrderController.userMsg"></span>
+                        </div>
+                        <div class="alert alert-danger" role="alert" ng-if="!portfolioOrderController.isEdrCredentialsAvailable">
+                            <span><span ng-bind-html="portfolioOrderController.edrCredentialsErrorMsg"></span><a class="pointer" ng-click="portfolioOrderController.openEdrCredentialsModal();">Click here to submit your EDR credentials</a>.</span>
+                        </div>
+                        <form class="form-inline" ng-if="portfolioOrderController.isEdrCredentialsAvailable">
+                            <fieldset ng-disabled="portfolioOrderController.disableFormFields">
+                                <div class="table-responsive" ng-repeat="report in portfolioOrderController.portfolioData.reports">
+                                    <table class="table table-condensed table-bordered">
+                                        <tr>
+                                            <td rowspan="3" class="text-center">
+                                                <h3>{{$index + 1}}</h3>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" ng-model="report.selected">
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label>Prop#:</label>
+                                                    <p class="form-control-static">{{report.property.propertyNumber}}</p>
+                                                </div>
+                                            </td>
+                                            <td class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Addr:</label>
+                                                    <p class="form-control-static">
+                                                        <span ng-if="report.property.propertyName.length">{{report.property.propertyName}}, </span>
+                                                        <span ng-if="report.property.address1.length">{{report.property.address1}}, </span>
+                                                        <span ng-if="report.property.address2.length">{{report.property.address2}}, </span>
+                                                        <span ng-if="report.property.city.length">{{report.property.city}}, </span>
+                                                        <span ng-if="report.property.state.length">{{report.property.state}}</span>
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label>Lat:</label>
+                                                    <p class="form-control-static">{{report.property.latitude}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label>Long:</label>
+                                                    <p class="form-control-static">{{report.property.longitude}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label>Conf:</label>
+                                                    <p class="form-control-static"><span class="glyphicon glyphicon-globe pointer" ng-click="portfolioOrderController.mapClick(report.property, $index);" data-toggle="tooltip" data-placement="top" title="Confirm location: Manually adjust latitude and longitude with a map."></span></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="po{{$index}}" class="control-label">PO#:</label>
+                                                    <input type="text" class="form-control" id="po{{$index}}" ng-model="report.poNumber" ng-init="report.poNumber = report.poNumber ? report.poNumber : ''">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="proj{{$index}}" class="control-label">Proj#:</label>
+                                                    <input type="text" class="form-control" id="proj{{$index}}" ng-model="report.projectNumber" ng-init="report.projectNumber = report.projectNumber ? report.projectNumber : ''">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="pkg{{$index}}" class="control-label">Pkg:</label>
+                                                    <select class="form-control" id="pkg{{$index}}" ng-model="report.portfolioProductCode">
+                                                        <option value="">-- Select --</option>
+                                                        <option ng-repeat="package in portfolioOrderController.edrPackages" value="{{package.portfolioProductCode}}">{{package.name}}</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-arrow-down pointer" data-toggle="tooltip" data-placement="top" title="Copy this value into rest of columns" ng-click="portfolioOrderController.copyToOthers('portfolioProductCode', report.portfolioProductCode);"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="searchDist{{$index}}" class="control-label">Srch Dist:</label>
+                                                    <select class="form-control" id="searchDist{{$index}}" ng-model="report.searchDistanceSetID">
+                                                        <option value="">-- Select --</option>
+                                                        <option ng-repeat="distance in portfolioOrderController.searchDistances" value="{{distance.id}}">{{distance.name}}</option>
+                                                    </select>
+                                                    <span class="glyphicon glyphicon-arrow-down pointer" data-toggle="tooltip" data-placement="top" title="Copy this value into rest of columns" ng-click="portfolioOrderController.copyToOthers('searchDistanceSetID', report.searchDistanceSetID);"></span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="field" class="control-label">Field Chk:</label>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" ng-model="report.fieldChk" ng-init="report.fieldChk=false">
+                                                        </label>
+                                                    </div>
+                                                    <span class="glyphicon glyphicon-arrow-down pointer" data-toggle="tooltip" data-placement="top" title="Copy this value into rest of columns" ng-click="portfolioOrderController.copyToOthers('fieldChk', report.fieldChk);"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="form-group">
+                                                    <label for="emailNotification{{$index}}">Email Notifactions To:</label>
+                                                    <textarea class="form-control" rows="3" cols="45" id="emailNotification{{$index}}" ng-model="report.emailNotificationsTo" ng-init="report.emailNotificationsTo=''"></textarea>
+                                                </div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="form-group">
+                                                    <label for="siteComments{{$index}}" class="control-label">Site Comments:</label>
+                                                    <textarea class="form-control" rows="3" cols="60" id="siteComments{{$index}}" ng-model="report.siteComments" ng-init="report.siteComments=''"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div class="pull-right" ng-if="portfolioOrderController.isEdrCredentialsAvailable">
+                            <button type="submit" class="btn btn-primary" ng-click="portfolioOrderController.createPortfolioOrders();" ng-disabled="portfolioOrderController.disableFormFields">{{portfolioOrderController.continueBtnText}}</button>
+                        </div>
+                        <div ng-include src="'app/modules/ReportAuthoring/views/orderDBReport.html'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="map.html" type="text/ng-template">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="CancelDelete()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myLargeModalLabel">Parcel Site Locator</h4>
+    </div>
+
+    <form name="myFormAddTemplate1" class="form-horizontal" novalidate>
+        <div class="modal-body">
+            <div class="row">
+                <div map-it map-it-fields-config="mapItFieldConfig"></div>
+            </div>
+        </div>
+        <div class="alert" role="alert" ng-class="portfolioOrderController.latlongUserMsgAlertClass" ng-show="portfolioOrderController.latlongUserMsg">
+            <button type="button" class="close" ng-click="portfolioOrderController.latlongUserMsg = false;" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <span ng-bind-html="portfolioOrderController.latlongUserMsg"></span>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-default btn-sm" role="button" ng-click="CancelDelete()">Cancel</a>
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">refresh map</button>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="saveValues()">Save latitude/longitude</button>
+        </div>
+    </form>
+</script>

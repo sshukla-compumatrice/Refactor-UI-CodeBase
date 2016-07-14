@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <div class="form-horizontal">
+        <div ng-controller="PortfolioGrantAccessCtrl as grantAccess">
+            <div class="form-group required">
+                <div class="alert alert-danger" role="alert" id="serviceResponseDiv" ng-show="grantAccess.serviceResponseAlert">
+                    <button type="button" class="close" ng-click="grantAccess.serviceResponseAlert = false;" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{grantAccess.serviceResponseText}}
+                </div>
+
+                <label for="grantaccessto" class="control-label col-md-3 col-sm-4 col-xs-12">
+                    Grant access to:
+                </label>
+                <div class="col-xs-12 col-sm-5 col-md-5" field-validation="Grant access to">
+
+                    <select id="grantaccessto" class="form-control" data-ng-options="grp as grp.name for grp in portfolio.loadData.grantAccessGrps" ng-model="grantAccess.accessParty" ng-required="portfolio.loadData.grantAccessGrps && portfolio.loadData.grantAccessGrps.length" name="grantAccess" focus-if tabindex="1">
+                    </select>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

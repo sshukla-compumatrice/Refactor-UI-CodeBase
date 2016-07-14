@@ -1,0 +1,64 @@
+<div class="modal-header">
+
+    <button type="button" class="close" data-dismiss="modal" ng-click="closeImportEDRData()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Import Data</h4>
+</div>
+<div class="modal-body">
+    <div cg-busy="waitingProcessResources">
+        <div ng-show="!importData.data.length">
+            <div class="alert alert-info fade in" ng-show="!errormessage">The data contained in the EDR XML has no coverage.</div>
+            <div class="alert alert-danger fade in" ng-show="errormessage">{{errormessage}}</div>
+        </div>
+        <div id="example_wrapper" class="dataTables_wrapper " ng-show="importData.data.length">
+
+            <h5 ng-show="importAction == 'envorphans' || importAction == 'sanborns'" class="bottom-padding">Environmental Orphans Import</h5>
+            <h5 ng-show="importAction == 'envdbdetails' || importAction ==  'stateenvdbdetails'" class="bottom-padding">Environmental Database Import</h5>
+            <h5 ng-show="importAction == 'dbreview'" class="bottom-padding">Map Findings Summary Import</h5>
+
+
+            <div class="alert alert-info fade in">
+                <!--a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a-->Select the records you would like to include the table and click "Submit".</div>
+
+
+            <div class="btn-toolbar bottom-margin bottom-padding" role="toolbar" aria-label="Toolbar with button groups">
+                <button type="button" class="btn btn-primary btn-sm" ng-click="checkUncheckAll('true')">Check All</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-click="checkUncheckAll('false')">UnCheck All</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-show="importAction == 'envdbdetails' || importAction ==  'stateenvdbdetails'" ng-click="selectSourceItem('Federal')">Check Federal Sources</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-show="importAction == 'envdbdetails' || importAction ==  'stateenvdbdetails'" ng-click="selectSourceItem('State')">Check State Sources</button>
+
+                <button type="button" class="btn btn-primary btn-sm" ng-show="importAction == 'dbreview'" ng-click="selectSourceItem('All')">Check All Hits</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-show="importAction == 'dbreview'" ng-click="selectSourceItem('Standard')">Check Standard Record Sources</button>
+                <button type="submit" class="btn btn-primary btn-sm" ng-click="importSelectedEDRData()">Submit</button>
+                <button type="button" class="btn btn-default btn-sm" ng-click="closeImportEDRData()">Cancel</button>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive importdata-table">
+                        <table class="table table-condensed table-striped table-bordered small">
+                            <thead>
+                                <tr>
+                                    <th>Include</th>
+                                    <!--						<th ng-show="key!= 'importItemSelected' && key!= 'Source'" ng-repeat="(key, val) in importData.structure | orderBy: 'columnIndex'">{{val.alias}}</th>							-->
+<!--                                    <th ng-show="key!= 'importItemSelected' && val.alias!= 'Source'" ng-repeat="(key, val) in importData.structure">{{val.alias}}</th>-->
+                                    <th ng-show="val.alias!= 'Source'" ng-repeat="(key, val) in importData.structure">{{val.alias}}</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="importItem in importData.data">
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" ng-model="importItem.importItemSelected" ng-true-value="true" ng-false-value="false" />
+                                    </td>
+                                    <td ng-show="item.label != 'Source'" ng-repeat="item in importData.structure">{{importItem[item.label]}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+
+</div>

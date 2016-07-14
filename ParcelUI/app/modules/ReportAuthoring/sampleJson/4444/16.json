@@ -1,0 +1,123 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><hr><horizontal-table table='contentValues.horizontalTable02'></horizontal-table>",
+    "contentValues": {
+        "sectionTitle00": "3.3 Utilities",
+        "horizontalTable02": {
+            "structure": [{
+                "label": "Date Developed:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Property Size\\/Shape:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 2,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "\\u00A0",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 3,
+                "columnIndex": 3,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Utilities (Service Provided By)",
+                "type": "textarea",
+                "colspan": 2,
+                "align": "left",
+                "rowIndex": 4,
+                "columnIndex": 4,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "\\u00A0",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 5,
+                "columnIndex": 5,
+                "width": "25%",
+                "textWidth": "75%"
+ }, {
+                "label": "Electric:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 6,
+                "columnIndex": 6,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Gas:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 7,
+                "columnIndex": 7,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Water:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 8,
+                "columnIndex": 8,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Sewerage:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 9,
+                "columnIndex": 9,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Groundcover:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 10,
+                "columnIndex": 10,
+                "width": "25%",
+                "textWidth": "75%"
+            }, {
+                "label": "Other Site Improvements:",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 11,
+                "columnIndex": 11,
+                "width": "25%",
+                "textWidth": "75%"
+            }],
+            "data": [{
+                "Date Developed:": "",
+                "Property Size\\/Shape:": "",
+                "\\u00A0": "",
+                "Utilities (Service Provided By)": "",
+                "Electric:": "",
+                "Gas:": "",
+                "Water:": "",
+                "Sewerage:": "",
+                "Groundcover:": "",
+                "Other Site Improvements:": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p align=\\\"justify\\\">No evidence of spills or staining was observed in the areas of hazardous material\\/petroleum product or waste generation\\/pre-disposal storage.&#160; No environmental concerns noted with surface areas. <\\/p>"
+        }
+    }
+}

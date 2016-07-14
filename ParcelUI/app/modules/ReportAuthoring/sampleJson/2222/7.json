@@ -1,0 +1,292 @@
+{
+    "html": "<div><h2><strong><span>{{sectionTitle00}}</span></strong></h2><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div00'></div><hr><horizontal-table table='contentValues.horizontalTable'></horizontal-table><br/><hr><spreadSheet-table table='contentValues.spreadSheetTable'></spreadSheet-table></div>",
+
+
+    "contentValues": {
+        "sectionTitle00": "3.1.1 Building Summary",
+        "tagData": "\\u00A0 READ\\u00A0 ALL OF THE LANGUAGE IN THIS REPORT SECTION. \\u00A0 FILL OUT TABLE in this report section.\\u00A0 Then, Go to the 'General Information' section of the TOC tab and apply all relevant content from this report section and save it.",
+        "horizontalTable": {
+            "structure": [
+                {
+                    "label": "Building Name",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 1,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "70%"
+                },
+                {
+                    "label": "Number of Floors:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 1,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "30%"
+                },
+                {
+                    "label": "Number of Rooms:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 2,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Number of Basement Levels:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 2,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Total Leasable Area:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 3,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Structure:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 3,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Exterior Walls:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 4,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Roof:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 4,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Foundation:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 5,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "HVAC:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 5,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Electrical:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 6,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Vertical Transportation:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 6,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                }
+            ],
+            "data": [
+                {
+                    "Building Name": "",
+                    "Number of Floors:": "",
+                    "Number of Rooms:": "",
+                    "Number of Basement Levels:": "",
+                    "Total Leasable Area:": "",
+                    "Structure:": "wood-framedreinforced concretesteel-framedconcrete and steelOther",
+                    "Exterior Walls:": "brick veneerreinforced concreteconcrete tiltupEIFSstuccovinyl sidingaluminum sidingcurtain wallconcrete masonry blockarchitectural stoneOther",
+                    "Roof:": "EPDMconventional builtup roofmodified bituminousasphalt shingleinvertedpartial replacementmetalOther",
+                    "Foundation:": "Slab-on-GradePilesSpread footingsUnknownOther",
+                    "HVAC:": "Central PlantIndividual HVAC UnitsPackage UnitOther",
+                    "Electrical:": "OffSite SourcePad Mounted TransformersPole Mounted TransformersOther",
+                    "Vertical Transportation:": "HydraulicCable DrivenEscalatorsNoneOther"
+                }
+            ]
+        },
+        "spreadSheetTable": {
+            "structure": [
+                {
+                    "label": "Building Name",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 1,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "70%"
+                },
+                {
+                    "label": "Number of Floors:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 1,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "30%"
+                },
+                {
+                    "label": "Number of Rooms:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 2,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Number of Basement Levels:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 2,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Total Leasable Area:",
+                    "type": "textarea",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 3,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Structure:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 3,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Exterior Walls:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 4,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Roof:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 4,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Foundation:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 5,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "HVAC:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 5,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Electrical:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 6,
+                    "columnIndex": 1,
+                    "width": "50%",
+                    "textWidth": "100%"
+                },
+                {
+                    "label": "Vertical Transportation:",
+                    "type": "text",
+                    "colspan": 1,
+                    "align": "left",
+                    "rowIndex": 6,
+                    "columnIndex": 2,
+                    "width": "50%",
+                    "textWidth": "100%"
+                }
+            ],
+            "data": [
+                {
+                    "Building Name": "",
+                    "Number of Floors:": "",
+                    "Number of Rooms:": "",
+                    "Number of Basement Levels:": "",
+                    "Total Leasable Area:": "",
+                    "Structure:": "wood-framedreinforced concretesteel-framedconcrete and steelOther",
+                    "Exterior Walls:": "brick veneerreinforced concreteconcrete tiltupEIFSstuccovinyl sidingaluminum sidingcurtain wallconcrete masonry blockarchitectural stoneOther",
+                    "Roof:": "EPDMconventional builtup roofmodified bituminousasphalt shingleinvertedpartial replacementmetalOther",
+                    "Foundation:": "Slab-on-GradePilesSpread footingsUnknownOther",
+                    "HVAC:": "Central PlantIndividual HVAC UnitsPackage UnitOther",
+                    "Electrical:": "OffSite SourcePad Mounted TransformersPole Mounted TransformersOther",
+                    "Vertical Transportation:": "HydraulicCable DrivenEscalatorsNoneOther"
+                }
+            ]
+        },
+        "ckEditData": {
+            "div00": "<p>Your client has asked you to complete a PCA for a commercial property. The commercial property is currently a 1 floor Walgreens. The building has been at the property for 40 years, but its condition appears to reflect a 35 year old building. There are 8 separate rooms, including offices and the show floor, covering 15,000 Square Feet. The building sits on a 1\\/4 acre lot of land next to the local golf driving range. There is no basement at this property.  The building structure is a steel-framed structure.  The exterior walls are comprised of stucco. The roof is metal and the foundation is slab-on-grade. The store is heated and cooled with 5 individual HVAC units located on the roof.  The power is provided from 7 pole mounted transformers.<br \\/><br \\/>Your client's name is Sir Mixalot and his office is on 21 Jump Street in Shelton, CT 06484. Mr. Mixalot is considering purchasing the property and is requesting the PCA report identifies the necessary immediate\\/short term repairs and projected maintenance over the reserve term of the next 12 years.  It is assumed a 2.50% inflation rate is applicable over this 12 year term.  Your report due date is 04\\/01\\/2015, you will conduct your Assessment on 03\\/31\\/2015.<\\/p>"
+        }
+    }
+}

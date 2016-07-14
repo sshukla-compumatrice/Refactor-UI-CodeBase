@@ -1,0 +1,40 @@
+<div costtable-pdf>
+
+    <table style="border: 1px solid #000;  width: 100%; max-width: 100%; margin-bottom: 19px; background-color: transparent;  border-spacing: 0; border-collapse: collapse;">
+        <thead>
+            <tr>
+
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Item</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Quantity</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Unit Cost
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Total Cost
+                </th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Brief Description</th>
+                <th style="border: 1px solid #000;border-top: 0;vertical-align: bottom;text-transform: uppercase;color: #000000;border-bottom: 2px solid #000000;padding:5px; font-size: 11px;">Section Reference</th>
+
+            </tr>
+        </thead>
+
+
+        <tbody ng-repeat="section in sections" generate-html>
+            <tr>
+                <td colspan="7">
+                    <strong> {{section.name}}</strong>
+                </td>
+            </tr>
+            <tr ng-repeat="item in section.sectionscomponents">
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">
+                    {{item.name}} </td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.quantity}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.unit}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.unitCost}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.totalCost}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.description}}</td>
+                <td style="line-height: 1.5;padding: 3px; font-size: 11px;vertical-align: top; border-top: 1px solid #ddd;border: 1px solid #ddd;">{{item.section}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+<ul class="nav nav-pills nav-stacked toc-nav left-margin">
+    <div ng-transclude></div>
+    <li ng-repeat="section in sections" ng-if="section.isVisibleInToc">
+        <!--        <a class="toc-section" ng-class="{'current-section': selectedSection.sectionID == section.sectionID,'pointer':section.clickable}" ng-click="sectionClick({ section: section })">{{section.sectionNumber}} {{section.sectionName}}</a>-->
+
+        <a id="tocSection_{{section.sectionID}}" class="toc-section" ng-class="{'current-section': selectedSection.sectionID == section.sectionID,'pointer':section.clickable, 'text-black':!section.clickable,'pull-left1': section.hasComments}" ng-click="sectionClick({ section: section })">{{section.sectionNumber}} {{section.sectionName }}
+
+
+        
+            <span id="addressedFlag" ng-show="section.hasComments && section.isCommentsAddressed" class="pull-right pointer addressedFlag" ng-click="flagClick({ section: section })" aria-controls="comments" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-ok fa-lg greenFlag comment-flag"></i> <i class="glyphicon glyphicon-flag fa-lg blueFlag"></i> </span>
+        
+        <span id="unAddressedFlag" ng-show="section.hasComments && !section.isCommentsAddressed" class="pull-right pointer unAddressedFlag" ng-click="flagClick({ section: section})" aria-controls="comments" role="tab" data-toggle="tab">  <i class="glyphicon glyphicon-flag fa-lg blueFlag"></i>  </span>
+       
+
+	<span id="totalCost_{{section.sectionID}}" ng-hide="section.totalCost == 0" class="pull-right pointer toc-totalCost" ng-click="sectionClick({ section: section })" aria-controls="Total cost" role="tab"> {{section.totalCost = section.totalCost == 0 ? "" : section.totalCost | nfcurrency}}{{calculateRecommendationCost(section)}}</i> </span>            
+        </a>
+
+
+        <!--span ng-show="section.totalCost != 0 && section.totalCost != undefined">$</span-->
+        <!--ng-click="reportAuthoringWriteSelected = 'Comments';ck.getReportComments();" -->
+
+        <!--        <span ng-show="section.comments != null && !section.comments[$index].addressed" class="pull-right pointer" ng-click="sectionClick({ section: section , isCommentFlag: true })" aria-controls="comments" role="tab" data-toggle="tab"><i class="fa fa-flag text-primary"></i></span>-->
+
+        <nested-sections nested-sections="section.sections" selected-section="selectedSection" nested-section-click="sectionClick({section: section})" nested-section-flag-click="flagClick({section:section})">
+        </nested-sections>
+    </li>
+</ul>

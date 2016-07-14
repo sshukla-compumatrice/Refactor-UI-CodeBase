@@ -1,0 +1,10 @@
+{
+    "html": "<div><h2><strong><span>{{sectionTitle00}}</span></strong></h2><br><tag-with-dashes></tag-with-dashes><br><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div00'>",
+    "contentValues": {
+        "sectionTitle00": "7.3 Seismic Zone",
+        "tagData": "\\u00A0 Please refer to Default Language for narrative options for this section.",
+        "ckEditData": {
+            "div00": "According to the 1997 Uniform Building Code Seismic Zone Map of the United States, the property is located in Seismic Zone:"
+        }
+    }
+}

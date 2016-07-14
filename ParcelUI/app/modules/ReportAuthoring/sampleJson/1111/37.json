@@ -1,0 +1,3010 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2 class='border-bottom'>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.7.2 Tenant Spaces",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 35,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Vinyl tile",
+                "value": "871"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "872"
+            }, {
+                "name": "Carpet",
+                "value": "873"
+            }, {
+                "name": "Floor tile",
+                "value": "874"
+            }, {
+                "name": "Wall covering",
+                "value": "875"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "876"
+            }, {
+                "name": "Walls. Paint",
+                "value": "877"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "878"
+            }, {
+                "name": "Down unit renovation",
+                "value": "879"
+            }, {
+                "name": "Hard goods",
+                "value": "880"
+            }, {
+                "name": "Soft goods",
+                "value": "881"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "882"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "883"
+            }, {
+                "name": "Water heater",
+                "value": "886"
+            }, {
+                "name": "Compactors",
+                "value": "887"
+            }, {
+                "name": "Dishwasher",
+                "value": "888"
+            }, {
+                "name": "Disposal",
+                "value": "889"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "890"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "891"
+            }, {
+                "name": "Microwave",
+                "value": "892"
+            }, {
+                "name": "Countertop and sink",
+                "value": "893"
+            }, {
+                "name": "Range",
+                "value": "894"
+            }, {
+                "name": "Refrigerator",
+                "value": "895"
+            }, {
+                "name": "Dryers",
+                "value": "896"
+            }, {
+                "name": "Washers",
+                "value": "897"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "898"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "2088"
+            }, {
+                "name": "Patio Doors",
+                "value": "2089"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "2090"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "2091"
+            }, {
+                "name": "Window Coverings",
+                "value": "2092"
+            }, {
+                "name": "Flooring",
+                "value": "2093"
+            }, {
+                "name": "Carpet",
+                "value": "2094"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "2095"
+            }, {
+                "name": "Other",
+                "value": "2096"
+            }, {
+                "name": "Cabinetry",
+                "value": "2097"
+            }, {
+                "name": "Kitchen",
+                "value": "2098"
+            }, {
+                "name": "Bathrooms",
+                "value": "2099"
+            }, {
+                "name": "Other",
+                "value": "2100"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "2101"
+            }, {
+                "name": "Kitchen",
+                "value": "2102"
+            }, {
+                "name": "Bathrooms",
+                "value": "2103"
+            }, {
+                "name": "Other",
+                "value": "2104"
+            }, {
+                "name": "Appliances",
+                "value": "2105"
+            }, {
+                "name": "Refrigerator",
+                "value": "2106"
+            }, {
+                "name": "Range/Stove",
+                "value": "2107"
+            }, {
+                "name": "Range Vent",
+                "value": "2108"
+            }, {
+                "name": "Dishwasher",
+                "value": "2109"
+            }, {
+                "name": "Disposal",
+                "value": "2110"
+            }, {
+                "name": "Microwave",
+                "value": "2111"
+            }, {
+                "name": "Clothes Washer",
+                "value": "2112"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "2113"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "2114"
+            }, {
+                "name": "Toilet",
+                "value": "2115"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "2116"
+            }, {
+                "name": "Accessories",
+                "value": "2117"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "2191"
+            }, {
+                "name": "Patio Doors",
+                "value": "2192"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "2193"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "2194"
+            }, {
+                "name": "Window Coverings",
+                "value": "2195"
+            }, {
+                "name": "Flooring",
+                "value": "2196"
+            }, {
+                "name": "Carpet",
+                "value": "2197"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "2198"
+            }, {
+                "name": "Other",
+                "value": "2199"
+            }, {
+                "name": "Cabinetry",
+                "value": "2200"
+            }, {
+                "name": "Kitchen",
+                "value": "2201"
+            }, {
+                "name": "Bathrooms",
+                "value": "2202"
+            }, {
+                "name": "Other",
+                "value": "2203"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "2204"
+            }, {
+                "name": "Kitchen",
+                "value": "2205"
+            }, {
+                "name": "Bathrooms",
+                "value": "2206"
+            }, {
+                "name": "Other",
+                "value": "2207"
+            }, {
+                "name": "Appliances",
+                "value": "2208"
+            }, {
+                "name": "Refrigerator",
+                "value": "2209"
+            }, {
+                "name": "Range/Stove",
+                "value": "2210"
+            }, {
+                "name": "Range Vent",
+                "value": "2211"
+            }, {
+                "name": "Dishwasher",
+                "value": "2212"
+            }, {
+                "name": "Disposal",
+                "value": "2213"
+            }, {
+                "name": "Microwave",
+                "value": "2214"
+            }, {
+                "name": "Clothes Washer",
+                "value": "2215"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "2216"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "2217"
+            }, {
+                "name": "Toilet",
+                "value": "2218"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "2219"
+            }, {
+                "name": "Accessories",
+                "value": "2220"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "2651"
+            }, {
+                "name": "Patio Doors",
+                "value": "2652"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "2653"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "2654"
+            }, {
+                "name": "Window Coverings",
+                "value": "2655"
+            }, {
+                "name": "Flooring",
+                "value": "2656"
+            }, {
+                "name": "Carpet",
+                "value": "2657"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "2658"
+            }, {
+                "name": "Other",
+                "value": "2659"
+            }, {
+                "name": "Cabinetry",
+                "value": "2660"
+            }, {
+                "name": "Kitchen",
+                "value": "2661"
+            }, {
+                "name": "Bathrooms",
+                "value": "2662"
+            }, {
+                "name": "Other",
+                "value": "2663"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "2664"
+            }, {
+                "name": "Kitchen",
+                "value": "2665"
+            }, {
+                "name": "Bathrooms",
+                "value": "2666"
+            }, {
+                "name": "Other",
+                "value": "2667"
+            }, {
+                "name": "Appliances",
+                "value": "2668"
+            }, {
+                "name": "Refrigerator",
+                "value": "2669"
+            }, {
+                "name": "Range/Stove",
+                "value": "2670"
+            }, {
+                "name": "Range Vent",
+                "value": "2671"
+            }, {
+                "name": "Dishwasher",
+                "value": "2672"
+            }, {
+                "name": "Disposal",
+                "value": "2673"
+            }, {
+                "name": "Microwave",
+                "value": "2674"
+            }, {
+                "name": "Clothes Washer",
+                "value": "2675"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "2676"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "2677"
+            }, {
+                "name": "Toilet",
+                "value": "2678"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "2679"
+            }, {
+                "name": "Accessories",
+                "value": "2680"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "3412"
+            }, {
+                "name": "Patio Doors",
+                "value": "3413"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "3414"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "3415"
+            }, {
+                "name": "Window Coverings",
+                "value": "3416"
+            }, {
+                "name": "Flooring",
+                "value": "3417"
+            }, {
+                "name": "Carpet",
+                "value": "3418"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "3419"
+            }, {
+                "name": "Other",
+                "value": "3420"
+            }, {
+                "name": "Cabinetry",
+                "value": "3421"
+            }, {
+                "name": "Kitchen",
+                "value": "3422"
+            }, {
+                "name": "Bathrooms",
+                "value": "3423"
+            }, {
+                "name": "Other",
+                "value": "3424"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "3425"
+            }, {
+                "name": "Kitchen",
+                "value": "3426"
+            }, {
+                "name": "Bathrooms",
+                "value": "3427"
+            }, {
+                "name": "Other",
+                "value": "3428"
+            }, {
+                "name": "Appliances",
+                "value": "3429"
+            }, {
+                "name": "Refrigerator",
+                "value": "3430"
+            }, {
+                "name": "Range/Stove",
+                "value": "3431"
+            }, {
+                "name": "Range Vent",
+                "value": "3432"
+            }, {
+                "name": "Dishwasher",
+                "value": "3433"
+            }, {
+                "name": "Disposal",
+                "value": "3434"
+            }, {
+                "name": "Microwave",
+                "value": "3435"
+            }, {
+                "name": "Clothes Washer",
+                "value": "3436"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "3437"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "3438"
+            }, {
+                "name": "Toilet",
+                "value": "3439"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "3440"
+            }, {
+                "name": "Accessories",
+                "value": "3441"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "3889"
+            }, {
+                "name": "Patio Doors",
+                "value": "3890"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "3891"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "3892"
+            }, {
+                "name": "Window Coverings",
+                "value": "3893"
+            }, {
+                "name": "Flooring",
+                "value": "3894"
+            }, {
+                "name": "Carpet",
+                "value": "3895"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "3896"
+            }, {
+                "name": "Other",
+                "value": "3897"
+            }, {
+                "name": "Cabinetry",
+                "value": "3898"
+            }, {
+                "name": "Kitchen",
+                "value": "3899"
+            }, {
+                "name": "Bathrooms",
+                "value": "3900"
+            }, {
+                "name": "Other",
+                "value": "3901"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "3902"
+            }, {
+                "name": "Kitchen",
+                "value": "3903"
+            }, {
+                "name": "Bathrooms",
+                "value": "3904"
+            }, {
+                "name": "Other",
+                "value": "3905"
+            }, {
+                "name": "Appliances",
+                "value": "3906"
+            }, {
+                "name": "Refrigerator",
+                "value": "3907"
+            }, {
+                "name": "Range/Stove",
+                "value": "3908"
+            }, {
+                "name": "Range Vent",
+                "value": "3909"
+            }, {
+                "name": "Dishwasher",
+                "value": "3910"
+            }, {
+                "name": "Disposal",
+                "value": "3911"
+            }, {
+                "name": "Microwave",
+                "value": "3912"
+            }, {
+                "name": "Clothes Washer",
+                "value": "3913"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "3914"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "3915"
+            }, {
+                "name": "Toilet",
+                "value": "3916"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "3917"
+            }, {
+                "name": "Accessories",
+                "value": "3918"
+            }, {
+                "name": "Flooring",
+                "value": "3963"
+            }, {
+                "name": "Cabinetry",
+                "value": "3967"
+            }, {
+                "name": "Other",
+                "value": "3970"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "3971"
+            }, {
+                "name": "Other",
+                "value": "3974"
+            }, {
+                "name": "Appliances",
+                "value": "3975"
+            }, {
+                "name": "Flooring",
+                "value": "4104"
+            }, {
+                "name": "Cabinetry",
+                "value": "4108"
+            }, {
+                "name": "Other",
+                "value": "4111"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "4112"
+            }, {
+                "name": "Other",
+                "value": "4113"
+            }, {
+                "name": "Appliances",
+                "value": "4114"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "4986"
+            }, {
+                "name": "Patio Doors",
+                "value": "4987"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "4988"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "4989"
+            }, {
+                "name": "Window Coverings",
+                "value": "4990"
+            }, {
+                "name": "Flooring",
+                "value": "4991"
+            }, {
+                "name": "Carpet",
+                "value": "4992"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "4993"
+            }, {
+                "name": "Other",
+                "value": "4994"
+            }, {
+                "name": "Cabinetry",
+                "value": "4995"
+            }, {
+                "name": "Kitchen",
+                "value": "4996"
+            }, {
+                "name": "Bathrooms",
+                "value": "4997"
+            }, {
+                "name": "Other",
+                "value": "4998"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "4999"
+            }, {
+                "name": "Kitchen",
+                "value": "5000"
+            }, {
+                "name": "Bathrooms",
+                "value": "5001"
+            }, {
+                "name": "Other",
+                "value": "5002"
+            }, {
+                "name": "Appliances",
+                "value": "5003"
+            }, {
+                "name": "Refrigerator",
+                "value": "5004"
+            }, {
+                "name": "Range/Stove",
+                "value": "5005"
+            }, {
+                "name": "Range Vent",
+                "value": "5006"
+            }, {
+                "name": "Dishwasher",
+                "value": "5007"
+            }, {
+                "name": "Disposal",
+                "value": "5008"
+            }, {
+                "name": "Microwave",
+                "value": "5009"
+            }, {
+                "name": "Clothes Washer",
+                "value": "5010"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "5011"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "5012"
+            }, {
+                "name": "Toilet",
+                "value": "5013"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "5014"
+            }, {
+                "name": "Accessories",
+                "value": "5015"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "5166"
+            }, {
+                "name": "Patio Doors",
+                "value": "5167"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "5168"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "5169"
+            }, {
+                "name": "Window Coverings",
+                "value": "5170"
+            }, {
+                "name": "Flooring",
+                "value": "5171"
+            }, {
+                "name": "Carpet",
+                "value": "5172"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "5173"
+            }, {
+                "name": "Other",
+                "value": "5174"
+            }, {
+                "name": "Cabinetry",
+                "value": "5175"
+            }, {
+                "name": "Kitchen",
+                "value": "5176"
+            }, {
+                "name": "Bathrooms",
+                "value": "5177"
+            }, {
+                "name": "Other",
+                "value": "5178"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "5179"
+            }, {
+                "name": "Kitchen",
+                "value": "5180"
+            }, {
+                "name": "Bathrooms",
+                "value": "5181"
+            }, {
+                "name": "Other",
+                "value": "5182"
+            }, {
+                "name": "Appliances",
+                "value": "5183"
+            }, {
+                "name": "Refrigerator",
+                "value": "5184"
+            }, {
+                "name": "Range/Stove",
+                "value": "5185"
+            }, {
+                "name": "Range Vent",
+                "value": "5186"
+            }, {
+                "name": "Dishwasher",
+                "value": "5187"
+            }, {
+                "name": "Disposal",
+                "value": "5188"
+            }, {
+                "name": "Microwave",
+                "value": "5189"
+            }, {
+                "name": "Clothes Washer",
+                "value": "5190"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "5191"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "5192"
+            }, {
+                "name": "Toilet",
+                "value": "5193"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "5194"
+            }, {
+                "name": "Accessories",
+                "value": "5195"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "13105"
+            }, {
+                "name": "Patio Doors",
+                "value": "13106"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "13107"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "13108"
+            }, {
+                "name": "Window Coverings",
+                "value": "13109"
+            }, {
+                "name": "Flooring",
+                "value": "13110"
+            }, {
+                "name": "Carpet",
+                "value": "13111"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "13112"
+            }, {
+                "name": "Other",
+                "value": "13113"
+            }, {
+                "name": "Cabinetry",
+                "value": "13114"
+            }, {
+                "name": "Kitchen",
+                "value": "13115"
+            }, {
+                "name": "Bathrooms",
+                "value": "13116"
+            }, {
+                "name": "Other",
+                "value": "13117"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "13118"
+            }, {
+                "name": "Kitchen",
+                "value": "13119"
+            }, {
+                "name": "Bathrooms",
+                "value": "13120"
+            }, {
+                "name": "Other",
+                "value": "13121"
+            }, {
+                "name": "Appliances",
+                "value": "13122"
+            }, {
+                "name": "Refrigerator",
+                "value": "13123"
+            }, {
+                "name": "Range/Stove",
+                "value": "13124"
+            }, {
+                "name": "Range Vent",
+                "value": "13125"
+            }, {
+                "name": "Dishwasher",
+                "value": "13126"
+            }, {
+                "name": "Disposal",
+                "value": "13127"
+            }, {
+                "name": "Microwave",
+                "value": "13128"
+            }, {
+                "name": "Clothes Washer",
+                "value": "13129"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "13130"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "13131"
+            }, {
+                "name": "Toilet",
+                "value": "13132"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "13133"
+            }, {
+                "name": "Accessories",
+                "value": "13134"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "18608"
+            }, {
+                "name": "Patio Doors",
+                "value": "18609"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "18610"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "18611"
+            }, {
+                "name": "Window Coverings",
+                "value": "18612"
+            }, {
+                "name": "Flooring",
+                "value": "18613"
+            }, {
+                "name": "Carpet",
+                "value": "18614"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "18615"
+            }, {
+                "name": "Other",
+                "value": "18616"
+            }, {
+                "name": "Cabinetry",
+                "value": "18617"
+            }, {
+                "name": "Kitchen",
+                "value": "18618"
+            }, {
+                "name": "Bathrooms",
+                "value": "18619"
+            }, {
+                "name": "Other",
+                "value": "18620"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "18621"
+            }, {
+                "name": "Kitchen",
+                "value": "18622"
+            }, {
+                "name": "Bathrooms",
+                "value": "18623"
+            }, {
+                "name": "Other",
+                "value": "18624"
+            }, {
+                "name": "Appliances",
+                "value": "18625"
+            }, {
+                "name": "Refrigerator",
+                "value": "18626"
+            }, {
+                "name": "Range/Stove",
+                "value": "18627"
+            }, {
+                "name": "Range Vent",
+                "value": "18628"
+            }, {
+                "name": "Dishwasher",
+                "value": "18629"
+            }, {
+                "name": "Disposal",
+                "value": "18630"
+            }, {
+                "name": "Microwave",
+                "value": "18631"
+            }, {
+                "name": "Clothes Washer",
+                "value": "18632"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "18633"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "18634"
+            }, {
+                "name": "Toilet",
+                "value": "18635"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "18636"
+            }, {
+                "name": "Accessories",
+                "value": "18637"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "18709"
+            }, {
+                "name": "Patio Doors",
+                "value": "18710"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "18711"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "18712"
+            }, {
+                "name": "Window Coverings",
+                "value": "18713"
+            }, {
+                "name": "Flooring",
+                "value": "18714"
+            }, {
+                "name": "Carpet",
+                "value": "18715"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "18716"
+            }, {
+                "name": "Other",
+                "value": "18717"
+            }, {
+                "name": "Cabinetry",
+                "value": "18718"
+            }, {
+                "name": "Kitchen",
+                "value": "18719"
+            }, {
+                "name": "Bathrooms",
+                "value": "18720"
+            }, {
+                "name": "Other",
+                "value": "18721"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "18722"
+            }, {
+                "name": "Kitchen",
+                "value": "18723"
+            }, {
+                "name": "Bathrooms",
+                "value": "18724"
+            }, {
+                "name": "Other",
+                "value": "18725"
+            }, {
+                "name": "Appliances",
+                "value": "18726"
+            }, {
+                "name": "Refrigerator",
+                "value": "18727"
+            }, {
+                "name": "Range/Stove",
+                "value": "18728"
+            }, {
+                "name": "Range Vent",
+                "value": "18729"
+            }, {
+                "name": "Dishwasher",
+                "value": "18730"
+            }, {
+                "name": "Disposal",
+                "value": "18731"
+            }, {
+                "name": "Microwave",
+                "value": "18732"
+            }, {
+                "name": "Clothes Washer",
+                "value": "18733"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "18734"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "18735"
+            }, {
+                "name": "Toilet",
+                "value": "18736"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "18737"
+            }, {
+                "name": "Accessories",
+                "value": "18738"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "18810"
+            }, {
+                "name": "Patio Doors",
+                "value": "18811"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "18812"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "18813"
+            }, {
+                "name": "Window Coverings",
+                "value": "18814"
+            }, {
+                "name": "Flooring",
+                "value": "18815"
+            }, {
+                "name": "Carpet",
+                "value": "18816"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "18817"
+            }, {
+                "name": "Other",
+                "value": "18818"
+            }, {
+                "name": "Cabinetry",
+                "value": "18819"
+            }, {
+                "name": "Kitchen",
+                "value": "18820"
+            }, {
+                "name": "Bathrooms",
+                "value": "18821"
+            }, {
+                "name": "Other",
+                "value": "18822"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "18823"
+            }, {
+                "name": "Kitchen",
+                "value": "18824"
+            }, {
+                "name": "Bathrooms",
+                "value": "18825"
+            }, {
+                "name": "Other",
+                "value": "18826"
+            }, {
+                "name": "Appliances",
+                "value": "18827"
+            }, {
+                "name": "Refrigerator",
+                "value": "18828"
+            }, {
+                "name": "Range/Stove",
+                "value": "18829"
+            }, {
+                "name": "Range Vent",
+                "value": "18830"
+            }, {
+                "name": "Dishwasher",
+                "value": "18831"
+            }, {
+                "name": "Disposal",
+                "value": "18832"
+            }, {
+                "name": "Microwave",
+                "value": "18833"
+            }, {
+                "name": "Clothes Washer",
+                "value": "18834"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "18835"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "18836"
+            }, {
+                "name": "Toilet",
+                "value": "18837"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "18838"
+            }, {
+                "name": "Accessories",
+                "value": "18839"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "18911"
+            }, {
+                "name": "Patio Doors",
+                "value": "18912"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "18913"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "18914"
+            }, {
+                "name": "Window Coverings",
+                "value": "18915"
+            }, {
+                "name": "Flooring",
+                "value": "18916"
+            }, {
+                "name": "Carpet",
+                "value": "18917"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "18918"
+            }, {
+                "name": "Other",
+                "value": "18919"
+            }, {
+                "name": "Cabinetry",
+                "value": "18920"
+            }, {
+                "name": "Kitchen",
+                "value": "18921"
+            }, {
+                "name": "Bathrooms",
+                "value": "18922"
+            }, {
+                "name": "Other",
+                "value": "18923"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "18924"
+            }, {
+                "name": "Kitchen",
+                "value": "18925"
+            }, {
+                "name": "Bathrooms",
+                "value": "18926"
+            }, {
+                "name": "Other",
+                "value": "18927"
+            }, {
+                "name": "Appliances",
+                "value": "18928"
+            }, {
+                "name": "Refrigerator",
+                "value": "18929"
+            }, {
+                "name": "Range/Stove",
+                "value": "18930"
+            }, {
+                "name": "Range Vent",
+                "value": "18931"
+            }, {
+                "name": "Dishwasher",
+                "value": "18932"
+            }, {
+                "name": "Disposal",
+                "value": "18933"
+            }, {
+                "name": "Microwave",
+                "value": "18934"
+            }, {
+                "name": "Clothes Washer",
+                "value": "18935"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "18936"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "18937"
+            }, {
+                "name": "Toilet",
+                "value": "18938"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "18939"
+            }, {
+                "name": "Accessories",
+                "value": "18940"
+            }, {
+                "name": "Carpet. Replace (Residential) ",
+                "value": "22314"
+            }, {
+                "name": "Carpet. Replace (Commercial) ",
+                "value": "22315"
+            }, {
+                "name": "Carpet. Replace (High Traffic Commercial) ",
+                "value": "22316"
+            }, {
+                "name": "Sheet vinyl. Replace (Residential) ",
+                "value": "22317"
+            }, {
+                "name": "Sheet vinyl. Replace (Commercial) ",
+                "value": "22318"
+            }, {
+                "name": "Vinyl floor tile. Replace ",
+                "value": "22319"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "22320"
+            }, {
+                "name": "Stone floor tile. Replace (Slate) ",
+                "value": "22321"
+            }, {
+                "name": "Stone floor tile. Replace (Marble) ",
+                "value": "22322"
+            }, {
+                "name": "Walls and ceilings. Paint ",
+                "value": "22323"
+            }, {
+                "name": "Ceiling tiles. Replace ",
+                "value": "22324"
+            }, {
+                "name": "Vinyl wall covering. Replace ",
+                "value": "22325"
+            }, {
+                "name": "",
+                "value": "22326"
+            }, {
+                "name": "Carpet. Replace (Residential) ",
+                "value": "22327"
+            }, {
+                "name": "Carpet. Replace (Commercial) ",
+                "value": "22328"
+            }, {
+                "name": "Carpet. Replace (High Traffic Commercial) ",
+                "value": "22329"
+            }, {
+                "name": "Sheet vinyl. Replace (Residential) ",
+                "value": "22330"
+            }, {
+                "name": "Sheet vinyl. Replace (Commercial) ",
+                "value": "22331"
+            }, {
+                "name": "Vinyl floor tile. Replace ",
+                "value": "22332"
+            }, {
+                "name": "Ceramic floor tile. Replace",
+                "value": "22333"
+            }, {
+                "name": "Stone floor tile. Replace (Slate) ",
+                "value": "22334"
+            }, {
+                "name": "Stone floor tile. Replace (Marble) ",
+                "value": "22335"
+            }, {
+                "name": "Walls/ceilings. Paint ",
+                "value": "22336"
+            }, {
+                "name": "Ceiling tiles. Replace ",
+                "value": "22337"
+            }, {
+                "name": "Vinyl wall covering. Replace ",
+                "value": "22338"
+            }, {
+                "name": "",
+                "value": "22339"
+            }, {
+                "name": "Common area laundry washer. Replace ",
+                "value": "22340"
+            }, {
+                "name": "Common area laundry dryer. Replace ",
+                "value": "22341"
+            }, {
+                "name": "Commercial laundry washer. Replace (20 lb.) ",
+                "value": "22342"
+            }, {
+                "name": "Commercial laundry washer. Replace (30 lb.) ",
+                "value": "22343"
+            }, {
+                "name": "Commercial laundry washer. Replace (50 lb.) ",
+                "value": "22344"
+            }, {
+                "name": "Commercial laundry washer. Replace (75 lb.) ",
+                "value": "22345"
+            }, {
+                "name": "Commercial laundry washer. Replace (125 lb.) ",
+                "value": "22346"
+            }, {
+                "name": "Commercial laundry dryer. Replace (30 lb.) ",
+                "value": "22347"
+            }, {
+                "name": "Commercial laundry dryer. Replace (50 lb.) ",
+                "value": "22348"
+            }, {
+                "name": "Commercial laundry dryer. Replace (75 lb.) ",
+                "value": "22349"
+            }, {
+                "name": "Commercial range. Replace ",
+                "value": "22350"
+            }, {
+                "name": "Commercial oven. Replace (one section) ",
+                "value": "22351"
+            }, {
+                "name": "Commercial oven. Replace (two sections) ",
+                "value": "22352"
+            }, {
+                "name": "Commercial oven. Replace (three sections) ",
+                "value": "22353"
+            }, {
+                "name": "Commercial dishwasher. Replace (10 to 12 racks / hr) ",
+                "value": "22354"
+            }, {
+                "name": "Commercial dishwasher. Replace (38 to 50 racks / hr) ",
+                "value": "22355"
+            }, {
+                "name": "Commercial dishwasher. Replace (190 to 230 racks / hr) ",
+                "value": "22356"
+            }, {
+                "name": "Commercial dishwasher. Replace (235 to 275 racks / hr) ",
+                "value": "22357"
+            }, {
+                "name": "Reach-in freezer. Replace (1 compartment) ",
+                "value": "22358"
+            }, {
+                "name": "Reach-in freezer. Replace (2 compartment) ",
+                "value": "22359"
+            }, {
+                "name": "Reach-in refrigerator. Replace (1 compartment) ",
+                "value": "22360"
+            }, {
+                "name": "Reach-in refrigerator. Replace (2 compartment) ",
+                "value": "22361"
+            }, {
+                "name": "Reach-in refrigerator. Replace (3 compartment) ",
+                "value": "22362"
+            }, {
+                "name": "Commercial ice cube maker. Replace (50 lbs/day) ",
+                "value": "22363"
+            }, {
+                "name": "Commercial ice cube maker. Replace (250 lbs/day) ",
+                "value": "22364"
+            }, {
+                "name": "Commercial ice cube maker. Replace (500 lbs/day) ",
+                "value": "22365"
+            }, {
+                "name": "Residential range. Replace ",
+                "value": "22366"
+            }, {
+                "name": "Residential exhaust hoods. Replace ",
+                "value": "22367"
+            }, {
+                "name": "Residential dishwasher. Replace ",
+                "value": "22368"
+            }, {
+                "name": "Residential refrigerator. Replace ",
+                "value": "22369"
+            }, {
+                "name": "Residential compact refrigerator. Replace ",
+                "value": "22370"
+            }, {
+                "name": "Residential microwave. Replace ",
+                "value": "22371"
+            }, {
+                "name": "Residential disposal. Replace ",
+                "value": "22372"
+            }, {
+                "name": "Residential clothes washer. Replace ",
+                "value": "22373"
+            }, {
+                "name": "Residential clothes dryer. Replace ",
+                "value": "22374"
+            }, {
+                "name": "Residential stacked washer/dryer. Replace ",
+                "value": "22375"
+            }, {
+                "name": "Mini-refrigerator. Replace ",
+                "value": "22376"
+            }, {
+                "name": "Mini-range. Replace ",
+                "value": "22377"
+            }, {
+                "name": "Guest room dishwasher. Replace ",
+                "value": "22378"
+            }, {
+                "name": "Guest room microwave. Replace ",
+                "value": "22379"
+            }, {
+                "name": "Common Area Hard Goods. Replace ",
+                "value": "22380"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Nursing Home) ",
+                "value": "22381"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Motel) ",
+                "value": "22382"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Hotel) ",
+                "value": "22383"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Full Service Hotel) ",
+                "value": "22384"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Leasing Office) ",
+                "value": "22385"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Small Clubhouse) ",
+                "value": "22386"
+            }, {
+                "name": "Common Area Hard Goods. Replace (Large Clubhouse) ",
+                "value": "22387"
+            }, {
+                "name": "Unit Hard Goods. Replace ",
+                "value": "22388"
+            }, {
+                "name": "Guest Room Hard Goods. Replace (Motel) ",
+                "value": "22389"
+            }, {
+                "name": "Guest Room Hard Goods. Replace (Hotel) ",
+                "value": "22390"
+            }, {
+                "name": "Patient Room Hard Goods. Replace ",
+                "value": "22391"
+            }, {
+                "name": "Patient Room Wardrobes. Replace ",
+                "value": "22392"
+            }, {
+                "name": "Apartment (furnished) Hard Goods. Replace ",
+                "value": "22393"
+            }, {
+                "name": "Student Housing Hard Goods - Living Area. Replace ",
+                "value": "22394"
+            }, {
+                "name": "Student Housing Hard Goods - Bedroom Area. Replace ",
+                "value": "22395"
+            }, {
+                "name": "Soft Goods. Replace ",
+                "value": "22396"
+            }, {
+                "name": "Soft Goods. Replace (Nursing Home) ",
+                "value": "22397"
+            }, {
+                "name": "Soft Goods. Replace (Motel) ",
+                "value": "22398"
+            }, {
+                "name": "Soft Goods. Replace (Hotel) ",
+                "value": "22399"
+            }, {
+                "name": "Soft Goods. Replace (Full Service Hotel) ",
+                "value": "22400"
+            }, {
+                "name": "Kitchen countertops. Replace ",
+                "value": "22401"
+            }, {
+                "name": "Kitchen cabinets. Replace (Hardwood) ",
+                "value": "22402"
+            }, {
+                "name": "Kitchen cabinets. Replace (Composite) ",
+                "value": "22403"
+            }, {
+                "name": "Vanities. Replace (24\" wide) ",
+                "value": "22404"
+            }, {
+                "name": "Vanities. Replace (30\" wide) ",
+                "value": "22405"
+            }, {
+                "name": "Vanities. Replace (36\" wide) ",
+                "value": "22406"
+            }, {
+                "name": "Vanities. Replace (48\" wide) ",
+                "value": "22407"
+            }, {
+                "name": "Bathroom fixtures. Replace (Lavatory) ",
+                "value": "22408"
+            }, {
+                "name": "Bathroom fixtures. Replace (Toilet) ",
+                "value": "22409"
+            }, {
+                "name": "Bathroom fixtures. Replace (Bathtub) ",
+                "value": "22410"
+            }, {
+                "name": "Bathroom fixtures. Replace (Shower, 32\" square) ",
+                "value": "22411"
+            }, {
+                "name": "Bathroom fixtures. Replace (Shower, 36\" square) ",
+                "value": "22412"
+            }, {
+                "name": "Bathroom fixtures. Replace (Tub surround, fiberglass) ",
+                "value": "22413"
+            }, {
+                "name": "Bathroom fixtures. Replace (Modular bathtub and surround) ",
+                "value": "22414"
+            }, {
+                "name": "Flooring",
+                "value": "22420"
+            }, {
+                "name": "Cabinetry",
+                "value": "22424"
+            }, {
+                "name": "Other",
+                "value": "22427"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "22428"
+            }, {
+                "name": "Other",
+                "value": "22429"
+            }, {
+                "name": "Appliances",
+                "value": "22430"
+            }, {
+                "name": "Cabinet and counter replacement",
+                "value": "22917"
+            }, {
+                "name": "Cabinet replacement",
+                "value": "22918"
+            }, {
+                "name": "Carpet replacement",
+                "value": "22919"
+            }, {
+                "name": "Central dryer replacement",
+                "value": "22920"
+            }, {
+                "name": "Central washer replacement",
+                "value": "22921"
+            }, {
+                "name": "Conference facility FF&E, per seat",
+                "value": "22922"
+            }, {
+                "name": "Conference facility refurbishment, per seat",
+                "value": "22923"
+            }, {
+                "name": "Conference facility refurbishment, psf",
+                "value": "22924"
+            }, {
+                "name": "Continental restaurant refurbishment",
+                "value": "22925"
+            }, {
+                "name": "Counter replacement",
+                "value": "22926"
+            }, {
+                "name": "Dishwasher replacement",
+                "value": "22927"
+            }, {
+                "name": "Flooring replacement",
+                "value": "22928"
+            }, {
+                "name": "Furniture replacement",
+                "value": "22929"
+            }, {
+                "name": "Guestroom FF&E replacement",
+                "value": "22930"
+            }, {
+                "name": "Guestroom soft goods replacement",
+                "value": "22931"
+            }, {
+                "name": "Guestroom wallpaper & carpet replacement",
+                "value": "22932"
+            }, {
+                "name": "Ice machine replacement",
+                "value": "22933"
+            }, {
+                "name": "Kitchen equipment replacement allowance",
+                "value": "22934"
+            }, {
+                "name": "Microwave replacement",
+                "value": "22935"
+            }, {
+                "name": "Refrigerator replacement",
+                "value": "22936"
+            }, {
+                "name": "Renovate Down units",
+                "value": "22937"
+            }, {
+                "name": "Restaurant refurbishment",
+                "value": "22938"
+            }, {
+                "name": "Stove replacement",
+                "value": "22939"
+            }, {
+                "name": "Trash compactor replacement",
+                "value": "22940"
+            }, {
+                "name": "Vinyl replacement",
+                "value": "22941"
+            }, {
+                "name": "Washer/dryer replacement",
+                "value": "22942"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "90002267"
+            }, {
+                "name": "Patio Doors",
+                "value": "90002268"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90002269"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90002270"
+            }, {
+                "name": "Window Coverings",
+                "value": "90002271"
+            }, {
+                "name": "Flooring",
+                "value": "90002272"
+            }, {
+                "name": "Carpet",
+                "value": "90002273"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "90002274"
+            }, {
+                "name": "Other",
+                "value": "90002275"
+            }, {
+                "name": "Cabinetry",
+                "value": "90002276"
+            }, {
+                "name": "Kitchen",
+                "value": "90002277"
+            }, {
+                "name": "Bathrooms",
+                "value": "90002278"
+            }, {
+                "name": "Other",
+                "value": "90002279"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90002280"
+            }, {
+                "name": "Kitchen",
+                "value": "90002281"
+            }, {
+                "name": "Bathrooms",
+                "value": "90002282"
+            }, {
+                "name": "Other",
+                "value": "90002283"
+            }, {
+                "name": "Appliances",
+                "value": "90002284"
+            }, {
+                "name": "Refrigerator",
+                "value": "90002285"
+            }, {
+                "name": "Range/Stove",
+                "value": "90002286"
+            }, {
+                "name": "Range Vent",
+                "value": "90002287"
+            }, {
+                "name": "Dishwasher",
+                "value": "90002288"
+            }, {
+                "name": "Disposal",
+                "value": "90002289"
+            }, {
+                "name": "Microwave",
+                "value": "90002290"
+            }, {
+                "name": "Clothes Washer",
+                "value": "90002291"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "90002292"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "90002293"
+            }, {
+                "name": "Toilet",
+                "value": "90002294"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "90002295"
+            }, {
+                "name": "Accessories",
+                "value": "90002296"
+            }, {
+                "name": "Concrete stair tread.  Replace",
+                "value": "90002762"
+            }, {
+                "name": "Flooring",
+                "value": "90009081"
+            }, {
+                "name": "Cabinetry",
+                "value": "90009085"
+            }, {
+                "name": "Other",
+                "value": "90009088"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90009089"
+            }, {
+                "name": "Other",
+                "value": "90009090"
+            }, {
+                "name": "Appliances",
+                "value": "90009091"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "90012796"
+            }, {
+                "name": "Patio Doors",
+                "value": "90012797"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90012798"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90012799"
+            }, {
+                "name": "Window Coverings",
+                "value": "90012800"
+            }, {
+                "name": "Flooring",
+                "value": "90012801"
+            }, {
+                "name": "Carpet",
+                "value": "90012802"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "90012803"
+            }, {
+                "name": "Other",
+                "value": "90012804"
+            }, {
+                "name": "Cabinetry",
+                "value": "90012805"
+            }, {
+                "name": "Kitchen",
+                "value": "90012806"
+            }, {
+                "name": "Bathrooms",
+                "value": "90012807"
+            }, {
+                "name": "Other",
+                "value": "90012808"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90012809"
+            }, {
+                "name": "Kitchen",
+                "value": "90012810"
+            }, {
+                "name": "Bathrooms",
+                "value": "90012811"
+            }, {
+                "name": "Other",
+                "value": "90012812"
+            }, {
+                "name": "Appliances",
+                "value": "90012813"
+            }, {
+                "name": "Refrigerator",
+                "value": "90012814"
+            }, {
+                "name": "Range/Stove",
+                "value": "90012815"
+            }, {
+                "name": "Range Vent",
+                "value": "90012816"
+            }, {
+                "name": "Dishwasher",
+                "value": "90012817"
+            }, {
+                "name": "Disposal",
+                "value": "90012818"
+            }, {
+                "name": "Microwave",
+                "value": "90012819"
+            }, {
+                "name": "Clothes Washer",
+                "value": "90012820"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "90012821"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "90012822"
+            }, {
+                "name": "Toilet",
+                "value": "90012823"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "90012824"
+            }, {
+                "name": "Accessories",
+                "value": "90012825"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "90013245"
+            }, {
+                "name": "Patio Doors",
+                "value": "90013246"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90013247"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90013248"
+            }, {
+                "name": "Window Coverings",
+                "value": "90013249"
+            }, {
+                "name": "Flooring",
+                "value": "90013250"
+            }, {
+                "name": "Carpet",
+                "value": "90013251"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "90013252"
+            }, {
+                "name": "Other",
+                "value": "90013253"
+            }, {
+                "name": "Cabinetry",
+                "value": "90013254"
+            }, {
+                "name": "Kitchen",
+                "value": "90013255"
+            }, {
+                "name": "Bathrooms",
+                "value": "90013256"
+            }, {
+                "name": "Other",
+                "value": "90013257"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90013258"
+            }, {
+                "name": "Kitchen",
+                "value": "90013259"
+            }, {
+                "name": "Bathrooms",
+                "value": "90013260"
+            }, {
+                "name": "Other",
+                "value": "90013261"
+            }, {
+                "name": "Appliances",
+                "value": "90013262"
+            }, {
+                "name": "Refrigerator",
+                "value": "90013263"
+            }, {
+                "name": "Range/Stove",
+                "value": "90013264"
+            }, {
+                "name": "Range Vent",
+                "value": "90013265"
+            }, {
+                "name": "Dishwasher",
+                "value": "90013266"
+            }, {
+                "name": "Disposal",
+                "value": "90013267"
+            }, {
+                "name": "Microwave",
+                "value": "90013268"
+            }, {
+                "name": "Clothes Washer",
+                "value": "90013269"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "90013270"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "90013271"
+            }, {
+                "name": "Toilet",
+                "value": "90013272"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "90013273"
+            }, {
+                "name": "Accessories",
+                "value": "90013274"
+            }, {
+                "name": "Flooring",
+                "value": "90014648"
+            }, {
+                "name": "Cabinetry",
+                "value": "90014652"
+            }, {
+                "name": "Other",
+                "value": "90014655"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90014656"
+            }, {
+                "name": "Other",
+                "value": "90014657"
+            }, {
+                "name": "Appliances",
+                "value": "90014658"
+            }, {
+                "name": "Carpet replacement",
+                "value": "90015123"
+            }, {
+                "name": "Vinyl replacement",
+                "value": "90015124"
+            }, {
+                "name": "Refrigerator replacement",
+                "value": "90015125"
+            }, {
+                "name": "Stove replacement",
+                "value": "90015126"
+            }, {
+                "name": "Dishwasher replacement",
+                "value": "90015127"
+            }, {
+                "name": "Microwave replacement",
+                "value": "90015128"
+            }, {
+                "name": "Trash compactor replacement",
+                "value": "90015129"
+            }, {
+                "name": "Washer/dryer replacement",
+                "value": "90015130"
+            }, {
+                "name": "Cabinet and counter replacement",
+                "value": "90015131"
+            }, {
+                "name": "Cabinet replacement",
+                "value": "90015132"
+            }, {
+                "name": "Counter replacement",
+                "value": "90015133"
+            }, {
+                "name": "Renovate Down units",
+                "value": "90015134"
+            }, {
+                "name": "Furniture replacement",
+                "value": "90015135"
+            }, {
+                "name": "Guestroom FF&E replacement",
+                "value": "90015136"
+            }, {
+                "name": "Guestroom wallpaper & carpet replacement",
+                "value": "90015137"
+            }, {
+                "name": "Guestroom soft goods replacement",
+                "value": "90015138"
+            }, {
+                "name": "Mold assessment",
+                "value": "90015139"
+            }, {
+                "name": "Complete mold remediation as recommended in assessment (TBD)",
+                "value": "90015140"
+            }, {
+                "name": "Mold remediation",
+                "value": "90015141"
+            }, {
+                "name": "Mold cause correction",
+                "value": "90015142"
+            }, {
+                "name": "Develop a Mold O&M Plan",
+                "value": "90015143"
+            }, {
+                "name": "Implement Mold O&M Plan (routine maintenance)",
+                "value": "90015144"
+            }, {
+                "name": "Carpet replacement",
+                "value": "90015228"
+            }, {
+                "name": "Vinyl replacement",
+                "value": "90015229"
+            }, {
+                "name": "Refrigerator replacement",
+                "value": "90015230"
+            }, {
+                "name": "Stove replacement",
+                "value": "90015231"
+            }, {
+                "name": "Dishwasher replacement",
+                "value": "90015232"
+            }, {
+                "name": "Microwave replacement",
+                "value": "90015233"
+            }, {
+                "name": "Trash compactor replacement",
+                "value": "90015234"
+            }, {
+                "name": "Washer/dryer replacement",
+                "value": "90015235"
+            }, {
+                "name": "Cabinet and counter replacement",
+                "value": "90015236"
+            }, {
+                "name": "Cabinet replacement",
+                "value": "90015237"
+            }, {
+                "name": "Counter replacement",
+                "value": "90015238"
+            }, {
+                "name": "Renovate Down units",
+                "value": "90015239"
+            }, {
+                "name": "Furniture replacement",
+                "value": "90015240"
+            }, {
+                "name": "Guestroom FF&E replacement",
+                "value": "90015241"
+            }, {
+                "name": "Guestroom wallpaper & carpet replacement",
+                "value": "90015242"
+            }, {
+                "name": "Guestroom soft goods replacement",
+                "value": "90015243"
+            }, {
+                "name": "Other",
+                "value": "90015244"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90015532"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90015533"
+            }, {
+                "name": "",
+                "value": "90015534"
+            }, {
+                "name": "Carpet replacement",
+                "value": "90015782"
+            }, {
+                "name": "Vinyl replacement",
+                "value": "90015783"
+            }, {
+                "name": "Refrigerator replacement",
+                "value": "90015784"
+            }, {
+                "name": "Stove replacement",
+                "value": "90015785"
+            }, {
+                "name": "Dishwasher replacement",
+                "value": "90015786"
+            }, {
+                "name": "Microwave replacement",
+                "value": "90015787"
+            }, {
+                "name": "Trash compactor replacement",
+                "value": "90015788"
+            }, {
+                "name": "Washer/dryer replacement",
+                "value": "90015789"
+            }, {
+                "name": "Cabinet and counter replacement",
+                "value": "90015790"
+            }, {
+                "name": "Cabinet replacement",
+                "value": "90015791"
+            }, {
+                "name": "Counter replacement",
+                "value": "90015792"
+            }, {
+                "name": "Renovate Down units",
+                "value": "90015793"
+            }, {
+                "name": "Furniture replacement",
+                "value": "90015794"
+            }, {
+                "name": "Guestroom FF&E replacement",
+                "value": "90015795"
+            }, {
+                "name": "Guestroom wallpaper & carpet replacement",
+                "value": "90015796"
+            }, {
+                "name": "Guestroom soft goods replacement",
+                "value": "90015797"
+            }, {
+                "name": "Other",
+                "value": "90015798"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90016325"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90016326"
+            }, {
+                "name": "",
+                "value": "90016327"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90016847"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90016848"
+            }, {
+                "name": "",
+                "value": "90016849"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90017682"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90017683"
+            }, {
+                "name": "",
+                "value": "90017684"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90018204"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90018205"
+            }, {
+                "name": "",
+                "value": "90018206"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90019227"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90019228"
+            }, {
+                "name": "",
+                "value": "90019229"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90020864"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90020865"
+            }, {
+                "name": "Carpet",
+                "value": "90020866"
+            }, {
+                "name": "Floor tile",
+                "value": "90020867"
+            }, {
+                "name": "Wall covering",
+                "value": "90020868"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90020869"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90020870"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90020871"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90020872"
+            }, {
+                "name": "General unit turn",
+                "value": "90020873"
+            }, {
+                "name": "Hard goods",
+                "value": "90020874"
+            }, {
+                "name": "Soft goods",
+                "value": "90020875"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90020876"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90020877"
+            }, {
+                "name": "Water heater",
+                "value": "90020878"
+            }, {
+                "name": "Compactors",
+                "value": "90020879"
+            }, {
+                "name": "Dishwasher",
+                "value": "90020880"
+            }, {
+                "name": "Disposal",
+                "value": "90020881"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90020882"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90020883"
+            }, {
+                "name": "Microwave",
+                "value": "90020884"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90020885"
+            }, {
+                "name": "Range",
+                "value": "90020886"
+            }, {
+                "name": "Refrigerator",
+                "value": "90020887"
+            }, {
+                "name": "Dryers",
+                "value": "90020888"
+            }, {
+                "name": "Washers",
+                "value": "90020889"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90020890"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90021403"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90021404"
+            }, {
+                "name": "Carpet",
+                "value": "90021405"
+            }, {
+                "name": "Floor tile",
+                "value": "90021406"
+            }, {
+                "name": "Wall covering",
+                "value": "90021407"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90021408"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90021409"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90021410"
+            }, {
+                "name": "Unit renovation - DOWN",
+                "value": "90021411"
+            }, {
+                "name": "Unit renovation - HEAVY TURN",
+                "value": "90021412"
+            }, {
+                "name": "Soft goods",
+                "value": "90021413"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90021414"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90021415"
+            }, {
+                "name": "Water heater",
+                "value": "90021416"
+            }, {
+                "name": "Compactors",
+                "value": "90021417"
+            }, {
+                "name": "Dishwasher",
+                "value": "90021418"
+            }, {
+                "name": "Disposal",
+                "value": "90021419"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90021420"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90021421"
+            }, {
+                "name": "Microwave",
+                "value": "90021422"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90021423"
+            }, {
+                "name": "Range",
+                "value": "90021424"
+            }, {
+                "name": "Refrigerator",
+                "value": "90021425"
+            }, {
+                "name": "Dryers",
+                "value": "90021426"
+            }, {
+                "name": "Washers",
+                "value": "90021427"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90021428"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90021889"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90021890"
+            }, {
+                "name": "",
+                "value": "90021891"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90024541"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90024542"
+            }, {
+                "name": "Carpet",
+                "value": "90024543"
+            }, {
+                "name": "Floor tile",
+                "value": "90024544"
+            }, {
+                "name": "Wall covering",
+                "value": "90024545"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90024546"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90024547"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90024548"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90024549"
+            }, {
+                "name": "Hard goods",
+                "value": "90024550"
+            }, {
+                "name": "Soft goods",
+                "value": "90024551"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90024552"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90024553"
+            }, {
+                "name": "Water heater",
+                "value": "90024554"
+            }, {
+                "name": "Compactors",
+                "value": "90024555"
+            }, {
+                "name": "Dishwasher",
+                "value": "90024556"
+            }, {
+                "name": "Disposal",
+                "value": "90024557"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90024558"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90024559"
+            }, {
+                "name": "Microwave",
+                "value": "90024560"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90024561"
+            }, {
+                "name": "Range",
+                "value": "90024562"
+            }, {
+                "name": "Refrigerator",
+                "value": "90024563"
+            }, {
+                "name": "Dryers",
+                "value": "90024564"
+            }, {
+                "name": "Washers",
+                "value": "90024565"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90024566"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90025078"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90025079"
+            }, {
+                "name": "",
+                "value": "90025080"
+            }, {
+                "name": "Unit Entry Door(s) & Frame(s)",
+                "value": "90025968"
+            }, {
+                "name": "Patio Doors",
+                "value": "90025969"
+            }, {
+                "name": "Smoke /  Fire Detection",
+                "value": "90025970"
+            }, {
+                "name": "Buzzer/Intercom (security)",
+                "value": "90025971"
+            }, {
+                "name": "Window Coverings",
+                "value": "90025972"
+            }, {
+                "name": "Flooring",
+                "value": "90025973"
+            }, {
+                "name": "Carpet",
+                "value": "90025974"
+            }, {
+                "name": "Resilient Flooring (Vinyl)",
+                "value": "90025975"
+            }, {
+                "name": "Other",
+                "value": "90025976"
+            }, {
+                "name": "Cabinetry",
+                "value": "90025977"
+            }, {
+                "name": "Kitchen",
+                "value": "90025978"
+            }, {
+                "name": "Bathrooms",
+                "value": "90025979"
+            }, {
+                "name": "Other",
+                "value": "90025980"
+            }, {
+                "name": "Countertops and Sinks",
+                "value": "90025981"
+            }, {
+                "name": "Kitchen",
+                "value": "90025982"
+            }, {
+                "name": "Bathrooms",
+                "value": "90025983"
+            }, {
+                "name": "Other",
+                "value": "90025984"
+            }, {
+                "name": "Appliances",
+                "value": "90025985"
+            }, {
+                "name": "Refrigerator",
+                "value": "90025986"
+            }, {
+                "name": "Range/Stove",
+                "value": "90025987"
+            }, {
+                "name": "Range Vent",
+                "value": "90025988"
+            }, {
+                "name": "Dishwasher",
+                "value": "90025989"
+            }, {
+                "name": "Disposal",
+                "value": "90025990"
+            }, {
+                "name": "Microwave",
+                "value": "90025991"
+            }, {
+                "name": "Clothes Washer",
+                "value": "90025992"
+            }, {
+                "name": "Clothes Dryer",
+                "value": "90025993"
+            }, {
+                "name": "Bathroom Improvements",
+                "value": "90025994"
+            }, {
+                "name": "Toilet",
+                "value": "90025995"
+            }, {
+                "name": "Tub / Shower & Enclosures",
+                "value": "90025996"
+            }, {
+                "name": "Accessories",
+                "value": "90025997"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90026211"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90026212"
+            }, {
+                "name": "Carpet",
+                "value": "90026213"
+            }, {
+                "name": "Floor tile",
+                "value": "90026214"
+            }, {
+                "name": "Wall covering",
+                "value": "90026215"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90026216"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90026217"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90026218"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90026219"
+            }, {
+                "name": "Hard goods",
+                "value": "90026220"
+            }, {
+                "name": "Soft goods",
+                "value": "90026221"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90026222"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90026223"
+            }, {
+                "name": "Water heater",
+                "value": "90026224"
+            }, {
+                "name": "Compactors",
+                "value": "90026225"
+            }, {
+                "name": "Dishwasher",
+                "value": "90026226"
+            }, {
+                "name": "Disposal",
+                "value": "90026227"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90026228"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90026229"
+            }, {
+                "name": "Microwave",
+                "value": "90026230"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90026231"
+            }, {
+                "name": "Range",
+                "value": "90026232"
+            }, {
+                "name": "Refrigerator",
+                "value": "90026233"
+            }, {
+                "name": "Dryers",
+                "value": "90026234"
+            }, {
+                "name": "Washers",
+                "value": "90026235"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90026236"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90026831"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90026832"
+            }, {
+                "name": "",
+                "value": "90026833"
+            }, {
+                "name": "Down Unit.  Repair",
+                "value": "90029540"
+            }, {
+                "name": "Moisture Intrusion Assessment  ",
+                "value": "90029541"
+            }, {
+                "name": "",
+                "value": "90029542"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90030212"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90030213"
+            }, {
+                "name": "Carpet",
+                "value": "90030214"
+            }, {
+                "name": "Floor tile",
+                "value": "90030215"
+            }, {
+                "name": "Wall covering",
+                "value": "90030216"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90030217"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90030218"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90030219"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90030220"
+            }, {
+                "name": "Hard goods",
+                "value": "90030221"
+            }, {
+                "name": "Soft goods",
+                "value": "90030222"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90030223"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90030224"
+            }, {
+                "name": "Water heater",
+                "value": "90030225"
+            }, {
+                "name": "Compactors",
+                "value": "90030226"
+            }, {
+                "name": "Dishwasher",
+                "value": "90030227"
+            }, {
+                "name": "Disposal",
+                "value": "90030228"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90030229"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90030230"
+            }, {
+                "name": "Microwave",
+                "value": "90030231"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90030232"
+            }, {
+                "name": "Range",
+                "value": "90030233"
+            }, {
+                "name": "Refrigerator",
+                "value": "90030234"
+            }, {
+                "name": "Dryers",
+                "value": "90030235"
+            }, {
+                "name": "Washers",
+                "value": "90030236"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90030237"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90030415"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90030416"
+            }, {
+                "name": "Carpet",
+                "value": "90030417"
+            }, {
+                "name": "Floor tile",
+                "value": "90030418"
+            }, {
+                "name": "Wall covering",
+                "value": "90030419"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90030420"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90030421"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90030422"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90030423"
+            }, {
+                "name": "Hard goods",
+                "value": "90030424"
+            }, {
+                "name": "Soft goods",
+                "value": "90030425"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90030426"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90030427"
+            }, {
+                "name": "Water heater",
+                "value": "90030428"
+            }, {
+                "name": "Compactors",
+                "value": "90030429"
+            }, {
+                "name": "Dishwasher",
+                "value": "90030430"
+            }, {
+                "name": "Disposal",
+                "value": "90030431"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90030432"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90030433"
+            }, {
+                "name": "Microwave",
+                "value": "90030434"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90030435"
+            }, {
+                "name": "Range",
+                "value": "90030436"
+            }, {
+                "name": "Refrigerator",
+                "value": "90030437"
+            }, {
+                "name": "Dryers",
+                "value": "90030438"
+            }, {
+                "name": "Washers",
+                "value": "90030439"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90030440"
+            }, {
+                "name": "Ceiling tiles. Replace  ",
+                "value": "90030767"
+            }, {
+                "name": "Carpet - commercial grade",
+                "value": "90030768"
+            }, {
+                "name": "Carpet - residential grade",
+                "value": "90030769"
+            }, {
+                "name": "Vinyl Floor tile ",
+                "value": "90030770"
+            }, {
+                "name": "Sheet vinyl ",
+                "value": "90030771"
+            }, {
+                "name": "Vinyl wood plank",
+                "value": "90030772"
+            }, {
+                "name": "Laminate wood flooring",
+                "value": "90030773"
+            }, {
+                "name": "Range ",
+                "value": "90030774"
+            }, {
+                "name": "Refrigerator ",
+                "value": "90030775"
+            }, {
+                "name": "Dishwasher ",
+                "value": "90030776"
+            }, {
+                "name": "Microwave ",
+                "value": "90030777"
+            }, {
+                "name": "Microwave / Range hood combination",
+                "value": "90030778"
+            }, {
+                "name": "Mini-range. Replace ",
+                "value": "90030779"
+            }, {
+                "name": "Mini-refrigerator. Replace ",
+                "value": "90030780"
+            }, {
+                "name": "Disposal ",
+                "value": "90030781"
+            }, {
+                "name": "Exhaust hoods ",
+                "value": "90030782"
+            }, {
+                "name": "Residential dryer ",
+                "value": "90030783"
+            }, {
+                "name": "Residential washer ",
+                "value": "90030784"
+            }, {
+                "name": "Washer / dryer - combo units ",
+                "value": "90030785"
+            }, {
+                "name": "Compactors ",
+                "value": "90030786"
+            }, {
+                "name": "Soft goods - Hotel",
+                "value": "90030787"
+            }, {
+                "name": "Soft goods - SNF",
+                "value": "90030788"
+            }, {
+                "name": "Soft goods - Student",
+                "value": "90030789"
+            }, {
+                "name": "Wall covering ",
+                "value": "90030790"
+            }, {
+                "name": "Kitchen cabinets ",
+                "value": "90030791"
+            }, {
+                "name": "Kitchen countertop - Laminate",
+                "value": "90030792"
+            }, {
+                "name": "Kitchen countertop - Granite",
+                "value": "90030793"
+            }, {
+                "name": "Bath countertop - laminate",
+                "value": "90030794"
+            }, {
+                "name": "Bath countertop and single sink - cultured marble",
+                "value": "90030795"
+            }, {
+                "name": "Bath countertop and double sink - cultured marble",
+                "value": "90030796"
+            }, {
+                "name": "Bath countertop - granite",
+                "value": "90030797"
+            }, {
+                "name": "Down unit renovation - ROI",
+                "value": "90030798"
+            }, {
+                "name": "Down unit renovation - Unit",
+                "value": "90030799"
+            }, {
+                "name": "Down unit renovation - Guestroom",
+                "value": "90030800"
+            }, {
+                "name": "Bathroom fixtures. Replace (Bathtub) ",
+                "value": "90030801"
+            }, {
+                "name": "Bathroom fixtures. Replace (Lavatory) ",
+                "value": "90030802"
+            }, {
+                "name": "Bathroom fixtures. Replace (Shower, 36\" square) ",
+                "value": "90030803"
+            }, {
+                "name": "Bathroom fixtures. Replace (Toilet) ",
+                "value": "90030804"
+            }, {
+                "name": "Bathroom fixtures. Replace (Tub surround, fiberglass) ",
+                "value": "90030805"
+            }, {
+                "name": "Guestroom Hard goods - Hotel",
+                "value": "90030806"
+            }, {
+                "name": "Unit Hard goods - Student, per bed",
+                "value": "90030807"
+            }, {
+                "name": "Resident Hard Goods - Skilled Nursing-per bed",
+                "value": "90030808"
+            }, {
+                "name": "Resident Hard Goods - Skilled Nursing-per room",
+                "value": "90030809"
+            }, {
+                "name": "Furnished Apartment Hard Goods. Replace ",
+                "value": "90030810"
+            }, {
+                "name": "Vinyl tile",
+                "value": "90031130"
+            }, {
+                "name": "Sheet vinyl",
+                "value": "90031131"
+            }, {
+                "name": "Carpet",
+                "value": "90031132"
+            }, {
+                "name": "Floor tile",
+                "value": "90031133"
+            }, {
+                "name": "Wall covering",
+                "value": "90031134"
+            }, {
+                "name": "Walls and ceilings. Paint",
+                "value": "90031135"
+            }, {
+                "name": "Walls. Paint",
+                "value": "90031136"
+            }, {
+                "name": "Ceilings. Paint",
+                "value": "90031137"
+            }, {
+                "name": "Down unit renovation",
+                "value": "90031138"
+            }, {
+                "name": "Hard goods",
+                "value": "90031139"
+            }, {
+                "name": "Soft goods",
+                "value": "90031140"
+            }, {
+                "name": "Guest room kitchen appliances",
+                "value": "90031141"
+            }, {
+                "name": "Furntiture, fixtures, and equipment",
+                "value": "90031142"
+            }, {
+                "name": "Water heater",
+                "value": "90031143"
+            }, {
+                "name": "Compactors",
+                "value": "90031144"
+            }, {
+                "name": "Dishwasher",
+                "value": "90031145"
+            }, {
+                "name": "Disposal",
+                "value": "90031146"
+            }, {
+                "name": "Exhaust hoods",
+                "value": "90031147"
+            }, {
+                "name": "Kitchen cabinets",
+                "value": "90031148"
+            }, {
+                "name": "Microwave",
+                "value": "90031149"
+            }, {
+                "name": "Countertop and sink",
+                "value": "90031150"
+            }, {
+                "name": "Range",
+                "value": "90031151"
+            }, {
+                "name": "Refrigerator",
+                "value": "90031152"
+            }, {
+                "name": "Dryers",
+                "value": "90031153"
+            }, {
+                "name": "Washers",
+                "value": "90031154"
+            }, {
+                "name": "Washer / dryer - combo units",
+                "value": "90031155"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

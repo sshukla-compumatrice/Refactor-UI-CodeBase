@@ -1,0 +1,70 @@
+<div ng-transclude></div>
+
+<ul class="Write-list" ng-repeat="(subsectionIndex,parentsection) in parentsection.subSection">
+    <li>
+ 
+        <h4 class="instructionPopover"> {{parentsection.sectionNumber + ' ' + parentsection.sectionName}}&nbsp;<a ng-if="checkShowInstructions(parentsection)" auto-close='1' role="button" data-toggle="popover" title="Instructions" data-placement="right"  data-template="displaySubSectionInstrs.html" bs-popover><i class="pointer fa fa-lg fa-info-circle text-warning"></i></a></h4>
+		<p class="message-RW"><em ng-if="checkOptionsSubSections(parentsection)" class="text-muted">No default language available for this report section.</em></p>
+ 
+        <div ng-if=" parentsection.languages && parentsection.languages.length > 0" class="row">
+            
+
+            <div id="language.languageID" class="col-md-4" ng-repeat="language in parentsection.languages" ng-if="language.category && language.category !='Instructions'">
+                <div class="subsection-details">
+				<div class="checkbox">
+                    
+                    <label ng-class="{'default-pointer text-muted nopadding': language.isAddedOnProjectStartup}">
+
+                        <input ng-if="!language.isAddedOnProjectStartup" type="checkbox" value="" ng-model="language.isChecked" ng-change = "checkIsSubSectionChecked(language)">
+                        
+
+                        <span ng-class="{'pull-left' : language.isAddedOnProjectStartup}" ng-bind-html="bindLanguage(language)"></span>&nbsp;
+                        
+
+                    </label>
+					<a auto-close='1' role="button" data-toggle="popover" title="Language Text" data-placement="bottom" data-content="{{language.text}}" data-template="displaySubSectionOptions.html" bs-popover> show more </a>
+                 
+                </div>
+					</div>
+            </div>
+        </div>
+    </li>
+
+    <ul>
+        <include-subsections  ng-if="parentsection.subSection && parentsection.subSection.length > 0" parentsection="parentsection">
+        </include-subsections>
+    </ul>
+
+</ul>
+
+<script type="text/ng-template" id="displaySubSectionOptions.html">
+        <div  class="popover" id = "displaySubSectionOptions">
+            <div class="arrow"></div> 
+            <h3 class="popover-title"><span ng-bind="title" ng-show="title"></span> <button ng-click ="$hide()" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3>
+			 
+            <div class="popover-content reportWriteContent">
+                         
+                    <p ng-bind-html="content"></p>
+                     
+             </div>
+			<div class="popover-footer" ng-if="!language.isAddedOnProjectStartup">
+						<hr>
+                        <button ng-click = "$hide()" type="button" class="btn btn-md btn-default">Cancel</button>
+                        <button ng-if = "!language.isChecked" ng-click = "popover.selectOption($hide,language)" type="button" class="btn btn-md btn-primary closebtn">Select</button>
+                        <button ng-if = "language.isChecked" ng-click = "popover.deSelectOption($hide,language)" type="button" class="btn btn-md btn-primary closebtn">Deselect</button>
+                    </div>
+            </div>
+    </script>
+
+<script type="text/ng-template" id="displaySubSectionInstrs.html">
+        <div class="popover" id = "displaySubSectionInstrs">
+            <div class="arrow"></div>        
+            <h3 class="popover-title"><span ng-bind="title" ng-show="title"></span> <button ng-click ="$hide()" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3>
+
+            
+			 
+            <div class="popover-content reportWriteContent" ng-model="content">                     
+                    <p class="text-black" ng-bind-html="popover.getInstrContent(parentsection)"></p>
+            </div>
+    </div>
+</script>

@@ -1,0 +1,12 @@
+body::after {
+    content: "- - - End of Text - - -";
+    background-color: #5f7a9d;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+}
+p { margin:0px 0px 0px 0px; } 
+.copy-cursor{
+     cursor: copy !important;
+} 

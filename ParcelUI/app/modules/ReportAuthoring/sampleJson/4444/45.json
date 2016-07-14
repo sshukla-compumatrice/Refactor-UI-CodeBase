@@ -1,0 +1,58 @@
+{
+    "html": "<div><h2><strong><span>{{contentValues.sectionTitle00}}</span></strong></h2></div><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div01'></div></div><br><vertical-table table='contentValues.verticalTable02'></vertical-table>",
+    "contentValues": {
+        "sectionTitle00": "8.12 Lead-Based Paint (LBP)",
+        "verticalTable02": {
+            "structure": [{
+                "label": "Building Built Before 1978?",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 1,
+                "width": "30%",
+                "textWidth": "30%"
+            }, {
+                "label": "Evidence of Chipping, Peeling, Flaking",
+                "id": "",
+                "type": "select",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 2,
+                "width": "40%",
+                "textWidth": "40%"
+            }, {
+                "label": "Total Approx. Area (sq. ft)",
+                "id": "",
+                "type": "textarea",
+                "colspan": 1,
+                "align": "left",
+                "rowIndex": 1,
+                "columnIndex": 3,
+                "width": "30%",
+                "textWidth": "30%"
+            }, {
+                "label": "Specific Location",
+                "id": "",
+                "type": "textarea",
+                "colspan": 3,
+                "align": "left",
+                "rowIndex": 2,
+                "columnIndex": 1,
+                "width": "100%",
+                "textWidth": "100%"
+            }],
+            "data": [{
+                "Building Built Before 1978?": "YesNoUnk",
+                "Evidence of Chipping, Peeling, Flaking": "YesNo",
+                "Total Approx. Area (sq. ft)": "",
+                "Specific Location": ""
+            }]
+        },
+        "ckEditData": {
+            "div01": "<p>Lead-Based Paint was not addressed based on the Scope of Work. <\\/p>"
+        }
+    }
+}

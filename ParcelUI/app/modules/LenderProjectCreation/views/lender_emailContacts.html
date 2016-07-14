@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style type="text/css">
+     
+    </style>
+
+</head>
+
+<body> 
+        <!-- ng-controller="EmailContactsCtrl as emailContacts" -->
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="emailContacts.Cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Select Contacts</h4>
+        </div> 
+
+            <div class="modal-body ">
+                <div class=" tabbable tabs-below">
+                    <div role="tabpanel" class="tab-content ">
+                        <div id="divFindContact container-fluid">
+                            <div class="form-group row">
+                                <div class="col-md-6 col-sm-6 top-margin">
+                                    <input type="text" class="form-control" placeholder="Enter text to search for contacts: " ng-model="emailContacts.searchtext">
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                            <table class="table table-condensed  table-bordered table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th>To</th>
+                                        <th>CC</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Company</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr ng-repeat="contact in emailContacts.filtered = (emailContacts.ContactArr | filter: emailContacts.searchtext) | filter : emailContacts.paginate">
+                                        <td>
+                                            <input type="checkbox" id="toContact" name="toContact" ng-model="contact.toSelected" class="ng-pristine ng-valid">
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="ccContact" name="ccContact" ng-model="contact.ccSelected" class="ng-pristine ng-valid">
+                                        </td>
+                                        <td>
+                                            {{contact.firstName}} {{contact.lastName}}
+                                        </td>
+                                        <td>
+                                            {{contact.email}}
+                                        </td>
+                                        <td>
+                                            {{contact.companyName}}
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            </div>
+                            <pagination total-items="emailContacts.totalItems" ng-model="emailContacts.currentPage" max-size="5" boundary-links="true" items-per-page="emailContacts.numPerPage" class="pagination-sm">
+                            </pagination>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="emailContacts.DoneSelection()">Done</button>
+                <button class="btn btn-default" ng-click="emailContacts.Cancel()">Cancel</button>
+            </div> 
+</body>
+
+</html>

@@ -1,0 +1,2317 @@
+{
+    "html": "<h2 class='border-bottom'>{{contentValues.sectionTitle00}}</h2><h2>{{contentValues.sectionTitle01}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div02'></div></div><h2>{{contentValues.sectionTitle03}}</h2><hr><div class='boxCK'><span class='editCK'>edit</span><div id='ckEdit' class='textCK' ng-model='contentValues.ckEditData.div04'></div></div><div><h2>Cost Summary</h2></div><notification alert-data='alertData'></notification><br><div ng-repeat='costTable in contentValues.costTable05'><div add-recommendation cost-table = 'costTable'/><div default-recommendation-list cost-table='costTable' alert-data='alertData' /></div>",
+    "contentValues": {
+        "sectionTitle00": "3.4.4 Electrical",
+        "sectionTitle01": "Description:",
+        "sectionTitle03": "Recommendation:",
+        "costTable05": [{
+            "sectionId": 41,
+            "recommendationHeader": "Dummy Header",
+            "type": "displayDefault",
+            "years": 12,
+            "listHeaders": ["recommendation", "eul", "eff age", "rul", "qty", "unit", "unitCost", "year", "cost"],
+            "recommendationTypes": [{
+                "name": "Emergency generator",
+                "value": "245"
+            }, {
+                "name": "Electrical wiring",
+                "value": "246"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "247"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "248"
+            }, {
+                "name": "Transformers",
+                "value": "249"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "250"
+            }, {
+                "name": "Replace electrical wiring",
+                "value": "1918"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "1919"
+            }, {
+                "name": "Emergency generator",
+                "value": "1920"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "1921"
+            }, {
+                "name": "Transformers",
+                "value": "1922"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "1923"
+            }, {
+                "name": "Electrical",
+                "value": "2078"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "2079"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "2080"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "2081"
+            }, {
+                "name": "Electrical",
+                "value": "2182"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "2183"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "2184"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "2185"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "2476"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "2477"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "2478"
+            }, {
+                "name": "Emergency generator ",
+                "value": "2479"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "2480"
+            }, {
+                "name": "Transformers ",
+                "value": "2481"
+            }, {
+                "name": "Electrical",
+                "value": "2642"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "2643"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "2644"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "2645"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "3240"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "3241"
+            }, {
+                "name": "Emergency generator ",
+                "value": "3242"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "3243"
+            }, {
+                "name": "Transformers ",
+                "value": "3244"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "3245"
+            }, {
+                "name": "Electrical",
+                "value": "3403"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "3404"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "3405"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "3406"
+            }, {
+                "name": "Electrical",
+                "value": "3880"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "3881"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "3882"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "3883"
+            }, {
+                "name": "Electrical",
+                "value": "3999"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "4000"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "4001"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "4002"
+            }, {
+                "name": "Electrical",
+                "value": "4138"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "4139"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "4140"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "4141"
+            }, {
+                "name": "Electrical",
+                "value": "4977"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "4978"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "4979"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "4980"
+            }, {
+                "name": "Electrical",
+                "value": "5157"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "5158"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "5159"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "5160"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "12246"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "12247"
+            }, {
+                "name": "Emergency generator ",
+                "value": "12248"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "12249"
+            }, {
+                "name": "Transformers ",
+                "value": "12250"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "12251"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "12489"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "12490"
+            }, {
+                "name": "Emergency generator ",
+                "value": "12491"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "12492"
+            }, {
+                "name": "Transformers ",
+                "value": "12493"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "12494"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "12732"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "12733"
+            }, {
+                "name": "Emergency generator ",
+                "value": "12734"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "12735"
+            }, {
+                "name": "Transformers ",
+                "value": "12736"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "12737"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "12975"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "12976"
+            }, {
+                "name": "Emergency generator ",
+                "value": "12977"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "12978"
+            }, {
+                "name": "Transformers ",
+                "value": "12979"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "12980"
+            }, {
+                "name": "Electrical",
+                "value": "13096"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "13097"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "13098"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "13099"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "15796"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "15797"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "15798"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "15799"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "15800"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "15801"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "15802"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "15803"
+            }, {
+                "name": "GFCI, Install",
+                "value": "15804"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "16647"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "16648"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "16649"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "16650"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "16651"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "16652"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "16653"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "16654"
+            }, {
+                "name": "GFCI, Install",
+                "value": "16655"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "16910"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "16911"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "16912"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "16913"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "16914"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "16915"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "16916"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "16917"
+            }, {
+                "name": "GFCI, Install",
+                "value": "16918"
+            }, {
+                "name": "Emergency generator",
+                "value": "17986"
+            }, {
+                "name": "Electrical wiring",
+                "value": "17987"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "17988"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "17989"
+            }, {
+                "name": "Transformers",
+                "value": "17990"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "17991"
+            }, {
+                "name": "GFCI, Install",
+                "value": "18067"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "18068"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "18069"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "18070"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "18071"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "18072"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "18073"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "18074"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "18075"
+            }, {
+                "name": "GFCI, Install",
+                "value": "18330"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "18331"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "18332"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "18333"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "18334"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "18335"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "18336"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "18337"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "18338"
+            }, {
+                "name": "Electrical",
+                "value": "18599"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "18600"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "18601"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "18602"
+            }, {
+                "name": "Electrical",
+                "value": "18700"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "18701"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "18702"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "18703"
+            }, {
+                "name": "Electrical",
+                "value": "18801"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "18802"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "18803"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "18804"
+            }, {
+                "name": "Electrical",
+                "value": "18902"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "18903"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "18904"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "18905"
+            }, {
+                "name": "GFCI, Install",
+                "value": "19108"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "19109"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "19110"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "19111"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "19112"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "19113"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "19114"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "19115"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "19116"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "19610"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "19611"
+            }, {
+                "name": "Perform IR survey",
+                "value": "19612"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "19613"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "19614"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "19615"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "20240"
+            }, {
+                "name": "GFCI, Install",
+                "value": "20241"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "20242"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "20243"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "20244"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "20245"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "20246"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "20247"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "20248"
+            }, {
+                "name": "GFCI, Install",
+                "value": "21606"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "21607"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "21608"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "21609"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "21610"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "21611"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "21612"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "21613"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "21614"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 11.5 KW) ",
+                "value": "22265"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 20 KW) ",
+                "value": "22266"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 35 KW) ",
+                "value": "22267"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 60 KW) ",
+                "value": "22268"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 80 KW) ",
+                "value": "22269"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 100 KW) ",
+                "value": "22270"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 125 KW) ",
+                "value": "22271"
+            }, {
+                "name": "Emergency generator. Replace (Gas, 185 KW) ",
+                "value": "22272"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 30 KW) ",
+                "value": "22273"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 50 KW) ",
+                "value": "22274"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 60 KW) ",
+                "value": "22275"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 75 KW) ",
+                "value": "22276"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 100 KW) ",
+                "value": "22277"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 125 KW) ",
+                "value": "22278"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 150 KW) ",
+                "value": "22279"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 175 KW) ",
+                "value": "22280"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 200 KW) ",
+                "value": "22281"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 250 KW) ",
+                "value": "22282"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 275 KW) ",
+                "value": "22283"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 300 KW) ",
+                "value": "22284"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 350 KW) ",
+                "value": "22285"
+            }, {
+                "name": "Emergency generator. Replace (Diesel, 400 KW) ",
+                "value": "22286"
+            }, {
+                "name": "",
+                "value": "22287"
+            }, {
+                "name": "Electrical",
+                "value": "22453"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "22454"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "22455"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "22456"
+            }, {
+                "name": "GFCI, Install",
+                "value": "22597"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "22598"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "22599"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "22600"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "22601"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "22602"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "22603"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "22604"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "22605"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "23205"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "23206"
+            }, {
+                "name": "Emergency generator ",
+                "value": "23207"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "23208"
+            }, {
+                "name": "Transformers ",
+                "value": "23209"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "23210"
+            }, {
+                "name": "Electrical",
+                "value": "90002258"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90002259"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90002260"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90002261"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90002362"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90002363"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90002364"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90002365"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90002366"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90002367"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90002368"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90002369"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90002370"
+            }, {
+                "name": "Emergency generator. Replace (per KW)",
+                "value": "90002678"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90002679"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90002680"
+            }, {
+                "name": "Electrical system.  Modernize",
+                "value": "90002681"
+            }, {
+                "name": "",
+                "value": "90002682"
+            }, {
+                "name": "Electrical",
+                "value": "90003317"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90003318"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90003319"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90003320"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90003727"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90003728"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90003729"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90003730"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90003731"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90003732"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90003733"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90003734"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90003735"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90004151"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90004152"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90004153"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90004154"
+            }, {
+                "name": "Transformers ",
+                "value": "90004155"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90004156"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90005227"
+            }, {
+                "name": "Transformers ",
+                "value": "90005228"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90005229"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90005230"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90005231"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90005232"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90005542"
+            }, {
+                "name": "Transformers ",
+                "value": "90005543"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90005544"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90005545"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90005546"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90005547"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90006647"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90006648"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90006649"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90006650"
+            }, {
+                "name": "Transformers ",
+                "value": "90006651"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90006652"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90007050"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90007051"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90007052"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90007053"
+            }, {
+                "name": "Transformers ",
+                "value": "90007054"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90007055"
+            }, {
+                "name": "Emergency generator. Replace (per KW)",
+                "value": "90007274"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90007275"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90007276"
+            }, {
+                "name": "Electrical system.  Modernize",
+                "value": "90007277"
+            }, {
+                "name": "",
+                "value": "90007278"
+            }, {
+                "name": "Emergency generator. Replace (per KW)",
+                "value": "90007854"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90007855"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90007856"
+            }, {
+                "name": "Electrical system.  Modernize",
+                "value": "90007857"
+            }, {
+                "name": "",
+                "value": "90007858"
+            }, {
+                "name": "Emergency generator, Replace  ",
+                "value": "90008968"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90008969"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90008970"
+            }, {
+                "name": "Electrical wiring, Replace aluminum wiring  ",
+                "value": "90008971"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90008972"
+            }, {
+                "name": "Electrical devices. switches and outlets, Replace ",
+                "value": "90008973"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90008974"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90008975"
+            }, {
+                "name": "Electrical",
+                "value": "90009114"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90009115"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90009116"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90009117"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90011846"
+            }, {
+                "name": "Electrical wiring, Replace",
+                "value": "90011847"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace",
+                "value": "90011848"
+            }, {
+                "name": "Transformers, Replace",
+                "value": "90011849"
+            }, {
+                "name": "Switchgear mainframe, Replace",
+                "value": "90011850"
+            }, {
+                "name": "Fused panel conversion to circuit breakers",
+                "value": "90011851"
+            }, {
+                "name": "Unit electric panel, Replace",
+                "value": "90011852"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90011853"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90011854"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90012204"
+            }, {
+                "name": "Electrical wiring, Replace",
+                "value": "90012205"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace",
+                "value": "90012206"
+            }, {
+                "name": "Transformers, Replace",
+                "value": "90012207"
+            }, {
+                "name": "Switchgear mainframe, Replace",
+                "value": "90012208"
+            }, {
+                "name": "Fused panel conversion to circuit breakers",
+                "value": "90012209"
+            }, {
+                "name": "Unit electric panel, Replace",
+                "value": "90012210"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90012211"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90012212"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90012562"
+            }, {
+                "name": "Electrical wiring, Replace",
+                "value": "90012563"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace",
+                "value": "90012564"
+            }, {
+                "name": "Transformers, Replace",
+                "value": "90012565"
+            }, {
+                "name": "Switchgear mainframe, Replace",
+                "value": "90012566"
+            }, {
+                "name": "Fused panel conversion to circuit breakers",
+                "value": "90012567"
+            }, {
+                "name": "Unit electric panel, Replace",
+                "value": "90012568"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90012569"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90012570"
+            }, {
+                "name": "Electrical",
+                "value": "90012787"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90012788"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90012789"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90012790"
+            }, {
+                "name": "Electrical",
+                "value": "90013236"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90013237"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90013238"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90013239"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90013509"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90013510"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90013511"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90013512"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90013513"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90013514"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90013515"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90013516"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90013517"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90013518"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90013847"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90013848"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90013849"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90013850"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90013851"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90013852"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90013853"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90013854"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90013855"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90013856"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90014187"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90014188"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90014189"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90014190"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90014191"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90014192"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90014193"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90014194"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90014195"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90014196"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90014525"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90014526"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90014527"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90014528"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90014529"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90014530"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90014531"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90014532"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90014533"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90014534"
+            }, {
+                "name": "Electrical",
+                "value": "90014681"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90014682"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90014683"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90014684"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90014803"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90014806"
+            }, {
+                "name": "Electric Main",
+                "value": "90014807"
+            }, {
+                "name": "Power Distribution",
+                "value": "90014810"
+            }, {
+                "name": "Transformer",
+                "value": "90014813"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90014949"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90014950"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90014951"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "90015083"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "90015084"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "90015085"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "90015086"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "90015087"
+            }, {
+                "name": "Perform IR survey",
+                "value": "90015088"
+            }, {
+                "name": "Other",
+                "value": "90015089"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "90015296"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "90015297"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "90015298"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "90015299"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "90015300"
+            }, {
+                "name": "Perform IR survey",
+                "value": "90015301"
+            }, {
+                "name": "Other",
+                "value": "90015302"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90015511"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90015512"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90015513"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90015514"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90015515"
+            }, {
+                "name": "",
+                "value": "90015516"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "90015850"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "90015851"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "90015852"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "90015853"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "90015854"
+            }, {
+                "name": "Perform IR survey",
+                "value": "90015855"
+            }, {
+                "name": "Other",
+                "value": "90015856"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90015927"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90015930"
+            }, {
+                "name": "Electric Main",
+                "value": "90015931"
+            }, {
+                "name": "Power Distribution",
+                "value": "90015934"
+            }, {
+                "name": "Transformer",
+                "value": "90015937"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90016073"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90016074"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90016075"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90016304"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90016305"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90016306"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90016307"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90016308"
+            }, {
+                "name": "",
+                "value": "90016309"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90016449"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90016452"
+            }, {
+                "name": "Electric Main",
+                "value": "90016453"
+            }, {
+                "name": "Power Distribution",
+                "value": "90016456"
+            }, {
+                "name": "Transformer",
+                "value": "90016459"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90016595"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90016596"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90016597"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90016826"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90016827"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90016828"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90016829"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90016830"
+            }, {
+                "name": "",
+                "value": "90016831"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90017003"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90017005"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90017006"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90017007"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90017008"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90017009"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90017010"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90017011"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90017012"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90017013"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90017284"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90017287"
+            }, {
+                "name": "Electric Main",
+                "value": "90017288"
+            }, {
+                "name": "Power Distribution",
+                "value": "90017291"
+            }, {
+                "name": "Transformer",
+                "value": "90017294"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90017430"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90017431"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90017432"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90017661"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90017662"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90017663"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90017664"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90017665"
+            }, {
+                "name": "",
+                "value": "90017666"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90017806"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90017809"
+            }, {
+                "name": "Electric Main",
+                "value": "90017810"
+            }, {
+                "name": "Power Distribution",
+                "value": "90017813"
+            }, {
+                "name": "Transformer",
+                "value": "90017816"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90017952"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90017953"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90017954"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90018183"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90018184"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90018185"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90018186"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90018187"
+            }, {
+                "name": "",
+                "value": "90018188"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90018829"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90018832"
+            }, {
+                "name": "Electric Main",
+                "value": "90018833"
+            }, {
+                "name": "Power Distribution",
+                "value": "90018836"
+            }, {
+                "name": "Transformer",
+                "value": "90018839"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90018975"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90018976"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90018977"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90019206"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90019207"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90019208"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90019209"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90019210"
+            }, {
+                "name": "",
+                "value": "90019211"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90019485"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90019486"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90019487"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90019488"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90019489"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90019490"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90019491"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90019492"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90019493"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90019494"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90019996"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90019997"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90019998"
+            }, {
+                "name": "Apartment Panel Inspection",
+                "value": "90019999"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90020000"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90020001"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90020002"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90020003"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90020004"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90020005"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90020402"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90020403"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90020404"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90020405"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90020406"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90020407"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90020408"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90020409"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90020410"
+            }, {
+                "name": "Emergency generator",
+                "value": "90020946"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90020947"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90020948"
+            }, {
+                "name": "Install new electrical panel",
+                "value": "90020949"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90020950"
+            }, {
+                "name": "Transformers",
+                "value": "90020951"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90020952"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90021126"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90021127"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90021128"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90021129"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90021130"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90021131"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90021132"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90021133"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90021134"
+            }, {
+                "name": "Emergency generator",
+                "value": "90021353"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90021354"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90021355"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90021356"
+            }, {
+                "name": "Transformers",
+                "value": "90021357"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90021358"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90021491"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90021494"
+            }, {
+                "name": "Electric Main",
+                "value": "90021495"
+            }, {
+                "name": "Power Distribution",
+                "value": "90021498"
+            }, {
+                "name": "Transformer",
+                "value": "90021501"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90021637"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90021638"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90021639"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90021868"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90021869"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90021870"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90021871"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90021872"
+            }, {
+                "name": "",
+                "value": "90021873"
+            }, {
+                "name": "Electrical",
+                "value": "90022539"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90022540"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90022541"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90022542"
+            }, {
+                "name": "Site Lighting",
+                "value": "90022543"
+            }, {
+                "name": "Electrical",
+                "value": "90022638"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90022639"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90022640"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90022641"
+            }, {
+                "name": "Emergency generator",
+                "value": "90022922"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90022923"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90022924"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90022925"
+            }, {
+                "name": "Transformers",
+                "value": "90022926"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90022927"
+            }, {
+                "name": "Emergency generator",
+                "value": "90023149"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90023150"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90023151"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90023152"
+            }, {
+                "name": "Transformers",
+                "value": "90023153"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90023154"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90023333"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90023334"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90023335"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90023336"
+            }, {
+                "name": "Transformers ",
+                "value": "90023337"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90023338"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90023576"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90023577"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90023578"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90023579"
+            }, {
+                "name": "Transformers ",
+                "value": "90023580"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90023581"
+            }, {
+                "name": "Emergency generator",
+                "value": "90023730"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90023731"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90023732"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90023733"
+            }, {
+                "name": "Transformers",
+                "value": "90023734"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90023735"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90023975"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90023976"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90023977"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90023978"
+            }, {
+                "name": "Transformers ",
+                "value": "90023979"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90023980"
+            }, {
+                "name": "Electrical wiring ",
+                "value": "90024218"
+            }, {
+                "name": "Electrical devices. switches and outlets ",
+                "value": "90024219"
+            }, {
+                "name": "Emergency generator ",
+                "value": "90024220"
+            }, {
+                "name": "Exterior light fixtures ",
+                "value": "90024221"
+            }, {
+                "name": "Transformers ",
+                "value": "90024222"
+            }, {
+                "name": "Switchgear mainframe ",
+                "value": "90024223"
+            }, {
+                "name": "Emergency generator",
+                "value": "90024431"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90024432"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90024433"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90024434"
+            }, {
+                "name": "Transformers",
+                "value": "90024435"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90024436"
+            }, {
+                "name": "Emergency generator",
+                "value": "90024605"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90024606"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90024607"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90024608"
+            }, {
+                "name": "Transformers",
+                "value": "90024609"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90024610"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90024680"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90024683"
+            }, {
+                "name": "Electric Main",
+                "value": "90024684"
+            }, {
+                "name": "Power Distribution",
+                "value": "90024687"
+            }, {
+                "name": "Transformer",
+                "value": "90024690"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90024826"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90024827"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90024828"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90025057"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90025058"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90025059"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90025060"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90025061"
+            }, {
+                "name": "",
+                "value": "90025062"
+            }, {
+                "name": "Electrical",
+                "value": "90025959"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90025960"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90025961"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90025962"
+            }, {
+                "name": "Emergency generator",
+                "value": "90026275"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90026276"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90026277"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90026278"
+            }, {
+                "name": "Transformers",
+                "value": "90026279"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90026280"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90026433"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90026436"
+            }, {
+                "name": "Electric Main",
+                "value": "90026437"
+            }, {
+                "name": "Power Distribution",
+                "value": "90026440"
+            }, {
+                "name": "Transformer",
+                "value": "90026443"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90026579"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90026580"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90026581"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90026810"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90026811"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90026812"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90026813"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90026814"
+            }, {
+                "name": "",
+                "value": "90026815"
+            }, {
+                "name": "Emergency generator",
+                "value": "90027446"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90027447"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90027448"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90027449"
+            }, {
+                "name": "Transformers",
+                "value": "90027450"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90027451"
+            }, {
+                "name": "Electrical",
+                "value": "90027504"
+            }, {
+                "name": "Building Power/Wiring",
+                "value": "90027505"
+            }, {
+                "name": "Switchgear/Metering",
+                "value": "90027506"
+            }, {
+                "name": "Emergency Lighting/Generator",
+                "value": "90027507"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90028218"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90028219"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90028220"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90028221"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90028222"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90028223"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90028224"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90028225"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90028226"
+            }, {
+                "name": "Emergency generator, Replace",
+                "value": "90028731"
+            }, {
+                "name": "Electrical wiring, Replace ",
+                "value": "90028732"
+            }, {
+                "name": "Electrical devices, switches and outlets, Replace ",
+                "value": "90028733"
+            }, {
+                "name": "Transformers, Replace ",
+                "value": "90028734"
+            }, {
+                "name": "Switchgear mainframe, Replace ",
+                "value": "90028735"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90028736"
+            }, {
+                "name": "Unit electric panel, Replace ",
+                "value": "90028737"
+            }, {
+                "name": "Aluminum Electrical wiring, Replace",
+                "value": "90028738"
+            }, {
+                "name": "GFCI, Install",
+                "value": "90028739"
+            }, {
+                "name": "Electrical Distribution Center",
+                "value": "90029142"
+            }, {
+                "name": "Emergency Generator",
+                "value": "90029145"
+            }, {
+                "name": "Electric Main",
+                "value": "90029146"
+            }, {
+                "name": "Power Distribution",
+                "value": "90029149"
+            }, {
+                "name": "Transformer",
+                "value": "90029152"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Federal Pacific / Stab-lok)",
+                "value": "90029288"
+            }, {
+                "name": "Electrical Circuit Breaker Panels (Zinsco, Sylvania, Square D, etc.)",
+                "value": "90029289"
+            }, {
+                "name": "Replace generator (100, 125, 150, 175, 200, 250, 275, 300, 350, 400, 500, 600, 650, 750, 800, 900, 1000 kW)",
+                "value": "90029290"
+            }, {
+                "name": "Emergency generator. Replace",
+                "value": "90029519"
+            }, {
+                "name": "GFCI Outlet.  Install",
+                "value": "90029520"
+            }, {
+                "name": "Stab-lok breaker panel.  Replace",
+                "value": "90029521"
+            }, {
+                "name": "Power distribution.  Replace",
+                "value": "90029522"
+            }, {
+                "name": "Transformer.  Replace",
+                "value": "90029523"
+            }, {
+                "name": "",
+                "value": "90029524"
+            }, {
+                "name": "Emergency generator",
+                "value": "90030278"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90030279"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90030280"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90030281"
+            }, {
+                "name": "Transformers",
+                "value": "90030282"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90030283"
+            }, {
+                "name": "Emergency generator",
+                "value": "90030479"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90030480"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90030481"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90030482"
+            }, {
+                "name": "Transformers",
+                "value": "90030483"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90030484"
+            }, {
+                "name": "Electrical devices. switches and outlets. Replace ",
+                "value": "90030884"
+            }, {
+                "name": "Electrical wiring, aluminum wiring, install rated connectors, per unit  ",
+                "value": "90030885"
+            }, {
+                "name": "Electrical wiring, aluminum wiring, install rated connectors, per device  ",
+                "value": "90030886"
+            }, {
+                "name": "Fused panel conversion to circuit breakers ",
+                "value": "90030887"
+            }, {
+                "name": "Unit electric panel. Replace Stab-Lok panel",
+                "value": "90030888"
+            }, {
+                "name": "Emergency generator. Replace (per KW) ",
+                "value": "90030889"
+            }, {
+                "name": "GFCI outlet. Replace by onsite staff",
+                "value": "90030890"
+            }, {
+                "name": "Emergency generator",
+                "value": "90031194"
+            }, {
+                "name": "Electrical wiring",
+                "value": "90031195"
+            }, {
+                "name": "Exterior light fixtures",
+                "value": "90031196"
+            }, {
+                "name": "Electrical devices. switches and outlets",
+                "value": "90031197"
+            }, {
+                "name": "Transformers",
+                "value": "90031198"
+            }, {
+                "name": "Switchgear mainframe",
+                "value": "90031199"
+            }, {
+                "name": "Replace electrical devices to prevent aluminum wiring arcing",
+                "value": "90031377"
+            }, {
+                "name": "Install GFI outlets",
+                "value": "90031378"
+            }, {
+                "name": "Perform IR survey",
+                "value": "90031379"
+            }, {
+                "name": "Install COPALUM crimp connectors",
+                "value": "90031380"
+            }, {
+                "name": "Install CO/ALR devices",
+                "value": "90031381"
+            }, {
+                "name": "Install CO/ALR and COPALUM crimp connectors",
+                "value": "90031382"
+            }],
+            "unit": [{
+                "name": "LS",
+                "value": "1"
+            }, {
+                "name": "EA",
+                "value": "2"
+            }, {
+                "name": "SF",
+                "value": "3"
+            }, {
+                "name": "LF",
+                "value": "4"
+            }, {
+                "name": "SQ",
+                "value": "5"
+            }, {
+                "name": "SY",
+                "value": "6"
+            }, {
+                "name": "TON",
+                "value": "7"
+            }, {
+                "name": "SH",
+                "value": "8"
+            }, {
+                "name": "KW",
+                "value": "9"
+            }, {
+                "name": "MBH",
+                "value": "10"
+            }, {
+                "name": "CFM",
+                "value": "11"
+            }, {
+                "name": "GPM",
+                "value": "12"
+            }, {
+                "name": "HP",
+                "value": "13"
+            }, {
+                "name": "LB",
+                "value": "14"
+            }, {
+                "name": "Day",
+                "value": "15"
+            }, {
+                "name": "RM",
+                "value": "16"
+            }, {
+                "name": "BED",
+                "value": "17"
+            }, {
+                "name": "UNIT",
+                "value": "18"
+            }, {
+                "name": "LM",
+                "value": "19"
+            }],
+            "data": []
+        }],
+        "ckEditData": {
+            "div02": "",
+            "div04": ""
+        }
+    }
+}

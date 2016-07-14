@@ -1,0 +1,79 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary btn-sm" onclick="window.close();">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Close Window
+    </button>
+</div>
+<h2 class="page-header">Freddie Mac Form 1105 Section III</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-condensend table-hover">
+        <thead>
+            <tr>
+
+                <th>Component</th>
+				<th>Repair Type (C=Critical, P=Priority, PR-90=90 Day)</th>
+                <th>Unit</th>
+				<th>Quantity</th>
+				<th>Unit Cost</th>
+				<th>Total Cost</th>
+				<th>Comments</th>
+            </tr>
+        </thead>
+		<tbody  ng-repeat="groupType in recommendationSummary.groupTypes" >
+            <tr>
+
+				<td colspan="19"><strong>{{groupType.name}}</strong>
+				
+				</td>
+
+            </tr>
+			<tr  ng-repeat="item in recommendationSummary.recommendations | filter:{ group: groupType.value }">
+            
+				<td>
+                    <a class="pointer" ng-click="recommendationSummary.editRecommendation(item)">{{item.name}}</a>
+                </td>
+				
+				<td>
+				<span>{{item.critical.include ? 'C' : '' }} 
+
+					{{item.priority.include ? 'P' : ''}}  
+
+					{{item.priority90Days.include ? 'PR-90' : ''}} </span> 
+				</td>
+                <td>{{item.unit}}</td>
+				<td>{{item.quantity}}</td>				
+                <td>{{item.unitCost}}</td>
+                <td>{{recommendationSummary.getRecommendationTotal(item)}}</td>
+                <td>  {{item.criticalComments}}</td>
+				
+            </tr>
+			
+			<tr>
+			<td colspan="5">
+			Sub Total	
+			</td>
+			<td>
+				{{recommendationSummary.getRecommendationSubTotal(recommendationSummary.recommendations, groupType.value)}}
+				
+			</td>
+				<td></td>
+			</tr>
+			
+		
+        </tbody>
+		<tbody>
+		<tr>
+			<td colspan="5">
+			Total
+			</td>
+			<td>
+				{{recommendationSummary.recommendationsSubTotal}}
+				
+			
+			</td>
+			<td></td>
+			</tr>
+		</tbody>
+		
+        
+    </table>
+</div>

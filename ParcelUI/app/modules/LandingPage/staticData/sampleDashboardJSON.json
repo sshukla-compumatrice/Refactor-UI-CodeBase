@@ -1,0 +1,105 @@
+{
+    "dashboard": {
+        "desc": {
+            "name": "ReportDashboard",
+            "rowsReturned": 100,
+            "totalRows": 14123,
+            "page": 1,
+            "pageSize": 100,
+            "sort": [{
+                "dataField": "address",
+                "order": "asc"
+            }],
+            "filter": [{
+                "dataField": "projectName",
+                "value": "test"
+            }],
+            "columns": [{
+                "orderIndex": 0,
+                "title": "Project Name",
+                "data": "projectName",
+                "visible": true
+            }, {
+                "orderIndex": 1,
+                "title": "Site Name",
+                "data": "siteName",
+                "visible": true
+
+            }, {
+                "orderIndex": 2,
+                "title": "Client Prop",
+                "data": "clientProp",
+                "visible": true
+
+            }, {
+                "orderIndex": 3,
+                "title": "Address",
+                "data": "address",
+                "visible": true
+
+            }, {
+                "orderIndex": 4,
+                "title": "City",
+                "data": "city",
+                "visible": true
+
+            }, {
+                "orderIndex": 5,
+                "title": "State",
+                "data": "state",
+                "visible": true
+
+            }, {
+                "orderIndex": 6,
+                "title": "Report Type",
+                "data": "reportTypeName",
+                "visible": true
+
+            }, {
+                "orderIndex": 7,
+                "title": "Creation Date",
+                "data": "creationDateTime",
+                "visible": true
+
+            }, {
+                "orderIndex": 8,
+                "title": "Site ID",
+                "data": "siteGuid",
+                "visible": true
+
+            }, {
+                "orderIndex": 9,
+                "title": "Status",
+                "data": "reportStatusString",
+                "visible": false
+            }]
+        },
+        "data": [{
+            "reportGuid": "00000000-0000-0000-0000-000000000000",
+            "projectGuid": "00000000-0000-0000-0000-000000000000",
+            "projectName": "Test Project Name",
+            "projectNumber": "Project: 123",
+            "projectFinalDate": "1/1/2015",
+            "propertyNumber": "Property: 456SDF-4sd ",
+            "address": "Somewhere",
+            "city": "Some City",
+            "state": "St",
+            "zipCode": "123-532",
+            "reportTypeCode": "Phase-IV-ESA",
+            "reportTypeName": "Phase IV ESA",
+            "creationDateTime": "1444155973000",
+            "taskedCompanyID": "123",
+            "taskedCompanyName": "Tasked Company Name",
+            "lenderCompanyID": "980",
+            "lenderCompanyName": "Lender Company Name",
+            "reportStatusGuid": "23-sdf-123df-123",
+            "reportStatusString": "",
+            "edrOrderNumber": "1234567",
+            "edrOrderGuid": "12341234-1234-1234-1234-123412341234",
+            "siteGuid": "000-111-222-333",
+            "siteName": "Site Name",
+            "clientProp": "Client Prop",
+            "reportStatusLabel" :  "final"
+        }]
+    }
+}

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="ParcelUI">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EDR PARCEL Platform">
+  <meta name="author" content="EDR 2016">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    
+  <title ng-bind="title">EDR PARCEL Platform</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="images/favicon/manifest.json">
+
+  <meta name="application-name" content="EDR PARCEL Platform">
+  <meta name="msapplication-TileColor" content="#3074a6">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#3074a6">
+
+  <!-- ******************************************************** -->
+  <!-- CSS DEFINITIONS **************************************** -->
+  <!-- ******************************************************** -->
+  <link rel="stylesheet" href="styles/angular-busy.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/datatables/dataTables.bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="styles/datatables/buttons.dataTables.min.css" type="text/css" />
+
+
+  <link rel="stylesheet" href="styles/datatables/buttons.bootstrap.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/datatables/responsive.bootstrap.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/edr-uxt.min.css" type="text/css" />
+
+
+  <link rel="stylesheet" href="styles/bootstrap-datepicker.min.css" type="text/css" />
+  <link rel="stylesheet" href="styles/select2.css" type="text/css" />
+  <link rel="stylesheet" href="styles/custom-select2.css" type="text/css" />
+  <link rel="stylesheet" href="styles/xeditable.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/daterangepicker-bs3.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/datatables/dataTables.bootstrap.custom.css" type="text/css" />
+  <link rel="stylesheet" href="styles/angular-ui-tree.css" type="text/css" />
+
+  <link rel='stylesheet' href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type='text/css' />
+  <link rel='stylesheet' href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" type='text/css' />
+
+  <link rel="stylesheet" href="styles/Styles.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/bootstrap-overrides.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/bootstrap-multiselect.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/bootstrap-tagsinput.css" type="text/css" />
+
+  <link rel="stylesheet" href="styles/chardinjs.css" />
+
+  <!-- ******************************************************** -->
+  <!-- JAVASCRIPT DEFINITIONS ********************************* -->
+  <!-- ******************************************************** -->
+  <script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+  <script type="text/javascript" src="scripts/angular_v1.2.16.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-ui-bootstrap.js"></script>
+  <script type="text/javascript" src="scripts/angular-resource.js"></script>
+  <script type="text/javascript" src="scripts/angular-file-upload.js"></script>
+  <script type="text/javascript" src="scripts/ui-bootstrap-tpls-0.11.0.min.js"></script>
+  <script type="text/javascript" src="scripts/bootstrap-colorpicker-module.js"></script>
+  <script type="text/javascript" src="scripts/select2.js"></script>
+  <script type="text/javascript" src="scripts/custom-select2.js"></script>
+  <script type="text/javascript" src="scripts/placeholders.js"></script>
+  <script type="text/javascript" src="scripts/sortable.min.js"></script>
+
+  <script type="text/javascript" src="scripts/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-strap.js"></script>
+  <script type="text/javascript" src="scripts/angular-strap.tpl.min.js"></script>
+
+  <!-- table spell check -->
+  <script type="text/javascript" src="scripts/spellchecker/edrTableSpellChecker.js"></script>
+  <script type="text/javascript" src="scripts/spellchecker/tableSpellChecker.js"></script>
+
+  <!-- spell check -->
+  <script type="text/javascript" src="scripts/spellchecker/sectionpartIterater.js"></script>
+  <script type="text/javascript" src="scripts/spellchecker/EDRspeckChecker.js"></script>
+  <script type="text/javascript" src="scripts/spellchecker/spellcheck.js"></script>
+
+  <script type="text/javascript" src="scripts/FindReplace/findAndReplaceDOMText.js"></script>
+  <script type="text/javascript" src="scripts/FindReplace/FindReplace.js"></script>
+
+  <!-- file upload -->
+
+  <script type="text/javascript" src="scripts/ng-file-upload-shim.min.js"></script>
+
+  <script type="text/javascript" src="scripts/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-resizable.js"></script>
+
+  <script type="text/javascript" src="scripts/CKEditor/ckeditor.js"></script>
+  <script type="text/javascript" src='//maps.googleapis.com/maps/api/js'></script>
+
+  <script type="text/javascript" src="scripts/angular-cookies.min.js"></script>
+
+  <!-- busy -->
+  <script type="text/javascript" src="scripts/angular-busy.min.js"></script>
+
+  <!--DataTable files-->
+  <script type="text/javascript" src="scripts/datatable/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="scripts/datatable/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="scripts/datatable/buttons.bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/datatable/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/datatable/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" src="scripts/datatable/responsive.bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="scripts/datatable/buttons.flash.js"></script>
+  <script type="text/javascript" src="scripts/datatable/buttons.html5.js"></script>
+  <script type="text/javascript" src="scripts/datatable/jszip.min.js"></script>
+  <script type="text/javascript" src="scripts/datatable/buttons.print.min.js"></script>
+
+  <script type="text/javascript" src="scripts/bootstrap-datepicker.min.js"></script>
+
+  <script type="text/javascript" src="scripts/moment.js"></script>
+  <script type="text/javascript" src="scripts/moment-with-locales.js"></script>
+  <script type="text/javascript" src="scripts/daterangepicker.js"></script>
+  <script type="text/javascript" src="scripts/xeditable.js"></script>
+
+  <script type="text/javascript" src="scripts/datatable/dataTables.colReorder.min.js"></script>
+
+  <!-- modules & worker files -->
+  <!-- Support -->
+  <script type="text/javascript" src="app/modules/Support/init.js"></script>
+
+  <!-- project creation -->
+  <script type="text/javascript" src="app/modules/ProjectCreation/init.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/utilities/Urls.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/FormController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/ClientInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/FindContactController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/ProjectInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/ProjectSearchController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/PropertyInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/ReportSelectionController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/AdditionalPropInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/SiteContactInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/GrantAccessToUsers.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/AttachmentsController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/EmailContactsController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/EmailNotificationController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/services/FetchAllData.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/services/PostAllData.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/services/ProjectStartupAPIFactory.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/services/ContactAPIService.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/services/ProjectSearchAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectCreation/controllers/ProjectDocumentsController.js"></script>
+  <!-- project creation ends-->
+  <!-- shared modules -->
+<!--  <script type="text/javascript" src="scripts/datetime-picker.js"></script>-->
+
+  <!-- portfolio creation -->
+  <script type="text/javascript" src="app/modules/PortfolioCreation/init.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioCreationController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/ReportInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/UploadedSitesReportSelectionController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioAttachmentsController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioReportInformationController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioProjectInfoController.js"></script>
+
+  <script type="text/javascript" src="app/modules/PortfolioCreation/directives/directives.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/directives/nextStepDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioFeeInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioConfirmInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioAddLocationController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioUploadedSiteDetailsController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioGrantAccessController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioEmailController.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/controllers/PortfolioSuccessMessageController.js"></script>
+
+  <script type="text/javascript" src="app/modules/PortfolioCreation/utilities/Urls.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/APIFactory.js"></script>
+  <script type="text/javascript" src="app/modules/PortfolioCreation/services/PortfolioCreationService.js"></script>
+
+  <!--Lender project creation -->
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/init.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/utilities/Urls.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderFormController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderMortgageBankerController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderFindContactController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderProjectInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderPropertyInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderReportSelectionController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderAdditionalPropInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderSiteContactInfoController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderGrantAccessToUsers.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderAttachmentsController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderEmailContactsController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/controllers/LenderEmailNotificationController.js"></script>
+
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/services/FetchAllData.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/services/PostAllData.js"></script>
+  <script type="text/javascript" src="app/modules/LenderProjectCreation/services/LenderProjectStartupAPIFactory.js"></script>
+  <!-- Lender project creation ends -->
+  <!-- order placed on edr -->
+  <script type="text/javascript" src="app/modules/OrderPlacedOnEDR/init.js"></script>
+
+  <!-- Project Dashboard -->
+  <script type="text/javascript" src="app/modules/ProjectDashboard/init.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/utilities/urls.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/ProjectDashboardController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/AddReportController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/ProjectMapController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/SiteDetailsController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/EmailController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/AppendixListController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/PortfolioSignatureToolController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/ReportStatusController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/OrderStatusController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/ReportSignOffController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ProjectDashboard/services/ProjectDashboardDataFactory.js"></script>
+
+  <script type="text/javascript" src="app/modules/ProjectDashboard/services/ReportDetailsGridDataFactory.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/PortfolioController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/PortfolioNavigationController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/controller/GrantAccessController.js"></script>
+  <script type="text/javascript" src="app/modules/ProjectDashboard/directives/directive.js"></script>
+
+  <!-- Lender Portfolio Creation -->
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/init.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioCreationCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/SelectEnvConsultantCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioProjectInformationCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/SelectConsultantWithFeeCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioConfirmInfoCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioAttachmentsController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioGrantAccessController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioAddLocationController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioReportInformationController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioUploadedSiteDetailsController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderUploadedSitesReportSelectionController.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/controllers/LenderPortfolioUploadPropertyCtrl.js"></script>
+
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/utility/stateNavigation.js"></script>
+  <script type="text/javascript" src="app/modules/LenderPortfolioCreation/directives/navigationDirective.js"></script>
+  <!-- Lender Portfolio Creation ends -->
+  <!-- Report Templates starts -->
+  <script type="text/javascript" src="app/modules/ReportTemplates/init.js"></script>
+  <script type="text/javascript" src="app/modules/ReportTemplates/directives/sectionDisplay/sectionStructureDisplay.js"></script>
+  <script type="text/javascript" src="app/modules/ReportTemplates/controllers/DefaultTemplateSettingsController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportTemplates/controllers/EditTemplateController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportTemplates/services/ReportTemplatesService.js"></script>
+  <script type="text/javascript" src="app/modules/ReportTemplates/utilities/urlCollection.js"></script>
+  <!-- Report Templates ends -->
+  <!-- ReportSetup -->
+  <script type="text/javascript" src="app/modules/ReportSetup/init.js"></script>
+  <script type="text/javascript" src="app/modules/ReportSetup/controllers/ReportOutputSetupCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/ReportSetup/services/ReportOutputSetupService.js"></script>
+  <script type="text/javascript" src="app/modules/ReportSetup/utilities/urlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/ReportSetup/utilities/ReportOutputSetupAPIConstants.js"></script>
+
+  <!-- Default Language starts -->
+  <script type="text/javascript" src="app/modules/DefaultLanguageLibrary/init.js"></script>
+  <script type="text/javascript" src="app/modules/DefaultLanguageLibrary/controllers/DefaultLangLibCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/DefaultLanguageLibrary/services/DLLService.js"></script>
+  <script type="text/javascript" src="app/modules/DefaultLanguageLibrary/utilities/urlCollection.js"></script>
+  <!-- Default Language ends -->
+  <!-- Bidding starts -->
+  <script type="text/javascript" src="app/modules/Bidding/init.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/NewRequestController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/staticData/directAwardAndBidsJSON.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/SubmitBidController.js"></script>
+
+  <script type="text/javascript" src="app/modules/Bidding/controllers/SubmittedController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/RejectedAndLostController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/AwaitingAcceptanceController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/AllProjectsController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/AllFinalProjectsController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/BiddersAreaController.js"></script>
+
+  <script type="text/javascript" src="app/modules/Bidding/controllers/AcceptBidController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/RejectBidController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/RetractBidController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/UpdateBidController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/ViewBidController.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/controllers/ViewBiddersAreaController.js"></script>
+
+  <script type="text/javascript" src="app/modules/Bidding/services/BiddingService.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/utilities/urlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/Bidding/directives/directives.js"></script>
+  <!-- Bidding ends -->
+  <!-- Report Authoring starts -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/init.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/CKEditorCtrl.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/GeneratePDFController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/directive.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/mapDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/tinyMCECtrl.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/tinymce.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/TINYEditorCtrl.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/horizontalTables/horizontalTablesDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/verticalTables/verticalTablesDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/spreadsheetTables/spreadsheetTablesDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/executiveSummaryTables/executiveSummaryTablesDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/associatePhotos/associatePhotosDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/associatePhotos/associatePhotosService.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/ReportAuthoringAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/utilities/ReportAuthoringUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/handleWhenScrollAtTop.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/tocDisplay/tocDisplayDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/utilities/AppendicesUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/utilities/AppendixTools.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/AppendicesController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/AppendicesAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/SharedFactory.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/commonFunctions.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/SetupController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/PDFConvertAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/EXCELConvertAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/utilities/ReportOutputUrlCollection.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/photoLog/photoLogDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/mouseClickCopyDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/tableFieldDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/appendixToolController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/insertSubmitSuccessCallback.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/llpQuestionnaireController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/addADAChecklistController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/addCommunicationRecordController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/SignController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/AssembleController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/PortfolioOrderStatusController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/EmailLinkController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/importEDRDataController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/uploadSpreadsheetDataController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/variableReplacerController.js"></script>
+
+  <!-- TOOLS MENU START -->
+  <!-- VARIABLE REPLACER -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/VariableReplacerAPI.js"></script>
+  <!-- TOOLS MENU ENDS -->
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/utilities/GeneralInformationUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/services/GeneralInformationAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/generalInformationFormController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/OrderDatabaseReportsController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/generalInformation/generalInfoDataFieldDirective.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/ManageCoverContactsController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/resolveGeocode/MapResolveGeocodeDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/EDRPortfolioOrderController.js"></script>
+
+  <script type="text/javascript" src="app/modules/ReportAuthoring/filters/selectableLanguageFilter.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/ViewMapController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/controllers/SimplifiedReportController.js"></script>
+
+  <script type="text/javascript" src="scripts/ng-Storage.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/renderGIDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/tableHistory/tableHistoryController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/OperationConstants.js"></script>
+  <!-- Report Authoring ends -->
+  <!-- report output -->
+  <script type="text/javascript" src="app/modules/ReportOutput/init.js"></script>
+  <script type="text/javascript" src="app/modules/ReportOutput/utilities/urlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/ReportOutput/services/reportOutputAPI.js"></script>
+  <script type="text/javascript" src="app/modules/ReportOutput/controllers/reportOutputController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportOutput/controllers/reportOutputSetupController.js"></script>
+  <!-- report output ends -->
+  <!-- Transmittal Letter Setup starts -->
+  <script type="text/javascript" src="app/modules/TransmittalLetterSetup/init.js"></script>
+  <script type="text/javascript" src="app/modules/TransmittalLetterSetup/controllers/TransmittalLetterSetupCtrl.js"></script>
+  <!-- Transmittal Letter Setup ends -->
+  <!-- toc setup -->
+  <script type="text/javascript" src="app/modules/TableOfContentsSetup/init.js"></script>
+  <script type="text/javascript" src="app/modules/TableOfContentsSetup/controllers/TOCSetupCtrl.js"></script>
+  <!-- toc setup ends -->
+  <!-- angular app -->
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/app.res.js"></script>
+  <script type="text/javascript" src="app/app.urlResources.js"></script>
+
+  <script type="text/javascript" src="app/modules/LandingPage/utilities/urlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/services/DashboardAPI.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/controllers/ProjectDashboardController.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/directives/directives.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/directives/cookiesFooterBarDirective.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/directives/loadDataTableDirective.js"></script>
+
+  <!-- Application bridge inclusions, need to remove and uncomment above block-->
+  <script type="text/javascript" src="app/modules/LandingPage/appBridge/appBridgeConstants.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/appBridge/appBridgeLandingPageController.js"></script>
+  <script type="text/javascript" src="app/modules/LandingPage/appBridge/directive.js"></script>
+  <!-- Application bridge inclusions end-->
+  <!-- supporting js -->
+  <script type="text/javascript" src="scripts/log4javascript.js"></script>
+  <script type="text/javascript" src="scripts/dirPagination.js"></script>
+  <script type="text/javascript" src="scripts/sprintf.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="scripts/modernizr.min.js"></script>
+    <script type="text/javascript" src="scripts/HTML5-Shiv.js"></script>
+    <script type="text/javascript" src="scripts/respond.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="scripts/plugins.js"></script>
+
+  <script type="text/javascript" src="scripts/edr-uxt.min.js"></script>
+
+  <script type="text/javascript" src="scripts/underscore-min.js"></script>
+
+  <!-- Shared modules -->
+  <script type="text/javascript" src="app/modules/SharedModules/ajaxTimeInterceptorFactory.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/ajaxResponseInterceptorFactory.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/multiselect/multiselect.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/directives.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/countrySelect/countrySelectDirective.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/LoggingAPI.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/utilities/LoggingUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/ajaxRequestsConstants.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/ajaxStatusCheck.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/phoneNumberFormatter.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/edrOrderAPI.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/utilities/edrOrderUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/authFactory.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/directives/directives.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/AccountMgmtAPI.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/AccessMgmtAPI.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/utilities/accountMgmtUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/commonFilters.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/services/ReportOutputService.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/utilities/ReportOutputUrlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/geocode/directives/mapItDirective.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/geocode/services/geocodeService.js"></script>
+  <script type="text/javascript" src="app/modules/SharedModules/geocode/utilities/urlCollection.js"></script>
+  <!-- Shared modules end -->
+
+  <!-- Parcel Writer modules starts -->
+  <script type="text/javascript" src="app/modules/ParcelWriter/init.js"></script>
+  <script type="text/javascript" src="app/modules/ParcelWriter/directives/directive.js"></script>
+  <script type="text/javascript" src="app/modules/ParcelWriter/services/ParcelWriterFactory.js"></script>
+  <script type="text/javascript" src="app/modules/ParcelWriter/controllers/ParcelWriterController.js"></script>
+  <!-- Parcel Writer end -->
+
+  <!-- Default CostTables start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/addRecommendation/addRecommendationDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/default/RecommendationController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/default/RecommendationListDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/default/DefaultFunctionsService.js"></script>
+  <!-- Default CostTables end  -->
+
+  <!-- FreddieMac CostTables start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/freddie/RecommendationController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/freddie/RecommendationListDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/freddie/FreddieMacFunctionsService.js"></script>
+  <!-- FreddieMac CostTables end  -->
+
+  <!-- Fannie CostTables start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/fannie/RecommendationController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/fannie/RecommendationListDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/fannie/FannieFunctionsService.js"></script>
+  <!-- Fannie CostTables end  -->
+
+  <!-- Emg CostTables start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/emg/RecommendationController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/emg/RecommendationListDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/emg/EmgFunctionsService.js"></script>
+  <!-- Emg CostTables end  -->
+
+  <!-- Atc CostTables start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/atc/RecommendationController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/atc/RecommendationListDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/atc/AtcFunctionsService.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/dynamicForm/dynamicFormDirective.js"></script>
+  <!-- Atc CostTables end  -->
+
+  <!-- Report for CostTables Start  -->
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/reports/packageSelectionDirective.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/reports/costTableListController.js"></script>
+  <script type="text/javascript" src="app/modules/ReportAuthoring/directives/costTables/reports/costTableListController.js"></script>
+  <!-- Report for CostTables End  -->
+
+  <!-- Filing Cabinet Starts -->
+  <script type="text/javascript" src="app/modules/FilingCabinet/init.js"></script>
+  <script type="text/javascript" src="app/modules/FilingCabinet/controllers/FilingCabinetController.js"></script>
+  <script type="text/javascript" src="app/modules/FilingCabinet/utilities/urlCollection.js"></script>
+  <script type="text/javascript" src="app/modules/FilingCabinet/services/FilingCabinetService.js"></script>
+  <!-- Filing Cabinet Ends -->
+
+  <script type="text/javascript" src="app/indexController.js"></script>
+
+  <script type="text/javascript" src="scripts/bootstrap-tagsinput.js"></script>
+
+  <!-- Browser Metrics Tracking Script -->
+  <script type="text/javascript" src="scripts/analytics/newrelic.min.js"></script>
+  <script type="text/javascript" src="scripts/analytics/heap.js"></script>
+
+  <!-- focus on field ---->
+  <script type="text/javascript" src="scripts/focusIf.js"></script>
+
+  <!-- new user walk through -->
+  <script type="text/javascript" src="scripts/chardinjs.js"></script>
+
+  <script type="text/javascript" src="scripts/spellchecker/spellCheckController.js"></script>
+
+  <!--<script type="text/javascript">
+      window.heap = window.heap || [], heap.load = function(e, t) {
+          window.heap.appid = e,
+              window.heap.config = t = t || {};
+          var n = t.forceSSL || "https:" === document.location.protocol,
+              a = document.createElement("script");
+          a.type = "text/javascript", a.async = !0, a.src = (n ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + e + ".js";
+          var o = document.getElementsByTagName("script")[0];
+          o.parentNode.insertBefore(a, o);
+          for (var r = function(e) {
+                  return function() {
+                      heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                  }
+              }, p = ["clearEventProperties", "identify", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++) heap[p[c]] = r(p[c])
+      };
+      var QA_APPID = "3705138651";
+      var DEV_APPID = "2949756099";
+      var PROD_APPID = "1661777887";
+      if (window.location.host.indexOf('qa') > -1) heap.load(QA_APPID);
+      else if (window.location.host.indexOf('dev') > -1) heap.load(DEV_APPID);
+      else if (window.location.host.indexOf('prod') > -1) heap.load(PROD_APPID);
+      else heap.load("APP_ID");
+
+  </script>-->
+
+</head>
+<body ng-show="isAuthenticated" ng-controller="indexController" class="body-bg-gray body-padding">
+  <header ng-if="isHeaderEnabled();">
+    <nav id="EDRnav" role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a ui-sref="LandingPage" class="navbar-brand" tabindex="-1">Parcel Platform</a>
+        </div>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li data-intro="<h4 class='text-white'>NAVIGATION & SITEID QUICK ENTRY</h4>If you have a SiteID, you can enter it here to
+jump directly into your report. Other
+navigation is up here too." data-position="bottom navigation-bottom"><a ui-sref="LandingPage" tabindex="-1">Home</a></li>
+
+
+            <li class="dropdown">
+
+              <a class="dropdown-toggle" href="#" tabindex="-1">
+
+                Projects <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a href="#" ui-sref="quickCreateProj" tabindex="-1" ui-sref-opts="{reload: true}"> New Single Site Project </a> </li>
+                <li> <a href="#" ui-sref="PortfolioCreation.ProjectInformation" tabindex="-1" ui-sref-opts="{reload: true}"> New Portfolio </a> </li>
+                <li> <a href="#" ui-sref="orderPlacedOnEDR" tabindex="-1"> Order placed on EDR Website? Click here </a> </li>
+
+                <li> <a ui-sref="quickCreateLenderProj" href="#/QuickLenderProjectSetup" tabindex="-1">  New Single Site Lender Project</a> </li>
+                <li> <a ui-sref="LenderPortfolioCreation.ProjectInformation" href="#/LenderPortfolioCreation/ProjectInformation" ui-sref="tinyEditor" tabindex="-1">  New Lender portfolio</a> </li>
+                <li> <a ui-sref="projectSearch" href="#/projectSearch" ui-sref="tinyEditor" tabindex="-1">  Project Search</a> </li>
+              </ul>
+            </li>
+            <li><a href="#" ui-sref="directAwardsAndBids" tabindex="-1">Bids</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-target="#" href="#" tabindex="-1">
+                Company <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a ng-href="#/TemplateDefaults?companyGuid={{currentUserCompanyGuid}}"> Templates </a> </li>
+                <li> <a href="#" ui-sref="defaultLanguageLibrary"> Default Language </a> </li>
+                <li> <a href="#" ui-sref="reportSetup"> Report Output Setup </a> </li>
+                <li> <a href="#" ui-sref="transmittalLetterSetup"> Transmittal Letter Output Setup </a> </li>
+                <li> <a href="#" ui-sref="tocSetup"> Table of Contents Output Setup </a> </li>
+                <li> <a href="/accountmgmt/#/accounts"> Company Accounts </a> </li>
+                <li> <a href="#" ui-sref="filingCabinet"> Filing Cabinet </a> </li>
+                <li> <a href=""> Company Logo </a> </li>
+                <li> <a href="#" ui-sref="relatedLinks"> Related Links </a> </li>
+                <li class="disabled"> <a href=""> Reports Year-to-Date and Total </a> </li>
+                <li class="disabled"> <a href=""> Total Reports by Client </a> </li>
+                <li class="disabled"> <a href=""> Top States Year-to-Date </a> </li>
+                <li class="disabled"> <a href=""> Most Recent Users </a> </li>
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle feature131" data-target="#" href="#" tabindex="-1"> Help <span class="caret"></span> </a>
+              <ul class="dropdown-menu">
+                <li> <a href="#"> Email Support </a> </li>
+                <li> <a href="http://wiki.parcelplatform.com/" target="myNewWindow"> eLearning </a> </li>
+                <li> <a href="#"> What's new on this page? </a> </li>
+              </ul>
+            </li>
+            <li class="dropdown" data-intro="<h4 class='text-white'> YOUR ACCOUNT This is you.</h4> Modify your settings here." data-position="left">
+              <a class="dropdown-toggle feature131" data-target="#" href="#" tabindex="-1">
+                <i class="fa fa-user"></i> {{userName}} <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a ng-href="/accountmgmt/#/accounts/company/office/user/view?companyguid={{currentUserCompanyGuid}}&officeguid={{currentUserOfficeGuid}}&userguid={{currentUserGuid}}"> <i class="fa fa-cog"></i> Account Settings </a>
+                </li>
+                <li> <a href="#" target="_blank"><i class="fa fa-wrench"></i> Administrative Tools</a> </li>
+                <li>
+                  <a href="#"> <i class=" fa fa-toggle-off"></i> Switch Portals </a>
+                </li>
+                <li>
+                  <a class="pointer" ng-click="logoutUser()"> <i class=" glyphicon glyphicon-log-out"></i> Logout </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form role="search" class="navbar-form navbar-right">
+            <div class="form-group navbar-search ">
+              <input type="text" id="siteId" class="form-control input-md" placeholder="Enter SiteID" ng-model="siteID" search-by-siteid="searchReportBySiteID(siteID);">
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div ui-view=""></div>
+  <!-- user walkthrough start -->
+  <div id="tooltipPopup" class="chardin-close-popup">
+    <p>When you're ready, click down here to complete the tour!</p>
+    <button id="startOver" class="btn btn-md btn-link pull-left">Start Over</button>
+    <button id="closeChardin" class="btn btn-md btn-primary pull-right">I'M GOOD TO GO!</button>
+  </div>
+
+  <div class="modal modal-tour fade" id="parcelTourModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="welcomeTitle" class="modal-title">WELCOME TO PARCEL!</h4>
+        </div>
+        <div class="modal-body">
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <p class="lead">
+                  We see that you're new here,
+                  <br> so we'd like to take you on a quick tour.
+                </p>
+                <i class="fa fa-laptop"></i>
+              </div>
+              <div class="item">
+                <p class="lead">
+                  PARCEL is a web application that you can use
+                  <br> to author environmental, engineering, and
+                  <br>other types of reports.
+                </p>
+                <i class="fa fa-pencil-square-o"></i>
+              </div>
+              <div class="item">
+                <p class="lead">
+                  This will be some other feature
+                  <br> that we want to highlight to a new user.
+                  <br> It's so cool.
+                </p>
+                <i class="fa fa-beer"></i>
+              </div>
+              <div class="item">
+                <p class="lead">
+                  And this is another feature.
+                  <br> Man, this PARCEL thing is so great!
+                </p>
+                <i class="fa fa-bomb"></i>
+              </div>
+              <div class="item">
+                <p class="lead">
+                  Now that we've gotten through the intro,
+                  <br> let's give you a quick overview of
+                  <br> the interface.
+                </p>
+                <i class="fa fa-tachometer"></i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a class="pull-left btn btn-link" id="skip-tour" style="display:none;">Skip Tour</a>
+          <a class="pull-right btn btn-default" id="start-button">Ok, I'm In</a>
+          <a class="pull-right btn btn-default" id="next-button" style="display:none;">Next</a>
+          <a class="pull-right btn btn-link" href="#" id="no-thanks">No Thanks</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- user walkthrough end -->
+  <div ng-include="'app/modules/LandingPage/views/footer.html'"></div>
+  <!--<cookies-footer ng-if="footerFlag==true" user="someSessionObj" code="codeValue" data="codeData"></cookies-footer>-->
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-lg-12 col-md-12 form-group">
+    <div ng-show="!editmode">
+        <span ng-show="{{data}}" class="control-label">{{data}}</span>
+    </div>
+
+    <div data-ng-repeat="item in field.options | orderBy: 'orderIndex'">
+
+        <input type="checkbox" ng-show="editmode" ng-checked="data(item.value)>-1" />
+        <span ng-show="editmode">{{item.name}}</span>
+    </div>
+</div>
